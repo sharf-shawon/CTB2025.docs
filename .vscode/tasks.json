@@ -1,0 +1,30 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Docs: Serve",
+      "type": "shell",
+      "command": "mkdocs",
+      "args": ["serve"],
+      "isBackground": true,
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Docs: Build",
+      "type": "shell",
+      "command": "mkdocs",
+      "args": ["build", "--strict"],
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Quality: Pre-commit",
+      "type": "shell",
+      "command": "pre-commit",
+      "args": ["run", "--all-files"],
+      "group": "test",
+      "problemMatcher": []
+    }
+  ]
+}

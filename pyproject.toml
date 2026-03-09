@@ -1,0 +1,17 @@
+[project]
+name = "ctb2025-wiki"
+version = "0.1.0"
+description = "Documentation workspace for CTB Admin"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "mkdocs>=1.6,<2.0",
+    "mkdocs-material>=9.7.4",
+    "pre-commit>=4.5.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pre-commit>=4.2.0",
+    "ruff>=0.13.0",
+]

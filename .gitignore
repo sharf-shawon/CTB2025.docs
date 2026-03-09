@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+.venv/
+venv/
+env/
+
+# Build and caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+dist/
+build/
+
+# MkDocs
+site/
+
+# Editors/OS
+.DS_Store
+.idea/
+.vscode/*.log
+
+PythonImportHelper*.json
