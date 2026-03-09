@@ -1,8 +1,6 @@
 ![CTB Admin Cover](docs/assets/images/ctb-cover.png)
 
-## CTB Admin - App Overview
-
-CTB Admin is a Django-based **bag/garment/fashion business management system** with five functional modules, all served through a customized Django Admin (Unfold theme). The primary modules are: **Business** (Clients & Vendors), **Factory** (Products, Materials, Inventory), **Trade** (Invoices, Payments, Checks, Vouchers), **Employee** (HR, Attendance, Salary/Wage), and **core/config** (User accounts, settings, SMS).
+## CTB Admin - Documentation
 
 ## App Overview
 
@@ -229,7 +227,9 @@ These are non-obvious pages that Sourav must not miss:
 - **Invoice Analytics Dashboard** → Custom admin view `InvoiceReportView` (admin → Trade → Invoice Reports)
 - **Client Report View** → `Business/views/ClientReportView.py` — client-specific financial report
 - **PWA Offline page** → `templates/offline.html` — what users see when offline
-- **Maintenance Mode page** → accessible via `/maintenance/`
+
+<!-- - **Maintenance Mode page** → accessible via `/maintenance/` -->
+
 - **Error pages** → `400`, `401`, `403`, `404`, `500`, `502`, `503`, `504` — document briefly what these mean and what the user should do
 
 ______________________________________________________________________
@@ -238,6 +238,6 @@ ______________________________________________________________________
 
 Since the app uses a **consistent Unfold admin theme**, Sourav should:
 
-- Capture **one screenshot of the standard list page layout** and reuse it across all modules — only annotating the unique columns/filters per module.
+- Capture **one screenshot of the standard list page layout** and reuse it across the same module. Annotate steps, clicks and/or actions consistantly accorss the project.
 - Capture **one screenshot of the standard add/edit form layout** and reuse similarly.
-- Take unique screenshots only for: Invoice print view, Chalan print view, Invoice Analytics charts, and the Login page — as these are visually distinct.
+- Must take screenshots for unique pages including (but not limited to): Invoice print view, Chalan print view, Invoice Analytics charts, and the Login page — as these are visually distinct.
