@@ -2,6 +2,10 @@
 
 ## CTB Admin - Documentation
 
+[![Docs CI](https://github.com/sharf-shawon/CTB2025.docs/actions/workflows/docs-ci.yml/badge.svg)](https://github.com/sharf-shawon/CTB2025.docs/actions/workflows/docs-ci.yml) [![Docs Deploy](https://github.com/sharf-shawon/CTB2025.docs/actions/workflows/docs-deploy.yml/badge.svg)](https://github.com/sharf-shawon/CTB2025.docs/actions/workflows/docs-deploy.yml)
+
+## [Visit Documentation](https://docs.ctbinfo.com/)
+
 ## App Overview
 
 CTB Admin is a Django-based **bag/garment/fashion business management system** with five functional modules, all served through a customized Django Admin (Unfold theme). The primary modules are: **Business** (Clients & Vendors), **Factory** (Products, Materials, Inventory), **Trade** (Invoices, Payments, Checks, Vouchers), **Employee** (HR, Attendance, Salary/Wage), and **core/config** (User accounts, settings, SMS).
@@ -17,14 +21,21 @@ ______________________________________________________________________
 
 ### Setup
 
+- Clone the repository:
+
 ```bash
 git clone https://github.com/sharf-shawon/CTB2025.docs.git
 cd CTB2025.docs
+```
+
+- Install development dependencies:
+
+```bash
 uv sync --extra dev
 uv run pre-commit install
 ```
 
-### Enable virtual environment (venv) (optional, if needed)
+- Enable virtual environment (venv) (optional, if needed)
 
 Run the activation command in shell inside the project directory:
 
@@ -36,14 +47,13 @@ Run the activation command in shell inside the project directory:
 | Mac/Linux | fish           | source venv/bin/activate.fish |
 | Mac/Linux | csh / tcsh     | source venv/bin/activate.csh  |
 
-
-### Run Locally
+### Run Server Locally
 
 ```bash
 uv run mkdocs serve
 ```
 
-Then open the local docs URL shown by MkDocs (usually `http://127.0.0.1:8000`).
+Then open the local docs URL shown by MkDocs (usually [`http://127.0.0.1:8000`](http://127.0.0.1:8000) or [`http://localhost:8000`](http://localhost:8000)).
 
 ### Build and Validate
 
@@ -204,9 +214,9 @@ docs/
 
 ______________________________________________________________________
 
-## Module-to-App Mapping for Sourav
+## Module-to-App Mapping for Writer
 
-This table maps each documentation section directly to its source Django app so Sourav knows exactly where to look in the running app.
+This table maps each documentation section directly to its source Django app so Writer knows exactly where to look in the running app.
 
 | Docs Section                    | Django App           | Key Models           |
 | ------------------------------- | -------------------- | -------------------- |
@@ -236,7 +246,7 @@ ______________________________________________________________________
 
 ## Key Special Pages to Document
 
-These are non-obvious pages that Sourav must not miss:
+These are non-obvious pages that Writer must not miss:
 
 - **Invoice PDF / Print view** → `GET /trade/invoices/<id>/invoice/` — the rendered print-friendly invoice page
 - **Chalan PDF view** → `GET /trade/invoices/<id>/chalan/` — delivery document without prices (only for `status=sent` invoices)
@@ -252,7 +262,7 @@ ______________________________________________________________________
 
 ## Screenshot Reuse Strategy
 
-Since the app uses a **consistent Unfold admin theme**, Sourav should:
+Since the app uses a **consistent Unfold admin theme**, Writer should:
 
 - Capture **one screenshot of the standard list page layout** and reuse it across the same module. Annotate steps, clicks and/or actions consistantly accorss the project.
 - Capture **one screenshot of the standard add/edit form layout** and reuse similarly.
