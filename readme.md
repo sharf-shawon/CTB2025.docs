@@ -12,13 +12,14 @@ ______________________________________________________________________
 
 ### Prerequisites
 
-- Python `3.13`
-- `uv` installed
+- [Install Python `3.13`](https://www.python.org/downloads/release/python-31312/)
+- [install `uv`](https://docs.astral.sh/uv/getting-started/installation/)
 
 ### Setup
 
 ```bash
 uv sync --extra dev
+uv run pre-commit install
 ```
 
 ### Run Locally
