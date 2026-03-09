@@ -18,7 +18,7 @@ ______________________________________________________________________
 ### Setup
 
 ```bash
-git commit https://github.com/sharf-shawon/CTB2025.docs.git
+git clone https://github.com/sharf-shawon/CTB2025.docs.git
 cd CTB2025.docs
 uv sync --extra dev
 uv run pre-commit install
