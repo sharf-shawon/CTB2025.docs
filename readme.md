@@ -21,21 +21,21 @@ ______________________________________________________________________
 
 ### Setup
 
-- Clone the repository:
+#### Clone the repository:
 
 ```bash
 git clone https://github.com/sharf-shawon/CTB2025.docs.git
 cd CTB2025.docs
 ```
 
-- Install development dependencies:
+#### Install development dependencies:
 
 ```bash
 uv sync --extra dev
 uv run pre-commit install
 ```
 
-- Enable virtual environment (venv) (optional, if needed)
+#### Enable virtual environment (venv) (optional, if needed)
 
 Run the activation command in shell inside the project directory:
 
