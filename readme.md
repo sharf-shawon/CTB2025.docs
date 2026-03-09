@@ -18,9 +18,24 @@ ______________________________________________________________________
 ### Setup
 
 ```bash
+git commit https://github.com/sharf-shawon/CTB2025.docs.git
+cd CTB2025.docs
 uv sync --extra dev
 uv run pre-commit install
 ```
+
+### Enable virtual environment (venv) (optional, if needed)
+
+Run the activation command in shell inside the project directory:
+
+| Platform  | Shell          | Activation Command            |
+| --------- | -------------- | ----------------------------- |
+| Windows   | Command Prompt | venv\\Scripts\\activate.bat   |
+| Windows   | PowerShell     | venv\\Scripts\\Activate.ps1   |
+| Mac/Linux | bash / zsh     | source venv/bin/activate      |
+| Mac/Linux | fish           | source venv/bin/activate.fish |
+| Mac/Linux | csh / tcsh     | source venv/bin/activate.csh  |
+
 
 ### Run Locally
 
