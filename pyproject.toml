@@ -1,5 +1,5 @@
 [project]
-name = "ctb2025-wiki"
+name = "ctb2025-docs"
 version = "0.1.0"
 description = "Documentation workspace for CTB Admin"
 readme = "README.md"

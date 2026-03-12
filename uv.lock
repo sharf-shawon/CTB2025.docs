@@ -106,7 +106,7 @@ wheels = [
 ]
 
 [[package]]
-name = "ctb2025-wiki"
+name = "ctb2025-docs"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
