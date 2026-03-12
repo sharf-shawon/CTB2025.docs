@@ -26,7 +26,7 @@ Before doing any work, read:
 
 1. `.github/copilot-instructions.md` — rules around knowledge file management.
 2. `.github/knowledge/copilot-learnings.md` — current learnings table.
-3. `.github/knowledge/ctb-knowledge.md` — current knowledge base.
+3. `.github/knowledge/ctb-knowledge.md` — current knowledge base entries.
 
 ## Task: Append a Learning Row
 
@@ -47,11 +47,12 @@ Rules for the row:
 
 ## Task: Update CTB Knowledge Base
 
-When the issue describes a new module, feature, or terminology addition:
+When the issue describes a new module, feature, terminology, workflow, or UI convention:
 
-1. Identify the correct section in `ctb-knowledge.md` (Modules table, Terminology table, Key Workflows, UI Conventions, or Screenshot Paths).
-2. Add only the new entries — do NOT restructure existing content.
-3. Preserve table formatting exactly.
+1. Identify the correct section in `ctb-knowledge.md` (Modules, Terminology, Key Workflows, UI Conventions, Screenshot Locations, or Docs File Locations).
+2. Add only the new entries — do NOT restructure existing content unless the issue explicitly asks for it.
+3. Ensure each new entry is a **single, concise table row** with one fact per row; avoid adding code blocks, nested lists, or multi-paragraph descriptions.
+4. Preserve table formatting exactly so that future diffs stay minimal and agents can safely parse the file.
 
 ## Constraints
 

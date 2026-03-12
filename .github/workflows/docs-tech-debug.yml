@@ -1,0 +1,76 @@
+name: Docs Tech Assist
+
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+jobs:
+  assist:
+    # Trigger only when a human comments "@copilot debug-deploy" on a tech/deploy issue
+    if: |
+      github.event.issue != null &&
+      contains(github.event.comment.body, '@copilot debug-deploy')
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check issue label
+        id: label_check
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { data: issue } = await github.rest.issues.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+
+            const hasTechLabel = issue.labels.some(l => l.name === 'tech/deploy');
+            core.setOutput('has_tech_label', hasTechLabel ? 'true' : 'false');
+
+            if (!hasTechLabel) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: '⚠️ This issue does not have the `tech/deploy` label. Please add it (or use the Technical / Deployment Issue template) before requesting a debug run.',
+              });
+            }
+
+      - name: Checkout repository
+        if: steps.label_check.outputs.has_tech_label == 'true'
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Acknowledge debug request
+        if: steps.label_check.outputs.has_tech_label == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: [
+                '🚀 **Debug request received.**',
+                '',
+                'Copilot (via the `docs-infra` agent) will:',
+                '1. Read the failing CI/job logs and relevant workflows under `.github/workflows/`.',
+                '2. Reproduce the problem using `uv sync --extra dev` and `uv run mkdocs build --strict` where appropriate.',
+                '3. Propose a minimal fix in a pull request, including any workflow or config updates needed.',
+                '',
+                'A pull request will appear once the integration with Copilot coding agent is fully wired. Until then, use this comment as a checklist when fixing issues manually.',
+              ].join('\n'),
+            });
+
+      - name: Debug technical issue (Copilot agent placeholder)
+        if: steps.label_check.outputs.has_tech_label == 'true'
+        run: |
+          echo "Copilot docs-infra agent would investigate the technical/deployment issue here and open a PR with fixes."
+          echo "Issue number: ${{ github.event.issue.number }}"
+          echo "Issue title:  ${{ github.event.issue.title }}"

@@ -1,0 +1,69 @@
+name: "🛠 Technical / Deployment Issue"
+description: "Report CI, build, or deployment issues for the CTB Admin documentation site."
+labels: ["tech/deploy"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for **technical issues with this documentation repository itself** (CI, MkDocs build, GitHub Pages deployment, or automation workflows).
+        
+        Do **not** use it for CTB Admin application bugs — those should live in the application repo.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: "Area"
+      description: "What part of the docs system is affected?"
+      options:
+        - "CI / pre-commit"
+        - "MkDocs build"
+        - "GitHub Pages deployment"
+        - "Repository automation / workflows"
+        - "Local dev environment"
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: "Environment"
+      description: "Where did this issue occur?"
+      placeholder: "e.g. local dev on macOS, CI on GitHub Actions"
+    validations:
+      required: true
+
+  - type: textarea
+    id: what_happened
+    attributes:
+      label: "What happened?"
+      description: "Short description of the failure or unexpected behavior."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: "What did you expect to happen?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: "Steps to reproduce"
+      description: "Numbered steps from a clean checkout to the failure."
+      placeholder: |
+        1. Clone the repo
+        2. Run `uv sync --extra dev`
+        3. Run `uv run mkdocs build --strict`
+        4. Observe the error
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: "Relevant logs or screenshots"
+      description: "Paste relevant error messages and/or link screenshots. Redact any secrets."
+    validations:
+      required: false
