@@ -1,0 +1,54 @@
+name: "🔍 Missing Docs"
+description: "A feature exists in CTB Admin but documentation is missing or unreachable."
+labels: ["docs/missing"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template when a feature is live in CTB Admin but users cannot find documentation for it.
+
+  - type: dropdown
+    id: module
+    attributes:
+      label: "Module"
+      description: "Which CTB Admin module contains the undocumented feature?"
+      options:
+        - "00 – Getting Started"
+        - "01 – Business"
+        - "02 – Factory"
+        - "03 – Trade"
+        - "04 – Employee"
+        - "05 – Settings & Admin"
+        - "06 – Reference"
+    validations:
+      required: true
+
+  - type: input
+    id: feature_name
+    attributes:
+      label: "Feature or page name"
+      placeholder: "e.g. Vendor Payment Reconciliation"
+    validations:
+      required: true
+
+  - type: input
+    id: screenshot_path
+    attributes:
+      label: "Screenshot path"
+      description: "Path relative to the repo root."
+      placeholder: "docs/user-guide/screenshots/<module>/<file>.png"
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: "Context"
+      description: "Explain what is missing and where a user would expect to find it."
+      placeholder: |
+        - Module: trade
+        - Screenshot path: docs/user-guide/screenshots/trade/vendor-payment.png
+        - Current behavior: The vendor payment page exists but there is no docs page for it.
+        - Expected docs: A page explaining payment reconciliation steps and field definitions.
+    validations:
+      required: true

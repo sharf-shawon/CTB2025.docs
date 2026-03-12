@@ -1,0 +1,88 @@
+name: Docs Write
+
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+jobs:
+  write:
+    # Trigger only when a human comments "@copilot ready-to-write" on a docs/* issue
+    if: |
+      github.event.issue != null &&
+      contains(github.event.comment.body, '@copilot ready-to-write')
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check issue label
+        id: label_check
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { data: issue } = await github.rest.issues.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+
+            const docLabels = [
+              'docs/new',
+              'docs/missing',
+              'docs/feature',
+              'docs/update',
+              'docs/improve',
+            ];
+            const hasDocLabel = issue.labels.some(l => docLabels.includes(l.name));
+            core.setOutput('has_doc_label', hasDocLabel ? 'true' : 'false');
+
+            if (!hasDocLabel) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: '⚠️ This issue does not have a `docs/*` label. Please add one before requesting a write.',
+              });
+            }
+
+      - name: Checkout repository
+        if: steps.label_check.outputs.has_doc_label == 'true'
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Acknowledge write request
+        if: steps.label_check.outputs.has_doc_label == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: [
+                '🚀 **Write request received.**',
+                '',
+                'Copilot will:',
+                '1. Read `.github/knowledge/copilot-learnings.md` and `.github/knowledge/ctb-knowledge.md`',
+                '2. Match the style of the benchmark docs',
+                '3. Write the documentation and open a PR prefixed `docs:`',
+                '',
+                'A pull request will appear shortly. All PRs require human review before merging.',
+              ].join('\n'),
+            });
+
+      # -----------------------------------------------------------------------
+      # The step below is a placeholder for the actual Copilot agent invocation.
+      # When GitHub Copilot coding-agent integration is available in Actions,
+      # replace this step with the appropriate action/call.
+      # -----------------------------------------------------------------------
+      - name: Write documentation (Copilot agent placeholder)
+        if: steps.label_check.outputs.has_doc_label == 'true'
+        run: |
+          echo "Copilot agent would write docs here and open a PR."
+          echo "Issue number: ${{ github.event.issue.number }}"
+          echo "Issue title:  ${{ github.event.issue.title }}"

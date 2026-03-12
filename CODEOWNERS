@@ -1,0 +1,6 @@
+# CODEOWNERS — require human review for critical paths
+
+/docs/                                  @sharf-shawon
+/.github/copilot-instructions.md        @sharf-shawon
+/.github/knowledge/                     @sharf-shawon
+/.github/workflows/                     @sharf-shawon
