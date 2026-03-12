@@ -1,4 +1,4 @@
-![CTB Admin Cover](/assets/images/ctb-cover.png)
+![CTB Admin Cover](./assets/images/ctb-cover.png)
 
 # CTB Admin Docs
 
