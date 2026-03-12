@@ -19,6 +19,22 @@ ______________________________________________________________________
 - [Install Python `3.13`](https://www.python.org/downloads/release/python-31312/)
 - [install `uv`](https://docs.astral.sh/uv/getting-started/installation/)
 
+### Suggested tools/extensions:
+
+#### Chrome Extension for Full Page Screenshot:
+
+- [SnapItFast](https://chromewebstore.google.com/detail/snapitfast-%E2%80%93-screenshot-s/keeocmalfanaeglbdieodbbpoplbklnb)
+
+#### Online Image annotation
+
+- [MarkUpHero](https://markuphero.com/new)
+
+- - Use Callout Arrow to show clicks.
+
+- - Use Yellow Color (3,-2), LG Text, LG Thickness, XL Highlight consistantly.
+
+- - To convey multiple clicks/steps in one image, annotate as "Click x" in image and refer back in documentation as "Click (x)"
+
 ### Setup
 
 #### Clone the repository:

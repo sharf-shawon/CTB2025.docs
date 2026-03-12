@@ -6,6 +6,9 @@
     "yzhang.markdown-all-in-one",
     "davidanson.vscode-markdownlint",
     "redhat.vscode-yaml",
-    "bierner.markdown-mermaid"
+    "bierner.markdown-mermaid",
+    "mhutchie.git-graph",
+    "github.copilot-chat",
+    "aswinunni01.mkdocs-vscode"
   ]
 }
