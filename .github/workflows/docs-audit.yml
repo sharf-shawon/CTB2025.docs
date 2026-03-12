@@ -48,7 +48,7 @@ jobs:
       # The agent should:
       #   1. Diff the merged PR to find changed docs files.
       #   2. Compare each changed file against the style benchmarks:
-      #        - docs/user-guide/00-getting-started/index.md
+      #        - docs/user-guide/00-getting-started/overview.md
       #        - docs/user-guide/01-business/clients/add-client.md
       #   3. Produce a quality score and gap list.
       #   4. Open a docs/improve issue if gaps are found.
@@ -67,7 +67,7 @@ jobs:
             // Placeholder scores — replace with real analysis when agent is wired in
             const qualityScore = 'N/A (agent not yet wired)';
             const gaps = 'No automated analysis performed yet.';
-            const learnings = `### [${new Date().toISOString().slice(0, 10)}] PR #${prNumber}: ${prTitle}\n- ✅ Did: merged docs PR\n- 🎯 User liked: TBD\n- ❌ Avoid: TBD`;
+            const learnings = `| ${new Date().toISOString().slice(0, 10)} | PR #${prNumber}: ${prTitle} | Merged docs PR | TBD | TBD |`;
 
             // Comment on the PR with the audit result
             await github.rest.issues.createComment({
