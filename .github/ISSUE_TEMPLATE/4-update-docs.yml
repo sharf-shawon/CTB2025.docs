@@ -1,0 +1,53 @@
+name: "🔄 Update Existing Docs"
+description: "The app has changed and existing documentation needs to be updated."
+labels: ["docs/update"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template when a CTB Admin page or workflow has changed and the existing docs are now inaccurate or outdated.
+
+  - type: dropdown
+    id: module
+    attributes:
+      label: "Module"
+      options:
+        - "00 – Getting Started"
+        - "01 – Business"
+        - "02 – Factory"
+        - "03 – Trade"
+        - "04 – Employee"
+        - "05 – Settings & Admin"
+        - "06 – Reference"
+    validations:
+      required: true
+
+  - type: input
+    id: docs_page_path
+    attributes:
+      label: "Existing docs page path"
+      description: "Path to the Markdown file that needs updating."
+      placeholder: "docs/user-guide/01-business/clients/add-client.md"
+    validations:
+      required: true
+
+  - type: input
+    id: screenshot_path
+    attributes:
+      label: "Updated screenshot path"
+      placeholder: "docs/user-guide/screenshots/<module>/<file>.png"
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: "Context"
+      description: "Describe what changed in the app and what needs to change in the docs."
+      placeholder: |
+        - Module: business
+        - Screenshot path: docs/user-guide/screenshots/business/add-client-v2.png
+        - Current behavior: Docs describe 5 fields, but the form now has 7 fields.
+        - Expected docs: Updated field reference table and revised step-by-step instructions.
+    validations:
+      required: true

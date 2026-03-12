@@ -1,0 +1,62 @@
+name: "📄 New Doc Request"
+description: "Request documentation for a page or workflow that does not yet exist."
+labels: ["docs/new"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template when a page or workflow exists in CTB Admin but has no documentation yet.
+
+  - type: dropdown
+    id: module
+    attributes:
+      label: "Module"
+      description: "Which CTB Admin module does this page belong to?"
+      options:
+        - "00 – Getting Started"
+        - "01 – Business"
+        - "02 – Factory"
+        - "03 – Trade"
+        - "04 – Employee"
+        - "05 – Settings & Admin"
+        - "06 – Reference"
+    validations:
+      required: true
+
+  - type: input
+    id: page_title
+    attributes:
+      label: "Page / workflow title"
+      placeholder: "e.g. Add Client, Create Invoice, Generate Salary"
+    validations:
+      required: true
+
+  - type: input
+    id: screenshot_path
+    attributes:
+      label: "Screenshot path"
+      description: "Path relative to the repo root, e.g. `docs/user-guide/screenshots/business/add-client.png`"
+      placeholder: "docs/user-guide/screenshots/<module>/<file>.png"
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: "Context"
+      description: "Describe the page: what it does, who uses it, and any important fields or steps."
+      placeholder: |
+        - Module: business
+        - Screenshot path: docs/user-guide/screenshots/business/add-client.png
+        - Current behavior: No documentation exists for adding a client.
+        - Expected docs: Step-by-step guide covering all form fields and the save workflow.
+    validations:
+      required: true
+
+  - type: textarea
+    id: related_pages
+    attributes:
+      label: "Related pages (optional)"
+      description: "List any existing docs pages that should link to or from this new page."
+    validations:
+      required: false

@@ -1,0 +1,80 @@
+name: Docs Triage
+
+on:
+  issues:
+    types: [opened, edited, labeled]
+
+permissions:
+  issues: write
+
+jobs:
+  triage:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Validate issue fields
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { data: issue } = await github.rest.issues.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+
+            const labels = issue.labels.map(l => l.name);
+            const docLabels = [
+              'docs/new',
+              'docs/missing',
+              'docs/feature',
+              'docs/update',
+              'docs/improve',
+            ];
+
+            // Only process issues that carry a docs/* label
+            const isDocIssue = labels.some(l => docLabels.includes(l));
+            if (!isDocIssue) {
+              core.info('Issue does not carry a docs/* label — skipping triage.');
+              return;
+            }
+
+            const body = issue.body || '';
+
+            // Fields we require in the issue body — match the exact field labels
+            // used in the ISSUE_TEMPLATE forms so we avoid false positives.
+            const required = {
+              'Module':          /^\s*[-*]?\s*\*{0,2}Module\*{0,2}\s*:/im,
+              'Screenshot path': /^\s*[-*]?\s*\*{0,2}Screenshot path\*{0,2}\s*:/im,
+            };
+
+            const missing = Object.entries(required)
+              .filter(([, pattern]) => !pattern.test(body))
+              .map(([field]) => field);
+
+            if (missing.length === 0) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: [
+                  '✅ **Triage passed.** All required fields are present.',
+                  '',
+                  'This issue is ready for a documentation writer.',
+                  'To trigger Copilot, comment `@copilot ready-to-write` on this issue.',
+                ].join('\n'),
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: [
+                  '❓ **Triage: additional information needed.**',
+                  '',
+                  'Please provide the following missing details:',
+                  ...missing.map(f => `- **${f}**`),
+                  '',
+                  'Edit the issue body and the triage check will re-run automatically.',
+                ].join('\n'),
+              });
+            }

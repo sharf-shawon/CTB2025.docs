@@ -1,0 +1,59 @@
+name: "✨ New Feature → Docs"
+description: "A new feature has been added to CTB Admin and needs documentation."
+labels: ["docs/feature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template when a new app feature has shipped and documentation must be created from scratch.
+
+  - type: dropdown
+    id: module
+    attributes:
+      label: "Module"
+      options:
+        - "00 – Getting Started"
+        - "01 – Business"
+        - "02 – Factory"
+        - "03 – Trade"
+        - "04 – Employee"
+        - "05 – Settings & Admin"
+        - "06 – Reference"
+    validations:
+      required: true
+
+  - type: input
+    id: feature_name
+    attributes:
+      label: "Feature name"
+      placeholder: "e.g. Bulk Invoice Export"
+    validations:
+      required: true
+
+  - type: input
+    id: screenshot_path
+    attributes:
+      label: "Screenshot path"
+      placeholder: "docs/user-guide/screenshots/<module>/<file>.png"
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: "Context"
+      description: "Describe the new feature: purpose, key fields, and typical user workflow."
+      placeholder: |
+        - Module: business
+        - Screenshot path: docs/user-guide/screenshots/business/bulk-export.png
+        - Current behavior: New bulk export button added to invoice list view.
+        - Expected docs: Guide explaining how to select invoices and export them as PDF or CSV.
+    validations:
+      required: true
+
+  - type: textarea
+    id: related_pages
+    attributes:
+      label: "Related pages (optional)"
+    validations:
+      required: false

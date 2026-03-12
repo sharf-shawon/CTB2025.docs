@@ -1,0 +1,129 @@
+name: Docs Audit
+
+on:
+  pull_request:
+    types: [closed]
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  audit:
+    # Only run when the PR was actually merged
+    if: github.event.pull_request.merged == true
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check for audit-complete label
+        id: audit_guard
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { data: pr } = await github.rest.pulls.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.payload.pull_request.number,
+            });
+
+            const alreadyAudited = pr.labels.some(
+              l => l.name === 'copilot/audit-complete'
+            );
+            core.setOutput('already_audited', alreadyAudited ? 'true' : 'false');
+
+            if (alreadyAudited) {
+              core.info('PR already has copilot/audit-complete label — skipping audit.');
+            }
+
+      - name: Checkout repository
+        if: steps.audit_guard.outputs.already_audited == 'false'
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # -----------------------------------------------------------------------
+      # Audit logic placeholder.
+      # Replace with a Copilot agent step when the integration is available.
+      # The agent should:
+      #   1. Diff the merged PR to find changed docs files.
+      #   2. Compare each changed file against the style benchmarks:
+      #        - docs/user-guide/00-getting-started/overview.md
+      #        - docs/user-guide/01-business/clients/add-client.md
+      #   3. Produce a quality score and gap list.
+      #   4. Open a docs/improve issue if gaps are found.
+      #   5. Append a learning entry to .github/knowledge/copilot-learnings.md.
+      # -----------------------------------------------------------------------
+      - name: Run docs quality audit
+        if: steps.audit_guard.outputs.already_audited == 'false'
+        id: run_audit
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const pr = context.payload.pull_request;
+            const prNumber = pr.number;
+            const prTitle = pr.title;
+
+            // Placeholder scores — replace with real analysis when agent is wired in
+            const qualityScore = 'N/A (agent not yet wired)';
+            const gaps = 'No automated analysis performed yet.';
+            const learnings = `| ${new Date().toISOString().slice(0, 10)} | PR #${prNumber}: ${prTitle} | Merged docs PR | TBD | TBD |`;
+
+            // Comment on the PR with the audit result
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: prNumber,
+              body: [
+                '## 🤖 Docs Audit Report',
+                '',
+                `**PR:** #${prNumber} — ${prTitle}`,
+                '',
+                `**Quality score:** ${qualityScore}`,
+                '',
+                '**Identified gaps:**',
+                gaps,
+                '',
+                '**Learnings entry:**',
+                '```',
+                learnings,
+                '```',
+                '',
+                '_Audit complete. Label `copilot/audit-complete` has been applied to prevent re-runs._',
+              ].join('\n'),
+            });
+
+            core.setOutput('learnings', learnings);
+
+      - name: Apply audit-complete label to PR
+        if: steps.audit_guard.outputs.already_audited == 'false'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            // Ensure the label exists before applying it
+            const labelName = 'copilot/audit-complete';
+            try {
+              await github.rest.issues.getLabel({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                name: labelName,
+              });
+            } catch (e) {
+              if (e.status !== 404) {
+                core.warning(`Unexpected error checking for label "${labelName}": ${e.message}`);
+              }
+              await github.rest.issues.createLabel({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                name: labelName,
+                color: '0e8a16',
+                description: 'Copilot audit has been completed for this PR',
+              });
+            }
+
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.pull_request.number,
+              labels: [labelName],
+            });

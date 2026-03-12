@@ -101,3 +101,42 @@ Always include headings in this order, even if some optional sections end up bei
   ```markdown
   ![Short description](../screenshots/<module>/<file-name>.png)
   ```
+
+---
+
+## 📚 Knowledge First
+
+ALWAYS read these files before starting any documentation task:
+
+- `.github/knowledge/copilot-learnings.md` — past lessons, things to do and avoid
+- `.github/knowledge/ctb-knowledge.md` — CTB Admin domain knowledge, terminology, and module map
+
+---
+
+## 🎨 Style Benchmarks
+
+Match the tone, structure, and heading style of these existing files exactly:
+
+- `docs/user-guide/00-getting-started/overview.md`
+- `docs/user-guide/01-business/clients/add-client.md`
+
+---
+
+## 🚫 NEVER DO
+
+- Delete or rename existing docs files
+- Change `mkdocs.yml` nav without adding a corresponding new page
+- Write documentation without a screenshot path
+- Touch `.github/knowledge/` files during a documentation write task — knowledge files are only updated after a PR is merged, never mid-task
+- Remove any line from a knowledge file unless the user explicitly requests the removal or the information is factually wrong
+- Trigger the audit workflow more than once per PR
+
+---
+
+## 🔄 Self-Learning
+
+After a PR is merged, append exactly one row to the table in `.github/knowledge/copilot-learnings.md`. Each field must fit on a single line — no newlines inside a cell.
+
+```
+| YYYY-MM-DD | <short task summary> | <what was done> | <what the user approved> | <what to avoid next time> |
+```

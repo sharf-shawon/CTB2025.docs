@@ -1,0 +1,44 @@
+name: "✏️ Improve Docs"
+description: "Existing documentation needs style, structure, or clarity improvements."
+labels: ["docs/improve"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to request style, tone, structure, or clarity improvements to an existing docs page.
+
+  - type: input
+    id: docs_page_path
+    attributes:
+      label: "Docs page path"
+      description: "Path to the Markdown file to improve."
+      placeholder: "docs/user-guide/01-business/clients/add-client.md"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: improvement_type
+    attributes:
+      label: "Type of improvement"
+      options:
+        - "Tone / language clarity"
+        - "Structure / heading order"
+        - "Missing sections"
+        - "Incorrect information"
+        - "Screenshot replacement"
+        - "Other"
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: "Context"
+      description: "Describe what is wrong and what the improved version should look like."
+      placeholder: |
+        - Module: business
+        - Screenshot path: docs/user-guide/screenshots/business/add-client.png
+        - Current behavior: The page uses passive voice and lacks a Tips section.
+        - Expected docs: Rewrite in imperative mood; add a Tips and Common Issues section.
+    validations:
+      required: true

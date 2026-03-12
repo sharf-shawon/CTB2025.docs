@@ -1,0 +1,49 @@
+name: "🤖 Copilot Audit Output"
+description: "Automated audit issue created by the docs-audit workflow after a PR is merged."
+labels: ["copilot/audit"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This issue is created automatically by the `docs-audit` workflow. Do not open it manually unless you are testing the workflow.
+
+  - type: input
+    id: pr_number
+    attributes:
+      label: "Source PR number"
+      description: "The PR number that triggered this audit."
+      placeholder: "#42"
+    validations:
+      required: true
+
+  - type: textarea
+    id: quality_score
+    attributes:
+      label: "Quality score"
+      description: "Overall score and per-criterion breakdown produced by the audit."
+    validations:
+      required: true
+
+  - type: textarea
+    id: gaps
+    attributes:
+      label: "Identified gaps"
+      description: "List any gaps found relative to the style benchmarks."
+    validations:
+      required: true
+
+  - type: textarea
+    id: learnings
+    attributes:
+      label: "Learnings for copilot-learnings.md"
+      description: "Formatted entry ready to append to `.github/knowledge/copilot-learnings.md`."
+    validations:
+      required: true
+
+  - type: textarea
+    id: recommended_actions
+    attributes:
+      label: "Recommended follow-up actions (optional)"
+      description: "Links to improvement issues or next steps, if any."
+    validations:
+      required: false
