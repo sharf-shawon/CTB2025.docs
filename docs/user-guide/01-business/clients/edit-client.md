@@ -1,171 +1,86 @@
 # Edit Client
 
+Use this page to update an existing client's information in CTB Admin. The layout is identical to the Add Client form — all fields are the same but pre-filled with the saved data.
 
-The **Edit Client Page** allows you to create or update client information.
-Fill in the necessary details and configure the client settings before saving.
+For full field descriptions, see **[Add Client](add-client.md)**.
 
----
+## When to use this page
 
-## Steps to Add a Client
-# Personal Infromation Section
-this section allows the user to store  a client's personal information
+- Correcting a client's contact details or business information.
+- Enabling or disabling a client's active status.
+- Adjusting balance limits or discount settings after a contract change.
 
-![Personal Infromation Section](edit-client-personal-info.png)
+## How to access this page
 
-1. Open the **Client Detail Page** from the **Client List Page**.
-
-2. Enter the **Client Name**.
-
-3. Use the **Is Enabled** switch to control the client status.
-
-   - **ON** → The client is **active**.
-   - **OFF** → The client is **inactive or an old client**.
-
-4. Use the **Send SMS** switch to control invoice notifications.
-
-   - **ON** → The client will **receive an SMS** after an invoice is created.
-   - **OFF** → The client **will not receive SMS notifications**.
-
-5. Enter the **Business Name** if the client has a business.
-
-6. Enter the **Phone Number**.
-
-7. Enter an **Alternative Phone Number** if available.
-
-8. Enter the **Email Address** (optional).
-
-## Field Explanation
-
-| Field             | Description                                                     |
-| ----------------- | --------------------------------------------------------------- |
-| SKU               | Automatically generated client ID.                              |
-| Client Name       | Name of the client.                                             |
-| Is Enabled        | Controls whether the client is active or inactive.              |
-| Send SMS          | Controls whether the client receives invoice SMS notifications. |
-| Business Name     | Name of the client's business.                                  |
-| Phone Number      | Primary contact number of the client.                           |
-| Alternative Phone | Secondary contact number (optional).                            |
-| Email             | Client email address (optional).                                |
+1. From the sidebar, go to **Business → Clients**.
+2. Click the client's name or the edit icon on the **Client List** page.
+3. The Client Edit form opens, pre-filled with the client's current data.
 
 ---
 
-!!! warning "Required Fields"
-    Fields marked with a **red star (*)** are **mandatory** and must be filled in before saving.
+## Steps to Edit a Client
 
-!!! tip "SMS Notification"
-    If **Send SMS** is enabled, the client will automatically receive an SMS when a new invoice is created.
+### Personal Information
 
-!!! note
-    Make sure the **phone number is correct**, as it is used for SMS notifications and communication.
+![Personal Information Section](edit-client-personal-info.png)
 
+1. Update the **Client Name** if it has changed.
+2. Adjust the **Is Enabled** and **Send SMS** toggles as required:
+    - **2.1** Turn **Is Enabled OFF** to deactivate a client who no longer places orders.
+    - **2.2** Turn **Send SMS OFF** to stop invoice notifications for this client.
+3. Update **Business Name**, **Phone Number**, **Alternative Phone**, or **Email** as needed.
 
-
-# Business Details Section
-
-The **Business Details** section allows you to store additional identification and contract information for the client.
+### Business Details
 
 ![Business Details Section](edit-client-business-details.png)
 
----
+4. Update the **NID Number** if it was entered incorrectly.
+5. Replace uploaded photos by clicking **Choose file to upload** and selecting a new file:
+    - **5.1** Replace the **NID Card Front Photo** if the image is unclear or outdated.
+    - **5.2** Replace the **NID Card Back Photo** if needed.
+6. Adjust the **Start Date** or **End Date** if contract terms have changed:
+    - **6.1** Update **Start Date** to correct the relationship start.
+    - **6.2** Update **End Date** to set or remove the contract end date.
 
-### Steps to Fill Business Details
-
-1. Enter the **NID Number** of the client.
-
-2. Upload the **NID Card Front Photo** by clicking **Choose file to upload** and selecting the image from your computer.
-
-3. Upload the **NID Card Back Photo** in the same way.
-
-4. Upload a **Client Photo** if available.
-
-5. Select the **Start Date** to define when the client relationship begins.
-
-6. Select the **End Date** if the client has a defined contract period.
-
-7. After completing the information, continue filling the remaining client details and **save the client profile**.
-
----
-
-### Field Explanation
-
-| Field                | Description                                                     |
-| -------------------- | --------------------------------------------------------------- |
-| NID Number           | National ID number of the client.                               |
-| NID Card Front Photo | Image of the front side of the client's NID card.               |
-| NID Card Back Photo  | Image of the back side of the client's NID card.                |
-| Client Photo         | Profile photo of the client.                                    |
-| Start Date           | The starting date of the business relationship with the client. |
-| End Date             | The end date of the client relationship (if applicable).        |
-
----
-
-!!! note
-    Upload clear images of the **NID card** to ensure proper identification of the client.
-
-!!! tip
-    You can leave the **End Date** empty if the client relationship does not have a fixed end date.
-
-
-## Balance & Discount Information
-
-This section is used to configure the **client's financial limits, balances, and discount settings**.
+### Balance and Discount Information
 
 ![Balance and Discount Section](client-edit-balance-info.png)
 
----
-
-### Steps to Configure Balance
-
-1. Enter the **Balance** of the client.
-   This represents the current financial balance associated with the client.
-
-2. Enter the **Commission Balance**.
-   This value represents the commission-related balance for the client.
-
-3. Set the **Upper Balance Limit** if there is a maximum balance limit for the client.
-
-4. Set the **Lower Balance Limit** to define the minimum allowed balance.
+7. Revise the balance fields if the client's financial position has changed:
+    - **7.1** Update **Balance** to reflect the current account balance.
+    - **7.2** Update **Commission Balance** to reflect commission adjustments.
+8. Revise balance limits if credit terms have been renegotiated:
+    - **8.1** Update **Upper Balance Limit**.
+    - **8.2** Update **Lower Balance Limit**.
+9. Update **Discount Max Rate** or **Discount Max Amount** if the client's discount terms have changed.
 
 ---
 
-### Discount Information
+## Saving Changes
 
-The **Discount Information** section allows you to control the maximum discount that can be applied to this client.
-
-1. View the **Discount Total**.
-   This shows the total discount currently associated with the client.
-
-2. Enter the **Discount Max Rate**.
-   This defines the maximum discount percentage allowed for this client.
-
-3. Enter the **Discount Max Amount**.
-   This defines the maximum discount amount that can be applied.
+Click **Save** to apply the changes. The system redirects you to the **Client Detail** page.
 
 ---
 
-### Field Explanation
+## Error Messages When Editing
 
-| Field               | Description                                         |
-| ------------------- | --------------------------------------------------- |
-| Balance             | Current financial balance of the client.            |
-| Commission Balance  | Balance related to commission transactions.         |
-| Upper Balance Limit | Maximum balance limit allowed for the client.       |
-| Lower Balance Limit | Minimum balance limit allowed for the client.       |
-| Discount Total      | Total discount amount currently applied.            |
-| Discount Max Rate   | Maximum discount percentage allowed for the client. |
-| Discount Max Amount | Maximum discount amount allowed for the client.     |
+| Message                                              | Cause                                                               | Action                                                   |
+| ---------------------------------------------------- | ------------------------------------------------------------------- | -------------------------------------------------------- |
+| "This field is required."                            | A mandatory field was cleared or left empty.                        | Fill in all required fields before saving.               |
+| "Enter a valid phone number."                        | The phone number contains invalid characters or an incorrect format. | Use digits only and include the correct country code.    |
+| "Ensure this value is less than or equal to [limit]."| A balance or discount value exceeds the configured system limit.    | Reduce the value to within the allowed range.            |
 
 ---
 
-!!! warning "Required Fields"
-    Fields marked with a **red star (*)** are mandatory and must be filled before saving the client information.
+## Tips and Common Issues
 
-!!! note
-    Configure the **discount limits carefully** to ensure proper pricing control when creating invoices.
+- The **SKU** field cannot be changed after a client is created.
+- The **Discount Total** is read-only and calculated automatically — it cannot be edited directly.
+- Deactivating a client (**Is Enabled OFF**) does not delete their invoice history. All past records remain accessible.
+- If you only need to view a client's details without editing, use the **Client Detail** page instead.
 
+## Related Pages
 
- After filling in the required information, **save the client details**.
-
----
-
-
+- **Add Client** — Learn about all fields and settings when creating a client.
+- **Client Detail** — View the full profile and history for a client.
+- **Client Reports** — View financial summaries for a client.
