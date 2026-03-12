@@ -11,28 +11,28 @@ The **Clients** module in CTB Admin manages all buyer and business-partner recor
 - **View client history** — access all past invoices, payments, and balance changes from the Client Detail page.
 - **Analyze client data** — use the Client Reports page for financial summaries and trends.
 
----
+______________________________________________________________________
 
 ## Module structure
 
-| Page           | Purpose                                                                 |
-| -------------- | ----------------------------------------------------------------------- |
-| Overview       | This page. Module summary and navigation guide.                         |
-| Add Client     | Register a new client and configure all fields.                         |
-| Edit Client    | Update an existing client's information.                                |
-| Client Detail  | View a client's full profile, invoice history, and current balances.    |
-| Client Reports | Financial summaries, balance trends, and invoice analytics per client.  |
+| Page           | Purpose                                                                |
+| -------------- | ---------------------------------------------------------------------- |
+| Overview       | This page. Module summary and navigation guide.                        |
+| Add Client     | Register a new client and configure all fields.                        |
+| Edit Client    | Update an existing client's information.                               |
+| Client Detail  | View a client's full profile, invoice history, and current balances.   |
+| Client Reports | Financial summaries, balance trends, and invoice analytics per client. |
 
----
+______________________________________________________________________
 
 ## Typical workflow
 
 1. **Add** a new client before creating their first invoice.
-2. **Edit** the client record when contact details, limits, or status change.
-3. **View the Client Detail** page to check balances and invoice history at any time.
-4. **Run Client Reports** for periodic financial reviews.
+1. **Edit** the client record when contact details, limits, or status change.
+1. **View the Client Detail** page to check balances and invoice history at any time.
+1. **Run Client Reports** for periodic financial reviews.
 
----
+______________________________________________________________________
 
 ## Related modules
 

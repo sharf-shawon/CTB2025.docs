@@ -103,25 +103,25 @@ This repo ships with a small set of GitHub Actions workflows plus Copilot agents
 #### 1. Typical doc-writing flow
 
 1. Open an issue using one of the `📄 New Doc`, `📉 Missing Docs`, `✨ Feature Docs`, `📝 Update Docs`, or `🔧 Improve Docs` templates under **Issues → New issue**.
-2. The template applies a `docs/*` label (for example, `docs/new`).
-3. The **Docs Triage** workflow (`.github/workflows/docs-triage.yml`) runs on issue events and validates key fields (for example, Module and Screenshot path). If anything is missing, it comments and asks you to edit the issue.
-4. Once triage passes, comment `@copilot ready-to-write` on the issue.
-5. The **Docs Write** workflow (`.github/workflows/docs-write.yml`) acknowledges the request and is the place where the `doc-writer` agent will eventually be wired in to open a PR with the new/updated docs.
+1. The template applies a `docs/*` label (for example, `docs/new`).
+1. The **Docs Triage** workflow (`.github/workflows/docs-triage.yml`) runs on issue events and validates key fields (for example, Module and Screenshot path). If anything is missing, it comments and asks you to edit the issue.
+1. Once triage passes, comment `@copilot ready-to-write` on the issue.
+1. The **Docs Write** workflow (`.github/workflows/docs-write.yml`) acknowledges the request and is the place where the `doc-writer` agent will eventually be wired in to open a PR with the new/updated docs.
 
 While Copilot coding-agent integration inside Actions is still wired as a placeholder, the workflows define the contract: issues + labels + trigger comments drive which agent should be used and what it is allowed to touch.
 
 #### 2. Audit & learning flow
 
 1. When a docs PR is merged to `main`, the **Docs Audit** workflow (`.github/workflows/docs-audit.yml`) runs once.
-2. It comments a lightweight audit report on the PR and applies the `copilot/audit-complete` label so the audit never runs twice for the same PR.
-3. The `knowledge-curator` agent is the only agent allowed to edit `.github/knowledge/` files. After a merged PR and audit, it appends a single one-line learning entry to `.github/knowledge/copilot-learnings.md` and, when needed, updates `.github/knowledge/ctb-knowledge.md`.
+1. It comments a lightweight audit report on the PR and applies the `copilot/audit-complete` label so the audit never runs twice for the same PR.
+1. The `knowledge-curator` agent is the only agent allowed to edit `.github/knowledge/` files. After a merged PR and audit, it appends a single one-line learning entry to `.github/knowledge/copilot-learnings.md` and, when needed, updates `.github/knowledge/ctb-knowledge.md`.
 
 #### 3. Technical / deployment issue flow
 
 1. For issues about CI failures, MkDocs build errors, or deployment problems with this docs site, use the **🛠 Technical / Deployment Issue** template (see `.github/ISSUE_TEMPLATE/7-tech-deploy.yml`). This applies the `tech/deploy` label.
-2. The **Docs Tech Triage** workflow (`.github/workflows/docs-tech-triage.yml`) runs on issues with the `tech/deploy` label and posts guidance plus the Copilot trigger.
-3. When you are ready for Copilot to help debug, comment `@copilot debug-deploy` on the issue.
-4. The **Docs Tech Assist** workflow (`.github/workflows/docs-tech-debug.yml`) acknowledges the request and is the hook where the `docs-infra` agent will be connected to inspect logs, reproduce the failure locally, and propose fixes via PR.
+1. The **Docs Tech Triage** workflow (`.github/workflows/docs-tech-triage.yml`) runs on issues with the `tech/deploy` label and posts guidance plus the Copilot trigger.
+1. When you are ready for Copilot to help debug, comment `@copilot debug-deploy` on the issue.
+1. The **Docs Tech Assist** workflow (`.github/workflows/docs-tech-debug.yml`) acknowledges the request and is the hook where the `docs-infra` agent will be connected to inspect logs, reproduce the failure locally, and propose fixes via PR.
 
 In all flows, Copilot agents are configured under `.github/agents/*.agent.md`. Each agent file defines a narrow persona, allowed tools, and strict boundaries so that automation stays safe and predictable.
 

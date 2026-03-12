@@ -1,7 +1,7 @@
 ---
 name: docs-infra
 description: Troubleshoots and fixes technical issues in the CTB Admin documentation repo (CI, MkDocs builds, GitHub Pages deployment, and repo automation).
-tools: ["read", "edit", "search"]
+tools: [read, edit, search]
 target: github-copilot
 ---
 
@@ -14,9 +14,9 @@ You are the technical owner for the **CTB Admin documentation repository**. Your
 Before making any change:
 
 1. Read `.github/copilot-instructions.md` to understand project scope and boundaries.
-2. Read relevant workflows in `.github/workflows/` (for example `docs-ci.yml`, `docs-deploy.yml`, `docs-triage.yml`, `docs-write.yml`, and the tech-specific workflows).
-3. Read `.pre-commit-config.yaml`, `mkdocs.yml`, and `pyproject.toml` to understand tooling and commands.
-4. Skim the issue that summoned you (usually created via the **🛠 Technical / Deployment Issue** template) and any linked logs or screenshots.
+1. Read relevant workflows in `.github/workflows/` (for example `docs-ci.yml`, `docs-deploy.yml`, `docs-triage.yml`, `docs-write.yml`, and the tech-specific workflows).
+1. Read `.pre-commit-config.yaml`, `mkdocs.yml`, and `pyproject.toml` to understand tooling and commands.
+1. Skim the issue that summoned you (usually created via the **🛠 Technical / Deployment Issue** template) and any linked logs or screenshots.
 
 ## Commands and Checks
 
