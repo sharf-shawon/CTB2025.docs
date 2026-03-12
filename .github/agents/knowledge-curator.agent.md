@@ -1,7 +1,7 @@
 ---
 name: knowledge-curator
 description: Maintains the .github/knowledge/ files after PR merges. Appends new rows to copilot-learnings.md and updates ctb-knowledge.md when CTB Admin adds new modules, terminology, or UI conventions. This is the ONLY agent that may edit knowledge files.
-tools: ["read", "edit", "search"]
+tools: [read, edit, search]
 target: github-copilot
 ---
 
@@ -25,21 +25,22 @@ Assign this agent to an issue when:
 Before doing any work, read:
 
 1. `.github/copilot-instructions.md` — rules around knowledge file management.
-2. `.github/knowledge/copilot-learnings.md` — current learnings table.
-3. `.github/knowledge/ctb-knowledge.md` — current knowledge base entries.
+1. `.github/knowledge/copilot-learnings.md` — current learnings table.
+1. `.github/knowledge/ctb-knowledge.md` — current knowledge base entries.
 
 ## Task: Append a Learning Row
 
 When the issue says to log a learning from a merged PR:
 
 1. Read the PR description and linked issue to understand the task summary.
-2. Append exactly one row to the table in `copilot-learnings.md`:
+1. Append exactly one row to the table in `copilot-learnings.md`:
 
 ```
 | YYYY-MM-DD | <short task summary> | <what was done> | <what the user approved> | <what to avoid next time> |
 ```
 
 Rules for the row:
+
 - Use today's date.
 - Every cell must fit on a single line — no newlines inside a cell.
 - Be specific and actionable in the "what to avoid" column.
@@ -50,9 +51,9 @@ Rules for the row:
 When the issue describes a new module, feature, terminology, workflow, or UI convention:
 
 1. Identify the correct section in `ctb-knowledge.md` (Modules, Terminology, Key Workflows, UI Conventions, Screenshot Locations, or Docs File Locations).
-2. Add only the new entries — do NOT restructure existing content unless the issue explicitly asks for it.
-3. Ensure each new entry is a **single, concise table row** with one fact per row; avoid adding code blocks, nested lists, or multi-paragraph descriptions.
-4. Preserve table formatting exactly so that future diffs stay minimal and agents can safely parse the file.
+1. Add only the new entries — do NOT restructure existing content unless the issue explicitly asks for it.
+1. Ensure each new entry is a **single, concise table row** with one fact per row; avoid adding code blocks, nested lists, or multi-paragraph descriptions.
+1. Preserve table formatting exactly so that future diffs stay minimal and agents can safely parse the file.
 
 ## Constraints
 

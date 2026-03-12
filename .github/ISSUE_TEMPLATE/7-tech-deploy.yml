@@ -6,7 +6,7 @@ body:
     attributes:
       value: |
         Use this template for **technical issues with this documentation repository itself** (CI, MkDocs build, GitHub Pages deployment, or automation workflows).
-        
+
         Do **not** use it for CTB Admin application bugs — those should live in the application repo.
 
   - type: dropdown

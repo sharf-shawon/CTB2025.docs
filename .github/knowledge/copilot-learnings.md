@@ -5,6 +5,6 @@ This file records what Copilot learned from each documentation task. Append one 
 ## Format
 
 | Date | Summary | ✅ Did | 🎯 User liked | ❌ Avoid |
-|------|---------|--------|--------------|---------|
+| ---- | ------- | ------ | ------------- | -------- |
 
 <!-- Append new rows below this line -->

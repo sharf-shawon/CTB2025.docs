@@ -102,7 +102,7 @@ Always include headings in this order, even if some optional sections end up bei
   ![Short description](../screenshots/<module>/<file-name>.png)
   ```
 
----
+______________________________________________________________________
 
 ## 📚 Knowledge First
 
@@ -111,7 +111,7 @@ ALWAYS read these files before starting any documentation task:
 - `.github/knowledge/copilot-learnings.md` — past lessons, things to do and avoid
 - `.github/knowledge/ctb-knowledge.md` — CTB Admin domain knowledge, terminology, and module map
 
----
+______________________________________________________________________
 
 ## 🎨 Style Benchmarks
 
@@ -120,7 +120,7 @@ Match the tone, structure, and heading style of these existing files exactly:
 - `docs/user-guide/00-getting-started/overview.md`
 - `docs/user-guide/01-business/clients/add-client.md`
 
----
+______________________________________________________________________
 
 ## 🚫 NEVER DO
 
@@ -131,7 +131,7 @@ Match the tone, structure, and heading style of these existing files exactly:
 - Remove any line from a knowledge file unless the user explicitly requests the removal or the information is factually wrong
 - Trigger the audit workflow more than once per PR
 
----
+______________________________________________________________________
 
 ## 🔄 Self-Learning
 
