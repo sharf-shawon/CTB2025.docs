@@ -122,6 +122,7 @@ nav:
       - Purchase Balance:
         - Overview: user-guide/04-employee/purchase-balance/overview.md
     - Settings and Admin:
+      - Audit Log: user-guide/05-settings-and-admin/audit-log.md
       - Module Overview: user-guide/05-settings-and-admin/README.md
       - User Management: user-guide/05-settings-and-admin/user-management.md
       - App Settings: user-guide/05-settings-and-admin/app-settings.md
