@@ -1,6 +1,6 @@
 # Login and Logout
 
-Use this page to sign in to CTB Admin and to sign out when you are done. All access to the system requires a valid username and password.
+Use this page to sign in to CTB Fashion and to sign out when you are done. All access to the system requires a valid username and password.
 
 ## When to use this page
 
@@ -10,7 +10,7 @@ Use this page to sign in to CTB Admin and to sign out when you are done. All acc
 
 ## How to access this page
 
-Open your browser and navigate to your CTB Admin URL (for example, `https://yourdomain.com/admin/`). The login page appears automatically when you are not signed in.
+Open your browser and navigate to your CTB Admin URL. The login page appears automatically when you are not signed in.
 
 ---
 
@@ -18,18 +18,23 @@ Open your browser and navigate to your CTB Admin URL (for example, `https://your
 
 ![CTB Admin Login Page](../screenshots/auth/login.png)
 
+The login page displays a **"Welcome back to CTB Fashion"** heading alongside the CTB logo.
+
 1. Enter your **Username** in the first field.
 2. Enter your **Password** in the second field.
-3. Click **Sign In**.
+3. Click **Log in →**.
 
 If your credentials are correct, the system redirects you to the **Dashboard**.
 
 ### Field Reference — Login
 
-| Field    | Description                                                    |
-| -------- | -------------------------------------------------------------- |
+| Field    | Description                                                                          |
+| -------- | ------------------------------------------------------------------------------------ |
 | Username | Your assigned CTB Admin username. Contact your administrator if you do not have one. |
-| Password | Your account password. Passwords are case-sensitive.           |
+| Password | Your account password. Passwords are case-sensitive.                                 |
+
+!!! note "Return to site"
+    The **← Return to site** link in the top-left corner takes you back to the public-facing website without logging in.
 
 !!! warning "Failed Login"
     If you enter an incorrect username or password, the form displays an error message. Check your credentials and try again. Contact your administrator to reset your password if needed.
@@ -41,14 +46,14 @@ If your credentials are correct, the system redirects you to the **Dashboard**.
 
 ## Logging Out
 
-![CTB Admin Logout Page](../screenshots/auth/logout.png)
+![CTB Admin Logout — user menu](../screenshots/auth/logout.png)
 
 To sign out of CTB Admin:
 
-1. Click your **username or avatar** in the top-right corner of any page.
-2. Select **Log Out** from the dropdown menu.
-3. The system signs you out and displays the **Logged Out** confirmation page.
-4. Click **Log In Again** if you need to start a new session immediately.
+1. Click the **user avatar icon** in the top-right corner of any page.
+2. A dropdown menu appears showing your username, **View site**, **Change password**, and **Log out**.
+3. Click **Log out** (shown in red).
+4. The system signs you out immediately.
 
 !!! warning "Shared Computers"
     Always log out after each session on shared or public computers to protect business data.
