@@ -1,0 +1,81 @@
+{
+  "version": "1",
+  "display": {
+    "mode": "both",
+    "statusBarAlignment": "left"
+  },
+  "profiles": {
+    "dev": {
+      "name": "Development",
+      "env": {
+        "DJANGO_ENV": "development"
+      }
+    },
+    "staging": {
+      "name": "Staging",
+      "env": {
+        "DJANGO_ENV": "staging"
+      }
+    },
+    "prod": {
+      "name": "Production",
+      "env": {
+        "DJANGO_ENV": "production"
+      }
+    }
+  },
+  "activeProfile": "dev",
+  "startup": {
+    "commands": [
+      "sync-dependencies"
+    ],
+    "parallel": false,
+    "delayMs": 0
+  },
+  "commands": [
+    {
+      "id": "sync-dependencies",
+      "label": "Sync Deps",
+      "command": "uv sync",
+      "icon": "sync",
+      "tooltip": "Sync project dependencies",
+      "cooldownMs": 1000,
+      "reuseTerminal": true,
+      "alignment": "left",
+      "priority": 100
+    },
+    {
+      "id": "docs-serve",
+      "label": "Docs Serve",
+      "command": "uv run mkdocs serve",
+      "icon": "play",
+      "tooltip": "Start the MkDocs development server",
+      "cooldownMs": 1000,
+      "reuseTerminal": true,
+      "alignment": "left",
+      "priority": 90
+    },
+    {
+      "id": "docs-build",
+      "label": "Docs Build",
+      "command": "uv run mkdocs build --strict",
+      "icon": "book",
+      "tooltip": "Build the documentation site in strict mode",
+      "cooldownMs": 1000,
+      "reuseTerminal": false,
+      "alignment": "left",
+      "priority": 80
+    },
+    {
+      "id": "pre-commit",
+      "label": "Pre-commit",
+      "command": "uv run pre-commit run --all-files",
+      "icon": "check-all",
+      "tooltip": "Run all pre-commit checks",
+      "cooldownMs": 1000,
+      "reuseTerminal": false,
+      "alignment": "left",
+      "priority": 70
+    }
+  ]
+}
