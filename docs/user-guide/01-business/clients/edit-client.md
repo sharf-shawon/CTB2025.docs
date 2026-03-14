@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Edit Client
 
 Use this page to update an existing client's information in CTB Admin. The layout is identical to the Add Client form — all fields are the same but pre-filled with the saved data.
@@ -84,3 +85,5 @@ ______________________________________________________________________
 - **Add Client** — Learn about all fields and settings when creating a client.
 - **Client Detail** — View the full profile and history for a client.
 - **Client Reports** — View financial summaries for a client.
+=======
+>>>>>>> fd60eb0 (moving text from edit-client to add-client)
