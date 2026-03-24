@@ -201,7 +201,7 @@ ______________________________________________________________________
 
 ## Personal Information
 
-![Personal Information Section](edit-client-personal-info.png)
+![Personal Information Section](client-personal-info.png)
 
 1. Enter the **Client Name**.
 1. Use the **Is Enabled** switch to set the client's active status:
