@@ -8,11 +8,10 @@ Use this page to register a new client in CTB Admin. A client record stores the 
 - Creating a client profile before issuing the first invoice.
 - Registering a client's contact details, identification documents, and discount limits.
 
-\<<\<<\<<< HEAD
 
 1. Look at the **top-right corner** of the page.
 
-1. Click the **purple (+) icon** to add a new client.
+2. Click the **purple (+) icon** to add a new client.
    \=======
 
 ## How to access this page
@@ -22,9 +21,9 @@ From the sidebar, go to **Business → Clients**. On the Client List page, click
 > > > > > > > 562ba5bd032c0ffcfa2f03f0a69f3a08a5d7018f
 
 ![Add Client Icon](add-icon.png)
-![Add Client Icon](add-icon.png)
 
-\<<\<<\<<< HEAD
+
+
 
 1. The system will open the **Client Detail Page**.
 
