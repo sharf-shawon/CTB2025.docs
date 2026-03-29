@@ -31,7 +31,7 @@ ______________________________________________________________________
 
 ## Personal Information
 
-![Personal Information Section](/docs/user-guide/01-business/clients/edit-client-personal-info.png)
+![Personal Information Section](edit-client-personal-info.png)
 
 This section displays the client’s basic information.
 
