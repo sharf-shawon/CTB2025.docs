@@ -1,0 +1,78 @@
+name: Wiki Sync
+
+# Syncs the docs/ source tree from CTB2025.docs into the CTB2025 GitHub Wiki.
+# The wiki acts as a published mirror of the authored Markdown content.
+# Only docs/ files are copied — no MkDocs build output, CI config, or tooling.
+#
+# Required secret: CTB2025_WIKI_PAT
+#   A Personal Access Token (classic or fine-grained) with `contents: write`
+#   permission on the sharf-shawon/CTB2025.wiki repository.
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "docs/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sync:
+    name: Sync docs to wiki
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout docs repo
+        uses: actions/checkout@v4
+
+      - name: Clone wiki repo
+        env:
+          WIKI_PAT: ${{ secrets.CTB2025_WIKI_PAT }}
+        run: |
+          git clone \
+            "https://x-access-token:${WIKI_PAT}@github.com/sharf-shawon/CTB2025.wiki.git" \
+            /tmp/wiki
+
+      - name: Sync docs/ into wiki
+        run: |
+          # Mirror docs/ into the wiki root, deleting files that no longer exist
+          # in the source.  The trailing slash on docs/ is intentional: rsync
+          # copies the *contents* of docs/, not the directory itself.
+          rsync -av --delete \
+            --exclude='.git/' \
+            docs/ /tmp/wiki/
+
+      - name: Create Home.md from index.md
+        run: |
+          # GitHub Wiki uses Home.md as the landing page.
+          # Copy docs/index.md to Home.md if it exists; otherwise do nothing.
+          if [ -f /tmp/wiki/index.md ]; then
+            cp /tmp/wiki/index.md /tmp/wiki/Home.md
+          fi
+
+      - name: Commit and push changes
+        env:
+          WIKI_PAT: ${{ secrets.CTB2025_WIKI_PAT }}
+        run: |
+          cd /tmp/wiki
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add -A
+
+          # Only commit and push when there are actual changes.
+          if git diff --cached --quiet; then
+            echo "No changes to the wiki. Skipping commit."
+            exit 0
+          fi
+
+          COMMIT_SHA="${{ github.sha }}"
+          SHORT_SHA="${COMMIT_SHA:0:7}"
+          git commit -m "docs: sync from CTB2025.docs@${SHORT_SHA}"
+          git push \
+            "https://x-access-token:${WIKI_PAT}@github.com/sharf-shawon/CTB2025.wiki.git" \
+            HEAD:master
