@@ -1,14 +1,32 @@
 site_name: CTB Admin Documentation
-site_description: User and administrator documentation for CTB Admin
+site_url: https://docs.ctbinfo.com
+site_description: User and Administrator documentation for CTB Admin
 repo_name: CTB2025.wiki
+plugins:
+  - glightbox
+  - social
+  - meta
+  - search
 theme:
   name: material
+  custom_dir: overrides
   logo: assets/images/ctb-logo.svg
   favicon: assets/images/ctb-logo.svg
   palette:
-    - scheme: slate
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
       primary: indigo
-      accent: deep purple
+      accent: purple
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: purple
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
   features:
     - navigation.instant
     - navigation.sections
@@ -16,6 +34,15 @@ theme:
 
 extra_css:
   - stylesheets/ctb-theme.css
+
+extra_javascript:
+  - javascripts/sw-register.js
+
+extra:
+  ctb_footer:
+    copyright: "© 2026 CTB Admin Documentation. All rights reserved."
+    developer_name: "Dhakaiya.Dev"
+    developer_url: "https://dhakaiya.dev"
 
 markdown_extensions:
   - admonition

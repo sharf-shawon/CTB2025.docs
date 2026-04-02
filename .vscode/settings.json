@@ -3,20 +3,49 @@
   "python.analysis.typeCheckingMode": "basic",
   "editor.formatOnSave": true,
   "[python]": {
-    "editor.defaultFormatter": "charliermarsh.ruff"
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports.ruff": "explicit",
+      "source.fixAll.ruff": "explicit"
+    }
   },
   "[markdown]": {
     "editor.wordWrap": "on",
-    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+    "editor.formatOnPaste": true
   },
   "[yaml]": {
     "editor.insertSpaces": true,
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/*.pyc": true,
+    "**/.pytest_cache": true,
+    "**/node_modules": true,
+    "**/.venv": true
+  },
+  "search.exclude": {
+    "**/__pycache__": true,
+    "**/.venv": true,
+    "**/venv": true,
+    "site/": true
+  },
   "markdownlint.config": {
     "MD013": false,
     "MD033": false
+  },
+  "editor.rulers": [88, 120],
+  "editor.trimAutoWhitespace": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
+  "ruff.lineLength": 100,
+  "workbench.colorCustomizations": {
+    "titleBar.activeBackground": "#0B1326",
+    "titleBar.activeForeground": "#FFFFFF"
   }
 }

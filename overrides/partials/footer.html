@@ -1,0 +1,21 @@
+<footer class="md-footer ctb-custom-footer" role="contentinfo">
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="ctb-custom-footer__content">
+        <p class="ctb-custom-footer__copyright">
+          {{ config.extra.ctb_footer.copyright | default("© 2026 CTB Admin Documentation. All rights reserved.") }}
+        </p>
+        <p class="ctb-custom-footer__developer">
+          Developed by
+          <a
+            href="{{ config.extra.ctb_footer.developer_url | default('https://github.com/sharf-shawon') }}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {{ config.extra.ctb_footer.developer_name | default("Sharf Shawon") }}
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>

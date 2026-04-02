@@ -6,7 +6,8 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "mkdocs>=1.6,<2.0",
-    "mkdocs-material>=9.7.4",
+    "mkdocs-glightbox>=0.5.2",
+    "mkdocs-material[imaging]>=9.7.4",
     "pre-commit>=4.5.1",
 ]
 
