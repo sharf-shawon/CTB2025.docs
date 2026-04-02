@@ -59,6 +59,7 @@ jobs:
           # Build wiki chrome from MkDocs nav so wiki navigation stays in sync automatically.
           python3 - <<'PY'
           from pathlib import Path
+          import os
           import subprocess
           import sys
 
@@ -73,7 +74,46 @@ jobs:
           wiki_root = Path('/tmp/wiki').resolve()
 
           mkdocs_file = repo_root / 'mkdocs.yml'
-          config = yaml.safe_load(mkdocs_file.read_text(encoding='utf-8')) or {}
+
+          class MkDocsLoader(yaml.SafeLoader):
+            pass
+
+          def env_constructor(loader, node):
+            # Supports MkDocs/Material style: !ENV [VAR_NAME, "fallback"]
+            if isinstance(node, yaml.SequenceNode):
+              values = loader.construct_sequence(node)
+              if not values:
+                return ''
+              key = str(values[0])
+              default = values[1] if len(values) > 1 else ''
+              return os.environ.get(key, default)
+
+            if isinstance(node, yaml.ScalarNode):
+              key = loader.construct_scalar(node)
+              return os.environ.get(str(key), '')
+
+            if isinstance(node, yaml.MappingNode):
+              mapping = loader.construct_mapping(node)
+              key = mapping.get('name') or mapping.get('var') or mapping.get('key')
+              default = mapping.get('default', '')
+              return os.environ.get(str(key), default) if key else default
+
+            return None
+
+          def unknown_tag_constructor(loader, tag_suffix, node):
+            # Gracefully handle any other custom tags we do not need to evaluate.
+            if isinstance(node, yaml.ScalarNode):
+              return loader.construct_scalar(node)
+            if isinstance(node, yaml.SequenceNode):
+              return loader.construct_sequence(node)
+            if isinstance(node, yaml.MappingNode):
+              return loader.construct_mapping(node)
+            return None
+
+          MkDocsLoader.add_constructor('!ENV', env_constructor)
+          MkDocsLoader.add_multi_constructor('!', unknown_tag_constructor)
+
+          config = yaml.load(mkdocs_file.read_text(encoding='utf-8'), Loader=MkDocsLoader) or {}
           site_name = config.get('site_name', 'Documentation')
           nav = config.get('nav', [])
           base_wiki_page = 'https://github.com/sharf-shawon/CTB2025/wiki'
