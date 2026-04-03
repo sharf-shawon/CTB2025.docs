@@ -199,6 +199,7 @@ dependencies = [
     { name = "mkdocs" },
     { name = "mkdocs-glightbox" },
     { name = "mkdocs-google-translate" },
+    { name = "mkdocs-image-gallery-plugin" },
     { name = "mkdocs-material", extra = ["imaging"] },
     { name = "pre-commit" },
 ]
@@ -214,6 +215,7 @@ requires-dist = [
     { name = "mkdocs", specifier = ">=1.6,<2.0" },
     { name = "mkdocs-glightbox", specifier = ">=0.5.2" },
     { name = "mkdocs-google-translate", specifier = ">=1.3.1" },
+    { name = "mkdocs-image-gallery-plugin", specifier = ">=1.3.0" },
     { name = "mkdocs-material", extras = ["imaging"], specifier = ">=9.7.4" },
     { name = "pre-commit", specifier = ">=4.5.1" },
     { name = "pre-commit", marker = "extra == 'dev'", specifier = ">=4.2.0" },
@@ -420,6 +422,20 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/37/27/db9b2dfb7e83c01482275b0bc4ea18a3b1fe228baac3c5ae36331f4b0995/mkdocs_google_translate-1.3.1.tar.gz", hash = "sha256:188e935d94154547e4eabc08096f75ae13788d9ea8bbd0940ba9156a935f7c52", size = 4890, upload-time = "2025-06-09T14:31:24.973Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/d5/a6/1dd2c5372297aa4dc0fa874d9951358a15e798fc03352302592d8cfb44a2/mkdocs_google_translate-1.3.1-py3-none-any.whl", hash = "sha256:92cfb823513afec6401f21014e5b3a248343335d53173d59abf6ea8f0ea54f86", size = 4961, upload-time = "2025-06-09T14:31:24.177Z" },
+]
+
+[[package]]
+name = "mkdocs-image-gallery-plugin"
+version = "1.3.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "jinja2" },
+    { name = "mkdocs" },
+    { name = "pyyaml" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/7b/30/6e57e50667d0661121e97974d100727e6e24191c41c60e58542ad0349473/mkdocs_image_gallery_plugin-1.3.0.tar.gz", hash = "sha256:53fc49699033c4047524ac52e76c1bf6809f76f58d1de522dffb7e0e9da9e1a9", size = 14868, upload-time = "2025-08-19T02:26:23.007Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/07/be/01c51e1be5fe81001bfa83ee14d5afcc676a770154a3293f59d282acc10f/mkdocs_image_gallery_plugin-1.3.0-py3-none-any.whl", hash = "sha256:67e1ba23ac3842c397b905a1b6f3b0e96b9824039d047621d507d59c8180937b", size = 16535, upload-time = "2025-08-19T02:26:22.177Z" },
 ]
 
 [[package]]

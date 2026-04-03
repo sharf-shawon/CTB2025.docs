@@ -8,6 +8,10 @@ plugins:
   - meta
   - search
   - google-translate
+  - image-gallery:
+      image_folder: "./gallery/"
+      youtube_links_file: "youtube-links.yaml"
+      separate_category_pages: true
 
 theme:
   name: material
@@ -30,7 +34,7 @@ theme:
         icon: material/weather-sunny
         name: Switch to light mode
   features:
-    # - navigation.instant
+    - navigation.instant
     - navigation.sections
     - content.code.copy
 
@@ -197,3 +201,4 @@ nav:
       - Error Pages: user-guide/06-reference/error-pages.md
       - Offline Mode: user-guide/06-reference/offline-mode.md
       - Glossary: user-guide/06-reference/glossary.md
+      - Gallery: gallery.md
