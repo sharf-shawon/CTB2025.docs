@@ -12,6 +12,11 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      GOOGLE_ANALYTICS_PROPERTY_ID: ${{ vars.GOOGLE_ANALYTICS_PROPERTY_ID }}
+      DEVELOPER_NAME: ${{ vars.DEVELOPER_NAME }}
+      DEVELOPER_URL: ${{ vars.DEVELOPER_URL }}
+      SITE_URL: ${{ vars.SITE_URL }}
 
     steps:
       - name: Checkout

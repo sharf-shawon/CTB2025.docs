@@ -14,6 +14,7 @@ on:
       - main
     paths:
       - "docs/**"
+      - "mkdocs.yml"
   workflow_dispatch:
 
 permissions:
@@ -52,6 +53,212 @@ jobs:
           if [ -f /tmp/wiki/index.md ]; then
             cp /tmp/wiki/index.md /tmp/wiki/Home.md
           fi
+
+      - name: Generate wiki sidebar, header, and footer from mkdocs.yml
+        run: |
+          # Build wiki chrome from MkDocs nav so wiki navigation stays in sync automatically.
+          python3 - <<'PY'
+          from pathlib import Path
+          import os
+          import subprocess
+          import sys
+
+          # Ensure YAML parser is available on runner.
+          try:
+            import yaml
+          except ModuleNotFoundError:
+            subprocess.check_call([sys.executable, '-m', 'pip', 'install', '--quiet', 'pyyaml'])
+            import yaml
+
+          repo_root = Path('.').resolve()
+          wiki_root = Path('/tmp/wiki').resolve()
+
+          mkdocs_file = repo_root / 'mkdocs.yml'
+
+          class MkDocsLoader(yaml.SafeLoader):
+            pass
+
+          def env_constructor(loader, node):
+            # Supports MkDocs/Material style: !ENV [VAR_NAME, "fallback"]
+            if isinstance(node, yaml.SequenceNode):
+              values = loader.construct_sequence(node)
+              if not values:
+                return ''
+              key = str(values[0])
+              default = values[1] if len(values) > 1 else ''
+              return os.environ.get(key, default)
+
+            if isinstance(node, yaml.ScalarNode):
+              key = loader.construct_scalar(node)
+              return os.environ.get(str(key), '')
+
+            if isinstance(node, yaml.MappingNode):
+              mapping = loader.construct_mapping(node)
+              key = mapping.get('name') or mapping.get('var') or mapping.get('key')
+              default = mapping.get('default', '')
+              return os.environ.get(str(key), default) if key else default
+
+            return None
+
+          def unknown_tag_constructor(loader, tag_suffix, node):
+            # Gracefully handle any other custom tags we do not need to evaluate.
+            if isinstance(node, yaml.ScalarNode):
+              return loader.construct_scalar(node)
+            if isinstance(node, yaml.SequenceNode):
+              return loader.construct_sequence(node)
+            if isinstance(node, yaml.MappingNode):
+              return loader.construct_mapping(node)
+            return None
+
+          MkDocsLoader.add_constructor('!ENV', env_constructor)
+          MkDocsLoader.add_multi_constructor('!', unknown_tag_constructor)
+
+          config = yaml.load(mkdocs_file.read_text(encoding='utf-8'), Loader=MkDocsLoader) or {}
+          site_name = config.get('site_name', 'Documentation')
+          nav = config.get('nav', [])
+          base_wiki_page = 'https://github.com/sharf-shawon/CTB2025/wiki'
+
+          def to_wiki_page_name(path: str) -> str:
+            normalized = str(path).strip().replace('\\', '/')
+            if normalized.lower() == 'index.md':
+              return 'Home'
+            parts = normalized.split('/')
+            filename = parts[-1]
+            stem = filename[:-3] if filename.lower().endswith('.md') else filename
+            if stem.lower() == 'readme' and len(parts) > 1:
+              return parts[-2]
+            return stem
+
+          def page_to_url(page_name: str) -> str:
+            return f'{base_wiki_page}/{page_name}'
+
+          def flatten_links(items):
+            out = []
+            for item in items:
+              if isinstance(item, dict):
+                for title, value in item.items():
+                  if isinstance(value, str):
+                    out.append((title, page_to_url(to_wiki_page_name(value))))
+                  elif isinstance(value, list):
+                    out.extend(flatten_links(value))
+            return out
+
+          def render_group(items):
+            lines = []
+            for item in items:
+              if not isinstance(item, dict):
+                continue
+              for title, value in item.items():
+                if isinstance(value, str):
+                  lines.append(f'- [{title}]({page_to_url(to_wiki_page_name(value))})')
+                elif isinstance(value, list):
+                  lines.append('')
+                  lines.append('<details>')
+                  lines.append(f'<summary><strong>{title}</strong></summary>')
+                  lines.append('')
+                  for link_title, link_target in flatten_links(value):
+                    lines.append(f'- [{link_title}]({link_target})')
+                  lines.append('')
+                  lines.append('</details>')
+            return lines
+
+          sidebar_lines = [
+            f'## {site_name}',
+            '',
+            f'- [Home]({page_to_url("Home")})',
+          ]
+
+          user_guide_sections = None
+          for item in nav:
+            if isinstance(item, dict):
+              for title, value in item.items():
+                if title == 'Home' and isinstance(value, str):
+                  sidebar_lines[2] = f'- [Home]({page_to_url(to_wiki_page_name(value))})'
+                elif title == 'User Guide' and isinstance(value, list):
+                  user_guide_sections = value
+                elif isinstance(value, str):
+                  sidebar_lines.append(f'- [{title}]({page_to_url(to_wiki_page_name(value))})')
+
+          if user_guide_sections:
+            sidebar_lines.append('')
+            sidebar_lines.append('### User Guide')
+            sidebar_lines.extend(render_group(user_guide_sections))
+
+          (wiki_root / '_Sidebar.md').write_text('\n'.join(sidebar_lines).strip() + '\n', encoding='utf-8')
+
+          header_lines = [
+            f'# {site_name}',
+            '',
+            f'[Home]({page_to_url("Home")}) | [User Guide]({page_to_url("user-guide")}) | [Dashboard]({page_to_url("dashboard")})',
+          ]
+          (wiki_root / '_Header.md').write_text('\n'.join(header_lines) + '\n', encoding='utf-8')
+
+          footer_lines = [
+            '---',
+            '',
+            f'{site_name}',
+            '',
+            f'[Home]({page_to_url("Home")}) | [User Guide Overview]({page_to_url("user-guide")}) | [Glossary]({page_to_url("glossary")})',
+          ]
+          (wiki_root / '_Footer.md').write_text('\n'.join(footer_lines) + '\n', encoding='utf-8')
+          PY
+
+      - name: Rewrite local image links for GitHub Wiki
+        run: |
+          # Normalize Markdown image links to absolute wiki URLs.
+          # This avoids renderer differences for relative paths on nested wiki pages.
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          wiki_root = Path('/tmp/wiki').resolve()
+          # Use GitHub Wiki file URLs instead of raw host URLs.
+          # These links are resolved consistently by the wiki renderer.
+          base_wiki = 'https://github.com/sharf-shawon/CTB2025/wiki'
+
+          image_pattern = re.compile(r'!\[([^\]]*)\]\(([^)]+)\)')
+
+          def rewrite_image_link(md_file: Path, alt: str, target: str) -> str:
+            raw_target = target.strip()
+            if not raw_target:
+              return f'![{alt}]({target})'
+
+            # Keep remote/data/hash links untouched.
+            lowered = raw_target.lower()
+            if lowered.startswith(('http://', 'https://', 'data:', '#')):
+              return f'![{alt}]({target})'
+
+            # Skip wiki-page links accidentally written in image syntax.
+            if lowered.endswith('.md'):
+              return f'![{alt}]({target})'
+
+            source_dir = md_file.parent
+            resolved = (source_dir / raw_target).resolve()
+
+            # Only rewrite paths that point inside the synced wiki tree.
+            try:
+              rel = resolved.relative_to(wiki_root)
+            except ValueError:
+              return f'![{alt}]({target})'
+
+            if not resolved.exists():
+              return f'![{alt}]({target})'
+
+            rel_posix = rel.as_posix()
+            return f'![{alt}]({base_wiki}/{rel_posix})'
+
+          for md_file in wiki_root.rglob('*.md'):
+            content = md_file.read_text(encoding='utf-8')
+
+            def repl(match):
+              alt_text = match.group(1)
+              link_target = match.group(2)
+              return rewrite_image_link(md_file, alt_text, link_target)
+
+            updated = image_pattern.sub(repl, content)
+            if updated != content:
+              md_file.write_text(updated, encoding='utf-8')
+          PY
 
       - name: Commit and push changes
         env:

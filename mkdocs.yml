@@ -1,14 +1,38 @@
 site_name: CTB Admin Documentation
-site_description: User and administrator documentation for CTB Admin
+site_url: !ENV [SITE_URL, "https://docs.ctbinfo.com"]
+site_description: User and Administrator documentation for CTB Admin
 repo_name: CTB2025.wiki
+plugins:
+  - glightbox
+  - social
+  - meta
+  - search
+  - google-translate
+  - image-gallery:
+      image_folder: "./gallery/"
+      youtube_links_file: "youtube-links.yaml"
+      separate_category_pages: true
+
 theme:
   name: material
+  custom_dir: overrides
   logo: assets/images/ctb-logo.svg
   favicon: assets/images/ctb-logo.svg
   palette:
-    - scheme: slate
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
       primary: indigo
-      accent: deep purple
+      accent: purple
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: purple
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
   features:
     - navigation.instant
     - navigation.sections
@@ -17,118 +41,164 @@ theme:
 extra_css:
   - stylesheets/ctb-theme.css
 
+extra_javascript:
+  - javascripts/sw-register.js
+extra:
+  analytics:
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: >-
+            Thanks for your feedback! Help us improve this page by
+            using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+    provider: google
+    property: !ENV [GOOGLE_ANALYTICS_PROPERTY_ID, "G-XXXXXXXXXX"]
+  alternate:
+    # Original Language
+    - name: English
+      lang: "en"
+      link: "%GT_RELATIVE_URL%" # For relative urls back to original language
+      # Extra languages
+    - name: Bangla
+      lang: "bn"
+      link: "https://translate.goog/?_x_tr_sl=en&_x_tr_tl=bn&_x_tr_hl=en&_x_tr_pto=wapp"
+      # _x_tr_sl = source language
+      # _x_tr_tl = translation language
+  ctb_footer:
+    copyright: "© 2026 CTB Admin Documentation. All rights reserved."
+    developer_name: !ENV [DEVELOPER_NAME, "Dhakaiya.Dev"]
+    developer_url: !ENV [DEVELOPER_URL, "https://dhakaiya.dev"]
+
 markdown_extensions:
   - admonition
   - tables
   - toc:
       permalink: true
+watch:
+  - docs
+
+exclude_docs: |
+  _Footer.md
+  _Header.md
+  _Sidebar.md
+
+validation:
+  unrecognized_links: ignore
 
 nav:
   - Home: index.md
-  - User Guide:
-    - Overview: user-guide/README.md
-    - Getting Started:
+  - Start Here: user-guide/README.md
+  - Getting Started:
       - Overview: user-guide/00-getting-started/overview.md
       - Login and Logout: user-guide/00-getting-started/login-and-logout.md
       - Dashboard: user-guide/00-getting-started/dashboard.md
-    - Business:
+  - Business:
       - Module Overview: user-guide/01-business/README.md
       - Clients:
-        - Overview: user-guide/01-business/clients/overview.md
-        - Add Client: user-guide/01-business/clients/add-client.md
-        - Edit Client: user-guide/01-business/clients/edit-client.md
-        - Client Detail: user-guide/01-business/clients/client-detail.md
-        - Client Reports: user-guide/01-business/clients/client-reports.md
+          - Overview: user-guide/01-business/clients/overview.md
+          - Add Client: user-guide/01-business/clients/add-client.md
+          - Edit Client: user-guide/01-business/clients/edit-client.md
+          - Client Detail: user-guide/01-business/clients/client-detail.md
+          - Client Reports: user-guide/01-business/clients/client-reports.md
       - Vendors:
-        - Overview: user-guide/01-business/vendors/overview.md
-        - Add Vendor: user-guide/01-business/vendors/add-vendor.md
-        - Edit Vendor: user-guide/01-business/vendors/edit-vendor.md
-        - Vendor Detail: user-guide/01-business/vendors/vendor-detail.md
-    - Factory:
+          - Overview: user-guide/01-business/vendors/overview.md
+          - Add Vendor: user-guide/01-business/vendors/add-vendor.md
+          - Edit Vendor: user-guide/01-business/vendors/edit-vendor.md
+          - Vendor Detail: user-guide/01-business/vendors/vendor-detail.md
+  - Factory:
       - Module Overview: user-guide/02-factory/README.md
       - Categories:
-        - Overview: user-guide/02-factory/categories/overview.md
-        - Add Category: user-guide/02-factory/categories/add-category.md
-        - Edit Category: user-guide/02-factory/categories/edit-category.md
+          - Overview: user-guide/02-factory/categories/overview.md
+          - Add Category: user-guide/02-factory/categories/add-category.md
+          - Edit Category: user-guide/02-factory/categories/edit-category.md
       - Materials:
-        - Overview: user-guide/02-factory/materials/overview.md
-        - Add Material: user-guide/02-factory/materials/add-material.md
-        - Edit Material: user-guide/02-factory/materials/edit-material.md
+          - Overview: user-guide/02-factory/materials/overview.md
+          - Add Material: user-guide/02-factory/materials/add-material.md
+          - Edit Material: user-guide/02-factory/materials/edit-material.md
       - Material Inventory:
-        - Overview: user-guide/02-factory/material-inventory/overview.md
-        - Add Inventory Entry: user-guide/02-factory/material-inventory/add-inventory-entry.md
+          - Overview: user-guide/02-factory/material-inventory/overview.md
+          - Add Inventory Entry: user-guide/02-factory/material-inventory/add-inventory-entry.md
       - Products:
-        - Overview: user-guide/02-factory/products/overview.md
-        - Add Product: user-guide/02-factory/products/add-product.md
-        - Edit Product: user-guide/02-factory/products/edit-product.md
-        - Product Detail: user-guide/02-factory/products/product-detail.md
-    - Trade:
+          - Overview: user-guide/02-factory/products/overview.md
+          - Add Product: user-guide/02-factory/products/add-product.md
+          - Edit Product: user-guide/02-factory/products/edit-product.md
+          - Product Detail: user-guide/02-factory/products/product-detail.md
+  - Trade:
       - Module Overview: user-guide/03-trade/README.md
       - Invoices:
-        - Overview: user-guide/03-trade/invoices/overview.md
-        - Create Invoice: user-guide/03-trade/invoices/create-invoice.md
-        - Create Tender Invoice: user-guide/03-trade/invoices/create-tender-invoice.md
-        - Create Quotation: user-guide/03-trade/invoices/create-quotation.md
-        - Edit Invoice: user-guide/03-trade/invoices/edit-invoice.md
-        - Invoice Detail: user-guide/03-trade/invoices/invoice-detail.md
-        - Print Invoice: user-guide/03-trade/invoices/print-invoice.md
-        - Print Chalan: user-guide/03-trade/invoices/print-chalan.md
-        - Invoice Reports: user-guide/03-trade/invoices/invoice-reports.md
+          - Overview: user-guide/03-trade/invoices/overview.md
+          - Create Invoice: user-guide/03-trade/invoices/create-invoice.md
+          - Create Tender Invoice: user-guide/03-trade/invoices/create-tender-invoice.md
+          - Create Quotation: user-guide/03-trade/invoices/create-quotation.md
+          - Edit Invoice: user-guide/03-trade/invoices/edit-invoice.md
+          - Invoice Detail: user-guide/03-trade/invoices/invoice-detail.md
+          - Print Invoice: user-guide/03-trade/invoices/print-invoice.md
+          - Print Chalan: user-guide/03-trade/invoices/print-chalan.md
+          - Invoice Reports: user-guide/03-trade/invoices/invoice-reports.md
       - Payments:
-        - Overview: user-guide/03-trade/payments/overview.md
-        - Add Payment: user-guide/03-trade/payments/add-payment.md
-        - Payment Detail: user-guide/03-trade/payments/payment-detail.md
+          - Overview: user-guide/03-trade/payments/overview.md
+          - Add Payment: user-guide/03-trade/payments/add-payment.md
+          - Payment Detail: user-guide/03-trade/payments/payment-detail.md
       - Checks:
-        - Overview: user-guide/03-trade/checks/overview.md
-        - Add Check: user-guide/03-trade/checks/add-check.md
-        - Check Detail: user-guide/03-trade/checks/check-detail.md
+          - Overview: user-guide/03-trade/checks/overview.md
+          - Add Check: user-guide/03-trade/checks/add-check.md
+          - Check Detail: user-guide/03-trade/checks/check-detail.md
       - Vouchers:
-        - Overview: user-guide/03-trade/vouchers/overview.md
-        - Add Voucher: user-guide/03-trade/vouchers/add-voucher.md
-        - Voucher Detail: user-guide/03-trade/vouchers/voucher-detail.md
+          - Overview: user-guide/03-trade/vouchers/overview.md
+          - Add Voucher: user-guide/03-trade/vouchers/add-voucher.md
+          - Voucher Detail: user-guide/03-trade/vouchers/voucher-detail.md
       - Banks:
-        - Overview: user-guide/03-trade/banks/overview.md
-        - Add Bank: user-guide/03-trade/banks/add-bank.md
-        - Bank Detail: user-guide/03-trade/banks/bank-detail.md
-    - Employee:
+          - Overview: user-guide/03-trade/banks/overview.md
+          - Add Bank: user-guide/03-trade/banks/add-bank.md
+          - Bank Detail: user-guide/03-trade/banks/bank-detail.md
+  - Employee:
       - Module Overview: user-guide/04-employee/README.md
       - Departments:
-        - Overview: user-guide/04-employee/departments/overview.md
-        - Add/Edit Department: user-guide/04-employee/departments/add-edit-department.md
+          - Overview: user-guide/04-employee/departments/overview.md
+          - Add/Edit Department: user-guide/04-employee/departments/add-edit-department.md
       - Positions:
-        - Overview: user-guide/04-employee/positions/overview.md
-        - Add/Edit Position: user-guide/04-employee/positions/add-edit-position.md
+          - Overview: user-guide/04-employee/positions/overview.md
+          - Add/Edit Position: user-guide/04-employee/positions/add-edit-position.md
       - Employees:
-        - Overview: user-guide/04-employee/employees/overview.md
-        - Add Employee: user-guide/04-employee/employees/add-employee.md
-        - Edit Employee: user-guide/04-employee/employees/edit-employee.md
-        - Employee Detail: user-guide/04-employee/employees/employee-detail.md
+          - Overview: user-guide/04-employee/employees/overview.md
+          - Add Employee: user-guide/04-employee/employees/add-employee.md
+          - Edit Employee: user-guide/04-employee/employees/edit-employee.md
+          - Employee Detail: user-guide/04-employee/employees/employee-detail.md
       - Attendance:
-        - Overview: user-guide/04-employee/attendance/overview.md
-        - Record Attendance: user-guide/04-employee/attendance/record-attendance.md
+          - Overview: user-guide/04-employee/attendance/overview.md
+          - Record Attendance: user-guide/04-employee/attendance/record-attendance.md
       - Salary:
-        - Overview: user-guide/04-employee/salary/overview.md
-        - Generate Salary: user-guide/04-employee/salary/generate-salary.md
-        - Salary Detail: user-guide/04-employee/salary/salary-detail.md
+          - Overview: user-guide/04-employee/salary/overview.md
+          - Generate Salary: user-guide/04-employee/salary/generate-salary.md
+          - Salary Detail: user-guide/04-employee/salary/salary-detail.md
       - Wages:
-        - Overview: user-guide/04-employee/wages/overview.md
-        - Add Wage Entry: user-guide/04-employee/wages/add-wage-entry.md
+          - Overview: user-guide/04-employee/wages/overview.md
+          - Add Wage Entry: user-guide/04-employee/wages/add-wage-entry.md
       - Payouts:
-        - Overview: user-guide/04-employee/payouts/overview.md
-        - Create Payout: user-guide/04-employee/payouts/create-payout.md
+          - Overview: user-guide/04-employee/payouts/overview.md
+          - Create Payout: user-guide/04-employee/payouts/create-payout.md
       - Tasks:
-        - Overview: user-guide/04-employee/tasks/overview.md
-        - Create/Edit Task: user-guide/04-employee/tasks/create-edit-task.md
+          - Overview: user-guide/04-employee/tasks/overview.md
+          - Create/Edit Task: user-guide/04-employee/tasks/create-edit-task.md
       - Purchase Balance:
-        - Overview: user-guide/04-employee/purchase-balance/overview.md
-    - Settings and Admin:
+          - Overview: user-guide/04-employee/purchase-balance/overview.md
+  - Settings and Admin:
       - Audit Log: user-guide/05-settings-and-admin/audit-log.md
       - Module Overview: user-guide/05-settings-and-admin/README.md
       - User Management: user-guide/05-settings-and-admin/user-management.md
       - App Settings: user-guide/05-settings-and-admin/app-settings.md
       - SMS Notifications: user-guide/05-settings-and-admin/sms-notifications.md
       - Maintenance Mode: user-guide/05-settings-and-admin/maintenance-mode.md
-    - Reference:
+  - Reference:
       - Error Pages: user-guide/06-reference/error-pages.md
       - Offline Mode: user-guide/06-reference/offline-mode.md
       - Glossary: user-guide/06-reference/glossary.md
+      - Gallery: gallery.md
