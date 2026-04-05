@@ -121,6 +121,18 @@ Used to track material usage and stock reduction.
 
 ______________________________________________________________________
 
+## Material History Button
+
+This tab displays a **complete audit trail** of the material record.
+![History Button](edit-material-history-button.png)
+
+### Includes
+
+- Chronological list of all actions (Created, Changed)
+- Detailed log of value transitions (e.g., `Stock: 0 → 2000`)
+- User identification and change reasons
+- Option to revert to previous versions
+
 ## Best Practices
 
 - Use the **General tab** for updates, not inventory adjustments
