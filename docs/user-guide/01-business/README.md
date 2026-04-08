@@ -30,6 +30,8 @@ ______________________________________________________________________
 
 ## How it fits into the system
 
+<!-- TODO: this part would be deleted -->
+
 The Business section connects directly with financial and trade operations:
 
 - **Trade → Invoices** — Linked with Clients
@@ -49,6 +51,8 @@ ______________________________________________________________________
 ______________________________________________________________________
 
 ## Key difference between Clients and Vendors
+
+<!-- TODO : THIS SECTION WOULD BE DELETED -->
 
 | Aspect          | Clients           | Vendors              |
 | --------------- | ----------------- | -------------------- |
