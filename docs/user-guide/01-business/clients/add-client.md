@@ -40,7 +40,7 @@ ______________________________________________________________________
 
 this section allows the user to store a client's personal information
 
-![Personal Infromation Section](edit-client-personal-info.png)
+![Personal Infromation Section](client-edit-personal-info.png)
 
 1. Open the **Client Detail Page** from the **Client List Page**.
 
@@ -92,7 +92,7 @@ Make sure the **phone number is correct**, as it is used for SMS notifications a
 
 The **Business Details** section allows you to store additional identification and contract information for the client.
 
-![Business Details Section](edit-client-business-details.png)
+![Business Details Section](client-edit-business-details.png)
 
 ______________________________________________________________________
 
@@ -248,7 +248,7 @@ ______________________________________________________________________
 
 ## Business Details
 
-![Business Details Section](edit-client-business-details.png)
+![Business Details Section](client-edit-business-details.png)
 
 1. Enter the **NID Number** of the client.
 

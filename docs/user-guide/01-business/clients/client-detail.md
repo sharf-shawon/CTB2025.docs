@@ -31,7 +31,7 @@ ______________________________________________________________________
 
 ## Personal Information
 
-![Personal Information Section](edit-client-personal-info.png)
+![Personal Information Section](client-edit-personal-info.png)
 
 This section displays the client’s basic information.
 
@@ -50,7 +50,7 @@ ______________________________________________________________________
 
 ## Business Details
 
-![Business Details Section](edit-client-business-details.png)
+![Business Details Section](client-edit-business-details.png)
 
 This section contains identity and contract-related information.
 
