@@ -1,6 +1,6 @@
 # Login and Logout
 
-Use this page to sign in to CTB Fashion and to sign out when you are done. All access to the system requires a valid username and password.
+Use this page to sign in to CTB Admin and sign out when you are done. All access to the system requires a valid username and password.
 
 ## When to use this page
 
@@ -60,14 +60,14 @@ Always log out after each session on shared or public computers to protect busin
 
 ______________________________________________________________________
 
-## Tips and Common Issues
+## Tips and common issues
 
-- If the login page does not load, check that you are using the correct URL and that the server is running.
+- If the login page does not load, check that you are using the correct URL and that the service is available.
 - Passwords are case-sensitive. Make sure **Caps Lock** is off before entering your password.
-- If you are redirected back to the login page after signing in, your session cookie may be blocked. Check your browser's cookie settings.
+- If you are redirected back to the login page after signing in, your browser may be blocking cookies. Check your browser cookie settings.
 - Only administrators can create user accounts or reset passwords. Contact your administrator if you are locked out.
 
-## Related Pages
+## Related pages
 
 - **Dashboard** — The first page you see after a successful login.
 - **User Management** — Add or manage user accounts (administrators only).

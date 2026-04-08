@@ -24,7 +24,7 @@ ______________________________________________________________________
 
 ### Personal Information
 
-![Personal Information Section](edit-client-personal-info.png)
+![Personal Information Section](client-edit-personal-info.png)
 
 1. Update the **Client Name** if it has changed.
 1. Adjust the **Is Enabled** and **Send SMS** toggles as required:
@@ -34,7 +34,7 @@ ______________________________________________________________________
 
 ### Business Details
 
-![Business Details Section](edit-client-business-details.png)
+![Business Details Section](client-edit-business-details.png)
 
 4. Update the **NID Number** if it was entered incorrectly.
 1. Replace uploaded photos by clicking **Choose file to upload** and selecting a new file:
