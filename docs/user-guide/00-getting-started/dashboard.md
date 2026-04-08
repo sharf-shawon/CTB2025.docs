@@ -1,6 +1,6 @@
 # Dashboard
 
-The Dashboard is the first page you see after logging in to CTB Admin. It gives you an at-a-glance view of business performance, quick access to every module, and real-time operational data — all from a single screen.
+The Dashboard is the first page you see after logging in to CTB Admin. It gives you an at-a-glance view of business performance, quick access to every module, and key operational data from a single screen.
 
 ## When to use this page
 
@@ -71,19 +71,17 @@ ______________________________________________________________________
 
 ## Quick Access Pages
 
-The **Quick Access Pages** section (item 12 — toggle to show/hide) displays every major model in CTB Admin as a colourful card. Each card gives you two actions:
+The **Quick Access Pages** section (item 12 — toggle to show/hide) displays major pages in CTB Admin as colourful cards. Each card gives you two actions:
 
-- **Click anywhere on the card** — opens the **list page** for that model.
-- **Click the + (Add) button** on the card — opens the **create new record** page for that model.
+- **Click anywhere on the card** — opens the related **list page**.
+- **Click the + (Add) button** on the card — opens the related **new record page**.
 
 You can mark frequently used pages as **Favourites** by clicking the heart icon on any card. Favourited cards appear at the top of the section.
 
 !!! info "Caching"
-The Dashboard — including Quick Access Pages and Dashboard Analytics — is **cached for 15 minutes** to reduce server load. The data you see may be up to 15 minutes old.
+The Dashboard, including Quick Access Pages and Dashboard Analytics, is **cached for 15 minutes** to reduce system load. The data you see may be up to 15 minutes old.
 
-```
-To force an immediate recalculation of all data, click the **Refresh** button (item 12 area). Use this sparingly, as it places extra load on the server.
-```
+To force an immediate recalculation of all data, click the **Refresh** button in the item 12 area. Use this sparingly, as it increases system load.
 
 ______________________________________________________________________
 

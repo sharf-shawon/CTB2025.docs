@@ -3,6 +3,7 @@ site_url: !ENV [SITE_URL, "https://docs.ctbinfo.com"]
 site_description: User and Administrator documentation for CTB Admin
 repo_name: CTB2025.wiki
 plugins:
+  - offline
   - glightbox
   - social
   - meta
@@ -41,8 +42,8 @@ theme:
 extra_css:
   - stylesheets/ctb-theme.css
 
-extra_javascript:
-  - javascripts/sw-register.js
+# extra_javascript:
+#   - javascripts/sw-register.js
 extra:
   analytics:
     feedback:
@@ -73,11 +74,16 @@ extra:
       # _x_tr_sl = source language
       # _x_tr_tl = translation language
   ctb_footer:
-    copyright: "© 2026 CTB Admin Documentation. All rights reserved."
+    copyright: "© 2026 Dhakaiya.Dev. All rights reserved."
     developer_name: !ENV [DEVELOPER_NAME, "Dhakaiya.Dev"]
     developer_url: !ENV [DEVELOPER_URL, "https://dhakaiya.dev"]
 
 markdown_extensions:
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
   - admonition
   - tables
   - toc:
@@ -95,6 +101,7 @@ validation:
 
 nav:
   - Home: index.md
+  - Gallery: gallery.md
   - Start Here: user-guide/README.md
   - Getting Started:
       - Overview: user-guide/00-getting-started/overview.md
@@ -201,4 +208,3 @@ nav:
       - Error Pages: user-guide/06-reference/error-pages.md
       - Offline Mode: user-guide/06-reference/offline-mode.md
       - Glossary: user-guide/06-reference/glossary.md
-      - Gallery: gallery.md
