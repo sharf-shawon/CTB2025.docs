@@ -1,90 +1,93 @@
-# \<<\<<\<<< HEAD
-
 # Edit Client
 
-Use this page to update an existing client's information in CTB Admin. The layout is identical to the Add Client form — all fields are the same but pre-filled with the saved data.
+Use this page to update an existing client's information in CTB Admin. This includes contact details, identification documents, and financial settings.
 
-For full field descriptions, see **[Add Client](add-client.md)**.
+## When to use Edit Client page
 
-## When to use this page
-
-- Correcting a client's contact details or business information.
-- Enabling or disabling a client's active status.
-- Adjusting balance limits or discount settings after a contract change.
+- Updating client contact or business information
+- Changing client status (active/inactive)
+- Modifying balance limits or financial data
+- Updating identification documents or photos
 
 ## How to access this page
 
-1. From the sidebar, go to **Business → Clients**.
-1. Click the client's name or the edit icon on the **Client List** page.
-1. The Client Edit form opens, pre-filled with the client's current data.
+1. Go to **Business → Clients** from the sidebar
+1. On the Client List page, select a client
+1. Click on the **Photo** or **SKU** or **Client Name**
 
-______________________________________________________________________
+The system opens the **Edit Client Page**.
 
-## Steps to Edit a Client
+## What's different from Add Client
 
-### Personal Information
+- All fields are **pre-filled** with existing client data
+- You are **modifying**, not creating a new record
+- Some fields may already contain system-generated or historical values
+- Changes will immediately affect future transactions
+
+## Personal Information
 
 ![Personal Information Section](client-edit-personal-info.png)
 
-1. Update the **Client Name** if it has changed.
-1. Adjust the **Is Enabled** and **Send SMS** toggles as required:
-   - **2.1** Turn **Is Enabled OFF** to deactivate a client who no longer places orders.
-   - **2.2** Turn **Send SMS OFF** to stop invoice notifications for this client.
-1. Update **Business Name**, **Phone Number**, **Alternative Phone**, or **Email** as needed.
+Update the following fields as needed:
 
-### Business Details
+| Field             | What you can change | Notes                                        |
+| ----------------- | ------------------- | -------------------------------------------- |
+| Client Name       | Edit                | Updates how the client appears in the system |
+| Is Enabled        | Toggle ON/OFF       | Disabling prevents usage in new transactions |
+| Send SMS          | Enable/Disable      | Controls notification behavior               |
+| Business Name     | Edit                | Optional                                     |
+| Phone Number      | Edit                | Must be valid if SMS is enabled              |
+| Alternative Phone | Edit                | Optional                                     |
+| Email             | Edit                | Optional                                     |
+
+## Business Details
 
 ![Business Details Section](client-edit-business-details.png)
 
-4. Update the **NID Number** if it was entered incorrectly.
-1. Replace uploaded photos by clicking **Choose file to upload** and selecting a new file:
-   - **5.1** Replace the **NID Card Front Photo** if the image is unclear or outdated.
-   - **5.2** Replace the **NID Card Back Photo** if needed.
-1. Adjust the **Start Date** or **End Date** if contract terms have changed:
-   - **6.1** Update **Start Date** to correct the relationship start.
-   - **6.2** Update **End Date** to set or remove the contract end date.
+| Field           | What you can change | Notes                                    |
+| --------------- | ------------------- | ---------------------------------------- |
+| NID Number      | Edit                | Ensure accuracy for verification         |
+| NID Front Photo | Replace             | Upload a new image if needed             |
+| NID Back Photo  | Replace             | Upload updated image                     |
+| Start Date      | Edit                | Should reflect actual relationship start |
+| End Date        | Set/Update          | Leave empty if ongoing                   |
 
-### Balance and Discount Information
+!!! note
+Replacing images will overwrite previous uploads.
+
+## Balance and Discount Information
 
 ![Balance and Discount Section](client-edit-balance-info.png)
 
-7. Revise the balance fields if the client's financial position has changed:
-   - **7.1** Update **Balance** to reflect the current account balance.
-   - **7.2** Update **Commission Balance** to reflect commission adjustments.
-1. Revise balance limits if credit terms have been renegotiated:
-   - **8.1** Update **Upper Balance Limit**.
-   - **8.2** Update **Lower Balance Limit**.
-1. Update **Discount Max Rate** or **Discount Max Amount** if the client's discount terms have changed.
+| Field               | What you can change | Notes                                  |
+| ------------------- | ------------------- | -------------------------------------- |
+| Balance             | Adjust if required  | Be careful — affects financial records |
+| Commission Balance  | Adjust if required  | Be careful — affects financial records |
+| Upper Balance Limit | Modify              | Controls maximum allowed balance       |
+| Lower Balance Limit | Modify              | Controls minimum allowed balance       |
+| Discount Max Rate   | Modify              | Controls maximum discount rate         |
+| Discount Max Amount | Modify              | Controls maximum discount amount       |
 
-______________________________________________________________________
+!!! warning
+Changing balance-related fields can impact financial tracking and reports.
 
 ## Saving Changes
 
-Click **Save** to apply the changes. The system redirects you to the **Client Detail** page.
+After updating the required fields:
 
-______________________________________________________________________
-
-## Error Messages When Editing
-
-| Message                                               | Cause                                                                | Action                                                |
-| ----------------------------------------------------- | -------------------------------------------------------------------- | ----------------------------------------------------- |
-| "This field is required."                             | A mandatory field was cleared or left empty.                         | Fill in all required fields before saving.            |
-| "Enter a valid phone number."                         | The phone number contains invalid characters or an incorrect format. | Use digits only and include the correct country code. |
-| "Ensure this value is less than or equal to [limit]." | A balance or discount value exceeds the configured system limit.     | Reduce the value to within the allowed range.         |
-
-______________________________________________________________________
+- Click **Save** to apply changes
+- Changes are immediately reflected across the system
 
 ## Tips and Common Issues
 
 - The **SKU** field cannot be changed after a client is created.
-- The **Discount Total** is read-only and calculated automatically — it cannot be edited directly.
-- Deactivating a client (**Is Enabled OFF**) does not delete their invoice history. All past records remain accessible.
-- If you only need to view a client's details without editing, use the **Client Detail** page instead.
+- Disabling a client prevents it from being used in future transactions
+- Ensure **Phone number is correct** before enabling SMS
+- Avoid unnecessary changes to **Balance**, as it affects reports
+- Always verify **NID information** before saving
 
 ## Related Pages
 
-- **Add Client** — Learn about all fields and settings when creating a client.
-- **Client Detail** — View the full profile and history for a client.
-- **Client Reports** — View financial summaries for a client.
-
-> > > > > > > 562ba5bd032c0ffcfa2f03f0a69f3a08a5d7018f
+- **Add Client** — Create a new client
+- **Client Detail** — View client profile and history
+- **Client Reports** — Analyze client financial data
