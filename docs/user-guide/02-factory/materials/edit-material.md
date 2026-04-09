@@ -30,6 +30,8 @@ ______________________________________________________________________
 
 ## General Information
 
+![General Information](material-general-tab.png)
+
 ### Editable Fields
 
 | Field       | Description                              |
@@ -71,7 +73,7 @@ ______________________________________________________________________
 
 ## Overview
 
-![History Page](material-history.png)
+![History Page](material-history-page.png)
 
 This page displays a chronological list of all actions performed on a material object (e.g., `MAT#0001 - runner`).
 

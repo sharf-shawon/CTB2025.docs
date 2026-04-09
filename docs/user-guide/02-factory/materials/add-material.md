@@ -24,7 +24,7 @@ ______________________________________________________________________
 
 ## General Information
 
-![Add Material](add-material.png)
+![Add Material](material-general-tab.png)
 
 ### Fields
 
