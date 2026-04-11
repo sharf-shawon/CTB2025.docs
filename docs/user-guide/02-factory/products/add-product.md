@@ -18,7 +18,7 @@ From the sidebar, go to **Factory → Products**. On the **Products** page, clic
 
 The **General** tab is where you enter the product’s main details and status.
 
-![Add Product Form](add-product-form.png)
+![Add Product Form](product-form.png)
 
 ### Fields in the General tab
 
@@ -47,7 +47,7 @@ Use the **Notes** tab to store internal notes or special instructions about the 
 
 The **Product Costings** tab is used to add and manage raw material cost entries for the product.
 
-![Add Product Costing Page](add-product-costing-page.png)
+![Add Product Costing Page](product-costing-page.png)
 
 ### Product Costing entries
 
