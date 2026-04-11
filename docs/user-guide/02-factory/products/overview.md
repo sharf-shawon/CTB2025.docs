@@ -60,7 +60,7 @@ ______________________________________________________________________
 
 This tab contains the **basic product information**.
 
-![General Tab](edit-product-general.png)
+![General Tab](product-general-information.png)
 
 ### Includes
 
@@ -98,7 +98,7 @@ ______________________________________________________________________
 
 This tab defines the **material composition and cost calculation** for the product.
 
-![Product Costings Tab](edit-product-costings-tab.png)
+![Product Costings Tab](product-costing-page.png)
 
 ### Includes
 
@@ -122,12 +122,10 @@ ______________________________________________________________________
 
 This tab displays a **complete audit trail** of the product record.
 
-![History Button](edit-product-history-button.png)
-
 ### Includes
 
 - Chronological list of all actions (Created, Changed)
-- Detailed log of value transitions (e.g., `Selling Rate: 200Tk → 250Tk`)
+- Detailed log of value transitions
 - User identification and change reasons
 - Option to revert to previous versions
 
