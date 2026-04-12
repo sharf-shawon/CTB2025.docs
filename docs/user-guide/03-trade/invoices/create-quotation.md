@@ -19,8 +19,6 @@ ______________________________________________________________________
 
 ## General Information
 
-![General Tab](create-quotation-general-tab.png)
-
 Fill in the following fields on the General tab:
 
 | Step | Field            | What to Do              | Description                                  |
@@ -56,8 +54,6 @@ ______________________________________________________________________
 
 ## Add Items
 
-![Items Tab](create-quotation-items-tab.png)
-
 Add products or services to the quotation:
 
 | Step | Field   | What to Do           | Description                         |
@@ -77,8 +73,6 @@ Each item's total is calculated automatically once you enter Rate and Qty.
 ______________________________________________________________________
 
 ## Terms and Notes
-
-![Notes Tab](create-quotation-notes-tab.png)
 
 Add optional terms, conditions, or internal notes:
 
