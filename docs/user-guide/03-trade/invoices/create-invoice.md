@@ -23,12 +23,12 @@ ______________________________________________________________________
 
 Fill in the following fields on the General tab:
 
-| Step | Field          | What to Do              | Description                             |
-| ---- | -------------- | ----------------------- | --------------------------------------- |
-| 1    | Invoice Number | Auto-generated or enter | Unique identifier for this invoice      |
-| 2    | Invoice Date   | Select date             | Date the invoice is issued              |
-| 3    | Client         | Select client           | The customer receiving the invoice      |
-| 4    | Status         | Select status           | Current state (Draft, Sent, Paid, etc.) |
+| Step | Field          | What to Do              | Description                                  |
+| ---- | -------------- | ----------------------- | -------------------------------------------- |
+| 1    | Invoice Number | Auto-generated or enter | Unique identifier for this invoice           |
+| 2    | Invoice Date   | Select date             | Date the invoice is issued                   |
+| 3    | Client         | Select client           | The customer receiving the invoice           |
+| 4    | Status         | Select status           | Current state (Draft, Sent, Cancelled, etc.) |
 
 !!! warning "Required Fields"
 Fields marked with a **red star (\*)** are mandatory.
@@ -36,8 +36,6 @@ Fields marked with a **red star (\*)** are mandatory.
 ______________________________________________________________________
 
 ## Payment Details
-
-![Payment Details Section](../screenshots/trade/create-invoice-general-tab.png)
 
 After adding items, configure the financial details:
 
@@ -94,7 +92,7 @@ ______________________________________________________________________
 
 After completing all sections:
 
-- Click **Save** to create the invoice as Draft
+- Click **Save** to create the invoice as Draft/sent/cancelled. based on the status you selected
 - Click **Save and continue editing** to save and stay on the page
 - Click **Save and add another** to save and create another invoice immediately
 
@@ -107,7 +105,7 @@ ______________________________________________________________________
 - **Client is required** — You must select a client before saving <br>
 - **Items add to Subtotal** — The invoice calculates Subtotal automatically when you add items <br>
 - **Discount reduces Payable** — Enter a discount to reduce the final amount due <br>
-- **Status controls visibility** — Use Status to mark invoices as Draft, Sent, Paid, etc. <br>
+- **Status controls visibility** — Use Status to mark invoices as Draft, Sent,Cancelled, etc. <br>
 - **Date affects reporting** — Invoice Date determines which reporting period the invoice appears in <br>
 
 ______________________________________________________________________

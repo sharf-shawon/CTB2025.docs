@@ -20,13 +20,13 @@ ______________________________________________________________________
 
 Fill in the following fields on the General tab:
 
-| Step | Field         | What to Do              | Description                                      |
-| ---- | ------------- | ----------------------- | ------------------------------------------------ |
-| 1    | Tender Number | Auto-generated or enter | Unique identifier for this tender                |
-| 2    | Tender Date   | Select date             | Date the tender is issued                        |
-| 3    | Client        | Select client           | The customer receiving the tender proposal       |
-| 4    | Status        | Select status           | Current state (Draft, Submitted, Accepted, etc.) |
-| 5    | Valid Until   | Select date             | Expiration date for the tender offer             |
+| Step | Field         | What to Do              | Description                                |
+| ---- | ------------- | ----------------------- | ------------------------------------------ |
+| 1    | Tender Number | Auto-generated or enter | Unique identifier for this tender          |
+| 2    | Tender Date   | Select date             | Date the tender is issued                  |
+| 3    | Client        | Select client           | The customer receiving the tender proposal |
+| 4    | Status        | Select status           | Current state (Draft, sent, cancelled)     |
+| 5    | Valid Until   | Select date             | Expiration date for the tender offer       |
 
 !!! warning "Required Fields"
 Fields marked with a **red star (\*)** are mandatory.
@@ -86,11 +86,11 @@ ______________________________________________________________________
 
 After completing all sections:
 
-- Click **Save** to create the tender as Draft
+- Click **Save** to create the tender as Draft/sent/cancelled based on the status you selected
 - Click **Save and continue editing** to save and stay on the page
 - Click **Save and add another** to save and create another tender immediately
 
-The tender is now ready to be sent to the client for review or negotiation.
+The tender invoice is now ready to be sent to the client or processed for payment.
 
 ______________________________________________________________________
 
@@ -98,9 +98,8 @@ ______________________________________________________________________
 
 - **Client is required** — You must select a client before saving <br>
 - **Valid Until date matters** — Set an expiration date so the tender doesn't stay open indefinitely <br>
-- **Status tracks the tender lifecycle** — Use Status to mark tenders as Draft, Submitted, Accepted, Rejected, etc. <br>
+- **Status tracks the tender lifecycle** — Use Status to mark tenders as Draft, Sent, Cancelled <br>
 - **Keep detailed Terms** — Include payment terms, delivery date, and any conditions in the Terms field <br>
-- **Tender differs from Invoice** — Tenders are proposals; they become invoices only after the client accepts <br>
 
 ______________________________________________________________________
 
