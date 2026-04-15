@@ -28,38 +28,12 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## How it fits into the system
-
-<!-- TODO: this part would be deleted -->
-
-The Business section connects directly with financial and trade operations:
-
-- **Trade → Invoices** — Linked with Clients
-- **Trade → Purchases / Vouchers** — Linked with Vendors
-- **Trade → Payments** — Applies to both Clients and Vendors
-- **Reports** — Generate financial summaries based on client/vendor data
-
-______________________________________________________________________
-
 ## Typical workflow
 
 1. **Add a Client or Vendor** before starting any transaction
 1. **Use them in transactions** (Invoices for clients, Purchases for vendors)
 1. **Record payments** to update balances
 1. **Review details and reports** for financial tracking
-
-______________________________________________________________________
-
-## Key difference between Clients and Vendors
-
-<!-- TODO : THIS SECTION WOULD BE DELETED -->
-
-| Aspect          | Clients           | Vendors              |
-| --------------- | ----------------- | -------------------- |
-| Role            | Buyers            | Suppliers            |
-| Money Flow      | Receive money     | Pay money            |
-| Used In         | Invoices          | Purchases / Vouchers |
-| Balance Meaning | Amount receivable | Amount payable       |
 
 ______________________________________________________________________
 
