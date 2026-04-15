@@ -1,3 +1,9 @@
+<!--
+    TODO: Add to docs.
+    Pending Balance = Sum of all "balance" values for pending and bounced
+    send-type checks + Current Balance
+-->
+
 # Client Detail
 
 The **Client Detail** page displays the complete profile of a client, including personal information, business details, financial data, and activity history. It allows you to review client information and perform actions such as editing or managing transactions.

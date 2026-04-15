@@ -1,4 +1,12 @@
+<!--
+    TODO: Add to docs.
+    Pending Balance = Sum of all "balance" values for pending and bounced
+    send-type checks + Current Balance
+-->
+
 # Edit Vendor
+
+<!-- TODO: vendor details should not talk about vendor edit. ??? -->
 
 Use this page to update an existing vendor’s information, including profile details, documents, and financial settings.
 
