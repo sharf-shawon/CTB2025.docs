@@ -153,6 +153,7 @@ nav:
       - Payments:
           - Overview: user-guide/03-trade/payments/overview.md
           - Add Payment: user-guide/03-trade/payments/add-payment.md
+          - Edit Payment: user-guide/03-trade/payments/edit-payment.md
           - Payment Detail: user-guide/03-trade/payments/payment-detail.md
       - Checks:
           - Overview: user-guide/03-trade/checks/overview.md
