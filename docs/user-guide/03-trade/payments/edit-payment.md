@@ -14,6 +14,8 @@ Use this page to update payment details, status, and associated information. Pay
 
 From the sidebar, go to **Trade Management → Payments**. On the Payments List page, find the payment you want to edit and click on the payment reference.
 
+![Payment List Page](payment-list-page.png)
+
 The system opens the **Payment Detail page**.
 
 ______________________________________________________________________
