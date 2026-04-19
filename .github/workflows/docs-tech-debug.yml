@@ -43,7 +43,7 @@ jobs:
 
       - name: Checkout repository
         if: steps.label_check.outputs.has_tech_label == 'true'
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
