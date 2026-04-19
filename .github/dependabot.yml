@@ -3,8 +3,8 @@ updates:
   - package-ecosystem: "pip"
     directory: "/"
     schedule:
-      interval: "weekly"
-      day: "monday"
+      interval: "monthly"
+      day: "01"
       time: "06:00"
     open-pull-requests-limit: 10
     labels:
@@ -14,8 +14,8 @@ updates:
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "weekly"
-      day: "monday"
+      interval: "monthly"
+      day: "01"
       time: "06:15"
     open-pull-requests-limit: 10
     labels:
