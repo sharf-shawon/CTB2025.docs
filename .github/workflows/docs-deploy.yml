@@ -17,6 +17,7 @@ jobs:
       DEVELOPER_NAME: ${{ vars.DEVELOPER_NAME }}
       DEVELOPER_URL: ${{ vars.DEVELOPER_URL }}
       SITE_URL: ${{ vars.SITE_URL }}
+      CUSTOM_DOMAIN: ${{ vars.CUSTOM_DOMAIN }}
 
     steps:
       - name: Checkout
@@ -32,6 +33,23 @@ jobs:
 
       - name: Sync dependencies
         run: uv sync --extra dev
+
+      - name: Generate CNAME from environment
+        run: |
+          set -euo pipefail
+
+          DOMAIN="${CUSTOM_DOMAIN:-}"
+          if [[ -z "$DOMAIN" && -n "${SITE_URL:-}" ]]; then
+            DOMAIN="$(printf '%s' "$SITE_URL" | sed -E 's#^https?://##; s#/.*$##')"
+          fi
+
+          if [[ -z "$DOMAIN" ]]; then
+            echo "CUSTOM_DOMAIN and SITE_URL are both empty; cannot generate CNAME."
+            exit 1
+          fi
+
+          printf '%s\n' "$DOMAIN" > docs/CNAME
+          echo "Generated docs/CNAME for domain: $DOMAIN"
 
       - name: Deploy docs to GitHub Pages
         run: uv run mkdocs gh-deploy --force

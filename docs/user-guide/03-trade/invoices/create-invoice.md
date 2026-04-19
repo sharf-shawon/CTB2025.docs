@@ -2,7 +2,11 @@
 
 Use this page to create a standard invoice for a client. An invoice records the sale of products or services and tracks payment. Invoices are used to request payment, manage accounts receivable, and generate business reports.
 
-## When to use Create Invoice
+## Summary
+
+Use this page to create client invoices with items, charges, and totals in one workflow. A correctly prepared invoice improves payment tracking and reporting accuracy.
+
+## When to use this page
 
 - Selling CTB's own products to clients
 - Recording sales of inventory from your company's stock
@@ -14,6 +18,23 @@ Use this page to create a standard invoice for a client. An invoice records the 
 From the sidebar, go to **Trade Management → Invoices**. On the Invoices List page, click the **purple (+) icon** in the top-right corner.
 
 The system opens the **Create Invoice Page**.
+
+## Step-by-step instructions
+
+1. Open **Trade Management -> Invoices** and click the add icon.
+1. Fill the invoice header details in **General Information**.
+1. Add one or more line items in **Add Items**.
+1. Review taxes, shipping, discount, and payable amount in **Payment Details**.
+1. Add optional notes and set invoice visibility/status.
+1. Click the appropriate save action to create the invoice.
+
+## Field reference
+
+- **Invoice Number** - Unique identifier used to track the invoice.
+- **Invoice Date** - Billing date used in reports and period summaries.
+- **Client** - Customer account receiving the invoice.
+- **Status** - Lifecycle state such as Draft, Sent, or Cancelled.
+- **Payable** - Final amount due after all charges and discounts.
 
 ______________________________________________________________________
 
@@ -77,7 +98,7 @@ ______________________________________________________________________
 
 ## Notes and Status
 
-![Notes Tab](create-invoice%20-note-tab.png)
+![Notes Tab](create-invoice-notes-tab.png)
 
 Add optional notes or internal comments:
 

@@ -2,7 +2,11 @@
 
 Use this page to update invoice details, items, and payment information. Invoice editing capabilities depend on the invoice status—draft invoices can be fully edited, while sent or finalized invoices have restricted modifications to maintain audit integrity.
 
-## When to use Edit Invoice
+## Summary
+
+Use this page to correct or update invoice data after creation, based on status rules. It helps you maintain accurate financial records while protecting finalized transactions.
+
+## When to use this page
 
 - Correcting errors in a draft invoice before sending
 - Updating client information or delivery details
@@ -17,6 +21,23 @@ From the sidebar, go to **Trade Management → Invoices**. On the Invoices List 
 ![Edit Invoice List Page](edit-invoice-list-page.png)
 
 The system opens the **Edit Invoice Page**.
+
+## Step-by-step instructions
+
+1. Open **Trade Management -> Invoices** and select the target invoice.
+1. Confirm current status and applicable edit restrictions.
+1. Update allowed header fields in **General Information**.
+1. Adjust line items and payment-related values if status permits.
+1. Add or update internal notes as needed.
+1. Save changes and review the updated invoice details.
+
+## Field reference
+
+- **Invoice Number** - Unique identifier for the invoice.
+- **Client** - Linked customer account for this invoice.
+- **Status** - Controls edit permissions and invoice lifecycle.
+- **Subtotal** - Sum of all line-item totals.
+- **Payable** - Final amount due after taxes, charges, and discount.
 
 ______________________________________________________________________
 

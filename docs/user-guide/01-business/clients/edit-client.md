@@ -2,7 +2,11 @@
 
 Use this page to update an existing client's information in CTB Admin. This includes contact details, identification documents, and financial settings.
 
-## When to use Edit Client page
+## Summary
+
+Use this page to keep existing client records accurate after profile, document, or balance changes. Updates made here immediately affect future transactions and reporting.
+
+## When to use this page
 
 - Updating client contact or business information
 - Changing client status (active/inactive)
@@ -16,6 +20,22 @@ Use this page to update an existing client's information in CTB Admin. This incl
 1. Click on the **Photo** or **SKU** or **Client Name**
 
 The system opens the **Edit Client Page**.
+
+## Step-by-step instructions
+
+1. Open **Business -> Clients** from the sidebar.
+1. Select the client by **Photo**, **SKU**, or **Client Name**.
+1. Update the required fields across personal, business, and balance sections.
+1. Review financial changes carefully before saving.
+1. Click **Save** to apply the updates.
+
+## Field reference
+
+- **Client Name** - Display name used across CTB Admin.
+- **Is Enabled** - Controls whether the client can be used in new transactions.
+- **Phone Number** - Main contact number, especially important when SMS is enabled.
+- **NID fields** - Identity information and document images for verification.
+- **Balance and limits** - Financial controls that affect statements and validation rules.
 
 ## What's different from Add Client
 
@@ -57,7 +77,7 @@ Replacing images will overwrite previous uploads.
 
 ## Balance and Discount Information
 
-![Balance and Discount Section](client-edit-balance-info.png)
+![Balance and Discount Section](client-balance-discount.png)
 
 | Field               | What you can change | Notes                                  |
 | ------------------- | ------------------- | -------------------------------------- |

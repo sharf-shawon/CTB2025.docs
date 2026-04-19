@@ -2,7 +2,11 @@
 
 Use this page to view and manage a check after it has been created or received. The check detail page displays all information related to a check—general details, financial information, status, and supporting documents. You can update check status, add front and back photos, and track payment records linked to this check.
 
-## When to use Check Detail
+## Summary
+
+Use this page to review check records, verify linked payments, and update allowed status fields. It supports reconciliation and audit review for incoming or issued checks.
+
+## When to use this page
 
 - Viewing a complete check record with all details and payment information
 - Updating check status (Pending, Cleared, Bounced, etc.)
@@ -13,6 +17,24 @@ Use this page to view and manage a check after it has been created or received. 
 ## How to access Check Detail
 
 From the sidebar, go to **Trade Management → Checks**. On the Checks List page, click on any check SKU or select a check to open the **Check Detail page**.
+
+## Step-by-step instructions
+
+1. Open **Trade -> Checks** and select the check record.
+1. Review the check information and client information sections.
+1. Update the status if the bank has cleared, bounced, or cancelled the check.
+1. Add or verify front and back photos.
+1. Review linked payments before saving changes.
+
+## Field reference
+
+- **SKU** - Unique system identifier for the check.
+- **Check Number** - Number printed on the physical check.
+- **Bank** - Bank account associated with the check.
+- **Amount** - Face value recorded when the check was created.
+- **Balance** - Remaining amount available after linked payments.
+- **Status** - Current lifecycle state of the check.
+- **Client** - Client or vendor linked to the check.
 
 ______________________________________________________________________
 
@@ -141,31 +163,13 @@ After making edits, you must click **Save** at the bottom-right to apply your ch
 
 ______________________________________________________________________
 
+<!-- TODO: Rewrite the delete-check rules after confirming the exact status names, allowed delete states, and whether archived checks should be kept instead of deleted. -->
+
 !!! warning "Deleting a Check"
 
-```
-You can delete a c  check, but only under specific conditions based on its status and payment state:
+The delete behavior for checks needs confirmation from the product team because the current rules are inconsistent with the status labels elsewhere on this page.
 
-### When you **can delete a check**:
-- **Status is Pending** — If the check is in Pending status and has no linked payments, you can delete it
-### When you **cannot delete a check**:
-- **Check has partial payment** — If any payment is linked to this check (even if incomplete), the check cannot be deleted
-- **Status is Bounced** — Bounced checks are locked and cannot be deleted (they must be kept for audit and reconciliation records)
-- **Status is Passed** — Passed (cleared) checks cannot be deleted (they must be retained as confirmed transactions)
-- **Status is Failed** — Failed checks cannot be deleted (they must be kept for bank reconciliation)
-warning "Deletion Rules"
-Once a check status changes from Pending, or if any payment is linked to it, the delete option becomes unavailable. Plan carefully before initializing payments against a check.
-**To delete a check:**
-1. Open the check detail page
-2. Verify the status is **Pending** and there are **no linked payments**
-3. Click the **Delete Check** button (appears only if conditions are met)
-4. Confirm the deletion when prompted
-info "Cannot Delete?"
-If the Delete button is not visible, check:
-- Is the status **Pending**?
-- Are there **any linked payments** in the Payments tab?
-- If either condition fails, the check cannot be deleted. You can archive it or contact support instead.
-```
+<!-- TODO: Add a cleaned-up step-by-step deletion policy and a support note for users who cannot see the Delete button. -->
 
 ______________________________________________________________________
 

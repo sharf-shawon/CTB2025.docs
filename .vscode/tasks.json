@@ -5,7 +5,9 @@
       "label": "Docs: Serve",
       "type": "shell",
       "command": "mkdocs",
-      "args": ["serve"],
+      "args": [
+        "serve"
+      ],
       "isBackground": true,
       "group": "build",
       "problemMatcher": []
@@ -13,8 +15,13 @@
     {
       "label": "Docs: Build",
       "type": "shell",
-      "command": "mkdocs",
-      "args": ["build", "--strict"],
+      "command": "uv",
+      "args": [
+        "run",
+        "mkdocs",
+        "build",
+        "--strict"
+      ],
       "group": "build",
       "problemMatcher": []
     },
@@ -22,7 +29,10 @@
       "label": "Quality: Pre-commit",
       "type": "shell",
       "command": "pre-commit",
-      "args": ["run", "--all-files"],
+      "args": [
+        "run",
+        "--all-files"
+      ],
       "group": "test",
       "problemMatcher": []
     }

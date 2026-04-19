@@ -31,7 +31,7 @@ ______________________________________________________________________
 
 ## Category Information
 
-![Edit Category Form](category.png)
+![Edit Category Form](category-form.png)
 
 Update the following fields as needed:
 

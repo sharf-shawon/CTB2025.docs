@@ -1,12 +1,10 @@
-<!--
-    TODO: Add to docs.
-    Pending Balance = Sum of all "balance" values for pending and bounced
-    send-type checks + Current Balance
--->
-
 # Client Detail
 
 The **Client Detail** page displays the complete profile of a client, including personal information, business details, financial data, and activity history. It allows you to review client information and perform actions such as editing or managing transactions.
+
+## Summary
+
+Use this page to review a client's complete profile before you perform billing, payment, or account decisions. It combines identity, contact, and financial information in one place.
 
 ## When to use this page
 
@@ -21,6 +19,22 @@ The **Client Detail** page displays the complete profile of a client, including 
 1. On the **Client List** page, click on any client row or name.
 
 The system will open the **Client Detail** page.
+
+## Step-by-step instructions
+
+1. Open **Business -> Clients** from the sidebar.
+1. Select the target client from the list.
+1. Review personal and business details for accuracy.
+1. Check balance and discount limits before creating new transactions.
+1. Use available actions such as **Edit Client** or **Create Invoice** as needed.
+
+## Field reference
+
+- **SKU** - System-generated client identifier used for tracking.
+- **Client Name** - Primary display name for the client record.
+- **Phone Number** - Main contact number used for communication and SMS.
+- **Balance** - Current financial balance for the client account.
+- **Discount limits** - Maximum rate and amount allowed for invoice discounts.
 
 ______________________________________________________________________
 
@@ -76,7 +90,7 @@ ______________________________________________________________________
 
 ## Balance and Discount Information
 
-![Balance and Discount Section](client-edit-balance-info.png)
+![Balance and Discount Section](client-balance-discount.png)
 
 This section shows the client’s financial status and limits.
 

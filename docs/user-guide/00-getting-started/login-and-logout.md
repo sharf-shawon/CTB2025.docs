@@ -2,6 +2,10 @@
 
 Use this page to sign in to CTB Admin and sign out when you are done. All access to the system requires a valid username and password.
 
+## Summary
+
+Use this page to start and end your CTB Admin session securely. You log in with your assigned account and log out when work is complete, especially on shared devices.
+
 ## When to use this page
 
 - Starting a new work session in CTB Admin.
@@ -11,6 +15,21 @@ Use this page to sign in to CTB Admin and sign out when you are done. All access
 ## How to access this page
 
 Open your browser and navigate to your CTB Admin URL. The login page appears automatically when you are not signed in.
+
+## Step-by-step instructions
+
+1. Open your CTB Admin URL in a browser.
+1. Enter your **Username** and **Password**.
+1. Click **Log in ->** to open the Dashboard.
+1. When you are done, click the user avatar in the top-right corner.
+1. Click **Log out** to end your session.
+
+## Field reference
+
+- **Username** - Your assigned CTB Admin login name.
+- **Password** - Your account password. It is case-sensitive.
+- **Log in** - Submits your credentials and opens CTB Admin if they are valid.
+- **Log out** - Ends your active session immediately.
 
 ______________________________________________________________________
 
@@ -25,13 +44,6 @@ The login page displays a **"Welcome back to CTB Fashion"** heading alongside th
 1. Click **Log in →**.
 
 If your credentials are correct, the system redirects you to the **Dashboard**.
-
-### Field Reference — Login
-
-| Field    | Description                                                                          |
-| -------- | ------------------------------------------------------------------------------------ |
-| Username | Your assigned CTB Admin username. Contact your administrator if you do not have one. |
-| Password | Your account password. Passwords are case-sensitive.                                 |
 
 !!! note "Return to site"
 The **← Return to site** link in the top-left corner takes you back to the public-facing website without logging in.

@@ -16,3 +16,22 @@ If you open a page for the first time while offline, the service worker shows a 
 1. Refresh the page if you think the connection just recovered.
 1. Open a page you have already visited to load the cached copy.
 1. Reconnect to the network and revisit any page that did not load from cache.
+
+## What users should expect
+
+- Already visited pages may still open even when the connection is weak.
+- The first visit to a page may still need a working connection.
+- Some images and assets may take longer to appear after a reconnect.
+
+## Tips and common issues
+
+- Refresh once after reconnecting instead of repeatedly reloading the page.
+- If an image or page looks stale, clear the browser cache and try again.
+- Tell users to revisit the site while online after a deployment so the cache can update.
+
+<!-- TODO: Add an offline fallback screenshot if the site capture is available. -->
+
+## Related pages
+
+- [Error Pages](error-pages.md)
+- [Production Release Checklist](release-checklist.md)

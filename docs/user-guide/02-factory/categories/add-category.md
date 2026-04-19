@@ -1,12 +1,12 @@
-# Categories
+# Add Category
 
-The **Categories** module in the Factory section is used to organize products into structured groups. A category represents a classification that helps group similar products for easier management, tracking, and reporting.
+Use this page to create a new category in the Factory module. A category helps you group similar products for easier management, tracking, and reporting.
 
-Instead of handling products individually, categories allow you to structure your inventory in a logical and scalable way.
+Creating clear categories keeps inventory structure consistent and scalable.
 
 ______________________________________________________________________
 
-## When to use this module
+## When to use this page
 
 - When you need to group similar products under a common classification
 - When creating products that require organized categorization
@@ -18,13 +18,13 @@ ______________________________________________________________________
 1. Go to **Factory → Categories** from the sidebar
 1. Click the **Add (+)** button to create a new category
 
-![Add Category Page](../../01-business/clients/add-icon.png)
+![Add Category Page](../../01-business/clients/client-add-icon.png)
 
 ______________________________________________________________________
 
 ## Category Information
 
-![Category Form](category.png)
+![Category Form](category-form.png)
 
 Fill in the following fields:
 

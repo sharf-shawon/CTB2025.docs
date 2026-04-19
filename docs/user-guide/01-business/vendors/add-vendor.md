@@ -2,6 +2,10 @@
 
 Use this page to register a new vendor in CTB Admin. A vendor is any individual or organization that supplies goods or services. Vendor records store contact details, identification information, and financial data used across purchases, payments, and reports.
 
+## Summary
+
+Use this page to create a complete vendor profile before recording purchases, checks, or payments. Accurate vendor setup improves financial tracking and communication.
+
 ## When to use this page
 
 - Onboarding a new supplier or service provider
@@ -14,11 +18,27 @@ From the sidebar, go to **Business → Vendors**. On the Vendor List page, click
 
 The system opens the **Add Vendor Page**.
 
+## Step-by-step instructions
+
+1. Open **Business -> Vendors** and click the **Add** icon.
+1. Fill the **Personal Information** section.
+1. Fill **Business Details** and upload identity documents.
+1. Set **Balance Information** based on current account status.
+1. Click **Save** to create the vendor record.
+
+## Field reference
+
+- **Name** - Vendor name used in purchases and reports.
+- **Phone** - Primary vendor contact number.
+- **NID** - Identity number used for verification.
+- **Balance** - Current payable or receivable amount.
+- **Upper/Lower Limit** - Balance range controls used in financial workflows.
+
 ______________________________________________________________________
 
 ## Personal Information
 
-![Personal Information Section](vendor-personal-info-2.0.png)
+![Personal Information Section](vendor-personal-info-current.png)
 
 Fill in the following fields:
 

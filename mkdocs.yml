@@ -12,7 +12,7 @@ plugins:
   - image-gallery:
       image_folder: "./gallery/"
       youtube_links_file: "youtube-links.yaml"
-      separate_category_pages: true
+      separate_category_pages: false
 
 theme:
   name: material
@@ -99,9 +99,10 @@ exclude_docs: |
 validation:
   unrecognized_links: ignore
 
+strict: true
+
 nav:
   - Home: index.md
-  - Gallery: gallery.md
   - Start Here: user-guide/README.md
   - Getting Started:
       - Overview: user-guide/00-getting-started/overview.md
@@ -120,24 +121,6 @@ nav:
           - Add Vendor: user-guide/01-business/vendors/add-vendor.md
           - Edit Vendor: user-guide/01-business/vendors/edit-vendor.md
           - Vendor Detail: user-guide/01-business/vendors/vendor-detail.md
-  - Factory:
-      - Module Overview: user-guide/02-factory/README.md
-      - Categories:
-          - Overview: user-guide/02-factory/categories/overview.md
-          - Add Category: user-guide/02-factory/categories/add-category.md
-          - Edit Category: user-guide/02-factory/categories/edit-category.md
-      - Materials:
-          - Overview: user-guide/02-factory/materials/overview.md
-          - Add Material: user-guide/02-factory/materials/add-material.md
-          - Edit Material: user-guide/02-factory/materials/edit-material.md
-      - Material Inventory:
-          - Overview: user-guide/02-factory/material-inventory/overview.md
-          - Add Inventory Entry: user-guide/02-factory/material-inventory/add-inventory-entry.md
-      - Products:
-          - Overview: user-guide/02-factory/products/overview.md
-          - Add Product: user-guide/02-factory/products/add-product.md
-          - Edit Product: user-guide/02-factory/products/edit-product.md
-          - Product Detail: user-guide/02-factory/products/product-detail.md
   - Trade:
       - Module Overview: user-guide/03-trade/README.md
       - Invoices:
@@ -167,14 +150,32 @@ nav:
           - Overview: user-guide/03-trade/banks/overview.md
           - Add Bank: user-guide/03-trade/banks/add-bank.md
           - Bank Detail: user-guide/03-trade/banks/bank-detail.md
+  - Factory:
+      - Module Overview: user-guide/02-factory/README.md
+      - Categories:
+          - Overview: user-guide/02-factory/categories/overview.md
+          - Add Category: user-guide/02-factory/categories/add-category.md
+          - Edit Category: user-guide/02-factory/categories/edit-category.md
+      - Materials:
+          - Overview: user-guide/02-factory/materials/overview.md
+          - Add Material: user-guide/02-factory/materials/add-material.md
+          - Edit Material: user-guide/02-factory/materials/edit-material.md
+      - Material Inventory:
+          - Overview: user-guide/02-factory/material-inventory/overview.md
+          - Add Inventory Entry: user-guide/02-factory/material-inventory/add-inventory-entry.md
+      - Products:
+          - Overview: user-guide/02-factory/products/overview.md
+          - Add Product: user-guide/02-factory/products/add-product.md
+          - Edit Product: user-guide/02-factory/products/edit-product.md
+          - Product Detail: user-guide/02-factory/products/product-detail.md
   - Employee:
       - Module Overview: user-guide/04-employee/README.md
       - Departments:
           - Overview: user-guide/04-employee/departments/overview.md
-          - Add/Edit Department: user-guide/04-employee/departments/add-edit-department.md
+          - Add/Edit Department: user-guide/04-employee/departments/manage-department.md
       - Positions:
           - Overview: user-guide/04-employee/positions/overview.md
-          - Add/Edit Position: user-guide/04-employee/positions/add-edit-position.md
+          - Add/Edit Position: user-guide/04-employee/positions/manage-position.md
       - Employees:
           - Overview: user-guide/04-employee/employees/overview.md
           - Add Employee: user-guide/04-employee/employees/add-employee.md
@@ -195,17 +196,26 @@ nav:
           - Create Payout: user-guide/04-employee/payouts/create-payout.md
       - Tasks:
           - Overview: user-guide/04-employee/tasks/overview.md
-          - Create/Edit Task: user-guide/04-employee/tasks/create-edit-task.md
+          - Create/Edit Task: user-guide/04-employee/tasks/manage-task.md
       - Purchase Balance:
           - Overview: user-guide/04-employee/purchase-balance/overview.md
   - Settings and Admin:
-      - Audit Log: user-guide/05-settings-and-admin/audit-log.md
       - Module Overview: user-guide/05-settings-and-admin/README.md
       - User Management: user-guide/05-settings-and-admin/user-management.md
       - App Settings: user-guide/05-settings-and-admin/app-settings.md
       - SMS Notifications: user-guide/05-settings-and-admin/sms-notifications.md
       - Maintenance Mode: user-guide/05-settings-and-admin/maintenance-mode.md
+      - Audit Log: user-guide/05-settings-and-admin/audit-log.md
   - Reference:
+      - Glossary: user-guide/06-reference/glossary.md
       - Error Pages: user-guide/06-reference/error-pages.md
       - Offline Mode: user-guide/06-reference/offline-mode.md
-      - Glossary: user-guide/06-reference/glossary.md
+      - Consolidated Release Checklist: user-guide/06-reference/release-checklist.md
+      - Production Release Summary: user-guide/06-reference/production-release-summary.md
+      - Production Release Next Steps: user-guide/06-reference/production-release-next-steps.md
+  - Gallery:
+      - Gallery Home: gallery.md
+      - Admin: categories/admin.md
+      - Dashboard: categories/dashboard.md
+      - Mobile: categories/mobile.md
+      - Reports: categories/reports.md

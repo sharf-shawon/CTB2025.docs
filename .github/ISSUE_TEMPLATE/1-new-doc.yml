@@ -7,6 +7,11 @@ body:
       value: |
         Use this template when a page or workflow exists in CTB Admin but has no documentation yet.
 
+        Before submitting:
+        - Use module names and terminology from `.github/knowledge/ctb-knowledge.md`.
+        - Capture one valid screenshot path under `docs/user-guide/screenshots/...`.
+        - Check `.github/knowledge/copilot-learnings.md` for recent pitfalls to avoid.
+
   - type: dropdown
     id: module
     attributes:
