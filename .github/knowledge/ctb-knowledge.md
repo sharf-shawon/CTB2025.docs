@@ -78,3 +78,8 @@ Only the `knowledge-curator` agent (or a human maintainer) may edit this file.
 | Employee module  | `docs/user-guide/04-employee/`           | Departments, positions, employees, attendance, salary, wages, payouts, tasks  |
 | Settings & Admin | `docs/user-guide/05-settings-and-admin/` | User management, runtime settings, SMS, maintenance mode                      |
 | Reference        | `docs/user-guide/06-reference/`          | Glossary, shortcuts, error pages, offline mode and other cross-cutting topics |
+
+## Automated Signals
+
+| Date | Source | Modules touched | Signal |
+| ---- | ------ | --------------- | ------ |

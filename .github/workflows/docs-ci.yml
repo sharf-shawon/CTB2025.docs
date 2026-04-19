@@ -7,7 +7,7 @@ on:
       - main
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   quality-and-build:
@@ -22,9 +22,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          # For PRs, check out the head branch so we can push fixes back.
           ref: ${{ github.head_ref || github.ref }}
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -37,23 +35,7 @@ jobs:
       - name: Sync dependencies
         run: uv sync --extra dev
 
-      - name: Run pre-commit (auto-fix)
-        # Allow pre-commit to exit non-zero when it modifies files; we commit
-        # those fixes in the next step.
-        run: uv run pre-commit run --all-files || true
-
-      - name: Commit pre-commit fixes back to PR branch
-        if: github.event_name == 'pull_request'
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          if ! git diff --quiet; then
-            git add -A
-            git commit -m "style: auto-fix pre-commit hooks [skip ci]"
-            git push
-          fi
-
-      - name: Verify pre-commit passes
+      - name: Run pre-commit
         run: uv run pre-commit run --all-files
 
       - name: Build docs

@@ -99,6 +99,8 @@ exclude_docs: |
 validation:
   unrecognized_links: ignore
 
+strict: true
+
 nav:
   - Home: index.md
   - Start Here: user-guide/README.md

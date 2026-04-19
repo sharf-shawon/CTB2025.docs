@@ -111,6 +111,14 @@ ALWAYS read these files before starting any documentation task:
 - `.github/knowledge/copilot-learnings.md` — past lessons, things to do and avoid
 - `.github/knowledge/ctb-knowledge.md` — CTB Admin domain knowledge, terminology, and module map
 
+Knowledge updates are automated after merged docs PRs via `.github/workflows/docs-audit.yml`:
+
+- Append one row to `.github/knowledge/copilot-learnings.md` (if the PR row does not already exist)
+- Append one row to the `Automated Signals` section in `.github/knowledge/ctb-knowledge.md` (if missing)
+- Apply `copilot/audit-complete` to prevent duplicate processing
+
+Treat this workflow as the repository's knowledge-curator path for post-merge updates.
+
 ______________________________________________________________________
 
 ## 🎨 Style Benchmarks
@@ -130,6 +138,7 @@ ______________________________________________________________________
 - Touch `.github/knowledge/` files during a documentation write task — knowledge files are only updated after a PR is merged, never mid-task
 - Remove any line from a knowledge file unless the user explicitly requests the removal or the information is factually wrong
 - Trigger the audit workflow more than once per PR
+- Add multi-line table rows or nested markdown inside knowledge table cells
 
 ______________________________________________________________________
 

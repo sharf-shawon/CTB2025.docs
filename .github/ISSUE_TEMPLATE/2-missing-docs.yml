@@ -7,6 +7,11 @@ body:
       value: |
         Use this template when a feature is live in CTB Admin but users cannot find documentation for it.
 
+        Before submitting:
+        - Use module names and terminology from `.github/knowledge/ctb-knowledge.md`.
+        - Include a screenshot path under `docs/user-guide/screenshots/...`.
+        - Review `.github/knowledge/copilot-learnings.md` to avoid duplicate mistakes.
+
   - type: dropdown
     id: module
     attributes:

@@ -7,6 +7,10 @@ body:
       value: |
         Use this template to request style, tone, structure, or clarity improvements to an existing docs page.
 
+        Before submitting:
+        - Use terminology from `.github/knowledge/ctb-knowledge.md`.
+        - Check `.github/knowledge/copilot-learnings.md` so improvements reflect recent lessons.
+
   - type: input
     id: docs_page_path
     attributes:

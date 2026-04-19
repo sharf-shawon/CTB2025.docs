@@ -7,6 +7,11 @@ body:
       value: |
         Use this template when a CTB Admin page or workflow has changed and the existing docs are now inaccurate or outdated.
 
+        Before submitting:
+        - Align module names and terms with `.github/knowledge/ctb-knowledge.md`.
+        - Provide a screenshot path under `docs/user-guide/screenshots/...`.
+        - Review `.github/knowledge/copilot-learnings.md` to avoid prior documentation errors.
+
   - type: dropdown
     id: module
     attributes:
