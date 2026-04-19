@@ -12,7 +12,7 @@ plugins:
   - image-gallery:
       image_folder: "./gallery/"
       youtube_links_file: "youtube-links.yaml"
-      separate_category_pages: true
+      separate_category_pages: false
 
 theme:
   name: material

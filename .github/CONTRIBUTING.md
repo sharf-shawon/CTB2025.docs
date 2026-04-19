@@ -9,6 +9,7 @@ The CTB2025 application code repository is private and is not maintained here.
 
 ## Before You Start
 
+1. Read the Documentation Writer Guide: [.github/DOCS_WRITER_GUIDE.md](.github/DOCS_WRITER_GUIDE.md).
 1. Read `.github/copilot-instructions.md`.
 1. Read `.github/knowledge/ctb-knowledge.md` for module names and terminology.
 1. Read `.github/knowledge/copilot-learnings.md` to avoid repeated mistakes.
