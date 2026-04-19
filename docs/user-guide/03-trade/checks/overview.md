@@ -1,8 +1,38 @@
 # Checks Overview
 
-Document cheque management list and states.
+Use this page to understand how checks are tracked, how their lifecycle works, and how the check module connects to payments and bank reconciliation.
+
+## Summary
+
+Use this page to manage physical check records used in Trade transactions. It gives you a quick overview of check states, related pages, and typical workflows.
 
 The **Checks** module in CTB Admin manages all bank check records used in your business transactions. A check represents a physical bank check that is either received from a client (money coming in) or issued to a vendor (money going out). Each check record tracks the check number, bank account, amount, current balance, and status throughout its lifecycle. Check records help you monitor check usage, link payments to specific checks, and manage bank account reconciliation.
+
+## When to use this page
+
+- When you need a quick module overview before adding or reviewing checks.
+- When you want to understand how check statuses affect payments.
+- When you need to navigate to Add Check or Check Detail pages.
+
+## How to access this page
+
+From the left sidebar, go to **Trade -> Checks**.
+
+## Step-by-step instructions
+
+1. Open **Checks Overview** from the sidebar.
+1. Review the module structure to understand the related pages.
+1. Check the lifecycle table to confirm status meanings.
+1. Use the typical workflow section to follow the expected check process.
+1. Open [Add Check](add-check.md) or [Check Detail](check-detail.md) when you need to work with a specific record.
+
+## Field reference
+
+- **Status** - Check state that controls whether it can still be edited or linked to payments.
+- **Check Number** - Unique number printed on the physical check.
+- **Bank** - Bank account associated with the check.
+- **Balance** - Remaining amount available on the check.
+- **Type** - Receive or Send direction used for reporting.
 
 ## What you can do in this module
 

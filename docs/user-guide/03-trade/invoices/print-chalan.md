@@ -2,7 +2,11 @@
 
 Use this page to generate a printable or PDF version of a chalan. A chalan is a delivery document that shows what goods are being shipped to a client without displaying pricing information. The chalan is a useful document for tracking shipments and confirming delivery. The chalan print option is available only when an invoice status is **Sent**.
 
-## When to use Print Chalan page
+## Summary
+
+Use this page to generate delivery documentation for shipments without showing financial values. It helps operations teams confirm dispatch details while keeping pricing hidden.
+
+## When to use this page
 
 - Generating a chalan to send with physical shipments to track goods in transit
 - Printing a delivery document to accompany packaged items
@@ -43,6 +47,16 @@ ______________________________________________________________________
 
 !!! note "Browser Print Dialog"
 The exact print options depend on your browser. Most modern browsers allow you to save as PDF directly from the print dialog.
+
+______________________________________________________________________
+
+## Field reference
+
+- **Chalan Header** - Delivery document identifier and date context.
+- **Client Details** - Recipient name and delivery destination.
+- **Line Items** - Product and quantity details prepared for delivery.
+- **Notes** - Operational delivery instructions.
+- **No Pricing Block** - Chalan view intentionally excludes all financial amounts.
 
 ______________________________________________________________________
 

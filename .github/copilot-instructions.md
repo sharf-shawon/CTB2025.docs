@@ -25,7 +25,7 @@ Focus all work in this repo on **documentation structure, content quality, and d
   - `05-settings-and-admin`
   - `06-reference`
 - Screenshot files live under `docs/user-guide/screenshots/` with subfolders that mirror modules (for example: `business/`, `factory/`, `trade/`, `employee/`, `settings/`, `dashboard/`, `auth/`).
-- Follow the detailed suggested directory structure and module-to-app mapping in `readme.md` when deciding where to place or update a page.
+- Follow the detailed suggested directory structure and module-to-app mapping in `README.md` when deciding where to place or update a page.
 
 ## Core Rules for Changes
 

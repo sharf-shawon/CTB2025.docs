@@ -2,19 +2,39 @@
 
 Use this page to register a new client in CTB Admin. A client is any individual or organization that purchases goods or services. Client records store contact details, identification information, and financial data used across invoices, payments, and reports.
 
+## Summary
+
+Use this page to create a complete client profile before you issue invoices or record payments. A well-configured client record keeps reporting, communication, and balance tracking accurate.
+
 ## When to use this page
 
 - Onboarding a new buyer or business partner
 - Creating a client profile before issuing invoices
 - Storing client contact details and identification documents
 
-## How to access the add client page
+## How to access this page
 
 From the sidebar, go to **Business → Clients**. On the Client List page, click the **purple (+) icon** in the top-right corner.
 
-![Add Client Icon](add-icon.png)
+![Add Client Icon](client-add-icon.png)
 
 The system opens the **Add Client Page**.
+
+## Step-by-step instructions
+
+1. Open **Business -> Clients** and click the **Add** icon.
+1. Fill the **Personal Information** section.
+1. Fill the **Business Details** section and upload required documents.
+1. Fill **Balance & Discount Information** based on your business policy.
+1. Click **Save** to create the client, or choose another save option if needed.
+
+## Field reference
+
+- **Client Name** - Name used in invoices, lists, and reports.
+- **Phone Number** - Primary contact number used for communication and optional SMS.
+- **NID Number** - Identity number used for verification.
+- **Balance** - Current client balance carried into future transactions.
+- **Discount Max Rate / Discount Max Amount** - Maximum discount limits allowed during billing.
 
 ______________________________________________________________________
 

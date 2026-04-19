@@ -2,7 +2,11 @@
 
 Use this page to update payment details, status, and associated information. Payment editing capabilities depend on the payment status—pending payments can be fully edited, while completed or reconciled payments have restricted modifications to maintain financial integrity.
 
-## When to use Edit Payment
+## Summary
+
+Use this page to correct payment records while respecting status-based restrictions. It helps you keep reconciliation, balances, and transaction history accurate.
+
+## When to use this page
 
 - Correcting errors in payment details before completion
 - Updating the payment status (e.g., from Pending to Completed)
@@ -10,13 +14,30 @@ Use this page to update payment details, status, and associated information. Pay
 - Adjusting payment amounts or discounts
 - Adding or updating payment references for reconciliation
 
-## How to access Edit Payment
+## How to access this page
 
 From the sidebar, go to **Trade Management → Payments**. On the Payments List page, find the payment you want to edit and click on the payment reference.
 
 ![Payment List Page](payment-list-page.png)
 
 The system opens the **Payment Detail page**.
+
+## Step-by-step instructions
+
+1. Open **Trade Management -> Payments** and select the payment record.
+1. Check the current status and confirm what fields can be edited.
+1. Update allowed values in **Payment Information**.
+1. Update check linkage or notes if needed.
+1. Save changes and verify the updated payment details.
+
+## Field reference
+
+- **Status** - Determines both payment state and edit permissions.
+- **Type** - Receive or Send direction for the transaction.
+- **Reference** - Traceable identifier for reconciliation.
+- **Date** - Effective payment date used in financial reporting.
+- **Amount** - Monetary value of the payment.
+- **Discount** - Optional adjustment amount applied to payment processing.
 
 ______________________________________________________________________
 

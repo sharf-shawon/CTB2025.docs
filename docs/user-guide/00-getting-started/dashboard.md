@@ -2,6 +2,10 @@
 
 The Dashboard is the first page you see after logging in to CTB Admin. It gives you an at-a-glance view of business performance, quick access to every module, and key operational data from a single screen.
 
+## Summary
+
+Use this page to monitor key business activity and jump quickly to daily tasks. It gives you a central view of performance, pending work, and shortcuts to major modules.
+
 ## When to use this page
 
 - Reviewing key business metrics at the start of the day.
@@ -13,11 +17,33 @@ The Dashboard is the first page you see after logging in to CTB Admin. It gives 
 
 The Dashboard opens automatically after login. You can return to it at any time by clicking **Dashboard** at the top of the left sidebar.
 
+## Prerequisites
+
+- You are logged in with a valid CTB Admin account.
+- You have access permission for dashboard analytics if you need charts and summary cards.
+
+## Step-by-step instructions
+
+1. Sign in to CTB Admin and open the **Dashboard**.
+1. Review summary information and top navigation controls.
+1. Use **Quick Access Pages** to open a module list page or create a new record.
+1. Check **Dashboard Analytics** for invoice, stock, payment, and balance trends.
+1. Use the **Refresh** action only when you need immediate recalculation of cached data.
+1. Open target module pages from the left sidebar to take follow-up actions.
+
+## Field reference
+
+- **Top navigation bar** - Global controls for search, theme, language, tasks, and account menu.
+- **Left sidebar** - Module navigation used to open operational pages.
+- **Quick Access Pages** - Shortcut cards for opening list pages or add forms.
+- **Dashboard Analytics** - Read-only charts, tables, and summary cards built from existing records.
+- **Refresh control** - Forces recalculation of dashboard data and should be used sparingly.
+
 ______________________________________________________________________
 
 ## Page overview
 
-![Dashboard](dashboard.png)
+![Dashboard](dashboard-overview.png)
 
 ______________________________________________________________________
 

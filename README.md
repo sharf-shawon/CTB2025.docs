@@ -216,10 +216,10 @@ docs/
     │   ├── README.md
     │   ├── departments/
     │   │   ├── overview.md
-    │   │   └── add-edit-department.md
+    │   │   └── manage-department.md
     │   ├── positions/
     │   │   ├── overview.md
-    │   │   └── add-edit-position.md
+    │   │   └── manage-position.md
     │   ├── employees/
     │   │   ├── overview.md               ← Employee list, search, filter
     │   │   ├── add-employee.md
@@ -240,7 +240,7 @@ docs/
     │   │   └── create-payout.md          ← Issue a payout/advance
     │   ├── tasks/
     │   │   ├── overview.md               ← Employee task list
-    │   │   └── create-edit-task.md
+    │   │   └── manage-task.md
     │   └── purchase-balance/
     │       └── overview.md               ← Employee purchase balance/ledger
     │

@@ -2,7 +2,11 @@
 
 Use this page to view and manage a payment record after it has been created. The payment detail page displays all components of a payment—payment information, check and client selection, notes, and transaction status—with buttons to edit, view history, and manage the payment. Editing capabilities depend on the payment status.
 
-## When to use Payment Detail
+## Summary
+
+Use this page to verify payment records, monitor status-based restrictions, and review reconciliation details. It supports controlled edits while preserving audit integrity.
+
+## When to use this page
 
 - Viewing a complete payment record with all transaction information
 - Checking payment status and financial impact
@@ -18,6 +22,23 @@ From the sidebar, go to **Trade → Payments**. On the Payments List page, click
 ![Payment List Page](payment-list-page.png)
 
 The page displays the payment record with all transaction details and action buttons at the top.
+
+## Step-by-step instructions
+
+1. Open **Trade -> Payments** and select the payment record.
+1. Review current status to confirm what can be edited.
+1. Verify payment amount, date, reference, and linked party.
+1. Check whether a linked check is affecting both balances.
+1. Update allowed fields or notes if needed, then save changes.
+
+## Field reference
+
+- **Status** - Payment lifecycle state and permission controller.
+- **Type** - Receive or Send transaction direction.
+- **Reference** - Traceable identifier for reconciliation.
+- **Amount** - Recorded payment value.
+- **Check** - Optional check linkage that can affect both check and party balances.
+- **Client/Vendor** - Counterparty linked to the payment.
 
 ______________________________________________________________________
 
@@ -118,3 +139,10 @@ ______________________________________________________________________
 - **Check linked to two balances** — Remember that selecting a check affects both the client/vendor balance and the check balance; leaving Check empty only affects the client/vendor balance.
 - **Need to correct a Passed payment?** — Do not attempt to modify a Passed payment directly. Instead, create a new correction payment with the opposite amount.
 - **Always save before leaving** — When editing, use the **Save** button at the bottom to apply changes. Unsaved edits will be lost.
+
+## Related pages
+
+- [Add Payment](add-payment.md)
+- [Edit Payment](edit-payment.md)
+- [Checks Overview](../checks/overview.md)
+- [Invoices Overview](../invoices/overview.md)

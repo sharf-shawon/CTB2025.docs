@@ -2,6 +2,10 @@
 
 Use this page to update an existing vendor’s information. This includes contact details, identification documents, and financial settings.
 
+## Summary
+
+Use this page to maintain vendor records when contact, identity, or balance data changes. Updates here affect future purchasing and payment workflows.
+
 ## When to use this page
 
 - Updating vendor contact or business information
@@ -19,6 +23,22 @@ Use this page to update an existing vendor’s information. This includes contac
 
 The system opens the **Edit Vendor Page**.
 
+## Step-by-step instructions
+
+1. Open **Business -> Vendors** from the sidebar.
+1. Select a vendor from the list.
+1. Update the required fields in personal, business, and balance sections.
+1. Verify financial changes and document updates.
+1. Click **Save** to apply changes.
+
+## Field reference
+
+- **Name** - Display name used for the vendor record.
+- **Is Enabled** - Controls whether the vendor can be used in new transactions.
+- **Phone** - Main contact number, especially important when SMS is enabled.
+- **NID and photos** - Identity information and document images for verification.
+- **Balance and limits** - Financial fields that influence reports and operational checks.
+
 ______________________________________________________________________
 
 ## What’s different from Add Vendor
@@ -32,7 +52,7 @@ ______________________________________________________________________
 
 ## Personal Information
 
-![Personal Information Section](vendor-personal-info-2.0.png)
+![Personal Information Section](vendor-personal-info-current.png)
 
 Update the following fields as needed:
 

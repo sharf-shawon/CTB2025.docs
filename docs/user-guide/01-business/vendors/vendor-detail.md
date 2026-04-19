@@ -1,29 +1,41 @@
-<!--
-    TODO: Add to docs.
-    Pending Balance = Sum of all "balance" values for pending and bounced
-    send-type checks + Current Balance
--->
+# Vendor Detail
 
-# Edit Vendor
+Use this page to view a vendor's profile details, related financial records, and internal notes in one place.
 
-<!-- TODO: vendor details should not talk about vendor edit. ??? -->
+## Summary
 
-Use this page to update an existing vendor’s information, including profile details, documents, and financial settings.
+Use this page to review vendor profile and financial activity before making operational decisions. It helps you verify details across vouchers, checks, payments, and notes from one screen.
 
 ## When to use this page
 
-- Updating vendor contact or business information
-- Changing vendor status (active/inactive)
-- Modifying financial limits or balance
-- Reviewing vendor-related transactions while editing
+- Reviewing a vendor profile before transactions
+- Checking voucher, check, and payment history
+- Viewing notes and vendor account context
+- Verifying details before making updates from edit pages
 
 ## How to access this page
 
 1. Go to **Business → Vendors**
 1. Select a vendor from the list
-1. Click **Edit**
+1. Click the vendor name to open details
 
-The system opens the **Edit Vendor Page**.
+The system opens the **Vendor Detail Page**.
+
+## Step-by-step instructions
+
+1. Open **Business -> Vendors** in the sidebar.
+1. Select the vendor you want to review.
+1. Check the **General** tab for profile and balance details.
+1. Review **Vouchers**, **Checks**, and **Payments** tabs for transaction history.
+1. Open **Notes** for internal remarks, then proceed to edit actions if required.
+
+## Field reference
+
+- **General tab** - Core profile and balance information for the vendor.
+- **Vouchers tab** - Purchase voucher history linked to the vendor.
+- **Checks tab** - Check transactions and their statuses.
+- **Payments tab** - Payment records associated with the vendor.
+- **Notes tab** - Internal notes and operational context.
 
 ______________________________________________________________________
 
@@ -39,9 +51,9 @@ ______________________________________________________________________
 
 ## General Tab
 
-![General Tab](vendorDetailFullSs.png)
+![General Tab](vendor-detail-general-tab.png)
 
-This is the default tab used for editing vendor information.
+This is the default tab for vendor profile information.
 
 ### When to use
 
@@ -92,7 +104,7 @@ ______________________________________________________________________
 
 ## Checks Tab
 
-![Checks Tab](vandor-checks.png)
+![Checks Tab](vendor-checks-tab.png)
 
 Shows all check transactions associated with the vendor.
 
@@ -106,7 +118,7 @@ ______________________________________________________________________
 
 ## Payments Tab
 
-![Payments Tab](vandor-payment.png)
+![Payments Tab](vendor-payments-tab.png)
 
 Displays all payment records linked to the vendor.
 
@@ -151,5 +163,5 @@ ______________________________________________________________________
 ## Related Pages
 
 - **Add Vendor** — Create a new vendor
-- **Vendor Detail** — View complete vendor profile
-- **Vendor Reports** — Analyze vendor financial data
+- **Edit Vendor** — Update vendor information
+- **Vendors Overview** — Browse and filter vendor records

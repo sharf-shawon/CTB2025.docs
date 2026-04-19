@@ -2,7 +2,11 @@
 
 Use this page to view and manage an invoice after it has been created. The invoice detail page displays all components of an invoice—general information, line items, and notes—with buttons to print, generate a chalan, and view change history. Editing capabilities depend on the invoice status.
 
-## When to use Invoice Detail
+## Summary
+
+Use this page to review, update, and finalize invoice records based on status permissions. It helps you verify totals, preserve change history, and complete print and delivery-document actions.
+
+## When to use this page
 
 - Viewing a complete invoice record with all line items and calculations
 - Checking invoice status and payment information
@@ -92,7 +96,7 @@ ______________________________________________________________________
 
 ## Notes Tab
 
-![Notes Tab](create-invoice%20-note-tab.png)
+![Notes Tab](create-invoice-notes-tab.png)
 
 The Notes tab contains internal comments and visibility settings:
 
@@ -118,7 +122,7 @@ After making edits, click **Save** at the bottom to apply your changes.
 
 ______________________________________________________________________
 
-## Step-by-step: Updating an Invoice
+## Step-by-step instructions
 
 1. Open the **Invoices list** and select an invoice in Draft status
 1. Click on the **General tab** to view or edit header information
@@ -127,6 +131,14 @@ ______________________________________________________________________
 1. Click on the **Notes tab** to add internal notes
 1. Click **Save** to apply all changes
 1. Change the Status to **Sent** when ready to send to the client
+
+## Field reference
+
+- **Invoice Number** - Unique identifier used to track and reference the invoice.
+- **Client** - Customer account linked to this invoice.
+- **Status** - Controls workflow stage and available edit actions.
+- **Subtotal** - Sum of all line-item totals.
+- **Payable** - Final amount due after charges and discount.
 
 ______________________________________________________________________
 

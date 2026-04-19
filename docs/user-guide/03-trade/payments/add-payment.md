@@ -2,6 +2,10 @@
 
 Use this page to record a payment received from a client or sent to a vendor. Payments track cash flow, invoice settlements, bank checks, and financial transactions within CTB Admin.
 
+## Summary
+
+Use this page to capture incoming and outgoing payments with references, dates, and optional check linkage. Accurate payment entries keep balances and reconciliation reports reliable.
+
 ## When to use this page
 
 - Recording a payment received from a client for an invoice
@@ -15,6 +19,23 @@ Use this page to record a payment received from a client or sent to a vendor. Pa
 From the sidebar, go to **Trade → Payments**. On the Payments List page, click the **purple (+) icon** in the top-right corner.
 
 The system opens the **Add Payment Page**.
+
+## Step-by-step instructions
+
+1. Open **Trade -> Payments** and click the add icon.
+1. Enter core payment details in **Payment Information**.
+1. Select client or vendor and optionally link a check.
+1. Add notes for reconciliation or internal context.
+1. Click the appropriate save action to create the payment.
+
+## Field reference
+
+- **Status** - Payment lifecycle state, such as Pending or Completed.
+- **Type** - Direction of payment: Receive or Send.
+- **Reference** - External reference number used for tracing transactions.
+- **Amount** - Payment value recorded in system currency.
+- **Check** - Optional check linkage that affects both party and check balances.
+- **Client/Vendor** - Counterparty associated with the payment record.
 
 ______________________________________________________________________
 

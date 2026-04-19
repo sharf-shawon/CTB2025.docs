@@ -27,7 +27,7 @@ From the left sidebar menu, go to **Audit Log**. It appears as the last item in 
 1. Open **Audit Log** from the left sidebar.
 1. Review the most recent entries first to understand current activity.
 1. Identify the key details for each row: who performed the action, what object was affected, and when it occurred.
-1. Use available search or filter controls on the page to narrow records by user, model, or date range.
+1. Use available search or filter controls on the page to narrow records by user, record type, or date range.
 1. Open a log entry if details are available, then compare old and new values to confirm exactly what changed.
 1. Cross-check the affected record in its original module (for example Clients, Invoices, or Employees) if follow-up is needed.
 1. Record the relevant log details before escalating to management or operations.
@@ -42,7 +42,7 @@ From the left sidebar menu, go to **Audit Log**. It appears as the last item in 
 - **Change Details** - Before/after values or a summary of the edited fields.
 - **IP/Source (if available)** - Request origin information useful for security checks.
 
-This page reads audit trail data for admin activity. Use it as the system source when checking history related to records like `Business.models.Client` and other operational objects.
+This page reads audit trail data for admin activity. Use it as the system source when checking history related to business records such as clients, invoices, payments, checks, and employee entries.
 
 ## Tips and common issues
 

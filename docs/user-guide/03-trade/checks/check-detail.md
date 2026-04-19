@@ -2,7 +2,11 @@
 
 Use this page to view and manage a check after it has been created or received. The check detail page displays all information related to a check—general details, financial information, status, and supporting documents. You can update check status, add front and back photos, and track payment records linked to this check.
 
-## When to use Check Detail
+## Summary
+
+Use this page to review check records, verify linked payments, and update allowed status fields. It supports reconciliation and audit review for incoming or issued checks.
+
+## When to use this page
 
 - Viewing a complete check record with all details and payment information
 - Updating check status (Pending, Cleared, Bounced, etc.)
@@ -13,6 +17,24 @@ Use this page to view and manage a check after it has been created or received. 
 ## How to access Check Detail
 
 From the sidebar, go to **Trade Management → Checks**. On the Checks List page, click on any check SKU or select a check to open the **Check Detail page**.
+
+## Step-by-step instructions
+
+1. Open **Trade -> Checks** and select the check record.
+1. Review the check information and client information sections.
+1. Update the status if the bank has cleared, bounced, or cancelled the check.
+1. Add or verify front and back photos.
+1. Review linked payments before saving changes.
+
+## Field reference
+
+- **SKU** - Unique system identifier for the check.
+- **Check Number** - Number printed on the physical check.
+- **Bank** - Bank account associated with the check.
+- **Amount** - Face value recorded when the check was created.
+- **Balance** - Remaining amount available after linked payments.
+- **Status** - Current lifecycle state of the check.
+- **Client** - Client or vendor linked to the check.
 
 ______________________________________________________________________
 

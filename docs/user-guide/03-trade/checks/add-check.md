@@ -2,7 +2,11 @@
 
 Use this page to register a new bank check in CTB Admin. When you receive a physical check from a client or issue a check to a vendor, create a check record to track the check number, amount, bank, date, and status. Check records help you monitor check usage, link payments to specific checks, and manage your bank account balances.
 
-## When to use Add Check page
+## Summary
+
+Use this page to create a new check record that can later be linked to payments and bank reconciliation. Accurate check setup helps you track balances, dates, and status changes.
+
+## When to use this page
 
 - Recording a check received from a client
 - Recording a check issued to a vendor
@@ -11,11 +15,29 @@ Use this page to register a new bank check in CTB Admin. When you receive a phys
 - Linking check payments to update client and vendor balances
 - Managing check documentation with photos for verification
 
-## How to access Add Check page
+## How to access this page
 
 From the sidebar, go to **Trade → Checks**. On the Checks List page, click the **purple (+) icon** in the top-right corner.
 
 The system opens the **Add Check Page**.
+
+## Step-by-step instructions
+
+1. Open **Trade -> Checks** and click the add icon.
+1. Fill in the check number, bank, date, amount, type, and related party.
+1. Set the initial status and upload optional front and back photos.
+1. Review linked payments section if needed.
+1. Click the appropriate save action to create the check.
+
+## Field reference
+
+- **SKU** - Auto-generated identifier for the check.
+- **Check Number** - Unique number printed on the physical check.
+- **Bank** - Bank account connected to the check.
+- **Amount** - Face value of the check.
+- **Status** - Current check state used for workflow control.
+- **Front Photo / Back Photo** - Optional verification images for the check.
+- **Check Pass Date / Check Bounce Date** - Dates that record status transitions.
 
 ______________________________________________________________________
 
