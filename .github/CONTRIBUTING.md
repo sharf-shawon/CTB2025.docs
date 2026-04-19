@@ -10,13 +10,13 @@ The CTB2025 application code repository is private and is not maintained here.
 ## Before You Start
 
 1. Read `.github/copilot-instructions.md`.
-2. Read `.github/knowledge/ctb-knowledge.md` for module names and terminology.
-3. Read `.github/knowledge/copilot-learnings.md` to avoid repeated mistakes.
+1. Read `.github/knowledge/ctb-knowledge.md` for module names and terminology.
+1. Read `.github/knowledge/copilot-learnings.md` to avoid repeated mistakes.
 
 ## Local Setup
 
 1. Install Python 3.13 and `uv`.
-2. Run:
+1. Run:
 
 ```bash
 uv sync --extra dev
@@ -41,9 +41,9 @@ uv run pre-commit run --all-files
 ## Documentation Request Flow
 
 1. Open an issue using the correct template in `.github/ISSUE_TEMPLATE/`.
-2. Provide an accurate screenshot path under `docs/user-guide/screenshots/...`.
-3. Add the correct `docs/*` label.
-4. Comment `@copilot ready-to-write` when ready.
+1. Provide an accurate screenshot path under `docs/user-guide/screenshots/...`.
+1. Add the correct `docs/*` label.
+1. Comment `@copilot ready-to-write` when ready.
 
 ## Knowledge and Learnings Flow
 

@@ -10,9 +10,9 @@ This folder stores reusable project knowledge for Copilot and maintainers.
 ## Update Model
 
 1. Docs pull request is merged.
-2. `Docs Audit` workflow runs once for that PR.
-3. Workflow appends one learning row to `copilot-learnings.md` if missing.
-4. Workflow appends one automation signal row to `ctb-knowledge.md` if missing.
+1. `Docs Audit` workflow runs once for that PR.
+1. Workflow appends one learning row to `copilot-learnings.md` if missing.
+1. Workflow appends one automation signal row to `ctb-knowledge.md` if missing.
 
 ## Guardrails
 

@@ -5,12 +5,14 @@
 This repository hosts public documentation for CTB Admin.
 
 In-scope items:
+
 - GitHub Actions workflows in `.github/workflows/`
 - Documentation build and deployment configuration (`mkdocs.yml`, `pyproject.toml`)
 - Documentation source in `docs/`
 - Automation and agent governance files in `.github/`
 
 Out-of-scope items:
+
 - The private CTB2025 application source repository
 - Application runtime vulnerabilities that cannot be reproduced in this documentation repository
 
@@ -21,6 +23,7 @@ Do not open a public issue for security findings.
 Report vulnerabilities privately by emailing: security@ctbinfo.com
 
 Include:
+
 - A short summary
 - Reproduction steps
 - Affected file paths and workflow names

@@ -16,17 +16,17 @@ The Employee section keeps the staffing side of CTB Admin organized. Use it to m
 
 ## Module structure
 
-| Module | Purpose |
-| --- | --- |
-| Departments | Group employees by department or team. |
-| Positions | Store job titles used on employee records. |
-| Employees | Maintain staff profiles and employment details. |
-| Attendance | Record and review attendance activity. |
-| Salary | Generate and review monthly salary records. |
-| Wages | Store wage-based compensation entries. |
-| Payouts | Record advances or other employee payouts. |
-| Tasks | Track work assigned to staff members. |
-| Purchase Balance | Review employee purchase-ledger balances. |
+| Module           | Purpose                                         |
+| ---------------- | ----------------------------------------------- |
+| Departments      | Group employees by department or team.          |
+| Positions        | Store job titles used on employee records.      |
+| Employees        | Maintain staff profiles and employment details. |
+| Attendance       | Record and review attendance activity.          |
+| Salary           | Generate and review monthly salary records.     |
+| Wages            | Store wage-based compensation entries.          |
+| Payouts          | Record advances or other employee payouts.      |
+| Tasks            | Track work assigned to staff members.           |
+| Purchase Balance | Review employee purchase-ledger balances.       |
 
 ## Typical workflow
 

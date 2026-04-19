@@ -16,13 +16,13 @@ The Trade section is the financial workflow center of CTB Admin. Use it to creat
 
 ## Module structure
 
-| Module | Purpose |
-| --- | --- |
-| Invoices | Manage client billing and delivery documents. |
-| Payments | Record money received or paid out. |
-| Checks | Track physical checks and their status. |
-| Vouchers | Record non-invoice financial transactions. |
-| Banks | Maintain bank account records for finance workflows. |
+| Module   | Purpose                                              |
+| -------- | ---------------------------------------------------- |
+| Invoices | Manage client billing and delivery documents.        |
+| Payments | Record money received or paid out.                   |
+| Checks   | Track physical checks and their status.              |
+| Vouchers | Record non-invoice financial transactions.           |
+| Banks    | Maintain bank account records for finance workflows. |
 
 ## Typical workflow
 

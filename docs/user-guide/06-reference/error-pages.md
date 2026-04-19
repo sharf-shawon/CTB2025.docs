@@ -8,12 +8,12 @@ Error pages help users recover from missing pages, permission issues, or server 
 
 ## Common error pages
 
-| Error | What it means | What you should do |
-| --- | --- | --- |
-| 403 | You do not have permission to view the page. | Confirm your role or ask an administrator to grant access. |
-| 404 | The page or record could not be found. | Check the link, search again, or return to the module list. |
-| 500 | The server encountered a problem. | Refresh the page and report the issue if it continues. |
-| Maintenance | The site is temporarily restricted. | Wait until maintenance is complete and try again later. |
+| Error       | What it means                                | What you should do                                          |
+| ----------- | -------------------------------------------- | ----------------------------------------------------------- |
+| 403         | You do not have permission to view the page. | Confirm your role or ask an administrator to grant access.  |
+| 404         | The page or record could not be found.       | Check the link, search again, or return to the module list. |
+| 500         | The server encountered a problem.            | Refresh the page and report the issue if it continues.      |
+| Maintenance | The site is temporarily restricted.          | Wait until maintenance is complete and try again later.     |
 
 ## When to use this page
 

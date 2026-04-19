@@ -16,13 +16,13 @@ This section is for administrators who need to keep CTB Admin secure and correct
 
 ## Module structure
 
-| Module | Purpose |
-| --- | --- |
-| User Management | Create and control user access. |
-| App Settings | Manage system-wide configuration. |
-| SMS Notifications | Configure message delivery settings. |
-| Maintenance Mode | Temporarily restrict access during maintenance. |
-| Audit Log | Review who changed data and when. |
+| Module            | Purpose                                         |
+| ----------------- | ----------------------------------------------- |
+| User Management   | Create and control user access.                 |
+| App Settings      | Manage system-wide configuration.               |
+| SMS Notifications | Configure message delivery settings.            |
+| Maintenance Mode  | Temporarily restrict access during maintenance. |
+| Audit Log         | Review who changed data and when.               |
 
 ## Typical workflow
 

@@ -5,12 +5,12 @@ This runbook defines recommended GitHub branch protections for `main`.
 ## Required Rules
 
 1. Require a pull request before merging.
-2. Require at least 1 approving review.
-3. Dismiss stale approvals when new commits are pushed.
-4. Require status checks to pass before merging.
-5. Require branches to be up to date before merging.
-6. Restrict force pushes and branch deletion.
-7. Enforce CODEOWNERS review for docs governance paths.
+1. Require at least 1 approving review.
+1. Dismiss stale approvals when new commits are pushed.
+1. Require status checks to pass before merging.
+1. Require branches to be up to date before merging.
+1. Restrict force pushes and branch deletion.
+1. Enforce CODEOWNERS review for docs governance paths.
 
 ## Required Status Checks
 

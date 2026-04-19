@@ -16,8 +16,8 @@ The Business section stores the external parties your team works with most often
 
 ## Module structure
 
-| Module | Purpose |
-| --- | --- |
+| Module  | Purpose                                                          |
+| ------- | ---------------------------------------------------------------- |
 | Clients | Manage customers, their balances, and their transaction history. |
 | Vendors | Manage suppliers, their balances, and their transaction history. |
 

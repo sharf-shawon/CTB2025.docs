@@ -15,12 +15,12 @@ The Factory section supports production and inventory work. Use it to keep mater
 
 ## Module structure
 
-| Module | Purpose |
-| --- | --- |
-| Categories | Group materials and products for easier management. |
-| Materials | Track raw material stock and movement history. |
-| Material Inventory | Review stock entries and changes. |
-| Products | Define finished products, pricing, and costing. |
+| Module             | Purpose                                             |
+| ------------------ | --------------------------------------------------- |
+| Categories         | Group materials and products for easier management. |
+| Materials          | Track raw material stock and movement history.      |
+| Material Inventory | Review stock entries and changes.                   |
+| Products           | Define finished products, pricing, and costing.     |
 
 ## Typical workflow
 
