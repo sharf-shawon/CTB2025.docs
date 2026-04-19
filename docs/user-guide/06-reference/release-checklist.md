@@ -2,6 +2,10 @@
 
 Use this checklist as the single source of truth before every documentation production release.
 
+## Summary
+
+Use this page to confirm the docs site is ready before release or deployment. It covers environment setup, build checks, navigation review, and post-release validation.
+
 ## Environment and dependencies
 
 - [ ] Confirm `uv` is installed and available on CI and local maintainer machines.
@@ -46,3 +50,14 @@ Use this checklist as the single source of truth before every documentation prod
 - [ ] Review analytics and user feedback for broken or confusing pages.
 - [ ] Open follow-up issues for non-blocking improvements.
 - [ ] Update release notes and next iteration checklist.
+
+## Tips and common issues
+
+- Run the build checks before opening a release PR so you can fix problems early.
+- Confirm screenshot links after large documentation changes.
+- Recheck navigation when new pages are added or renamed.
+
+## Related pages
+
+- [Production Release Summary](production-release-summary.md)
+- [Production Release Next Steps](production-release-next-steps.md)

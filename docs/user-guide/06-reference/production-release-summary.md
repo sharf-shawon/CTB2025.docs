@@ -2,6 +2,10 @@
 
 This page summarizes the documentation release preparation for CTB Admin.
 
+## Summary
+
+Use this page as a short record of what was validated during release preparation and what areas were in scope.
+
 ## Release readiness status
 
 - Environment bootstrap standardized with `uv` and a project-local `.venv`
@@ -25,3 +29,8 @@ This page summarizes the documentation release preparation for CTB Admin.
 
 - This summary reflects the current repository state at release-prep time.
 - Use the next-steps page to track final release actions before publication.
+
+## Related pages
+
+- [Production Release Next Steps](production-release-next-steps.md)
+- [Consolidated Release Checklist](release-checklist.md)
