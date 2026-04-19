@@ -163,31 +163,13 @@ After making edits, you must click **Save** at the bottom-right to apply your ch
 
 ______________________________________________________________________
 
+<!-- TODO: Rewrite the delete-check rules after confirming the exact status names, allowed delete states, and whether archived checks should be kept instead of deleted. -->
+
 !!! warning "Deleting a Check"
 
-```
-You can delete a c  check, but only under specific conditions based on its status and payment state:
+The delete behavior for checks needs confirmation from the product team because the current rules are inconsistent with the status labels elsewhere on this page.
 
-### When you **can delete a check**:
-- **Status is Pending** — If the check is in Pending status and has no linked payments, you can delete it
-### When you **cannot delete a check**:
-- **Check has partial payment** — If any payment is linked to this check (even if incomplete), the check cannot be deleted
-- **Status is Bounced** — Bounced checks are locked and cannot be deleted (they must be kept for audit and reconciliation records)
-- **Status is Passed** — Passed (cleared) checks cannot be deleted (they must be retained as confirmed transactions)
-- **Status is Failed** — Failed checks cannot be deleted (they must be kept for bank reconciliation)
-warning "Deletion Rules"
-Once a check status changes from Pending, or if any payment is linked to it, the delete option becomes unavailable. Plan carefully before initializing payments against a check.
-**To delete a check:**
-1. Open the check detail page
-2. Verify the status is **Pending** and there are **no linked payments**
-3. Click the **Delete Check** button (appears only if conditions are met)
-4. Confirm the deletion when prompted
-info "Cannot Delete?"
-If the Delete button is not visible, check:
-- Is the status **Pending**?
-- Are there **any linked payments** in the Payments tab?
-- If either condition fails, the check cannot be deleted. You can archive it or contact support instead.
-```
+<!-- TODO: Add a cleaned-up step-by-step deletion policy and a support note for users who cannot see the Delete button. -->
 
 ______________________________________________________________________
 
