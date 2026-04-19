@@ -81,6 +81,13 @@ Only the `knowledge-curator` agent (or a human maintainer) may edit this file.
 
 ## Automated Signals
 
-| Date       | Source | Modules touched         | Signal                               |
-| ---------- | ------ | ----------------------- | ------------------------------------ |
-| 2026-04-19 | PR #23 | No module pages changed | 0 docs file(s) updated in merged PR. |
+\<<\<<\<<< HEAD
+
+| Date    | Source | Modules touched | Signal |
+| ------- | ------ | --------------- | ------ |
+| ======= |        |                 |        |
+| Date    | Source | Modules touched | Signal |
+| ----    | ------ | --------------- | ------ |
+
+> > > > > > > 546f3b9a96e15a88f6fe7c783f3abc1bb8b20325
+> > > > > > > | 2026-04-19 | PR #23 | No module pages changed | 0 docs file(s) updated in merged PR. |
