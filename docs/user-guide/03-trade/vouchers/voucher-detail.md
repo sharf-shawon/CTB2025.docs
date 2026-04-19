@@ -1,6 +1,5 @@
 # Voucher Detail
 
-\<<\<<\<<< HEAD
 Use this page to view and manage a voucher after it has been created. The voucher detail page displays all components of a voucher—general information, voucher items, and notes—with a button to view change history. Editing capabilities are available directly on this page.
 
 ## When to use Voucher Detail
