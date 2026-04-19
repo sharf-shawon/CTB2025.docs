@@ -19,7 +19,7 @@ jobs:
     steps:
       - name: Check for audit-complete label
         id: audit_guard
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         with:
           script: |
             const { data: pr } = await github.rest.pulls.get({
@@ -46,7 +46,7 @@ jobs:
       - name: Analyze merged PR changes
         if: steps.audit_guard.outputs.already_audited == 'false'
         id: analyze
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         with:
           script: |
             const pr = context.payload.pull_request;
@@ -152,7 +152,7 @@ jobs:
 
       - name: Publish audit report comment
         if: steps.audit_guard.outputs.already_audited == 'false'
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         env:
           PR_NUMBER: ${{ steps.analyze.outputs.pr_number }}
           PR_TITLE: ${{ steps.analyze.outputs.pr_title }}
@@ -202,7 +202,7 @@ jobs:
 
       - name: Apply audit-complete label to PR
         if: steps.audit_guard.outputs.already_audited == 'false'
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         with:
           script: |
             // Ensure the label exists before applying it
