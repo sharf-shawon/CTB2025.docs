@@ -2,10 +2,6 @@
 
 Use this page to review one bank account in detail and confirm whether it is ready for checks, vouchers, or payment reconciliation.
 
-## Summary
-
-The bank detail page gives you a single place to inspect the account status, balance, and related transaction history. Use it when you need to confirm that the right bank was selected in another workflow.
-
 ## When to use this page
 
 - When you want to verify a bank account before creating a check.
@@ -15,13 +11,6 @@ The bank detail page gives you a single place to inspect the account status, bal
 ## How to access this page
 
 From the sidebar, go to **Trade -> Banks** and open a bank record from the list.
-
-## Step-by-step instructions
-
-1. Open **Banks Overview** from the sidebar.
-1. Select the bank account you want to inspect.
-1. Review the account details and any linked records.
-1. Confirm the status and balance before using the account in a transaction.
 
 ## Field reference
 
