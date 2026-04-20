@@ -146,4 +146,4 @@ uv run pre-commit run --all-files
 - Payroll and employee operations documentation
 - Bangladeshi garments and factory POS documentation
 
-Visit: [https://docs.ctbinfo.com/](https://docs.ctbinfo.com/)
+Visit: [https://docs.ctbinfo.com/](https://docs.ctbinfo.com/).
