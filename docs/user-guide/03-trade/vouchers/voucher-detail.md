@@ -133,9 +133,9 @@ ______________________________________________________________________
 - **Vendor is required** — You must select a vendor before saving <br>
 - **Subtotal is auto-calculated** — It updates automatically as you add or modify voucher items <br>
 - **Discount reduces Payable** — Enter a discount to lower the final amount due <br>
-- **Paid Amount tracks settlement** — Keep Paid Amount updated to reflect actual payments made <br>
-- **Photo upload supported** — Attach a physical voucher scan for document record-keeping <br>
-- **History tracks all changes** — Use the History button to audit who changed what and when <br>
+- **Paid Amount tracks settlement** — Keep Paid Amount updated to reflect actual payments made<br>
+- **Photo upload supported** — Attach a physical voucher scan for document record-keep<br>
+- **History tracks all changes** — Use the History button to audit who changed what and when<br>
 
 ______________________________________________________________________
 
