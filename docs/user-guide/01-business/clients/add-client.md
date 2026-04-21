@@ -28,14 +28,6 @@ The system opens the **Add Client Page**.
 1. Fill **Balance & Discount Information** based on your business policy.
 1. Click **Save** to create the client, or choose another save option if needed.
 
-## Field reference
-
-- **Client Name** - Name used in invoices, lists, and reports.
-- **Phone Number** - Primary contact number used for communication and optional SMS.
-- **NID Number** - Identity number used for verification.
-- **Balance** - Current client balance carried into future transactions.
-- **Discount Max Rate / Discount Max Amount** - Maximum discount limits allowed during billing.
-
 ______________________________________________________________________
 
 ## Personal Information
