@@ -1,47 +1,68 @@
 # Vouchers Overview
 
-Use this page to review voucher records, check their status, and open individual vouchers for more detail or editing.
-
 ## Summary
 
-The vouchers list helps you track non-invoice financial entries in CTB Admin. Use it to confirm which vouchers are pending, posted, or closed before you continue reconciliation work.
+The **Vouchers** page lets you review all voucher records, check their status, and open individual vouchers for more detail or editing. Use this section to track non-invoice financial entries and confirm which vouchers are active, disabled, or deleted.
+
+______________________________________________________________________
 
 ## When to use this page
 
-- When you want to review all voucher records in one place.
-- When you need to find a voucher by reference or date.
-- When you want to open a voucher for details or updates.
+- Review all voucher records in one place
+- Find a voucher by vendor, reference, or date
+- Open a voucher for details or updates
+- Check voucher status before reconciliation
+
+______________________________________________________________________
 
 ## How to access this page
 
-From the sidebar, go to **Trade -> Vouchers**.
+1. From the sidebar, go to **Trade Management → Vouchers**.
+1. The list page shows vouchers grouped by **Active**, **Disabled**, and **Deleted**.
+1. Select a record to open the voucher detail page.
 
-## Step-by-step instructions
+______________________________________________________________________
 
-1. Open **Vouchers Overview** from the sidebar.
-1. Review the voucher list and locate the record you need.
-1. Open the voucher detail page if you need more information.
-1. Add a new voucher when a transaction has not yet been recorded.
+## Page sections
 
-## Field reference
+### Voucher List
 
-- **Voucher number** - Unique reference used to identify the voucher.
-- **Date** - The date the voucher was created or recorded.
-- **Party** - The client, vendor, or other party tied to the voucher.
-- **Amount** - The voucher value being tracked.
-- **Status** - The current workflow state of the voucher.
+![Voucher List Page](voucher-overview-list-page.png)
 
-<!-- TODO: Add a voucher list screenshot once the voucher UI is captured. -->
+The main list displays each voucher record on a single page.
 
-## Tips and common issues
+Key columns include:
 
-- Use a clear voucher reference so finance staff can find the record quickly.
-- Check the status before editing, because some vouchers may become read-only later.
-- If a voucher is missing, confirm whether it was saved in the correct module.
+- **SKU** — Internal reference for the voucher
+- **Vendor** — Linked vendor name and code
+- **Voucher Date** — Date the voucher was created or recorded
+- **Voucher Number** — Unique number for the voucher
+- **Reference** — Description or note for the voucher
+- **Payable** — Amount due on the voucher
+- **Paid Amount** — Amount already paid
+- **Items Count** — Number of items included in the voucher
+- **Paid By** — Employee who processed the payment
+- **Created By** — User who created the voucher
 
-## Related pages
+### Search and filters
 
-- [Add Voucher](add-voucher.md)
-- [Voucher Detail](voucher-detail.md)
-- [Banks Overview](../banks/overview.md)
-- [Payments Overview](../payments/overview.md)
+- Use the search field to find vouchers by vendor, number, or reference.
+- Use the **Active / Disabled / Deleted** tabs to filter records by status.
+- Use the **Filters** button to narrow results by additional values.
+
+______________________________________________________________________
+
+## Best practices
+
+- Use clear references so finance staff can find vouchers quickly.
+- Check the voucher status before editing, as some may become read-only.
+- If a voucher is missing, confirm it was saved in the correct module.
+
+______________________________________________________________________
+
+## Related Pages
+
+- **Add Voucher** — Record a new voucher entry
+- **Voucher Detail** — Review or update voucher information
+- **Banks Overview** — Manage bank accounts and transactions
+- **Payments Overview** — Track payment records and statuses
