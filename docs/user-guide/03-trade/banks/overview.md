@@ -1,47 +1,63 @@
 # Banks Overview
 
-Use this page to review the bank accounts recorded in CTB Admin and check each account's current status, balance, and usage in payments or reconciliation.
+## Overview
 
-## Summary
+The **Banks Overview** page lets you review all bank accounts recorded in CTB Admin. Use this section to see each account’s current status, balance, and usage in payments or reconciliation. This helps you confirm which accounts are active before you create checks, vouchers, or payment records.
 
-Use this page to keep track of the bank accounts your team uses for incoming and outgoing payments. It helps you confirm which accounts are active before you create checks, vouchers, or payment records.
+______________________________________________________________________
 
 ## When to use this page
 
-- When you need to review the bank accounts available in the system.
-- When you want to confirm a bank account before creating a check or voucher.
-- When you need to check an account's balance or active status.
+- Review all bank accounts available in the system
+- Confirm a bank account before creating a check or voucher
+- Check an account’s balance or active status
+- Trace pending checks or recent transactions for a bank
+
+______________________________________________________________________
 
 ## How to access this page
 
-From the sidebar, go to **Trade -> Banks**.
+1. From the sidebar, go to **Trade Management → Banks**.
 
-## Step-by-step instructions
+______________________________________________________________________
 
-1. Open **Banks Overview** from the sidebar.
-1. Review the list of bank accounts and confirm the account you need.
-1. Open a bank record to view its full details.
-1. Add a new bank account if the required account is not listed.
+## Page sections
 
-## Field reference
+### Bank List
 
-- **Bank name** - Identifies the account used for payment and reconciliation work.
-- **Account number** - Tracks the specific bank account within your organization.
-- **Branch** - Shows which branch manages the account.
-- **Balance** - Displays the current amount available in the account.
-- **Status** - Shows whether the account is active or inactive.
+![Banks List Page](bank-overview-list-page.png)
 
-<!-- TODO: Add a bank list screenshot once the live UI has been captured. -->
+The main list displays each bank account on a single page.
 
-## Tips and common issues
+Key columns include:
+
+- **SKU** — System reference code for the bank account
+- **Name** — Bank name as shown in the system
+- **Pending Checks** — Total value of checks not yet cleared
+- **Count** — Number of pending checks
+- **Branch** — Branch name (if available)
+- **Branch Address** — Address of the bank branch
+- **Branch Phone** — Contact number for the branch
+
+### Search and filters
+
+- Use the search field to find banks by SKU or name.
+- Use the **Active / Disabled / Deleted** tabs to filter records by status.
+- Use the **Filters** button to narrow results by additional values.
+
+______________________________________________________________________
+
+## Best practices
 
 - Keep inactive or closed accounts clearly marked so users do not select them by mistake.
-- Use the correct bank account before creating checks or vouchers, because later reconciliation depends on it.
-- If you cannot find the right account, confirm the account was created in CTB Admin and not kept only in paper records.
+- Always confirm the correct bank account before creating checks or vouchers.
+- If you cannot find the right account, confirm it was created in CTB Admin and not kept only in paper records.
 
-## Related pages
+______________________________________________________________________
 
-- [Add Bank](add-bank.md)
-- [Bank Detail](bank-detail.md)
-- [Checks Overview](../checks/overview.md)
-- [Vouchers Overview](../vouchers/overview.md)
+## Related Pages
+
+- [Add Bank](add-bank.md) — Create a new bank account
+- [Bank Detail](bank-detail.md) — Review or update bank account information
+- [Checks Overview](../checks/overview.md) — Manage checks linked to banks
+- [Vouchers Overview](../vouchers/overview.md) — Manage vouchers linked to banks
