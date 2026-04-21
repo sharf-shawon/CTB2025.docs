@@ -1,37 +1,95 @@
 # Bank Detail
 
-Use this page to review one bank account in detail and confirm whether it is ready for checks, vouchers, or payment reconciliation.
+**Summary**
+
+Use the Bank Detail page to review and manage a single bank account in CTB Admin. This page displays all key information about the bank, including balance, limits, branch details, and account status. You can confirm if the account is ready for checks, vouchers, or payment reconciliation.
+
+______________________________________________________________________
 
 ## When to use this page
 
-- When you want to verify a bank account before creating a check.
-- When you need to review the current balance or status of an account.
-- When you want to confirm whether the account is still active.
+- Verifying a bank account before creating a check, voucher, or payment
+- Reviewing the current balance, limits, or status of a bank account
+- Checking branch or account details for reporting or reconciliation
+- Confirming if the account is active and available for transactions
+
+______________________________________________________________________
 
 ## How to access this page
 
-From the sidebar, go to **Trade -> Banks** and open a bank record from the list.
+From the sidebar, go to **Trade Management → Banks**. On the Banks List page, click any bank SKU or name to open the Bank Detail page.
+
+![Banks List Page](bank-detail-list-page.png)
+
+______________________________________________________________________
+
+## Step-by-step instructions
+
+1. From the sidebar, select **Banks** under Trade Management.
+1. On the Banks List page, find the bank you want to review.
+1. Click the bank’s SKU or name (see the screenshot above).
+1. The Bank Detail page opens, showing all account information.
+1. Review or update details as needed. Click **Save** to apply changes.
+
+![Bank Detail Page](bank-detail-genarel-info.png)
+
+______________________________________________________________________
 
 ## Field reference
 
-- **Bank name** - The account name shown throughout CTB Admin.
-- **Account number** - The account number used to identify the bank record.
-- **Branch** - The branch or office that manages the account.
-- **Balance** - The current amount tracked against the account.
-- **Status** - Whether the account is active, inactive, or otherwise restricted.
-- **Related records** - Checks, vouchers, or payments that use this account.
+| Field                   | Description                                                                |
+| ----------------------- | -------------------------------------------------------------------------- |
+| **SKU**                 | Unique system identifier for the bank account (used throughout CTB Admin). |
+| **Bank Name**           | The name of the bank account as shown in the system.                       |
+| **Is Enabled**          | Indicates if the account is active and available for transactions.         |
+| **Current Balance**     | The current tracked balance for this bank account.                         |
+| **Upper Balance Limit** | Maximum allowed balance for the account (for monitoring or compliance).    |
+| **Lower Balance Limit** | Minimum required balance for the account (to avoid overdraft or alerts).   |
+| **Branch Details**      | Additional information about the bank branch (expandable section).         |
+| **Account Details**     | Further account-specific information (expandable section).                 |
 
-<!-- TODO: Add a bank detail screenshot when the live detail page is available for capture. -->
+______________________________________________________________________
+
+## Deleting a Bank
+
+![Delete Bank Permission Error](delete-bank-page.png)
+
+Before deleting a bank, the system checks whether the account is linked to any existing records. The table below describes when deletion is and is not permitted:
+
+| Condition                                          | Deletion Allowed |
+| -------------------------------------------------- | ---------------- |
+| Bank has linked Checks                             | Not permitted    |
+| Bank has linked Vouchers                           | Not permitted    |
+| Bank has linked Payments                           | Not permitted    |
+| Bank has no linked records and user has permission | Permitted        |
+
+!!! warning "Permission Required"
+Even if the bank has no linked records, only users with the appropriate delete permission can remove a bank account. If your account lacks this permission, the system will display an error listing the object types you are not allowed to delete.
+
+**To delete a bank:**
+
+1. Open the bank record from the **Banks List**
+1. Confirm there are no linked checks, vouchers, or payments
+1. Click the **Delete Bank** button at the bottom-left of the page
+1. Confirm the deletion when prompted
+
+The bank record is permanently removed from the system.
+
+!!! tip "Cannot delete the bank?"
+If the system shows a permission error, contact your system administrator to request delete access or to have the linked records removed first. To take the bank out of active use without deleting it, toggle **Is Enabled** to off and save.
 
 ## Tips and common issues
 
-- Check the status before using the bank in a new record.
-- If the balance looks wrong, review recent payments or checks first.
-- Keep closed accounts in the system if you still need their history for reporting.
+- **Check account status** before using the bank for new checks, vouchers, or payments.
+- If the **balance looks incorrect**, review recent checks or payments linked to this account.
+- **Closed or inactive accounts** remain in the system for reporting but cannot be used for new transactions.
+- Use the **Delete Bank** button only if the account is no longer needed and has no linked records.
+
+______________________________________________________________________
 
 ## Related pages
 
-- [Banks Overview](overview.md)
-- [Add Bank](add-bank.md)
-- [Checks Overview](../checks/overview.md)
-- [Vouchers Overview](../vouchers/overview.md)
+- [Banks Overview](overview.md) — List and manage all bank accounts
+- [Add Bank](add-bank.md) — Create a new bank account
+- [Checks Overview](../checks/overview.md) — Manage checks linked to banks
+- [Vouchers Overview](../vouchers/overview.md) — Manage vouchers linked to banks
