@@ -1,46 +1,67 @@
-# Wages Overview
+# Wage Overview
 
-Use this page to review wage-based compensation records for employees and keep daily or hourly wage entries organized.
+## Overview
 
-## Summary
+The **Wages** page lets you review wage payments for employees, including details of each wage transaction. Use this section to track wage status, payment dates, and breakdowns for each employee and product.
 
-The wages overview helps HR and finance staff track non-salary compensation records. Use it when you need to confirm which wage entries were recorded for a period or an employee.
+______________________________________________________________________
 
-## When to use this page
+## When to use Wage Overview page
 
-- When you need to review wage records for a date range.
-- When you want to confirm whether wage entries were saved correctly.
-- When you need to open a wage record for more detail.
+- Review recent wage payments to employees
+- Check wage status (Paid/Unpaid) and payment dates
+- Verify wage breakdowns including quantity, deductions, and bonuses
+- Trace wage history for a specific employee or product
 
-## How to access this page
+______________________________________________________________________
 
-From the sidebar, go to **Employee -> Wages**.
+## How to access Wage Overview page
 
-## Step-by-step instructions
+1. From the sidebar, go to **Employee Management → Wages**.
+1. The list page shows wage entries for the selected date.
+1. Select a record to view more details about the wage transaction.
 
-1. Open **Wages Overview** from the sidebar.
-1. Review the wage list and locate the employee or period you need.
-1. Open a wage entry if you need to inspect the details.
-1. Add a new wage entry when the record does not yet exist.
+______________________________________________________________________
 
-## Field reference
+## Page sections
 
-- **Employee** - The staff member tied to the wage record.
-- **Date** - The day the wage was recorded.
-- **Rate** - The daily or hourly amount used for the entry.
-- **Hours/Days** - The worked quantity used for wage calculation.
-- **Total** - The final wage amount for the entry.
+### Wage List
 
-<!-- TODO: Add a wages overview screenshot once the wage list page is captured. -->
+![Wage List Page](wage-overview-list-page.png)
 
-## Tips and common issues
+The main list displays each wage transaction for employees on a single page.
 
-- Confirm the employee before opening or editing a wage record.
-- Check the period carefully when there are multiple wage entries in one month.
-- If a wage looks wrong, confirm the source calculation before adjusting it.
+Key columns include:
 
-## Related pages
+- **SKU** — Wage reference code for the transaction
+- **Date** — When the wage was recorded
+- **Employee** — Employee name and code
+- **Product** — Product or work associated with the wage
+- **Qty** — Quantity of work completed
+- **Wage** — Wage rate per unit
+- **Deduct** — Any deductions applied
+- **Bonus** — Any bonuses added
+- **Net** — Net wage amount after deductions and bonuses
+- **Status** — Payment status (e.g., Paid)
+- **Paid On** — Date the wage was paid
 
-- [Add Wage Entry](add-wage-entry.md)
-- [Salary Overview](../salary/overview.md)
-- [Salary Detail](../salary/salary-detail.md)
+### Search and filters
+
+- Use the search field to find wage records by SKU or employee name.
+- Use the **Filters** button to narrow results by date, status, or other values.
+
+______________________________________________________________________
+
+## Best practices
+
+- Always verify the **Net** amount before confirming payment.
+- Use filters to quickly find unpaid or pending wage records.
+- Check the **Product** and **Qty** to ensure accurate wage calculation.
+
+______________________________________________________________________
+
+## Related Pages
+
+- **Employees** — Manage employee details and wage assignments
+- **Payouts** — Review and process wage payments
+- **Salary** — View monthly salary records and reports
