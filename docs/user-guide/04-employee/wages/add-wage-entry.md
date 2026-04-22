@@ -1,48 +1,117 @@
 # Add Wage Entry
 
-Use this page to create a new wage entry for an employee when compensation is tracked by day, hour, or other wage-based logic.
+Use this page to record a wage entry for an employee in CTB Admin. A wage entry tracks the number of products produced by an employee, calculates their wage based on production quantity, and records any deductions, bonuses, and payment status. Wage entries are used to manage employee compensation tied to production output.
 
-## Summary
+## When to use Add Wage Entry page
 
-Use this page to record wage work that will later feed payroll, purchase balance, or reporting workflows. Accurate wage entry helps the business keep compensation and attendance-related records aligned.
+- Recording daily or periodic production-based wages for an employee
+- Logging the number of products produced in a work session
+- Applying deductions or bonuses to an employee's base wage
+- Marking a wage as paid and recording the payment date
+- Tracking outstanding wages before processing payroll
 
-## When to use this page
+## How to access Add Wage Entry page
 
-- When an employee worked on a daily or hourly wage basis.
-- When you need to record a special wage entry for a period or task.
-- When you want a wage record to support salary or payout calculations.
+From the sidebar, go to **Employee Management → Wages**. On the Wages List page, click the **purple (+) icon** in the top-right corner.
 
-## How to access this page
+The system opens the **Add Wage Entry Page**.
 
-From the sidebar, go to **Employee -> Wages** and click the add action on the list page.
+______________________________________________________________________
 
-## Step-by-step instructions
+## Step-by-step Instructions
 
-1. Open **Wages Overview** from the sidebar.
-1. Click the add action to start a new wage entry.
-1. Select the employee and enter the wage date or period.
-1. Enter the rate, quantity, and any notes required by your process.
-1. Save the wage record.
+1. Open **Employee Management → Wages** and click the add icon.
+1. Fill in the **Date**, **Employee**, and **Product** fields.
+1. Enter **Production Details** including Quantity, Wage, Deductions, and Bonus.
+1. Review the auto-calculated **Net Wage**.
+1. Set **Payment Information** if the wage has already been paid.
+1. Click **Save** to create the wage entry.
 
-## Field reference
+______________________________________________________________________
 
-- **Employee** - The staff member receiving the wage entry.
-- **Date** - The date or wage period being recorded.
-- **Rate** - The amount paid per hour, day, or unit.
-- **Quantity** - The number of hours, days, or units worked.
-- **Total** - The calculated wage amount.
-- **Notes** - Internal context or explanation for the wage entry.
+## General Information
 
-<!-- TODO: Add a wage entry screenshot once the live form is captured. -->
+![General Information Section](add-wage-general-info.png)
 
-## Tips and common issues
+Fill in the following fields:
 
-- Confirm the employee and period before saving, because wage entries can affect payroll totals.
-- Add notes when the wage entry is tied to special work or an exception.
-- Review the total carefully if the wage uses a custom rate or quantity.
+| Step | Field    | What to Do           | Description                                            |
+| ---- | -------- | -------------------- | ------------------------------------------------------ |
+| 1    | SKU      | Auto-generated       | Unique identifier for this wage entry (read-only)      |
+| 2    | Date     | Select date          | The date this wage entry is recorded for               |
+| 3    | Employee | Select from dropdown | The employee whose wage is being recorded              |
+| 4    | Product  | Select from dropdown | The product the employee produced in this work session |
 
-## Related pages
+!!! warning "Required Fields"
+Fields marked with a **red star (\*)** are mandatory. Date, Employee, and Product must all be filled before saving.
 
-- [Wages Overview](overview.md)
-- [Salary Overview](../salary/overview.md)
-- [Salary Detail](../salary/salary-detail.md)
+______________________________________________________________________
+
+## Production Details
+
+![Production Details Section](add-wage-production-detail.png)
+
+Enter the production output and wage calculation fields:
+
+| Step | Field      | What to Do      | Description                                              |
+| ---- | ---------- | --------------- | -------------------------------------------------------- |
+| 1    | Quantity   | Enter number    | Number of products produced by the employee              |
+| 2    | Wage       | Enter amount    | Base wage rate; enter 0 to use the default product wage  |
+| 3    | Deductions | Enter amount    | Any deductions to subtract from the base wage            |
+| 4    | Bonus      | Enter amount    | Any bonus amount to add to the base wage                 |
+| 5    | Net Wage   | Auto-calculated | Final wage amount (Wage × Quantity + Bonus - Deductions) |
+
+!!! note "Net Wage Calculation"
+Net Wage is calculated automatically based on Wage, Quantity, Bonus, and Deductions. You do not need to enter it manually.
+
+!!! tip
+Set Wage to **0** to apply the default wage rate configured for the selected product.
+
+______________________________________________________________________
+
+## Payment Information
+
+![Payment Information Section](add-wage%20payment-inforamtion.png)
+
+Record whether this wage has been paid:
+
+| Step | Field         | What to Do    | Description                                               |
+| ---- | ------------- | ------------- | --------------------------------------------------------- |
+| 1    | Is Paid       | Toggle ON/OFF | Mark the wage entry as paid or unpaid                     |
+| 2    | Payment Date  | Select date   | The date the payment was made (required if Is Paid is ON) |
+| 3    | Payment Notes | Enter text    | Optional notes about the payment method or reference      |
+
+!!! note "Payment Date Visibility"
+Payment Date and Payment Notes fields appear when **Is Paid** is toggled on. Leave Is Paid off if the wage is still outstanding.
+
+______________________________________________________________________
+
+## Saving the Wage Entry
+
+After completing all sections:
+
+- Click **Save** to create the wage entry
+- Click **Save and continue editing** to save and stay on the page
+- Click **Save and add another** to save and immediately create another wage entry
+
+______________________________________________________________________
+
+!!! Tips and Common Issues
+
+- **Employee is required** — You must select an employee before saving <br>
+- **Product is required** — Select the product associated with the production output <br>
+- **Default wage applies when Wage is 0** — If no wage is entered, the system uses the product's default wage rate <br>
+- **Net Wage updates automatically** — It recalculates whenever Quantity, Wage, Bonus, or Deductions are changed <br>
+- **Toggle Is Paid only when payment is confirmed** — Setting Is Paid without a Payment Date may cause reporting inconsistencies <br>
+- **Deductions reduce Net Wage** — Enter deductions carefully as they directly reduce the employee's final payment <br>
+- **Date affects payroll reporting** — The entry date determines which pay period this wage record appears in <br>
+
+______________________________________________________________________
+
+## Related Pages
+
+- **Wages Overview** — View and manage all wage entries
+- **Employees** — Manage employee profiles
+- **Products** — View product wage rates used in calculations
+- **Salaries** — Manage fixed salary records for employees
+- **Payouts** — Process and track wage payments
