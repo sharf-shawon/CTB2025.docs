@@ -1,46 +1,64 @@
 # Payouts Overview
 
-Use this page to review employee payout records and monitor which payouts are still pending or already completed.
+## Overview
 
-## Summary
+The **Payouts** page lets you review all employee payout records and monitor payment status. Use this section to track advances, salary adjustments, and other employee payments, and verify whether payouts are pending or already completed.
 
-The payouts overview helps HR and finance staff keep track of advances, adjustments, or salary-related payments. Use it to confirm the payout status before or after issuing money to an employee.
+______________________________________________________________________
 
-## When to use this page
+## When to use Payouts Overview page
 
-- When you want to review all payout records.
-- When you need to see which payouts are still pending.
-- When you want to open a payout record for detail review.
+- Review recent payout transactions for all employees
+- Check the status of a specific payout before or after issuing payment
+- Verify payment date and amount for a completed payout
+- Track pending payouts that still require approval or disbursement
 
-## How to access this page
+______________________________________________________________________
 
-From the sidebar, go to **Employee -> Payouts**.
+## How to access Payouts Overview page
 
-## Step-by-step instructions
+1. From the sidebar, go to **Employee → Payouts**.
+1. The list page shows payout records grouped by **Active**, **Pending**, **Completed**, and other statuses.
+1. Select a record to open the payout detail page and review full transaction information.
 
-1. Open **Payouts Overview** from the sidebar.
-1. Review the list of payout records.
-1. Open a payout record to see its full details.
-1. Create a payout when an employee needs an advance or other payment.
+______________________________________________________________________
 
-## Field reference
+## Page sections
 
-- **Employee** - The staff member receiving the payout.
-- **Reference** - The payout reference or identifier.
-- **Amount** - The amount issued to the employee.
-- **Date** - The payout date.
-- **Status** - Shows whether the payout is pending, approved, or completed.
+### Payout List
 
-<!-- TODO: Add a payout list screenshot once the live page is captured. -->
+![Payouts List Page](payout-list-page.png)
 
-## Tips and common issues
+The main list shows each payout transaction on a single page.
 
-- Confirm the employee before creating a payout so the record lands in the correct account history.
-- Use a clear reference for advances or salary-related payouts.
-- Check status before editing, because completed payouts may be restricted.
+Key columns include:
 
-## Related pages
+- **SKU** — Payout reference code with employee name and payout date (e.g., `PTO#0002 - Kamal Khan - 2026-04-26`)
+- **Date** — Date when the payout was recorded or processed
+- **Employee** — Employee name and position receiving the payout
+- **Amount** — Payout amount in local currency (e.g., 7,000Tk)
+- **Status** — Current payout status such as `Paid` or `Unpaid`
+- **Paid On** — Actual date payment was issued to the employee
 
-- [Create Payout](create-payout.md)
-- [Salary Overview](../salary/overview.md)
-- [Salary Detail](../salary/salary-detail.md)
+### Search and filters
+
+- Use the search field to find specific payout records by SKU, employee name, or reference.
+- Use status tabs to filter records by **Pending**, **Approved**, **Paid**, or other statuses.
+- Use the **Filters** button to narrow results by date range, employee, or amount.
+
+______________________________________________________________________
+
+## Best practices
+
+- Verify the **Employee** and **Amount** before marking a payout as paid to avoid accounting errors.
+- Confirm the **Status** before editing a completed payout, as some payouts may be restricted from modification.
+- Use the **Paid On** date to match payouts against bank records and employee payment history.
+- Review the full **SKU** reference to trace the payout across multiple systems.
+
+______________________________________________________________________
+
+## Related Pages
+
+- **Create Payout** — Record a new employee payout or advance
+- **Salary Overview** — View employee salary records and compensation details
+- **Salaries** — Manage annual salary rates and employee compensation
