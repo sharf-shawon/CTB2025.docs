@@ -1,43 +1,79 @@
 # Positions Overview
 
-Use this page to review employee positions and keep job titles consistent across the system.
+The **Positions** page displays all job positions in a structured table. It allows you to quickly search, review, and manage employee positions used across your workforce.
 
-## Summary
+______________________________________________________________________
 
-Positions help you organize staff by role for reporting, attendance, and payroll workflows. Use this page to confirm the available positions before assigning a role to an employee.
+## Page Layout
 
-## When to use this page
+![Positions List](position-overview.png)
 
-- When you want to review existing positions.
-- When you need to confirm a job title before adding or editing an employee.
-- When you want to open the create or edit page.
+The page includes:
 
-## How to access this page
+- Search bar for quick lookup
+- Position list table
+- Filters button for advanced filtering
+- Add (+) button for creating new positions
 
-From the sidebar, go to **Employee -> Positions**.
+______________________________________________________________________
 
-## Step-by-step instructions
+## Position List
 
-1. Open **Positions Overview** from the sidebar.
-1. Review the position list.
-1. Open a position to edit it or create a new one if needed.
+The table shows all positions with key details:
 
-## Field reference
+| Column        | Description                                           |
+| ------------- | ----------------------------------------------------- |
+| SKU           | Unique identifier for each position (e.g., PST#0001)  |
+| Position Name | Job title used for organizing and assigning employees |
+| Description   | Additional role details (if provided)                 |
+| Is Enabled    | Status indicator showing if position is active        |
+| Created At    | Date and time the position was created                |
+| Updated At    | Last modification date                                |
 
-- **Position title** - The job title used for the employee record.
-- **Description** - Optional explanation of the role.
-- **Status** - Shows whether the position is active.
+______________________________________________________________________
 
-<!-- TODO: Add a position list screenshot once the live page is captured. -->
+## Search Bar
 
-## Tips and common issues
+Use the search bar to quickly find positions.
 
-- Keep position names short and consistent.
-- Avoid renaming a position unless you are sure the new name will not confuse reporting.
-- Mark unused positions inactive rather than deleting them when history matters.
+### How to use
 
-## Related pages
+- Type a keyword (e.g., position name or SKU)
+- The table updates instantly based on your input
 
-- [Add/Edit Position](manage-position.md)
-- [Employees Overview](../employees/overview.md)
-- [Departments Overview](../departments/overview.md)
+!!! tip
+Use SKU for faster and more accurate search results.
+
+______________________________________________________________________
+
+## Filters
+
+Use the **Filters** button to narrow down position results.
+
+### Filter options
+
+- **Status** — Filter by enabled or disabled positions
+- **Created Date** — Filter positions by creation date range
+- **Updated Date** — Filter positions by modification date range
+- **Department** — Filter positions by assigned department (if applicable)
+
+!!! note
+Apply filters to quickly locate positions matching your workflow needs.
+
+______________________________________________________________________
+
+## Tips and Best Practices
+
+- Use search instead of manually scanning the list
+- Keep position names consistent and clear for easier employee assignment
+- Filter by status to focus on active positions when onboarding employees
+- Review position details before editing to avoid disrupting assigned employees
+- Disable unused positions instead of deleting them to preserve historical records
+
+______________________________________________________________________
+
+## Related Pages
+
+- **Edit Position** — Update position details and enable/disable status
+- **Employees Overview** — View employees assigned to positions
+- **Departments Overview** — Organize positions by department

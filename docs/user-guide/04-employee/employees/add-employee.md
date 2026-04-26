@@ -18,7 +18,7 @@ ______________________________________________________________________
 
 ## General Information
 
-![Add Employee General Information](employee-add.png)
+![Add Employee General Information](add-employee-personal-info.png)
 
 Fill in the following fields:
 
@@ -44,7 +44,7 @@ ______________________________________________________________________
 
 ## Emergency Contact
 
-![Emergency Contact Section](employee-add.png)
+![Emergency Contact Section](add-employee-emargency-info.png)
 
 | Step | Field                  | What to Do             | Description                         |
 | ---- | ---------------------- | ---------------------- | ----------------------------------- |
@@ -56,7 +56,7 @@ ______________________________________________________________________
 
 ## Employment Details
 
-![Employment Details Section](employee-add.png)
+![Employment Details Section](add-employee-details-section.png)
 
 | Step | Field            | What to Do                 | Description                                   |
 | ---- | ---------------- | -------------------------- | --------------------------------------------- |
@@ -73,7 +73,7 @@ ______________________________________________________________________
 
 ## Salary Information
 
-![Salary Information Section](employee-add.png)
+![Salary Information Section](add-employee-salary-details.png)
 
 | Step | Field               | What to Do                | Description                             |
 | ---- | ------------------- | ------------------------- | --------------------------------------- |
@@ -91,8 +91,6 @@ ______________________________________________________________________
 ## Saving the Employee
 
 After completing all sections:
-
-![Save Buttons](employee-add.png)
 
 - Click **Save** to create the employee
 - Click **Save and add another** to continue adding more employees
