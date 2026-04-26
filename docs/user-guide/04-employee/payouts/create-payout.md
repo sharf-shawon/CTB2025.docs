@@ -1,48 +1,89 @@
 # Create Payout
 
-Use this page to issue a payout or advance to an employee and keep the payment recorded for payroll and audit purposes.
+Use this page to issue a payout or advance to an employee and keep the payment recorded for payroll and audit purposes. A payout documents payments to employees outside the regular salary cycle and tracks the employee's payment history.
 
-## Summary
+## When to use Create Payout page
 
-Create a payout when an employee needs an advance, adjustment, or other approved payment outside the normal salary record. The payout record helps finance teams keep the employee balance accurate.
+- Issuing an advance to an employee
+- Recording a salary adjustment or bonus payment
+- Processing a one-time employee payment
+- Documenting approved non-standard payments
 
-## When to use this page
+## How to access Create Payout page
 
-- When an employee receives an advance.
-- When you need to pay a salary-related adjustment.
-- When a manager approves a non-standard employee payment.
+From the sidebar, go to **Employee Management → Payouts**. On the Payouts List page, click the **purple (+) icon** in the top-right corner.
 
-## How to access this page
+The system opens the **Create Payout Page**.
 
-From the sidebar, go to **Employee -> Payouts** and click the add action on the list page.
+______________________________________________________________________
 
-## Step-by-step instructions
+## Payout Information
 
-1. Open **Payouts Overview** from the sidebar.
-1. Click the add action to start a new payout.
-1. Select the employee and enter the payout amount.
-1. Add the reference, date, and note if needed.
-1. Save the payout record.
+Fill in the following fields on the payout form:
 
-## Field reference
+![Create Payout](create-payout-info.png)
 
-- **Employee** - The staff member receiving the payout.
-- **Amount** - The value issued in the payout.
-- **Reference** - The voucher or payout reference used for tracking.
-- **Date** - The date the payout was issued.
-- **Status** - Controls whether the record is pending, approved, or completed.
-- **Note** - Internal explanation for the payout.
+| Step | Field    | What to Do      | Description                                   |
+| ---- | -------- | --------------- | --------------------------------------------- |
+| 1    | Employee | Select employee | The staff member receiving the payout         |
+| 2    | Amount   | Enter amount    | The payout amount in the system currency      |
+| 3    | Payable  | Auto-calculated | Total payout amount (may include adjustments) |
 
-<!-- TODO: Add a payout creation screenshot once the live form is captured. -->
+!!!warning
+Fields marked with a **red star (\*)** are mandatory.
+
+______________________________________________________________________
+
+## Payment Information
+
+Configure the payment details after entering the payout amount:
+
+| Step | Field        | What to Do    | Description                                          |
+| ---- | ------------ | ------------- | ---------------------------------------------------- |
+| 1    | Is Paid      | Check if paid | Mark the payout as already paid                      |
+| 2    | Payment Date | Select date   | Date when the payout was or will be paid to employee |
+
+!!!Note
+Payment Date is important for payroll reconciliation and employee balance tracking.
+
+______________________________________________________________________
+
+## Payment Notes
+
+Add optional notes or internal comments:
+
+| Step | Field | What to Do | Description                              |
+| ---- | ----- | ---------- | ---------------------------------------- |
+| 1    | Note  | Enter text | Internal explanation or special comments |
+
+______________________________________________________________________
+
+## Saving the Payout
+
+After completing all sections:
+
+- Click **Save** to create the payout
+- Click **Save and continue editing** to save and remain on the page
+- Click **Save and add another** to save and create a new payout immediately
+
+The payout is now recorded and reflected in the employee's account balance.
+
+______________________________________________________________________
 
 ## Tips and common issues
 
-- Use a clear reference so the payout can be matched to payroll later.
-- Add a note when the payout is an advance or one-time adjustment.
-- Confirm approval rules before saving, because payout records affect employee balances.
+- **Employee is required** — You must select an employee before saving
+- **Amount is required** — Enter the payout value in the system currency
+- **Payment Date affects payroll** — Ensure the date is correct for accurate payroll reconciliation
+- **Is Paid determines balance** — Check "Is Paid" to mark the payment as completed; leave unchecked for pending payouts
+- **Add notes for clarity** — Use the notes field to explain the reason for the payout (advance, adjustment, bonus, etc.)
+- **Payable amount is auto-calculated** — The system calculates the final payout amount based on the Amount field
+
+______________________________________________________________________
 
 ## Related pages
 
-- [Payouts Overview](overview.md)
-- [Salary Overview](../salary/overview.md)
-- [Salary Detail](../salary/salary-detail.md)
+- **Payouts Overview** — View all employee payouts and their status
+- **Salary** — Manage regular salary records and payroll
+- **Employees** — Manage employee information and records
+- **Salary Detail** — View employee salary breakdown and history
