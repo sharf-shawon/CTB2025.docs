@@ -14,6 +14,8 @@ Use this page to update an existing employee’s information. The edit page cont
 1. Go to **Employee → Employees** from the sidebar.
 1. On the Employees list page, click the employee row or name.
 
+![Edit Employee List Page](edit-employee-list-page.png)
+
 The system opens the **Edit Employee** page.
 
 ______________________________________________________________________
@@ -29,7 +31,7 @@ ______________________________________________________________________
 
 ## General Information
 
-![Edit Employee General Information](employee-edit.png)
+![Edit Employee General Information](edit-employee-personal-info.png)
 
 Update the following fields as needed:
 
@@ -52,7 +54,7 @@ ______________________________________________________________________
 
 ## Emergency Contact
 
-![Emergency Contact Section](employee-edit.png)
+![Emergency Contact Section](edit-employee-emargency-info.png)
 
 | Field                  | What you can change | Notes                         |
 | ---------------------- | ------------------- | ----------------------------- |
@@ -64,7 +66,7 @@ ______________________________________________________________________
 
 ## Employment Details
 
-![Employment Details Section](employee-edit.png)
+![Employment Details Section](edit-employee-work-delails.png)
 
 | Field            | What you can change | Notes                                       |
 | ---------------- | ------------------- | ------------------------------------------- |
@@ -81,7 +83,7 @@ ______________________________________________________________________
 
 ## Salary Information
 
-![Salary Information Section](employee-edit.png)
+![Salary Information Section](edit-employee-salary-info.png)
 
 | Field               | What you can change | Notes                             |
 | ------------------- | ------------------- | --------------------------------- |
@@ -97,8 +99,6 @@ ______________________________________________________________________
 
 After updating the required fields:
 
-![Save Buttons](employee-edit.png)
-
 - Click **Save** to apply the changes
 - Click **Save and add another** if you want to continue creating records
 - Click **Save and continue editing** to keep working on the same employee
@@ -107,12 +107,14 @@ If your role allows it, you may also see a **Delete Employee** button.
 
 ______________________________________________________________________
 
-## Tips and Common Issues
+!!! Tips and Common Issues
 
+```
 - Verify the **Phone Number** before enabling SMS notifications.
 - Replace **NID images** only with clear and readable files.
 - Avoid unnecessary changes to **Balance**, because it can affect financial reports.
 - Use **End Date** only when the employee is no longer active.
+```
 
 ______________________________________________________________________
 
