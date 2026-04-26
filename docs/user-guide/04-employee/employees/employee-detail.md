@@ -2,21 +2,21 @@
 
 Use this page to review a single employee’s complete profile. It helps you confirm personal information, work assignment, salary settings, and related payroll records before you process attendance, wages, salary, or payouts.
 
-## When to use this page
+## When to use Employee Detail page
 
 - Reviewing an employee’s full profile before payroll
 - Checking position, department, and balance information
 - Confirming identity and contact details
 - Looking up related salary, wage, or payout records
 
-## How to access this page
+## How to access Employee Detail page
 
 1. Go to **Employee → Employees** from the sidebar.
-1. On the Employees list page, click the employee row or name.
+1. On the Employees list page, click the employee name or sku.
 
 The Employees list page shows active, disabled, and deleted records. From there, you can open the employee profile you want to review.
 
-![Employees List](employee-list.png)
+![Employees List](edit-employee-list-page.png)
 
 The system opens the **Employee Detail** page.
 
@@ -73,7 +73,7 @@ ______________________________________________________________________
 
 ## Wages Tab
 
-![Wages Tab](employee-edit.png)
+![Wages Tab](employee-detail-wage-tab.png)
 
 Use this tab to review wage-related entries for the employee.
 
@@ -87,7 +87,7 @@ ______________________________________________________________________
 
 ## Salaries Tab
 
-![Salaries Tab](employee-edit.png)
+![Salaries Tab](add-employee-salary-details.png)
 
 Use this tab to review salary records generated for the employee.
 
@@ -101,7 +101,7 @@ ______________________________________________________________________
 
 ## Payouts Tab
 
-![Payouts Tab](employee-edit.png)
+![Payouts Tab](employee-detail-payout-tab.png)
 
 Use this tab to review payout history for the employee.
 
