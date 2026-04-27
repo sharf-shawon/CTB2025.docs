@@ -199,6 +199,8 @@ nav:
           - Create/Edit Task: user-guide/04-employee/tasks/manage-task.md
       - Purchase Balance:
           - Overview: user-guide/04-employee/purchase-balance/overview.md
+          - Add Purchase Balance: user-guide/04-employee/purchase-balance/add-purchase-balance.md
+
   - Settings and Admin:
       - Module Overview: user-guide/05-settings-and-admin/README.md
       - User Management: user-guide/05-settings-and-admin/user-management.md
