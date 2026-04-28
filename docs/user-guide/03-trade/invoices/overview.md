@@ -1,49 +1,85 @@
 # Invoices Overview
 
-Use this page to review invoices, filter them by status or date, and open any invoice for editing, printing, or follow-up.
+The **Invoices** module is the main control point for managing all sales billing documents in CTB Admin. Use this page to view all invoices, search by invoice number or client, filter by status and date, and quickly access invoices for review, editing, printing, or payment follow-up.
 
-## Summary
+## What you can do in this module
 
-The invoices list is the main control point for sales billing in CTB Admin. Use it to find invoices quickly, confirm their status, and decide whether a record should be edited, printed, or followed up for payment.
+- **Create new invoices** — generate billing documents for clients with line items, taxes, and discounts.
+- **View invoice status** — track whether invoices are draft, sent, paid, or cancelled.
+- **Edit invoices** — modify invoice details before sending or after creation.
+- **Print invoices** — generate PDF invoices or chalans for sharing or archival.
+- **Record payments** — mark invoices as paid when payment is received.
+- **Analyze invoice data** — use the Invoice Reports page for financial summaries and trends.
 
-## When to use this page
+______________________________________________________________________
 
-- When you need to find a specific invoice.
-- When you want to review invoice status before printing or sharing it.
-- When you need to open an invoice for editing or detail review.
+## How to access Invoices Overview page
 
-## How to access this page
+From the sidebar, go to **Trade → Invoices**.
 
-From the sidebar, go to **Trade -> Invoices**.
+The system opens the **Invoices List** page where all invoices are displayed.
 
-## Step-by-step instructions
+______________________________________________________________________
 
-1. Open **Invoices Overview** from the sidebar.
-1. Search or filter the list to find the invoice you need.
-1. Open the invoice detail page for review or editing.
-1. Create a new invoice if the record does not already exist.
+## List Page Columns and Fields
 
-## Field reference
+![Invoice List Page](invoice-overview-list-page.png)
 
-- **Invoice number** - Unique identifier for the invoice.
-- **Client** - The customer linked to the invoice.
-- **Date** - The billing date used in reports.
-- **Status** - Indicates whether the invoice is draft, sent, paid, or cancelled.
-- **Payable** - The amount still due after charges and discounts.
+The Invoices list displays the following information for each invoice:
 
-<!-- TODO: Add an invoice list screenshot or status-filter screenshot once the overview page is captured. -->
+| Column             | Description                                                                |
+| ------------------ | -------------------------------------------------------------------------- |
+| **Invoice Number** | System-generated unique identifier for this invoice (e.g., INV-260414-004) |
+| **Invoice Date**   | The billing date used in reports and on the printed invoice                |
+| **Client**         | Name of the customer or client linked to this invoice                      |
+| **Subtotal**       | Sum of all line item amounts before taxes and discounts                    |
+| **Payable**        | The amount still due after discounts, taxes, and credits are applied       |
+| **Created By**     | Username of the user who created this invoice                              |
+| **Created At**     | Date and time the invoice was created in the system                        |
+| **Status**         | Invoice status (Draft, Sent, Paid, Cancelled, or other applicable status)  |
 
-## Tips and common issues
+______________________________________________________________________
 
-- Search by invoice number first when you need the fastest lookup.
-- Confirm the status before printing, because some actions are only available for sent invoices.
-- Use the invoice detail page if you need to review line items or notes.
+## Search and Filter
 
-## Related pages
+Use the search and filter options to quickly locate specific invoices:
 
-- [Create Invoice](create-invoice.md)
-- [Edit Invoice](edit-invoice.md)
-- [Invoice Detail](invoice-detail.md)
-- [Print Invoice](print-invoice.md)
-- [Print Chalan](print-chalan.md)
-- [Invoice Reports](invoice-reports.md)
+- **Search box** — Type to search by invoice number, client name, or reference
+- **Status tabs** — Click **Active** or **Deleted** to filter invoices by their status
+- **Filters** — Click **Filters** to narrow results by date range, client, or payable amount
+- **Calendar picker** — Click the date arrows to navigate to a specific date
+
+______________________________________________________________________
+
+## List Actions
+
+From the Invoices List page:
+
+- **Create new invoice** — Click the **purple (+) icon** in the top-right corner to create a new invoice
+- **View details** — Click on any row to open the full invoice detail page
+- **Print invoice** — Click the **print icon** or select **Print** from the actions menu to generate a PDF
+- **Edit invoice** — Open an invoice to modify its details (only available for draft or sent invoices)
+- **Record payment** — Mark an invoice as paid from the invoice detail page
+
+______________________________________________________________________
+
+!!!Tips and Common Issues
+
+- **Search by invoice number first** — Use the invoice number for the fastest lookup
+- **Status determines actions** — Some actions like editing or marking as paid are only available for specific invoice statuses
+- **Date filters help with reporting** — Use date ranges to view invoices for a specific month or period
+- **Check payable amount** — The payable column shows what is still due, not the total invoice amount
+- **Client information is required** — Invoices must be linked to a client before they can be sent or paid
+- **Draft invoices can be edited** — Make all changes before sending an invoice to avoid confusion
+- **Cancelled invoices are not removed** — Cancelled invoices remain in the list for audit purposes but do not appear in reports
+
+______________________________________________________________________
+
+## Related Pages
+
+- **Create Invoice** — Generate a new invoice for a client
+- **Edit Invoice** — Update an existing invoice's details
+- **Invoice Detail** — View complete information and line items for a specific invoice
+- **Invoice Reports** — View financial summaries and analytics across all invoices
+- **Quotations** — Create preliminary quotes before generating invoices
+- **Payments** — Record and track payments received against invoices
