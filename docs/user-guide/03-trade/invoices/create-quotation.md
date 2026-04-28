@@ -9,7 +9,7 @@ Use this page to create a quotation for a client. A quotation is a formal price 
 - Creating a formal quotation document for sales negotiations
 - Tracking proposed pricing and terms for potential deals
 
-## How to access this page
+## How to access Create Quotation
 
 From the sidebar, go to **Trade Management → Quotations**. On the Quotations List page, click the **purple (+) icon** in the top-right corner.
 
@@ -20,6 +20,7 @@ ______________________________________________________________________
 ## General Information
 
 Fill in the following fields on the General tab:
+![Create Quotation General Information](create-quotation-general-info.png)
 
 | Step | Field            | What to Do              | Description                                  |
 | ---- | ---------------- | ----------------------- | -------------------------------------------- |
@@ -35,6 +36,8 @@ Fields marked with a **red star (\*)** are mandatory.
 ______________________________________________________________________
 
 ## Payment Details
+
+![Create Quotation Payment Section](create-quotation-payment-section.png)
 
 After adding items, configure the financial details:
 
@@ -54,6 +57,7 @@ ______________________________________________________________________
 
 ## Add Items
 
+![Create Quotation Add Item Section](create-quotation-item-section.png)
 Add products or services to the quotation:
 
 | Step | Field   | What to Do           | Description                         |
