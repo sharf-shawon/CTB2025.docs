@@ -141,9 +141,8 @@ ______________________________________________________________________
 
 ## Related Pages
 
-<!-- TODO: The deployement is failing because of these links. These links don't exist. Fix with correct link and the pages should deploy.  -->
-
-<!-- - [Create Voucher](create-voucher.md) — Create a new voucher for a vendor
-- [Vendors](vendors.md) — Manage vendor profiles and contact information
-- [Purchase Balances](purchase-balances.md) — Track outstanding payments to vendors
-- [Materials](materials.md) — View and manage available materials -->
+- [Vouchers Overview](overview.md) — View all vouchers and search by vendor or date
+- [Create Voucher](add-voucher.md) — Create a new voucher for a vendor
+- [Vendor Overview](../../01-business/vendors/overview.md) — Manage vendor profiles and contact information
+- [Purchase Balance](../../04-employee/purchase-balance/overview.md) — Track outstanding payments to vendors
+- [Materials Overview](../../02-factory/materials/overview.md) — View and manage available materials
