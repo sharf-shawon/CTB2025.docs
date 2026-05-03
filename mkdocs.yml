@@ -196,7 +196,8 @@ nav:
           - Create Payout: user-guide/04-employee/payouts/create-payout.md
       - Tasks:
           - Overview: user-guide/04-employee/tasks/overview.md
-          - Create/Edit Task: user-guide/04-employee/tasks/manage-task.md
+          - Create Task: user-guide/04-employee/tasks/create-task.md
+          - Manage Task: user-guide/04-employee/tasks/manage-task.md
       - Purchase Balance:
           - Overview: user-guide/04-employee/purchase-balance/overview.md
           - Add Purchase Balance: user-guide/04-employee/purchase-balance/add-purchase-balance.md
