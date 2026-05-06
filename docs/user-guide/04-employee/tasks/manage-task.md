@@ -1,49 +1,55 @@
-# Create or Edit Task
+# Manage Task
 
-Use this page to create a new employee task or update an existing one.
+Use this page to create a new task or update an existing one. Tasks let you assign work to employees with priority levels, due dates, and progress tracking.
 
 ## Summary
 
-The task form lets managers assign work, set a due date, and keep notes tied to employee work items. Use it when you need to track day-to-day work rather than one-time administrative actions.
+Use this page to create work items and keep track of employee assignments and task completion. Updates here affect task visibility and help managers monitor workload distribution and progress.
 
 ## When to use this page
 
-- When a new task needs to be assigned.
-- When you want to update the title, employee, or due date on an existing task.
-- When you need to add notes or adjust the task status.
+- Assigning work to an employee
+- Changing task status (To Do, In Progress, Completed)
+- Updating task priority or due date
+- Adding or modifying task details and notes
+- Adjusting task assignments when personnel changes
 
 ## How to access this page
 
-From the sidebar, go to **Employee -> Tasks** and choose add or edit on a task record.
+1. Go to **Employee → Tasks** from the sidebar
+1. On the Tasks List page, click **Task Name** to edit existing task
 
-## Step-by-step instructions
+![Task list page](edit-task-list-page.png)
 
-1. Open **Tasks Overview** from the sidebar.
-1. Click the add action to create a task or open an existing task to edit it.
-1. Enter the task title and assign the employee.
-1. Set the due date, priority, and status.
-1. Add notes if the task needs more context.
-1. Save the task record.
+1. The system opens the **Task Form**
 
-## Field reference
+## Editing an Existing Task
 
-- **Task title** - The main label for the work item.
-- **Employee** - The person responsible for the task.
-- **Due date** - The target completion date.
-- **Priority** - The task urgency level.
-- **Status** - The current progress state.
-- **Notes** - Internal instructions or extra context.
+![Edit Task Page](edit-task-page.png)
 
-<!-- TODO: Add a task form screenshot once the live create/edit page is captured. -->
+All fields on this page can be updated at any time:
+
+- **Task Name and Description** — Update to clarify or add details
+- **Assigned To** — Reassign to another employee if needed
+- **Status** — Progress the task through its workflow
+- **Priority** — Adjust based on business needs
+
+______________________________________________________________________
 
 ## Tips and common issues
 
-- Use a clear title that explains the task in one sentence.
-- Add a due date so tasks do not remain open without follow-up.
-- Update the status when the task changes from open to in progress or completed.
+- Use a clear task name that can be understood in one sentence
+- Always assign a task to an active employee
+- Update status regularly to keep management informed of progress
+- Set a due date to prevent tasks from remaining open indefinitely
+- Use the Description field for instructions that the employee needs to complete the work
+- Avoid assigning too many high-priority tasks to one employee
+
+______________________________________________________________________
 
 ## Related pages
 
-- [Tasks Overview](overview.md)
-- [Attendance Overview](../attendance/overview.md)
-- [Salary Overview](../salary/overview.md)
+- **Tasks Overview** — View all tasks and their status
+- **Attendance Overview** — Track employee attendance records
+- **Salary Overview** — Manage employee payroll
+- **Employee Management** — Update employee information
