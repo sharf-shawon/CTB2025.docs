@@ -24,10 +24,21 @@ jobs:
         uses: astral-sh/setup-uv@v3
 
       - name: Install dependencies
-        run: uv sync
+        # --extra dev installs ruff and any other dev-only tools into the venv
+        run: uv sync --extra dev
 
       # -----------------------------------------------------------------------
-      # Linters in CHECK-ONLY mode (never mutate files in CI)
+      # Pure validator hooks (never mutate files) via pre-commit
+      # SKIP= prevents the mutating hooks from running at all in CI
+      # -----------------------------------------------------------------------
+      - name: Pre-commit validators
+        env:
+          # Skip every hook that auto-fixes/reformats files
+          SKIP: ruff,ruff-format,mdformat
+        run: uv run pre-commit run --all-files
+
+      # -----------------------------------------------------------------------
+      # Ruff — check-only (no --fix), report diff
       # -----------------------------------------------------------------------
       - name: Ruff lint check
         run: uv run ruff check --diff .
@@ -35,26 +46,22 @@ jobs:
       - name: Ruff format check
         run: uv run ruff format --check .
 
-      - name: YAML validity check
-        run: uv run pre-commit run check-yaml --all-files
-
-      - name: Merge conflict check
-        run: uv run pre-commit run check-merge-conflict --all-files
-
+      # -----------------------------------------------------------------------
+      # Markdown format check — mdformat --check never writes files
+      # -----------------------------------------------------------------------
       - name: Markdown format check
-        # mdformat --check exits 1 if any file would be reformatted (no writes)
         run: |
-          uv run mdformat --check docs/ \
+          uv run mdformat --check \
             --extensions gfm \
             --extensions frontmatter \
-            || (
+            docs/ || (
               echo ''
-              echo '::error::mdformat found formatting issues. Run: uv run mdformat docs/'
+              echo '::error::mdformat found formatting issues. Fix locally with: uv run mdformat docs/'
               exit 1
             )
 
       # -----------------------------------------------------------------------
-      # Prohibited phrases (warnings only — never block merge)
+      # Prohibited phrases (annotations only — never blocks merge)
       # -----------------------------------------------------------------------
       - name: Check prohibited phrases
         run: |
@@ -72,37 +79,34 @@ jobs:
           echo "Prohibited phrase scan complete."
 
       # -----------------------------------------------------------------------
-      # Nav alignment (missing nav entries = hard error; orphan files = warning)
+      # Nav alignment
+      # Missing nav entries (no .md file) = hard error
+      # Orphan .md files (not in nav) = warning only
       # -----------------------------------------------------------------------
       - name: Nav alignment check
         run: |
           echo "Checking nav alignment..."
-          # Run audit; capture output and exit code separately
           set +e
           OUTPUT=$(uv run python main.py nav-audit 2>&1)
-          EXIT_CODE=$?
           set -e
           echo "$OUTPUT"
 
-          # Orphan files (in docs/ but not in nav) are warnings only
           if echo "$OUTPUT" | grep -q 'Files not referenced in nav'; then
-            echo '::warning::Some .md files are not referenced in mkdocs.yml nav. Consider adding or archiving them.'
+            echo '::warning::Some .md files are not in mkdocs.yml nav. Consider adding or archiving them.'
           fi
 
-          # Missing files (in nav but no .md file) are hard errors
           if echo "$OUTPUT" | grep -q 'Nav entries with no matching file'; then
-            echo '::error::Nav entries exist in mkdocs.yml with no matching .md file. Run: uv run python main.py nav-sync'
+            echo '::error::Nav entry exists in mkdocs.yml with no matching .md file. Run: uv run python main.py nav-sync'
             exit 1
           fi
 
           echo "Nav alignment check passed."
 
       # -----------------------------------------------------------------------
-      # MkDocs strict build (hard gate)
+      # MkDocs strict build
       # -----------------------------------------------------------------------
       - name: MkDocs strict build
         env:
-          # Provide dummy values for !ENV tags so MkDocs does not abort on missing env vars
           GOOGLE_ANALYTICS_PROPERTY_ID: 'CI-PLACEHOLDER'
           DEVELOPER_NAME: 'CI'
           DEVELOPER_URL: 'https://example.com'
