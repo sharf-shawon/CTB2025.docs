@@ -1,0 +1,65 @@
+name: Docs Style Check
+
+on:
+  pull_request:
+    paths:
+      - 'docs/**/*.md'
+      - 'mkdocs.yml'
+      - '.github/STYLE_SPEC.md'
+
+jobs:
+  style-check:
+    name: Style & Build Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v3
+
+      - name: Install dependencies
+        run: uv sync
+
+      - name: Check prohibited phrases
+        run: |
+          echo "Checking for prohibited phrases..."
+          VIOLATIONS=0
+          PHRASES=("simply" "just " "easily" "straightforward" "seamlessly" \
+                   "leverage" "utilize" "navigate to" "it is worth noting" \
+                   "note that," "please " "it should be noted")
+          for phrase in "${PHRASES[@]}"; do
+            matches=$(grep -ril "$phrase" docs/user-guide/ --include="*.md" 2>/dev/null || true)
+            if [ -n "$matches" ]; then
+              echo "::warning::Prohibited phrase '$phrase' found in:"
+              echo "$matches" | while read f; do echo "  - $f"; done
+              VIOLATIONS=$((VIOLATIONS + 1))
+            fi
+          done
+          if [ "$VIOLATIONS" -gt 0 ]; then
+            echo "::warning::$VIOLATIONS prohibited phrase type(s) found. Run doc-standardizer on affected pages."
+          else
+            echo "No prohibited phrases found."
+          fi
+
+      - name: Nav alignment check
+        run: |
+          echo "Checking nav alignment..."
+          uv run python main.py nav-audit
+
+      - name: MkDocs strict build
+        run: |
+          echo "Running MkDocs strict build..."
+          uv run mkdocs build --strict
+
+      - name: Upload build artifact
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: docs-site
+          path: site/
+          retention-days: 3
