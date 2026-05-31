@@ -1,0 +1,27 @@
+schema: spec-driven
+
+context: |
+  Tech stack: MkDocs, Python, UV, Markdown.
+  This repository hosts the documentation for CTB 2025.
+  We follow a Research -> Strategy -> Execution lifecycle for all non-trivial changes.
+  Non-trivial changes are defined as:
+    - More than 3 files modified.
+    - Architectural decisions or new feature documentation.
+    - Changes involving infrastructure or automation scripts.
+  All such changes MUST use the OpenSpec CLI for proposal, design, and task tracking.
+  Documentation is written in Markdown and follows the guidelines in .github/DOCS_WRITER_GUIDE.md and STYLE_SPEC.md.
+
+rules:
+  specs:
+    - Each requirement MUST have at least one scenario.
+    - "Scenarios MUST use exactly 4 hashtags (#### Scenario: Name)."
+    - Requirements MUST use SHALL/MUST for normative statements.
+  proposal:
+    - Keep it concise (1-2 pages).
+    - Focus on "why", not "how".
+  design:
+    - Decisions MUST include rationale and alternatives.
+    - Risks MUST include a mitigation strategy.
+  tasks:
+    - Break tasks into session-sized chunks (max 2 hours).
+    - Use checkbox format for tracking.

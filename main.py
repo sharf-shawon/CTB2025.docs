@@ -5,6 +5,7 @@ Subcommands:
   nav-sync   Create stub .md files for any nav entry that has no matching file.
   nav-audit  List nav entries missing files + files missing nav entries (no changes made).
 """
+
 from __future__ import annotations
 
 import sys
@@ -37,7 +38,9 @@ class _PermissiveLoader(yaml.SafeLoader):
     pass
 
 
-def _ignore_unknown_tag(loader: yaml.SafeLoader, tag_suffix: str, node: yaml.Node) -> None:  # noqa: ARG001
+def _ignore_unknown_tag(
+    loader: yaml.SafeLoader, tag_suffix: str, node: yaml.Node
+) -> None:  # noqa: ARG001
     return None
 
 
