@@ -28,6 +28,32 @@ STUB_CONTENT = """# {title}
 """
 
 
+# ---------------------------------------------------------------------------
+# YAML loader that tolerates MkDocs custom tags such as !ENV
+# yaml.safe_load raises ConstructorError on unknown tags; this loader ignores
+# them and returns None so the nav structure is still fully parseable.
+# ---------------------------------------------------------------------------
+class _PermissiveLoader(yaml.SafeLoader):
+    pass
+
+
+def _ignore_unknown_tag(loader: yaml.SafeLoader, tag_suffix: str, node: yaml.Node) -> None:  # noqa: ARG001
+    return None
+
+
+_PermissiveLoader.add_multi_constructor("", _ignore_unknown_tag)
+
+
+def _load_nav_paths() -> list[str]:
+    """Load and return all nav paths from mkdocs.yml, tolerating custom tags."""
+    with open(MKDOCS_CONFIG) as f:
+        config = yaml.load(f, Loader=_PermissiveLoader)  # noqa: S506 — permissive by design
+    return _extract_nav_paths(config.get("nav", []))
+
+
+# ---------------------------------------------------------------------------
+# Nav path extraction
+# ---------------------------------------------------------------------------
 def _extract_nav_paths(nav: list, paths: list[str] | None = None) -> list[str]:
     """Recursively extract all .md file paths from a mkdocs nav structure."""
     if paths is None:
@@ -44,13 +70,9 @@ def _extract_nav_paths(nav: list, paths: list[str] | None = None) -> list[str]:
     return paths
 
 
-def _load_nav_paths() -> list[str]:
-    """Load and return all nav paths from mkdocs.yml."""
-    with open(MKDOCS_CONFIG) as f:
-        config = yaml.safe_load(f)
-    return _extract_nav_paths(config.get("nav", []))
-
-
+# ---------------------------------------------------------------------------
+# Commands
+# ---------------------------------------------------------------------------
 def cmd_nav_sync() -> int:
     """Create stub .md files for any nav entry that has no matching file."""
     nav_paths = _load_nav_paths()
@@ -105,7 +127,7 @@ COMMANDS = {
 
 def main() -> None:
     if len(sys.argv) < 2 or sys.argv[1] not in COMMANDS:
-        print(f"Usage: python main.py <command>")
+        print("Usage: python main.py <command>")
         print(f"Commands: {', '.join(COMMANDS)}")
         sys.exit(1)
     sys.exit(COMMANDS[sys.argv[1]]())
