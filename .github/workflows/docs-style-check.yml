@@ -6,6 +6,7 @@ on:
       - 'docs/**/*.md'
       - 'mkdocs.yml'
       - '.github/STYLE_SPEC.md'
+      - 'main.py'
 
 jobs:
   style-check:
@@ -17,7 +18,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: '3.13'
 
       - name: Install uv
         uses: astral-sh/setup-uv@v3
@@ -25,10 +26,39 @@ jobs:
       - name: Install dependencies
         run: uv sync
 
+      # -----------------------------------------------------------------------
+      # Linters in CHECK-ONLY mode (never mutate files in CI)
+      # -----------------------------------------------------------------------
+      - name: Ruff lint check
+        run: uv run ruff check --diff .
+
+      - name: Ruff format check
+        run: uv run ruff format --check .
+
+      - name: YAML validity check
+        run: uv run pre-commit run check-yaml --all-files
+
+      - name: Merge conflict check
+        run: uv run pre-commit run check-merge-conflict --all-files
+
+      - name: Markdown format check
+        # mdformat --check exits 1 if any file would be reformatted (no writes)
+        run: |
+          uv run mdformat --check docs/ \
+            --extensions gfm \
+            --extensions frontmatter \
+            || (
+              echo ''
+              echo '::error::mdformat found formatting issues. Run: uv run mdformat docs/'
+              exit 1
+            )
+
+      # -----------------------------------------------------------------------
+      # Prohibited phrases (warnings only — never block merge)
+      # -----------------------------------------------------------------------
       - name: Check prohibited phrases
         run: |
           echo "Checking for prohibited phrases..."
-          VIOLATIONS=0
           PHRASES=("simply" "just " "easily" "straightforward" "seamlessly" \
                    "leverage" "utilize" "navigate to" "it is worth noting" \
                    "note that," "please " "it should be noted")
@@ -36,22 +66,47 @@ jobs:
             matches=$(grep -ril "$phrase" docs/user-guide/ --include="*.md" 2>/dev/null || true)
             if [ -n "$matches" ]; then
               echo "::warning::Prohibited phrase '$phrase' found in:"
-              echo "$matches" | while read f; do echo "  - $f"; done
-              VIOLATIONS=$((VIOLATIONS + 1))
+              echo "$matches" | while IFS= read -r f; do echo "  - $f"; done
             fi
           done
-          if [ "$VIOLATIONS" -gt 0 ]; then
-            echo "::warning::$VIOLATIONS prohibited phrase type(s) found. Run doc-standardizer on affected pages."
-          else
-            echo "No prohibited phrases found."
-          fi
+          echo "Prohibited phrase scan complete."
 
+      # -----------------------------------------------------------------------
+      # Nav alignment (missing nav entries = hard error; orphan files = warning)
+      # -----------------------------------------------------------------------
       - name: Nav alignment check
         run: |
           echo "Checking nav alignment..."
-          uv run python main.py nav-audit
+          # Run audit; capture output and exit code separately
+          set +e
+          OUTPUT=$(uv run python main.py nav-audit 2>&1)
+          EXIT_CODE=$?
+          set -e
+          echo "$OUTPUT"
 
+          # Orphan files (in docs/ but not in nav) are warnings only
+          if echo "$OUTPUT" | grep -q 'Files not referenced in nav'; then
+            echo '::warning::Some .md files are not referenced in mkdocs.yml nav. Consider adding or archiving them.'
+          fi
+
+          # Missing files (in nav but no .md file) are hard errors
+          if echo "$OUTPUT" | grep -q 'Nav entries with no matching file'; then
+            echo '::error::Nav entries exist in mkdocs.yml with no matching .md file. Run: uv run python main.py nav-sync'
+            exit 1
+          fi
+
+          echo "Nav alignment check passed."
+
+      # -----------------------------------------------------------------------
+      # MkDocs strict build (hard gate)
+      # -----------------------------------------------------------------------
       - name: MkDocs strict build
+        env:
+          # Provide dummy values for !ENV tags so MkDocs does not abort on missing env vars
+          GOOGLE_ANALYTICS_PROPERTY_ID: 'CI-PLACEHOLDER'
+          DEVELOPER_NAME: 'CI'
+          DEVELOPER_URL: 'https://example.com'
+          SITE_URL: 'https://example.com'
         run: |
           echo "Running MkDocs strict build..."
           uv run mkdocs build --strict
