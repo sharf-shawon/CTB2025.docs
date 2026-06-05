@@ -1,0 +1,124 @@
+name: Docs Style Check
+
+on:
+  pull_request:
+    paths:
+      - 'docs/**/*.md'
+      - 'mkdocs.yml'
+      - '.github/STYLE_SPEC.md'
+      - 'main.py'
+
+jobs:
+  style-check:
+    name: Style & Build Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v3
+
+      - name: Install dependencies
+        # --extra dev installs ruff and any other dev-only tools into the venv
+        run: uv sync --extra dev
+
+      # -----------------------------------------------------------------------
+      # Pure validator hooks (never mutate files) via pre-commit
+      # SKIP= prevents the mutating hooks from running at all in CI
+      # -----------------------------------------------------------------------
+      - name: Pre-commit validators
+        env:
+          # Skip every hook that auto-fixes/reformats files
+          SKIP: ruff,ruff-format,mdformat
+        run: uv run pre-commit run --all-files
+
+      # -----------------------------------------------------------------------
+      # Ruff — check-only (no --fix), report diff
+      # -----------------------------------------------------------------------
+      - name: Ruff lint check
+        run: uv run ruff check --diff .
+
+      - name: Ruff format check
+        run: uv run ruff format --check .
+
+      # -----------------------------------------------------------------------
+      # Markdown format check — mdformat --check never writes files
+      # -----------------------------------------------------------------------
+      - name: Markdown format check
+        run: |
+          uv run mdformat --check \
+            --extensions gfm \
+            --extensions frontmatter \
+            docs/ || (
+              echo ''
+              echo '::error::mdformat found formatting issues. Fix locally with: uv run mdformat docs/'
+              exit 1
+            )
+
+      # -----------------------------------------------------------------------
+      # Prohibited phrases (annotations only — never blocks merge)
+      # -----------------------------------------------------------------------
+      - name: Check prohibited phrases
+        run: |
+          echo "Checking for prohibited phrases..."
+          PHRASES=("simply" "just " "easily" "straightforward" "seamlessly" \
+                   "leverage" "utilize" "navigate to" "it is worth noting" \
+                   "note that," "please " "it should be noted")
+          for phrase in "${PHRASES[@]}"; do
+            matches=$(grep -ril "$phrase" docs/user-guide/ --include="*.md" 2>/dev/null || true)
+            if [ -n "$matches" ]; then
+              echo "::warning::Prohibited phrase '$phrase' found in:"
+              echo "$matches" | while IFS= read -r f; do echo "  - $f"; done
+            fi
+          done
+          echo "Prohibited phrase scan complete."
+
+      # -----------------------------------------------------------------------
+      # Nav alignment
+      # Missing nav entries (no .md file) = hard error
+      # Orphan .md files (not in nav) = warning only
+      # -----------------------------------------------------------------------
+      - name: Nav alignment check
+        run: |
+          echo "Checking nav alignment..."
+          set +e
+          OUTPUT=$(uv run python main.py nav-audit 2>&1)
+          set -e
+          echo "$OUTPUT"
+
+          if echo "$OUTPUT" | grep -q 'Files not referenced in nav'; then
+            echo '::warning::Some .md files are not in mkdocs.yml nav. Consider adding or archiving them.'
+          fi
+
+          if echo "$OUTPUT" | grep -q 'Nav entries with no matching file'; then
+            echo '::error::Nav entry exists in mkdocs.yml with no matching .md file. Run: uv run python main.py nav-sync'
+            exit 1
+          fi
+
+          echo "Nav alignment check passed."
+
+      # -----------------------------------------------------------------------
+      # MkDocs strict build
+      # -----------------------------------------------------------------------
+      - name: MkDocs strict build
+        env:
+          GOOGLE_ANALYTICS_PROPERTY_ID: 'CI-PLACEHOLDER'
+          DEVELOPER_NAME: 'CI'
+          DEVELOPER_URL: 'https://example.com'
+          SITE_URL: 'https://example.com'
+        run: |
+          echo "Running MkDocs strict build..."
+          uv run mkdocs build --strict
+
+      - name: Upload build artifact
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: docs-site
+          path: site/
+          retention-days: 3

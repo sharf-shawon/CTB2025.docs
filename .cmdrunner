@@ -76,6 +76,61 @@
       "reuseTerminal": false,
       "alignment": "left",
       "priority": 70
+    },
+    {
+      "id": "nav-sync",
+      "label": "Nav Sync",
+      "command": "uv run python main.py nav-sync",
+      "icon": "file-add",
+      "tooltip": "Create stub .md files for any nav entry missing a file",
+      "cooldownMs": 1000,
+      "reuseTerminal": false,
+      "alignment": "left",
+      "priority": 65
+    },
+    {
+      "id": "nav-audit",
+      "label": "Nav Audit",
+      "command": "uv run python main.py nav-audit",
+      "icon": "search",
+      "tooltip": "Check for nav/file mismatches (read-only)",
+      "cooldownMs": 1000,
+      "reuseTerminal": false,
+      "alignment": "left",
+      "priority": 60
+    },
+    {
+      "id": "doc-write",
+      "label": "AI: Write Doc",
+      "command": "bash -c 'read -p \"File path (e.g. docs/user-guide/03-trade/banks/add-bank.md): \" fp && SPEC=$(cat .github/STYLE_SPEC.md) && KNOW=$(cat .github/knowledge/ctb-knowledge.md) && gemini -p \"$SPEC $KNOW\" \"Write a new page at $fp. Follow STYLE_SPEC section 3 template exactly. Output raw markdown only.\"'",
+      "icon": "pencil",
+      "tooltip": "Use Gemini to write a new documentation page (prompts for file path)",
+      "cooldownMs": 2000,
+      "reuseTerminal": true,
+      "alignment": "left",
+      "priority": 55
+    },
+    {
+      "id": "doc-standardize",
+      "label": "AI: Standardize",
+      "command": "bash -c 'read -p \"File to standardize: \" fp && SPEC=$(cat .github/STYLE_SPEC.md) && gemini -p \"$SPEC\" \"Rewrite to STYLE_SPEC v1. Preserve all facts. Insert STANDARDIZED comment on line 2. Output raw markdown only. $(cat $fp)\"'",
+      "icon": "wand",
+      "tooltip": "Use Gemini to standardize an existing doc page to STYLE_SPEC",
+      "cooldownMs": 2000,
+      "reuseTerminal": true,
+      "alignment": "left",
+      "priority": 50
+    },
+    {
+      "id": "doc-audit-module",
+      "label": "AI: Audit Module",
+      "command": "bash -c 'read -p \"Module folder (e.g. docs/user-guide/03-trade): \" mod && SPEC=$(cat .github/STYLE_SPEC.md) && KNOW=$(cat .github/knowledge/ctb-knowledge.md) && files-to-prompt $mod --extension md | gemini -m gemini-2.5-pro -p \"$SPEC $KNOW\" \"Audit all pages against STYLE_SPEC. Output P1-P4 backlog + agent dispatch table.\"'",
+      "icon": "checklist",
+      "tooltip": "Use Gemini 2.5 Pro to audit a documentation module folder",
+      "cooldownMs": 3000,
+      "reuseTerminal": true,
+      "alignment": "left",
+      "priority": 45
     }
   ]
 }

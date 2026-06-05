@@ -47,5 +47,19 @@
   "workbench.colorCustomizations": {
     "titleBar.activeBackground": "#0B1326",
     "titleBar.activeForeground": "#FFFFFF"
-  }
+  },
+  "github.copilot.chat.codeGeneration.instructions": [
+    {
+      "file": ".github/STYLE_SPEC.md"
+    },
+    {
+      "file": ".github/knowledge/ctb-knowledge.md"
+    },
+    {
+      "file": ".github/knowledge/copilot-learnings.md"
+    },
+    {
+      "file": ".github/prompts/ctb-docs.prompt.md"
+    }
+  ]
 }
