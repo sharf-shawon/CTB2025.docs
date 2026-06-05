@@ -16,13 +16,6 @@ The tasks overview gives managers a simple list of work items assigned to employ
 
 From the sidebar, go to **Employee -> Tasks**.
 
-## Step-by-step instructions
-
-1. Open **Tasks Overview** from the sidebar.
-1. Review the task list and current status.
-1. Open a task to see more detail.
-1. Create a new task when a new work item needs to be assigned.
-
 ## Field reference
 
 - **Task title** - The short name for the work item.
