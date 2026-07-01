@@ -1,50 +1,63 @@
 # SMS Notifications
 
-Use this page to configure SMS behavior and monitor message delivery activity in CTB Admin.
+Use this page to create and manage notification signals for SMS and email messaging. The page lets you define target models, compose message content, and add SMS-specific routing rules.
 
 ## Summary
 
-Use this page to keep customer and operational messaging reliable. Proper SMS setup helps ensure alerts, reminders, and transaction updates are sent on time.
+Use SMS Notifications to configure how CTB Admin sends alerts and reminders by SMS. Define the signal name, target model, message templates, and constraints so automated notifications trigger correctly.
 
 ## When to use this page
 
-- When SMS delivery is being enabled for the first time.
-- When provider credentials or sending rules change.
-- When you need to investigate failed or delayed SMS messages.
+- When creating a new SMS notification signal.
+- When updating the message content for a notification.
+- When changing the target model or recipient list.
+- When adding conditions or constraints for when a notification should fire.
 
 ## How to access this page
 
-From the left sidebar, go to **Settings and Admin -> SMS Notifications**.
+From the sidebar, go to **ALL Application → Email Signal → Signal**. Open the SMS notifications page and click the purple (+) icon add action to create a new signal.
 
-## Prerequisites
+______________________________________________________________________
 
-- You have access permission for SMS configuration.
-- Required SMS provider details are available.
+## Page overview
 
-## Step-by-step instructions
+![SMS Notification Settings](add-sms.png)
 
-1. Open **SMS Notifications**.
-1. Configure sender/provider settings as required by your organization.
-1. Save configuration changes.
-1. Trigger a test message using a safe internal number.
-1. Review delivery logs to confirm successful sending.
-1. Resolve any failed entries before enabling broad usage.
+This page is divided into sections for general signal setup, email/SMS message content, and advanced notification rules.
+
+______________________________________________________________________
 
 ## Field reference
 
-- **Provider/Sender configuration** - Details used to route SMS messages.
-- **Enable SMS** - Toggles message sending on or off.
-- **Test message action** - Sends a validation SMS to confirm setup.
-- **Delivery log** - History of sent, delivered, and failed messages.
+| Field name             | What to do           | Description                                                             |
+| ---------------------- | -------------------- | ----------------------------------------------------------------------- |
+| **Name**               | Enter a name         | Unique label for the notification signal                                |
+| **Description**        | Enter details        | Optional description of the signal's purpose                            |
+| **Model**              | Select a model       | The data model the signal monitors for changes                          |
+| **Active**             | Toggle on or off     | Enable or disable the notification signal                               |
+| **Subject**            | Enter a subject      | Subject line used for email or internal message identification          |
+| **From email**         | Enter sender address | The email address that appears as the sender when email is used         |
+| **Mailing list**       | Enter recipients     | Comma-separated list of emails or functions to receive the notification |
+| **Template**           | Enter template path  | Optional template path used for rendered email or SMS content           |
+| **Plain text content** | Enter text           | Message content that is sent as plain text                              |
+| **HTML content**       | Enter HTML           | Message content that is sent as HTML when email is used                 |
+| **Signal constraints** | Add constraint rows  | Conditions that control when the signal is dispatched                   |
+| **SMS Configuration**  | Add SMS settings     | SMS-specific sending rules and provider parameters                      |
+
+______________________________________________________________________
 
 ## Tips and common issues
 
-- Always send a test message after configuration changes.
-- Validate phone number format before troubleshooting provider errors.
-- Review failed log entries first when users report missing messages.
+- Use a clear signal **Name** so you can identify the notification later.
+- Keep the **Mailing list** current to avoid sending alerts to old addresses.
+- Test the signal after changing content or constraints.
+- Add only the necessary constraints to avoid blocking valid notifications.
+- If SMS messages are not sent, verify the SMS configuration and provider settings.
+
+______________________________________________________________________
 
 ## Related pages
 
-- [User Management](user-management.md)
-- [App Settings](app-settings.md)
-- [Audit Log](audit-log.md)
+- **[User Management](user-management.md)** — Manage users and roles who can configure notifications.
+- **[App Settings](app-settings.md)** — Configure global settings that may affect message delivery.
+- **[Audit Log](audit-log.md)** — Review changes and notification-related audit entries.
