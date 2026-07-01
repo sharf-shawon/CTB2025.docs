@@ -28,31 +28,41 @@ The system opens the **Create Invoice Page**.
 1. Add optional notes and set invoice visibility/status.
 1. Click the appropriate save action to create the invoice.
 
+## Prerequisites
+
+- A client must exist and have a balance limit configured in the **Client Add** page.
+- If an invoice exceeds the client's balance limit, only a superuser can approve it.
+
 ## Field reference
 
 - **Invoice Number** - Unique identifier used to track the invoice.
 - **Invoice Date** - Billing date used in reports and period summaries.
 - **Client** - Customer account receiving the invoice.
-- **Status** - Lifecycle state such as Draft, Sent, or Cancelled.
+- **Status** - Current state (Draft, Sent, or Cancelled); only a superuser can unlock Sent status if the invoice exceeds the client's balance limit.
 - **Payable** - Final amount due after all charges and discounts.
+- **Approve** - Button visible only to superusers when the invoice amount exceeds the client's balance limit; superuser approval allows normal users to change the status to Sent.
 
 ______________________________________________________________________
 
 ## General Information
 
-![General Tab](create-invoice-general-tab.png)
+![General Tab](create-invoice)
 
 Fill in the following fields on the General tab:
 
-| Step | Field          | What to Do              | Description                                  |
-| ---- | -------------- | ----------------------- | -------------------------------------------- |
-| 1    | Invoice Number | Auto-generated or enter | Unique identifier for this invoice           |
-| 2    | Invoice Date   | Select date             | Date the invoice is issued                   |
-| 3    | Client         | Select client           | The customer receiving the invoice           |
-| 4    | Status         | Select status           | Current state (Draft, Sent, Cancelled, etc.) |
+| Step | Field          | What to Do              | Description                                                                            |
+| ---- | -------------- | ----------------------- | -------------------------------------------------------------------------------------- |
+| 1    | Invoice Number | Auto-generated or enter | Unique identifier for this invoice                                                     |
+| 2    | Invoice Date   | Select date             | Date the invoice is issued                                                             |
+| 3    | Client         | Select client           | The customer receiving the invoice                                                     |
+| 3    | Salesperson    | Select The Salesmsn     | The employee responsible for this sale. Commissions will be attributed to this person. |
+| 4    | Status         | Select status           | Current state (Draft, Sent, Cancelled, etc.)                                           |
 
-!!! warning "Required Fields"
-Fields marked with a **red star (\*)** are mandatory.
+!!! warning "Balance Limit Check"
+If the invoice amount exceeds the client's balance limit set on the **Client Add** page, the invoice status is locked to **Draft**. Only a superuser can click **Approve** to unlock the status, allowing normal users to change it to **Sent**.
+
+!!! note "Approve Button (Superuser Only)"
+The **Approve** button appears only if the invoice amount exceeds the client's balance limit. Only superusers can click this button. After approval, the invoice status can be changed to **Sent** by any user.
 
 ______________________________________________________________________
 
@@ -121,13 +131,16 @@ The invoice is now ready to be sent to the client or processed for payment.
 
 ______________________________________________________________________
 
-!!! Tips and Common Issues
+!!! tip "Tips and Common Issues"
 
-- **Client is required** — You must select a client before saving <br>
-- **Items add to Subtotal** — The invoice calculates Subtotal automatically when you add items <br>
-- **Discount reduces Payable** — Enter a discount to reduce the final amount due <br>
-- **Status controls visibility** — Use Status to mark invoices as Draft, Sent,Cancelled, etc. <br>
-- **Date affects reporting** — Invoice Date determines which reporting period the invoice appears in <br>
+- **Client is required** — You must select a client before saving
+- **Items add to Subtotal** — The invoice calculates Subtotal automatically when you add items
+- **Discount reduces Payable** — Enter a discount to reduce the final amount due
+- **Status controls visibility** — Use Status to mark invoices as Draft, Sent, or Cancelled
+- **Date affects reporting** — Invoice Date determines which reporting period the invoice appears in
+- **Invoice exceeds balance limit** — If the invoice amount exceeds the client's balance limit, the status remains locked to **Draft** until a superuser clicks **Approve**
+- **Superuser approval required** — Only superusers can approve invoices that exceed a client's balance limit; after approval, normal users can change the status to **Sent**
+- **No approval = no send** — Without superuser approval, invoices exceeding the balance limit cannot be sent to the client
 
 ______________________________________________________________________
 
