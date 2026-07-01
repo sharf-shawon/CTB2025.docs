@@ -4,7 +4,7 @@ Use this page to record a payment received from a client or sent to a vendor. Pa
 
 ## Summary
 
-Use this page to capture incoming and outgoing payments with references, dates, and optional check linkage. Accurate payment entries keep balances and reconciliation reports reliable.
+Use this page to capture incoming and outgoing payments with references, dates, optional check linkage, and approval status. Accurate payment entries keep balances and reconciliation reports reliable.
 
 ## When to use this page
 
@@ -20,40 +20,38 @@ From the sidebar, go to **Trade → Payments**. On the Payments List page, click
 
 The system opens the **Add Payment Page**.
 
-## Step-by-step instructions
-
-1. Open **Trade -> Payments** and click the add icon.
-1. Enter core payment details in **Payment Information**.
-1. Select client or vendor and optionally link a check.
-1. Add notes for reconciliation or internal context.
-1. Click the appropriate save action to create the payment.
-
 ## Field reference
 
 - **Status** - Payment lifecycle state, such as Pending or Completed.
+- **Is Approved** - Toggle to mark the payment as verified and ready for processing.
 - **Type** - Direction of payment: Receive or Send.
 - **Reference** - External reference number used for tracing transactions.
+- **Date** - Date the payment was made or received.
 - **Amount** - Payment value recorded in system currency.
+- **Discount** - Any discount or adjustment applied to the payment.
 - **Check** - Optional check linkage that affects both party and check balances.
+- **Collected By** - Employee who collected the payment, used for commission calculation.
 - **Client/Vendor** - Counterparty associated with the payment record.
 
 ______________________________________________________________________
 
 ## Payment Information
 
-![Payment Information Section](add-payment.png)
+![Payment Information Section](add-payment2.0.png)
 
 Fill in the following fields:
 
-| Step | Field     | What to Do      | Description                                      |
-| ---- | --------- | --------------- | ------------------------------------------------ |
-| 1    | SKU       | Auto-generated  | Unique identifier for the payment (read-only)    |
-| 2    | Status    | Select status   | Current payment state (Pending, Completed, etc.) |
-| 3    | Type      | Select type     | Receive (from client) or Send (to vendor)        |
-| 4    | Reference | Enter reference | Reference number or transaction ID               |
-| 5    | Date      | Select date     | Date the payment was made or received            |
-| 6    | Amount    | Enter amount    | Total payment amount in the default currency     |
-| 7    | Discount  | Enter discount  | Any discount or adjustment applied (optional)    |
+| Step | Field        | What to Do       | Description                                                               |
+| ---- | ------------ | ---------------- | ------------------------------------------------------------------------- |
+| 1    | SKU          | Auto-generated   | Unique identifier for the payment (read-only)                             |
+| 2    | Status       | Select status    | Current payment state (Pending, Completed, etc.)                          |
+| 3    | Type         | Select type      | Receive (from client) or Send (to vendor)                                 |
+| 4    | Reference    | Enter reference  | Reference number or transaction ID                                        |
+| 5    | Date         | Select date      | Date the payment was made or received                                     |
+| 6    | Amount       | Enter amount     | Total payment amount in the default currency                              |
+| 7    | Discount     | Enter discount   | Any discount or adjustment applied (optional)                             |
+| 8    | Is Approved  | Toggle on or off | Mark the payment as approved after verification                           |
+| 9    | Collected By | Select employee  | Choose the employee who collected the payment for commission calculations |
 
 !!! warning "Required Fields"
 Fields marked with a **red star (\*)** are mandatory.
@@ -62,10 +60,11 @@ ______________________________________________________________________
 
 ## Check and Client Selection
 
-| Step | Field  | What to Do           | Description                                                                                    |
-| ---- | ------ | -------------------- | ---------------------------------------------------------------------------------------------- |
-| 1    | Check  | Click to select      | Opens a dropdown of all available checks (optional). Selecting one links the payment to check. |
-| 2    | Client | Select client/vendor | The party involved in the payment (client or vendor)                                           |
+| Step | Field        | What to Do           | Description                                                                                    |
+| ---- | ------------ | -------------------- | ---------------------------------------------------------------------------------------------- |
+| 1    | Check        | Click to select      | Opens a dropdown of all available checks (optional). Selecting one links the payment to check. |
+| 3    | Collected By | Select employee      | The employee who collected the payment for commission calculations                             |
+| 4    | Client       | Select client/vendor | The party involved in the payment (client or vendor)                                           |
 
 !!! note
 When you select a **Check**, the payment amount will be deducted from both the client/vendor balance AND the check balance. If you leave the **Check** field empty, the payment amount will reduce only the client/vendor balance.
@@ -108,6 +107,7 @@ ______________________________________________________________________
 - **Reference tracking** — Enter a meaningful reference (check number, transaction ID, or invoice number) for easy reconciliation <br>
 - **Dates for reconciliation** — Always set the Date field to match the actual payment date to ensure accurate bank reconciliation <br>
 - **Discount field** — Use only for actual discounts or adjustments, not for separate transactions <br>
+- **Collected By** — Select the employee who collected the payment so commission calculations can be generated correctly <br>
 
 ______________________________________________________________________
 
