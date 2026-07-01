@@ -4,45 +4,56 @@ Use this page to enter attendance manually when records are not coming from an a
 
 ## Summary
 
-Manual attendance entry lets you correct missed records or add attendance for staff who were not captured by another system. Use it carefully, because the values here can affect payroll and reporting.
+Record Attendance lets you capture a staff member’s work day when automatic attendance is unavailable or needs correction. Enter time details, salary type, and minutes worked so payroll and reporting stay accurate.
 
 ## When to use this page
 
-- When an employee forgot to clock in or out.
-- When you need to correct an attendance record.
-- When attendance must be entered for a manual payroll process.
+- When an employee missed automatic time capture.
+- When you need to correct a saved attendance entry.
+- When attendance must be recorded manually for payroll.
+- When you need to enter overtime details for hourly staff.
 
 ## How to access this page
 
-From the sidebar, go to **Employee -> Attendance** and open the add or record attendance page.
+From the sidebar, go to **Employee → Attendance**. On the Attendances page, click the **purple (+) icon** or **Add Attendance**.
 
-## Step-by-step instructions
+The system opens the **Record Attendance** page.
 
-1. Open **Attendance Overview** from the sidebar.
-1. Click the add action to start a new attendance entry.
-1. Select the employee and date.
-1. Enter the attendance status or time details required by your process.
-1. Add a note if the entry is a correction.
-1. Click **Save** to store the record.
+______________________________________________________________________
+
+![Record Attendance Form](add-attendance.png)
 
 ## Field reference
 
-- **Employee** - The staff member whose attendance is being recorded.
-- **Date** - The day the attendance applies to.
-- **Status** - The attendance result, such as present, absent, or late.
-- **Time in / Time out** - The working times if your attendance form uses time-based entry.
-- **Note** - A short reason for manual edits or corrections.
+| Field name           | What to do                 | Description                                                     |
+| -------------------- | -------------------------- | --------------------------------------------------------------- |
+| **SKU**              | Review the record ID       | System-generated identifier for the attendance record           |
+| **Employee**         | Select an employee         | The staff member who is present or absent for this record       |
+| **Date**             | Choose the attendance date | The day the attendance entry applies to                         |
+| **Check-in Time**    | Enter the start time       | Start time for the work day                                     |
+| **Check-out Time**   | Enter the end time         | End time for the work day, if available                         |
+| **Salary Type**      | Select the pay structure   | The salary model used for this attendance entry, such as Hourly |
+| **Salary Rate**      | Enter the rate             | The rate used to calculate pay for the attendance period        |
+| **Work Minutes**     | Enter worked minutes       | Total minutes worked during the normal shift                    |
+| **Overtime Minutes** | Enter overtime minutes     | Additional minutes worked beyond the normal work period         |
 
-<!-- TODO: Add a record-attendance screenshot once the live form is captured. -->
+______________________________________________________________________
 
-## Tips and common issues
+!!! Tips and common issues
 
-- Double-check the employee before saving, because attendance affects payroll calculations.
-- Add a note whenever you correct a previous record so the reason is clear later.
-- If your business uses a different attendance source, follow that process first and use manual entry only for exceptions.
+```
+- **Required fields** — Employee, Date, Check-in Time, Salary Type, Salary Rate, and Overtime Minutes are required when marked with a red star.
+- **Check-out time** — Add it when known to ensure proper work minute calculations.
+- **Salary type matters** — Use the correct salary type for hourly staff to calculate wages accurately.
+- **Overtime entry** — Only enter overtime minutes for actual overtime work.
+- **Use manual entry for exceptions** — Prefer automatic attendance first, and use this form only for missing or corrected records.
+```
+
+______________________________________________________________________
 
 ## Related pages
 
-- [Attendance Overview](overview.md)
-- [Generate Salary](../salary/generate-salary.md)
-- [Salary Detail](../salary/salary-detail.md)
+- **[Attendance Overview](overview.md)** — Review and search attendance records.
+- **[Generate Salary](../salary/generate-salary.md)** — Create payroll using attendance and salary data.
+- **[Salary Overview](../salary/overview.md)** — View salary records and payment status.
+- **[Employees Overview](../employees/overview.md)** — Manage employee details used in attendance records.
