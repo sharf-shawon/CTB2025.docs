@@ -22,35 +22,29 @@ From the left sidebar menu, go to **Audit Log**. It appears as the last item in 
 - You have permission to view audit records.
 - Users have already performed actions in the system, so logs exist to review.
 
-## Step-by-step instructions
-
-1. Open **Audit Log** from the left sidebar.
-1. Review the most recent entries first to understand current activity.
-1. Identify the key details for each row: who performed the action, what object was affected, and when it occurred.
-1. Use available search or filter controls on the page to narrow records by user, record type, or date range.
-1. Open a log entry if details are available, then compare old and new values to confirm exactly what changed.
-1. Cross-check the affected record in its original module (for example Clients, Invoices, or Employees) if follow-up is needed.
-1. Record the relevant log details before escalating to management or operations.
-
 ## Field reference
 
-- **User** - The account that performed the action.
-- **Action** - The type of operation, such as add, change, or delete.
-- **Object** - The record or entity that was affected.
-- **Module/App** - The area of CTB Admin where the change happened.
-- **Timestamp** - Date and time when the action was saved.
-- **Change Details** - Before/after values or a summary of the edited fields.
-- **IP/Source (if available)** - Request origin information useful for security checks.
+| Field name                   | What to do                                   | Description                                                    |
+| ---------------------------- | -------------------------------------------- | -------------------------------------------------------------- |
+| **User**                     | Review the account that performed the action | Shows the user or account responsible for the change           |
+| **Action**                   | Check the operation type                     | Indicates whether the record was added, changed, or deleted    |
+| **Object**                   | Identify the affected record                 | Shows the specific record or entity that was changed           |
+| **Module/App**               | Confirm the area of the system involved      | Indicates which part of CTB Admin the change happened in       |
+| **Timestamp**                | Check when the event was recorded            | Shows the date and time the action was saved                   |
+| **Change Details**           | Review what changed                          | Provides before/after values or a summary of the edited fields |
+| **IP/Source (if available)** | Use for security review if needed            | Shows the request origin information when it is available      |
 
 This page reads audit trail data for admin activity. Use it as the system source when checking history related to business records such as clients, invoices, payments, checks, and employee entries.
 
-## Tips and common issues
+!!! Tips and common issues
 
+```
 - Check system date and time settings if log times look inconsistent.
 - Filter by a short date range first when there are many records.
 - Use both **User** and **Object** together to find the correct event faster.
 - If no entries appear, confirm that the action was actually saved and that your account has viewing permission.
 - Export or screenshot important entries during incident review so your team has a fixed reference.
+```
 
 ## Related pages
 
