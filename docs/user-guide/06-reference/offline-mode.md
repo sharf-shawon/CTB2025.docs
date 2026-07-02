@@ -11,6 +11,8 @@ If you open a page for the first time while offline, the service worker shows a 
 - If a page is already cached, you can open it again even when the network is unavailable.
 - If a page is not yet cached, the site falls back to a dedicated offline shell first, then to this page when available.
 
+![Offline mode fallback page](offline-mode-photo.png)
+
 ## What to do when you are offline
 
 1. Refresh the page if you think the connection just recovered.
@@ -23,13 +25,13 @@ If you open a page for the first time while offline, the service worker shows a 
 - The first visit to a page may still need a working connection.
 - Some images and assets may take longer to appear after a reconnect.
 
-## Tips and common issues
+!!! Tips and common issues
 
+```
 - Refresh once after reconnecting instead of repeatedly reloading the page.
 - If an image or page looks stale, clear the browser cache and try again.
 - Tell users to revisit the site while online after a deployment so the cache can update.
-
-<!-- TODO: Add an offline fallback screenshot if the site capture is available. -->
+```
 
 ## Related pages
 
