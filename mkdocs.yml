@@ -121,6 +121,16 @@ nav:
           - Add Vendor: user-guide/01-business/vendors/add-vendor.md
           - Edit Vendor: user-guide/01-business/vendors/edit-vendor.md
           - Vendor Detail: user-guide/01-business/vendors/vendor-detail.md
+
+  - Commission and Campaigns:
+      - Module Overview: user-guide/10-commission-and-campaigns/README.md
+      - Commission Campaigns: user-guide/10-commission-and-campaigns/commission-campaigns.md
+      - Employee Analytics: user-guide/10-commission-and-campaigns/employee-analytics.md
+      - Manager Analytics: user-guide/10-commission-and-campaigns/manager-analytics.md
+      - Payment History: user-guide/10-commission-and-campaigns/payment-history.md
+      - Client Bonus Campaigns: user-guide/10-commission-and-campaigns/client-bonus-campaigns.md
+      - Client Bonus Analytics: user-guide/10-commission-and-campaigns/client-bonus-analytics.md
+
   - Trade:
       - Module Overview: user-guide/03-trade/README.md
       - Invoices:
@@ -150,6 +160,21 @@ nav:
           - Overview: user-guide/03-trade/banks/overview.md
           - Add Bank: user-guide/03-trade/banks/add-bank.md
           - Bank Detail: user-guide/03-trade/banks/bank-detail.md
+      - Reports:
+          - Module Overview: user-guide/07-reports/README.md
+          - Summary Report: user-guide/07-reports/summary-report.md
+          - Profit Report: user-guide/07-reports/profit-report.md
+          - Invoice Report: user-guide/07-reports/invoice-report.md
+          - Voucher Report: user-guide/07-reports/voucher-report.md
+          - Executive Summary: user-guide/07-reports/executive-summary.md
+          - Attendance Report: user-guide/07-reports/attendance-report.md
+          - Product Return Report: user-guide/07-reports/product-return-report.md
+
+  - Return Management:
+      - Module Overview: user-guide/09-return-management/README.md
+      - Material Returns: user-guide/09-return-management/material-returns.md
+      - Product Returns: user-guide/09-return-management/product-returns.md
+
   - Factory:
       - Module Overview: user-guide/02-factory/README.md
       - Categories:
