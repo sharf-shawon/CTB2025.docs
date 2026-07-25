@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CTB Admin Documentation is offline</title>
+  <script>
+    (function () {
+      var scheme = null;
+      var storageKeys = Object.keys(window.localStorage || {}).filter(function (key) {
+        return key.endsWith('.__palette');
+      });
+
+      for (var i = 0; i < storageKeys.length; i += 1) {
+        try {
+          var item = JSON.parse(window.localStorage.getItem(storageKeys[i]));
+
+          if (item && item.color && item.color.scheme) {
+            scheme = item.color.scheme;
+            break;
+          }
+        } catch (error) {
+          continue;
+        }
+      }
+
+      if (!scheme && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        scheme = 'slate';
+      }
+
+      if (!scheme) {
+        scheme = 'default';
+      }
+
+      document.documentElement.setAttribute('data-theme', scheme === 'slate' ? 'dark' : 'light');
+    }());
+  </script>
+  <link rel="stylesheet" href="stylesheets/ctb-theme.css">
+</head>
+<body class="offline-shell">
+  <main class="offline-shell__card">
+    <p class="offline-shell__eyebrow">Offline fallback shell</p>
+    <h1 class="offline-shell__title">You are offline</h1>
+    <p class="offline-shell__text">
+      This page is a lightweight shell served by the service worker when the requested
+      page has not been cached yet. If you already visited the page before, the site will
+      try to show the cached copy first.
+    </p>
+    <p class="offline-shell__text">
+      Reconnect to the network and refresh this page to load the latest documentation.
+    </p>
+    <div class="offline-shell__actions">
+      <button class="offline-shell__button" type="button" onclick="window.location.reload()">Try again</button>
+      <a class="offline-shell__link" href="/">Go to home</a>
+    </div>
+    <p class="offline-shell__status"><strong>Tip:</strong> Once a page has been opened online, it can be served again from your browser cache.</p>
+  </main>
+</body>
+</html>
