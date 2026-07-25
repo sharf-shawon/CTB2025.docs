@@ -72,8 +72,7 @@ Open **Trade → Invoices → Product Return Report** in the left sidebar under 
 
 !!! Tips and common issues
 
-```
-- If totals do not match accounting records, check whether the return has been posted or remains in draft
-- Returns against cancelled or deleted invoices may not apply automatically to client balances; verify invoice status first
-- Use narrow date ranges for faster loading on large datasets
-```
+    - If totals do not match accounting records, check whether the return has been posted or remains in draft
+    - Returns against cancelled or deleted invoices may not apply automatically to client balances; verify invoice status first
+    - Use narrow date ranges for faster loading on large datasets
+    
