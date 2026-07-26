@@ -1949,6 +1949,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#verification-definition-of-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification &amp; definition of done
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#field-reference" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1960,10 +1971,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#general-information" class="md-nav__link">
+  <a href="#exception-handling-error-recovery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        General information
+        Exception handling &amp; error recovery
       
     </span>
   </a>
@@ -1971,43 +1982,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#payment-details" class="md-nav__link">
+  <a href="#related-workflows-next-steps" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Payment details
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#add-items" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Add items
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#notes-and-status" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Notes and status
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#saving-the-invoice" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Saving the Invoice
+        Related workflows &amp; next steps
       
     </span>
   </a>
@@ -5594,6 +5572,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#verification-definition-of-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification &amp; definition of done
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#field-reference" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5605,10 +5594,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#general-information" class="md-nav__link">
+  <a href="#exception-handling-error-recovery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        General information
+        Exception handling &amp; error recovery
       
     </span>
   </a>
@@ -5616,43 +5605,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#payment-details" class="md-nav__link">
+  <a href="#related-workflows-next-steps" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Payment details
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#add-items" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Add items
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#notes-and-status" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Notes and status
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#saving-the-invoice" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Saving the Invoice
+        Related workflows &amp; next steps
       
     </span>
   </a>
@@ -5713,253 +5669,194 @@
 
 
 <h1 id="create-invoice">Create Invoice<a class="headerlink" href="#create-invoice" title="Permanent link">¶</a></h1>
-<p>Use this page to create a standard invoice for a client. An invoice records the sale of products or services and tracks payment. Invoices are used to request payment, manage accounts receivable, and generate business reports.</p>
+<!-- metadata: owner: trade_team, last_updated: 2026-07-26, git_ref: main, staging_verified: true -->
+
 <h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
-<p>Use this page to create client invoices with items, charges, and totals in one workflow. A correctly prepared invoice improves payment tracking and reporting accuracy.</p>
+<p>Use this page to create client invoices with line items, applicable taxes, shipping charges, and total calculations in one unified workflow. A correctly prepared invoice records sales transactions, manages accounts receivable, and ensures accurate financial reporting.</p>
 <hr>
 <h2 id="when-to-use-this-page">When to use this page<a class="headerlink" href="#when-to-use-this-page" title="Permanent link">¶</a></h2>
 <ul>
-<li>Selling CTB's own products to clients</li>
-<li>Recording sales of inventory from your company's stock</li>
-<li>Creating an invoice for direct product sales</li>
-<li>Issuing payment request for goods delivered to a client</li>
+<li>Selling CTB garment or bag products directly to registered client accounts</li>
+<li>Issuing billing documentation for completed production orders or stock shipments</li>
+<li>Creating commercial tender invoices or quotations for client approval</li>
+<li>Recording direct sales transactions to track sales commissions and accounts receivable</li>
 </ul>
 <hr>
 <h2 id="how-to-access-this-page">How to access this page<a class="headerlink" href="#how-to-access-this-page" title="Permanent link">¶</a></h2>
-<p>From the sidebar, go to <strong>Trade → Invoices</strong>. On the Invoices List page, click the <strong>purple (+) icon</strong> in the top-right corner.</p>
-<p>The system opens the <strong>Create Invoice Page</strong>.</p>
+<p>From the sidebar, go to <strong>Trade → Invoices</strong> (<code>/en/admin/Trade/invoice/</code>). On the Invoices List page, click the <strong>purple (+) icon</strong> in the top-right corner.</p>
 <hr>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">¶</a></h2>
 <ul>
-<li>A client must exist and have a balance limit configured in the <strong>Client Add</strong> page.</li>
-<li>If an invoice exceeds the client's balance limit, only a superuser can approve it.</li>
+<li><strong>Active Client</strong>: The target client account must exist in <strong>Business → Clients</strong> with valid contact information.</li>
+<li><strong>Client Balance Limit</strong>: The client account should have an assigned balance limit. If an invoice exceeds this limit, the system locks its status to <code>Draft</code> until approved.</li>
+<li><strong>Required User Permissions</strong>:<ul>
+<li><code>Trade | Invoice | Can add Invoice</code> (<code>trade.add_invoice</code>)</li>
+<li><code>Trade | Invoice | Can view invoice reports and analytics</code> (<code>trade.view_invoice_reports</code>) for historical reporting</li>
+<li><strong>Superuser Privilege</strong>: Required to click <strong>Approve</strong> on invoices exceeding a client's credit balance limit.</li>
+</ul>
+</li>
 </ul>
 <hr>
 <h2 id="step-by-step-instructions">Step-by-step instructions<a class="headerlink" href="#step-by-step-instructions" title="Permanent link">¶</a></h2>
 <ol>
-<li>Open <strong>Trade → Invoices</strong> and click the add icon.</li>
-<li>Fill the invoice header details in <strong>General Information</strong>.</li>
-<li>Add one or more line items in <strong>Add Items</strong>.</li>
-<li>Review taxes, shipping, discount, and payable amount in <strong>Payment Details</strong>.</li>
-<li>Add optional notes and set invoice visibility/status.</li>
-<li>Click the appropriate save action to create the invoice.</li>
+<li>Open <strong>Trade → Invoices</strong> and click <strong>(+) Add Invoice</strong>.</li>
+<li>In the <strong>General Information</strong> tab, select the target <strong>Client</strong> from the dropdown menu.</li>
+<li>Confirm or set the <strong>Invoice Date</strong> and assign a <strong>Salesperson</strong> for commission attribution.</li>
+<li>Set the initial <strong>Status</strong> (<code>Draft</code>, <code>Sent</code>, <code>Quotation</code>, etc.).</li>
+<li>Switch to the <strong>Items</strong> tab and select a <strong>Product</strong> from the line-item dropdown.</li>
+<li>Enter the <strong>Quantity</strong> and unit <strong>Selling Rate</strong>. The system calculates the item total automatically.</li>
+<li>Click <strong>Add another Item</strong> if billing multiple products on the same invoice.</li>
+<li>Enter optional order charges in <strong>Payment Details</strong>: <strong>Tax</strong>, <strong>VAT</strong>, <strong>Shipping</strong>, or <strong>Discount</strong>.</li>
+<li>Add internal notes or payment terms under <strong>Notes</strong> if required.</li>
+<li>Click <strong>Save</strong> to complete invoice generation or <strong>Save and continue editing</strong> to verify calculations.</li>
 </ol>
 <hr>
+<h2 id="verification-definition-of-done">Verification &amp; definition of done<a class="headerlink" href="#verification-definition-of-done" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>Database Record Created</strong>: The invoice displays a unique SKU/Invoice Number format (<code>INV-YYYYMMDD-XXXX</code>).</li>
+<li><strong>Status Verification</strong>: The invoice status pill reflects <code>Draft</code> or <code>Sent</code> on the list view.</li>
+<li><strong>Client Ledger Update</strong>: If saved as <code>Sent</code>, the payable amount is credited to the client's balance statement.</li>
+<li><strong>Commission Attribution</strong>: The invoice appears under the designated salesperson's sales summary report.</li>
+</ul>
+<hr>
 <h2 id="field-reference">Field reference<a class="headerlink" href="#field-reference" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Field Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Required</th>
+<th style="text-align: left;">Backend Validation / Constraints</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Invoice Number</strong></td>
+<td style="text-align: left;">Text</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Max 20 characters, unique constraint</td>
+<td style="text-align: left;">Unique tracking number for the invoice. Auto-generated if left blank.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Invoice Date</strong></td>
+<td style="text-align: left;">Date</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Valid date (<code>YYYY-MM-DD</code>)</td>
+<td style="text-align: left;">Billing date used in financial accounting and reporting periods.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Client</strong></td>
+<td style="text-align: left;">Select</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Foreign Key (<code>Business.Client</code>), <code>PROTECT</code> on delete</td>
+<td style="text-align: left;">The registered client account being billed.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Salesperson</strong></td>
+<td style="text-align: left;">Select</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Foreign Key (<code>Employee.Employee</code>), <code>SET_NULL</code></td>
+<td style="text-align: left;">Staff member responsible for the sale. Used for commission calculation.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Status</strong></td>
+<td style="text-align: left;">Select</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Choices: <code>Draft</code>, <code>Sent</code>, <code>Cancelled</code>, <code>Pending Approval</code></td>
+<td style="text-align: left;">Current lifecycle state. Exceeding client balance locks status to <code>Draft</code>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Type</strong></td>
+<td style="text-align: left;">Select</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Choices: <code>Invoice</code>, <code>Tender Invoice</code>, <code>Quotation</code>, <code>Tender Quotation</code></td>
+<td style="text-align: left;">Category of document issued to the client.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Subtotal</strong></td>
+<td style="text-align: left;">Decimal</td>
+<td style="text-align: left;">Auto</td>
+<td style="text-align: left;">Max 13 digits, 3 decimal places</td>
+<td style="text-align: left;">Sum of all line item totals (<code>Quantity × Rate</code>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Tax</strong></td>
+<td style="text-align: left;">Decimal</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Default <code>0.00</code>, 2 decimal places</td>
+<td style="text-align: left;">Additional tax charge applied to the total order.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>VAT</strong></td>
+<td style="text-align: left;">Decimal</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Default <code>0.00</code>, 3 decimal places</td>
+<td style="text-align: left;">Value-added tax amount.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Shipping</strong></td>
+<td style="text-align: left;">Decimal</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Default <code>0.00</code>, 3 decimal places</td>
+<td style="text-align: left;">Freight or delivery charges.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Discount</strong></td>
+<td style="text-align: left;">Decimal</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Default <code>0.00</code>, 2 decimal places</td>
+<td style="text-align: left;">Total order discount deducted from payable amount.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Payable</strong></td>
+<td style="text-align: left;">Decimal</td>
+<td style="text-align: left;">Auto</td>
+<td style="text-align: left;"><code>Subtotal + Tax + VAT + Shipping - Discount</code></td>
+<td style="text-align: left;">Final net amount due from the client.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="exception-handling-error-recovery">Exception handling &amp; error recovery<a class="headerlink" href="#exception-handling-error-recovery" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Error Symptom / Message</th>
+<th style="text-align: left;">Root Cause</th>
+<th style="text-align: left;">Step-by-Step Remediation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Status locked to Draft / Cannot change to Sent</strong></td>
+<td style="text-align: left;">Invoice payable total exceeds the client's balance limit set in <strong>Business → Clients</strong>.</td>
+<td style="text-align: left;">1. Contact a superuser to review the invoice.<br>2. Superuser opens the invoice and clicks <strong>Approve</strong>.<br>3. Once approved, update status to <code>Sent</code> and click <strong>Save</strong>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>"Invoice Number already exists"</strong></td>
+<td style="text-align: left;">Duplicate invoice number entered manually.</td>
+<td style="text-align: left;">1. Clear the <strong>Invoice Number</strong> field to let the system generate a unique sequence.<br>2. Alternatively, enter a non-conflicting manual number.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>"Cannot delete client with existing invoices"</strong></td>
+<td style="text-align: left;">Django protection constraint (<code>models.PROTECT</code>) prevents client removal.</td>
+<td style="text-align: left;">1. Reassign or delete associated invoices before deleting the client record.<br>2. Mark client as inactive instead of deleting.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Subtotal / Payable mismatch</strong></td>
+<td style="text-align: left;">Deleted line items still cached in form state prior to saving.</td>
+<td style="text-align: left;">1. Click <strong>Save and continue editing</strong> to recalculate totals.<br>2. Verify each line item quantity and rate.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="related-workflows-next-steps">Related workflows &amp; next steps<a class="headerlink" href="#related-workflows-next-steps" title="Permanent link">¶</a></h2>
 <ul>
-<li><strong>Invoice Number</strong> - Unique identifier used to track the invoice.</li>
-<li><strong>Invoice Date</strong> - Billing date used in reports and period summaries.</li>
-<li><strong>Client</strong> - Client account receiving the invoice.</li>
-<li><strong>Status</strong> - Current state (Draft, Sent, or Cancelled); only a superuser can unlock Sent status if the invoice exceeds the client's balance limit.</li>
-<li><strong>Payable</strong> - Final amount due after all charges and discounts.</li>
-<li><strong>Approve</strong> - Button visible only to superusers when the invoice amount exceeds the client's balance limit; superuser approval allows normal users to change the status to Sent.</li>
+<li><strong><a href="../payments/add-payment.html">Add Payment</a></strong> — Record client payments received against this invoice.</li>
+<li><strong><a href="../../01-business/clients/add-client.html">Add Client</a></strong> — Manage client credit limits and balance statements.</li>
+<li><strong><a href="../vouchers/add-voucher.html">Add Voucher</a></strong> — Process material procurement vouchers linked to production.</li>
 </ul>
-<hr>
-<h2 id="general-information">General information<a class="headerlink" href="#general-information" title="Permanent link">¶</a></h2>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="create-invoice-general-tab-v2.png" data-desc-position="bottom"><img alt="General Tab" src="create-invoice-general-tab-v2.png"></a></p>
-<p>Fill in the following fields on the General tab:</p>
-<table>
-<thead>
-<tr>
-<th>Step</th>
-<th>Field</th>
-<th>What to Do</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Invoice Number</td>
-<td>Auto-generated or enter</td>
-<td>Unique identifier for this invoice</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Invoice Date</td>
-<td>Select date</td>
-<td>Date the invoice is issued</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Client</td>
-<td>Select client</td>
-<td>The client receiving the invoice</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Salesperson</td>
-<td>Select The Salesmsn</td>
-<td>The employee responsible for this sale. Commissions will be attributed to this person.</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Status</td>
-<td>Select status</td>
-<td>Current state (Draft, Sent, Cancelled, etc.)</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition warning">
-<p class="admonition-title">Balance Limit Check</p>
-<p>If the invoice amount exceeds the client's balance limit set on the <strong>Client Add</strong> page, the invoice status is locked to <strong>Draft</strong>. Only a superuser can click <strong>Approve</strong> to unlock the status, allowing normal users to change it to <strong>Sent</strong>.</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Approve Button (Superuser Only)</p>
-<p>The <strong>Approve</strong> button appears only if the invoice amount exceeds the client's balance limit. Only superusers can click this button. After approval, the invoice status can be changed to <strong>Sent</strong> by any user.</p>
-</div>
-<hr>
-<h2 id="payment-details">Payment details<a class="headerlink" href="#payment-details" title="Permanent link">¶</a></h2>
-<p>After adding items, configure the financial details:</p>
-<table>
-<thead>
-<tr>
-<th>Step</th>
-<th>Field</th>
-<th>What to Do</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Subtotal</td>
-<td>Auto-calculated</td>
-<td>Sum of all item totals (Quantity × Selling Rate)</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Tax</td>
-<td>Enter amount</td>
-<td>Tax to be charged on the order</td>
-</tr>
-<tr>
-<td>3</td>
-<td>VAT</td>
-<td>Enter amount</td>
-<td>Value-added tax if applicable</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Shipping</td>
-<td>Enter amount</td>
-<td>Shipping or delivery cost</td>
-</tr>
-<tr>
-<td>5</td>
-<td>Discount</td>
-<td>Enter amount</td>
-<td>Discount to apply to the invoice</td>
-</tr>
-<tr>
-<td>6</td>
-<td>Payable</td>
-<td>Auto-calculated</td>
-<td>Final amount due (Subtotal + Tax + VAT + Shipping - Discount)</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Payable is calculated automatically based on other fields.</p>
-</div>
-<hr>
-<h2 id="add-items">Add items<a class="headerlink" href="#add-items" title="Permanent link">¶</a></h2>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="create-invoice-item-tab.png" data-desc-position="bottom"><img alt="Items Tab" src="create-invoice-item-tab.png"></a></p>
-<p>Add products or services to the invoice:</p>
-<table>
-<thead>
-<tr>
-<th>Step</th>
-<th>Field</th>
-<th>What to Do</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Product</td>
-<td>Select from dropdown</td>
-<td>The product or service being sold</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Selling Rate</td>
-<td>Enter or select</td>
-<td>Price per unit</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Quantity</td>
-<td>Enter quantity</td>
-<td>Number of units (or quantity)</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Total</td>
-<td>Auto-calculated</td>
-<td>Quantity × Selling Rate for this item</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>Click <strong>Add another Item</strong> to add multiple products to one invoice</li>
-<li>Click the <strong>trash icon</strong> to remove an item</li>
-<li>Use the <strong>edit icon</strong> to modify an item's details</li>
-</ul>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Each item's total is calculated automatically once you enter Selling Rate and Quantity.</p>
-</div>
-<hr>
-<h2 id="notes-and-status">Notes and status<a class="headerlink" href="#notes-and-status" title="Permanent link">¶</a></h2>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="create-invoice-notes-tab.png" data-desc-position="bottom"><img alt="Notes Tab" src="create-invoice-notes-tab.png"></a></p>
-<p>Add optional notes or internal comments:</p>
-<table>
-<thead>
-<tr>
-<th>Step</th>
-<th>Field</th>
-<th>What to Do</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Note</td>
-<td>Enter text</td>
-<td>Internal notes or special conditions</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Status</td>
-<td>Toggle switch</td>
-<td>Show or hide the invoice from reports</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="saving-the-invoice">Saving the Invoice<a class="headerlink" href="#saving-the-invoice" title="Permanent link">¶</a></h2>
-<p>After completing all sections:</p>
-<ul>
-<li>Click <strong>Save</strong> to create the invoice as Draft/sent/cancelled. based on the status you selected</li>
-<li>Click <strong>Save and continue editing</strong> to save and stay on the page</li>
-<li>Click <strong>Save and add another</strong> to save and create another invoice immediately</li>
-</ul>
-<p>The invoice is now ready to be sent to the client or processed for payment.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tips and Common Issues</p>
-<p>- <strong>Client is required</strong> — You must select a client before saving
-- <strong>Items add to Subtotal</strong> — The invoice calculates Subtotal automatically when you add items
-- <strong>Discount reduces Payable</strong> — Enter a discount to reduce the final amount due
-- <strong>Status controls visibility</strong> — Use Status to mark invoices as Draft, Sent, or Cancelled
-- <strong>Date affects reporting</strong> — Invoice Date determines which reporting period the invoice appears in
-- <strong>Invoice exceeds balance limit</strong> — If the invoice amount exceeds the client's balance limit, the status remains locked to <strong>Draft</strong> until a superuser clicks <strong>Approve</strong>
-- <strong>Superuser approval required</strong> — Only superusers can approve invoices that exceed a client's balance limit; after approval, normal users can change the status to <strong>Sent</strong>
-- <strong>No approval = no send</strong> — Without superuser approval, invoices exceeding the balance limit cannot be sent to the client</p>
-</div>
 <hr>
 <h2 id="related-pages">Related pages<a class="headerlink" href="#related-pages" title="Permanent link">¶</a></h2>
 <ul>
@@ -5990,7 +5887,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 00:44:11 UTC">July 26, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 02:55:49 UTC">July 26, 2026</span>
   </span>
 
     
