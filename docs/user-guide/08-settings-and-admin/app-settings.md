@@ -1,3 +1,7 @@
+---
+tags: [module:settings, task:configure, role:admin]
+---
+
 # App Settings
 
 Configure system-wide settings that affect all users and modules across CTB Admin. Only superusers or administrators with permission can access this page.
@@ -5,6 +9,8 @@ Configure system-wide settings that affect all users and modules across CTB Admi
 ## Summary
 
 App Settings contains all global configuration for CTB Admin, including company branding, operational defaults, balance thresholds, invoice templates, and integration settings. Changes made here impact all users and workflows immediately.
+
+______________________________________________________________________
 
 ## When to use this page
 
@@ -16,15 +22,17 @@ App Settings contains all global configuration for CTB Admin, including company 
 - Set balance warning thresholds
 - Manage tax rates and discount limits
 
+______________________________________________________________________
+
 ## How to access this page
 
-From the sidebar, click **All applications**, then navigate to **CTB Settings** and select **Config**.
+From the sidebar, click **All applications**, then open **CTB Settings** and select **Config**.
 
 ![Config Page Navigation](ctb-setting-path-direction.png)
 
-______________________________________________________________________
-
 ![Config Settings Page](ctb-config-page.png)
+
+______________________________________________________________________
 
 ## Prerequisites
 
@@ -34,9 +42,19 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## Setting Groups and Configuration Details
+## Step-by-step instructions
 
-### App Details
+1. Open **App Settings** from the **Settings and Admin** section of the sidebar.
+1. Complete the **Setting groups and configuration details** section described below.
+1. Review the values you entered, then save the record.
+
+______________________________________________________________________
+
+## Field reference
+
+### Setting groups and configuration details
+
+### App details
 
 Controls dashboard interface and user experience settings:
 
@@ -48,9 +66,7 @@ Controls dashboard interface and user experience settings:
 
     When enabled, a new Quran verse appears each time the dashboard loads, providing daily inspiration to users.
 
-______________________________________________________________________
-
-### Balance Settings
+### Balance settings
 
 Configure thresholds for balance warnings and alerts:
 
@@ -63,9 +79,7 @@ Configure thresholds for balance warnings and alerts:
 
     These percentages control when balance indicators change color in reports and dashboards. Lower thresholds trigger earlier warnings.
 
-______________________________________________________________________
-
-### Brand Details
+### Brand details
 
 Manage company branding and legal information displayed across CTB Admin:
 
@@ -73,7 +87,7 @@ Manage company branding and legal information displayed across CTB Admin:
 | ------------------------------------------------ | -------------------------------------------------------------- | ---------- |
 | **Company Trading Name**                         | Official legal name of your trading business                   | Text       |
 | **Company Tagline**                              | Short and striking memorable phrase used in advertising        | Text       |
-| **Main contact phone number**                    | Primary business phone number for customer inquiries           | Phone      |
+| **Main contact phone number**                    | Primary business phone number for client inquiries             | Phone      |
 | **Main email address**                           | Primary email address displayed on invoices and communications | Email      |
 | **Official company address**                     | Legal business address for formal documents and invoices       | Text       |
 | **Geographic location coordinates**              | GPS coordinates of your company office (latitude, longitude)   | Text       |
@@ -83,11 +97,9 @@ Manage company branding and legal information displayed across CTB Admin:
 
 !!! tip "Best Practice"
 
-    Keep all company information consistent across all settings to ensure uniform branding on invoices and customer-facing documents.
+    Keep all company information consistent across all settings to ensure uniform branding on invoices and client-facing documents.
 
-______________________________________________________________________
-
-### Factory Settings
+### Factory settings
 
 Configure factory and production operational parameters:
 
@@ -99,30 +111,26 @@ Configure factory and production operational parameters:
 
     This setting affects wage calculations and attendance records. A standard 8-hour workday equals 480 minutes.
 
-______________________________________________________________________
-
-### Invoice Settings
+### Invoice settings
 
 Control invoice design, display, and calculation defaults:
 
-| Setting                                                       | Description                                                                                                       | Value Type |
-| ------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ---------- |
-| **The commission amount warred for each item in an invoice**  | The commission amount earned for each item in an invoice. This is added to the customer's commission balance item | Decimal    |
-| **The visual design for your invoices**                       | Choose the invoice design template (CTE Custom, CTE HTML)                                                         | Selection  |
-| **The web address (URL) of your company logo**                | URL where invoice logo is hosted (can be image or HTML embed)                                                     | URL        |
-| **A short message appears at the top of every invoice**       | Header message displayed at invoice top                                                                           | Text       |
-| **A short message appears at the bottom of every invoice**    | Footer message displayed at invoice bottom                                                                        | Text       |
-| **Choose whether to display the invoice amount in words**     | Show rupee amount as written text on invoices                                                                     | Yes / No   |
-| **The standard tax rate applied to sales**                    | Default sales tax percentage for line items                                                                       | Percentage |
-| **The standard Value Added Tax (VAT) applied to sales**       | VAT percentage for line items                                                                                     | Percentage |
-| **The highest discount that can be applied to a sale**        | Maximum discount percentage allowed per invoice                                                                   | Percentage |
-| **The maximum discount amount that can be applied to a sale** | Maximum discount amount in currency units                                                                         | Currency   |
+| Setting                                                       | Description                                                                                                     | Value Type |
+| ------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | ---------- |
+| **The commission amount warred for each item in an invoice**  | The commission amount earned for each item in an invoice. This is added to the client's commission balance item | Decimal    |
+| **The visual design for your invoices**                       | Choose the invoice design template (CTE Custom, CTE HTML)                                                       | Selection  |
+| **The web address (URL) of your company logo**                | URL where invoice logo is hosted (can be image or HTML embed)                                                   | URL        |
+| **A short message appears at the top of every invoice**       | Header message displayed at invoice top                                                                         | Text       |
+| **A short message appears at the bottom of every invoice**    | Footer message displayed at invoice bottom                                                                      | Text       |
+| **Choose whether to display the invoice amount in words**     | Show rupee amount as written text on invoices                                                                   | Yes / No   |
+| **The standard tax rate applied to sales**                    | Default sales tax percentage for line items                                                                     | Percentage |
+| **The standard Value Added Tax (VAT) applied to sales**       | VAT percentage for line items                                                                                   | Percentage |
+| **The highest discount that can be applied to a sale**        | Maximum discount percentage allowed per invoice                                                                 | Percentage |
+| **The maximum discount amount that can be applied to a sale** | Maximum discount amount in currency units                                                                       | Currency   |
 
 !!! info "Invoice Customization"
 
     All invoice message and design settings affect PDF generation and printed invoices. Test after changes to ensure proper formatting.
-
-______________________________________________________________________
 
 ### Notifications
 
@@ -136,9 +144,7 @@ Configure system notification delivery:
 
     Ensure this email address is monitored regularly to stay informed of system events and critical alerts.
 
-______________________________________________________________________
-
-### SMS Settings
+### SMS settings
 
 Enable and configure SMS messaging for notifications and communication:
 
@@ -157,9 +163,7 @@ Enable and configure SMS messaging for notifications and communication:
 
     The approved sender ID must be registered with your SMS provider and comply with local telecommunications regulations.
 
-______________________________________________________________________
-
-### X Developer Settings
+### X developer settings
 
 Advanced developer and API configuration options:
 
@@ -185,7 +189,7 @@ ______________________________________________________________________
 
 ## Tips and common issues
 
-- **Change one setting at a time** — Modify individual settings one at a time to easily identify which change caused any issues.
+- **Change one setting at a time** — Modify individual settings one at a time to identify which change caused any issues.
 - **Test after critical changes** — After changing invoice, balance, or factory settings, verify behavior in a test workflow.
 - **Record significant changes** — Keep a team log of major configuration changes for audit purposes.
 - **Reset to Default** — If a setting causes unexpected behavior, refer to the **Default** column and reset the value.

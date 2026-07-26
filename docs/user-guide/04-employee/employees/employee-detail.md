@@ -1,28 +1,12 @@
+---
+tags: [module:employee, task:view, role:hr]
+---
+
 # Employee Detail
 
 Use this page to review a single employee’s complete profile. It helps you confirm personal information, work assignment, salary settings, and related payroll records before you process attendance, wages, salary, or payouts.
 
-## When to use Employee Detail page
-
-- Reviewing an employee’s full profile before payroll
-- Checking position, department, and balance information
-- Confirming identity and contact details
-- Looking up related salary, wage, or payout records
-
-## How to access Employee Detail page
-
-1. Go to **Employee → Employees** from the sidebar.
-1. On the Employees list page, click the employee name or sku.
-
-The Employees list page shows active, disabled, and deleted records. From there, you can open the employee profile you want to review.
-
-![Employees List](edit-employee-list-page.png)
-
-The system opens the **Employee Detail** page.
-
-______________________________________________________________________
-
-## Page Overview
+## Summary
 
 At the top of the page, you will usually see a tab bar with these sections:
 
@@ -35,7 +19,40 @@ The **General** tab shows the employee’s core profile. The other tabs show rel
 
 ______________________________________________________________________
 
-## General Tab
+## When to use this page
+
+- Reviewing an employee’s full profile before payroll
+- Checking position, department, and balance information
+- Confirming identity and contact details
+- Looking up related salary, wage, or payout records
+
+______________________________________________________________________
+
+## How to access this page
+
+1. Go to **Employee → Employees** from the sidebar.
+1. On the Employees list page, click the employee name or sku.
+
+The Employees list page shows active, disabled, and deleted records. From there, you can open the employee profile you want to review.
+
+![Employees List](edit-employee-list-page.png)
+
+The system opens the **Employee Detail** page.
+
+______________________________________________________________________
+
+## Step-by-step instructions
+
+1. Open **Employee Detail** from the **Employee** section of the sidebar.
+1. Complete the **General tab** section described below.
+1. Complete the **Available actions** section described below.
+1. Review the values you entered, then save the record.
+
+______________________________________________________________________
+
+## Field reference
+
+### General tab
 
 ![Employee Detail General Tab](employee-edit.png)
 
@@ -69,9 +86,19 @@ This tab displays the employee’s main profile and job information.
 | Upper Balance Limit    | Highest allowed balance                            |
 | Lower Balance Limit    | Lowest allowed balance                             |
 
+### Available actions
+
+From the Employee Detail page, you may see the following actions:
+
+| Action          | Description                                        |
+| --------------- | -------------------------------------------------- |
+| Edit Employee   | Open the employee form and change profile data     |
+| History         | Review recent changes and activity, if available   |
+| Delete Employee | Remove the employee record, if your role allows it |
+
 ______________________________________________________________________
 
-## Wages Tab
+## Wages tab
 
 ![Wages Tab](employee-detail-wage-tab.png)
 
@@ -85,7 +112,7 @@ Typical checks include:
 
 ______________________________________________________________________
 
-## Salaries Tab
+## Salaries tab
 
 ![Salaries Tab](employee-detail-salary-tab.png)
 
@@ -99,7 +126,7 @@ Typical checks include:
 
 ______________________________________________________________________
 
-## Payouts Tab
+## Payouts tab
 
 ![Payouts Tab](employee-detail-payout-tab.png)
 
@@ -113,18 +140,6 @@ Typical checks include:
 
 ______________________________________________________________________
 
-## Available Actions
-
-From the Employee Detail page, you may see the following actions:
-
-| Action          | Description                                        |
-| --------------- | -------------------------------------------------- |
-| Edit Employee   | Open the employee form and change profile data     |
-| History         | Review recent changes and activity, if available   |
-| Delete Employee | Remove the employee record, if your role allows it |
-
-______________________________________________________________________
-
 ## Tips and common issues
 
 - Use the **General** tab first when you need to verify identity or employment details.
@@ -134,7 +149,7 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## Related Pages
+## Related pages
 
 - **Add Employee** — Create a new employee record
 - **Edit Employee** — Update employee information

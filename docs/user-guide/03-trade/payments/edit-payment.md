@@ -1,3 +1,7 @@
+---
+tags: [module:trade, task:edit, role:accountant]
+---
+
 # Edit Payment
 
 Use this page to update payment details, status, and associated information. Payment editing capabilities depend on the payment status—pending payments can be fully edited, while completed or reconciled payments have restricted modifications to maintain financial integrity.
@@ -5,6 +9,8 @@ Use this page to update payment details, status, and associated information. Pay
 ## Summary
 
 Use this page to correct payment records while respecting status-based restrictions. It helps you keep reconciliation, balances, and transaction history accurate.
+
+______________________________________________________________________
 
 ## When to use this page
 
@@ -14,21 +20,27 @@ Use this page to correct payment records while respecting status-based restricti
 - Adjusting payment amounts or discounts
 - Adding or updating payment references for reconciliation
 
+______________________________________________________________________
+
 ## How to access this page
 
-From the sidebar, go to **Trade Management → Payments**. On the Payments List page, find the payment you want to edit and click on the payment reference.
+From the sidebar, go to **Trade → Payments**. On the Payments List page, find the payment you want to edit and click on the payment reference.
 
 ![Payment List Page](payment-list-page.png)
 
 The system opens the **Payment Detail page**.
 
+______________________________________________________________________
+
 ## Step-by-step instructions
 
-1. Open **Trade Management -> Payments** and select the payment record.
+1. Open **Trade → Payments** and select the payment record.
 1. Check the current status and confirm what fields can be edited.
 1. Update allowed values in **Payment Information**.
 1. Update check linkage or notes if needed.
 1. Save changes and verify the updated payment details.
+
+______________________________________________________________________
 
 ## Field reference
 
@@ -41,7 +53,7 @@ The system opens the **Payment Detail page**.
 
 ______________________________________________________________________
 
-## Status-Based Edit Restrictions
+## Status-based edit restrictions
 
 Payment editing capabilities depend on the current payment status:
 
@@ -57,7 +69,7 @@ Payment editing capabilities depend on the current payment status:
 
 ______________________________________________________________________
 
-## Payment Information
+## Payment information
 
 ![Edit Payment General Tab](edit-payment-general-tab.png)
 
@@ -79,7 +91,7 @@ Update the following fields in the Payment Information section:
 
 ______________________________________________________________________
 
-## Check and Client Selection
+## Check and Client selection
 
 Update the parties involved in the payment:
 
@@ -94,7 +106,7 @@ Update the parties involved in the payment:
 
 ______________________________________________________________________
 
-## Notes and Additional Information
+## Notes and additional information
 
 Add or update optional notes related to the payment:
 
@@ -108,7 +120,7 @@ Add or update optional notes related to the payment:
 
 ______________________________________________________________________
 
-## Saving Changes
+## Saving changes
 
 After making edits:
 
@@ -130,7 +142,7 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## Related Pages
+## Related pages
 
 - **Payments Overview** — View all recorded payments
 - **Payment Detail** — View complete payment information and history

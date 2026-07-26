@@ -1,8 +1,16 @@
+---
+tags: [module:employee, task:create, role:hr]
+---
+
 # Add Wage Entry
+
+## Summary
 
 Use this page to record a wage entry for an employee in CTB Admin. A wage entry tracks the number of products produced by an employee, calculates their wage based on production quantity, and records any deductions, bonuses, and payment status. Wage entries are used to manage employee compensation tied to production output.
 
-## When to use Add Wage Entry page
+______________________________________________________________________
+
+## When to use this page
 
 - Recording daily or periodic production-based wages for an employee
 - Logging the number of products produced in a work session
@@ -10,17 +18,19 @@ Use this page to record a wage entry for an employee in CTB Admin. A wage entry 
 - Marking a wage as paid and recording the payment date
 - Tracking outstanding wages before processing payroll
 
-## How to access Add Wage Entry page
+______________________________________________________________________
 
-From the sidebar, go to **Employee Management → Wages**. On the Wages List page, click the **purple (+) icon** in the top-right corner.
+## How to access this page
+
+From the sidebar, go to **Employee → Wages**. On the Wages List page, click the **purple (+) icon** in the top-right corner.
 
 The system opens the **Add Wage Entry Page**.
 
 ______________________________________________________________________
 
-## Step-by-step Instructions
+## Step-by-step instructions
 
-1. Open **Employee Management → Wages** and click the add icon.
+1. Open **Employee → Wages** and click the add icon.
 1. Fill in the **Date**, **Employee**, and **Product** fields.
 1. Enter **Production Details** including Quantity, Wage, Deductions, and Bonus.
 1. Review the auto-calculated **Net Wage**.
@@ -29,7 +39,9 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## General Information
+## Field reference
+
+### General information
 
 ![General Information Section](add-wage-general-info.png)
 
@@ -46,9 +58,7 @@ Fill in the following fields:
 
     Fields marked with a **red star (\*)** are mandatory. Date, Employee, and Product must all be filled before saving.
 
-______________________________________________________________________
-
-## Production Details
+### Production details
 
 ![Production Details Section](add-wage-production-detail.png)
 
@@ -70,9 +80,7 @@ Enter the production output and wage calculation fields:
 
     Set Wage to **0** to apply the default wage rate configured for the selected product.
 
-______________________________________________________________________
-
-## Payment Information
+### Payment information
 
 ![Payment Information Section](add-wage-payment-information.png)
 
@@ -90,7 +98,7 @@ Record whether this wage has been paid:
 
 ______________________________________________________________________
 
-## Saving the Wage Entry
+## Saving the Wage entry
 
 After completing all sections:
 
@@ -112,7 +120,7 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## Related Pages
+## Related pages
 
 - **Wages Overview** — View and manage all wage entries
 - **Employees** — Manage employee profiles

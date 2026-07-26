@@ -1,19 +1,22 @@
+---
+tags: [module:trade, task:view, role:accountant]
+---
+
 # Invoices Overview
+
+## Summary
 
 The **Invoices** module is the main control point for managing all sales billing documents in CTB Admin. Use this page to view all invoices, search by invoice number or client, filter by status and date, and quickly access invoices for review, editing, printing, or payment follow-up.
 
-## What you can do in this module
+______________________________________________________________________
 
-- **Create new invoices** — generate billing documents for clients with line items, taxes, and discounts.
-- **View invoice status** — track whether invoices are draft, sent, paid, or cancelled.
-- **Edit invoices** — modify invoice details before sending or after creation.
-- **Print invoices** — generate PDF invoices or chalans for sharing or archival.
-- **Record payments** — mark invoices as paid when payment is received.
-- **Analyze invoice data** — use the Invoice Reports page for financial summaries and trends.
+## When to use this page
+
+- When you need to work with invoices overview in CTB Admin.
 
 ______________________________________________________________________
 
-## How to access Invoices Overview page
+## How to access this page
 
 From the sidebar, go to **Trade → Invoices**.
 
@@ -21,7 +24,19 @@ The system opens the **Invoices List** page where all invoices are displayed.
 
 ______________________________________________________________________
 
-## List Page Columns and Fields
+## Step-by-step instructions
+
+1. Open **Invoices Overview** from the **Trade** section of the sidebar.
+1. Complete the **List page columns and fields** section described below.
+1. Complete the **Search and filter** section described below.
+1. Complete the **List actions** section described below.
+1. Review the values you entered, then save the record.
+
+______________________________________________________________________
+
+## Field reference
+
+### List page columns and fields
 
 ![Invoice List Page](invoice-overview-list-page.png)
 
@@ -31,27 +46,23 @@ The Invoices list displays the following information for each invoice:
 | ------------------ | -------------------------------------------------------------------------- |
 | **Invoice Number** | System-generated unique identifier for this invoice (e.g., INV-260414-004) |
 | **Invoice Date**   | The billing date used in reports and on the printed invoice                |
-| **Client**         | Name of the customer or client linked to this invoice                      |
+| **Client**         | Name of the client or client linked to this invoice                        |
 | **Subtotal**       | Sum of all line item amounts before taxes and discounts                    |
 | **Payable**        | The amount still due after discounts, taxes, and credits are applied       |
 | **Created By**     | Username of the user who created this invoice                              |
 | **Created At**     | Date and time the invoice was created in the system                        |
 | **Status**         | Invoice status (Draft, Sent, Paid, Cancelled, or other applicable status)  |
 
-______________________________________________________________________
-
-## Search and Filter
+### Search and filter
 
 Use the search and filter options to quickly locate specific invoices:
 
 - **Search box** — Type to search by invoice number, client name, or reference
 - **Status tabs** — Click **Active** or **Deleted** to filter invoices by their status
 - **Filters** — Click **Filters** to narrow results by date range, client, or payable amount
-- **Calendar picker** — Click the date arrows to navigate to a specific date
+- **Calendar picker** — Click the date arrows to move to a specific date
 
-______________________________________________________________________
-
-## List Actions
+### List actions
 
 From the Invoices List page:
 
@@ -60,6 +71,17 @@ From the Invoices List page:
 - **Print invoice** — Click the **print icon** or select **Print** from the actions menu to generate a PDF
 - **Edit invoice** — Open an invoice to modify its details (only available for draft or sent invoices)
 - **Record payment** — Mark an invoice as paid from the invoice detail page
+
+______________________________________________________________________
+
+## What you can do in this module
+
+- **Create new invoices** — generate billing documents for clients with line items, taxes, and discounts.
+- **View invoice status** — track whether invoices are draft, sent, paid, or cancelled.
+- **Edit invoices** — modify invoice details before sending or after creation.
+- **Print invoices** — generate PDF invoices or chalans for sharing or archival.
+- **Record payments** — mark invoices as paid when payment is received.
+- **Analyze invoice data** — use the Invoice Reports page for financial summaries and trends.
 
 ______________________________________________________________________
 
@@ -75,7 +97,7 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## Related Pages
+## Related pages
 
 - **Create Invoice** — Generate a new invoice for a client
 - **Edit Invoice** — Update an existing invoice's details

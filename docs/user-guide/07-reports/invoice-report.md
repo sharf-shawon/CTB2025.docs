@@ -1,8 +1,14 @@
+---
+tags: [module:reports, task:report, role:accountant]
+---
+
 # Invoice Report
 
 ## Summary
 
 This page displays a detailed, line-item breakdown of all invoices — including regular invoices, tender invoices, quotations, and tender quotations — showing pricing, quantity, margin, and status for each item sold. It also provides quick month-based navigation and advanced filtering to narrow down results.
+
+______________________________________________________________________
 
 ## When to use this page
 
@@ -12,14 +18,20 @@ This page displays a detailed, line-item breakdown of all invoices — including
 - When you want to filter invoices by date, client, product, or document type (Invoice, Tender Invoice, Quotation, Tender Quotation).
 - When you need to check the status of an invoice (e.g., Sent).
 
+______________________________________________________________________
+
 ## How to access this page
 
 Open **Reports → Invoice Report** in the sidebar.
 
+______________________________________________________________________
+
 ## Prerequisites
 
-- User must have access to the **Reports** module.
+- You have access to the **Reports** module.
 - Invoices, tender invoices, or quotations must exist in the system for data to appear.
+
+______________________________________________________________________
 
 ## Step-by-step instructions
 
@@ -34,6 +46,8 @@ Open **Reports → Invoice Report** in the sidebar.
 1. Click **Apply Filters** to update the table with the selected criteria.
 1. Optionally, click **Show counts** to display record counts alongside the filtered results.
 1. Review the table for line-item details, and check the bottom summary row for totals across quantity and value.
+
+______________________________________________________________________
 
 ## Field reference
 
@@ -50,6 +64,8 @@ Open **Reports → Invoice Report** in the sidebar.
 - **Margin (%)** — The profit margin percentage earned on that line item, calculated from selling rate versus costing rate.
 - **Status** — The current status of the invoice (e.g., Sent).
 
+______________________________________________________________________
+
 ## Filter panel reference
 
 ![Invoice Filter Panel](invoice-report-filter-img.png)
@@ -61,6 +77,8 @@ Open **Reports → Invoice Report** in the sidebar.
 - **By Type** — Filters results by document type: **All**, **Invoice**, **Tender Invoice**, **Quotation**, or **Tender Quotation**.
 - **Apply Filters** — Applies the selected filter criteria to refresh the table.
 - **Show counts** — Displays the number of matching records alongside the filtered results.
+
+______________________________________________________________________
 
 ## Notes
 

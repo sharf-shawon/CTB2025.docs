@@ -1,12 +1,16 @@
+---
+tags: [module:employee, task:view, role:hr]
+---
+
 # Wage Overview
 
-## Overview
+## Summary
 
 The **Wages** page lets you review wage payments for employees, including details of each wage transaction. Use this section to track wage status, payment dates, and breakdowns for each employee and product.
 
 ______________________________________________________________________
 
-## When to use Wage Overview page
+## When to use this page
 
 - Review recent wage payments to employees
 - Check wage status (Paid/Unpaid) and payment dates
@@ -15,17 +19,27 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## How to access Wage Overview page
+## How to access this page
 
-1. From the sidebar, go to **Employee Management → Wages**.
+1. From the sidebar, go to **Employee → Wages**.
 1. The list page shows wage entries for the selected date.
 1. Select a record to view more details about the wage transaction.
 
 ______________________________________________________________________
 
-## Page sections
+## Step-by-step instructions
 
-### Wage List
+1. Open **Wage Overview** from the **Employee** section of the sidebar.
+1. Complete the **Page sections** section described below.
+1. Review the values you entered, then save the record.
+
+______________________________________________________________________
+
+## Field reference
+
+### Page sections
+
+### Wage list
 
 ![Wage List Page](wage-overview-list-page.png)
 
@@ -60,7 +74,7 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## Related Pages
+## Related pages
 
 - **Employees** — Manage employee details and wage assignments
 - **Payouts** — Review and process wage payments

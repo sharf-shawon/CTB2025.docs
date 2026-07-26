@@ -1,21 +1,25 @@
+---
+tags: [module:employee, task:view, role:hr]
+---
+
 # Payouts Overview
 
-## Overview
+## Summary
 
 The **Payouts** page lets you review all employee payout records and monitor payment status. Use this section to track advances, salary adjustments, and other employee payments, and verify whether payouts are pending or already completed.
 
 ______________________________________________________________________
 
-## When to use Payouts Overview page
+## When to use this page
 
 - Review recent payout transactions for all employees
 - Check the status of a specific payout before or after issuing payment
 - Verify payment date and amount for a completed payout
-- Track pending payouts that still require approval or disbursement
+- Track pending payouts that still require approval or payout
 
 ______________________________________________________________________
 
-## How to access Payouts Overview page
+## How to access this page
 
 1. From the sidebar, go to **Employee → Payouts**.
 1. The list page shows payout records grouped by **Active**, **Pending**, **Completed**, and other statuses.
@@ -23,9 +27,19 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## Page sections
+## Step-by-step instructions
 
-### Payout List
+1. Open **Payouts Overview** from the **Employee** section of the sidebar.
+1. Complete the **Page sections** section described below.
+1. Review the values you entered, then save the record.
+
+______________________________________________________________________
+
+## Field reference
+
+### Page sections
+
+### Payout list
 
 ![Payouts List Page](payout-list-page.png)
 
@@ -57,7 +71,7 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## Related Pages
+## Related pages
 
 - **Create Payout** — Record a new employee payout or advance
 - **Salary Overview** — View employee salary records and compensation details

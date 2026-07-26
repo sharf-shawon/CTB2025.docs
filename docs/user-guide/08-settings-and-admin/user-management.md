@@ -1,3 +1,7 @@
+---
+tags: [module:settings, task:configure, role:admin]
+---
+
 # User Management
 
 Use this page to create a new user account in CTB Admin. A user account provides login credentials and permission controls that determine what modules and actions each staff member can access.
@@ -6,11 +10,15 @@ Use this page to create a new user account in CTB Admin. A user account provides
 
 Create a complete user profile with valid credentials and appropriate permissions before the user can access CTB Admin. Proper setup ensures each staff member can only perform approved tasks.
 
+______________________________________________________________________
+
 ## When to use this page
 
 - Onboarding a new employee who needs CTB Admin access
 - Creating admin accounts with elevated permissions
 - Setting up department-specific user accounts with limited access
+
+______________________________________________________________________
 
 ## How to access this page
 
@@ -20,7 +28,21 @@ From the sidebar, go to **Settings and Admin → User Management**. On the Users
 
 The system opens the **Add User Page**.
 
-## Account Information
+______________________________________________________________________
+
+## Step-by-step instructions
+
+1. Open **User Management** from the **Settings and Admin** section of the sidebar.
+1. Complete the **Account information** section described below.
+1. Complete the **Password requirements** section described below.
+1. Complete the **Permissions section** section described below.
+1. Follow **Saving the user** below to finish.
+
+______________________________________________________________________
+
+## Field reference
+
+### Account information
 
 ![Add User Form](add-user.png)
 
@@ -38,9 +60,7 @@ Fill in the following fields:
 
     Fields marked with a **red star (\*)** are mandatory.
 
-______________________________________________________________________
-
-## Password Requirements
+### Password requirements
 
 When creating a password, the system enforces the following rules:
 
@@ -52,9 +72,7 @@ When creating a password, the system enforces the following rules:
 
     Use a mix of uppercase, lowercase, numbers, and special characters for stronger security.
 
-______________________________________________________________________
-
-## Permissions Section
+### Permissions section
 
 After clicking **Save and continue editing**, the system displays the **Permissions** section where you can control access levels.
 
@@ -71,7 +89,7 @@ Assign the minimum required permissions for the user's role.
 
 ______________________________________________________________________
 
-## Saving the User
+## Saving the user
 
 After completing account information:
 
@@ -88,3 +106,9 @@ ______________________________________________________________________
 - **Permissions not taking effect?** Ask the user to sign out completely and sign back in.
 - [App Settings](app-settings.md)
 - [Maintenance Mode](maintenance-mode.md)
+
+______________________________________________________________________
+
+## Related pages
+
+- **[Settings and Admin](../README.md)** — All pages in this module.

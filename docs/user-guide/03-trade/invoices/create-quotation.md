@@ -1,23 +1,46 @@
+---
+tags: [module:trade, task:create, role:accountant]
+---
+
 # Create Quotation
+
+## Summary
 
 Use this page to create a quotation for a client. A quotation is a formal price estimate or proposal document that outlines products or services, quantities, and pricing. Quotations help clients understand costs before committing to a purchase order.
 
-## When to use Create Quotation
+______________________________________________________________________
+
+## When to use this page
 
 - Responding to a client's inquiry with a price estimate
 - Providing a cost breakdown for custom or bulk orders
 - Creating a formal quotation document for sales negotiations
 - Tracking proposed pricing and terms for potential deals
 
-## How to access Create Quotation
+______________________________________________________________________
 
-From the sidebar, go to **Trade Management → Quotations**. On the Quotations List page, click the **purple (+) icon** in the top-right corner.
+## How to access this page
+
+From the sidebar, go to **Trade → Quotations**. On the Quotations List page, click the **purple (+) icon** in the top-right corner.
 
 The system opens the **Create Quotation Page**.
 
 ______________________________________________________________________
 
-## General Information
+## Step-by-step instructions
+
+1. Open **Create Quotation** from the **Trade** section of the sidebar.
+1. Complete the **General information** section described below.
+1. Complete the **Payment details** section described below.
+1. Complete the **Add items** section described below.
+1. Complete the **Terms and notes** section described below.
+1. Follow **Saving the Quotation** below to finish.
+
+______________________________________________________________________
+
+## Field reference
+
+### General information
 
 Fill in the following fields on the General tab:
 ![Create Quotation General Information](create-quotation-general-info.png)
@@ -26,7 +49,7 @@ Fill in the following fields on the General tab:
 | ---- | ---------------- | ----------------------- | -------------------------------------------- |
 | 1    | Quotation Number | Auto-generated or enter | Unique identifier for this quotation         |
 | 2    | Quotation Date   | Select date             | Date the quotation is issued                 |
-| 3    | Client           | Select client           | The customer receiving the quotation         |
+| 3    | Client           | Select client           | The client receiving the quotation           |
 | 4    | Status           | Select status           | Current state (Draft, Sent, Cancelled, etc.) |
 | 5    | Valid Until      | Select date             | Expiration date for the quotation validity   |
 
@@ -34,9 +57,7 @@ Fill in the following fields on the General tab:
 
     Fields marked with a **red star (\*)** are mandatory.
 
-______________________________________________________________________
-
-## Payment Details
+### Payment details
 
 ![Create Quotation Payment Section](create-quotation-payment-section.png)
 
@@ -55,9 +76,7 @@ After adding items, configure the financial details:
 
     The total is calculated automatically based on items and payment adjustments.
 
-______________________________________________________________________
-
-## Add Items
+### Add items
 
 ![Create Quotation Add Item Section](create-quotation-item-section.png)
 Add products or services to the quotation:
@@ -77,9 +96,7 @@ Add products or services to the quotation:
 
     Each item's total is calculated automatically once you enter Rate and Qty.
 
-______________________________________________________________________
-
-## Terms and Notes
+### Terms and notes
 
 Add optional terms, conditions, or internal notes:
 
@@ -112,7 +129,7 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## Related Pages
+## Related pages
 
 - **Quotation Detail** — View quotation details and client feedback
 - **Edit Quotation** — Update terms and items before sending

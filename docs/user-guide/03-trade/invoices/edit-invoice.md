@@ -1,3 +1,7 @@
+---
+tags: [module:trade, task:edit, role:accountant]
+---
+
 # Edit Invoice
 
 Use this page to update invoice details, items, and payment information. Invoice editing capabilities depend on the invoice status—draft invoices can be fully edited, while sent or finalized invoices have restricted modifications to maintain audit integrity.
@@ -5,6 +9,8 @@ Use this page to update invoice details, items, and payment information. Invoice
 ## Summary
 
 Use this page to correct or update invoice data after creation, based on status rules. It helps you maintain accurate financial records while protecting finalized transactions.
+
+______________________________________________________________________
 
 ## When to use this page
 
@@ -14,34 +20,40 @@ Use this page to correct or update invoice data after creation, based on status 
 - Adding or removing products from an unsent invoice
 - Updating payment details or discounts
 
+______________________________________________________________________
+
 ## How to access this page
 
-From the sidebar, go to **Trade Management → Invoices**. On the Invoices List page, find the invoice you want to edit and click on the invoice number .
+From the sidebar, go to **Trade → Invoices**. On the Invoices List page, find the invoice you want to edit and click on the invoice number .
 
 ![Edit Invoice List Page](edit-invoice-list-page.png)
 
 The system opens the **Edit Invoice Page**.
 
+______________________________________________________________________
+
 ## Step-by-step instructions
 
-1. Open **Trade Management -> Invoices** and select the target invoice.
+1. Open **Trade → Invoices** and select the target invoice.
 1. Confirm current status and applicable edit restrictions.
 1. Update allowed header fields in **General Information**.
 1. Adjust line items and payment-related values if status permits.
 1. Add or update internal notes as needed.
 1. Save changes and review the updated invoice details.
 
+______________________________________________________________________
+
 ## Field reference
 
 - **Invoice Number** - Unique identifier for the invoice.
-- **Client** - Linked customer account for this invoice.
+- **Client** - Linked client account for this invoice.
 - **Status** - Controls edit permissions and invoice lifecycle.
 - **Subtotal** - Sum of all line-item totals.
 - **Payable** - Final amount due after taxes, charges, and discount.
 
 ______________________________________________________________________
 
-## Status-Based Edit Restrictions
+## Status-based edit restrictions
 
 Invoice editing capabilities depend on the current invoice status:
 
@@ -57,7 +69,7 @@ Invoice editing capabilities depend on the current invoice status:
 
 ______________________________________________________________________
 
-## General Information
+## General information
 
 ![General Tab](edit-invoice-general-tab.png)
 
@@ -67,7 +79,7 @@ Update the following fields on the General tab:
 | ---- | -------------- | ------------------------- | --------------------------------------- | ------------- |
 | 1    | Invoice Number | View or edit (if allowed) | Unique identifier for this invoice      | Draft only    |
 | 2    | Invoice Date   | Select new date           | Date the invoice is issued              | Draft only    |
-| 3    | Client         | Select different client   | The customer receiving the invoice      | Draft only    |
+| 3    | Client         | Select different client   | The client receiving the invoice        | Draft only    |
 | 4    | Status         | Select new status         | Current state (Draft, Sent, Paid, etc.) | All           |
 
 !!! note
@@ -76,7 +88,7 @@ Update the following fields on the General tab:
 
 ______________________________________________________________________
 
-## Payment Details
+## Payment details
 
 Update the financial details of the invoice:
 
@@ -93,7 +105,7 @@ Update the financial details of the invoice:
 
 ______________________________________________________________________
 
-## Edit Items
+## Edit items
 
 ![Items Tab](create-invoice-item-tab.png)
 
@@ -119,7 +131,7 @@ Modify the products or services on the invoice:
 
 ______________________________________________________________________
 
-## Notes and Status
+## Notes and status
 
 Update optional notes or internal comments:
 
@@ -130,7 +142,7 @@ Update optional notes or internal comments:
 
 ______________________________________________________________________
 
-## Saving Changes
+## Saving changes
 
 After making edits:
 
@@ -152,7 +164,7 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## Related Pages
+## Related pages
 
 - **Invoice Detail** — View complete invoice information and history
 - **Create Invoice** — Create a new invoice from scratch

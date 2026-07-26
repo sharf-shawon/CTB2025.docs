@@ -1,8 +1,14 @@
+---
+tags: [module:returns, task:view, role:staff]
+---
+
 # Manage Product Returns
 
 ## Summary
 
 Use this page to record product returns against invoices. Product return records capture the client, invoice, returned quantity, return rate, and total amount for each returned item.
+
+______________________________________________________________________
 
 ## When to use this page
 
@@ -11,15 +17,30 @@ Use this page to record product returns against invoices. Product return records
 - When you update client balances after a return
 - When you need accurate inventory and revenue corrections for returned products
 
+______________________________________________________________________
+
 ## How to access this page
 
 Open **Return Management → Product Returns** in the sidebar. On the Product Returns list page, click the **purple (+) icon** or **Add** to create a new record.
+
+______________________________________________________________________
 
 ## Prerequisites
 
 - Client records already exist in CTB Admin
 - The invoice for the returned product must be available
 - Permission to create or edit product return records
+
+______________________________________________________________________
+
+## Step-by-step instructions
+
+1. Go to **Returns → Product Returns** and click the **purple (+) icon**.
+1. Select the **Invoice** and the **Client** the return applies to.
+1. Set the **Return Date** and enter a **Return Reason/Note**.
+1. Add a returned item: select the **Product**, then enter **Return Quantity** and **Return Rate**.
+1. Click **Add another Product Return Item** for each additional product returned.
+1. Check the **Total Amount**, then save the record.
 
 ______________________________________________________________________
 
@@ -45,6 +66,8 @@ ______________________________________________________________________
 
 - **Remove** — Click to delete a product return item row.
 - **Add another Product Return Item** — Add a new row for additional returned products.
+
+______________________________________________________________________
 
 ## Tips and common issues
 

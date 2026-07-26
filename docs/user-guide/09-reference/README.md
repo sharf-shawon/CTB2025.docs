@@ -6,6 +6,8 @@ tags: [module:reference, task:view, role:staff]
 
 Shared definitions, error messages, permissions, and behaviour that apply across every module of CTB Admin.
 
+______________________________________________________________________
+
 ## Summary
 
 Use this section when a term, message, or restriction is not specific to one module. Reference pages are written once here and linked from the module pages that need them, so a definition never drifts between modules.

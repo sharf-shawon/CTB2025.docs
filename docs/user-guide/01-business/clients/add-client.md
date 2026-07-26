@@ -1,3 +1,7 @@
+---
+tags: [module:business, task:create, role:staff]
+---
+
 # Add Client
 
 Use this page to register a new client in CTB Admin. A client is any individual or organization that purchases goods or services. Client records store contact details, identification information, and financial data used across invoices, payments, and reports.
@@ -6,11 +10,15 @@ Use this page to register a new client in CTB Admin. A client is any individual 
 
 Use this page to create a complete client profile before you issue invoices or record payments. A well-configured client record keeps reporting, communication, and balance tracking accurate.
 
+______________________________________________________________________
+
 ## When to use this page
 
-- Onboarding a new buyer or business partner
+- Onboarding a new client or business partner
 - Creating a client profile before issuing invoices
 - Storing client contact details and identification documents
+
+______________________________________________________________________
 
 ## How to access this page
 
@@ -20,9 +28,11 @@ From the sidebar, go to **Business → Clients**. On the Client List page, click
 
 The system opens the **Add Client Page**.
 
+______________________________________________________________________
+
 ## Step-by-step instructions
 
-1. Open **Business -> Clients** and click the **Add** icon.
+1. Open **Business → Clients** and click the **Add** icon.
 1. Fill the **Personal Information** section.
 1. Fill the **Business Details** section and upload required documents.
 1. Fill **Balance & Discount Information** based on your business policy.
@@ -30,7 +40,9 @@ The system opens the **Add Client Page**.
 
 ______________________________________________________________________
 
-## Personal Information
+## Field reference
+
+### Personal information
 
 ![Personal Information Section](client-personal-info.png)
 
@@ -50,9 +62,7 @@ Fill in the following fields:
 
     Fields marked with a **red star (\*)** are mandatory.
 
-______________________________________________________________________
-
-## Business Details
+### Business details
 
 ![Business Details Section](client-business-details.png)
 
@@ -69,9 +79,7 @@ ______________________________________________________________________
 
     Upload clear images for proper verification.
 
-______________________________________________________________________
-
-## Balance & Discount Information
+### Balance & discount information
 
 ![Balance & Discount Information Section](client-balance-discount.png)
 
@@ -111,7 +119,7 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## Related Pages
+## Related pages
 
 - **Edit Client** — Update client information
 - **Client Detail** — View client profile and transactions

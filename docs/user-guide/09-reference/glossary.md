@@ -1,3 +1,7 @@
+---
+tags: [module:reference, task:view, role:staff]
+---
+
 # Glossary
 
 Use this page to look up the business terms used throughout CTB Admin documentation.
@@ -6,28 +10,57 @@ Use this page to look up the business terms used throughout CTB Admin documentat
 
 The glossary helps staff read the docs and interface terms with the same meaning. Use it when a label or workflow term needs a quick business explanation.
 
-## Terms
+______________________________________________________________________
+
+## When to use this page
+
+- When you are unsure what a term in a workflow means.
+- When you need a quick reference before training someone else.
+- When you want to keep documentation wording consistent.
+- When you need to explain a label in simple business language.
+
+<!-- TODO: Expand this glossary with any module-specific terms that users still ask about. -->
+
+______________________________________________________________________
+
+## How to access this page
+
+From the sidebar, go to **Reference**, then open **Glossary**.
+
+______________________________________________________________________
+
+## Step-by-step instructions
+
+1. Open **Glossary** from the **Reference** section of the sidebar.
+1. Complete the **Terms** section described below.
+1. Review the values you entered, then save the record.
+
+______________________________________________________________________
+
+## Field reference
+
+### Terms
 
 ### General business terms
 
-| Term                | Meaning                                                                             |
-| ------------------- | ----------------------------------------------------------------------------------- |
-| Client              | A customer or business partner that buys goods or services from your company.       |
-| Vendor              | A supplier or service provider that your company buys from.                         |
-| Invoice             | A bill that lists what you sold, how much it costs, and what the client still owes. |
-| Payment             | Money received or recorded against a bill or other financial record.                |
-| Bank                | A bank account used to track money moving in and out of the business.               |
-| Balance             | The amount currently owed or available on a record.                                 |
-| Opening Balance     | The amount a record starts with when it is first created.                           |
-| Discount            | A price reduction given to a client or applied to a bill.                           |
-| Commission Balance  | A separate balance used to track commission-related amounts.                        |
-| Upper Balance Limit | The highest balance value allowed for a record.                                     |
-| Lower Balance Limit | The lowest balance value allowed for a record.                                      |
-| Status              | The current stage of a record, such as draft, active, paid, or cancelled.           |
-| Active              | A record that can be used in normal work.                                           |
-| Inactive            | A record that is kept for reference but is not used in new work.                    |
-| Is Enabled          | A switch that controls whether a record can be used in new work.                    |
-| Send SMS            | A switch that allows the system to send text message alerts for the record.         |
+| Term                | Meaning                                                                               |
+| ------------------- | ------------------------------------------------------------------------------------- |
+| Client              | A client or business partner that buys goods or services from your company.           |
+| Vendor              | A vendor or service provider that your company buys from.                             |
+| Invoice             | A record that lists what you sold, how much it costs, and what the client still owes. |
+| Payment             | Money received or recorded against an invoice or other financial record.              |
+| Bank                | A bank account used to track money moving in and out of the business.                 |
+| Balance             | The amount currently owed or available on a record.                                   |
+| Opening Balance     | The amount a record starts with when it is first created.                             |
+| Discount            | A price reduction given to a client or applied to an invoice.                         |
+| Commission Balance  | A separate balance used to track commission-related amounts.                          |
+| Upper Balance Limit | The highest balance value allowed for a record.                                       |
+| Lower Balance Limit | The lowest balance value allowed for a record.                                        |
+| Status              | The current stage of a record, such as draft, active, paid, or cancelled.             |
+| Active              | A record that can be used in normal work.                                             |
+| Inactive            | A record that is kept for reference but is not used in new work.                      |
+| Is Enabled          | A switch that controls whether a record can be used in new work.                      |
+| Send SMS            | A switch that allows the system to send text message alerts for the record.           |
 
 ### Trade terms
 
@@ -88,7 +121,7 @@ The glossary helps staff read the docs and interface terms with the same meaning
 | --------- | ---------------------------------------------------------------------- |
 | Draft     | A record that has been started but not finished yet.                   |
 | Sent      | A record that has been shared with the client or recipient.            |
-| Paid      | A bill or payment that has been completed.                             |
+| Paid      | An invoice or payment that has been completed.                         |
 | Cancelled | A record that is no longer active and should not be used for new work. |
 | Pending   | A record that is waiting for the next step.                            |
 | Approved  | A record that has been reviewed and accepted.                          |
@@ -104,14 +137,7 @@ The glossary helps staff read the docs and interface terms with the same meaning
 | Start Date   | The date when a record or relationship begins.                       |
 | End Date     | The date when a record or relationship ends.                         |
 
-## When to use this page
-
-- When you are unsure what a term in a workflow means.
-- When you need a quick reference before training someone else.
-- When you want to keep documentation wording consistent.
-- When you need to explain a label in simple business language.
-
-<!-- TODO: Expand this glossary with any module-specific terms that users still ask about. -->
+______________________________________________________________________
 
 ## Related pages
 

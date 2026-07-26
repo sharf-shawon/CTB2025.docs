@@ -1,8 +1,16 @@
+---
+tags: [module:factory, task:create, role:staff]
+---
+
 # Add Product
+
+## Summary
 
 Create a new product in CTB Admin. This page lets you define the product details, pricing, production costs, and stock settings used by the factory.
 
-## When to Use
+______________________________________________________________________
+
+## When to use this page
 
 Use this page when:
 
@@ -10,17 +18,32 @@ Use this page when:
 - Defining product pricing and category
 - Preparing items for invoices, quotations, or sales
 
+______________________________________________________________________
+
 ## How to access this page
 
 From the sidebar, go to **Factory → Products**. On the **Products** page, click the **Add Product** button in the top-right corner.
 
-## General tab
+______________________________________________________________________
+
+## Step-by-step instructions
+
+1. Open **Add Product** from the **Factory** section of the sidebar.
+1. Complete the **General tab** section described below.
+1. Complete the **Product costings tab** section described below.
+1. Review the values you entered, then save the record.
+
+______________________________________________________________________
+
+## Field reference
+
+### General tab
 
 The **General** tab is where you enter the product’s main details and status.
 
 ![Add Product Form](product-form.png)
 
-### Fields in the General tab
+### Fields in the general tab
 
 | Field            | Description                                                         |
 | ---------------- | ------------------------------------------------------------------- |
@@ -39,17 +62,13 @@ The **General** tab is where you enter the product’s main details and status.
 | Stock            | Current stock quantity for the product.                             |
 | Restock Level    | Minimum stock quantity before restocking is needed.                 |
 
-## Notes tab
-
-Use the **Notes** tab to store internal notes or special instructions about the product. This tab is useful for manufacturing details, supplier comments, or quality reminders that do not belong in the main description.
-
-## Product Costings tab
+### Product costings tab
 
 The **Product Costings** tab is used to add and manage raw material cost entries for the product.
 
 ![Add Product Costing Page](product-costing-page.png)
 
-### Product Costing entries
+### Product costing entries
 
 | Field      | Description                                     |
 | ---------- | ----------------------------------------------- |
@@ -60,6 +79,14 @@ The **Product Costings** tab is used to add and manage raw material cost entries
 
 Use the **Add another Product Costing** button to add more materials. Remove a row when a material is no longer part of the product recipe.
 
+______________________________________________________________________
+
+## Notes tab
+
+Use the **Notes** tab to store internal notes or special instructions about the product. This tab is useful for manufacturing details, vendor comments, or quality reminders that do not belong in the main description.
+
+______________________________________________________________________
+
 ## Field guidelines
 
 - Enter a clear **Name** so the product is easy to find in the list.
@@ -68,11 +95,15 @@ Use the **Add another Product Costing** button to add more materials. Remove a r
 - Use the **Notes** tab for internal instructions, not public product descriptions.
 - Add all raw materials in **Product Costings** so cost totals are accurate.
 
+______________________________________________________________________
+
 ## Tips and common issues
 
 - Keep **Is Public** off unless the product should appear on the website.
 - Review the calculated **Total Cost** after entering material and wage values.
 - Use **Save and continue editing** if you want to keep the form open after saving.
+
+______________________________________________________________________
 
 ## Related pages
 

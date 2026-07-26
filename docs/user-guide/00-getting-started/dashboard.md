@@ -1,3 +1,7 @@
+---
+tags: [module:getting-started, task:view, role:staff]
+---
+
 # Dashboard
 
 The Dashboard is the first page you see after logging in to CTB Admin. It gives you an at-a-glance view of business performance, quick access to every module, and key operational data from a single screen.
@@ -6,6 +10,8 @@ The Dashboard is the first page you see after logging in to CTB Admin. It gives 
 
 Use this page to monitor key business activity and jump quickly to daily tasks. It gives you a central view of performance, pending work, and shortcuts to major modules.
 
+______________________________________________________________________
+
 ## When to use this page
 
 - Reviewing key business metrics at the start of the day.
@@ -13,14 +19,20 @@ Use this page to monitor key business activity and jump quickly to daily tasks. 
 - Monitoring invoice status, stock levels, and outstanding balances.
 - Reading the daily Quran quote displayed for staff motivation.
 
+______________________________________________________________________
+
 ## How to access this page
 
 The Dashboard opens automatically after login. You can return to it at any time by clicking **Dashboard** at the top of the left sidebar.
+
+______________________________________________________________________
 
 ## Prerequisites
 
 - You are logged in with a valid CTB Admin account.
 - You have access permission for dashboard analytics if you need charts and summary cards.
+
+______________________________________________________________________
 
 ## Step-by-step instructions
 
@@ -30,6 +42,8 @@ The Dashboard opens automatically after login. You can return to it at any time 
 1. Check **Dashboard Analytics** for invoice, stock, payment, and balance trends.
 1. Use the **Refresh** action only when you need immediate recalculation of cached data.
 1. Open target module pages from the left sidebar to take follow-up actions.
+
+______________________________________________________________________
 
 ## Field reference
 
@@ -74,18 +88,18 @@ The sidebar groups all modules into collapsible sections. Each section expands t
 | Section                       | Items                                                                                    |
 | ----------------------------- | ---------------------------------------------------------------------------------------- |
 | **Reports**                   | Invoice Report, CTB Chat                                                                 |
-| **Trade Management**          | Invoices, Vouchers, Banks, Checks, Payments, Purchase Balances                           |
-| **Business Management**       | Clients                                                                                  |
+| **Trade**                     | Invoices, Vouchers, Banks, Checks, Payments, Purchase Balances                           |
+| **Business**                  | Clients                                                                                  |
 | **Tender Management**         | Tender Invoices, Tender Quotations, Tender Payments, Tender Checks                       |
-| **Factory Management**        | Products, Categories, Materials, Material Inventory                                      |
-| **Employee Management**       | Employees, Positions, Departments, Salary, Wages, Payouts, Attendance, Facial Attendance |
+| **Factory**                   | Products, Categories, Materials, Material Inventory                                      |
+| **Employee**                  | Employees, Positions, Departments, Salary, Wages, Payouts, Attendance, Facial Attendance |
 | **User and Group Management** | Users, Groups, Audit Log, All Applications                                               |
 
 Click any section header to expand or collapse it. The sidebar can be fully hidden using the **Side menu toggle** (item 3) in the top bar.
 
 ______________________________________________________________________
 
-## The Holy Quran section
+## The holy Quran section
 
 Below the top bar, the Dashboard displays a randomly selected **Quran verse** in Arabic, along with its English reference and a direct link to the full Surah. This quote refreshes each time the Dashboard is loaded or manually refreshed.
 
@@ -95,7 +109,7 @@ Below the top bar, the Dashboard displays a randomly selected **Quran verse** in
 
 ______________________________________________________________________
 
-## Quick Access Pages
+## Quick access pages
 
 The **Quick Access Pages** section (item 12 — toggle to show/hide) displays major pages in CTB Admin as colourful cards. Each card gives you two actions:
 
@@ -112,7 +126,7 @@ To force an immediate recalculation of all data, click the **Refresh** button in
 
 ______________________________________________________________________
 
-## Dashboard Analytics
+## Dashboard analytics
 
 The **Dashboard Analytics** section (item 13 — toggle to show/hide) presents live business data through summary cards and charts. All figures are drawn from multiple modules.
 

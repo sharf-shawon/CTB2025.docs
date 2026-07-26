@@ -1,26 +1,47 @@
+---
+tags: [module:trade, task:create, role:accountant]
+---
+
 # Create Voucher
 
-Use this page to create a voucher for recording purchases from vendors. A voucher documents
-the receipt of materials or services and tracks payment obligations. Vouchers are used to
-manage accounts payable, record vendor transactions, and generate procurement reports.
+## Summary
 
-## When to use Create Voucher
+Use this page to create a voucher for recording purchases from vendors. A voucher documents the receipt of materials or services and tracks payment obligations. Vouchers are used to manage accounts payable, record vendor transactions, and generate procurement reports.
+
+______________________________________________________________________
+
+## When to use this page
 
 - Recording purchases of materials from vendors
 - Documenting received goods with associated costs
 - Creating a payment record for vendor-supplied materials
-- Tracking outstanding payables to suppliers
+- Tracking outstanding payables to vendors
+
+______________________________________________________________________
 
 ## How to access this page
 
-From the sidebar, go to **Trade Management → Vouchers**. On the Vouchers List page, click
+From the sidebar, go to **Trade → Vouchers**. On the Vouchers List page, click
 the **purple (+) icon** in the top-right corner.
 
 The system opens the **Create Voucher Page**.
 
 ______________________________________________________________________
 
-## General Information
+## Step-by-step instructions
+
+1. Open **Create Voucher** from the **Trade** section of the sidebar.
+1. Complete the **General information** section described below.
+1. Complete the **Payment details** section described below.
+1. Complete the **Add Voucher items** section described below.
+1. Complete the **Notes** section described below.
+1. Follow **Saving the Voucher** below to finish.
+
+______________________________________________________________________
+
+## Field reference
+
+### General information
 
 Fill in the following fields on the **General** tab:
 
@@ -32,16 +53,14 @@ Fill in the following fields on the **General** tab:
 | 2    | Voucher Number | Enter number   | Unique reference number for this voucher            |
 | 3    | Reference      | Enter text     | External reference (e.g., vendor invoice number)    |
 | 4    | Voucher Date   | Select date    | Date the voucher is created (defaults to today)     |
-| 5    | Vendor         | Select vendor  | The supplier or vendor associated with this voucher |
+| 5    | Vendor         | Select vendor  | The vendor or vendor associated with this voucher   |
 | 6    | Photo          | Upload file    | Attach a photo or scan copy of the physical voucher |
 
 !!! warning
 
     Fields marked with a **red star (\*)** are mandatory.
 
-______________________________________________________________________
-
-## Payment Details
+### Payment details
 
 After adding voucher items, configure the financial details:
 
@@ -62,9 +81,7 @@ After adding voucher items, configure the financial details:
 
     Subtotal and Payable are calculated automatically based on other fields.
 
-______________________________________________________________________
-
-## Add Voucher Items
+### Add Voucher items
 
 Add materials to the voucher using the **Voucher Items** tab:
 ![Voucher Item info ](add-voucher-item-info.png)
@@ -86,9 +103,7 @@ Add materials to the voucher using the **Voucher Items** tab:
 
     Each item's total is calculated automatically once you enter Rate and Quantity.
 
-______________________________________________________________________
-
-## Notes
+### Notes
 
 Add optional notes or internal comments using the **Notes** tab:
 
@@ -110,7 +125,7 @@ The voucher is now recorded and available for payment processing and reporting.
 
 ______________________________________________________________________
 
-## Tips and Common Issues
+## Tips and common issues
 
 - **Vendor is required** — You must select a vendor before saving
 - **Voucher Number is required** — Enter a unique reference number for each voucher
@@ -121,7 +136,7 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## Related Pages
+## Related pages
 
 - **Voucher Detail** — View or edit voucher details after creation
 - **Edit Voucher** — Update voucher information and items

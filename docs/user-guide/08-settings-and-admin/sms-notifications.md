@@ -1,3 +1,7 @@
+---
+tags: [module:settings, task:configure, role:admin]
+---
+
 # SMS Notifications
 
 Use this page to create and manage notification signals for SMS and email messaging. The page lets you define target models, compose message content, and add SMS-specific routing rules.
@@ -6,6 +10,8 @@ Use this page to create and manage notification signals for SMS and email messag
 
 Use SMS Notifications to configure how CTB Admin sends alerts and reminders by SMS. Define the signal name, target model, message templates, and constraints so automated notifications trigger correctly.
 
+______________________________________________________________________
+
 ## When to use this page
 
 - When creating a new SMS notification signal.
@@ -13,17 +19,21 @@ Use SMS Notifications to configure how CTB Admin sends alerts and reminders by S
 - When changing the target model or recipient list.
 - When adding conditions or constraints for when a notification should fire.
 
+______________________________________________________________________
+
 ## How to access this page
 
 From the sidebar, go to **ALL Application → Email Signal → Signal**. Open the SMS notifications page and click the purple (+) icon add action to create a new signal.
 
 ______________________________________________________________________
 
-## Page overview
+## Step-by-step instructions
 
-![SMS Notification Settings](add-sms.png)
-
-This page is divided into sections for general signal setup, email/SMS message content, and advanced notification rules.
+1. Go to **Settings and Admin → SMS Notifications** from the sidebar.
+1. Review the current SMS configuration and the events that trigger a message.
+1. Update the settings you need to change.
+1. Save the configuration.
+1. Send a test message where available to confirm delivery before relying on it.
 
 ______________________________________________________________________
 
@@ -43,6 +53,14 @@ ______________________________________________________________________
 | **HTML content**       | Enter HTML           | Message content that is sent as HTML when email is used                 |
 | **Signal constraints** | Add constraint rows  | Conditions that control when the signal is dispatched                   |
 | **SMS Configuration**  | Add SMS settings     | SMS-specific sending rules and provider parameters                      |
+
+______________________________________________________________________
+
+## Page overview
+
+![SMS Notification Settings](add-sms.png)
+
+This page is divided into sections for general signal setup, email/SMS message content, and advanced notification rules.
 
 ______________________________________________________________________
 

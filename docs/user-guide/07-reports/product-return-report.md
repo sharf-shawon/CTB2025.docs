@@ -1,3 +1,7 @@
+---
+tags: [module:reports, task:report, role:accountant]
+---
+
 # Product Return Report
 
 ## Summary
@@ -6,21 +10,29 @@ The Product Return Report lists product returns within a selected date range, sh
 
 <!-- TODO: screenshot docs/user-guide/screenshots/reports/product-return-report.png -->
 
+______________________________________________________________________
+
 ## When to use this page
 
 - You need to review products returned by clients or by staff
 - You want to reconcile returned goods with invoices and client balances
 - You need a printable summary of returns for accounting or stock adjustments
 
+______________________________________________________________________
+
 ## How to access this page
 
 Open **Trade → Invoices → Product Return Report** in the left sidebar under **Trade**.
+
+______________________________________________________________________
 
 ## Prerequisites
 
 - Permission to view Reports or Trade reports (sales or finance role)
 - Invoice and return records must exist for the selected date range
 - Client accounts must exist to receive balance adjustments
+
+______________________________________________________________________
 
 ## Step-by-step instructions
 
@@ -35,6 +47,8 @@ Open **Trade → Invoices → Product Return Report** in the left sidebar under 
 1. Note: When a return is recorded, its `Total` amount is applied to the client balance — reducing the client's payable or increasing their credit depending on your accounting setup
 1. Use the **Invoice #** link to open the originating invoice for context
 1. Click **Print Report** to export or print the current filtered view
+
+______________________________________________________________________
 
 ## Field reference
 
@@ -64,14 +78,24 @@ Open **Trade → Invoices → Product Return Report** in the left sidebar under 
 
 - **Invoice #** — Originating invoice reference (clickable link)
 
+______________________________________________________________________
+
 ## Business rules
 
 - Return amounts adjust the client's balance immediately when the return is processed
 - Negative returns or corrections are shown as negative quantities/amounts and will adjust balances accordingly
 - Stock levels should be updated after returns are processed; verify inventory adjustments with the Material/Product Stock reports
 
+______________________________________________________________________
+
 ## Tips and common issues
 
 - If totals do not match accounting records, check whether the return has been posted or remains in draft
 - Returns against cancelled or deleted invoices may not apply automatically to client balances; verify invoice status first
 - Use narrow date ranges for faster loading on large datasets
+
+______________________________________________________________________
+
+## Related pages
+
+- **[Reports](../README.md)** — All pages in this module.

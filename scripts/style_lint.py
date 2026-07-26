@@ -93,7 +93,8 @@ FORBIDDEN_TERMS = {
     r"\bbuyers?\b": "Client",
     r"\bsuppliers?\b": "Vendor",
     r"\bsellers?\b": "Vendor",
-    r"\bbills?\b": "Invoice",
+    # Not "bill-of-materials", which is a manufacturing term, not an invoice.
+    r"(?<!-)\bbills?\b(?!-)": "Invoice",
     r"\bdisbursements?\b": "Payout",
     r"\bpaychecks?\b": "Salary",
     r"\bjournal entr(y|ies)\b": "Voucher",
@@ -125,8 +126,11 @@ PROHIBITED_PHRASES = {
     r"\bit should be noted\b": "delete the phrase",
     r"\bnote that\b": "delete the phrase",
     r"\ballows? you to\b": "rewrite in the imperative",
-    r"\bthe user\b": "you",
-    r"\busers can\b": "you can",
+    # Third person where the reader is meant ("Users can filter" -> "You can
+    # filter"). Anchored to the start of a sentence or list item on purpose:
+    # in admin documentation "the user" routinely means a managed account
+    # rather than the reader, and "the user avatar" is a UI element.
+    r"^\s*[-*]?\s*(The )?[Uu]sers? (can|should|must|need to)\b": "address the reader as 'you'",
     r"\bplease\b": "delete the word",
 }
 

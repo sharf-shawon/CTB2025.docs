@@ -1,12 +1,26 @@
+---
+tags: [module:returns, task:view, role:staff]
+---
+
 # Return Management
 
-## Overview
+## Summary
 
 The Return Management section lets you track returned goods and materials in one place. Use this module to record product returns, material returns, return vouchers, and adjustments that affect inventory, vendor balances, and client accounts.
 
 ______________________________________________________________________
 
-## Return Management pages
+## What you can do in this module
+
+- Create return records for finished goods and raw materials
+- Link product returns to invoices and client accounts
+- Link material returns to vendor vouchers and inventory adjustments
+- Track return quantities, rates, and total amounts
+- Review return history and record timestamps for audit purposes
+
+______________________________________________________________________
+
+## Pages in this module
 
 The module includes separate pages for product and material returns.
 
@@ -17,17 +31,7 @@ The module includes separate pages for product and material returns.
 
 ______________________________________________________________________
 
-## Key features
-
-- Create return records for finished goods and raw materials
-- Link product returns to invoices and client accounts
-- Link material returns to vendor vouchers and inventory adjustments
-- Track return quantities, rates, and total amounts
-- Review return history and record timestamps for audit purposes
-
-______________________________________________________________________
-
-## How to use this module
+## Typical workflow
 
 1. Open **Return Management** in the sidebar.
 1. Select **Product Returns** or **Material Returns** from the submenu.

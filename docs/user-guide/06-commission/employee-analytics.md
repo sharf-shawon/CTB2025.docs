@@ -1,8 +1,14 @@
+---
+tags: [module:commission, task:report, role:accountant]
+---
+
 # Employee Analytics
 
 ## Summary
 
 Use this page to review employee commission analytics records. The system generates entries automatically for completed campaigns, and you can add records manually when needed.
+
+______________________________________________________________________
 
 ## When to use this page
 
@@ -11,15 +17,21 @@ Use this page to review employee commission analytics records. The system genera
 - When you need to process expired campaigns that have not yet generated analytics.
 - When you need to add or correct an employee commission record manually.
 
+______________________________________________________________________
+
 ## How to access this page
 
 Open **Commission and Campaigns → Employee Analytics** in the sidebar.
+
+______________________________________________________________________
 
 ## Prerequisites
 
 - The campaign must exist and include employees and product targets.
 - The campaign date range should be complete or the campaign should be expired.
 - Sales and payment data must be available for the campaign.
+
+______________________________________________________________________
 
 ## Step-by-step instructions
 
@@ -30,6 +42,8 @@ Open **Commission and Campaigns → Employee Analytics** in the sidebar.
 1. If a campaign has ended but entries are missing, click **Process Expired Campaigns**.
 1. Click the top-right **+** button to add a manual employee commission analytics record.
 1. Complete the manual entry form and save after verifying the values.
+
+______________________________________________________________________
 
 ## Field reference
 
@@ -44,6 +58,8 @@ Open **Commission and Campaigns → Employee Analytics** in the sidebar.
 - **Status** — Processing state of the analytics record, such as `Calculated`, `Pending`, `Approved`, or `Paid`.
 
 <!-- TODO: screenshot docs/user-guide/06-commission/employee-analytics-list-page.png -->
+
+______________________________________________________________________
 
 ## Add employee analytics manually
 
@@ -73,12 +89,16 @@ Use the manual entry form when automatic analytics are missing or a correction i
 - **Commission Rate** — Fixed commission amount per unit achieved.
 - **Commission Amount** — Calculated as `Achievement Qty × Commission Rate`.
 
+______________________________________________________________________
+
 ## Tips and common issues
 
 - Use **Process Expired Campaigns** if the system did not generate records automatically after the campaign end date.
 - Manual entries are useful when the automatic commission calculation is incomplete or when a correction is required.
 - Confirm the campaign name, employee, and product match the original campaign setup before saving a manual record.
 - The manual add form includes fields such as **Target Qty**, **Total Sales Amount**, **Payment Collection %**, and **Commission Rate**.
+
+______________________________________________________________________
 
 ## Related pages
 

@@ -1,3 +1,7 @@
+---
+tags: [module:trade, task:view, role:accountant]
+---
+
 # Print Chalan
 
 Use this page to generate a printable or PDF version of a chalan. A chalan is a delivery document that shows what goods are being shipped to a client without displaying pricing information. The chalan is a useful document for tracking shipments and confirming delivery. The chalan print option is available only when an invoice status is **Sent**.
@@ -6,6 +10,8 @@ Use this page to generate a printable or PDF version of a chalan. A chalan is a 
 
 Use this page to generate delivery documentation for shipments without showing financial values. It helps operations teams confirm dispatch details while keeping pricing hidden.
 
+______________________________________________________________________
+
 ## When to use this page
 
 - Generating a chalan to send with physical shipments to track goods in transit
@@ -13,9 +19,11 @@ Use this page to generate delivery documentation for shipments without showing f
 - Creating a record of what was delivered without disclosing prices
 - Archiving delivery documentation for shipment tracking
 
+______________________________________________________________________
+
 ## How to access this page
 
-From the sidebar, go to **Trade Management → Invoices**. On the Invoices List page, select an invoice with a **Sent** status. Open the invoice detail page and click the **Chalan** button.
+From the sidebar, go to **Trade → Invoices**. On the Invoices List page, select an invoice with a **Sent** status. Open the invoice detail page and click the **Chalan** button.
 
 ![Print Chalan Button](chalan-button.png)
 
@@ -37,7 +45,7 @@ ______________________________________________________________________
 
 ## Step-by-step instructions
 
-1. Navigate to the **Invoices list** from **Trade Management → Invoices**
+1. Go to the **Invoices list** from **Trade → Invoices**
 1. Find and select the invoice for which you want to print a chalan (ensure its status is **Sent**)
 1. Click on the invoice to open the **Invoice Detail page**
 1. Click the **Chalan** button located at the top of the page
@@ -48,7 +56,7 @@ ______________________________________________________________________
 
 !!! note "Browser Print Dialog"
 
-    The exact print options depend on your browser. Most modern browsers allow you to save as PDF directly from the print dialog.
+    The exact print options depend on your browser. Most modern browsers can save as PDF directly from the print dialog.
 
 ______________________________________________________________________
 
@@ -62,7 +70,7 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## Chalan View Details
+## Chalan view details
 
 The chalan preview includes the following information:
 

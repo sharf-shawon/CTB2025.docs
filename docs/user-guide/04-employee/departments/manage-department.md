@@ -1,10 +1,16 @@
+---
+tags: [module:employee, task:edit, role:hr]
+---
+
 # Manage Department
+
+## Summary
 
 Use this page to add or edit a department within your organization. Departments help organize employees by function or team, making it easier to manage roles, reporting, and permissions.
 
 ______________________________________________________________________
 
-## When to use Manage Department
+## When to use this page
 
 - Creating a new department for your organization
 - Editing the name, description, or status of an existing department
@@ -13,15 +19,25 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## How to access Manage Department page
+## How to access this page
 
-From the sidebar, go to **Employee Management → Departments**. On the Departments List page, click the **purple (+) icon** in the top-right corner to add a new department, or select an existing department to edit.
+From the sidebar, go to **Employee → Departments**. On the Departments List page, click the **purple (+) icon** in the top-right corner to add a new department, or select an existing department to edit.
 
 The system opens the **Manage Department** page.
 
 ______________________________________________________________________
 
-## Department Information
+## Step-by-step instructions
+
+1. Open **Manage Department** from the **Employee** section of the sidebar.
+1. Complete the **Department information** section described below.
+1. Follow **Saving the Department** below to finish.
+
+______________________________________________________________________
+
+## Field reference
+
+### Department information
 
 Fill in the following fields in the Department Information section:
 
@@ -40,7 +56,7 @@ Fill in the following fields in the Department Information section:
 
 ______________________________________________________________________
 
-## Audit Information
+## Audit information
 
 The **Audit Information** section displays system-generated details about who created or last modified the department record. This section is read-only and helps with compliance and tracking changes.
 
@@ -58,7 +74,7 @@ The department will now be available for employee assignment and reporting.
 
 ______________________________________________________________________
 
-## Tips and Common Issues
+## Tips and common issues
 
 - **Department Name is required** — You must enter a unique name before saving
 - **Is Enabled** — Only enabled departments can be assigned to employees
@@ -66,7 +82,7 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## Related Pages
+## Related pages
 
 - **Employees** — Assign employees to departments
 - **Positions** — Manage job roles within departments

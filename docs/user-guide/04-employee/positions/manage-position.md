@@ -1,10 +1,16 @@
+---
+tags: [module:employee, task:edit, role:hr]
+---
+
 # Manage Position
+
+## Summary
 
 Use this page to add or edit a position within your organization. Positions define the job roles or titles held by employees, making it easier to manage responsibilities, reporting structures, and workforce organization.
 
 ______________________________________________________________________
 
-## When to use Manage Position
+## When to use this page
 
 - Creating a new job position for your organization
 - Editing the name, description, or status of an existing position
@@ -13,15 +19,25 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## How to access Manage Position page
+## How to access this page
 
-From the sidebar, go to **Employee Management → Positions**. On the Positions List page, click the **purple (+) icon** in the top-right corner to add a new position, or select an existing position to edit.
+From the sidebar, go to **Employee → Positions**. On the Positions List page, click the **purple (+) icon** in the top-right corner to add a new position, or select an existing position to edit.
 
 The system opens the **Manage Position** page.
 
 ______________________________________________________________________
 
-## Position Information
+## Step-by-step instructions
+
+1. Open **Manage Position** from the **Employee** section of the sidebar.
+1. Complete the **Position information** section described below.
+1. Follow **Saving the Position** below to finish.
+
+______________________________________________________________________
+
+## Field reference
+
+### Position information
 
 ![Manage Position Page](manage-position-page.png)
 
@@ -40,7 +56,7 @@ Fill in the following fields in the Position Information section:
 
 ______________________________________________________________________
 
-## Audit Information
+## Audit information
 
 The **Audit Information** section displays system-generated details about who created or last modified the position record. Click the section header to expand it. This section is read-only and helps with compliance and change tracking.
 
@@ -78,7 +94,7 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## Related Pages
+## Related pages
 
 - **Positions Overview** — View and manage all positions in the system
 - **Employees** — Assign positions to employee profiles

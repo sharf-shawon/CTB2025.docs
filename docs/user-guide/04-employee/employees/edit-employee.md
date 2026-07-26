@@ -1,6 +1,14 @@
+---
+tags: [module:employee, task:edit, role:hr]
+---
+
 # Edit Employee
 
+## Summary
+
 Use this page to update an existing employee’s information. The edit page contains the same core employee fields as the add page, but the values are already filled in and any changes affect attendance, payroll, wages, and payouts.
+
+______________________________________________________________________
 
 ## When to use this page
 
@@ -8,6 +16,8 @@ Use this page to update an existing employee’s information. The edit page cont
 - Changing an employee’s status, position, or department
 - Adjusting salary settings or balance limits
 - Replacing identity documents or profile photos
+
+______________________________________________________________________
 
 ## How to access this page
 
@@ -20,16 +30,20 @@ The system opens the **Edit Employee** page.
 
 ______________________________________________________________________
 
-## What’s different from Add Employee
+## Step-by-step instructions
 
-- The fields are **pre-filled** with existing employee data.
-- You are **modifying** an existing employee rather than creating a new record.
-- Some values may already reflect historical payroll or attendance settings.
-- Changes can affect future payroll and reporting.
+1. Open **Edit Employee** from the **Employee** section of the sidebar.
+1. Complete the **General information** section described below.
+1. Complete the **Emergency contact** section described below.
+1. Complete the **Employment details** section described below.
+1. Complete the **Salary information** section described below.
+1. Follow **Saving changes** below to finish.
 
 ______________________________________________________________________
 
-## General Information
+## Field reference
+
+### General information
 
 ![Edit Employee General Information](edit-employee-personal-info.png)
 
@@ -50,9 +64,7 @@ Update the following fields as needed:
 | NID Card Front Photo | Replace             | Upload an updated image if needed         |
 | NID Card Back Photo  | Replace             | Upload an updated image if needed         |
 
-______________________________________________________________________
-
-## Emergency Contact
+### Emergency contact
 
 ![Emergency Contact Section](edit-employee-emargency-info.png)
 
@@ -62,9 +74,7 @@ ______________________________________________________________________
 | Emergency Phone Number | Edit                | Backup contact number         |
 | Emergency Address      | Edit                | Emergency contact address     |
 
-______________________________________________________________________
-
-## Employment Details
+### Employment details
 
 ![Employment Details Section](edit-employee-work-delails.png)
 
@@ -80,9 +90,7 @@ ______________________________________________________________________
 
     Changing position, department, or balance-related fields can affect payroll and reporting.
 
-______________________________________________________________________
-
-## Salary Information
+### Salary information
 
 ![Salary Information Section](edit-employee-salary-info.png)
 
@@ -96,7 +104,16 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## Saving Changes
+## What’s different from add Employee
+
+- The fields are **pre-filled** with existing employee data.
+- You are **modifying** an existing employee rather than creating a new record.
+- Some values may already reflect historical payroll or attendance settings.
+- Changes can affect future payroll and reporting.
+
+______________________________________________________________________
+
+## Saving changes
 
 After updating the required fields:
 
@@ -117,7 +134,7 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## Related Pages
+## Related pages
 
 - **Add Employee** — Create a new employee record
 - **Employee Detail** — Review the full employee profile

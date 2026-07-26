@@ -1,8 +1,14 @@
+---
+tags: [module:returns, task:view, role:staff]
+---
+
 # Manage Material Returns
 
 ## Summary
 
 Use this page to record and process returned raw materials. Material return records track vendor returns, return quantities, return rates, and the total amount for each return.
+
+______________________________________________________________________
 
 ## When to use this page
 
@@ -11,9 +17,13 @@ Use this page to record and process returned raw materials. Material return reco
 - When you adjust inventory for returned materials
 - When you update vendor balances after a material return
 
+______________________________________________________________________
+
 ## How to access this page
 
 Open **Return Management → Material Returns** in the sidebar. On the Material Returns list page, click the **purple (+) icon** or **Add** to create a new record.
+
+______________________________________________________________________
 
 ## Prerequisites
 
@@ -23,13 +33,24 @@ Open **Return Management → Material Returns** in the sidebar. On the Material 
 
 ______________________________________________________________________
 
+## Step-by-step instructions
+
+1. Go to **Returns → Material Returns** and click the **purple (+) icon**.
+1. Select the **Vendor** and the **Voucher** the return applies to.
+1. Set the **Return Date** and enter a **Return Reason/Note**.
+1. Add a returned item: select the **Material**, then enter **Return Quantity** and **Return Rate**.
+1. Click **Add another Material Return Item** for each additional material returned.
+1. Check the auto-calculated **Total Amount**, then save the record.
+
+______________________________________________________________________
+
 ## Field reference
 
 ![Add Material Return](add-material-return.png)
 
 | Field                  | What to do                 | Description                                                                                                       |
 | ---------------------- | -------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| **Vendor**             | Select vendor              | The supplier returning raw materials                                                                              |
+| **Vendor**             | Select vendor              | The vendor returning raw materials                                                                                |
 | **Voucher**            | Choose an existing voucher | Links the return to a return voucher or adjustment                                                                |
 | **Return Date**        | Choose a date              | Date when the material return took place                                                                          |
 | **Return Reason/Note** | Enter return note          | Reason or comment for the material return                                                                         |
@@ -44,6 +65,8 @@ ______________________________________________________________________
 
 - **Remove** — Click to delete a material return item row.
 - **Add another Material Return Item** — Add a new item row for additional returned materials.
+
+______________________________________________________________________
 
 ## Tips and common issues
 

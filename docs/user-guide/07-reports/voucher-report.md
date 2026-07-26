@@ -1,8 +1,14 @@
+---
+tags: [module:reports, task:report, role:accountant]
+---
+
 # Voucher Report
 
 ## Summary
 
 This page displays a detailed, line-item breakdown of all vouchers and accounting entries — including vendor transactions, material purchases, and expense records — showing quantity, rate, and total amounts for each entry. It also provides advanced filtering to narrow down results by date, vendor, and material.
+
+______________________________________________________________________
 
 ## When to use this page
 
@@ -12,14 +18,20 @@ This page displays a detailed, line-item breakdown of all vouchers and accountin
 - When you want to track material purchases and associated costs across the reporting period.
 - When you need to review accounting entries for reconciliation or audit purposes.
 
+______________________________________________________________________
+
 ## How to access this page
 
 Open **Reports → Voucher Report** in the sidebar.
 
+______________________________________________________________________
+
 ## Prerequisites
 
-- User must have access to the **Reports** module.
+- You have access to the **Reports** module.
 - Vouchers or accounting entries must exist in the system for data to appear.
+
+______________________________________________________________________
 
 ## Step-by-step instructions
 
@@ -34,6 +46,8 @@ Open **Reports → Voucher Report** in the sidebar.
 1. Click **Apply Filters** to update the table with the selected criteria.
 1. Review the table for line-item details, and check the summary row for totals across quantity and value.
 
+______________________________________________________________________
+
 ## Field reference
 
 | Field        | Description                                                                                                                                               |
@@ -45,6 +59,8 @@ Open **Reports → Voucher Report** in the sidebar.
 | **Quantity** | The number of units or quantity amount for that line item                                                                                                 |
 | **Rate**     | The rate per unit for the material or service                                                                                                             |
 | **Total**    | The total value of the line item (Quantity × Rate)                                                                                                        |
+
+______________________________________________________________________
 
 ## Filter panel reference
 
@@ -58,6 +74,8 @@ Open **Reports → Voucher Report** in the sidebar.
 | **By Material**     | Text search field to filter results by a specific material or expense type                                                                                  |
 | **Apply Filters**   | Applies the selected filter criteria to refresh the table                                                                                                   |
 
+______________________________________________________________________
+
 ## Tips and common issues
 
 !!! tip
@@ -67,3 +85,9 @@ Open **Reports → Voucher Report** in the sidebar.
 !!! note
 
     Vouchers may include both material purchases and expense entries. Filter by **Material** to isolate specific types of transactions.
+
+______________________________________________________________________
+
+## Related pages
+
+- **[Reports](../README.md)** — All pages in this module.

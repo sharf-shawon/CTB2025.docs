@@ -1,6 +1,14 @@
+---
+tags: [module:factory, task:edit, role:staff]
+---
+
 # Edit Product
 
+## Summary
+
 Use this page to update an existing product's information in CTB Admin. This includes product details, materials composition, pricing, and inventory settings.
+
+______________________________________________________________________
 
 ## When to use this page
 
@@ -10,6 +18,8 @@ Use this page to update an existing product's information in CTB Admin. This inc
 - Adjusting stock levels or restock thresholds
 - Enabling or disabling a product from sales
 - Modifying cost calculations
+
+______________________________________________________________________
 
 ## How to access this page
 
@@ -21,7 +31,22 @@ Use this page to update an existing product's information in CTB Admin. This inc
 
 The system opens the **Edit Product Page**.
 
-## General Information
+______________________________________________________________________
+
+## Step-by-step instructions
+
+1. Open **Edit Product** from the **Factory** section of the sidebar.
+1. Complete the **General information** section described below.
+1. Complete the **Pricing and costing information** section described below.
+1. Complete the **Product costings (Materials)** section described below.
+1. Complete the **Stock and Inventory** section described below.
+1. Follow **Saving changes** below to finish.
+
+______________________________________________________________________
+
+## Field reference
+
+### General information
 
 ![General Information Section](product-general-information.png)
 
@@ -42,7 +67,7 @@ Update the following fields as needed:
 
     Changing the **Unit** after invoices are created can cause calculation errors. Avoid unless necessary.
 
-## Pricing and Costing Information
+### Pricing and costing information
 
 ![Pricing and Costing Section](product-pricing-information.png)
 
@@ -60,7 +85,7 @@ Update the following fields as needed:
 
     **Materials Cost**, **Total Cost**, and **Profit** are automatically calculated. Do not edit these fields directly.
 
-## Product Costings (Materials)
+### Product costings (Materials)
 
 ![Product Costings Tab](product-costing-page.png)
 
@@ -76,7 +101,7 @@ This tab defines which materials are used to manufacture this product:
 
 Click **Add another Product Costing** to add more materials to the composition.
 
-## Stock and Inventory
+### Stock and Inventory
 
 ![Stock Section](product-stock-status.png)
 
@@ -90,7 +115,9 @@ Click **Add another Product Costing** to add more materials to the composition.
 
     Editing **Stock** manually should be avoided. Use **Inventory In** or **Inventory Out** transactions to maintain a complete audit trail.
 
-## Saving Changes
+______________________________________________________________________
+
+## Saving changes
 
 After updating the required fields:
 
@@ -98,7 +125,15 @@ After updating the required fields:
 - Changes are immediately reflected across the system
 - Pricing and costing calculations update automatically
 
-## Tips and Common Issues
+______________________________________________________________________
+
+## Product history
+
+Click the **History** button in the top-right corner to see all changes made to this product, including who made the change, when, and what was modified.
+
+______________________________________________________________________
+
+## Tips and common issues
 
 - The **SKU** field cannot be changed after a product is created
 - Disabling a product prevents it from being used in new invoices
@@ -107,11 +142,9 @@ After updating the required fields:
 - If **Total Cost** exceeds **Selling Rate**, profit becomes negative — review pricing regularly
 - Every change to this product is logged in the **History** tab
 
-## Product History
+______________________________________________________________________
 
-Click the **History** button in the top-right corner to see all changes made to this product, including who made the change, when, and what was modified.
-
-## Related Pages
+## Related pages
 
 - **Add Product** — Create a new product
 - **Products Overview** — View and search all products

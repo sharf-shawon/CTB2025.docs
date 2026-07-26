@@ -1,3 +1,7 @@
+---
+tags: [module:trade, task:create, role:accountant]
+---
+
 # Add Check
 
 Use this page to register a new bank check in CTB Admin. When you receive a physical check from a client or issue a check to a vendor, create a check record to track the check number, amount, bank, date, and status. Check records help you monitor check usage, link payments to specific checks, and manage your bank account balances.
@@ -5,6 +9,8 @@ Use this page to register a new bank check in CTB Admin. When you receive a phys
 ## Summary
 
 Use this page to create a new check record that can later be linked to payments and bank reconciliation. Accurate check setup helps you track balances, dates, and status changes.
+
+______________________________________________________________________
 
 ## When to use this page
 
@@ -15,19 +21,25 @@ Use this page to create a new check record that can later be linked to payments 
 - Linking check payments to update client and vendor balances
 - Managing check documentation with photos for verification
 
+______________________________________________________________________
+
 ## How to access this page
 
 From the sidebar, go to **Trade → Checks**. On the Checks List page, click the **purple (+) icon** in the top-right corner.
 
 The system opens the **Add Check Page**.
 
+______________________________________________________________________
+
 ## Step-by-step instructions
 
-1. Open **Trade -> Checks** and click the add icon.
+1. Open **Trade → Checks** and click the add icon.
 1. Fill in the check number, bank, date, amount, type, and related party.
 1. Set the initial status and upload optional front and back photos.
 1. Review linked payments section if needed.
 1. Click the appropriate save action to create the check.
+
+______________________________________________________________________
 
 ## Field reference
 
@@ -41,7 +53,7 @@ The system opens the **Add Check Page**.
 
 ______________________________________________________________________
 
-## Check Information
+## Check information
 
 ![Check Information Section](add-check-general-tab.png)
 
@@ -64,7 +76,7 @@ Fill in the following fields:
 
 ______________________________________________________________________
 
-## Status Information
+## Status information
 
 ![Status Information Section](add-check-status-information.png)
 
@@ -84,7 +96,7 @@ Set the check status and upload supporting documents:
 
 ______________________________________________________________________
 
-## Payments Section
+## Payments section
 
 The Payments section at the bottom shows all payments linked to this check:
 
@@ -129,7 +141,7 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## Related Pages
+## Related pages
 
 - **Checks Overview** — View all checks and their balances
 - **Check Detail** — View check status and linked payments

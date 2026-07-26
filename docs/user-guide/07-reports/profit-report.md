@@ -1,8 +1,14 @@
+---
+tags: [module:reports, task:report, role:accountant]
+---
+
 # Profit Report
 
 ## Summary
 
 This page provides a consolidated financial overview of invoices — both regular trade invoices and tender invoices — for a selected date range. It combines summary metrics, product-level revenue breakdowns, client distribution, and monthly trends to help users understand overall business performance and profitability.
+
+______________________________________________________________________
 
 ## When to use this page
 
@@ -12,14 +18,20 @@ This page provides a consolidated financial overview of invoices — both regula
 - When you want to track how revenue and profit are trending month over month.
 - When you need to compare performance between **Regular Invoices** and **Tender Invoices** separately.
 
+______________________________________________________________________
+
 ## How to access this page
 
 Open **Report → Profit Report** in the sidebar.
 
+______________________________________________________________________
+
 ## Prerequisites
 
-- User must have access to the **Trade Management** module.
+- You have access to the **Trade** module.
 - At least one invoice (regular or tender) must exist within the selected date range for data to appear.
+
+______________________________________________________________________
 
 ## Step-by-step instructions
 
@@ -32,7 +44,11 @@ Open **Report → Profit Report** in the sidebar.
 1. Scroll to **Tender Invoices Analytics** to review tender-specific invoice performance.
 1. Use the charts to identify top products, top clients, and monthly trends.
 
-## Section reference
+______________________________________________________________________
+
+## Field reference
+
+### Section reference
 
 ![Invoice Reports & Analytics page](profit-report-img.png)
 
@@ -42,14 +58,14 @@ Open **Report → Profit Report** in the sidebar.
 - **Client** — Filters the report to show data for a single client, or all clients combined.
 - **Apply Filters** — Button that refreshes all report data based on the selected filter values.
 
-### Summary Cards
+### Summary cards
 
 - **Total Invoices** — The total number of invoices issued within the selected date range.
 - **Total Revenue** — The combined revenue (in Tk) generated from all invoices in the period.
 - **Total Profit** — The combined profit (in Tk) earned from all invoices in the period.
 - **Profit Margin** — Profit expressed as a percentage of revenue, indicating overall profitability.
 
-### Regular Invoices Analytics
+### Regular Invoices analytics
 
 This section covers performance data for standard (non-tender) invoices.
 
@@ -57,13 +73,15 @@ This section covers performance data for standard (non-tender) invoices.
 - **Revenue by Client** — A pie chart showing the percentage share of revenue contributed by each client (e.g., Unicef, Mahbub Mia, European Bag, Bismillah Bag Bazar).
 - **Monthly Revenue Trend** — A line chart comparing **Revenue** and **Profit** month by month, helping identify whether performance is increasing or declining over time.
 
-### Tender Invoices Analytics
+### Tender Invoices analytics
 
 This section covers performance data specifically for tender-based invoices, mirroring the structure of the Regular Invoices section.
 
 - **Top Products by Revenue** — A bar chart showing which products generated the highest revenue among tender invoices (e.g., Seven Rings).
 - **Revenue by Client** — A pie chart showing the percentage share of tender revenue contributed by each client (e.g., Seven Rings Bag, Mahbub Mia).
 - **Monthly Revenue Trend** — A line chart comparing **Revenue** and **Profit** for tender invoices month by month.
+
+______________________________________________________________________
 
 ## Notes
 
@@ -73,6 +91,10 @@ This section covers performance data specifically for tender-based invoices, mir
 
 !!! tip
 
-    Use the **Client filter** combined with a narrow date range to analyze performance for a single customer over a specific period.
+    Use the **Client filter** combined with a narrow date range to analyze performance for a single client over a specific period.
+
+______________________________________________________________________
 
 ## Related pages
+
+- **[Reports](../README.md)** — All pages in this module.

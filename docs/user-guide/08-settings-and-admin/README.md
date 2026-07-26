@@ -1,12 +1,20 @@
+---
+tags: [module:settings, task:configure, role:admin]
+---
+
 # Settings and Admin
 
 Use the Settings and Admin module to control access, adjust system-wide behavior, manage SMS settings, and enable maintenance mode.
+
+______________________________________________________________________
 
 ## Summary
 
 This section is for administrators who need to keep CTB Admin secure and correctly configured. Use it to manage users, review audit trails, and adjust global settings that affect the whole system.
 
-## What you can do in this section
+______________________________________________________________________
+
+## What you can do in this module
 
 - Manage user accounts and permissions.
 - Review audit logs.
@@ -14,7 +22,9 @@ This section is for administrators who need to keep CTB Admin secure and correct
 - Configure SMS notifications.
 - Enable or disable maintenance mode.
 
-## Module structure
+______________________________________________________________________
+
+## Pages in this module
 
 | Module            | Purpose                                         |
 | ----------------- | ----------------------------------------------- |
@@ -24,6 +34,8 @@ This section is for administrators who need to keep CTB Admin secure and correct
 | Maintenance Mode  | Temporarily restrict access during maintenance. |
 | Audit Log         | Review who changed data and when.               |
 
+______________________________________________________________________
+
 ## Typical workflow
 
 1. Create or update the user account.
@@ -31,7 +43,9 @@ This section is for administrators who need to keep CTB Admin secure and correct
 1. Update app settings or SMS settings when business rules change.
 1. Turn on maintenance mode before disruptive updates.
 
-## Related sections
+______________________________________________________________________
+
+## Related pages
 
 - Employee - Staff records that often depend on user access.
 - Reference - Shared documentation for release and support workflows.

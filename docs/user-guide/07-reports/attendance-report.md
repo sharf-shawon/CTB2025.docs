@@ -1,3 +1,7 @@
+---
+tags: [module:reports, task:report, role:accountant]
+---
+
 # Attendance Report
 
 ## Summary
@@ -6,6 +10,8 @@ The Monthly Attendance Report shows a day-by-day attendance grid for all employe
 
 <!-- TODO: screenshot docs/user-guide/screenshots/reports/attendance-report.png -->
 
+______________________________________________________________________
+
 ## When to use this page
 
 - You need a month-level view of employee attendance for payroll or review
@@ -13,15 +19,21 @@ The Monthly Attendance Report shows a day-by-day attendance grid for all employe
 - You need a printable monthly attendance summary for management
 - You need to identify late arrivals, early departures or overtime at a glance
 
+______________________________________________________________________
+
 ## How to access this page
 
 Open **Employee → Attendances → Monthly Attendance Report** in the left sidebar.
+
+______________________________________________________________________
 
 ## Prerequisites
 
 - Permission to view Reports or Attendance pages (HR or manager role)
 - Employee records must exist in **Employees**
 - Attendance entries (time-in / time-out) must be recorded for the chosen month
+
+______________________________________________________________________
 
 ## Step-by-step instructions
 
@@ -34,6 +46,8 @@ Open **Employee → Attendances → Monthly Attendance Report** in the left side
 1. Review the right-side summary columns for each employee (totals for present, late, overtime, etc.)
 1. Use the legend below the table to interpret cell color codes (full shift, partial, leave, overtime, late/early)
 1. Click **Print Report** (top-left) to print or export the current view
+
+______________________________________________________________________
 
 ## Field reference
 
@@ -59,12 +73,16 @@ Open **Employee → Attendances → Monthly Attendance Report** in the left side
     - Late arrival or early departure
     - Total present/attendance summary
 
+______________________________________________________________________
+
 ## Tips and common issues
 
 - If many rows show empty cells, confirm that automatic time capture or manual attendance entries were recorded for that month
 - Narrow the date range when the report is slow to load for large employee lists
 - Use the employee link (left column) to open an employee's attendance detail when investigating a specific row
 - Overtime and late counts depend on your organisation's shift rules — verify shift settings if totals look unexpected
+
+______________________________________________________________________
 
 ## Related pages
 

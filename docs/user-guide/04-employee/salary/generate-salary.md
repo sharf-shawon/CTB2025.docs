@@ -1,8 +1,16 @@
+---
+tags: [module:employee, task:edit, role:hr]
+---
+
 # Generate Salary
+
+## Summary
 
 Use this page to create a salary record for an employee in CTB Admin. A salary record calculates the payable amount for a specific employee and month based on their salary rate, work units, overtime, bonuses, and deductions. Salary records are used to manage monthly or periodic compensation and maintain a complete payroll history.
 
-## When to use Generate Salary page
+______________________________________________________________________
+
+## When to use this page
 
 - Generating a monthly salary entry for an employee
 - Recording salary payments with bonuses or deductions
@@ -10,15 +18,29 @@ Use this page to create a salary record for an employee in CTB Admin. A salary r
 - Marking a salary as paid and recording the payment date
 - Tracking outstanding salary balances before processing payroll
 
-## How to access Generate Salary page
+______________________________________________________________________
 
-From the sidebar, go to **Employee Management → Salaries**. On the Salaries List page, click the **purple (+) icon** in the top-right corner.
+## How to access this page
+
+From the sidebar, go to **Employee → Salaries**. On the Salaries List page, click the **purple (+) icon** in the top-right corner.
 
 The system opens the **Generate Salary** page.
 
 ______________________________________________________________________
 
-## General Information
+## Step-by-step instructions
+
+1. Open **Generate Salary** from the **Employee** section of the sidebar.
+1. Complete the **General information** section described below.
+1. Complete the **Salary components** section described below.
+1. Complete the **Payment details** section described below.
+1. Follow **Saving the Salary record** below to finish.
+
+______________________________________________________________________
+
+## Field reference
+
+### General information
 
 ![Generate Salary General Information](generate-salary-general-info.png)
 
@@ -33,9 +55,7 @@ Fill in the following fields:
 
     Fields marked with a **red star (\*)** are mandatory. Employee and Month must be filled before saving.
 
-______________________________________________________________________
-
-## Salary Components
+### Salary components
 
 ![Salary Components Section](generate-salary-componant-section.png)
 
@@ -59,9 +79,7 @@ Enter the salary calculation fields:
 
     Set **Salary** to **0** to apply the default salary rate configured on the employee's profile.
 
-______________________________________________________________________
-
-## Payment Details
+### Payment details
 
 ![Payment Details Section](generate-salary-payment-detail.png)
 
@@ -79,7 +97,7 @@ Record whether this salary has been paid:
 
 ______________________________________________________________________
 
-## Related Records
+## Related records
 
 The **Related Records** section at the bottom is a collapsible section that displays any linked records associated with this salary entry, such as attendance record
 
@@ -89,7 +107,7 @@ The **Related Records** section at the bottom is a collapsible section that disp
 
 ______________________________________________________________________
 
-## Saving the Salary Record
+## Saving the Salary record
 
 After completing all sections:
 
@@ -99,7 +117,7 @@ After completing all sections:
 
 ______________________________________________________________________
 
-## Deleting a Salary Record
+## Deleting a Salary record
 
 A **Delete Salary** button is available at the bottom-left of the page.
 
@@ -122,10 +140,10 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## Related Pages
+## Related pages
 
 - **Salaries Overview** — View and manage all salary records
 - **Employees** — Manage employee profiles and default salary rates
 - **Wages** — Record production-based wage entries for employees
-- **Payouts** — Process and track salary disbursements
+- **Payouts** — Process and track salary payouts
 - **Attendance** — Review attendance records used for salary unit calculation

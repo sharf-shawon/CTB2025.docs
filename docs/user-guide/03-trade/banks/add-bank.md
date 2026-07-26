@@ -1,6 +1,14 @@
+---
+tags: [module:trade, task:create, role:accountant]
+---
+
 # Add Bank
 
+## Summary
+
 Use this page to register a new bank account in CTB Admin. When you open a new bank account or need to track an existing one, create a bank record to manage its name, balance limits, branch details, and account information. Bank records help you monitor balances, link checks and payments, and maintain accurate financial records.
+
+______________________________________________________________________
 
 ## When to use this page
 
@@ -10,15 +18,30 @@ Use this page to register a new bank account in CTB Admin. When you open a new b
 - Managing branch and account details for a bank
 - Enabling or disabling a bank account from active use
 
+______________________________________________________________________
+
 ## How to access this page
 
-From the sidebar, go to **Trade Management → Banks**. On the Banks List page, click the **purple (+) icon** in the top-right corner.
+From the sidebar, go to **Trade → Banks**. On the Banks List page, click the **purple (+) icon** in the top-right corner.
 
 The system opens the **Add Bank Page**.
 
 ______________________________________________________________________
 
-## Bank Information
+## Step-by-step instructions
+
+1. Open **Add Bank** from the **Trade** section of the sidebar.
+1. Complete the **Bank information** section described below.
+1. Complete the **Balance information** section described below.
+1. Complete the **Branch details** section described below.
+1. Complete the **Account details** section described below.
+1. Follow **Saving the Bank record** below to finish.
+
+______________________________________________________________________
+
+## Field reference
+
+### Bank information
 
 ![Bank Information Section](add-bank-bank-info.png)
 
@@ -34,9 +57,7 @@ Fill in the following fields:
 
     Fields marked with a **red star (\*)** are mandatory. Bank Name is required before saving.
 
-______________________________________________________________________
-
-## Balance Information
+### Balance information
 
 Configure the financial limits for this bank account:
 
@@ -50,9 +71,7 @@ Configure the financial limits for this bank account:
 
     Upper and Lower Balance Limits are used for financial monitoring. The system can notify you when the bank balance crosses either threshold.
 
-______________________________________________________________________
-
-## Branch Details
+### Branch details
 
 ![Branch Details Section](add-bank-branch-detail.png)
 
@@ -68,9 +87,7 @@ Click the **Branch Details** section to expand and fill in branch-specific infor
 
     Branch Details is a collapsible section. Click the header to expand it before entering data.
 
-______________________________________________________________________
-
-## Account Details
+### Account details
 
 ![Account Details Section](add-bank-account-detail.jpg)
 
@@ -88,7 +105,7 @@ Click the **Account Details** section to expand and fill in account-specific inf
 
 ______________________________________________________________________
 
-## Saving the Bank Record
+## Saving the Bank record
 
 After completing all sections:
 
@@ -111,7 +128,7 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## Related Pages
+## Related pages
 
 - **Banks Overview** — View all registered bank accounts and their balances
 - **Bank Detail** — View or edit bank information after creation

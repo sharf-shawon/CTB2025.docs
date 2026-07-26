@@ -1,18 +1,22 @@
+---
+tags: [module:employee, task:view, role:hr]
+---
+
 # Attendance Overview
+
+## Summary
 
 The **Attendance** module is the main control point for managing staff presence, absence, and shift records in CTB Admin. Use this page to review attendance status, check reports, and open records for correction or payroll review.
 
-## What you can do in this module
+______________________________________________________________________
 
-- **Review attendance records** — see daily or monthly attendance for each employee.
-- **Track attendance status** — confirm whether staff are marked present, absent, late, or on leave.
-- **Use filters** — narrow the list by date range, employee, status, or shift.
-- **Open records** — inspect or correct attendance entries when needed.
-- **Start manual entry** — add attendance records for staff who were not captured automatically.
+## When to use this page
+
+- When you need to work with attendance overview in CTB Admin.
 
 ______________________________________________________________________
 
-## How to access Attendance Overview page
+## How to access this page
 
 From the sidebar, go to **Employee → Attendance**.
 
@@ -20,7 +24,19 @@ The system opens the **Attendance List** page where all attendance records are d
 
 ______________________________________________________________________
 
-## List Page Columns and Fields
+## Step-by-step instructions
+
+1. Open **Attendance Overview** from the **Employee** section of the sidebar.
+1. Complete the **List page columns and fields** section described below.
+1. Complete the **Search and filter** section described below.
+1. Complete the **List actions** section described below.
+1. Review the values you entered, then save the record.
+
+______________________________________________________________________
+
+## Field reference
+
+### List page columns and fields
 
 ![Attendance List Page](attendance-list-page.png)
 
@@ -37,9 +53,7 @@ The Attendance list displays the following information for each record:
 | **Note**       | Explanation for exceptions, corrections, or manual adjustments    |
 | **Created By** | Username of the user who recorded or updated the attendance entry |
 
-______________________________________________________________________
-
-## Search and Filter
+### Search and filter
 
 Use the search and filter options to quickly locate records:
 
@@ -48,9 +62,7 @@ Use the search and filter options to quickly locate records:
 - **Date picker** — Select a start and end date to view a specific period
 - **Reset filters** — Use this when the page returns no results or the selected range is too narrow
 
-______________________________________________________________________
-
-## List Actions
+### List actions
 
 From the Attendance List page:
 
@@ -58,15 +70,23 @@ From the Attendance List page:
 - **Open record** — Click any row to view or edit the attendance entry
 - **Reset filters** — Clear filters and search text to restore the full list
 
-______________________________________________________________________
-
 !!! tip "Best practice"
 
     Review the date range and filter settings before opening records to avoid editing the wrong attendance entry.
 
 ______________________________________________________________________
 
-## Tips and Common Issues
+## What you can do in this module
+
+- **Review attendance records** — see daily or monthly attendance for each employee.
+- **Track attendance status** — confirm whether staff are marked present, absent, late, or on leave.
+- **Use filters** — narrow the list by date range, employee, status, or shift.
+- **Open records** — inspect or correct attendance entries when needed.
+- **Start manual entry** — add attendance records for staff who were not captured automatically.
+
+______________________________________________________________________
+
+## Tips and common issues
 
 - **Search by employee name first** — This is the fastest way to locate a single attendance record.
 - **Confirm the date range** — A narrow date filter can hide results that exist outside the selected period.
@@ -76,7 +96,7 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## Related Pages
+## Related pages
 
 - **[Record Attendance](record-attendance.md)** — Add or correct attendance entries manually.
 - **[Employees Overview](../employees/overview.md)** — Manage employee details used in attendance records.

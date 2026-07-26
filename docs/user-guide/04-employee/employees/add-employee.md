@@ -1,12 +1,22 @@
+---
+tags: [module:employee, task:create, role:hr]
+---
+
 # Add Employee
 
+## Summary
+
 Use this page to register a new employee in CTB Admin. An employee record stores personal information, emergency contact details, job assignment, and salary settings that are used for attendance, payroll, wages, and payouts.
+
+______________________________________________________________________
 
 ## When to use this page
 
 - Onboarding a new staff member before payroll starts
 - Creating an employee profile before recording attendance or salary data
 - Storing contact details, identity documents, and salary limits
+
+______________________________________________________________________
 
 ## How to access this page
 
@@ -16,7 +26,20 @@ The system opens the **Add Employee** page.
 
 ______________________________________________________________________
 
-## General Information
+## Step-by-step instructions
+
+1. Open **Add Employee** from the **Employee** section of the sidebar.
+1. Complete the **General information** section described below.
+1. Complete the **Emergency contact** section described below.
+1. Complete the **Employment details** section described below.
+1. Complete the **Salary information** section described below.
+1. Follow **Saving the Employee** below to finish.
+
+______________________________________________________________________
+
+## Field reference
+
+### General information
 
 ![Add Employee General Information](add-employee-personal-info.png)
 
@@ -41,9 +64,7 @@ Fill in the following fields:
 
     Fields marked with a **red star (\*)** are mandatory.
 
-______________________________________________________________________
-
-## Emergency Contact
+### Emergency contact
 
 ![Emergency Contact Section](add-employee-emargency-info.png)
 
@@ -53,9 +74,7 @@ ______________________________________________________________________
 | 2    | Emergency Phone Number | Enter the phone number | Backup contact number               |
 | 3    | Emergency Address      | Enter the address      | Emergency contact location          |
 
-______________________________________________________________________
-
-## Employment Details
+### Employment details
 
 ![Employment Details Section](add-employee-details-section.png)
 
@@ -71,9 +90,7 @@ ______________________________________________________________________
 
     The small action icons beside the position and department fields let you manage those linked records without leaving the page.
 
-______________________________________________________________________
-
-## Salary Information
+### Salary information
 
 ![Salary Information Section](add-employee-salary-details.png)
 
@@ -110,7 +127,7 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## Related Pages
+## Related pages
 
 - **Edit Employee** — Update an existing employee record
 - **Employee Detail** — Review the full employee profile

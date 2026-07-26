@@ -1,8 +1,16 @@
+---
+tags: [module:trade, task:view, role:accountant]
+---
+
 # Check Detail
+
+## Summary
 
 Use this page to view and manage a check after it has been created or received. The check detail page displays all information related to a check—general details, financial information, status, and supporting documents. You can update check status, add front and back photos, and track payment records linked to this check.
 
-## When to use Check Detail
+______________________________________________________________________
+
+## When to use this page
 
 - Viewing a complete check record with all details and payment information
 - Updating check status (Pending, Cleared, Bounced, etc.)
@@ -10,11 +18,26 @@ Use this page to view and manage a check after it has been created or received. 
 - Reviewing linked payments and transactions
 - Verifying check information for bank reconciliation
 
-## How to access Check Detail
+______________________________________________________________________
 
-From the sidebar, go to **Trade Management → Checks**. On the Checks List page, click on any check SKU or select a check to open the **Check Detail page**.
+## How to access this page
+
+From the sidebar, go to **Trade → Checks**. On the Checks List page, click on any check SKU or select a check to open the **Check Detail page**.
 
 ![Check Detail List Page ](check-detail-list-page.png)
+
+______________________________________________________________________
+
+## Step-by-step instructions
+
+1. Go to **Trade → Checks** from the sidebar.
+1. Click the check you want to open.
+1. Review the **Check information** section for the check number, bank, amount, and balance.
+1. Check the **Check dates** section for the dates recorded against the check.
+1. Review the **Payments** section to see what has been settled against the check.
+1. Update the check where its status allows, then save.
+
+______________________________________________________________________
 
 ## Field reference
 
@@ -28,7 +51,7 @@ From the sidebar, go to **Trade Management → Checks**. On the Checks List page
 
 ______________________________________________________________________
 
-## Check Information
+## Check information
 
 ![Check Information Section](check-info.png)
 
@@ -50,7 +73,7 @@ The Check Information section displays core check details:
 
 ______________________________________________________________________
 
-## Status Information
+## Status information
 
 ![Status Section](check-details-status-info.png)
 
@@ -96,7 +119,7 @@ The page includes two photo upload sections:
 
 ______________________________________________________________________
 
-## Check Dates Section
+## Check dates section
 
 | Field             | Description                                        |
 | ----------------- | -------------------------------------------------- |
@@ -112,7 +135,7 @@ These dates help track check timing for bank reconciliation:
 
 ______________________________________________________________________
 
-## Payments Tab
+## Payments tab
 
 The **Payments** section at the bottom tracks all payments or transactions linked to this check:
 

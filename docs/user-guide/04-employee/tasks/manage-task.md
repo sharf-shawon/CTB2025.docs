@@ -1,3 +1,7 @@
+---
+tags: [module:employee, task:edit, role:hr]
+---
+
 # Manage Task
 
 Use this page to create a new task or update an existing one. Tasks let you assign work to employees with priority levels, due dates, and progress tracking.
@@ -6,6 +10,8 @@ Use this page to create a new task or update an existing one. Tasks let you assi
 
 Use this page to create work items and keep track of employee assignments and task completion. Updates here affect task visibility and help managers monitor workload distribution and progress.
 
+______________________________________________________________________
+
 ## When to use this page
 
 - Assigning work to an employee
@@ -13,6 +19,8 @@ Use this page to create work items and keep track of employee assignments and ta
 - Updating task priority or due date
 - Adding or modifying task details and notes
 - Adjusting task assignments when personnel changes
+
+______________________________________________________________________
 
 ## How to access this page
 
@@ -23,7 +31,9 @@ Use this page to create work items and keep track of employee assignments and ta
 
 1. The system opens the **Task Form**
 
-## Editing an Existing Task
+______________________________________________________________________
+
+## Editing an existing Task
 
 ![Edit Task Page](edit-task-page.png)
 
@@ -33,6 +43,30 @@ All fields on this page can be updated at any time:
 - **Assigned To** — Reassign to another employee if needed
 - **Status** — Progress the task through its workflow
 - **Priority** — Adjust based on business needs
+
+______________________________________________________________________
+
+## Step-by-step instructions
+
+1. Go to **Employee → Tasks** from the sidebar.
+1. Click a **Task Name** to edit an existing task, or click the **purple (+) icon** to create one.
+1. Update the task name, description, assigned employee, priority, and due date as needed.
+1. Set the **Status** to reflect current progress.
+1. Save the task.
+
+______________________________________________________________________
+
+## Field reference
+
+| **Field**       | What to do                     | Description                                            |
+| --------------- | ------------------------------ | ------------------------------------------------------ |
+| **Task Name**   | Enter a short, specific title  | The name shown in the task list                        |
+| **Description** | Add detail or instructions     | Explains what the assigned employee needs to do        |
+| **Employee**    | Select the assignee            | The staff member responsible for completing the task   |
+| **Priority**    | Select a priority              | Indicates how urgently the task should be completed    |
+| **Status**      | Select the current state       | Whether the task is To Do, In Progress, or Completed   |
+| **Due Date**    | Choose the expected completion | The date the task is expected to be finished           |
+| **Note**        | Add optional context           | Internal comments or additional context about the task |
 
 ______________________________________________________________________
 
@@ -52,4 +86,4 @@ ______________________________________________________________________
 - **Tasks Overview** — View all tasks and their status
 - **Attendance Overview** — Track employee attendance records
 - **Salary Overview** — Manage employee payroll
-- **Employee Management** — Update employee information
+- **Employee** — Update employee information

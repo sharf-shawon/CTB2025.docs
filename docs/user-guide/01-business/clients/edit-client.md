@@ -1,3 +1,7 @@
+---
+tags: [module:business, task:edit, role:staff]
+---
+
 # Edit Client
 
 Use this page to update an existing client's information in CTB Admin. This includes contact details, identification documents, and financial settings.
@@ -6,12 +10,16 @@ Use this page to update an existing client's information in CTB Admin. This incl
 
 Use this page to keep existing client records accurate after profile, document, or balance changes. Updates made here immediately affect future transactions and reporting.
 
+______________________________________________________________________
+
 ## When to use this page
 
 - Updating client contact or business information
 - Changing client status (active/inactive)
 - Modifying balance limits or financial data
 - Updating identification documents or photos
+
+______________________________________________________________________
 
 ## How to access this page
 
@@ -21,13 +29,17 @@ Use this page to keep existing client records accurate after profile, document, 
 
 The system opens the **Edit Client Page**.
 
+______________________________________________________________________
+
 ## Step-by-step instructions
 
-1. Open **Business -> Clients** from the sidebar.
+1. Open **Business → Clients** from the sidebar.
 1. Select the client by **Photo**, **SKU**, or **Client Name**.
 1. Update the required fields across personal, business, and balance sections.
 1. Review financial changes carefully before saving.
 1. Click **Save** to apply the updates.
+
+______________________________________________________________________
 
 ## Field reference
 
@@ -37,14 +49,18 @@ The system opens the **Edit Client Page**.
 - **NID fields** - Identity information and document images for verification.
 - **Balance and limits** - Financial controls that affect statements and validation rules.
 
-## What's different from Add Client
+______________________________________________________________________
+
+## What's different from add Client
 
 - All fields are **pre-filled** with existing client data
 - You are **modifying**, not creating a new record
 - Some fields may already contain system-generated or historical values
 - Changes will immediately affect future transactions
 
-## Personal Information
+______________________________________________________________________
+
+## Personal information
 
 ![Personal Information Section](client-edit-personal-info.png)
 
@@ -60,7 +76,9 @@ Update the following fields as needed:
 | Alternative Phone | Edit                | Optional                                     |
 | Email             | Edit                | Optional                                     |
 
-## Business Details
+______________________________________________________________________
+
+## Business details
 
 ![Business Details Section](client-edit-business-details.png)
 
@@ -76,7 +94,9 @@ Update the following fields as needed:
 
     Replacing images will overwrite previous uploads.
 
-## Balance and Discount Information
+______________________________________________________________________
+
+## Balance and discount information
 
 ![Balance and Discount Section](client-balance-discount.png)
 
@@ -93,14 +113,18 @@ Update the following fields as needed:
 
     Changing balance-related fields can impact financial tracking and reports.
 
-## Saving Changes
+______________________________________________________________________
+
+## Saving changes
 
 After updating the required fields:
 
 - Click **Save** to apply changes
 - Changes are immediately reflected across the system
 
-## Tips and Common Issues
+______________________________________________________________________
+
+## Tips and common issues
 
 - The **SKU** field cannot be changed after a client is created.
 - Disabling a client prevents it from being used in future transactions
@@ -108,7 +132,9 @@ After updating the required fields:
 - Avoid unnecessary changes to **Balance**, as it affects reports
 - Always verify **NID information** before saving
 
-## Related Pages
+______________________________________________________________________
+
+## Related pages
 
 - **Add Client** — Create a new client
 - **Client Detail** — View client profile and history

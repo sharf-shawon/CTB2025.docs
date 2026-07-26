@@ -1,25 +1,12 @@
+---
+tags: [module:factory, task:view, role:staff]
+---
+
 # Product Detail
 
-The **Product Detail** page displays the complete profile of a product, including name, category, pricing information, production costs, materials composition, and current stock levels. It allows you to review product information and perform actions such as editing or managing inventory.
+The **Product Detail** page displays the complete profile of a product, including name, category, pricing information, production costs, materials composition, and current stock levels. Use it to review product information and to edit the record or manage its inventory.
 
-## When to use Product Detail
-
-- Viewing a product's full specifications and pricing
-- Checking materials used in production
-- Reviewing production costs and profit margins
-- Verifying stock levels and restock thresholds
-- Accessing product-related actions such as editing or inventory management
-
-## How to access Product Detail
-
-1. Go to **Factory → Products** from the sidebar.
-1. On the **Products List** page, click on any product row, SKU, or product name.
-
-The system will open the **Product Detail** page.
-
-______________________________________________________________________
-
-## Page Overview
+## Summary
 
 The page is typically divided into multiple sections:
 
@@ -30,7 +17,40 @@ The page is typically divided into multiple sections:
 
 ______________________________________________________________________
 
-## General Information
+## When to use this page
+
+- Viewing a product's full specifications and pricing
+- Checking materials used in production
+- Reviewing production costs and profit margins
+- Verifying stock levels and restock thresholds
+- Accessing product-related actions such as editing or inventory management
+
+______________________________________________________________________
+
+## How to access this page
+
+1. Go to **Factory → Products** from the sidebar.
+1. On the **Products List** page, click on any product row, SKU, or product name.
+
+The system will open the **Product Detail** page.
+
+______________________________________________________________________
+
+## Step-by-step instructions
+
+1. Open **Product Detail** from the **Factory** section of the sidebar.
+1. Complete the **General information** section described below.
+1. Complete the **Pricing and costing information** section described below.
+1. Complete the **Product Materials (costings)** section described below.
+1. Complete the **Stock and Inventory status** section described below.
+1. Complete the **Available actions** section described below.
+1. Review the values you entered, then save the record.
+
+______________________________________________________________________
+
+## Field reference
+
+### General information
 
 ![General Information Section](product-general-information.png)
 
@@ -47,9 +67,7 @@ This section displays the product's basic information.
 | Photo       | Product image (if uploaded)               |
 | Description | Product details or usage notes            |
 
-______________________________________________________________________
-
-## Pricing and Costing Information
+### Pricing and costing information
 
 ![Pricing and Costing Section](product-pricing-information.png)
 
@@ -69,9 +87,7 @@ This section shows the product's financial details and cost structure.
 
     **Materials Cost**, **Total Cost**, and **Profit** are automatically calculated based on materials and production settings.
 
-______________________________________________________________________
-
-## Product Materials (Costings)
+### Product Materials (costings)
 
 ![Product Costings Section](product-costing-page.png)
 
@@ -88,9 +104,7 @@ This section lists all raw materials used to produce this product.
 
     **Product Materials (Costings)** sections are only visible to **super users**. Other users will not see costing details.
 
-______________________________________________________________________
-
-## Stock and Inventory Status
+### Stock and Inventory status
 
 ![Stock Status Section](product-stock-status.png)
 
@@ -102,9 +116,7 @@ This section displays current inventory information.
 | Stock          | Current available quantity in inventory  |
 | Restock Level  | Minimum stock quantity before reordering |
 
-______________________________________________________________________
-
-## Available Actions
+### Available actions
 
 From the **Product Detail** page, you can perform the following actions:
 
@@ -116,7 +128,7 @@ From the **Product Detail** page, you can perform the following actions:
 
 ______________________________________________________________________
 
-## Tips and Common Issues
+## Tips and common issues
 
 - The **SKU** field cannot be changed after a product is created; use it to identify products in invoices and reports.
 - **Materials Cost** and **Total Cost** update automatically whenever materials are added or removed.

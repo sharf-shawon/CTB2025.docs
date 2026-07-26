@@ -1,40 +1,61 @@
+---
+tags: [module:trade, task:create, role:accountant]
+---
+
 # Create Tender Invoice
+
+## Summary
 
 Use this page to create a tender invoice for a client. A tender invoice is a quotation or formal bid document used to propose itemized goods or services and pricing before a client commits to purchase. Tender invoices help track proposals and negotiate terms with clients.
 
-## When to use Create Tender Invoice
+______________________________________________________________________
+
+## When to use this page
 
 - Processing orders for tender order products
 - Creating invoices for custom or special requests received from clients
 - Issuing payment requests for tender-based products or services
 
+______________________________________________________________________
+
 ## How to access this page
 
-From the sidebar, go to **Trade Management → Tender Invoices**. On the Tender Invoices List page, click the **purple (+) icon** in the top-right corner.
+From the sidebar, go to **Trade → Tender Invoices**. On the Tender Invoices List page, click the **purple (+) icon** in the top-right corner.
 
 The system opens the **Create Tender Invoice Page**.
 
 ______________________________________________________________________
 
-## General Information
+## Step-by-step instructions
+
+1. Open **Create Tender Invoice** from the **Trade** section of the sidebar.
+1. Complete the **General information** section described below.
+1. Complete the **Payment details** section described below.
+1. Complete the **Add items** section described below.
+1. Complete the **Terms and conditions** section described below.
+1. Follow **Saving the Tender Invoice** below to finish.
+
+______________________________________________________________________
+
+## Field reference
+
+### General information
 
 Fill in the following fields on the General tab:
 
-| Step | Field         | What to Do              | Description                                |
-| ---- | ------------- | ----------------------- | ------------------------------------------ |
-| 1    | Tender Number | Auto-generated or enter | Unique identifier for this tender          |
-| 2    | Tender Date   | Select date             | Date the tender is issued                  |
-| 3    | Client        | Select client           | The customer receiving the tender proposal |
-| 4    | Status        | Select status           | Current state (Draft, sent, cancelled)     |
-| 5    | Valid Until   | Select date             | Expiration date for the tender offer       |
+| Step | Field         | What to Do              | Description                              |
+| ---- | ------------- | ----------------------- | ---------------------------------------- |
+| 1    | Tender Number | Auto-generated or enter | Unique identifier for this tender        |
+| 2    | Tender Date   | Select date             | Date the tender is issued                |
+| 3    | Client        | Select client           | The client receiving the tender proposal |
+| 4    | Status        | Select status           | Current state (Draft, sent, cancelled)   |
+| 5    | Valid Until   | Select date             | Expiration date for the tender offer     |
 
 !!! warning "Required Fields"
 
     Fields marked with a **red star (\*)** are mandatory.
 
-______________________________________________________________________
-
-## Payment Details
+### Payment details
 
 Configure the financial details of the tender proposal:
 
@@ -51,9 +72,7 @@ Configure the financial details of the tender proposal:
 
     The total is calculated automatically based on items and payment adjustments.
 
-______________________________________________________________________
-
-## Add Items
+### Add items
 
 Add products or services to the tender proposal:
 
@@ -72,9 +91,7 @@ Add products or services to the tender proposal:
 
     Keep rates competitive but profitable. Each item's total calculates automatically.
 
-______________________________________________________________________
-
-## Terms and Conditions
+### Terms and conditions
 
 Add optional notes or special terms:
 
@@ -106,7 +123,7 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## Related Pages
+## Related pages
 
 - **Tender Detail** — View tender details and client responses
 - **Edit Tender Invoice** — Update terms and items before sending

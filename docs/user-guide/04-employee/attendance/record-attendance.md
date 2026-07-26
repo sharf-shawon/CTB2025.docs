@@ -1,3 +1,7 @@
+---
+tags: [module:employee, task:edit, role:hr]
+---
+
 # Record Attendance
 
 Use this page to enter attendance manually when records are not coming from an automatic attendance source.
@@ -6,6 +10,8 @@ Use this page to enter attendance manually when records are not coming from an a
 
 Record Attendance lets you capture a staff member’s work day when automatic attendance is unavailable or needs correction. Enter time details, salary type, and minutes worked so payroll and reporting stay accurate.
 
+______________________________________________________________________
+
 ## When to use this page
 
 - When an employee missed automatic time capture.
@@ -13,15 +19,28 @@ Record Attendance lets you capture a staff member’s work day when automatic at
 - When attendance must be recorded manually for payroll.
 - When you need to enter overtime details for hourly staff.
 
+______________________________________________________________________
+
 ## How to access this page
 
 From the sidebar, go to **Employee → Attendance**. On the Attendances page, click the **purple (+) icon** or **Add Attendance**.
 
 The system opens the **Record Attendance** page.
 
+![Record Attendance Form](add-attendance.png)
+
 ______________________________________________________________________
 
-![Record Attendance Form](add-attendance.png)
+## Step-by-step instructions
+
+1. Go to **Employee → Attendance** and open the attendance form.
+1. Select the **Employee** and the **Date** the entry applies to.
+1. Enter **Check-in Time** and, if the day is complete, **Check-out Time**.
+1. Set **Salary Type** and **Salary Rate** for the entry.
+1. Enter **Work Minutes**, and **Overtime Minutes** if any were worked.
+1. Save the record.
+
+______________________________________________________________________
 
 ## Field reference
 

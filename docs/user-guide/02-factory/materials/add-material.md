@@ -1,13 +1,17 @@
+---
+tags: [module:factory, task:create, role:staff]
+---
+
 # Add Material
 
-## Overview
+## Summary
 
 The **Add Material** page is used to create a new raw material in the system.
 Materials are used for inventory tracking, cost calculation, and production processes.
 
 ______________________________________________________________________
 
-## When to Use
+## When to use this page
 
 Use this page when:
 
@@ -22,7 +26,20 @@ ______________________________________________________________________
 1. Go to **Factory → Materials**
 1. Click the **Add (+)** button to add a new material
 
-## General Information
+______________________________________________________________________
+
+## Step-by-step instructions
+
+1. Open **Add Material** from the **Factory** section of the sidebar.
+1. Complete the **General information** section described below.
+1. Complete the **Inventory information** section described below.
+1. Review the values you entered, then save the record.
+
+______________________________________________________________________
+
+## Field reference
+
+### General information
 
 ![Add Material](material-general-tab.png)
 
@@ -37,9 +54,7 @@ ______________________________________________________________________
 | Photo       | Upload an image of the material (optional)                              |
 | Description | Additional notes or details                                             |
 
-______________________________________________________________________
-
-## Inventory Information
+### Inventory information
 
 This section defines stock and cost details.
 
@@ -51,7 +66,7 @@ This section defines stock and cost details.
 
 ______________________________________________________________________
 
-## Field Guidelines
+## Field guidelines
 
 - Use clear and consistent naming (avoid duplicates like “Blue fabric” vs “blue Fabric”)
 - Select the correct unit — this affects all inventory calculations
@@ -63,7 +78,7 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## Tips and Best Practices
+## Tips and common issues
 
 - Always set **Reorder Level** — this prevents stockouts
 - Keep **Is Enabled** ON only for active materials
@@ -71,7 +86,7 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## Related Pages
+## Related pages
 
 - **Material List** — View all materials
 - **Inventory In** — Add stock

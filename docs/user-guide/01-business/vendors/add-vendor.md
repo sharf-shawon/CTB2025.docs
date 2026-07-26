@@ -1,3 +1,7 @@
+---
+tags: [module:business, task:create, role:staff]
+---
+
 # Add Vendor
 
 Use this page to register a new vendor in CTB Admin. A vendor is any individual or organization that supplies goods or services. Vendor records store contact details, identification information, and financial data used across purchases, payments, and reports.
@@ -6,11 +10,15 @@ Use this page to register a new vendor in CTB Admin. A vendor is any individual 
 
 Use this page to create a complete vendor profile before recording purchases, checks, or payments. Accurate vendor setup improves financial tracking and communication.
 
+______________________________________________________________________
+
 ## When to use this page
 
-- Onboarding a new supplier or service provider
+- Onboarding a new vendor or service provider
 - Creating a vendor profile before recording purchases
 - Storing vendor contact details and identification documents
+
+______________________________________________________________________
 
 ## How to access this page
 
@@ -18,13 +26,17 @@ From the sidebar, go to **Business → Vendors**. On the Vendor List page, click
 
 The system opens the **Add Vendor Page**.
 
+______________________________________________________________________
+
 ## Step-by-step instructions
 
-1. Open **Business -> Vendors** and click the **Add** icon.
+1. Open **Business → Vendors** and click the **Add** icon.
 1. Fill the **Personal Information** section.
 1. Fill **Business Details** and upload identity documents.
 1. Set **Balance Information** based on current account status.
 1. Click **Save** to create the vendor record.
+
+______________________________________________________________________
 
 ## Field reference
 
@@ -36,7 +48,7 @@ The system opens the **Add Vendor Page**.
 
 ______________________________________________________________________
 
-## Personal Information
+## Personal information
 
 ![Personal Information Section](vendor-personal-info-current.png)
 
@@ -59,7 +71,7 @@ Fill in the following fields:
 
 ______________________________________________________________________
 
-## Business Details
+## Business details
 
 ![Business Details Section](vendor-business-details.png)
 
@@ -78,7 +90,7 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## Balance Information
+## Balance information
 
 ![Balance Information Section](vendor-balance-info.png)
 
@@ -114,7 +126,7 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## Related Pages
+## Related pages
 
 - **Edit Vendor** — Update vendor information
 - **Vendor Detail** — View vendor profile and transactions

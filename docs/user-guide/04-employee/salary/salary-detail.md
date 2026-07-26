@@ -1,8 +1,22 @@
+---
+tags: [module:employee, task:view, role:hr]
+---
+
 # Salary Detail
 
 Use this page to view and manage a salary record after it has been generated. The salary detail page displays all components of a salary entry — the assigned employee, salary period, salary components, payment details, and related records. You can update salary components, mark the salary as paid, and review linked records from this page.
 
-## When to use Salary Detail
+## Summary
+
+The Salary Detail page includes an action button at the top-right:
+
+| Button  | Action                                            | Available When |
+| ------- | ------------------------------------------------- | -------------- |
+| History | View past changes and modifications to the record | Always visible |
+
+______________________________________________________________________
+
+## When to use this page
 
 - Reviewing a complete salary record with all components and calculations
 - Updating salary components such as bonus, deductions, or overtime
@@ -10,15 +24,30 @@ Use this page to view and manage a salary record after it has been generated. Th
 - Reviewing related records linked to this salary entry
 - Verifying salary information before processing payroll
 
-## How to access Salary Detail
+______________________________________________________________________
 
-From the sidebar, go to **Employee Management → Salaries**. On the Salaries List page, click on any salary **SKU** to open the **Salary Detail page**.
+## How to access this page
+
+From the sidebar, go to **Employee → Salaries**. On the Salaries List page, click on any salary **SKU** to open the **Salary Detail page**.
 
 ![Salaries List Page](salary-detail-list-page.png)
 
 ______________________________________________________________________
 
-## Salaries List Page
+## Step-by-step instructions
+
+1. Open **Salary Detail** from the **Employee** section of the sidebar.
+1. Complete the **Salaries list page** section described below.
+1. Complete the **General information** section described below.
+1. Complete the **Salary components** section described below.
+1. Complete the **Payment details** section described below.
+1. Follow **Saving changes** below to finish.
+
+______________________________________________________________________
+
+## Field reference
+
+### Salaries list page
 
 The Salaries List displays all salary records across employees with the following columns:
 
@@ -37,19 +66,7 @@ The Salaries List displays all salary records across employees with the followin
 
 Use the **← Previous** and **Next →** buttons to navigate between salary periods, and the **Filters** button to narrow results by employee, month, or status.
 
-______________________________________________________________________
-
-## Page Overview
-
-The Salary Detail page includes an action button at the top-right:
-
-| Button  | Action                                            | Available When |
-| ------- | ------------------------------------------------- | -------------- |
-| History | View past changes and modifications to the record | Always visible |
-
-______________________________________________________________________
-
-## General Information
+### General information
 
 ![Salary Detail General Information](salary-detail-general-page.png)
 
@@ -64,9 +81,7 @@ The top section shows which employee and period this salary covers:
 
     Fields marked with a **red star (\*)** are mandatory.
 
-______________________________________________________________________
-
-## Salary Components
+### Salary components
 
 ![Salary Components Section](salary-detail-componant-section.png)
 
@@ -90,9 +105,7 @@ This section displays the full salary breakdown:
 
     Set **Salary** to **0** to apply the default salary rate configured on the employee's profile.
 
-______________________________________________________________________
-
-## Payment Details
+### Payment details
 
 ![Payment Details Section](salary-detail-payment-section.png)
 
@@ -110,7 +123,7 @@ This section records the payment status for this salary:
 
 ______________________________________________________________________
 
-## Related Records
+## Related records
 
 The **Related Records** section at the bottom is a collapsible section that displays any records linked to this salary entry, such as attendance logs or payout references.
 
@@ -120,7 +133,7 @@ The **Related Records** section at the bottom is a collapsible section that disp
 
 ______________________________________________________________________
 
-## Saving Changes
+## Saving changes
 
 After making edits:
 
@@ -132,7 +145,7 @@ After making edits:
 
 ______________________________________________________________________
 
-## Deleting a Salary Record
+## Deleting a Salary record
 
 A **Delete Salary** button is available at the bottom-left of the detail page.
 
@@ -142,7 +155,7 @@ A **Delete Salary** button is available at the bottom-left of the detail page.
 
 ______________________________________________________________________
 
-## Tips and Common Issues
+## Tips and common issues
 
 - **Net Salary updates automatically** — It recalculates in real time whenever Salary, Salary Units, Overtime, Bonus, or Deductions are changed
 - **Salary Units represent workdays or hours** — Enter the correct number based on the employee's salary type (Monthly or Hourly)
@@ -154,11 +167,11 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## Related Pages
+## Related pages
 
 - **Salaries Overview** — View and manage all salary records
 - **Generate Salary** — Create a new salary record for an employee
 - **Employee Detail** — View the full employee profile and linked salary records
 - **Wages** — Manage production-based wage entries
-- **Payouts** — Process and track salary disbursements
+- **Payouts** — Process and track salary payouts
 - **Attendance** — Review attendance records used for salary unit calculation
