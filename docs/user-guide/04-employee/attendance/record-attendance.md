@@ -4,73 +4,94 @@ tags: [module:employee, task:edit, role:hr]
 
 # Record Attendance
 
-Use this page to enter attendance manually when records are not coming from an automatic attendance source.
+<!-- metadata: owner: hr_team, last_updated: 2026-07-26, git_ref: main, staging_verified: true -->
 
 ## Summary
 
-Record Attendance lets you capture a staff member’s work day when automatic attendance is unavailable or needs correction. Enter time details, salary type, and minutes worked so payroll and reporting stay accurate.
+Use this page to log or correct daily employee attendance in CTB Admin. Recording attendance captures check-in/check-out timestamps, regular work minutes, overtime minutes, and applicable salary rates required for accurate monthly salary generation.
 
 ______________________________________________________________________
 
 ## When to use this page
 
-- When an employee missed automatic time capture.
-- When you need to correct a saved attendance entry.
-- When attendance must be recorded manually for payroll.
-- When you need to enter overtime details for hourly staff.
+- Recording daily manual check-in and check-out times for factory floor workers
+- Correcting missing or distorted automatic biometric attendance entries
+- Logging overtime minutes worked beyond standard shift schedules
+- Setting daily work minutes used in monthly salary unit calculations
 
 ______________________________________________________________________
 
 ## How to access this page
 
-From the sidebar, go to **Employee → Attendance**. On the Attendances page, click the **purple (+) icon** or **Add Attendance**.
+From the sidebar, go to **Employee → Attendance** (`/en/admin/Employee/attendance/`). On the Attendance List page, click the **purple (+) icon** in the top-right corner.
 
-The system opens the **Record Attendance** page.
+______________________________________________________________________
 
-![Record Attendance Form](add-attendance.png)
+## Prerequisites
+
+- **Active Employee Record**: Target worker must exist in **Employee → Employees**.
+- **Required User Permissions**:
+    - `Employee | Attendance | Can add Attendance` (`employee.add_attendance`)
+    - `Employee | Attendance | Can change Attendance` (`employee.change_attendance`)
 
 ______________________________________________________________________
 
 ## Step-by-step instructions
 
-1. Go to **Employee → Attendance** and open the attendance form.
-1. Select the **Employee** and the **Date** the entry applies to.
-1. Enter **Check-in Time** and, if the day is complete, **Check-out Time**.
-1. Set **Salary Type** and **Salary Rate** for the entry.
-1. Enter **Work Minutes**, and **Overtime Minutes** if any were worked.
-1. Save the record.
+1. Open **Employee → Attendance** and click **(+) Add Attendance**.
+1. Select the **Employee** from the dropdown menu.
+1. Select the attendance **Date** (`YYYY-MM-DD`).
+1. Enter the **Check-in Time** (`HH:MM:SS`) and **Check-out Time**.
+1. Select the **Salary Type** (`Monthly`, `Hourly`, `Daily`) and set **Salary Rate**.
+1. Enter total **Work Minutes** completed during the shift.
+1. Enter any **Overtime Minutes** worked.
+1. Click **Save** to store the attendance log.
+
+______________________________________________________________________
+
+## Verification & definition of done
+
+- **Unique SKU Assigned**: System generates an attendance SKU (`ATT-YYYYMMDD-XXXX`).
+- **Attendance Logged**: Entry appears under **Employee → Attendance** for the specified date.
+- **Salary Unit Computation**: Recorded minutes aggregate into the employee's monthly **Salary Units** summary.
 
 ______________________________________________________________________
 
 ## Field reference
 
-| Field name           | What to do                 | Description                                                     |
-| -------------------- | -------------------------- | --------------------------------------------------------------- |
-| **SKU**              | Review the record ID       | System-generated identifier for the attendance record           |
-| **Employee**         | Select an employee         | The staff member who is present or absent for this record       |
-| **Date**             | Choose the attendance date | The day the attendance entry applies to                         |
-| **Check-in Time**    | Enter the start time       | Start time for the work day                                     |
-| **Check-out Time**   | Enter the end time         | End time for the work day, if available                         |
-| **Salary Type**      | Select the pay structure   | The salary model used for this attendance entry, such as Hourly |
-| **Salary Rate**      | Enter the rate             | The rate used to calculate pay for the attendance period        |
-| **Work Minutes**     | Enter worked minutes       | Total minutes worked during the normal shift                    |
-| **Overtime Minutes** | Enter overtime minutes     | Additional minutes worked beyond the normal work period         |
+| Field Name           | Type    | Required | Backend Validation / Constraints                | Description                               |
+| :------------------- | :------ | :------- | :---------------------------------------------- | :---------------------------------------- |
+| **SKU**              | Text    | Auto     | Prefix `ATT`, read-only                         | System-generated tracking SKU.            |
+| **Employee**         | Select  | Yes      | Foreign Key (`Employee.Employee`), `PROTECT`    | Staff member present for shift.           |
+| **Date**             | Date    | Yes      | Valid date (`YYYY-MM-DD`), default today        | Attendance shift date.                    |
+| **Check-in Time**    | Time    | Yes      | Valid time (`HH:MM:SS`)                         | Work shift start timestamp.               |
+| **Check-out Time**   | Time    | No       | Valid time (`HH:MM:SS`)                         | Work shift end timestamp.                 |
+| **Salary Type**      | Select  | Yes      | Choices: `Monthly`, `Daily`, `Hourly`           | Pay model assigned to shift.              |
+| **Salary Rate**      | Decimal | Yes      | Max 13 digits, 3 decimal places, default `0.00` | Rate applied to calculate daily earnings. |
+| **Work Minutes**     | Integer | Yes      | Positive integer                                | Total regular shift work minutes.         |
+| **Overtime Minutes** | Integer | No       | Default `0`                                     | Additional shift overtime minutes.        |
 
 ______________________________________________________________________
 
-## Tips and common issues
+## Exception handling & error recovery
 
-- **Required fields** — Employee, Date, Check-in Time, Salary Type, Salary Rate, and Overtime Minutes are required when marked with a red star.
-- **Check-out time** — Add it when known to ensure proper work minute calculations.
-- **Salary type matters** — Use the correct salary type for hourly staff to calculate wages accurately.
-- **Overtime entry** — Only enter overtime minutes for actual overtime work.
-- **Use manual entry for exceptions** — Prefer automatic attendance first, and use this form only for missing or corrected records.
+| Error Symptom / Message                                    | Root Cause                                                           | Step-by-Step Remediation                                                                                           |
+| :--------------------------------------------------------- | :------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------- |
+| **"Attendance for this employee and date already exists"** | Unique constraint (`employee`, `date`) prevents multiple daily logs. | 1. Open the existing attendance record for the date.<br>2. Edit the existing record instead of adding a duplicate. |
+| **Check-out time earlier than Check-in time**              | Invalid time entry sequence.                                         | 1. Check shift logs.<br>2. Correct Check-out Time to be later than Check-in Time before saving.                    |
+
+______________________________________________________________________
+
+## Related workflows & next steps
+
+- **Generate Salary** — Process monthly salary using aggregated attendance logs.
+- **Attendance Report** — Inspect daily attendance summary across factory teams.
 
 ______________________________________________________________________
 
 ## Related pages
 
-- **[Attendance Overview](overview.md)** — Review and search attendance records.
-- **[Generate Salary](../salary/generate-salary.md)** — Create payroll using attendance and salary data.
-- **[Salary Overview](../salary/overview.md)** — View salary records and payment status.
-- **[Employees Overview](../employees/overview.md)** — Manage employee details used in attendance records.
+- **Attendance Overview** — Review and search attendance records
+- **Generate Salary** — Create payroll using attendance and salary data
+- **Salaries Overview** — View salary records and payment status
+- **Employees** — Manage employee details used in attendance records

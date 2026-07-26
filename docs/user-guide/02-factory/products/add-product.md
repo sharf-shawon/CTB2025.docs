@@ -4,109 +4,100 @@ tags: [module:factory, task:create, role:staff]
 
 # Add Product
 
+<!-- metadata: owner: factory_team, last_updated: 2026-07-26, git_ref: main, staging_verified: true -->
+
 ## Summary
 
-Create a new product in CTB Admin. This page lets you define the product details, pricing, production costs, and stock settings used by the factory.
+Use this page to define new finished products, unit selling rates, production wage allocations, and raw material bill-of-materials (BOM) costings in CTB Admin. Registering products enables stock management, inventory tracking, sales invoicing, and production costing.
 
 ______________________________________________________________________
 
 ## When to use this page
 
-Use this page when:
-
-- Adding a new sellable product
-- Defining product pricing and category
-- Preparing items for invoices, quotations, or sales
+- Adding a new garment, bag, or fashion item to the manufacturing catalog
+- Defining unit selling rates, production wages, and minimum restock alert levels
+- Assigning raw material recipes (Product Costings) for unit cost calculation
+- Configuring public vs. internal catalog visibility flags
 
 ______________________________________________________________________
 
 ## How to access this page
 
-From the sidebar, go to **Factory → Products**. On the **Products** page, click the **Add Product** button in the top-right corner.
+From the sidebar, go to **Factory → Products** (`/en/admin/Factory/product/`). On the Products List page, click the **purple (+) icon** in the top-right corner.
+
+______________________________________________________________________
+
+## Prerequisites
+
+- **Product Category**: Target category must exist under **Factory → Categories**.
+- **Material Catalog**: Raw materials required for product recipes must exist in **Factory → Materials**.
+- **Required User Permissions**:
+    - `Factory | Product | Can add Product` (`factory.add_product`)
+    - `Factory | Product | Can change Product` (`factory.change_product`)
 
 ______________________________________________________________________
 
 ## Step-by-step instructions
 
-1. Open **Add Product** from the **Factory** section of the sidebar.
-1. Complete the **General tab** section described below.
-1. Complete the **Product costings tab** section described below.
-1. Review the values you entered, then save the record.
+1. Open **Factory → Products** and click **(+) Add Product**.
+1. Input the product **Name** and select its **Category**.
+1. Select the measurement **Unit** (e.g. `Pieces`, `Dozens`, `Meters`).
+1. Enter the unit **Selling Rate** and **Production Wage** per unit.
+1. Set initial **Stock** quantity and minimum **Restock Level** threshold.
+1. Switch to the **Product Costings** tab to add raw material recipes.
+1. Select a **Material**, enter required **Quantity**, and unit **Cost**.
+1. Click **Add another Product Costing** for additional material components.
+1. Toggle **Is Enabled** to activate the product for invoicing and stock tracking.
+1. Click **Save** to finalize product registration.
+
+______________________________________________________________________
+
+## Verification & definition of done
+
+- **Unique SKU Assigned**: System generates a unique product SKU (`PRD-YYYYMMDD-XXXX`).
+- **Product Costing Calculated**: Total recipe cost updates automatically under product costing summary.
+- **Invoice Availability**: Product appears in the dropdown list under **Trade → Create Invoice**.
 
 ______________________________________________________________________
 
 ## Field reference
 
-### General tab
-
-The **General** tab is where you enter the product’s main details and status.
-
-![Add Product Form](product-form.png)
-
-### Fields in the general tab
-
-| Field            | Description                                                         |
-| ---------------- | ------------------------------------------------------------------- |
-| SKU              | Auto-generated product identifier shown at the top.                 |
-| Is Enabled       | Activate the product for production and sales.                      |
-| Is Public        | Publish the product in the website or public catalog.               |
-| Name             | Product name used across production orders and reports.             |
-| Category         | Select the product category for organization and filtering.         |
-| Unit             | Choose the measurement unit for this product (for example, Pieces). |
-| Photo            | Upload a product image (optional).                                  |
-| Description      | Enter item details or usage notes.                                  |
-| Selling Rate     | Selling price per unit.                                             |
-| Production Wage  | Wage cost assigned to producing one unit.                           |
-| Costing Quantity | Quantity used for production cost calculation.                      |
-| Costing Rate     | Rate used with costing quantity to derive total cost.               |
-| Stock            | Current stock quantity for the product.                             |
-| Restock Level    | Minimum stock quantity before restocking is needed.                 |
-
-### Product costings tab
-
-The **Product Costings** tab is used to add and manage raw material cost entries for the product.
-
-![Add Product Costing Page](product-costing-page.png)
-
-### Product costing entries
-
-| Field      | Description                                     |
-| ---------- | ----------------------------------------------- |
-| Material   | Select a raw material used by this product.     |
-| Quantity   | The material quantity required for the product. |
-| Cost       | Cost per material unit.                         |
-| Total Cost | Calculated total material cost for that line.   |
-
-Use the **Add another Product Costing** button to add more materials. Remove a row when a material is no longer part of the product recipe.
+| Field Name          | Type    | Required | Backend Validation / Constraints                | Description                                                   |
+| :------------------ | :------ | :------- | :---------------------------------------------- | :------------------------------------------------------------ |
+| **SKU**             | Text    | Auto     | Prefix `PRD`, read-only                         | System-generated tracking SKU.                                |
+| **Name**            | Text    | Yes      | Max 50 characters                               | Product title used across invoices and manufacturing reports. |
+| **Category**        | Select  | Yes      | Foreign Key (`Factory.Category`), `PROTECT`     | Product organizational category.                              |
+| **Unit**            | Select  | Yes      | Choices: `Pieces`, `Dozens`, `Kg`, `Meters`     | Base unit of measurement.                                     |
+| **Selling Rate**    | Decimal | Yes      | Max 13 digits, 2 decimal places, default `0.00` | Standard wholesale or retail selling price per unit.          |
+| **Production Wage** | Decimal | No       | Max 13 digits, 2 decimal places, default `0.00` | Worker wage paid to manufacture one product unit.             |
+| **Stock**           | Decimal | No       | Default `0.00`, 3 decimal places                | Current finished goods stock count in warehouse.              |
+| **Restock Level**   | Decimal | No       | Default `0.00`, 3 decimal places                | Minimum stock count before triggering low-stock alert.        |
+| **Is Enabled**      | Boolean | No       | Default `True`                                  | Active status toggle.                                         |
+| **Is Public**       | Boolean | No       | Default `False`                                 | Visibility toggle for public catalog or storefront.           |
 
 ______________________________________________________________________
 
-## Notes tab
+## Exception handling & error recovery
 
-Use the **Notes** tab to store internal notes or special instructions about the product. This tab is useful for manufacturing details, vendor comments, or quality reminders that do not belong in the main description.
-
-______________________________________________________________________
-
-## Field guidelines
-
-- Enter a clear **Name** so the product is easy to find in the list.
-- Choose the correct **Category** and **Unit** before setting cost values.
-- Set **Stock** and **Restock Level** to avoid stock shortages.
-- Use the **Notes** tab for internal instructions, not public product descriptions.
-- Add all raw materials in **Product Costings** so cost totals are accurate.
+| Error Symptom / Message                                 | Root Cause                                                           | Step-by-Step Remediation                                                                                                 |
+| :------------------------------------------------------ | :------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------- |
+| **"Cannot delete material linked to product costings"** | Foreign Key constraint (`models.PROTECT`) prevents material removal. | 1. Remove material from **Product Costings** tab on linked products.<br>2. Save product before deleting material record. |
+| **Product missing from Create Invoice dropdown**        | **Is Enabled** flag set to `False`.                                  | 1. Open product in edit mode.<br>2. Toggle **Is Enabled** to `True` and click **Save**.                                  |
+| **Low stock alert triggered unexpectedly**              | Warehouse **Stock** count fell below configured **Restock Level**.   | 1. Inspect finished goods stock inventory.<br>2. Update stock count or adjust **Restock Level** threshold.               |
 
 ______________________________________________________________________
 
-## Tips and common issues
+## Related workflows & next steps
 
-- Keep **Is Public** off unless the product should appear on the website.
-- Review the calculated **Total Cost** after entering material and wage values.
-- Use **Save and continue editing** if you want to keep the form open after saving.
+- **Create Invoice** — Sell finished products to clients.
+- **Material Inventory** — Monitor raw material stock availability for product recipes.
+- **Category Management** — Organize products by apparel types or lines.
 
 ______________________________________________________________________
 
 ## Related pages
 
-- [Products Overview](overview.md) for managing existing products.
-- [Add Category](../categories/add-category.md) for creating categories.
-- [Add Material](../materials/add-material.md) for defining raw materials used in cost calculations.
+- **Products Overview** — View and filter finished products
+- **Edit Product** — Update product details, pricing, and costings
+- **Categories** — Manage product classification categories
+- **Materials** — Manage raw material specifications and costs

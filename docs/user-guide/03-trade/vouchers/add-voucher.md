@@ -4,135 +4,98 @@ tags: [module:trade, task:create, role:accountant]
 
 # Create Voucher
 
+<!-- metadata: owner: trade_team, last_updated: 2026-07-26, git_ref: main, staging_verified: true -->
+
 ## Summary
 
-Use this page to create a voucher for recording purchases from vendors. A voucher documents the receipt of materials or services and tracks payment obligations. Vouchers are used to manage accounts payable, record vendor transactions, and generate procurement reports.
+Use this page to record vendor purchase vouchers for raw materials or stock inventory. A voucher documents received goods, tracks accounts payable, records partial or full payments, and attaches scanned physical receipts.
 
 ______________________________________________________________________
 
 ## When to use this page
 
-- Recording purchases of materials from vendors
-- Documenting received goods with associated costs
-- Creating a payment record for vendor-supplied materials
-- Tracking outstanding payables to vendors
+- Recording raw material purchases or fabric procurement from vendors
+- Documenting incoming goods with associated unit costs and freight charges
+- Attaching digital scans or photos of physical vendor receipts for audit compliance
+- Tracking outstanding accounts payable balances for vendors
 
 ______________________________________________________________________
 
 ## How to access this page
 
-From the sidebar, go to **Trade → Vouchers**. On the Vouchers List page, click
-the **purple (+) icon** in the top-right corner.
+From the sidebar, go to **Trade → Vouchers** (`/en/admin/Trade/voucher/`). On the Vouchers List page, click the **purple (+) icon** in the top-right corner.
 
-The system opens the **Create Voucher Page**.
+______________________________________________________________________
+
+## Prerequisites
+
+- **Active Vendor**: The vendor must exist in **Business → Vendors**.
+- **Material Catalog**: Raw materials or inventory items must be registered under **Factory → Materials**.
+- **Required User Permissions**:
+    - `Trade | Voucher | Can add Voucher` (`trade.add_voucher`)
+    - `Trade | Voucher | Can change Voucher` (`trade.change_voucher`)
 
 ______________________________________________________________________
 
 ## Step-by-step instructions
 
-1. Open **Create Voucher** from the **Trade** section of the sidebar.
-1. Complete the **General information** section described below.
-1. Complete the **Payment details** section described below.
-1. Complete the **Add Voucher items** section described below.
-1. Complete the **Notes** section described below.
-1. Follow **Saving the Voucher** below to finish.
+1. Open **Trade → Vouchers** and click **(+) Add Voucher**.
+1. Enter the **Voucher Number** provided on the vendor's physical receipt.
+1. Select the supplying **Vendor** from the dropdown menu.
+1. Specify the **Voucher Date** and optional **Reference** code.
+1. Upload a photo or scan of the receipt under **Photo** if required for audit.
+1. Switch to the **Voucher Items** section and select a **Material**.
+1. Input unit **Rate** and **Quantity** received.
+1. Set order charges: **Tax**, **VAT**, **Shipping**, and **Discount**.
+1. Enter **Paid Amount** and select the **Paid By** employee if a payment was issued.
+1. Click **Save** to record the purchase voucher.
+
+______________________________________________________________________
+
+## Verification & definition of done
+
+- **Auto-Generated SKU**: The system assigns a unique voucher SKU (`VCH-YYYYMMDD-XXXX`).
+- **Inventory Update**: Stock balances for linked materials increase according to received quantities.
+- **Payable Ledger**: The net payable (`Subtotal + Tax + VAT + Shipping - Discount - Paid Amount`) credits the vendor's accounts payable.
 
 ______________________________________________________________________
 
 ## Field reference
 
-### General information
-
-Fill in the following fields on the **General** tab:
-
-![Voucher General ](add-voucher-general-info.png)
-
-| Step | Field          | What to Do     | Description                                         |
-| ---- | -------------- | -------------- | --------------------------------------------------- |
-| 1    | SKU            | Auto-generated | System-generated identifier for the voucher         |
-| 2    | Voucher Number | Enter number   | Unique reference number for this voucher            |
-| 3    | Reference      | Enter text     | External reference (e.g., vendor invoice number)    |
-| 4    | Voucher Date   | Select date    | Date the voucher is created (defaults to today)     |
-| 5    | Vendor         | Select vendor  | The vendor or vendor associated with this voucher   |
-| 6    | Photo          | Upload file    | Attach a photo or scan copy of the physical voucher |
-
-!!! warning
-
-    Fields marked with a **red star (\*)** are mandatory.
-
-### Payment details
-
-After adding voucher items, configure the financial details:
-
-![Voucher Payment Details ](add-voucher-payment-info.png)
-
-| Step | Field       | What to Do      | Description                                                   |
-| ---- | ----------- | --------------- | ------------------------------------------------------------- |
-| 1    | Subtotal    | Auto-calculated | Sum of all item totals (Quantity × Rate)                      |
-| 2    | Tax         | Enter amount    | Tax charged on the purchase                                   |
-| 3    | VAT         | Enter amount    | Value-added tax if applicable                                 |
-| 4    | Shipping    | Enter amount    | Shipping or delivery cost                                     |
-| 5    | Discount    | Enter amount    | Discount applied to the voucher                               |
-| 6    | Payable     | Auto-calculated | Final amount due (Subtotal + Tax + VAT + Shipping - Discount) |
-| 7    | Paid Amount | Enter amount    | Amount already paid to the vendor                             |
-| 8    | Paid By     | Select option   | Payment method or account used for payment                    |
-
-!!! note
-
-    Subtotal and Payable are calculated automatically based on other fields.
-
-### Add Voucher items
-
-Add materials to the voucher using the **Voucher Items** tab:
-![Voucher Item info ](add-voucher-item-info.png)
-
-| Step | Field    | What to Do           | Description                          |
-| ---- | -------- | -------------------- | ------------------------------------ |
-| 1    | Material | Select from dropdown | The material or item being purchased |
-| 2    | Rate     | Enter rate           | Cost per unit of the material        |
-| 3    | Quantity | Enter quantity       | Number of units received             |
-| 4    | Total    | Auto-calculated      | Quantity × Rate for this item        |
-
-- Click **Add another Voucher Item** to add multiple materials to one voucher
-- Click **Remove** to delete a voucher item
-- Use the **edit (pencil) icon** to modify material details
-- Use the **view (eye) icon** to preview material information
-- Use the **(+) icon** to quickly add a new material record
-
-!!! tip
-
-    Each item's total is calculated automatically once you enter Rate and Quantity.
-
-### Notes
-
-Add optional notes or internal comments using the **Notes** tab:
-
-| Step | Field | What to Do | Description                          |
-| ---- | ----- | ---------- | ------------------------------------ |
-| 1    | Note  | Enter text | Internal notes or special conditions |
+| Field Name         | Type    | Required | Backend Validation / Constraints              | Description                                        |
+| :----------------- | :------ | :------- | :-------------------------------------------- | :------------------------------------------------- |
+| **SKU**            | Text    | Auto     | Prefix `VCH`, read-only                       | Unique tracking SKU assigned by system.            |
+| **Voucher Number** | Text    | Yes      | Max 50 characters                             | External voucher number from vendor.               |
+| **Reference**      | Text    | No       | Max 100 characters                            | Optional internal reference code.                  |
+| **Voucher Date**   | Date    | Yes      | Default: `timezone.now`                       | Date goods were received.                          |
+| **Vendor**         | Select  | Yes      | Foreign Key (`Business.Vendor`), `PROTECT`    | Supplying vendor account.                          |
+| **Photo**          | File    | No       | Upload size `1000x1448`, resized image        | Scanned image or digital copy of physical voucher. |
+| **Subtotal**       | Decimal | Auto     | Max 13 digits, 3 decimal places               | Calculated sum of material line items.             |
+| **Tax**            | Decimal | No       | Default `0.00`, 2 decimal places              | Purchase tax applied.                              |
+| **VAT**            | Decimal | No       | Default `0.00`, 3 decimal places              | Value-added tax.                                   |
+| **Shipping**       | Decimal | No       | Default `0.00`, 3 decimal places              | Freight and transport costs.                       |
+| **Discount**       | Decimal | No       | Default `0.00`, 2 decimal places              | Purchase discount granted by vendor.               |
+| **Payable**        | Decimal | Auto     | `Subtotal + Tax + VAT + Shipping - Discount`  | Net total obligation.                              |
+| **Paid Amount**    | Decimal | No       | Default `0.00`, 3 decimal places              | Amount paid immediately upon receipt.              |
+| **Paid By**        | Select  | No       | Foreign Key (`Employee.Employee`), `SET_NULL` | Staff member who executed payment.                 |
 
 ______________________________________________________________________
 
-## Saving the Voucher
+## Exception handling & error recovery
 
-After completing all sections:
-
-- Click **Save** to create the voucher
-- Click **Save and continue editing** to save and remain on the page
-- Click **Save and add another** to save and create a new voucher immediately
-
-The voucher is now recorded and available for payment processing and reporting.
+| Error Symptom / Message                           | Root Cause                                                           | Step-by-Step Remediation                                                                                 |
+| :------------------------------------------------ | :------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------- |
+| **"Cannot delete vendor with existing vouchers"** | Django protection constraint (`models.PROTECT`) locks vendor record. | 1. Reassign or archive vouchers before removing vendor.<br>2. Deactivate vendor instead of deleting.     |
+| **Image upload fails**                            | File format unsupported or file size exceeds server limits.          | 1. Ensure file is JPG/PNG format under 5 MB.<br>2. Upload image and click **Save and continue editing**. |
+| **Material stock count out of sync**              | Line item deleted without resaving voucher.                          | 1. Open voucher in edit mode.<br>2. Remove line item and click **Save** to update material inventory.    |
 
 ______________________________________________________________________
 
-## Tips and common issues
+## Related workflows & next steps
 
-- **Vendor is required** — You must select a vendor before saving
-- **Voucher Number is required** — Enter a unique reference number for each voucher
-- **Items add to Subtotal** — The voucher calculates Subtotal automatically when you add items
-- **Paid Amount tracks partial payments** — Enter the amount paid so far to track outstanding balances
-- **Upload a scan for audit trails** — Attach a photo or scan of the physical voucher for record-keeping
-- **Date affects reporting** — Voucher Date determines which reporting period the voucher appears in
+- **Record Vendor Payment** — Issue payments against unpaid voucher balances.
+- **Material Inventory** — Inspect raw material stock levels updated by this voucher.
+- **Vendor Ledger** — Review statement of accounts payable.
 
 ______________________________________________________________________
 
