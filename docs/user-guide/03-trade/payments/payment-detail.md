@@ -1,3 +1,7 @@
+---
+tags: [module:trade, task:view, role:accountant]
+---
+
 # Payment Detail
 
 Use this page to view and manage a payment record after it has been created. The payment detail page displays all components of a payment—payment information, check and client selection, notes, and transaction status—with buttons to edit, view history, and manage the payment. Editing capabilities depend on the payment status.
@@ -5,6 +9,8 @@ Use this page to view and manage a payment record after it has been created. The
 ## Summary
 
 Use this page to verify payment records, monitor status-based restrictions, and review reconciliation details. It supports controlled edits while preserving audit integrity.
+
+______________________________________________________________________
 
 ## When to use this page
 
@@ -15,6 +21,8 @@ Use this page to verify payment records, monitor status-based restrictions, and 
 - Reviewing the payment history and change log
 - Validating payment amounts before reconciliation
 
+______________________________________________________________________
+
 ## How to access this page
 
 From the sidebar, go to **Trade → Payments**. On the Payments List page, click on any payment reference number or select a payment to open the **Payment Detail page**.
@@ -23,13 +31,17 @@ From the sidebar, go to **Trade → Payments**. On the Payments List page, click
 
 The page displays the payment record with all transaction details and action buttons at the top.
 
+______________________________________________________________________
+
 ## Step-by-step instructions
 
-1. Open **Trade -> Payments** and select the payment record.
+1. Open **Trade → Payments** and select the payment record.
 1. Review current status to confirm what can be edited.
 1. Verify payment amount, date, reference, and linked party.
 1. Check whether a linked check is affecting both balances.
 1. Update allowed fields or notes if needed, then save changes.
+
+______________________________________________________________________
 
 ## Field reference
 
@@ -42,7 +54,7 @@ The page displays the payment record with all transaction details and action but
 
 ______________________________________________________________________
 
-## Page Overview
+## Page overview
 
 The payment detail page includes action buttons at the top-right:
 
@@ -53,11 +65,12 @@ The payment detail page includes action buttons at the top-right:
 | History | View past changes and modifications     | Always visible    |
 
 !!! warning "Status Controls Permissions"
-Only payments with **Pending** or **Failed** status can be edited or deleted. Once a payment is marked **Passed**, it becomes read-only to protect financial records.
+
+    Only payments with **Pending** or **Failed** status can be edited or deleted. Once a payment is marked **Passed**, it becomes read-only to protect financial records.
 
 ______________________________________________________________________
 
-## Payment Information Section
+## Payment information section
 
 ![Payment Information](edit-payment-general-tab.png)
 
@@ -74,25 +87,27 @@ The Payment Information section displays core transaction details:
 | Discount  | Discount or adjustment applied (if any)             | Pending only  |
 
 !!! note "Status Restrictions"
-Once a payment is marked **Passed**, critical fields like Amount and Date become locked to preserve the original transaction record. Pending payments are fully editable.
+
+    Once a payment is marked **Passed**, critical fields like Amount and Date become locked to preserve the original transaction record. Pending payments are fully editable.
 
 ______________________________________________________________________
 
-## Check and Client Selection Section
+## Check and Client selection section
 
 This section shows the parties involved in the payment:
 
 | Field  | Description                                                                               | Editable When |
 | ------ | ----------------------------------------------------------------------------------------- | ------------- |
 | Check  | Bank check associated with this payment (if any). Selecting a check affects two balances. | Pending only  |
-| Client | The client or vendor involved in the payment (customer or supplier)                       | Never         |
+| Client | The client or vendor involved in the payment (client or vendor)                           | Never         |
 
 !!! note "Check Impact on Balances"
-When a Check is linked to a payment, the payment amount reduces both the **client/vendor balance** AND the **check balance**. If no check is linked, only the client/vendor balance is reduced.
+
+    When a Check is linked to a payment, the payment amount reduces both the **client/vendor balance** AND the **check balance**. If no check is linked, only the client/vendor balance is reduced.
 
 ______________________________________________________________________
 
-## Notes Section
+## Notes section
 
 The Notes section contains internal comments and remarks:
 
@@ -101,11 +116,12 @@ The Notes section contains internal comments and remarks:
 | Notes | Internal notes, remarks, or special conditions | All statuses  |
 
 !!! tip
-Use Notes to document payment terms, special instructions, reasons for discounts, or any other internal details related to the payment.
+
+    Use Notes to document payment terms, special instructions, reasons for discounts, or any other internal details related to the payment.
 
 ______________________________________________________________________
 
-## Status and Permissions
+## Status and permissions
 
 Payment management capabilities vary based on status:
 
@@ -116,11 +132,12 @@ Payment management capabilities vary based on status:
 | Failed  | Full        | View only             | Yes           | Locked; preserves original reconciliation data |
 
 !!! warning "Protect Passed Payments"
-Once a payment is marked Passed, it cannot be edited or deleted to ensure financial integrity and accurate reconciliation.
+
+    Once a payment is marked Passed, it cannot be edited or deleted to ensure financial integrity and accurate reconciliation.
 
 ______________________________________________________________________
 
-## Related Actions
+## Related actions
 
 | Action       | Button/Link        | When to Use                                     |
 | ------------ | ------------------ | ----------------------------------------------- |
@@ -139,6 +156,8 @@ ______________________________________________________________________
 - **Check linked to two balances** — Remember that selecting a check affects both the client/vendor balance and the check balance; leaving Check empty only affects the client/vendor balance.
 - **Need to correct a Passed payment?** — Do not attempt to modify a Passed payment directly. Instead, create a new correction payment with the opposite amount.
 - **Always save before leaving** — When editing, use the **Save** button at the bottom to apply changes. Unsaved edits will be lost.
+
+______________________________________________________________________
 
 ## Related pages
 

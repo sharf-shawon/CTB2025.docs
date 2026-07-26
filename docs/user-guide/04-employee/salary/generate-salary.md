@@ -1,125 +1,111 @@
+---
+tags: [module:employee, task:edit, role:hr]
+---
+
 # Generate Salary
 
-Use this page to create a salary record for an employee in CTB Admin. A salary record calculates the payable amount for a specific employee and month based on their salary rate, work units, overtime, bonuses, and deductions. Salary records are used to manage monthly or periodic compensation and maintain a complete payroll history.
+<!-- metadata: owner: hr, last_updated: 2026-07-26, git_ref: main, staging_verified: true -->
 
-## When to use Generate Salary page
+## Summary
 
-- Generating a monthly salary entry for an employee
-- Recording salary payments with bonuses or deductions
-- Logging overtime hours for compensation calculation
-- Marking a salary as paid and recording the payment date
-- Tracking outstanding salary balances before processing payroll
-
-## How to access Generate Salary page
-
-From the sidebar, go to **Employee Management → Salaries**. On the Salaries List page, click the **purple (+) icon** in the top-right corner.
-
-The system opens the **Generate Salary** page.
+Use this page to generate monthly salary records for staff in CTB Admin. A salary entry computes total compensation by combining base salary rate, attended work units, overtime hours, bonuses, and deductions into a net payable amount.
 
 ______________________________________________________________________
 
-## General Information
+## When to use this page
 
-![Generate Salary General Information](generate-salary-general-info.png)
-
-Fill in the following fields:
-
-| Step | Field    | What to Do           | Description                                            |
-| ---- | -------- | -------------------- | ------------------------------------------------------ |
-| 1    | Employee | Select from dropdown | The employee this salary record is being generated for |
-| 2    | Month    | Select date          | The month and year this salary record covers           |
-
-!!! warning "Required Fields"
-Fields marked with a **red star (\*)** are mandatory. Employee and Month must be filled before saving.
+- Generating individual or monthly payroll records for factory and office personnel
+- Computing net compensation incorporating overtime, performance bonuses, or tardiness deductions
+- Logging monthly salary payment execution dates and reference transaction numbers
+- Maintaining audit history for monthly payroll payouts
 
 ______________________________________________________________________
 
-## Salary Components
+## How to access this page
 
-![Salary Components Section](generate-salary-componant-section.png)
-
-Enter the salary calculation fields:
-
-| Step | Field            | What to Do      | Description                                                                    |
-| ---- | ---------------- | --------------- | ------------------------------------------------------------------------------ |
-| 1    | SKU              | Auto-generated  | Unique identifier for this salary record (read-only)                           |
-| 2    | Salary           | Enter amount    | Salary rate for this period; enter 0 to use the employee's default salary rate |
-| 3    | Salary Units     | Enter number    | Number of workdays or work hours to calculate salary against                   |
-| 4    | Overtime (hours) | Enter hours     | Number of overtime hours worked during this period                             |
-| 5    | Bonus            | Enter amount    | Bonus amount in Tk to add to the base salary                                   |
-| 6    | Deductions       | Enter amount    | Deduction amount in Tk to subtract from the base salary                        |
-| 7    | Net Salary       | Auto-calculated | Final payable amount (Salary × Units + Overtime + Bonus - Deductions)          |
-
-!!! note "Net Salary Calculation"
-Net Salary is calculated automatically based on Salary, Salary Units, Overtime, Bonus, and Deductions. You do not need to enter it manually.
-
-!!! tip
-Set **Salary** to **0** to apply the default salary rate configured on the employee's profile.
+From the sidebar navigation, select **Employee → Salaries** (`/admin/employee/salary/`). Click **Add Salary (+)** in the top-right corner.
 
 ______________________________________________________________________
 
-## Payment Details
+## Prerequisites
 
-![Payment Details Section](generate-salary-payment-detail.png)
-
-Record whether this salary has been paid:
-
-| Step | Field         | What to Do    | Description                                                    |
-| ---- | ------------- | ------------- | -------------------------------------------------------------- |
-| 1    | Is Paid       | Toggle ON/OFF | Mark the salary record as paid or unpaid                       |
-| 2    | Payment Date  | Select date   | The date the payment was made (required if Is Paid is ON)      |
-| 3    | Payment Notes | Enter text    | Optional notes about the payment method, reference, or remarks |
-
-!!! note "Payment Date Visibility"
-Payment Date and Payment Notes fields are active when **Is Paid** is toggled on. Leave Is Paid off if the salary is still outstanding.
+- **Permissions:** `employee.add_salary` / `employee.change_salary` permission codenames (HR Manager, Accountant, or Superuser role).
+- **Active Records:** Active **Employee** profile with verified monthly attendance logs.
 
 ______________________________________________________________________
 
-## Related Records
+## Step-by-step instructions
 
-The **Related Records** section at the bottom is a collapsible section that displays any linked records associated with this salary entry, such as attendance record
-
-!!! info
-Click the **Related Records** header to expand and review linked data for this salary record.
-
-______________________________________________________________________
-
-## Saving the Salary Record
-
-After completing all sections:
-
-- Click **Save** to create the salary record
-- Click **Save and continue editing** to save and stay on the page
-- Click **Save and add another** to save and immediately generate another salary record
+1. Open **Employee → Salaries** and click **(+) Add Salary**.
+1. Select the target **Employee** from the dropdown menu.
+1. Select the billing **Month** date (`YYYY-MM-DD`).
+1. Enter the base **Salary** rate (or enter `0` to apply profile default rate).
+1. Specify **Salary Units** (number of attended workdays or billable hours).
+1. Input total **Overtime (hours)** worked during the period.
+1. Enter any **Bonus** or **Deductions** in local currency.
+1. Review the auto-calculated **Net Salary**.
+1. If paying immediately, toggle **Is Paid** to ON and set **Payment Date**.
+1. Click **Save** to generate the salary record.
 
 ______________________________________________________________________
 
-## Deleting a Salary Record
+## Verification and definition of done
 
-A **Delete Salary** button is available at the bottom-left of the page.
-
-!!! warning "Restricted Action"
-Deleting a salary record is permanent. Only delete records that were created in error and have not been linked to any payout or financial transaction. Contact your system administrator if a linked salary record needs to be removed.
-
-______________________________________________________________________
-
-!!! Tips and Common Issues
-
-- **Employee is required** — You must select an employee before saving <br>
-- **Month is required** — Select the correct month to ensure the record appears in the right payroll period <br>
-- **Default salary applies when Salary is 0** — If no salary is entered, the system uses the rate set on the employee's profile <br>
-- **Net Salary updates automatically** — It recalculates whenever Salary, Salary Units, Overtime, Bonus, or Deductions are changed <br>
-- **Salary Units represent workdays or hours** — Enter the correct number based on the employee's salary type (e.g., Monthly or Hourly) <br>
-- **Toggle Is Paid only when payment is confirmed** — Setting Is Paid without a Payment Date may cause payroll reporting inconsistencies <br>
-- **Deductions reduce Net Salary** — Enter deductions carefully as they directly reduce the employee's final payable amount <br>
-- **History button** — Use the **History** button in the top-right corner to review all changes made to this salary record <br>
+- System generates a unique salary SKU (`SLR-YYYYMMDD-XXXX`).
+- Net Salary computes via formula: `(Salary Rate * Units) + Overtime + Bonus - Deductions`.
+- The salary voucher appears under `/admin/employee/salary/` and updates the employee payout ledger.
 
 ______________________________________________________________________
 
-## Related Pages
+## Field reference
 
-- **Salaries Overview** — View and manage all salary records
-- **Employees** — Manage employee profiles and default salary rates
-- **Wages** — Record production-based wage entries for employees
-- **Payouts** — Process and track salary disbursements
-- **Attendance** — Review attendance records used for salary unit calculation
+### General information
+
+![Generate Salary General Info](generate-salary-general-info.png)
+
+| Step | Field    | Required | What to Do      | Description                       |
+| ---- | -------- | -------- | --------------- | --------------------------------- |
+| 1    | SKU      | No       | Read-only       | System-generated tracking SKU     |
+| 2    | Employee | Yes      | Select employee | Target staff member for payroll   |
+| 3    | Month    | Yes      | Select date     | Billing month date (`YYYY-MM-DD`) |
+
+### Component details
+
+![Generate Salary Component Section](generate-salary-componant-section.png)
+
+| Step | Field            | Required | What to Do   | Description                                        |
+| ---- | ---------------- | -------- | ------------ | -------------------------------------------------- |
+| 1    | Salary           | Yes      | Enter rate   | Period salary rate (enter `0` for profile default) |
+| 2    | Salary Units     | Yes      | Enter number | Attended days or work hours                        |
+| 3    | Overtime (hours) | No       | Enter hours  | Overtime hours worked                              |
+| 4    | Bonus            | No       | Enter amount | Incentive bonus added to base pay                  |
+| 5    | Deductions       | No       | Enter amount | Deductions for absences or loans                   |
+| 6    | Net Salary       | No       | Read-only    | Final computed net payable compensation            |
+
+### Payment details
+
+![Generate Salary Payment Detail](generate-salary-payment-detail.png)
+
+| Step | Field         | Required    | What to Do    | Description                                                 |
+| ---- | ------------- | ----------- | ------------- | ----------------------------------------------------------- |
+| 1    | Is Paid       | No          | Toggle switch | Settlement flag                                             |
+| 2    | Payment Date  | Conditional | Select date   | Date salary was transferred (required if `Is Paid` is True) |
+| 3    | Payment Notes | No          | Enter text    | Transaction memo or reference                               |
+
+______________________________________________________________________
+
+## Exception handling and error recovery
+
+| Symptom / Error Message                                    | Root Cause                                                                 | Remediation Action                                                          |
+| ---------------------------------------------------------- | -------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `Salary record for this employee and month already exists` | Unique constraint (`employee`, `month`) prevents duplicate monthly records | Edit existing monthly salary voucher under [Salaries Overview](overview.md) |
+| `Payment Date is required when Is Paid is true`            | `Is Paid` enabled without a payment date                                   | Enter transaction date in **Payment Date** before saving                    |
+| Net Salary negative                                        | Deductions exceed base salary plus overtime and bonus                      | Adjust deduction amount to ensure non-negative net balance                  |
+
+______________________________________________________________________
+
+## Related pages
+
+- [Salaries Overview](overview.md) — View master salary vouchers list
+- [Record Attendance](../attendance/record-attendance.md) — Audit monthly attendance units
+- [Create Payout](../payouts/create-payout.md) — Disburse salary payments

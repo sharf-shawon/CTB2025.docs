@@ -10,24 +10,26 @@ Read that file before any documentation task. Do not rely on memory for style ru
 
 ## Available agents (invoke with @agent-name)
 
-| Command | What it does |
-|---|---|
-| `@doc-writer` | Write a new page from scratch |
-| `@doc-standardizer` | Rewrite an existing page to STYLE_SPEC |
-| `@doc-reviewer` | Review a page and output structured feedback |
-| `@doc-relocator` | Analyze or execute a page move |
-| `@nav-manager` | Update `mkdocs.yml` nav entries |
+| Command              | What it does                                       |
+| -------------------- | -------------------------------------------------- |
+| `@doc-writer`        | Write a new page from scratch                      |
+| `@doc-standardizer`  | Rewrite an existing page to STYLE_SPEC             |
+| `@doc-reviewer`      | Review a page and output structured feedback       |
+| `@doc-relocator`     | Analyze or execute a page move                     |
+| `@nav-manager`       | Update `mkdocs.yml` nav entries                    |
 | `@knowledge-curator` | Post-merge knowledge sync (run after merging only) |
-| `@doc-auditor` | Full module or repo audit |
+| `@doc-auditor`       | Full module or repo audit                          |
 
 ## Universal rules
 
 1. STYLE_SPEC.md is the only style authority
-2. Never rename or move files without doc-relocator relocation checklist
-3. Never edit `.github/knowledge/` files mid-task
-4. Every page needs a screenshot or `<!-- TODO: screenshot ... -->` placeholder
-5. Every new page needs a matching `mkdocs.yml` nav entry
-6. `uv run mkdocs build --strict` must pass after every change
+1. **Dual-MCP Verification Pipeline**: Must inspect source code via `github-mcp-server` (`sharf-shawon/CTB2025`) and staging UI/forms via `ctb-staging-mcp-server`
+1. **Zero-Hallucination Mandate**: AI agents MUST NEVER invent or hallucinate features, fields, permissions, or business logic
+1. Never rename or move files without doc-relocator relocation checklist
+1. Never edit `.github/knowledge/` files mid-task
+1. Every page needs a screenshot or `<!-- TODO: screenshot ... -->` placeholder
+1. Every new page needs a matching `mkdocs.yml` nav entry
+1. `uv run mkdocs build --strict` must pass after every change
 
 ## Context files to load for every task
 

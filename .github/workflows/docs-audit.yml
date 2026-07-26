@@ -72,8 +72,8 @@ jobs:
               '02-factory': 'Factory',
               '03-trade': 'Trade',
               '04-employee': 'Employee',
-              '05-settings-and-admin': 'Settings and Admin',
-              '06-reference': 'Reference',
+              '08-settings-and-admin': 'Settings and Admin',
+              '09-reference': 'Reference',
             };
 
             const touched = new Set();

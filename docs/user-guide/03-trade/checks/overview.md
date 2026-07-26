@@ -1,12 +1,16 @@
+---
+tags: [module:trade, task:view, role:accountant]
+---
+
 # Checks Overview
 
-## Overview
+## Summary
 
 The **Checks Overview** page lets you monitor all check transactions recorded in CTB Admin. Use this section to review check records, track their status, and confirm which checks are active, pending, or bounced. This helps you manage check-based payments and reconcile bank accounts efficiently.
 
 ______________________________________________________________________
 
-## When to use Checks Overview
+## When to use this page
 
 - Review all check transactions in one place
 - Find a check by number, client/vendor, or date
@@ -15,16 +19,26 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## How to access Checks Overview
+## How to access this page
 
-1. From the sidebar, go to **Trade Management → Checks**.
+1. From the sidebar, go to **Trade → Checks**.
 1. The list page shows checks grouped by **Active**, **Disabled**, and **Deleted**.
 
 ______________________________________________________________________
 
-## Page sections
+## Step-by-step instructions
 
-### Checks List
+1. Open **Checks Overview** from the **Trade** section of the sidebar.
+1. Complete the **Page sections** section described below.
+1. Review the values you entered, then save the record.
+
+______________________________________________________________________
+
+## Field reference
+
+### Page sections
+
+### Checks list
 
 ![Checks List Page](check-overview-list-page.png)
 
@@ -59,7 +73,7 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## Related Pages
+## Related pages
 
 - **Add Check** — Record a new check transaction
 - **Check Detail** — Review or update check information

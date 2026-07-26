@@ -1,6 +1,10 @@
+---
+tags: [module:factory, task:view, role:staff]
+---
+
 # Material Inventory Overview
 
-## Overview
+## Summary
 
 The **Material Inventory** pages let you monitor stock movement and review current inventory status for factory materials. Use this section to see all stock records, identify recent transactions, and check whether materials are marked active.
 
@@ -23,9 +27,19 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## Page sections
+## Step-by-step instructions
 
-### Inventory List
+1. Open **Material Inventory Overview** from the **Factory** section of the sidebar.
+1. Complete the **Page sections** section described below.
+1. Review the values you entered, then save the record.
+
+______________________________________________________________________
+
+## Field reference
+
+### Page sections
+
+### Inventory list
 
 ![Inventory Material List Page](inventory-material-list-page.png)
 
@@ -58,7 +72,7 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## Related Pages
+## Related pages
 
 - **Add Inventory** — Record new material stock movement
 - **Materials** — Manage material details and stock references

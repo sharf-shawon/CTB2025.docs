@@ -1,6 +1,8 @@
 name: Docs Style Check
 
 on:
+  push:
+    branches: [main]
   pull_request:
     paths:
       - 'docs/**/*.md'
@@ -14,6 +16,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+        with:
+          # Full history: git-revision-date-localized needs it for accurate dates
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -28,13 +33,15 @@ jobs:
         run: uv sync --extra dev
 
       # -----------------------------------------------------------------------
-      # Pure validator hooks (never mutate files) via pre-commit
-      # SKIP= prevents the mutating hooks from running at all in CI
+      # Pre-commit hooks. Auto-fixing hooks are safe to run here: pre-commit
+      # exits non-zero when a hook modifies a file, which is exactly the
+      # check-only behaviour CI needs. mdformat in particular MUST run through
+      # pre-commit so it picks up mdformat-mkdocs from additional_dependencies.
       # -----------------------------------------------------------------------
       - name: Pre-commit validators
         env:
-          # Skip every hook that auto-fixes/reformats files
-          SKIP: ruff,ruff-format,mdformat
+          # ruff is re-run below with explicit check-only flags for a nicer diff
+          SKIP: ruff,ruff-format
         run: uv run pre-commit run --all-files
 
       # -----------------------------------------------------------------------
@@ -47,36 +54,32 @@ jobs:
         run: uv run ruff format --check .
 
       # -----------------------------------------------------------------------
-      # Markdown format check — mdformat --check never writes files
+      # Markdown formatting is checked by the mdformat pre-commit hook above.
+      # It is NOT re-run here with a hand-written extension list: omitting
+      # mdformat-mkdocs strips the indent from MkDocs admonition bodies and
+      # breaks every callout on the site.
       # -----------------------------------------------------------------------
-      - name: Markdown format check
-        run: |
-          uv run mdformat --check \
-            --extensions gfm \
-            --extensions frontmatter \
-            docs/ || (
-              echo ''
-              echo '::error::mdformat found formatting issues. Fix locally with: uv run mdformat docs/'
-              exit 1
-            )
 
       # -----------------------------------------------------------------------
-      # Prohibited phrases (annotations only — never blocks merge)
+      # Style spec enforcement — hard failure.
+      #
+      # Replaces the previous annotation-only prohibited-phrase grep, which
+      # never blocked a merge and so never prevented a single violation.
+      # style_lint.py covers page structure, heading vocabulary, terminology,
+      # voice, admonition syntax, and tags, and fails only on violations that
+      # are not already recorded in scripts/style_lint_baseline.json.
       # -----------------------------------------------------------------------
-      - name: Check prohibited phrases
+      - name: Docs style spec
         run: |
-          echo "Checking for prohibited phrases..."
-          PHRASES=("simply" "just " "easily" "straightforward" "seamlessly" \
-                   "leverage" "utilize" "navigate to" "it is worth noting" \
-                   "note that," "please " "it should be noted")
-          for phrase in "${PHRASES[@]}"; do
-            matches=$(grep -ril "$phrase" docs/user-guide/ --include="*.md" 2>/dev/null || true)
-            if [ -n "$matches" ]; then
-              echo "::warning::Prohibited phrase '$phrase' found in:"
-              echo "$matches" | while IFS= read -r f; do echo "  - $f"; done
-            fi
-          done
-          echo "Prohibited phrase scan complete."
+          uv run python scripts/style_lint.py || (
+            echo ''
+            echo '::error::New style violations. See .github/STYLE_SPEC.md.'
+            exit 1
+          )
+
+      - name: Style violation summary
+        if: always()
+        run: uv run python scripts/style_lint.py --stats --no-baseline
 
       # -----------------------------------------------------------------------
       # Nav alignment

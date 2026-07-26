@@ -23,6 +23,8 @@ jobs:
         uses: actions/checkout@v7
         with:
           ref: ${{ github.head_ref || github.ref }}
+          # Full history: git-revision-date-localized needs it for accurate dates
+          fetch-depth: 0
 
       - name: Setup Python
         uses: actions/setup-python@v5

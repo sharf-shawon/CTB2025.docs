@@ -26,18 +26,18 @@ For each file listed in the issue:
 
 1. Read the full file.
 1. Identify improvement areas:
-   - Backend jargon (replace with plain business language).
-   - First-person writing (convert to second-person imperative).
-   - Missing template sections (add if absent).
-   - Vague or overly long sentences (rewrite to be concise and direct).
-   - Incomplete field reference tables (add any fields visible in referenced screenshots).
-   - Missing "Tips and common issues" bullets.
-   - "Related pages" section missing or outdated links.
+    - Backend jargon (replace with plain business language).
+    - First-person writing (convert to second-person imperative).
+    - Missing template sections (add if absent).
+    - Vague or overly long sentences (rewrite to be concise and direct).
+    - Incomplete field reference tables (add any fields visible in referenced screenshots).
+    - Missing "Tips and common issues" bullets.
+    - "Related pages" section missing or outdated links.
 1. Apply improvements while preserving:
-   - All heading structure and section order.
-   - All existing screenshot references.
-   - All existing URL slugs.
-   - All existing nav entries.
+    - All heading structure and section order.
+    - All existing screenshot references.
+    - All existing URL slugs.
+    - All existing nav entries.
 
 ## Writing Style Rules
 

@@ -20,18 +20,18 @@ The repository currently has the `openspec` CLI installed and some custom AI age
 
 - **Decision: Populate `openspec/config.yaml` with Rich Context**
 
-  - **Rationale**: The OpenSpec CLI uses this context to ground artifact generation. Including details about the tech stack and documentation standards will improve the quality of generated proposals and designs.
-  - **Alternatives**: Keeping a minimal config and relying on general AI knowledge, which often leads to generic or incorrect assumptions.
+    - **Rationale**: The OpenSpec CLI uses this context to ground artifact generation. Including details about the tech stack and documentation standards will improve the quality of generated proposals and designs.
+    - **Alternatives**: Keeping a minimal config and relying on general AI knowledge, which often leads to generic or incorrect assumptions.
 
 - **Decision: Establish `GEMINI.md` as the "Source of Truth" for Workflow**
 
-  - **Rationale**: The Gemini CLI specifically prioritizes `GEMINI.md` for operational mandates. This is the most effective place to enforce the spec-driven workflow.
-  - **Alternatives**: Putting workflow instructions in `CONTRIBUTING.md`, which is intended for humans and may be ignored by the AI agent's core loop.
+    - **Rationale**: The Gemini CLI specifically prioritizes `GEMINI.md` for operational mandates. This is the most effective place to enforce the spec-driven workflow.
+    - **Alternatives**: Putting workflow instructions in `CONTRIBUTING.md`, which is intended for humans and may be ignored by the AI agent's core loop.
 
 - **Decision: Reference Custom Agents in `AGENTS.md`**
 
-  - **Rationale**: A central index of agents allows the orchestrator to understand the specialized capabilities available for delegation.
-  - **Alternatives**: Hardcoding agent paths in individual skills.
+    - **Rationale**: A central index of agents allows the orchestrator to understand the specialized capabilities available for delegation.
+    - **Alternatives**: Hardcoding agent paths in individual skills.
 
 ## Risks / Trade-offs
 

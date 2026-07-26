@@ -1,8 +1,16 @@
+---
+tags: [module:trade, task:view, role:accountant]
+---
+
 # Check Detail
+
+## Summary
 
 Use this page to view and manage a check after it has been created or received. The check detail page displays all information related to a check—general details, financial information, status, and supporting documents. You can update check status, add front and back photos, and track payment records linked to this check.
 
-## When to use Check Detail
+______________________________________________________________________
+
+## When to use this page
 
 - Viewing a complete check record with all details and payment information
 - Updating check status (Pending, Cleared, Bounced, etc.)
@@ -10,11 +18,26 @@ Use this page to view and manage a check after it has been created or received. 
 - Reviewing linked payments and transactions
 - Verifying check information for bank reconciliation
 
-## How to access Check Detail
+______________________________________________________________________
 
-From the sidebar, go to **Trade Management → Checks**. On the Checks List page, click on any check SKU or select a check to open the **Check Detail page**.
+## How to access this page
+
+From the sidebar, go to **Trade → Checks**. On the Checks List page, click on any check SKU or select a check to open the **Check Detail page**.
 
 ![Check Detail List Page ](check-detail-list-page.png)
+
+______________________________________________________________________
+
+## Step-by-step instructions
+
+1. Go to **Trade → Checks** from the sidebar.
+1. Click the check you want to open.
+1. Review the **Check information** section for the check number, bank, amount, and balance.
+1. Check the **Check dates** section for the dates recorded against the check.
+1. Review the **Payments** section to see what has been settled against the check.
+1. Update the check where its status allows, then save.
+
+______________________________________________________________________
 
 ## Field reference
 
@@ -28,7 +51,7 @@ From the sidebar, go to **Trade Management → Checks**. On the Checks List page
 
 ______________________________________________________________________
 
-## Check Information
+## Check information
 
 ![Check Information Section](check-info.png)
 
@@ -45,11 +68,12 @@ The Check Information section displays core check details:
 | Type         | Check type (Receive, Send etc.)                |
 
 !!! info "Read-Only Fields"
-SKU, Check Number, Bank, Date, and Amount are typically set at check creation and cannot be changed on this detail page. To modify these, you must edit the check or create a new record.
+
+    SKU, Check Number, Bank, Date, and Amount are typically set at check creation and cannot be changed on this detail page. To modify these, you must edit the check or create a new record.
 
 ______________________________________________________________________
 
-## Status Information
+## Status information
 
 ![Status Section](check-details-status-info.png)
 
@@ -65,7 +89,8 @@ Update the **Status** dropdown to track the check through its lifecycle:
 - **Failed** -The cheque did not pass bank verification, so it was rejected
 
 !!! warning "Status Changes"
-Changing a check status may trigger notifications or affect linked payments. Review implications before updating.
+
+    Changing a check status may trigger notifications or affect linked payments. Review implications before updating.
 
 ______________________________________________________________________
 
@@ -87,14 +112,14 @@ The page includes two photo upload sections:
 
 !!! tip "Photo Guidelines"
 
-- Capture check details clearly and in full
-- Ensure adequate lighting and no glare
-- Back photo is optional but recommended for auditing purposes
-- Store high-resolution images for bank verification
+    \- Capture check details clearly and in full
+    \- Ensure adequate lighting and no glare
+    \- Back photo is optional but recommended for auditing purposes
+    \- Store high-resolution images for bank verification
 
 ______________________________________________________________________
 
-## Check Dates Section
+## Check dates section
 
 | Field             | Description                                        |
 | ----------------- | -------------------------------------------------- |
@@ -110,7 +135,7 @@ These dates help track check timing for bank reconciliation:
 
 ______________________________________________________________________
 
-## Payments Tab
+## Payments tab
 
 The **Payments** section at the bottom tracks all payments or transactions linked to this check:
 
@@ -124,7 +149,8 @@ The **Payments** section at the bottom tracks all payments or transactions linke
 | From/To   | Payment source or destination |
 
 !!! info "Linked Payments"
-A single check may be linked to multiple payments. Use this section to verify which transactions are tied to this check.
+
+    A single check may be linked to multiple payments. Use this section to verify which transactions are tied to this check.
 
 ______________________________________________________________________
 
@@ -133,7 +159,8 @@ ______________________________________________________________________
 A **Delete Check** button is available at the bottom-left of the detail page.
 
 !!! warning "Restricted Action"
-Checks can only be deleted when their status is **Pending** and no payments are linked to them. Once a check has been set to **Passed**, **Bounced**, or **Cancelled**, or has linked payments, the Delete button will not be available.
+
+    Checks can only be deleted when their status is **Pending** and no payments are linked to them. Once a check has been set to **Passed**, **Bounced**, or **Cancelled**, or has linked payments, the Delete button will not be available.
 
 **To delete a check:**
 
@@ -145,7 +172,8 @@ Checks can only be deleted when their status is **Pending** and no payments are 
 The check record is permanently removed from the system.
 
 !!! tip "Cannot see the Delete button?"
-If the Delete button is not visible, the check is either bounced or failed. To preserve financial records, linked or processed checks cannot be deleted.
+
+    If the Delete button is not visible, the check is either bounced or failed. To preserve financial records, linked or processed checks cannot be deleted.
 
 ______________________________________________________________________
 

@@ -1,79 +1,83 @@
+---
+tags: [module:employee, task:view, role:hr]
+---
+
 # Positions Overview
 
-The **Positions** page displays all job positions in a structured table. It allows you to quickly search, review, and manage employee positions used across your workforce.
+<!-- metadata: owner: hr, last_updated: 2026-07-26, git_ref: main, staging_verified: true -->
+
+## Summary
+
+Use the **Positions Overview** page to inspect and manage all job titles defined in CTB Admin. The listing provides a centralized view of position identifiers, titles, descriptions, and activation states.
 
 ______________________________________________________________________
 
-## Page Layout
+## When to use this page
+
+- Reviewing all job positions registered across the company
+- Searching for specific positions by SKU or title
+- Inspecting active/disabled status before assigning positions to staff
+- Accessing position creation and management forms
+
+______________________________________________________________________
+
+## How to access this page
+
+From the sidebar navigation, select **Employee → Positions** (`/admin/employee/workposition/`).
+
+______________________________________________________________________
+
+## Prerequisites
+
+- **Permissions:** `employee.view_workposition` permission codename (HR, Accountant, Manager, or Superuser role).
+- **Active Records:** None.
+
+______________________________________________________________________
+
+## Step-by-step instructions
+
+1. Open **Positions** from the **Employee** section of the sidebar.
+1. Review the listed position records and their **Is Enabled** checkmarks.
+1. Use the search bar to filter positions by title or SKU.
+1. Click **Add Position (+)** to create a new position, or select an existing row to edit details.
+
+______________________________________________________________________
+
+## Verification and definition of done
+
+- Master position directory displays all configured job titles with accurate status indicators.
+- Real-time search filters matching position rows instantaneously.
+
+______________________________________________________________________
+
+## Field reference
+
+### Table summary
 
 ![Positions List](position-overview.png)
 
-The page includes:
-
-- Search bar for quick lookup
-- Position list table
-- Filters button for advanced filtering
-- Add (+) button for creating new positions
-
-______________________________________________________________________
-
-## Position List
-
-The table shows all positions with key details:
-
-| Column        | Description                                           |
-| ------------- | ----------------------------------------------------- |
-| SKU           | Unique identifier for each position (e.g., PST#0001)  |
-| Position Name | Job title used for organizing and assigning employees |
-| Description   | Additional role details (if provided)                 |
-| Is Enabled    | Status indicator showing if position is active        |
-| Created At    | Date and time the position was created                |
-| Updated At    | Last modification date                                |
+| Column        | Required | What to Do     | Description                                  |
+| ------------- | -------- | -------------- | -------------------------------------------- |
+| SKU           | No       | View value     | Unique identifier code (e.g., `PST#0001`)    |
+| Position Name | Yes      | Click link     | Official job title                           |
+| Description   | No       | View text      | Additional role responsibilities             |
+| Is Enabled    | Yes      | View checkmark | Green checkmark if active; empty if disabled |
+| Created At    | No       | View timestamp | Creation date and time                       |
+| Updated At    | No       | View timestamp | Last modification date and time              |
 
 ______________________________________________________________________
 
-## Search Bar
+## Exception handling and error recovery
 
-Use the search bar to quickly find positions.
-
-### How to use
-
-- Type a keyword (e.g., position name or SKU)
-- The table updates instantly based on your input
-
-!!! tip
-Use SKU for faster and more accurate search results.
+| Symptom / Error Message               | Root Cause                                   | Remediation Action                                           |
+| ------------------------------------- | -------------------------------------------- | ------------------------------------------------------------ |
+| Position not visible in employee form | Position is disabled (`Is Enabled` is false) | Enable the position in [Manage Position](manage-position.md) |
+| Search returns no positions           | Search query mismatch or filter restriction  | Clear search query and reset filters                         |
 
 ______________________________________________________________________
 
-## Filters
+## Related pages
 
-Use the **Filters** button to narrow down position results.
-
-### Filter options
-
-- **Status** — Filter by enabled or disabled positions
-- **Created Date** — Filter positions by creation date range
-- **Updated Date** — Filter positions by modification date range
-- **Department** — Filter positions by assigned department (if applicable)
-
-!!! note
-Apply filters to quickly locate positions matching your workflow needs.
-
-______________________________________________________________________
-
-## Tips and Best Practices
-
-- Use search instead of manually scanning the list
-- Keep position names consistent and clear for easier employee assignment
-- Filter by status to focus on active positions when onboarding employees
-- Review position details before editing to avoid disrupting assigned employees
-- Disable unused positions instead of deleting them to preserve historical records
-
-______________________________________________________________________
-
-## Related Pages
-
-- **Edit Position** — Update position details and enable/disable status
-- **Employees Overview** — View employees assigned to positions
-- **Departments Overview** — Organize positions by department
+- [Manage Position](manage-position.md) — Create or update position titles
+- [Departments Overview](../departments/overview.md) — Manage organizational departments
+- [Employees Overview](../employees/overview.md) — Assign positions to employees

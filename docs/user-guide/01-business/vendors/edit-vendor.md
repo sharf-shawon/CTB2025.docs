@@ -1,3 +1,7 @@
+---
+tags: [module:business, task:edit, role:staff]
+---
+
 # Edit Vendor
 
 Use this page to update an existing vendor’s information. This includes contact details, identification documents, and financial settings.
@@ -6,12 +10,16 @@ Use this page to update an existing vendor’s information. This includes contac
 
 Use this page to maintain vendor records when contact, identity, or balance data changes. Updates here affect future purchasing and payment workflows.
 
+______________________________________________________________________
+
 ## When to use this page
 
 - Updating vendor contact or business information
 - Changing vendor status (active/inactive)
 - Modifying balance limits or financial data
 - Updating identification documents or photos
+
+______________________________________________________________________
 
 ## How to access this page
 
@@ -23,13 +31,17 @@ Use this page to maintain vendor records when contact, identity, or balance data
 
 The system opens the **Edit Vendor Page**.
 
+______________________________________________________________________
+
 ## Step-by-step instructions
 
-1. Open **Business -> Vendors** from the sidebar.
+1. Open **Business → Vendors** from the sidebar.
 1. Select a vendor from the list.
 1. Update the required fields in personal, business, and balance sections.
 1. Verify financial changes and document updates.
 1. Click **Save** to apply changes.
+
+______________________________________________________________________
 
 ## Field reference
 
@@ -41,7 +53,7 @@ The system opens the **Edit Vendor Page**.
 
 ______________________________________________________________________
 
-## What’s different from Add Vendor
+## What’s different from add Vendor
 
 - All fields are **pre-filled** with existing vendor data
 - You are **modifying**, not creating a new record
@@ -50,7 +62,7 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## Personal Information
+## Personal information
 
 ![Personal Information Section](vendor-personal-info-current.png)
 
@@ -69,7 +81,7 @@ Update the following fields as needed:
 
 ______________________________________________________________________
 
-## Business Details
+## Business details
 
 ![Business Details Section](vendor-business-details.png)
 
@@ -83,11 +95,12 @@ ______________________________________________________________________
 | Photo           | Replace             | Update vendor profile image              |
 
 !!! note
-Replacing images will overwrite previous uploads.
+
+    Replacing images will overwrite previous uploads.
 
 ______________________________________________________________________
 
-## Balance Information
+## Balance information
 
 ![Balance Information Section](vendor-balance-info.png)
 
@@ -98,11 +111,12 @@ ______________________________________________________________________
 | Lower Limit | Modify              | Controls minimum allowed balance       |
 
 !!! warning
-Changing balance-related fields can impact financial tracking and reports.
+
+    Changing balance-related fields can impact financial tracking and reports.
 
 ______________________________________________________________________
 
-## Saving Changes
+## Saving changes
 
 After updating the required fields:
 
@@ -111,7 +125,7 @@ After updating the required fields:
 
 ______________________________________________________________________
 
-## Tips and Common Issues
+## Tips and common issues
 
 - Disabling a vendor prevents it from being used in future transactions
 - Ensure **Phone number is correct** before enabling SMS
@@ -120,7 +134,7 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## Related Pages
+## Related pages
 
 - **Add Vendor** — Create a new vendor
 - **Vendor Detail** — View vendor profile and history
