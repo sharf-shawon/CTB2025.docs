@@ -23,8 +23,10 @@ jobs:
       - name: Install UV and dependencies
         run: |
           pip install uv
+          uv sync || true
           uv pip install --system -r requirements.txt || true
-          pip install mkdocs-material pymdownx-blocks mdformat mdformat-mkdocs
+          pip install mkdocs-material pymdownx-blocks mdformat \
+            mdformat-mkdocs mkdocs-glightbox
 
       - name: Run style linter
         run: |
