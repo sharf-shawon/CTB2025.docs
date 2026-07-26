@@ -32,4 +32,4 @@ jobs:
       - name: Build documentation strictly
         env:
           SOCIAL_CARDS: "false"
-        run: uv run mkdocs build --strict
+        run: uv run properdocs build --strict
