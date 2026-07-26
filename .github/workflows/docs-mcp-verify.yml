@@ -1,4 +1,4 @@
-name: Documentation Quality & MCP Verification
+name: PaperDocs Quality & MCP Verification
 
 on:
   push:
@@ -18,23 +18,18 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: "3.13"
 
-      - name: Install UV and dependencies
-        run: |
-          pip install uv
-          uv sync || true
-          uv pip install --system -r requirements.txt || true
-          pip install mkdocs-material pymdownx-blocks mdformat \
-            mdformat-mkdocs mkdocs-glightbox mkdocs-redirects \
-            mkdocs-git-revision-date-localized-plugin
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: Sync dependencies
+        run: uv sync --extra dev
 
       - name: Run style linter
-        run: |
-          python3 scripts/style_lint.py
+        run: uv run python scripts/style_lint.py
 
       - name: Build documentation strictly
         env:
           SOCIAL_CARDS: "false"
-        run: |
-          mkdocs build --strict
+        run: uv run properdocs build --strict
