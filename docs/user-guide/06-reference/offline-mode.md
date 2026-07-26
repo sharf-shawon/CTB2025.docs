@@ -25,13 +25,11 @@ If you open a page for the first time while offline, the service worker shows a 
 - The first visit to a page may still need a working connection.
 - Some images and assets may take longer to appear after a reconnect.
 
-!!! Tips and common issues
+## Tips and common issues
 
-```
 - Refresh once after reconnecting instead of repeatedly reloading the page.
 - If an image or page looks stale, clear the browser cache and try again.
 - Tell users to revisit the site while online after a deployment so the cache can update.
-```
 
 ## Related pages
 

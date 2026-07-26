@@ -136,11 +136,11 @@ Because CTB Admin uses a consistent admin UI:
 - Reuse one standard list-page screenshot pattern per module when layout is identical.
 - Reuse one standard add/edit form screenshot pattern per module when layout is identical.
 - Capture unique screenshots for pages with distinct UI, including:
-  - Invoice print view
-  - Chalan print view
-  - Invoice analytics dashboard
-  - Login page
-  - PWA/offline view
+    - Invoice print view
+    - Chalan print view
+    - Invoice analytics dashboard
+    - Login page
+    - PWA/offline view
 
 ## Screenshot tooling
 

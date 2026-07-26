@@ -81,7 +81,8 @@ This is the default tab for vendor profile information.
 | Upper / Lower Limit | Modify              | Controls balance range                |
 
 !!! warning
-Changing balance or limits may affect financial reports and transactions.
+
+    Changing balance or limits may affect financial reports and transactions.
 
 ______________________________________________________________________
 
@@ -98,7 +99,8 @@ Displays all purchase vouchers related to the vendor.
 - Verifying past transactions
 
 !!! note
-This tab is for viewing data only. Editing is done from the purchase/invoice module.
+
+    This tab is for viewing data only. Editing is done from the purchase/invoice module.
 
 ______________________________________________________________________
 

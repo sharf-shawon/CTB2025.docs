@@ -45,7 +45,8 @@ The Check Information section displays core check details:
 | Type         | Check type (Receive, Send etc.)                |
 
 !!! info "Read-Only Fields"
-SKU, Check Number, Bank, Date, and Amount are typically set at check creation and cannot be changed on this detail page. To modify these, you must edit the check or create a new record.
+
+    SKU, Check Number, Bank, Date, and Amount are typically set at check creation and cannot be changed on this detail page. To modify these, you must edit the check or create a new record.
 
 ______________________________________________________________________
 
@@ -65,7 +66,8 @@ Update the **Status** dropdown to track the check through its lifecycle:
 - **Failed** -The cheque did not pass bank verification, so it was rejected
 
 !!! warning "Status Changes"
-Changing a check status may trigger notifications or affect linked payments. Review implications before updating.
+
+    Changing a check status may trigger notifications or affect linked payments. Review implications before updating.
 
 ______________________________________________________________________
 
@@ -87,10 +89,10 @@ The page includes two photo upload sections:
 
 !!! tip "Photo Guidelines"
 
-- Capture check details clearly and in full
-- Ensure adequate lighting and no glare
-- Back photo is optional but recommended for auditing purposes
-- Store high-resolution images for bank verification
+    \- Capture check details clearly and in full
+    \- Ensure adequate lighting and no glare
+    \- Back photo is optional but recommended for auditing purposes
+    \- Store high-resolution images for bank verification
 
 ______________________________________________________________________
 
@@ -124,7 +126,8 @@ The **Payments** section at the bottom tracks all payments or transactions linke
 | From/To   | Payment source or destination |
 
 !!! info "Linked Payments"
-A single check may be linked to multiple payments. Use this section to verify which transactions are tied to this check.
+
+    A single check may be linked to multiple payments. Use this section to verify which transactions are tied to this check.
 
 ______________________________________________________________________
 
@@ -133,7 +136,8 @@ ______________________________________________________________________
 A **Delete Check** button is available at the bottom-left of the detail page.
 
 !!! warning "Restricted Action"
-Checks can only be deleted when their status is **Pending** and no payments are linked to them. Once a check has been set to **Passed**, **Bounced**, or **Cancelled**, or has linked payments, the Delete button will not be available.
+
+    Checks can only be deleted when their status is **Pending** and no payments are linked to them. Once a check has been set to **Passed**, **Bounced**, or **Cancelled**, or has linked payments, the Delete button will not be available.
 
 **To delete a check:**
 
@@ -145,7 +149,8 @@ Checks can only be deleted when their status is **Pending** and no payments are 
 The check record is permanently removed from the system.
 
 !!! tip "Cannot see the Delete button?"
-If the Delete button is not visible, the check is either bounced or failed. To preserve financial records, linked or processed checks cannot be deleted.
+
+    If the Delete button is not visible, the check is either bounced or failed. To preserve financial records, linked or processed checks cannot be deleted.
 
 ______________________________________________________________________
 

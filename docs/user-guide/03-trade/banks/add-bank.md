@@ -31,7 +31,8 @@ Fill in the following fields:
 | 3    | Is Enabled | Toggle on/off  | Activate or deactivate this bank account in the system |
 
 !!! warning "Required Fields"
-Fields marked with a **red star (\*)** are mandatory. Bank Name is required before saving.
+
+    Fields marked with a **red star (\*)** are mandatory. Bank Name is required before saving.
 
 ______________________________________________________________________
 
@@ -46,7 +47,8 @@ Configure the financial limits for this bank account:
 | 3    | Lower Balance Limit | Enter amount | Minimum balance threshold; alerts when balance falls below this |
 
 !!! note "Balance Limits"
-Upper and Lower Balance Limits are used for financial monitoring. The system can notify you when the bank balance crosses either threshold.
+
+    Upper and Lower Balance Limits are used for financial monitoring. The system can notify you when the bank balance crosses either threshold.
 
 ______________________________________________________________________
 
@@ -63,7 +65,8 @@ Click the **Branch Details** section to expand and fill in branch-specific infor
 | Branch Phone   | Enter number | Phone number of the bank branch     |
 
 !!! info
-Branch Details is a collapsible section. Click the header to expand it before entering data.
+
+    Branch Details is a collapsible section. Click the header to expand it before entering data.
 
 ______________________________________________________________________
 
@@ -80,7 +83,8 @@ Click the **Account Details** section to expand and fill in account-specific inf
 | Account Type   | Enter text | Type of account (e.g., Current, Savings) |
 
 !!! info
-Account Details is a collapsible section. Click the header to expand it before entering data.
+
+    Account Details is a collapsible section. Click the header to expand it before entering data.
 
 ______________________________________________________________________
 
@@ -96,14 +100,14 @@ The bank is now registered in the system and available for linking to checks and
 
 ______________________________________________________________________
 
-!!! Tips and Common Issues
+## Tips and common issues
 
-- **Bank Name is required** — You must enter a bank name before the record can be saved <br>
-- **Is Enabled controls availability** — Disabled banks will not appear as selectable options when creating checks or payments <br>
-- **Current Balance sets the starting point** — Enter the actual current balance so the system can accurately track future transactions <br>
-- **Set realistic balance limits** — Upper and Lower limits help flag unusual account activity; set them based on your operational thresholds <br>
-- **Branch and Account Details are optional** — These sections are collapsible and not required, but recommended for complete record-keeping <br>
-- **Multiple accounts per bank** — You can create separate records for different accounts at the same bank; give each a distinct name <br>
+- **Bank Name is required** — You must enter a bank name before the record can be saved
+- **Is Enabled controls availability** — Disabled banks will not appear as selectable options when creating checks or payments
+- **Current Balance sets the starting point** — Enter the actual current balance so the system can accurately track future transactions
+- **Set realistic balance limits** — Upper and Lower limits help flag unusual account activity; set them based on your operational thresholds
+- **Branch and Account Details are optional** — These sections are collapsible and not required, but recommended for complete record-keeping
+- **Multiple accounts per bank** — You can create separate records for different accounts at the same bank; give each a distinct name
 
 ______________________________________________________________________
 

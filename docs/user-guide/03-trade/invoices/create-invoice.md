@@ -46,7 +46,7 @@ ______________________________________________________________________
 
 ## General Information
 
-![General Tab](create-invoice)
+![General Tab](create-invoice-general-tab-v2.png)
 
 Fill in the following fields on the General tab:
 
@@ -59,10 +59,12 @@ Fill in the following fields on the General tab:
 | 4    | Status         | Select status           | Current state (Draft, Sent, Cancelled, etc.)                                           |
 
 !!! warning "Balance Limit Check"
-If the invoice amount exceeds the client's balance limit set on the **Client Add** page, the invoice status is locked to **Draft**. Only a superuser can click **Approve** to unlock the status, allowing normal users to change it to **Sent**.
+
+    If the invoice amount exceeds the client's balance limit set on the **Client Add** page, the invoice status is locked to **Draft**. Only a superuser can click **Approve** to unlock the status, allowing normal users to change it to **Sent**.
 
 !!! note "Approve Button (Superuser Only)"
-The **Approve** button appears only if the invoice amount exceeds the client's balance limit. Only superusers can click this button. After approval, the invoice status can be changed to **Sent** by any user.
+
+    The **Approve** button appears only if the invoice amount exceeds the client's balance limit. Only superusers can click this button. After approval, the invoice status can be changed to **Sent** by any user.
 
 ______________________________________________________________________
 
@@ -80,7 +82,8 @@ After adding items, configure the financial details:
 | 6    | Payable  | Auto-calculated | Final amount due (Subtotal + Tax + VAT + Shipping - Discount) |
 
 !!! note
-Payable is calculated automatically based on other fields.
+
+    Payable is calculated automatically based on other fields.
 
 ______________________________________________________________________
 
@@ -102,7 +105,8 @@ Add products or services to the invoice:
 - Use the **edit icon** to modify an item's details
 
 !!! tip
-Each item's total is calculated automatically once you enter Selling Rate and Quantity.
+
+    Each item's total is calculated automatically once you enter Selling Rate and Quantity.
 
 ______________________________________________________________________
 
@@ -133,14 +137,14 @@ ______________________________________________________________________
 
 !!! tip "Tips and Common Issues"
 
-- **Client is required** — You must select a client before saving
-- **Items add to Subtotal** — The invoice calculates Subtotal automatically when you add items
-- **Discount reduces Payable** — Enter a discount to reduce the final amount due
-- **Status controls visibility** — Use Status to mark invoices as Draft, Sent, or Cancelled
-- **Date affects reporting** — Invoice Date determines which reporting period the invoice appears in
-- **Invoice exceeds balance limit** — If the invoice amount exceeds the client's balance limit, the status remains locked to **Draft** until a superuser clicks **Approve**
-- **Superuser approval required** — Only superusers can approve invoices that exceed a client's balance limit; after approval, normal users can change the status to **Sent**
-- **No approval = no send** — Without superuser approval, invoices exceeding the balance limit cannot be sent to the client
+    \- **Client is required** — You must select a client before saving
+    \- **Items add to Subtotal** — The invoice calculates Subtotal automatically when you add items
+    \- **Discount reduces Payable** — Enter a discount to reduce the final amount due
+    \- **Status controls visibility** — Use Status to mark invoices as Draft, Sent, or Cancelled
+    \- **Date affects reporting** — Invoice Date determines which reporting period the invoice appears in
+    \- **Invoice exceeds balance limit** — If the invoice amount exceeds the client's balance limit, the status remains locked to **Draft** until a superuser clicks **Approve**
+    \- **Superuser approval required** — Only superusers can approve invoices that exceed a client's balance limit; after approval, normal users can change the status to **Sent**
+    \- **No approval = no send** — Without superuser approval, invoices exceeding the balance limit cannot be sent to the client
 
 ______________________________________________________________________
 

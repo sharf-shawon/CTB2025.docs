@@ -28,13 +28,15 @@ jobs:
         run: uv sync --extra dev
 
       # -----------------------------------------------------------------------
-      # Pure validator hooks (never mutate files) via pre-commit
-      # SKIP= prevents the mutating hooks from running at all in CI
+      # Pre-commit hooks. Auto-fixing hooks are safe to run here: pre-commit
+      # exits non-zero when a hook modifies a file, which is exactly the
+      # check-only behaviour CI needs. mdformat in particular MUST run through
+      # pre-commit so it picks up mdformat-mkdocs from additional_dependencies.
       # -----------------------------------------------------------------------
       - name: Pre-commit validators
         env:
-          # Skip every hook that auto-fixes/reformats files
-          SKIP: ruff,ruff-format,mdformat
+          # ruff is re-run below with explicit check-only flags for a nicer diff
+          SKIP: ruff,ruff-format
         run: uv run pre-commit run --all-files
 
       # -----------------------------------------------------------------------
@@ -47,18 +49,11 @@ jobs:
         run: uv run ruff format --check .
 
       # -----------------------------------------------------------------------
-      # Markdown format check — mdformat --check never writes files
+      # Markdown formatting is checked by the mdformat pre-commit hook above.
+      # It is NOT re-run here with a hand-written extension list: omitting
+      # mdformat-mkdocs strips the indent from MkDocs admonition bodies and
+      # breaks every callout on the site.
       # -----------------------------------------------------------------------
-      - name: Markdown format check
-        run: |
-          uv run mdformat --check \
-            --extensions gfm \
-            --extensions frontmatter \
-            docs/ || (
-              echo ''
-              echo '::error::mdformat found formatting issues. Fix locally with: uv run mdformat docs/'
-              exit 1
-            )
 
       # -----------------------------------------------------------------------
       # Prohibited phrases (annotations only — never blocks merge)

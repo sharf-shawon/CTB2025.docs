@@ -58,7 +58,8 @@ ______________________________________________________________________
 - Set a realistic reorder level to avoid stock shortages
 
 !!! warning
-Incorrect stock or cost values will directly affect inventory reports and financial calculations.
+
+    Incorrect stock or cost values will directly affect inventory reports and financial calculations.
 
 ______________________________________________________________________
 

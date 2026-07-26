@@ -43,18 +43,19 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-!!! Tips and common issues
+## Tips and common issues
 
-    - **Set up structure before adding employees** — Create all departments and positions before onboarding staff; reorganizing later requires updating multiple employee records.
-    - **Keep attendance current** — Record attendance daily or at the end of each week to maintain accurate salary calculations; missing attendance entries inflate overtime or cause payroll discrepancies.
-    - **Wage changes are historical** — Changing a wage rate only affects future salary calculations; past salary records retain the wage rate from when they were generated.
-    - **Generate salary at month-end** — Always generate salary after all attendance and wage entries for the month are finalized to avoid recalculations.
-    - **Verify salary calculations before payment** — Always review the salary detail page before marking salaries as paid; double-check deductions, overtime, and bonuses.
-    - **Base salary vs. wages** — Base salary is a fixed monthly amount; wages are hourly/daily/per-task rates. Both appear in salary calculations but serve different purposes.
-    - **Payouts are outside salary** — Payouts (advances, bonuses, loans) are separate from the monthly salary cycle and must be processed and recorded separately.
-    - **Tasks are flexible** — Use tasks to track any work assignment, from production jobs to maintenance projects; they help you monitor workload and completion.
-    - **Purchase balances need reconciliation** — Periodically review employee purchase balances to ensure they reflect actual advances, loans, or credits given out.
-    - **Employee records are history** — When terminating an employee, keep their record in the system for payroll audit and reference; do not delete.
+- **Set up structure before adding employees** — Create all departments and positions before onboarding staff; reorganizing later requires updating multiple employee records.
+- **Keep attendance current** — Record attendance daily or at the end of each week to maintain accurate salary calculations; missing attendance entries inflate overtime or cause payroll discrepancies.
+- **Wage changes are historical** — Changing a wage rate only affects future salary calculations; past salary records retain the wage rate from when they were generated.
+- **Generate salary at month-end** — Always generate salary after all attendance and wage entries for the month are finalized to avoid recalculations.
+- **Verify salary calculations before payment** — Always review the salary detail page before marking salaries as paid; double-check deductions, overtime, and bonuses.
+- **Base salary vs. wages** — Base salary is a fixed monthly amount; wages are hourly/daily/per-task rates. Both appear in salary calculations but serve different purposes.
+- **Payouts are outside salary** — Payouts (advances, bonuses, loans) are separate from the monthly salary cycle and must be processed and recorded separately.
+- **Tasks are flexible** — Use tasks to track any work assignment, from production jobs to maintenance projects; they help you monitor workload and completion.
+- **Purchase balances need reconciliation** — Periodically review employee purchase balances to ensure they reflect actual advances, loans, or credits given out.
+- **Employee records are history** — When terminating an employee, keep their record in the system for payroll audit and reference; do not delete.
+
 ```
 
 ______________________________________________________________________
@@ -65,3 +66,4 @@ ______________________________________________________________________
 - **Factory** — Uses employee and task records for production tracking, costing, and work assignments.
 - **Trade** — Uses employee information for invoice creation, payment methods, and account reconciliation.
 - **Settings & Admin** — Configure system-wide settings that affect salary calculations, tax rules, and attendance defaults.
+```

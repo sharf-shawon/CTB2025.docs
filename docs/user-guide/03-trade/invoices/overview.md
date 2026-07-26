@@ -63,7 +63,7 @@ From the Invoices List page:
 
 ______________________________________________________________________
 
-!!!Tips and Common Issues
+## Tips and common issues
 
 - **Search by invoice number first** — Use the invoice number for the fastest lookup
 - **Status determines actions** — Some actions like editing or marking as paid are only available for specific invoice statuses

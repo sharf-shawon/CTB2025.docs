@@ -35,7 +35,7 @@ ______________________________________________________________________
 
 ## Logging In
 
-![CTB Admin Login Page](../screenshots/auth/login.png)
+![CTB Admin Login Page](login.png)
 
 The login page displays a **"Welcome back to CTB Fashion"** heading alongside the CTB logo.
 
@@ -46,19 +46,22 @@ The login page displays a **"Welcome back to CTB Fashion"** heading alongside th
 If your credentials are correct, the system redirects you to the **Dashboard**.
 
 !!! note "Return to site"
-The **← Return to site** link in the top-left corner takes you back to the public-facing website without logging in.
+
+    The **← Return to site** link in the top-left corner takes you back to the public-facing website without logging in.
 
 !!! warning "Failed Login"
-If you enter an incorrect username or password, the form displays an error message. Check your credentials and try again. Contact your administrator to reset your password if needed.
+
+    If you enter an incorrect username or password, the form displays an error message. Check your credentials and try again. Contact your administrator to reset your password if needed.
 
 !!! tip "Session Timeout"
-CTB Admin automatically ends your session after a period of inactivity. You will be redirected to the login page and must sign in again.
+
+    CTB Admin automatically ends your session after a period of inactivity. You will be redirected to the login page and must sign in again.
 
 ______________________________________________________________________
 
 ## Logging Out
 
-![CTB Admin Logout — user menu](../screenshots/auth/logout.png)
+![CTB Admin Logout — user menu](logout.png)
 
 To sign out of CTB Admin:
 
@@ -68,7 +71,8 @@ To sign out of CTB Admin:
 1. The system signs you out immediately.
 
 !!! warning "Shared Computers"
-Always log out after each session on shared or public computers to protect business data.
+
+    Always log out after each session on shared or public computers to protect business data.
 
 ______________________________________________________________________
 

@@ -29,8 +29,9 @@ Fill in the following fields on the main form:
 | Date     | Select date     | Date the balance is recorded or adjusted (defaults to today)                                    |
 | Notes    | Enter text      | Optional internal notes or reason for the balance adjustment                                    |
 
-!!!warning
-**Employee** and **Amount** fields are mandatory.
+!!! warning
+
+    **Employee** and **Amount** fields are mandatory.
 
 ______________________________________________________________________
 
@@ -58,7 +59,7 @@ The purchase balance is now recorded and will be reflected in employee reports a
 
 ______________________________________________________________________
 
-!!!Tips
+## Tips and common issues
 
 - **Employee is required** — You must select an employee before saving
 - **Amount determines direction** — Positive amounts indicate money owed by the employee; negative amounts indicate money owed to the employee

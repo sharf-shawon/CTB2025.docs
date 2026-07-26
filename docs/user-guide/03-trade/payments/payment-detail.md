@@ -53,7 +53,8 @@ The payment detail page includes action buttons at the top-right:
 | History | View past changes and modifications     | Always visible    |
 
 !!! warning "Status Controls Permissions"
-Only payments with **Pending** or **Failed** status can be edited or deleted. Once a payment is marked **Passed**, it becomes read-only to protect financial records.
+
+    Only payments with **Pending** or **Failed** status can be edited or deleted. Once a payment is marked **Passed**, it becomes read-only to protect financial records.
 
 ______________________________________________________________________
 
@@ -74,7 +75,8 @@ The Payment Information section displays core transaction details:
 | Discount  | Discount or adjustment applied (if any)             | Pending only  |
 
 !!! note "Status Restrictions"
-Once a payment is marked **Passed**, critical fields like Amount and Date become locked to preserve the original transaction record. Pending payments are fully editable.
+
+    Once a payment is marked **Passed**, critical fields like Amount and Date become locked to preserve the original transaction record. Pending payments are fully editable.
 
 ______________________________________________________________________
 
@@ -88,7 +90,8 @@ This section shows the parties involved in the payment:
 | Client | The client or vendor involved in the payment (customer or supplier)                       | Never         |
 
 !!! note "Check Impact on Balances"
-When a Check is linked to a payment, the payment amount reduces both the **client/vendor balance** AND the **check balance**. If no check is linked, only the client/vendor balance is reduced.
+
+    When a Check is linked to a payment, the payment amount reduces both the **client/vendor balance** AND the **check balance**. If no check is linked, only the client/vendor balance is reduced.
 
 ______________________________________________________________________
 
@@ -101,7 +104,8 @@ The Notes section contains internal comments and remarks:
 | Notes | Internal notes, remarks, or special conditions | All statuses  |
 
 !!! tip
-Use Notes to document payment terms, special instructions, reasons for discounts, or any other internal details related to the payment.
+
+    Use Notes to document payment terms, special instructions, reasons for discounts, or any other internal details related to the payment.
 
 ______________________________________________________________________
 
@@ -116,7 +120,8 @@ Payment management capabilities vary based on status:
 | Failed  | Full        | View only             | Yes           | Locked; preserves original reconciliation data |
 
 !!! warning "Protect Passed Payments"
-Once a payment is marked Passed, it cannot be edited or deleted to ensure financial integrity and accurate reconciliation.
+
+    Once a payment is marked Passed, it cannot be edited or deleted to ensure financial integrity and accurate reconciliation.
 
 ______________________________________________________________________
 

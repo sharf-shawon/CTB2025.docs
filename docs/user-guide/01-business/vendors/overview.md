@@ -61,7 +61,7 @@ From the Vendors List page:
 
 ______________________________________________________________________
 
-!!!Tips and Common Issues
+## Tips and common issues
 
 - **Balance convention** — Positive amounts (e.g., +100,000tk) mean you owe the vendor; negative amounts mean the vendor owes your company
 - **Search by name first** — Use the search box to quickly find a vendor without scrolling the full list

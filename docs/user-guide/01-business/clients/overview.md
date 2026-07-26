@@ -60,7 +60,7 @@ From the Clients List page:
 
 ______________________________________________________________________
 
-!!!Tips and Common Issues
+## Tips and common issues
 
 - **Balance convention** — Positive amounts (e.g., +50,000tk) mean the client owes the company; negative amounts mean you owe credit to the client
 - **Search by name first** — Use the search box to quickly find a client without scrolling the full list

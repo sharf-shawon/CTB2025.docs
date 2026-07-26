@@ -24,12 +24,12 @@ Open **Commission and Campaigns → Employee Analytics** in the sidebar.
 ## Step-by-step instructions
 
 1. Open the page from the sidebar.
-2. Use the search box or click **Filters** to locate the employee, campaign, or product.
-3. Review the list of analytics records shown for each employee and campaign.
-4. Check the **Status** and **Is Eligible** columns to understand each entry.
-5. If a campaign has ended but entries are missing, click **Process Expired Campaigns**.
-6. Click the top-right **+** button to add a manual employee commission analytics record.
-7. Complete the manual entry form and save after verifying the values.
+1. Use the search box or click **Filters** to locate the employee, campaign, or product.
+1. Review the list of analytics records shown for each employee and campaign.
+1. Check the **Status** and **Is Eligible** columns to understand each entry.
+1. If a campaign has ended but entries are missing, click **Process Expired Campaigns**.
+1. Click the top-right **+** button to add a manual employee commission analytics record.
+1. Complete the manual entry form and save after verifying the values.
 
 ## Field reference
 
@@ -50,19 +50,19 @@ Open **Commission and Campaigns → Employee Analytics** in the sidebar.
 Use the manual entry form when automatic analytics are missing or a correction is required.
 
 1. Open **Commission and Campaigns → Employee Analytics**.
-2. Click the top-right **+** button to open the add form.
-3. Select the campaign, employee, and product from the required drop-down fields.
-4. Enter **Target Qty** from the campaign plan.
-5. Enter **Achievement Qty** for the employee during the campaign period.
-6. Enter **Total Sales Qty** and **Total Sales Amount** for the campaign product.
-7. Enter **Total Payment Collected** and **Payment Collection %**.
-8. Enter **Commission Rate** to calculate the commission amount.
-9. Confirm **Commission Amount** is correct and set **Is Eligible** if the record qualifies.
-10. Select the appropriate **Status** and save the record.
+1. Click the top-right **+** button to open the add form.
+1. Select the campaign, employee, and product from the required drop-down fields.
+1. Enter **Target Qty** from the campaign plan.
+1. Enter **Achievement Qty** for the employee during the campaign period.
+1. Enter **Total Sales Qty** and **Total Sales Amount** for the campaign product.
+1. Enter **Total Payment Collected** and **Payment Collection %**.
+1. Enter **Commission Rate** to calculate the commission amount.
+1. Confirm **Commission Amount** is correct and set **Is Eligible** if the record qualifies.
+1. Select the appropriate **Status** and save the record.
 
 ### Manual entry field reference
 
-![Add Empolyee Analytics](Add-Employee-Commission-Analytics%20.png)
+![Add Employee Analytics](add-employee-commission-analytics.png)
 
 - **Target Qty** — Minimum quantity target defined in the campaign.
 - **Achievement Qty** — Actual units sold (invoiced minus returned) during the campaign.
@@ -73,17 +73,14 @@ Use the manual entry form when automatic analytics are missing or a correction i
 - **Commission Rate** — Fixed commission amount per unit achieved.
 - **Commission Amount** — Calculated as `Achievement Qty × Commission Rate`.
 
-<!-- TODO: screenshot docs/user-guide/10-commission-and-campaigns/Add-Employee-Commission-Analytics .png -->
+## Tips and common issues
 
-!!! Tips and common issues
+- Use **Process Expired Campaigns** if the system did not generate records automatically after the campaign end date.
+- Manual entries are useful when the automatic commission calculation is incomplete or when a correction is required.
+- Confirm the campaign name, employee, and product match the original campaign setup before saving a manual record.
+- The manual add form includes fields such as **Target Qty**, **Total Sales Amount**, **Payment Collection %**, and **Commission Rate**.
 
-    - Use **Process Expired Campaigns** if the system did not generate records automatically after the campaign end date.
-    - Manual entries are useful when the automatic commission calculation is incomplete or when a correction is required.
-    - Confirm the campaign name, employee, and product match the original campaign setup before saving a manual record.
-    - The manual add form includes fields such as **Target Qty**, **Total Sales Amount**, **Payment Collection %**, and **Commission Rate**.
-    
 ## Related pages
 
 - **[Commission Campaigns](commission-campaigns.md)** — See how campaigns and eligibility rules affect employee analytics.
 - **[Manager Analytics](manager-analytics.md)** — Review manager commission results for related campaigns.
-

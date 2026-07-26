@@ -53,11 +53,11 @@ ______________________________________________________________________
 
 ## Tips and Common Issues
 
-- **Green checkmark under Is Enabled** — Indicates the department is active and available for assignment to employees <br>
-- **Empty Is Enabled column** — The department is disabled and will not appear as a selectable option in employee records <br>
-- **Description shows a dash (-)** — No description was entered when the department was created; this field is optional <br>
-- **Success banner at the top** — Appears briefly after a department is added or updated successfully <br>
-- **SKU is auto-generated** — You do not need to enter a SKU manually; the system assigns it on creation <br>
+- **Green checkmark under Is Enabled** — Indicates the department is active and available for assignment to employees
+- **Empty Is Enabled column** — The department is disabled and will not appear as a selectable option in employee records
+- **Description shows a dash (-)** — No description was entered when the department was created; this field is optional
+- **Success banner at the top** — Appears briefly after a department is added or updated successfully
+- **SKU is auto-generated** — You do not need to enter a SKU manually; the system assigns it on creation
 
 ______________________________________________________________________
 

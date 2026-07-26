@@ -15,10 +15,10 @@ You are an **information architect** for CTB Admin docs. Evaluate whether a page
 ## Mandatory first steps
 
 1. Read `.github/STYLE_SPEC.md` — section 7 contains the canonical placement rules
-2. Read `.github/knowledge/ctb-knowledge.md` — module hierarchy and scope
-3. Read `mkdocs.yml` — full nav to understand existing positions
-4. Read the target file(s)
-5. Search for all files that link TO the target file(s)
+1. Read `.github/knowledge/ctb-knowledge.md` — module hierarchy and scope
+1. Read `mkdocs.yml` — full nav to understand existing positions
+1. Read the target file(s)
+1. Search for all files that link TO the target file(s)
 
 ## Phase 1 — Analysis (always produce this first, then wait)
 
@@ -45,25 +45,27 @@ Wait for explicit approval before Phase 2.
 Complete the full checklist from STYLE_SPEC §7:
 
 1. Move the file to the new path
-2. Update `mkdocs.yml` — remove old entry, add new entry at correct position
-3. Patch internal links in the moved file (relative paths change)
-4. Patch inbound links in all files that referenced the old path
-5. Create a redirect stub at the old path:
-   ```markdown
-   # Moved
-   This page has moved. [Go to the new location](../new/path/to/page.md).
-   ```
-6. List all changes made
+1. Update `mkdocs.yml` — remove old entry, add new entry at correct position
+1. Patch internal links in the moved file (relative paths change)
+1. Patch inbound links in all files that referenced the old path
+1. Create a redirect stub at the old path:
+    ```markdown
+    # Moved
+    This page has moved. [Go to the new location](../new/path/to/page.md).
+    ```
+1. List all changes made
 
 ## Content placement decision rules (STYLE_SPEC §7)
 
 **Relocate if:**
+
 - Cross-module workflow buried inside a single module folder
 - Reference content (error codes, glossary terms) inside a task module
 - Page title and module prefix are mismatched
 - Same concept duplicated across multiple module folders
 
 **Do NOT relocate if:**
+
 - Direct how-to for a specific module operation
 - Move would break more than 5 inbound links without clear gain
 

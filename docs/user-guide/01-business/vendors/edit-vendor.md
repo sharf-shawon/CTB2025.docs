@@ -83,7 +83,8 @@ ______________________________________________________________________
 | Photo           | Replace             | Update vendor profile image              |
 
 !!! note
-Replacing images will overwrite previous uploads.
+
+    Replacing images will overwrite previous uploads.
 
 ______________________________________________________________________
 
@@ -98,7 +99,8 @@ ______________________________________________________________________
 | Lower Limit | Modify              | Controls minimum allowed balance       |
 
 !!! warning
-Changing balance-related fields can impact financial tracking and reports.
+
+    Changing balance-related fields can impact financial tracking and reports.
 
 ______________________________________________________________________
 

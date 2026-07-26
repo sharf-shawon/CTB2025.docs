@@ -16,6 +16,8 @@ Create a complete user profile with valid credentials and appropriate permission
 
 From the sidebar, go to **Settings and Admin → User Management**. On the Users list page, click the **purple (+) icon** in the top-right corner.
 
+![User List Page](user-list-page.png)
+
 The system opens the **Add User Page**.
 
 ## Account Information
@@ -33,7 +35,8 @@ Fill in the following fields:
 | Password confirmation         | Re-enter the password  | Must match the password field exactly                     |
 
 !!! warning "Required Fields"
-Fields marked with a **red star (\*)** are mandatory.
+
+    Fields marked with a **red star (\*)** are mandatory.
 
 ______________________________________________________________________
 
@@ -46,7 +49,8 @@ When creating a password, the system enforces the following rules:
 - **Cannot be all numeric** — Password must contain at least one letter or special character
 
 !!! tip "Password Best Practices"
-Use a mix of uppercase, lowercase, numbers, and special characters for stronger security.
+
+    Use a mix of uppercase, lowercase, numbers, and special characters for stronger security.
 
 ______________________________________________________________________
 

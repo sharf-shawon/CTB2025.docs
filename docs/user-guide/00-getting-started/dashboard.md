@@ -105,7 +105,8 @@ The **Quick Access Pages** section (item 12 — toggle to show/hide) displays ma
 You can mark frequently used pages as **Favourites** by clicking the heart icon on any card. Favourited cards appear at the top of the section.
 
 !!! info "Caching"
-The Dashboard, including Quick Access Pages and Dashboard Analytics, is **cached for 15 minutes** to reduce system load. The data you see may be up to 15 minutes old.
+
+    The Dashboard, including Quick Access Pages and Dashboard Analytics, is **cached for 15 minutes** to reduce system load. The data you see may be up to 15 minutes old.
 
 To force an immediate recalculation of all data, click the **Refresh** button in the item 12 area. Use this sparingly, as it increases system load.
 
@@ -116,7 +117,8 @@ ______________________________________________________________________
 The **Dashboard Analytics** section (item 13 — toggle to show/hide) presents live business data through summary cards and charts. All figures are drawn from multiple modules.
 
 !!! note "Read-only section"
-The Dashboard does not accept any data input. All analytics are calculated from records entered in other modules.
+
+    The Dashboard does not accept any data input. All analytics are calculated from records entered in other modules.
 
 ### Summary cards
 

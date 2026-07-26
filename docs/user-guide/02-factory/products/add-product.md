@@ -68,7 +68,7 @@ Use the **Add another Product Costing** button to add more materials. Remove a r
 - Use the **Notes** tab for internal instructions, not public product descriptions.
 - Add all raw materials in **Product Costings** so cost totals are accurate.
 
-!!! Tips and best practices
+## Tips and common issues
 
 - Keep **Is Public** off unless the product should appear on the website.
 - Review the calculated **Total Cost** after entering material and wage values.

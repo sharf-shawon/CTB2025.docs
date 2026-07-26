@@ -50,7 +50,8 @@ The General tab displays invoice header information:
 | Status         | Current state (Draft, Sent, Cancelled,) | All statuses   |
 
 !!! note "Status Restrictions"
-Once an invoice status is changed from Draft to Sent, the Invoice Number, Invoice Date, and Client become locked to preserve the transaction record.
+
+    Once an invoice status is changed from Draft to Sent, the Invoice Number, Invoice Date, and Client become locked to preserve the transaction record.
 
 ______________________________________________________________________
 
@@ -72,7 +73,8 @@ The Items tab displays all products or services on the invoice:
 - The **Subtotal** is calculated automatically from all line items
 
 !!! info "Item Editing"
-Line items can only be added, removed, or edited when the invoice is in Draft status. Once sent, items are locked.
+
+    Line items can only be added, removed, or edited when the invoice is in Draft status. Once sent, items are locked.
 
 ______________________________________________________________________
 
@@ -90,7 +92,8 @@ Below the items, the page displays financial calculations:
 | Payable  | Final amount due (Subtotal + Tax + VAT + Shipping - Disc) | Auto-calc     |
 
 !!! tip
-Payment details (Tax, VAT, Shipping, Discount) can be edited even after the invoice is Sent to adjust final charges.
+
+    Payment details (Tax, VAT, Shipping, Discount) can be edited even after the invoice is Sent to adjust final charges.
 
 ______________________________________________________________________
 
@@ -118,7 +121,8 @@ Invoice editing capabilities vary based on status:
 | Cancelled | Full        | View only                    | Locked; no editing allowed  |
 
 !!! warning "Save Changes"
-After making edits, click **Save** at the bottom to apply your changes.
+
+    After making edits, click **Save** at the bottom to apply your changes.
 
 ______________________________________________________________________
 

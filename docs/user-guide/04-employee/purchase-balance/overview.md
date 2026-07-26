@@ -57,7 +57,7 @@ From the Purchase Balances List page:
 
 ______________________________________________________________________
 
-!!!Tips and Common Issues
+## Tips and common issues
 
 - **Amount convention** — Positive amounts (e.g., +10,000tk) mean the employee owes the company; negative amounts mean the company owes the employee
 - **Search by employee name** — Use the search box to quickly find an employee's balance without scrolling

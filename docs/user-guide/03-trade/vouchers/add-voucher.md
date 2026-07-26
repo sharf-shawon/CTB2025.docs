@@ -35,8 +35,9 @@ Fill in the following fields on the **General** tab:
 | 5    | Vendor         | Select vendor  | The supplier or vendor associated with this voucher |
 | 6    | Photo          | Upload file    | Attach a photo or scan copy of the physical voucher |
 
-!!!warning
-Fields marked with a **red star (\*)** are mandatory.
+!!! warning
+
+    Fields marked with a **red star (\*)** are mandatory.
 
 ______________________________________________________________________
 
@@ -57,8 +58,9 @@ After adding voucher items, configure the financial details:
 | 7    | Paid Amount | Enter amount    | Amount already paid to the vendor                             |
 | 8    | Paid By     | Select option   | Payment method or account used for payment                    |
 
-!!!Note
-Subtotal and Payable are calculated automatically based on other fields.
+!!! note
+
+    Subtotal and Payable are calculated automatically based on other fields.
 
 ______________________________________________________________________
 
@@ -80,8 +82,9 @@ Add materials to the voucher using the **Voucher Items** tab:
 - Use the **view (eye) icon** to preview material information
 - Use the **(+) icon** to quickly add a new material record
 
-!!! Tip
-Each item's total is calculated automatically once you enter Rate and Quantity.
+!!! tip
+
+    Each item's total is calculated automatically once you enter Rate and Quantity.
 
 ______________________________________________________________________
 

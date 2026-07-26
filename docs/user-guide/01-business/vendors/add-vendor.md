@@ -54,7 +54,8 @@ Fill in the following fields:
 | 8    | Address           | Enter address        | Physical location of the vendor                     |
 
 !!! warning "Required Fields"
-Fields marked with a **red star (\*)** are mandatory.
+
+    Fields marked with a **red star (\*)** are mandatory.
 
 ______________________________________________________________________
 
@@ -72,7 +73,8 @@ ______________________________________________________________________
 | 6    | Photo           | Upload if available  | Vendor profile photo                |
 
 !!! note
-Upload clear images for proper verification.
+
+    Upload clear images for proper verification.
 
 ______________________________________________________________________
 
@@ -87,7 +89,8 @@ ______________________________________________________________________
 | 3    | Lower Limit | Set limit    | Minimum allowed balance            |
 
 !!! warning "Required Fields"
-Fields marked with a **red star (\*)** are mandatory.
+
+    Fields marked with a **red star (\*)** are mandatory.
 
 ______________________________________________________________________
 
@@ -103,11 +106,11 @@ After completing all sections:
 
 ______________________________________________________________________
 
-!!! Tips and Common Issues
+## Tips and common issues
 
-- Ensure the **Phone number is correct** before enabling SMS <br>
-- Upload clear **NID images** for verification <br>
-- Leave **End Date empty** if the vendor is ongoing <br>
+- Ensure the **Phone number is correct** before enabling SMS
+- Upload clear **NID images** for verification
+- Leave **End Date empty** if the vendor is ongoing
 
 ______________________________________________________________________
 

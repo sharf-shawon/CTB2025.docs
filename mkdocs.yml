@@ -5,7 +5,10 @@ repo_name: CTB2025.wiki
 plugins:
   - offline
   - glightbox
-  - social
+  # Social cards fetch fonts from Google at build time. Disable with
+  # SOCIAL_CARDS=false to build offline or in a sandboxed environment.
+  - social:
+      enabled: !ENV [SOCIAL_CARDS, true]
   - meta
   - search
   - google-translate
@@ -97,7 +100,9 @@ exclude_docs: |
   _Sidebar.md
 
 validation:
-  unrecognized_links: ignore
+  unrecognized_links: warn
+  omitted_files: warn
+  absolute_links: warn
 
 strict: true
 

@@ -45,7 +45,8 @@ Controls dashboard interface and user experience settings:
 | **Show the random Quran quote** | Display or hide the random Quran quote on the admin dashboard | `true`  |
 
 !!! info "Info"
-When enabled, a new Quran verse appears each time the dashboard loads, providing daily inspiration to users.
+
+    When enabled, a new Quran verse appears each time the dashboard loads, providing daily inspiration to users.
 
 ______________________________________________________________________
 
@@ -59,7 +60,8 @@ Configure thresholds for balance warnings and alerts:
 | **Balance red threshold percentage (80+)**       | Set critical threshold percentage when balance falls into red range   | 80%     |
 
 !!! warning "Alert Thresholds"
-These percentages control when balance indicators change color in reports and dashboards. Lower thresholds trigger earlier warnings.
+
+    These percentages control when balance indicators change color in reports and dashboards. Lower thresholds trigger earlier warnings.
 
 ______________________________________________________________________
 
@@ -80,7 +82,8 @@ Manage company branding and legal information displayed across CTB Admin:
 | **The country where your company is based**      | Country name for legal and shipping purposes                   | Text       |
 
 !!! tip "Best Practice"
-Keep all company information consistent across all settings to ensure uniform branding on invoices and customer-facing documents.
+
+    Keep all company information consistent across all settings to ensure uniform branding on invoices and customer-facing documents.
 
 ______________________________________________________________________
 
@@ -93,7 +96,8 @@ Configure factory and production operational parameters:
 | **The number of minutes in a standard workday (8 hours = 480 minutes)** | Standard workday duration for attendance tracking | Number     |
 
 !!! note "Workday Duration"
-This setting affects wage calculations and attendance records. A standard 8-hour workday equals 480 minutes.
+
+    This setting affects wage calculations and attendance records. A standard 8-hour workday equals 480 minutes.
 
 ______________________________________________________________________
 
@@ -115,7 +119,8 @@ Control invoice design, display, and calculation defaults:
 | **The maximum discount amount that can be applied to a sale** | Maximum discount amount in currency units                                                                         | Currency   |
 
 !!! info "Invoice Customization"
-All invoice message and design settings affect PDF generation and printed invoices. Test after changes to ensure proper formatting.
+
+    All invoice message and design settings affect PDF generation and printed invoices. Test after changes to ensure proper formatting.
 
 ______________________________________________________________________
 
@@ -128,7 +133,8 @@ Configure system notification delivery:
 | **Email address where system notifications will be sent** | Destination email for system alerts and notifications | Email      |
 
 !!! tip "Notification Routing"
-Ensure this email address is monitored regularly to stay informed of system events and critical alerts.
+
+    Ensure this email address is monitored regularly to stay informed of system events and critical alerts.
 
 ______________________________________________________________________
 
@@ -144,10 +150,12 @@ Enable and configure SMS messaging for notifications and communication:
 | **The API endpoint URL for Xeno/Clarity SMS** | Base URL for SMS API service (for custom integration) | URL        |
 
 !!! warning "SMS Configuration"
-SMS features require valid API credentials with your SMS service provider. Ensure endpoint URL and API key are correct before enabling.
+
+    SMS features require valid API credentials with your SMS service provider. Ensure endpoint URL and API key are correct before enabling.
 
 !!! note "Sender ID"
-The approved sender ID must be registered with your SMS provider and comply with local telecommunications regulations.
+
+    The approved sender ID must be registered with your SMS provider and comply with local telecommunications regulations.
 
 ______________________________________________________________________
 
@@ -166,10 +174,12 @@ Advanced developer and API configuration options:
 | **A URL for the documentation of your application**                                     | Documentation URL (e.g., docs site link)        | URL        |
 
 !!! warning "Developer Settings"
-These settings should only be configured by technical administrators. Incorrect values may break deployments or tracking.
+
+    These settings should only be configured by technical administrators. Incorrect values may break deployments or tracking.
 
 !!! note "Security"
-Keep API keys and webhook URLs confidential. Do not commit sensitive values to version control.
+
+    Keep API keys and webhook URLs confidential. Do not commit sensitive values to version control.
 
 ______________________________________________________________________
 

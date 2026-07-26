@@ -121,10 +121,12 @@ ______________________________________________________________________
 ## Important Notes
 
 !!! warning
-Changing **Unit** after transactions exist can cause inconsistency in inventory data.
+
+    Changing **Unit** after transactions exist can cause inconsistency in inventory data.
 
 !!! warning
-Editing **Stock manually** may not reflect actual inventory movement history.
+
+    Editing **Stock manually** may not reflect actual inventory movement history.
 
 ______________________________________________________________________
 

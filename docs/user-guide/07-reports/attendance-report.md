@@ -43,21 +43,21 @@ Open **Employee → Attendances → Monthly Attendance Report** in the left side
 
 - **Summary columns (right)** — Per-employee tallies, typically including:
 
-  - **Present (P)** — Count of days the employee was present
-  - **Absent (A)** — Count of absent days (unmarked or absent status)
-  - **Late (L)** — Count of late arrivals
-  - **OT** — Overtime hours or overtime day count (implementation varies)
-  - **Early/Early leave** — Count of early departures, if tracked
-  - **Total** — Aggregate attendance-related metric (may be labelled differently in your deployment)
+    - **Present (P)** — Count of days the employee was present
+    - **Absent (A)** — Count of absent days (unmarked or absent status)
+    - **Late (L)** — Count of late arrivals
+    - **OT** — Overtime hours or overtime day count (implementation varies)
+    - **Early/Early leave** — Count of early departures, if tracked
+    - **Total** — Aggregate attendance-related metric (may be labelled differently in your deployment)
 
 - **Legend** — A legend below the grid explains cell colours and symbols, for example:
 
-  - Full shift worked
-  - Partial shift or partial clock-in/clock-out
-  - Leave (paid/unpaid)
-  - Overtime entry
-  - Late arrival or early departure
-  - Total present/attendance summary
+    - Full shift worked
+    - Partial shift or partial clock-in/clock-out
+    - Leave (paid/unpaid)
+    - Overtime entry
+    - Late arrival or early departure
+    - Total present/attendance summary
 
 ## Tips and common issues
 

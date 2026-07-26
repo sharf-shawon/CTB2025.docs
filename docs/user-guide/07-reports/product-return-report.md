@@ -70,9 +70,8 @@ Open **Trade → Invoices → Product Return Report** in the left sidebar under 
 - Negative returns or corrections are shown as negative quantities/amounts and will adjust balances accordingly
 - Stock levels should be updated after returns are processed; verify inventory adjustments with the Material/Product Stock reports
 
-!!! Tips and common issues
+## Tips and common issues
 
-    - If totals do not match accounting records, check whether the return has been posted or remains in draft
-    - Returns against cancelled or deleted invoices may not apply automatically to client balances; verify invoice status first
-    - Use narrow date ranges for faster loading on large datasets
-    
+- If totals do not match accounting records, check whether the return has been posted or remains in draft
+- Returns against cancelled or deleted invoices may not apply automatically to client balances; verify invoice status first
+- Use narrow date ranges for faster loading on large datasets

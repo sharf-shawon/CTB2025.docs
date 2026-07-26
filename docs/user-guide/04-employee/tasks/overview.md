@@ -25,7 +25,7 @@ From the sidebar, go to **Employee -> Tasks**.
 - **Status** - Shows whether the task is open, active, or completed.
 - **Note** - Optional context or instructions for the employee.
 
-![Tasks overview](../../../gallery/Admin/en-internal-tasks-management.png)
+![Tasks List Page](task-list-page.png)
 
 ## Tips and common issues
 

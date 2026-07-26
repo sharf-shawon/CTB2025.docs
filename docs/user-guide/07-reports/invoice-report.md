@@ -65,7 +65,9 @@ Open **Reports → Invoice Report** in the sidebar.
 ## Notes
 
 !!! note
-Margin (%) may appear blank for some line items when the Commission Rate is 0Tk, since margin depends on the commission and costing values entered for that transaction.
+
+    Margin (%) may appear blank for some line items when the Commission Rate is 0Tk, since margin depends on the commission and costing values entered for that transaction.
 
 !!! tip
-Use the month tabs for quick, one-click navigation between recent periods instead of manually setting a date range in the Filters panel.
+
+    Use the month tabs for quick, one-click navigation between recent periods instead of manually setting a date range in the Filters panel.

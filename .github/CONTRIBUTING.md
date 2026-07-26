@@ -17,18 +17,19 @@ The CTB2025 application code repository is private and is not maintained here.
 ## Local Setup
 
 1. Install Python 3.13 and `uv`.
-1. Run:
 
-```bash
-uv sync --extra dev
-uv run pre-commit install
-```
+1. Install dependencies and the pre-commit hooks:
 
-3. Serve docs locally:
+    ```bash
+    uv sync --extra dev
+    uv run pre-commit install
+    ```
 
-```bash
-uv run mkdocs serve
-```
+1. Serve the docs locally:
+
+    ```bash
+    uv run mkdocs serve
+    ```
 
 ## Quality Gates
 

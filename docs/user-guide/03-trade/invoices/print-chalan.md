@@ -30,7 +30,8 @@ ______________________________________________________________________
 - All required invoice fields (Client, Invoice Date, Status) must be filled in
 
 !!! warning "Chalan Option Restriction"
-The chalan option is **only available** when an invoice status is set to **Sent**. If the status is Draft, Cancelled, or any other state, the Chalan button will not be active.
+
+    The chalan option is **only available** when an invoice status is set to **Sent**. If the status is Draft, Cancelled, or any other state, the Chalan button will not be active.
 
 ______________________________________________________________________
 
@@ -46,7 +47,8 @@ ______________________________________________________________________
 1. Choose your printer or PDF destination and complete the print process
 
 !!! note "Browser Print Dialog"
-The exact print options depend on your browser. Most modern browsers allow you to save as PDF directly from the print dialog.
+
+    The exact print options depend on your browser. Most modern browsers allow you to save as PDF directly from the print dialog.
 
 ______________________________________________________________________
 
@@ -72,7 +74,8 @@ The chalan preview includes the following information:
 | Notes          | Delivery instructions or special handling notes  |
 
 !!! info "No Pricing Information"
-The chalan intentionally excludes pricing, taxes, and financial totals. It is designed as a delivery document only and does not contain billing information.
+
+    The chalan intentionally excludes pricing, taxes, and financial totals. It is designed as a delivery document only and does not contain billing information.
 
 ______________________________________________________________________
 

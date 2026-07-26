@@ -66,7 +66,8 @@ This section shows the product's financial details and cost structure.
 | Profit           | Difference between selling price and total cost    |
 
 !!! note
-**Materials Cost**, **Total Cost**, and **Profit** are automatically calculated based on materials and production settings.
+
+    **Materials Cost**, **Total Cost**, and **Profit** are automatically calculated based on materials and production settings.
 
 ______________________________________________________________________
 
@@ -84,7 +85,8 @@ This section lists all raw materials used to produce this product.
 | Total Cost | Calculated total (Quantity × Material Cost) |
 
 !!! note
-**Product Materials (Costings)** sections are only visible to **super users**. Other users will not see costing details.
+
+    **Product Materials (Costings)** sections are only visible to **super users**. Other users will not see costing details.
 
 ______________________________________________________________________
 

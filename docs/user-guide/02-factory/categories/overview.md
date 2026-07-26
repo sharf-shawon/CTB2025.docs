@@ -41,7 +41,8 @@ Use the search bar to quickly find categories.
 - The table updates instantly based on your input
 
 !!! tip
-Use SKU for faster and more accurate search results.
+
+    Use SKU for faster and more accurate search results.
 
 ______________________________________________________________________
 
@@ -60,7 +61,8 @@ These options allow bulk data management.
 - Useful for reporting or backup
 
 !!! note
-Ensure the import file format matches system requirements.
+
+    Ensure the import file format matches system requirements.
 
 ______________________________________________________________________
 
@@ -73,9 +75,10 @@ ______________________________________________________________________
 ______________________________________________________________________
 
 !!! tip
-\* Use search instead of manually scanning the list
-\* Keep category names consistent for easier management
-\* Use export regularly for backup and reporting
+
+    \* Use search instead of manually scanning the list
+    \* Keep category names consistent for easier management
+    \* Use export regularly for backup and reporting
 
 ______________________________________________________________________
 

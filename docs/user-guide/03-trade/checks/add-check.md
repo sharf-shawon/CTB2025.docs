@@ -59,7 +59,8 @@ Fill in the following fields:
 | 8    | Client       | Select client or vendor | The party associated with the check                 |
 
 !!! warning "Required Fields"
-Fields marked with a **red star (\*)** are mandatory. Check Number is required to prevent duplicate entries.
+
+    Fields marked with a **red star (\*)** are mandatory. Check Number is required to prevent duplicate entries.
 
 ______________________________________________________________________
 
@@ -78,7 +79,8 @@ Set the check status and upload supporting documents:
 | 5    | Check Bounce Date | Select date (optional)  | Date the check bounced (only when Status is Bounced)       |
 
 !!! note "Photos for Verification"
-Use Front Photo and Back Photo to store images of both sides of the check. This helps with verification and archival purposes. Photos are optional but recommended for high-value checks.
+
+    Use Front Photo and Back Photo to store images of both sides of the check. This helps with verification and archival purposes. Photos are optional but recommended for high-value checks.
 
 ______________________________________________________________________
 
@@ -98,7 +100,8 @@ The Payments section at the bottom shows all payments linked to this check:
 | From/To   | Client or vendor party involved in the payment |
 
 !!! info "Payments Linked Later"
-The Payments section will be empty when you first create a check. Payments are linked to this check when you create or edit a payment record and select this check.
+
+    The Payments section will be empty when you first create a check. Payments are linked to this check when you create or edit a payment record and select this check.
 
 ______________________________________________________________________
 
@@ -114,15 +117,15 @@ The check is now recorded in the system and available for linking to payments.
 
 ______________________________________________________________________
 
-!!! Tips and Common Issues
+## Tips and common issues
 
-- **Check Number must be unique** — The system prevents duplicate check numbers; verify you're not re-entering an existing check number <br>
-- **Amount becomes the starting balance** — When you create a check with an amount, the balance starts at that amount and decreases as payments are linked <br>
-- **Balance decreases with payments** — Each payment linked to this check reduces the check balance; if balance reaches zero, no more payments can be linked <br>
-- **Photos are optional but recommended** — Store front and back photos of high-value checks for audit and verification purposes <br>
-- **Bounce dates for failed checks** — Only fill in Check Bounce Date if the Status is Bounced; this triggers financial reconciliation workflows <br>
-- **Type matters for reporting** — Use Receive for checks from clients and Send for checks issued to vendors; this affects balance calculations <br>
-- **Multiple checks per bank** — You can issue or receive multiple checks from the same bank; each gets its own record <br>
+- **Check Number must be unique** — The system prevents duplicate check numbers; verify you're not re-entering an existing check number
+- **Amount becomes the starting balance** — When you create a check with an amount, the balance starts at that amount and decreases as payments are linked
+- **Balance decreases with payments** — Each payment linked to this check reduces the check balance; if balance reaches zero, no more payments can be linked
+- **Photos are optional but recommended** — Store front and back photos of high-value checks for audit and verification purposes
+- **Bounce dates for failed checks** — Only fill in Check Bounce Date if the Status is Bounced; this triggers financial reconciliation workflows
+- **Type matters for reporting** — Use Receive for checks from clients and Send for checks issued to vendors; this affects balance calculations
+- **Multiple checks per bank** — You can issue or receive multiple checks from the same bank; each gets its own record
 
 ______________________________________________________________________
 

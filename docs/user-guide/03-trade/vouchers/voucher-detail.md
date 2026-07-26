@@ -46,7 +46,8 @@ The General tab displays voucher header information:
 | Photo          | Attached voucher photo or scan copy               |
 
 !!! note "Required Fields"
-Fields marked with a **red star (\*)** are mandatory and must be filled before saving.
+
+    Fields marked with a **red star (\*)** are mandatory and must be filled before saving.
 
 ______________________________________________________________________
 
@@ -68,7 +69,8 @@ Below the general fields, the page displays financial information:
 | Paid By     | Employee or method used to make the payment                   | Yes       |
 
 !!! note
-**Subtotal** and **Payable** are calculated automatically based on other fields.
+
+    **Subtotal** and **Payable** are calculated automatically based on other fields.
 
 ______________________________________________________________________
 
@@ -92,7 +94,8 @@ The Voucher Items tab displays all materials or services on the voucher:
 - Click **Remove** on an empty or unwanted row to discard it
 
 !!! tip
-Each item's total is calculated automatically once Rate and Quantity are entered.
+
+    Each item's total is calculated automatically once Rate and Quantity are entered.
 
 ______________________________________________________________________
 
@@ -115,7 +118,8 @@ After making edits on any tab:
 - Click **Save and add another** to save and immediately create a new voucher
 
 !!! warning "Save Changes"
-After making edits, always click **Save** at the bottom-right to apply your changes. Unsaved changes will be lost if you navigate away.
+
+    After making edits, always click **Save** at the bottom-right to apply your changes. Unsaved changes will be lost if you navigate away.
 
 ______________________________________________________________________
 
@@ -124,15 +128,16 @@ ______________________________________________________________________
 A **Delete Voucher** button is available at the bottom-left of the page.
 
 !!! warning "Permanent Action"
-Deleting a voucher is permanent. Ensure the voucher is no longer needed before confirming deletion.
+
+    Deleting a voucher is permanent. Ensure the voucher is no longer needed before confirming deletion.
 
 ______________________________________________________________________
 
 ## Tips and Common Issues
 
-- **Vendor is required** — You must select a vendor before saving <br>
-- **Subtotal is auto-calculated** — It updates automatically as you add or modify voucher items <br>
-- **Discount reduces Payable** — Enter a discount to lower the final amount due <br>
+- **Vendor is required** — You must select a vendor before saving
+- **Subtotal is auto-calculated** — It updates automatically as you add or modify voucher items
+- **Discount reduces Payable** — Enter a discount to lower the final amount due
 - **Paid Amount tracks settlement** — Keep Paid Amount updated to reflect actual payments made<br>
 - **Photo upload supported** — Attach a physical voucher scan for document record-keep<br>
 - **History tracks all changes** — Use the History button to audit who changed what and when<br>

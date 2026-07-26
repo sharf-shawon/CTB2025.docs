@@ -56,7 +56,8 @@ The form changes based on the selected **Type**:
 - Used for internal stock movement
 
 !!! warning
-Selecting the wrong type will result in incorrect inventory records.
+
+    Selecting the wrong type will result in incorrect inventory records.
 
 ______________________________________________________________________
 

@@ -30,7 +30,8 @@ ______________________________________________________________________
 - All required fields (Client, Invoice Date, Status) must be filled in
 
 !!! warning "Print Option Restriction"
-The print option is **only available** when an invoice status is being saved as **Sent**. If the status is Draft, Cancelled, or any other state, the Print button will not be active.
+
+    The print option is **only available** when an invoice status is being saved as **Sent**. If the status is Draft, Cancelled, or any other state, the Print button will not be active.
 
 ______________________________________________________________________
 
@@ -46,7 +47,8 @@ ______________________________________________________________________
 1. Choose your printer or PDF destination and complete the print process
 
 !!! note "Browser Print Dialog"
-The exact print options depend on your browser. Most modern browsers allow you to save as PDF directly from the print dialog.
+
+    The exact print options depend on your browser. Most modern browsers allow you to save as PDF directly from the print dialog.
 
 ______________________________________________________________________
 

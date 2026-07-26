@@ -38,7 +38,8 @@ Fill in the following fields:
 | 6    | Priority    | Select priority      | The urgency level of the task                                |
 
 !!! warning "Required Fields"
-Fields marked with a **red star (\*)** are mandatory. Task Name, Status, and Priority must be filled before saving.
+
+    Fields marked with a **red star (\*)** are mandatory. Task Name, Status, and Priority must be filled before saving.
 
 ______________________________________________________________________
 
@@ -83,7 +84,8 @@ ______________________________________________________________________
 The **Audit Information** section is a collapsible section that displays system-generated details about who created or last modified the task record. This section is read-only and supports compliance and change tracking.
 
 !!! info
-Click the **Audit Information** header to expand and review the creation and modification history for this task.
+
+    Click the **Audit Information** header to expand and review the creation and modification history for this task.
 
 ______________________________________________________________________
 
@@ -97,15 +99,15 @@ After completing all sections:
 
 ______________________________________________________________________
 
-!!! Tips and Common Issues
+## Tips and common issues
 
-- **Task Name is required** — You must enter a task name before saving <br>
-- **Assign tasks before saving** — Selecting a user in Assigned To ensures the right person is notified and accountable <br>
-- **Default status is To Do** — New tasks start as To Do; update the status as work progresses <br>
-- **Default priority is Medium** — Adjust the priority to reflect the actual urgency of the task <br>
-- **Photo is optional** — Attach a photo only when a visual reference is needed to complete the task <br>
-- **Use Description for clarity** — Provide enough detail in the description so the assigned user understands exactly what is required <br>
-- **Cancelled tasks remain in the system** — Cancelled tasks are not deleted; they remain visible for record-keeping and reporting <br>
+- **Task Name is required** — You must enter a task name before saving
+- **Assign tasks before saving** — Selecting a user in Assigned To ensures the right person is notified and accountable
+- **Default status is To Do** — New tasks start as To Do; update the status as work progresses
+- **Default priority is Medium** — Adjust the priority to reflect the actual urgency of the task
+- **Photo is optional** — Attach a photo only when a visual reference is needed to complete the task
+- **Use Description for clarity** — Provide enough detail in the description so the assigned user understands exactly what is required
+- **Cancelled tasks remain in the system** — Cancelled tasks are not deleted; they remain visible for record-keeping and reporting
 
 ______________________________________________________________________
 

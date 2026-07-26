@@ -52,7 +52,8 @@ Invoice editing capabilities depend on the current invoice status:
 | Cancelled | View only; no editing               | Locked; preserves original record     |
 
 !!! warning "Status Controls Permissions"
-Some invoices are locked for editing to protect financial records. Check the Status before attempting to edit.
+
+    Some invoices are locked for editing to protect financial records. Check the Status before attempting to edit.
 
 ______________________________________________________________________
 
@@ -70,7 +71,8 @@ Update the following fields on the General tab:
 | 4    | Status         | Select new status         | Current state (Draft, Sent, Paid, etc.) | All           |
 
 !!! note
-Once an invoice is Sent or Paid, the Client and Invoice Date become locked to preserve the original transaction record.
+
+    Once an invoice is Sent or Paid, the Client and Invoice Date become locked to preserve the original transaction record.
 
 ______________________________________________________________________
 
@@ -112,7 +114,8 @@ Modify the products or services on the invoice:
 - On Sent invoices, items cannot be changed
 
 !!! warning "Items Lock After Sending"
-Once an invoice is Sent, you cannot add, remove, or modify line items. Create a new invoice or use a credit note to adjust quantities or prices.
+
+    Once an invoice is Sent, you cannot add, remove, or modify line items. Create a new invoice or use a credit note to adjust quantities or prices.
 
 ______________________________________________________________________
 
@@ -139,13 +142,13 @@ The invoice is now updated with your changes.
 
 ______________________________________________________________________
 
-!!! Tips and Common Issues
+## Tips and common issues
 
-- **Draft invoices are fully editable** — Make all corrections before changing Status to Sent <br>
-- **Sent invoices have limited edits** — You can only adjust payment details on sent invoices <br>
-- **Paid invoices are locked** — Do not attempt to edit paid invoices; create an adjustment invoice or credit note instead <br>
-- **Status change is permanent** — Once marked Sent or Paid, you cannot revert to Draft <br>
-- **Audit trail preserved** — The system tracks who edited the invoice and when <br>
+- **Draft invoices are fully editable** — Make all corrections before changing Status to Sent
+- **Sent invoices have limited edits** — You can only adjust payment details on sent invoices
+- **Paid invoices are locked** — Do not attempt to edit paid invoices; create an adjustment invoice or credit note instead
+- **Status change is permanent** — Once marked Sent or Paid, you cannot revert to Draft
+- **Audit trail preserved** — The system tracks who edited the invoice and when
 
 ______________________________________________________________________
 

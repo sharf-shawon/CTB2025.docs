@@ -198,19 +198,20 @@ ______________________________________________________________________
 A **Delete Employee** button is available at the bottom-left of the Employee Detail page.
 
 !!! warning "Restricted Action"
-Deleting an employee moves the record to the **Deleted** tab. Employees with linked wages, salaries, or payouts cannot be permanently removed while those records exist. Contact your system administrator for permanent deletion.
+
+    Deleting an employee moves the record to the **Deleted** tab. Employees with linked wages, salaries, or payouts cannot be permanently removed while those records exist. Contact your system administrator for permanent deletion.
 
 ______________________________________________________________________
 
 ## Tips and Common Issues
 
-- **Negative balance shown in red** — The employee has an outstanding salary balance; review wage and payout records to reconcile <br>
-- **Hide Salary Details** — Enable this toggle to restrict salary visibility to superusers only <br>
-- **Send SMS toggle** — Ensure the phone number is correct before enabling SMS notifications <br>
-- **Purchase Balance** — Tracks any purchases made by the employee that are to be deducted from their compensation <br>
-- **Use status tabs to filter** — Switch between Active, Disabled, and Deleted tabs to locate employees at different stages <br>
-- **Import/Export for bulk management** — Use Import to onboard multiple employees at once and Export for payroll reporting <br>
-- **NID photos recommended** — Upload clear front and back photos of the NID card for identity verification and compliance <br>
+- **Negative balance shown in red** — The employee has an outstanding salary balance; review wage and payout records to reconcile
+- **Hide Salary Details** — Enable this toggle to restrict salary visibility to superusers only
+- **Send SMS toggle** — Ensure the phone number is correct before enabling SMS notifications
+- **Purchase Balance** — Tracks any purchases made by the employee that are to be deducted from their compensation
+- **Use status tabs to filter** — Switch between Active, Disabled, and Deleted tabs to locate employees at different stages
+- **Import/Export for bulk management** — Use Import to onboard multiple employees at once and Export for payroll reporting
+- **NID photos recommended** — Upload clear front and back photos of the NID card for identity verification and compliance
 
 ______________________________________________________________________
 

@@ -35,7 +35,8 @@ Fill in the following fields in the Position Information section:
 | Is Enabled       | Toggle on/off  | Set whether the position is active and available for assignment   |
 
 !!! warning "Required Fields"
-Fields marked with a **red star (\*)** are mandatory.
+
+    Fields marked with a **red star (\*)** are mandatory.
 
 ______________________________________________________________________
 
@@ -62,19 +63,18 @@ ______________________________________________________________________
 A **Delete Position** button is available at the bottom-left of the page.
 
 !!! warning "Restricted Action"
-A position can only be deleted if no employees are currently assigned to it. If the position is in use, remove the assignment from the relevant employee records first before attempting to delete.
+
+    A position can only be deleted if no employees are currently assigned to it. If the position is in use, remove the assignment from the relevant employee records first before attempting to delete.
 
 ______________________________________________________________________
 
-!!! Tips and Common Issues
+## Tips and common issues
 
-```
-- **Position Name is required** — You must enter a unique name before saving <br>
-- **Is Enabled controls availability** — Only enabled positions can be assigned to employees <br>
-- **Use Description for clarity** — Add details to help others understand the role's responsibilities <br>
-- **History button** — Use the **History** button in the top-right corner to review all past changes made to this position record <br>
-- **SKU is auto-generated** — The system assigns a unique SKU on creation; you do not need to enter it manually <br>
-```
+- **Position Name is required** — You must enter a unique name before saving
+- **Is Enabled controls availability** — Only enabled positions can be assigned to employees
+- **Use Description for clarity** — Add details to help others understand the role's responsibilities
+- **History button** — Use the **History** button in the top-right corner to review all past changes made to this position record
+- **SKU is auto-generated** — The system assigns a unique SKU on creation; you do not need to enter it manually
 
 ______________________________________________________________________
 

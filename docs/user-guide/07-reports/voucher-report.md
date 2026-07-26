@@ -61,7 +61,9 @@ Open **Reports → Voucher Report** in the sidebar.
 ## Tips and common issues
 
 !!! tip
-Use the quick date filters (**By Created At** or **By Voucher Date**) for faster navigation instead of manually setting date ranges.
+
+    Use the quick date filters (**By Created At** or **By Voucher Date**) for faster navigation instead of manually setting date ranges.
 
 !!! note
-Vouchers may include both material purchases and expense entries. Filter by **Material** to isolate specific types of transactions.
+
+    Vouchers may include both material purchases and expense entries. Filter by **Material** to isolate specific types of transactions.

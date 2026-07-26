@@ -43,7 +43,8 @@ Fill in the following fields:
 | 4    | Product  | Select from dropdown | The product the employee produced in this work session |
 
 !!! warning "Required Fields"
-Fields marked with a **red star (\*)** are mandatory. Date, Employee, and Product must all be filled before saving.
+
+    Fields marked with a **red star (\*)** are mandatory. Date, Employee, and Product must all be filled before saving.
 
 ______________________________________________________________________
 
@@ -62,16 +63,18 @@ Enter the production output and wage calculation fields:
 | 5    | Net Wage   | Auto-calculated | Final wage amount (Wage × Quantity + Bonus - Deductions) |
 
 !!! note "Net Wage Calculation"
-Net Wage is calculated automatically based on Wage, Quantity, Bonus, and Deductions. You do not need to enter it manually.
+
+    Net Wage is calculated automatically based on Wage, Quantity, Bonus, and Deductions. You do not need to enter it manually.
 
 !!! tip
-Set Wage to **0** to apply the default wage rate configured for the selected product.
+
+    Set Wage to **0** to apply the default wage rate configured for the selected product.
 
 ______________________________________________________________________
 
 ## Payment Information
 
-![Payment Information Section](add-wage%20payment-inforamtion.png)
+![Payment Information Section](add-wage-payment-information.png)
 
 Record whether this wage has been paid:
 
@@ -82,7 +85,8 @@ Record whether this wage has been paid:
 | 3    | Payment Notes | Enter text    | Optional notes about the payment method or reference      |
 
 !!! note "Payment Date Visibility"
-Payment Date and Payment Notes fields appear when **Is Paid** is toggled on. Leave Is Paid off if the wage is still outstanding.
+
+    Payment Date and Payment Notes fields appear when **Is Paid** is toggled on. Leave Is Paid off if the wage is still outstanding.
 
 ______________________________________________________________________
 
@@ -96,15 +100,15 @@ After completing all sections:
 
 ______________________________________________________________________
 
-!!! Tips and Common Issues
+## Tips and common issues
 
-- **Employee is required** — You must select an employee before saving <br>
-- **Product is required** — Select the product associated with the production output <br>
-- **Default wage applies when Wage is 0** — If no wage is entered, the system uses the product's default wage rate <br>
-- **Net Wage updates automatically** — It recalculates whenever Quantity, Wage, Bonus, or Deductions are changed <br>
-- **Toggle Is Paid only when payment is confirmed** — Setting Is Paid without a Payment Date may cause reporting inconsistencies <br>
-- **Deductions reduce Net Wage** — Enter deductions carefully as they directly reduce the employee's final payment <br>
-- **Date affects payroll reporting** — The entry date determines which pay period this wage record appears in <br>
+- **Employee is required** — You must select an employee before saving
+- **Product is required** — Select the product associated with the production output
+- **Default wage applies when Wage is 0** — If no wage is entered, the system uses the product's default wage rate
+- **Net Wage updates automatically** — It recalculates whenever Quantity, Wage, Bonus, or Deductions are changed
+- **Toggle Is Paid only when payment is confirmed** — Setting Is Paid without a Payment Date may cause reporting inconsistencies
+- **Deductions reduce Net Wage** — Enter deductions carefully as they directly reduce the employee's final payment
+- **Date affects payroll reporting** — The entry date determines which pay period this wage record appears in
 
 ______________________________________________________________________
 

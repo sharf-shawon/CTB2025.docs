@@ -39,7 +39,8 @@ Update the following fields as needed:
 | Description | Edit                | Optional notes or additional details           |
 
 !!! warning
-Changing the **Unit** after invoices are created can cause calculation errors. Avoid unless necessary.
+
+    Changing the **Unit** after invoices are created can cause calculation errors. Avoid unless necessary.
 
 ## Pricing and Costing Information
 
@@ -56,7 +57,8 @@ Changing the **Unit** after invoices are created can cause calculation errors. A
 | Profit           | Auto-calculated     | Selling Rate minus Total Cost             |
 
 !!! note
-**Materials Cost**, **Total Cost**, and **Profit** are automatically calculated. Do not edit these fields directly.
+
+    **Materials Cost**, **Total Cost**, and **Profit** are automatically calculated. Do not edit these fields directly.
 
 ## Product Costings (Materials)
 
@@ -85,7 +87,8 @@ Click **Add another Product Costing** to add more materials to the composition.
 | Restock Level  | Edit                | Minimum stock before reorder is needed   |
 
 !!! warning
-Editing **Stock** manually should be avoided. Use **Inventory In** or **Inventory Out** transactions to maintain a complete audit trail.
+
+    Editing **Stock** manually should be avoided. Use **Inventory In** or **Inventory Out** transactions to maintain a complete audit trail.
 
 ## Saving Changes
 

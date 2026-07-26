@@ -38,7 +38,8 @@ Fill in the following fields:
 | 12   | NID Card Back Photo  | Upload the back image                  | Back side of the employee’s NID card                     |
 
 !!! warning "Required Fields"
-Fields marked with a **red star (\*)** are mandatory.
+
+    Fields marked with a **red star (\*)** are mandatory.
 
 ______________________________________________________________________
 
@@ -67,7 +68,8 @@ ______________________________________________________________________
 | 5    | End Date         | Select if applicable       | Leave empty if the employee is still active   |
 
 !!! note
-The small action icons beside the position and department fields let you manage those linked records without leaving the page.
+
+    The small action icons beside the position and department fields let you manage those linked records without leaving the page.
 
 ______________________________________________________________________
 
@@ -84,7 +86,8 @@ ______________________________________________________________________
 | 5    | Lower Balance Limit | Set the minimum limit     | Lowest allowed balance                  |
 
 !!! warning "Required Fields"
-Fields marked with a **red star (\*)** are mandatory.
+
+    Fields marked with a **red star (\*)** are mandatory.
 
 ______________________________________________________________________
 
@@ -98,7 +101,7 @@ After completing all sections:
 
 ______________________________________________________________________
 
-!!! Tips and Common Issues
+## Tips and common issues
 
 - Verify the **Phone Number** before enabling SMS notifications.
 - Upload clear **NID images** so the record is easy to verify later.

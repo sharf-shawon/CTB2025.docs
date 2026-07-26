@@ -87,7 +87,7 @@ ______________________________________________________________________
 
 ## Salaries Tab
 
-![Salaries Tab](add-employee-salary-details.png)
+![Salaries Tab](employee-detail-salary-tab.png)
 
 Use this tab to review salary records generated for the employee.
 
@@ -125,7 +125,7 @@ From the Employee Detail page, you may see the following actions:
 
 ______________________________________________________________________
 
-!!! Tips and Common Issues
+## Tips and common issues
 
 - Use the **General** tab first when you need to verify identity or employment details.
 - Check **Wages**, **Salaries**, and **Payouts** before processing new payroll records.

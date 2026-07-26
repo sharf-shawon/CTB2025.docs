@@ -47,7 +47,8 @@ These fields are automatically managed by the system:
 | Updated At | Last modification date        |
 
 !!! note
-You do not need to manually enter system-generated fields.
+
+    You do not need to manually enter system-generated fields.
 
 ______________________________________________________________________
 
@@ -65,7 +66,8 @@ ______________________________________________________________________
 - Keep categories broad enough to allow multiple products
 
 !!! tip
-Plan your category structure before adding products to avoid reorganization later.
+
+    Plan your category structure before adding products to avoid reorganization later.
 
 ______________________________________________________________________
 

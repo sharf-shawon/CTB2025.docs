@@ -42,7 +42,8 @@ Use the search bar to quickly find positions.
 - The table updates instantly based on your input
 
 !!! tip
-Use SKU for faster and more accurate search results.
+
+    Use SKU for faster and more accurate search results.
 
 ______________________________________________________________________
 
@@ -58,7 +59,8 @@ Use the **Filters** button to narrow down position results.
 - **Department** — Filter positions by assigned department (if applicable)
 
 !!! note
-Apply filters to quickly locate positions matching your workflow needs.
+
+    Apply filters to quickly locate positions matching your workflow needs.
 
 ______________________________________________________________________
 

@@ -61,7 +61,8 @@ From the Attendance List page:
 ______________________________________________________________________
 
 !!! tip "Best practice"
-Review the date range and filter settings before opening records to avoid editing the wrong attendance entry.
+
+    Review the date range and filter settings before opening records to avoid editing the wrong attendance entry.
 
 ______________________________________________________________________
 

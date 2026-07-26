@@ -66,7 +66,7 @@ From the Salaries List page:
 
 ______________________________________________________________________
 
-!!! Tips and Common Issues
+## Tips and common issues
 
 - **Generate salary after attendance review** — Confirm all attendance and wage entries are complete before generating salary to ensure accurate calculations.
 - **Month is the key filter** — Use the date navigation to quickly jump to the payroll period you need.

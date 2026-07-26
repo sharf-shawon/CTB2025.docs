@@ -34,8 +34,9 @@ Fill in the following fields in the Department Information section:
 | Description        | Enter text     | Optional details about the department's function or purpose      |
 | Is Enabled         | Toggle on/off  | Set whether the department is active and available for selection |
 
-!!!warning
-Fields marked with a **red star (\*)** are mandatory.
+!!! warning
+
+    Fields marked with a **red star (\*)** are mandatory.
 
 ______________________________________________________________________
 

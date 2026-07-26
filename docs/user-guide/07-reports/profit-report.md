@@ -68,9 +68,11 @@ This section covers performance data specifically for tender-based invoices, mir
 ## Notes
 
 !!! note
-Regular Invoices and Tender Invoices are tracked and visualized **separately** throughout this page, since they represent different business workflows (standard trade vs. tender-based contracts).
+
+    Regular Invoices and Tender Invoices are tracked and visualized **separately** throughout this page, since they represent different business workflows (standard trade vs. tender-based contracts).
 
 !!! tip
-Use the **Client filter** combined with a narrow date range to analyze performance for a single customer over a specific period.
+
+    Use the **Client filter** combined with a narrow date range to analyze performance for a single customer over a specific period.
 
 ## Related pages

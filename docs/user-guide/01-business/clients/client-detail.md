@@ -84,7 +84,8 @@ This section contains identity and contract-related information.
 | End Date             | End date of the client relationship (if any) |
 
 !!! note
-Uploaded images help verify client identity and should be clear and readable.
+
+    Uploaded images help verify client identity and should be clear and readable.
 
 ______________________________________________________________________
 
@@ -119,7 +120,8 @@ From the **Client Detail** page, you can perform the following actions:
 
 ______________________________________________________________________
 
-!!! Tips and Note
+## Tips and common issues
+
 \* The **SKU** is system-generated and cannot be changed.<br>
 \* Financial fields such as **Discount Total** are calculated automatically.<br>
 \* If a client is **inactive**, they may not appear in invoice selection lists.
@@ -127,7 +129,8 @@ ______________________________________________________________________
 ______________________________________________________________________
 
 !!! warning
-Make sure the **Phone Number** is correct before enabling **Send SMS**, as this number will receive automated SMS notifications.
+
+    Make sure the **Phone Number** is correct before enabling **Send SMS**, as this number will receive automated SMS notifications.
 
 ______________________________________________________________________
 

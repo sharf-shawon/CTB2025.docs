@@ -61,7 +61,8 @@ The top section shows which employee and period this salary covers:
 | Month    | The month and year this salary record covers   |
 
 !!! warning "Required Fields"
-Fields marked with a **red star (\*)** are mandatory.
+
+    Fields marked with a **red star (\*)** are mandatory.
 
 ______________________________________________________________________
 
@@ -82,10 +83,12 @@ This section displays the full salary breakdown:
 | Net Salary       | Final payable amount — calculated automatically (read-only)            |
 
 !!! note "Net Salary Calculation"
-Net Salary is calculated automatically as: **(Salary × Salary Units) + Overtime + Bonus − Deductions**. It updates in real time whenever any component is changed.
+
+    Net Salary is calculated automatically as: **(Salary × Salary Units) + Overtime + Bonus − Deductions**. It updates in real time whenever any component is changed.
 
 !!! tip
-Set **Salary** to **0** to apply the default salary rate configured on the employee's profile.
+
+    Set **Salary** to **0** to apply the default salary rate configured on the employee's profile.
 
 ______________________________________________________________________
 
@@ -102,7 +105,8 @@ This section records the payment status for this salary:
 | Payment Notes | Optional notes about the payment method, reference, or remarks     |
 
 !!! note "Payment Fields Visibility"
-**Payment Date** and **Payment Notes** are active when **Is Paid** is toggled on. Keep Is Paid off if the salary is still outstanding.
+
+    **Payment Date** and **Payment Notes** are active when **Is Paid** is toggled on. Keep Is Paid off if the salary is still outstanding.
 
 ______________________________________________________________________
 
@@ -111,7 +115,8 @@ ______________________________________________________________________
 The **Related Records** section at the bottom is a collapsible section that displays any records linked to this salary entry, such as attendance logs or payout references.
 
 !!! info
-Click the **Related Records** header to expand and review all linked data for this salary record.
+
+    Click the **Related Records** header to expand and review all linked data for this salary record.
 
 ______________________________________________________________________
 
@@ -132,19 +137,20 @@ ______________________________________________________________________
 A **Delete Salary** button is available at the bottom-left of the detail page.
 
 !!! warning "Restricted Action"
-Deleting a salary record is permanent. Only delete records that were created in error and have not been linked to any payout or financial transaction. Once a salary has been marked as **Paid** or linked to related records, deletion may not be permitted. Contact your system administrator if a linked salary record needs to be removed.
+
+    Deleting a salary record is permanent. Only delete records that were created in error and have not been linked to any payout or financial transaction. Once a salary has been marked as **Paid** or linked to related records, deletion may not be permitted. Contact your system administrator if a linked salary record needs to be removed.
 
 ______________________________________________________________________
 
 ## Tips and Common Issues
 
-- **Net Salary updates automatically** — It recalculates in real time whenever Salary, Salary Units, Overtime, Bonus, or Deductions are changed <br>
-- **Salary Units represent workdays or hours** — Enter the correct number based on the employee's salary type (Monthly or Hourly) <br>
-- **Default salary applies when Salary is 0** — The system uses the rate set on the employee's profile <br>
-- **Toggle Is Paid only when payment is confirmed** — Setting Is Paid without a Payment Date may cause payroll reporting inconsistencies <br>
-- **Deductions reduce Net Salary** — Enter deductions carefully as they directly reduce the employee's final payable amount <br>
-- **Always save before leaving** — Use the **Save** button at the bottom of the page; unsaved changes will be lost <br>
-- **History button** — Use the **History** button in the top-right corner to review all changes made to this salary record and who made them <br>
+- **Net Salary updates automatically** — It recalculates in real time whenever Salary, Salary Units, Overtime, Bonus, or Deductions are changed
+- **Salary Units represent workdays or hours** — Enter the correct number based on the employee's salary type (Monthly or Hourly)
+- **Default salary applies when Salary is 0** — The system uses the rate set on the employee's profile
+- **Toggle Is Paid only when payment is confirmed** — Setting Is Paid without a Payment Date may cause payroll reporting inconsistencies
+- **Deductions reduce Net Salary** — Enter deductions carefully as they directly reduce the employee's final payable amount
+- **Always save before leaving** — Use the **Save** button at the bottom of the page; unsaved changes will be lost
+- **History button** — Use the **History** button in the top-right corner to review all changes made to this salary record and who made them
 
 ______________________________________________________________________
 

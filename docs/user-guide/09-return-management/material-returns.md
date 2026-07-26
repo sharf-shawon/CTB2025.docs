@@ -20,8 +20,8 @@ Open **Return Management → Material Returns** in the sidebar. On the Material 
 - Vendor records already exist in CTB Admin
 - A return voucher may be required before saving
 - Permission to create or edit material return records
-  
-_____________________________________________________________________
+
+______________________________________________________________________
 
 ## Field reference
 
@@ -58,4 +58,3 @@ ______________________________________________________________________
 
 - **[Product Returns](product-returns.md)** — Manage returned finished goods.
 - **[Return Management Module](README.md)** — Overview of return workflows.
-

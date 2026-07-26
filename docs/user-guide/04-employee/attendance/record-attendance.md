@@ -39,15 +39,13 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-!!! Tips and common issues
+## Tips and common issues
 
-```
 - **Required fields** — Employee, Date, Check-in Time, Salary Type, Salary Rate, and Overtime Minutes are required when marked with a red star.
 - **Check-out time** — Add it when known to ensure proper work minute calculations.
 - **Salary type matters** — Use the correct salary type for hourly staff to calculate wages accurately.
 - **Overtime entry** — Only enter overtime minutes for actual overtime work.
 - **Use manual entry for exceptions** — Prefer automatic attendance first, and use this form only for missing or corrected records.
-```
 
 ______________________________________________________________________
 

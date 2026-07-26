@@ -29,8 +29,9 @@ Fill in the following fields on the payout form:
 | 2    | Amount   | Enter amount    | The payout amount in the system currency      |
 | 3    | Payable  | Auto-calculated | Total payout amount (may include adjustments) |
 
-!!!warning
-Fields marked with a **red star (\*)** are mandatory.
+!!! warning
+
+    Fields marked with a **red star (\*)** are mandatory.
 
 ______________________________________________________________________
 
@@ -43,8 +44,9 @@ Configure the payment details after entering the payout amount:
 | 1    | Is Paid      | Check if paid | Mark the payout as already paid                      |
 | 2    | Payment Date | Select date   | Date when the payout was or will be paid to employee |
 
-!!!Note
-Payment Date is important for payroll reconciliation and employee balance tracking.
+!!! note
+
+    Payment Date is important for payroll reconciliation and employee balance tracking.
 
 ______________________________________________________________________
 

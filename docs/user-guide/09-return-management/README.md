@@ -30,11 +30,11 @@ ______________________________________________________________________
 ## How to use this module
 
 1. Open **Return Management** in the sidebar.
-2. Select **Product Returns** or **Material Returns** from the submenu.
-3. Click the **purple (+) icon** or **Add** to create a new return record.
-4. Fill the required return header fields for vendor, client, invoice, or voucher.
-5. Add returned items in the return items table.
-6. Confirm totals and click **Save**.
+1. Select **Product Returns** or **Material Returns** from the submenu.
+1. Click the **purple (+) icon** or **Add** to create a new return record.
+1. Fill the required return header fields for vendor, client, invoice, or voucher.
+1. Add returned items in the return items table.
+1. Confirm totals and click **Save**.
 
 ______________________________________________________________________
 
@@ -42,13 +42,13 @@ ______________________________________________________________________
 
 Use the return item table to view each product return record.
 
-| Column             | Description                                                          |
-| ----------------   | ---------------------------------------------------                  |
-| **Return Date**    | Date on which the product/material return was recorded               |
-| **Invoice/Voucher**| Invoice/Voucher number associated with the returned product/material |
-| **Client/Vendor**  | Client/Vendor who returned the product/material                      |
-| **Total Amount**   | Total refunded value for that return record                          |
-| **Returned By**    | User who processed or recorded the return                            |
+| Column              | Description                                                          |
+| ------------------- | -------------------------------------------------------------------- |
+| **Return Date**     | Date on which the product/material return was recorded               |
+| **Invoice/Voucher** | Invoice/Voucher number associated with the returned product/material |
+| **Client/Vendor**   | Client/Vendor who returned the product/material                      |
+| **Total Amount**    | Total refunded value for that return record                          |
+| **Returned By**     | User who processed or recorded the return                            |
 
 ______________________________________________________________________
 

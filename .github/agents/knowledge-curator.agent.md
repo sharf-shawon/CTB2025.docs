@@ -19,9 +19,9 @@ Only run after a PR is merged into `main`. Do not run mid-PR or during write tas
 ## Mandatory first steps
 
 1. Read `.github/STYLE_SPEC.md`
-2. Read `.github/knowledge/ctb-knowledge.md`
-3. Read `.github/knowledge/copilot-learnings.md`
-4. Read the merged PR (title, description, diff, review comments)
+1. Read `.github/knowledge/ctb-knowledge.md`
+1. Read `.github/knowledge/copilot-learnings.md`
+1. Read the merged PR (title, description, diff, review comments)
 
 ## Task 1 — Update copilot-learnings.md
 
@@ -44,6 +44,7 @@ For new modules, terminology, screenshot paths, or workflow changes found in the
 Rules: one fact per row · single-line cells · never remove existing rows unless factually wrong
 
 Append to Automated Signals table:
+
 ```markdown
 | YYYY-MM-DD | PR #N | <modules touched> | <brief signal> |
 ```

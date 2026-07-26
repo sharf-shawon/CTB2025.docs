@@ -29,7 +29,8 @@ Fill in the following fields on the General tab:
 | 5    | Valid Until   | Select date             | Expiration date for the tender offer       |
 
 !!! warning "Required Fields"
-Fields marked with a **red star (\*)** are mandatory.
+
+    Fields marked with a **red star (\*)** are mandatory.
 
 ______________________________________________________________________
 
@@ -47,7 +48,8 @@ Configure the financial details of the tender proposal:
 | 6    | Total    | Auto-calculated | Final proposed amount (Subtotal + Tax + VAT + Shipping - Discount) |
 
 !!! note
-The total is calculated automatically based on items and payment adjustments.
+
+    The total is calculated automatically based on items and payment adjustments.
 
 ______________________________________________________________________
 
@@ -67,7 +69,8 @@ Add products or services to the tender proposal:
 - Use the **edit icon** to modify an item's details
 
 !!! tip
-Keep rates competitive but profitable. Each item's total calculates automatically.
+
+    Keep rates competitive but profitable. Each item's total calculates automatically.
 
 ______________________________________________________________________
 
@@ -94,12 +97,12 @@ The tender invoice is now ready to be sent to the client or processed for paymen
 
 ______________________________________________________________________
 
-!!! Tips and Common Issues
+## Tips and common issues
 
-- **Client is required** — You must select a client before saving <br>
-- **Valid Until date matters** — Set an expiration date so the tender doesn't stay open indefinitely <br>
-- **Status tracks the tender lifecycle** — Use Status to mark tenders as Draft, Sent, Cancelled <br>
-- **Keep detailed Terms** — Include payment terms, delivery date, and any conditions in the Terms field <br>
+- **Client is required** — You must select a client before saving
+- **Valid Until date matters** — Set an expiration date so the tender doesn't stay open indefinitely
+- **Status tracks the tender lifecycle** — Use Status to mark tenders as Draft, Sent, Cancelled
+- **Keep detailed Terms** — Include payment terms, delivery date, and any conditions in the Terms field
 
 ______________________________________________________________________
 

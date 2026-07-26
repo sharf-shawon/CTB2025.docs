@@ -77,7 +77,8 @@ ______________________________________________________________________
 | End Date         | Set or update       | Leave empty if the employee is still active |
 
 !!! warning
-Changing position, department, or balance-related fields can affect payroll and reporting.
+
+    Changing position, department, or balance-related fields can affect payroll and reporting.
 
 ______________________________________________________________________
 
@@ -107,14 +108,12 @@ If your role allows it, you may also see a **Delete Employee** button.
 
 ______________________________________________________________________
 
-!!! Tips and Common Issues
+## Tips and common issues
 
-```
 - Verify the **Phone Number** before enabling SMS notifications.
 - Replace **NID images** only with clear and readable files.
 - Avoid unnecessary changes to **Balance**, because it can affect financial reports.
 - Use **End Date** only when the employee is no longer active.
-```
 
 ______________________________________________________________________
 

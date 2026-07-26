@@ -31,7 +31,8 @@ Fill in the following fields on the General tab:
 | 5    | Valid Until      | Select date             | Expiration date for the quotation validity   |
 
 !!! warning "Required Fields"
-Fields marked with a **red star (\*)** are mandatory.
+
+    Fields marked with a **red star (\*)** are mandatory.
 
 ______________________________________________________________________
 
@@ -51,7 +52,8 @@ After adding items, configure the financial details:
 | 6    | Total    | Auto-calculated | Final proposed amount (Subtotal + Tax + VAT + Shipping - Discount) |
 
 !!! note
-The total is calculated automatically based on items and payment adjustments.
+
+    The total is calculated automatically based on items and payment adjustments.
 
 ______________________________________________________________________
 
@@ -72,7 +74,8 @@ Add products or services to the quotation:
 - Use the **edit icon** to modify an item's details
 
 !!! tip
-Each item's total is calculated automatically once you enter Rate and Qty.
+
+    Each item's total is calculated automatically once you enter Rate and Qty.
 
 ______________________________________________________________________
 
@@ -99,13 +102,13 @@ The quotation is now ready to be sent to the client for review.
 
 ______________________________________________________________________
 
-!!! Tips and Common Issues
+## Tips and common issues
 
-- **Client is required** — You must select a client before saving <br>
-- **Valid Until date matters** — Set an expiration date so the quotation doesn't stay valid indefinitely <br>
-- **Status tracks progression** — Use Status to mark quotations as Draft, Sent, Accepted, Rejected, etc. <br>
-- **Keep detailed Terms** — Include payment terms, delivery timeframe, and any conditions in the Terms field <br>
-- **Quotation differs from Invoice** — Quotations are proposals; they become invoices only after the client accepts <br>
+- **Client is required** — You must select a client before saving
+- **Valid Until date matters** — Set an expiration date so the quotation doesn't stay valid indefinitely
+- **Status tracks progression** — Use Status to mark quotations as Draft, Sent, Accepted, Rejected, etc.
+- **Keep detailed Terms** — Include payment terms, delivery timeframe, and any conditions in the Terms field
+- **Quotation differs from Invoice** — Quotations are proposals; they become invoices only after the client accepts
 
 ______________________________________________________________________
 

@@ -73,7 +73,8 @@ Update the following fields as needed:
 | End Date        | Set/Update          | Leave empty if ongoing                   |
 
 !!! note
-Replacing images will overwrite previous uploads.
+
+    Replacing images will overwrite previous uploads.
 
 ## Balance and Discount Information
 
@@ -89,7 +90,8 @@ Replacing images will overwrite previous uploads.
 | Discount Max Amount | Modify              | Controls maximum discount amount       |
 
 !!! warning
-Changing balance-related fields can impact financial tracking and reports.
+
+    Changing balance-related fields can impact financial tracking and reports.
 
 ## Saving Changes
 

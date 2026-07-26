@@ -64,7 +64,8 @@ Before deleting a bank, the system checks whether the account is linked to any e
 | Bank has no linked records and user has permission | Permitted        |
 
 !!! warning "Permission Required"
-Even if the bank has no linked records, only users with the appropriate delete permission can remove a bank account. If your account lacks this permission, the system will display an error listing the object types you are not allowed to delete.
+
+    Even if the bank has no linked records, only users with the appropriate delete permission can remove a bank account. If your account lacks this permission, the system will display an error listing the object types you are not allowed to delete.
 
 **To delete a bank:**
 
@@ -76,7 +77,8 @@ Even if the bank has no linked records, only users with the appropriate delete p
 The bank record is permanently removed from the system.
 
 !!! tip "Cannot delete the bank?"
-If the system shows a permission error, contact your system administrator to request delete access or to have the linked records removed first. To take the bank out of active use without deleting it, toggle **Is Enabled** to off and save.
+
+    If the system shows a permission error, contact your system administrator to request delete access or to have the linked records removed first. To take the bank out of active use without deleting it, toggle **Is Enabled** to off and save.
 
 ## Tips and common issues
 

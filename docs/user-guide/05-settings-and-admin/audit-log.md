@@ -4,7 +4,7 @@
 
 Use this page to review who changed data in CTB Admin, what was changed, and when the action happened. Audit logs help you verify activity, investigate unexpected changes, and support internal control checks.
 
-![Audit Log page](../screenshots/settings/audit-log.png)
+![Audit Log page](audit-log.png)
 
 ## When to use this page
 
@@ -36,15 +36,13 @@ From the left sidebar menu, go to **Audit Log**. It appears as the last item in 
 
 This page reads audit trail data for admin activity. Use it as the system source when checking history related to business records such as clients, invoices, payments, checks, and employee entries.
 
-!!! Tips and common issues
+## Tips and common issues
 
-```
 - Check system date and time settings if log times look inconsistent.
 - Filter by a short date range first when there are many records.
 - Use both **User** and **Object** together to find the correct event faster.
 - If no entries appear, confirm that the action was actually saved and that your account has viewing permission.
 - Export or screenshot important entries during incident review so your team has a fixed reference.
-```
 
 ## Related pages
 

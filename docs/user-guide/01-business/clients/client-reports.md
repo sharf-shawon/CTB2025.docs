@@ -65,7 +65,8 @@ The top section displays key financial information:
 | Year Discount     | Total discounts applied to invoices in the selected period |
 
 !!! note
-All metrics recalculate automatically when you apply a new date range filter.
+
+    All metrics recalculate automatically when you apply a new date range filter.
 
 ______________________________________________________________________
 
@@ -117,7 +118,8 @@ This comprehensive table displays every transaction involving this client (invoi
 | Discount    | Any discount applied                             |
 
 !!! note
-Transactions are listed in reverse chronological order (most recent first).
+
+    Transactions are listed in reverse chronological order (most recent first).
 
 ______________________________________________________________________
 

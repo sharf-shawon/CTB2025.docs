@@ -47,7 +47,8 @@ Fill in the following fields:
 | 7    | Email             | Enter if available   | Used for communication                              |
 
 !!! warning "Required Fields"
-Fields marked with a **red star (\*)** are mandatory.
+
+    Fields marked with a **red star (\*)** are mandatory.
 
 ______________________________________________________________________
 
@@ -65,7 +66,8 @@ ______________________________________________________________________
 | 6    | End Date             | Select if applicable | Leave empty if ongoing              |
 
 !!! note
-Upload clear images for proper verification.
+
+    Upload clear images for proper verification.
 
 ______________________________________________________________________
 
@@ -83,7 +85,8 @@ ______________________________________________________________________
 | 6    | Discount Max Amount | Enter amount | Maximum discount amount per invoice |
 
 !!! warning "Required Fields"
-Fields marked with a **red star (\*)** are mandatory.
+
+    Fields marked with a **red star (\*)** are mandatory.
 
 ______________________________________________________________________
 
@@ -99,12 +102,12 @@ After completing all sections:
 
 ______________________________________________________________________
 
-!!! Tips and Common Issues
+## Tips and common issues
 
-- Ensure the **Phone number is correct** before enabling SMS <br>
-- Upload clear **NID images** for verification <br>
-- Leave **End Date empty** if the client is ongoing <br>
-- Configure **Discount Max Rate** and **Discount Max Amount** to control pricing <br>
+- Ensure the **Phone number is correct** before enabling SMS
+- Upload clear **NID images** for verification
+- Leave **End Date empty** if the client is ongoing
+- Configure **Discount Max Rate** and **Discount Max Amount** to control pricing
 
 ______________________________________________________________________
 

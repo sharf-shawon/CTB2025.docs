@@ -22,3 +22,7 @@ repos:
         additional_dependencies:
           - mdformat-gfm
           - mdformat-frontmatter
+          # Required. Without it mdformat strips the 4-space indent from
+          # MkDocs admonition bodies, which silently closes the admonition and
+          # renders an empty callout with loose body text beneath it.
+          - mdformat-mkdocs

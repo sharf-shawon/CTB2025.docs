@@ -46,13 +46,13 @@ Open **Reports → Executive Summary** in the left sidebar under **Reports**.
 
 - **Invoice & Tender Invoice Statistics** — Table listing per-date invoice/tender invoice rows with these columns:
 
-  - **Date** — Transaction date
-  - **Type** — `Invoice` or `Tender Invoice`
-  - **Count** — Number of invoices on that date
-  - **Subtotal** — Sum of invoice line subtotals before discounts
-  - **Discount** — Total discounts applied
-  - **Payable** — Net amount payable after discounts
-  - **Grand Total** — Sum of the **Payable** column for the date range (shown at table bottom)
+    - **Date** — Transaction date
+    - **Type** — `Invoice` or `Tender Invoice`
+    - **Count** — Number of invoices on that date
+    - **Subtotal** — Sum of invoice line subtotals before discounts
+    - **Discount** — Total discounts applied
+    - **Payable** — Net amount payable after discounts
+    - **Grand Total** — Sum of the **Payable** column for the date range (shown at table bottom)
 
 - **Sent Payments (Passed)** — List of sent/cleared payments with **Date**, **Vendor**, **Amount** and a **Total** row
 
@@ -70,12 +70,10 @@ Open **Reports → Executive Summary** in the left sidebar under **Reports**.
 
 - **Product Stock Levels** — Inventory snapshot with **SKU**, **Product Name**, **Current Stock**, **Restock Level**, and **Unit**
 
-!!! Tips and common issues
+## Tips and common issues
 
-```
 - If the page shows zero results, expand the date range or verify that transactions exist for the period
 - Large date ranges may slow down loading; filter narrower ranges for quicker responses
 - Negative totals in Materials Purchased typically indicate returns or stock corrections — verify related purchase records
 - If totals don't match your accounting system, check for unposted or draft transactions excluded from the report
 - Timezone or server date mismatches can shift which day a transaction appears on; confirm server timezone settings if dates look off
-```

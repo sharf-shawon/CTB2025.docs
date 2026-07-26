@@ -54,7 +54,8 @@ These fields are automatically managed:
 | Updated At | Updated automatically after changes        |
 
 !!! note
-System fields cannot be modified manually.
+
+    System fields cannot be modified manually.
 
 ______________________________________________________________________
 
@@ -72,7 +73,8 @@ ______________________________________________________________________
 - Ensure the category name clearly represents grouped products
 
 !!! warning
-Changing category structure after products are assigned may impact organization and reporting.
+
+    Changing category structure after products are assigned may impact organization and reporting.
 
 ______________________________________________________________________
 

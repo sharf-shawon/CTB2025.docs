@@ -49,4 +49,3 @@ Open **Commission and Campaigns → Commission Campaigns** in the sidebar.
 - **[Employee Analytics](employee-analytics.md)** — Review employee performance and campaign analytics.
 - **[Manager Analytics](manager-analytics.md)** — Track manager commission triggers and outcomes.
 - **[Client Bonus Campaigns](client-bonus-campaigns.md)** — Manage bonus campaigns for clients.
-
