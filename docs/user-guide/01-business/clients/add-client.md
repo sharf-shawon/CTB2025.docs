@@ -89,8 +89,8 @@ ______________________________________________________________________
 
 ## Related workflows & next steps
 
-- **Create Invoice** — Issue a sales invoice to the newly registered client.
-- **Add Payment** — Record initial deposit or payment receipt from client.
+- **[Create Invoice](../../03-trade/invoices/create-invoice.md)** — Issue a sales invoice to the newly registered client.
+- **[Add Payment](../../03-trade/payments/add-payment.md)** — Record initial deposit or payment receipt from client.
 - **Client Ledger** — Monitor credit limits and transaction balance statements.
 
 ______________________________________________________________________

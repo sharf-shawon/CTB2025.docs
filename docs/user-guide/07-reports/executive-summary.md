@@ -8,8 +8,6 @@ tags: [module:reports, task:view, role:accountant]
 
 The Executive Summary page provides a consolidated, printable report of key business metrics across invoices, payments, checks, vouchers, materials purchased and product stock levels for a selectable date range. Use it to get a quick management-level view and to drill into specific transactions.
 
-<!-- TODO: screenshot docs/user-guide/screenshots/reports/executive-summary.png -->
-
 ______________________________________________________________________
 
 ## When to use this page

@@ -39,6 +39,21 @@ This repository contains MkDocs Material documentation for **CTB Admin** — a D
 1. Never add `mkdocs.yml` nav entries for files that do not exist
 1. One PR per task — keep changes minimal and scoped
 
+## Local Quality Check & Pre-Commit Setup
+
+To run local style checks and pre-commit hooks before pushing changes:
+
+```bash
+# Install local pre-commit hooks
+uv run pre-commit install
+
+# Run pre-commit style linter on all files
+uv run pre-commit run --all-files
+
+# Verify strict site build
+uv run mkdocs build --strict
+```
+
 ## Gemini CLI quick-start
 
 ```bash

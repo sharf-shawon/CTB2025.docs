@@ -94,10 +94,9 @@ ______________________________________________________________________
 
 ## Related workflows & next steps
 
-- **Add Payment** — Record client payments received against this invoice.
-- **Edit Invoice** — Modify items or charges on existing draft invoices.
-- **Print Invoice** — Export a PDF or print a hard copy invoice for the client.
-- **Invoice Reports** — View accounts receivable summaries and sales analytics.
+- **[Add Payment](../payments/add-payment.md)** — Record client payments received against this invoice.
+- **[Add Client](../../01-business/clients/add-client.md)** — Manage client credit limits and balance statements.
+- **[Add Voucher](../vouchers/add-voucher.md)** — Process material procurement vouchers linked to production.
 
 ______________________________________________________________________
 

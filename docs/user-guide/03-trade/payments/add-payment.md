@@ -95,9 +95,9 @@ ______________________________________________________________________
 
 ## Related workflows & next steps
 
-- **Manage Checks** — View, add, or clear linked bank checks.
-- **Client Ledger** — Review updated client account statements.
-- **Commission Reports** — Track payment collection commissions per employee.
+- **[Create Invoice](../invoices/create-invoice.md)** — View outstanding client invoices settled by this payment.
+- **[Add Voucher](../vouchers/add-voucher.md)** — Record purchase vouchers settled via vendor payouts.
+- **[Generate Salary](../../04-employee/salary/generate-salary.md)** — Track collector commissions per employee.
 
 ______________________________________________________________________
 

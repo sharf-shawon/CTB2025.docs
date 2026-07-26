@@ -63,10 +63,6 @@ ______________________________________________________________________
 | **500**    | 500 Internal Server Error | Unhandled server application exception, database timeout, or invalid form processing logic. | Shows generic error message; transaction rolls back safely.                  |
 | **503**    | Maintenance Mode          | System administrator enabled Maintenance Mode in **App Settings** for updates.              | Replaces app interface with temporary maintenance banner for non-superusers. |
 
-<!-- TODO: screenshot error-403-screen.png -->
-
-<!-- TODO: screenshot error-500-screen.png -->
-
 ______________________________________________________________________
 
 ## Exception handling and error recovery

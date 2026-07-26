@@ -8,8 +8,6 @@ tags: [module:reports, task:report, role:accountant]
 
 The Monthly Attendance Report shows a day-by-day attendance grid for all employees for a selected month, plus per-employee summary columns for presence, lateness, overtime and other tallies. Use it to audit staff presence, export a printable report, and feed payroll calculations.
 
-<!-- TODO: screenshot docs/user-guide/screenshots/reports/attendance-report.png -->
-
 ______________________________________________________________________
 
 ## When to use this page

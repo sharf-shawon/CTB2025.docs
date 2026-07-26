@@ -91,8 +91,8 @@ ______________________________________________________________________
 
 ## Related workflows & next steps
 
-- **Record Payout** — Process net salary payment transfer.
-- **Attendance Report** — Audit monthly attendance units before salary generation.
+- **[Record Attendance](../attendance/record-attendance.md)** — Audit monthly attendance units before salary generation.
+- **[Add Payment](../../03-trade/payments/add-payment.md)** — Process net salary payment transfer.
 - **Salary History** — Inspect historical payroll changes.
 
 ______________________________________________________________________

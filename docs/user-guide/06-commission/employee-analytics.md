@@ -57,8 +57,6 @@ ______________________________________________________________________
 - **Is Eligible** — Indicates whether the record meets commission eligibility rules.
 - **Status** — Processing state of the analytics record, such as `Calculated`, `Pending`, `Approved`, or `Paid`.
 
-<!-- TODO: screenshot docs/user-guide/06-commission/employee-analytics-list-page.png -->
-
 ______________________________________________________________________
 
 ## Add employee analytics manually

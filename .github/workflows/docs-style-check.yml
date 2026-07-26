@@ -1,6 +1,8 @@
 name: Docs Style Check
 
 on:
+  push:
+    branches: [main]
   pull_request:
     paths:
       - 'docs/**/*.md'

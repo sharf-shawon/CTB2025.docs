@@ -8,8 +8,6 @@ tags: [module:reports, task:report, role:accountant]
 
 The Product Return Report lists product returns within a selected date range, showing return date, product, quantity, rate, total, client, returned-by user and originating invoice. Return amounts are applied to the client balance so the client's payable/credit is adjusted when a return is processed.
 
-<!-- TODO: screenshot docs/user-guide/screenshots/reports/product-return-report.png -->
-
 ______________________________________________________________________
 
 ## When to use this page
