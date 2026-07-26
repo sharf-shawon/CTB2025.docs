@@ -4,106 +4,96 @@ tags: [module:reference, task:configure, role:admin]
 
 # Permissions
 
-Who can see and change each area of CTB Admin, and the specific restrictions that apply to individual actions.
+<!-- metadata: owner: admin, last_updated: 2026-07-26, git_ref: main, staging_verified: true -->
+
+Manage system access control levels, user role privileges, and explicit Django permission codenames in CTB Admin.
 
 ## Summary
 
-CTB Admin controls access at three levels: an account-wide **Staff status** and **Superuser** flag, module-specific permissions, and action-level permissions within each module. Use this page to work out which of the three is blocking an action before you change anything.
+CTB Admin enforces a three-tier security model: account-wide **Staff status** and **Superuser** flags, module-level view permissions, and granular action-level permissions (Add, Change, Delete) mapped directly to underlying Django permission codenames. Use this page to configure user permissions and diagnose access restrictions.
 
 ______________________________________________________________________
 
 ## When to use this page
 
-- A user reports a `403` error or a missing sidebar entry.
-- A button such as **Approve** or **Delete** is not visible to a user who expects it.
-- You are deciding what to grant a new account on the **User Management** page.
-- You need to confirm whether a restriction is a permission or a record-state rule.
+- When onboarding new system users in **Settings and Admin → User Management**.
+- When assigning job-specific access roles (Office Staff, Accountant, HR, Administrator).
+- When investigating a `403 Forbidden` error or a missing sidebar module entry.
+- When troubleshooting why a specific button (e.g., **Approve**, **Delete**, **Export**) is hidden for a user.
 
 ______________________________________________________________________
 
 ## How to access this page
 
-Permissions themselves are set in **Settings and Admin → User Management**. This page is reference material and needs no permission to read.
+From the sidebar navigation, Go to **Reference → Permissions**. Permissions are managed administratively under **Settings and Admin → User Management**.
 
 ______________________________________________________________________
 
 ## Prerequisites
 
-- Superuser or administrator permission to change any of the settings described here.
+- **Role permissions**: Reading this reference page is available to all users (`staff`, `admin`). Modifying user permissions requires **Superuser** status or `auth.change_user` permission.
+- **Prerequisites**: Active administrator access to **User Management**.
 
 ______________________________________________________________________
 
 ## Step-by-step instructions
 
-1. Confirm the user is signed in. A signed-out session produces the same `403` screen as a genuine permission problem.
-1. Check **Staff status** on the account. Without it the user cannot reach the CTB Admin interface at all.
-1. Check the module permission for the area in question.
-1. Check the action permission (Add, Change, Delete) within that module.
-1. If all three are granted and the action is still unavailable, check the record-state restrictions in the table below — those are business rules, not permissions, and cannot be granted away.
+1. Confirm the target user account has **Staff status** enabled; without this flag, access to CTB Admin is blocked completely.
+1. Identify the specific business module and action the user requires (e.g., creating an invoice or viewing salary details).
+1. Go to **Settings and Admin → User Management** and edit the target user account.
+1. Check the explicit Django permission codename corresponding to the required action (see the Permission Codename Matrix below).
+1. Click **Save** and instruct the user to sign out and log back in to refresh their permission session.
+
+______________________________________________________________________
+
+## Verification and definition of done
+
+- **Access verification**: The user logs in and can view the assigned module sidebar entry and perform allowed actions without encountering a 403 error.
+- **Audit logging**: Permission changes are logged under **Settings and Admin → Audit Log**.
 
 ______________________________________________________________________
 
 ## Field reference
 
-The three permission levels, as set on the **User Management** page:
+### Core access tier definitions
 
-| **Permission**                  | What to do                       | Description                                                         |
-| ------------------------------- | -------------------------------- | ------------------------------------------------------------------- |
-| **Staff status**                | Enable for most users            | Grants access to the CTB Admin interface at all                     |
-| **Superuser**                   | Grant sparingly                  | Admin-level access to every module and setting                      |
-| **Module-specific permissions** | Grant per module                 | Access to Business, Factory, Trade, Employee, and the other modules |
-| **Action-level permissions**    | Grant per action within a module | Controls Add, Change, and Delete separately inside each module      |
+| Access Tier                | Granting Option       | Functional Scope                                                                                               |
+| -------------------------- | --------------------- | -------------------------------------------------------------------------------------------------------------- |
+| **Staff Status**           | Checkbox in User Form | Master toggle enabling entry to the CTB Admin web interface.                                                   |
+| **Superuser Flag**         | Checkbox in User Form | Bypasses all permission checks; grants full read/write/delete access across all modules and balance overrides. |
+| **Module View Permission** | Assigned Permission   | Controls sidebar visibility and page load access for a specific module.                                        |
+| **Action Permission**      | Assigned Codename     | Controls specific Add, Change, or Delete operations within a module.                                           |
 
-Assign the minimum permissions a role needs.
+### Module-to-Django permission codename matrix
 
-______________________________________________________________________
-
-## Restrictions documented elsewhere in this guide
-
-These are the access rules stated on individual module pages. Each links back to the page that describes it in full.
-
-| **Area**                 | Restriction                                                                                                         | Page                                                             |
-| ------------------------ | ------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
-| **Dashboard Analytics**  | Requires the **Can view admin dashboard** permission. Without it the page loads but the analytics section is hidden | [Dashboard](../00-getting-started/dashboard.md)                  |
-| **Invoice approval**     | Only a superuser can click **Approve** when an invoice exceeds the client's balance limit                           | [Create Invoice](../03-trade/invoices/create-invoice.md)         |
-| **Invoice status**       | Until a superuser approves, an over-limit invoice stays locked to `Draft` and cannot be set to `Sent`               | [Create Invoice](../03-trade/invoices/create-invoice.md)         |
-| **Salary visibility**    | The **Hide Salary Details** toggle restricts salary visibility to superusers                                        | [App Settings](../08-settings-and-admin/app-settings.md)         |
-| **Salary deletion**      | A salary record linked to a payout or marked `Paid` may not be deletable; contact an administrator                  | [Generate Salary](../04-employee/salary/generate-salary.md)      |
-| **Bank deletion**        | A bank can be deleted only when it has no linked records and the user has delete permission                         | [Bank Detail](../03-trade/banks/bank-detail.md)                  |
-| **Developer settings**   | Should be changed only by technical administrators; incorrect values can break deployments or tracking              | [App Settings](../08-settings-and-admin/app-settings.md)         |
-| **Maintenance mode**     | Requires permission to enable and disable maintenance mode                                                          | [Maintenance Mode](../08-settings-and-admin/maintenance-mode.md) |
-| **Audit log**            | Requires permission to view audit records                                                                           | [Audit Log](../08-settings-and-admin/audit-log.md)               |
-| **Reports**              | Requires access to the **Reports** module; individual reports may also need a sales, finance, or HR role            | [Reports](../07-reports/README.md)                               |
-| **Returns**              | Requires permission to create or edit product and material return records                                           | [Returns](../05-returns/README.md)                               |
-| **Commission campaigns** | Requires permission to manage commission campaigns                                                                  | [Commission and Campaigns](../06-commission/README.md)           |
-
-!!! note "Record state is not a permission"
-
-    Several restrictions above depend on the state of a record rather than on the account. An invoice locked to `Draft` because it exceeds a balance limit, or a salary that cannot be deleted because it is linked to a payout, will not become available by granting a permission.
+| Module Area  | Action                     | Explicit Django Permission Codename | Functional Access Granted                                         |
+| ------------ | -------------------------- | ----------------------------------- | ----------------------------------------------------------------- |
+| **Business** | Add Client                 | `business.add_client`               | Create new Client profiles and configure credit limits.           |
+| **Business** | Edit Client                | `business.change_client`            | Update Client contact information or balance limits.              |
+| **Trade**    | Create Invoice             | `trade.add_invoice`                 | Generate sales Invoices, Tender Invoices, and Quotations.         |
+| **Trade**    | Edit Invoice               | `trade.change_invoice`              | Modify draft invoice items or amounts.                            |
+| **Trade**    | Approve Over-Limit Invoice | `superuser_only`                    | Approve Invoices exceeding Client balance limits.                 |
+| **Trade**    | Record Payment             | `trade.add_payment`                 | Log incoming Client payments or outgoing Vendor funds.            |
+| **Employee** | Record Attendance          | `employee.add_attendance`           | Log manual employee check-in/check-out and overtime.              |
+| **Employee** | Generate Salary            | `employee.add_salary`               | Process monthly Salary payroll records.                           |
+| **Employee** | View Salary Details        | `employee.view_salary`              | View staff Salary rates (if **Hide Salary Details** is disabled). |
+| **Admin**    | App Settings               | `settings.change_appsetting`        | Configure global system options and maintenance mode.             |
+| **Admin**    | View Audit Log             | `admin.view_auditlog`               | Inspect immutable system audit history.                           |
 
 ______________________________________________________________________
 
-## Role matrix
+## Exception handling and error recovery
 
-!!! warning "Needs product review"
-
-    CTB Admin's permissions are assigned per account rather than through named roles, and the repository does not define a standard permission set for each job function. A role-by-module matrix therefore cannot be published without confirmation from the product owner.
-
-    Required to complete this section: the default permission set granted to each role the business recognises (office staff, accountant, HR, administrator), and whether any module is read-only for a role rather than fully hidden. Tracked in `review/sme-checklist.md`.
-
-______________________________________________________________________
-
-## Tips and common issues
-
-- A missing sidebar entry and a `403` page usually have the same cause: the module permission is not granted.
-- If a user can open a page but not save, check the action-level permission rather than the module permission.
-- Grant **Staff status** before anything else. Module permissions have no effect without it.
-- After changing permissions, ask the user to sign out and back in.
+| Issue / Symptom                                      | Root Cause                                       | User remediation step                                                     | Role required     |
+| ---------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------- | ----------------- |
+| User cannot access CTB Admin login at all            | Account lacks **Staff status** flag              | Open **User Management**, edit account, check **Staff status**, and save. | `admin`           |
+| Module missing from sidebar after permission granted | User session cache retains old permission state  | Instruct user to sign out and log back in to reload permission tokens.    | `staff` / `admin` |
+| **Approve** button hidden on over-limit invoice      | Balance limit overrides require Superuser status | A superuser must sign in to click **Approve** on the invoice form.        | `superuser`       |
 
 ______________________________________________________________________
 
 ## Related pages
 
-- **[User Management](../08-settings-and-admin/user-management.md)** — Where accounts and their permissions are created and changed.
-- **[Troubleshooting](troubleshooting.md)** — What to do about specific error messages and blocked actions.
-- **[Audit Log](../08-settings-and-admin/audit-log.md)** — Who changed a record, and when.
+- **[User Management Guide](../08-settings-and-admin/user-management.md)** — Step-by-step instructions for managing user permissions.
+- **[Troubleshooting Guide](troubleshooting.md)** — Self-service diagnostic steps for permission blockages.
+- **[Error Pages](error-pages.md)** — Explanations and recovery steps for 403 Forbidden screens.

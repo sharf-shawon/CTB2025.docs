@@ -4,75 +4,80 @@ tags: [module:reference, task:troubleshoot, role:staff]
 
 # Offline Mode
 
+<!-- metadata: owner: staff, last_updated: 2026-07-26, git_ref: main, staging_verified: true -->
+
+Learn how CTB Admin handles network disconnections and Service Worker caching.
+
 ## Summary
 
-CTB Admin documentation uses a service worker to cache pages and shared assets as you browse. When your connection drops, the site will try to serve the last cached version of the page first.
+CTB Admin documentation uses an automated Progressive Web App (PWA) Service Worker to cache visited documentation pages, stylesheets, scripts, and graphics locally in your browser. When network connectivity drops, users can continue reading previously cached documentation pages offline.
 
 ______________________________________________________________________
 
 ## When to use this page
 
-- When you need to work with offline mode in CTB Admin.
+- When working in low-connectivity factory or warehouse environments.
+- When an offline fallback page appears while browsing documentation.
+- When understanding what content remains available during network outages.
+- When troubleshooting outdated or stale cached documentation assets after a deployment.
 
 ______________________________________________________________________
 
 ## How to access this page
 
-From the sidebar, go to **Reference**, then open **Offline Mode**.
+From the sidebar navigation, Go to **Reference → Offline Mode**. The direct URL path is `/user-guide/09-reference/offline-mode/`.
 
 ______________________________________________________________________
 
-## How offline mode works
+## Prerequisites
 
-- Visited pages are saved locally in your browser cache.
-- Shared assets such as styles and scripts are cached as they are requested.
-- If a page is already cached, you can open it again even when the network is unavailable.
-- If a page is not yet cached, the site falls back to a dedicated offline shell first, then to this page when available.
-
-![Offline mode fallback page](offline-mode-photo.png)
-
-______________________________________________________________________
-
-## What to do when you are offline
-
-1. Refresh the page if you think the connection has recovered.
-1. Open a page you have already visited to load the cached copy.
-1. Reconnect to the network and revisit any page that did not load from cache.
-
-______________________________________________________________________
-
-## What users should expect
-
-- Already visited pages may still open even when the connection is weak.
-- The first visit to a page may still need a working connection.
-- Some images and assets may take longer to appear after a reconnect.
+- **Role permissions**: Accessible by all authenticated user roles (`staff`, `accountant`, `hr`, `admin`).
+- **Prerequisites**: A modern web browser supporting Service Workers (Chrome, Firefox, Edge, Safari).
 
 ______________________________________________________________________
 
 ## Step-by-step instructions
 
-1. Refresh the page if you think the connection has recovered.
-1. Open a page you have already visited to load the cached copy.
-1. Reconnect to the network and revisit any page that did not load from cache.
-1. Clear the browser cache if a page or image still looks out of date.
+1. Browse CTB Admin documentation while connected to the internet to prime your browser cache.
+1. If your internet connection drops, continue navigating visited pages normally.
+1. If you attempt to open an unvisited page while offline, review the **Offline Fallback Page**.
+1. Once network connectivity is restored, click **Refresh** to sync the latest content updates.
+
+______________________________________________________________________
+
+## Verification and definition of done
+
+- **Cache verification**: Visited documentation pages load without internet access.
+- **Service Worker active**: Browser developer tools confirm `sw-register.js` is active and controlling document caching.
 
 ______________________________________________________________________
 
 ## Field reference
 
-Not applicable. This page describes browser and cache behaviour rather than a form.
+### Offline functionality matrix
+
+| Capability / Feature              | Online State    | Offline State    | Behavior Description                                                  |
+| --------------------------------- | --------------- | ---------------- | --------------------------------------------------------------------- |
+| **Visited Documentation Pages**   | Full Access     | Full Access      | Served directly from local browser Cache Storage.                     |
+| **Unvisited Documentation Pages** | Full Access     | Offline Fallback | Displays offline notice shell guiding user to reconnect.              |
+| **Global Site Search**            | Full Access     | Partial Access   | Searches across locally cached page titles and text.                  |
+| **CTB Admin Application Forms**   | Live Read/Write | Blocked          | Data entry forms require an active server connection to save records. |
+
+![Offline mode fallback page](offline-mode-photo.png)
 
 ______________________________________________________________________
 
-## Tips and common issues
+## Exception handling and error recovery
 
-- Refresh once after reconnecting instead of repeatedly reloading the page.
-- If an image or page looks stale, clear the browser cache and try again.
-- Tell users to revisit the site while online after a deployment so the cache can update.
+| Issue / Symptom                                  | Root Cause                                                     | User remediation step                                                                                                                    | Role required     |
+| ------------------------------------------------ | -------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
+| Page displays outdated content after site update | Browser cache is retaining old Service Worker asset bundle     | 1. Reconnect to internet.<br>2. Perform hard refresh (**Ctrl+F5** or **Cmd+Shift+R**).<br>3. Clear browser site cache if issue persists. | `staff`           |
+| Unvisited page fails to load offline             | Page HTML was not cached prior to network loss                 | Reconnect to internet and click the link to cache the page for offline availability.                                                     | `staff`           |
+| Service Worker fails to register                 | Browser privacy settings block local storage / Service Workers | Enable local site storage and Service Workers in browser settings.                                                                       | `staff` / `admin` |
 
 ______________________________________________________________________
 
 ## Related pages
 
-- [Error Pages](error-pages.md)
-- [Troubleshooting](troubleshooting.md)
+- **[Error Pages](error-pages.md)** — Diagnostics for 403, 404, 500, and Maintenance errors.
+- **[Troubleshooting Guide](troubleshooting.md)** — Step-by-step solutions for connectivity and browser caching issues.

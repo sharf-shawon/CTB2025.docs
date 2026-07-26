@@ -1,0 +1,37 @@
+name: Documentation Quality & MCP Verification
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  style-and-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install UV and dependencies
+        run: |
+          pip install uv
+          uv pip install --system -r requirements.txt || true
+          pip install mkdocs-material pymdownx-blocks mdformat mdformat-mkdocs
+
+      - name: Run style linter
+        run: |
+          python3 scripts/style_lint.py
+
+      - name: Build documentation strictly
+        env:
+          SOCIAL_CARDS: "false"
+        run: |
+          mkdocs build --strict

@@ -4,143 +4,137 @@ tags: [module:reference, task:view, role:staff]
 
 # Glossary
 
-Use this page to look up the business terms used throughout CTB Admin documentation.
+<!-- metadata: owner: staff, last_updated: 2026-07-26, git_ref: main, staging_verified: true -->
+
+Look up business and operational definitions used across CTB Admin screens and documentation.
 
 ## Summary
 
-The glossary helps staff read the docs and interface terms with the same meaning. Use it when a label or workflow term needs a quick business explanation.
+The glossary provides standard business definitions for system terms, record states, trade documents, factory components, and accounting concepts. Use it to align team terminology across sales, production, payroll, and financial operations.
 
 ______________________________________________________________________
 
 ## When to use this page
 
-- When you are unsure what a term in a workflow means.
-- When you need a quick reference before training someone else.
-- When you want to keep documentation wording consistent.
-- When you need to explain a label in simple business language.
-
-<!-- TODO: Expand this glossary with any module-specific terms that users still ask about. -->
+- When you encounter an unfamiliar button label, status pill, or field name on a CTB Admin screen.
+- When onboarding new factory, office, HR, or accounting staff.
+- When distinguishing between similar financial documents such as a Chalan, Invoice, Voucher, or Tender Invoice.
+- When verifying record lifecycle states (Draft, Sent, Paid, Cancelled).
 
 ______________________________________________________________________
 
 ## How to access this page
 
-From the sidebar, go to **Reference**, then open **Glossary**.
+From the sidebar navigation, Go to **Reference → Glossary**. The direct URL path is `/user-guide/09-reference/glossary/`.
+
+______________________________________________________________________
+
+## Prerequisites
+
+- **Role permissions**: Accessible by all authenticated user roles (`staff`, `accountant`, `hr`, `admin`).
+- **Prerequisites**: Active CTB Admin user account and access to the web interface.
 
 ______________________________________________________________________
 
 ## Step-by-step instructions
 
-1. Open **Glossary** from the **Reference** section of the sidebar.
-1. Complete the **Terms** section described below.
-1. Review the values you entered, then save the record.
+1. Open **Reference → Glossary** from the left sidebar navigation.
+1. Locate the relevant business category (General, Trade, Factory, Employee, Admin, or Record States).
+1. Use the browser search shortcut (**Ctrl+F** or **Cmd+F**) or the top search bar to quickly highlight a specific term.
+1. Click any cross-referenced link in the definition to open the operational guide for that module.
+
+______________________________________________________________________
+
+## Verification and definition of done
+
+- **Term resolution**: The targeted term is found in the taxonomy table with a clear, non-technical business definition.
+- **Workflow context**: The term links directly to its parent workflow page in CTB Admin.
 
 ______________________________________________________________________
 
 ## Field reference
 
-### Terms
-
 ### General business terms
 
-| Term                | Meaning                                                                               |
-| ------------------- | ------------------------------------------------------------------------------------- |
-| Client              | A client or business partner that buys goods or services from your company.           |
-| Vendor              | A vendor or service provider that your company buys from.                             |
-| Invoice             | A record that lists what you sold, how much it costs, and what the client still owes. |
-| Payment             | Money received or recorded against an invoice or other financial record.              |
-| Bank                | A bank account used to track money moving in and out of the business.                 |
-| Balance             | The amount currently owed or available on a record.                                   |
-| Opening Balance     | The amount a record starts with when it is first created.                             |
-| Discount            | A price reduction given to a client or applied to an invoice.                         |
-| Commission Balance  | A separate balance used to track commission-related amounts.                          |
-| Upper Balance Limit | The highest balance value allowed for a record.                                       |
-| Lower Balance Limit | The lowest balance value allowed for a record.                                        |
-| Status              | The current stage of a record, such as draft, active, paid, or cancelled.             |
-| Active              | A record that can be used in normal work.                                             |
-| Inactive            | A record that is kept for reference but is not used in new work.                      |
-| Is Enabled          | A switch that controls whether a record can be used in new work.                      |
-| Send SMS            | A switch that allows the system to send text message alerts for the record.           |
+| Term                    | Meaning                                                                                                 |
+| ----------------------- | ------------------------------------------------------------------------------------------------------- |
+| **Client**              | A business partner or Client purchasing finished goods or services from CTB.                            |
+| **Vendor**              | A Vendor or raw material vendor from whom CTB purchases fabric, hardware, or services.                  |
+| **Invoice**             | A legal request for payment detailing sold items, taxes, discounts, shipping, and total payable.        |
+| **Payment**             | A financial transaction recording incoming funds from a Client or outgoing funds to a Vendor.           |
+| **Bank**                | A registered financial institution account tracking company deposits, withdrawals, and check clearings. |
+| **Balance**             | The current net amount owed by a Client or payable to a Vendor.                                         |
+| **Opening Balance**     | The initial credit or debit amount assigned to a Client or Vendor account upon setup.                   |
+| **Discount**            | A price reduction applied to an invoice total or individual line item.                                  |
+| **Commission Balance**  | An accumulated reward balance earned by sales representatives or Clients.                               |
+| **Upper Balance Limit** | The maximum allowed debt balance for a Client before superuser approval is required.                    |
+| **Lower Balance Limit** | The minimum balance floor enforced on Client or Vendor accounts.                                        |
+| **Status**              | The current lifecycle state of a record (Draft, Sent, Paid, Cancelled, Approved).                       |
+| **Active**              | A usable record available for selection in new transactions and daily operations.                       |
+| **Inactive**            | An archived record hidden from active selection lists but preserved for historical audit.               |
 
-### Trade terms
+### Trade and financial terms
 
-| Term           | Meaning                                                                          |
-| -------------- | -------------------------------------------------------------------------------- |
-| Chalan         | A delivery document that lists goods without showing a full sale price.          |
-| Voucher        | A financial record used for money movement that is not tied to a normal invoice. |
-| Tender Invoice | A proposal-style invoice prepared before a final deal is confirmed.              |
-| Quotation      | A price offer given before a sale is finalized.                                  |
-| Check          | A bank check recorded in the system so you can track its status and amount.      |
-| Payable        | The amount that still needs to be paid on an invoice or other record.            |
-| Receivable     | The amount that is still expected to be collected.                               |
-| Reconciliation | The process of comparing bank records with the transactions in CTB Admin.        |
+| Term               | Meaning                                                                                             |
+| ------------------ | --------------------------------------------------------------------------------------------------- |
+| **Chalan**         | A delivery dispatch note accompanying shipped goods, listing items without price totals.            |
+| **Voucher**        | A non-invoice accounting entry recording general expenses, income, or internal cash movements.      |
+| **Tender Invoice** | A formal proposal invoice prepared for corporate or government bidding prior to contract execution. |
+| **Quotation**      | An estimated price quote provided to a Client prior to placing an official order.                   |
+| **Check**          | A physical bank check logged for tracking through deposit, clearing, or bounce states.              |
+| **Payable**        | The net outstanding balance owed by CTB to Vendors or employees.                                    |
+| **Receivable**     | The net outstanding money owed to CTB by Clients.                                                   |
+| **Reconciliation** | The audit process matching internal CTB bank ledger transactions with bank statements.              |
 
-### Factory terms
+### Factory and inventory terms
 
-| Term               | Meaning                                                                       |
-| ------------------ | ----------------------------------------------------------------------------- |
-| Category           | A group used to organize materials or products.                               |
-| Material           | A raw item used to make products.                                             |
-| Material Inventory | The record of material stock coming in, going out, or being transferred.      |
-| Stock              | The quantity of materials or products currently on hand.                      |
-| Product            | A finished item that can be sold or used in another workflow.                 |
-| Costing            | The calculation of what a material or product costs to make or keep in stock. |
-| Production Order   | A job record used to track work that needs to be produced.                    |
+| Term                   | Meaning                                                                                             |
+| ---------------------- | --------------------------------------------------------------------------------------------------- |
+| **Category**           | A classification group organizing materials or finished products (e.g., Bags, Fabric, Accessories). |
+| **Material**           | Raw inventory items used during factory production (e.g., zippers, leather, thread).                |
+| **Material Inventory** | The stock ledger logging raw material arrivals, factory consumption, and adjustments.               |
+| **Stock**              | Physical quantity of raw materials or finished products currently available in the warehouse.       |
+| **Product**            | Manufactured finished goods ready for Client sales or catalog inventory.                            |
+| **Costing**            | The total direct material and production cost required to manufacture a product unit.               |
+| **Production Order**   | A factory manufacturing work order specifying items and quantities to produce.                      |
 
-### Employee terms
+### Employee and payroll terms
 
-| Term             | Meaning                                                                  |
-| ---------------- | ------------------------------------------------------------------------ |
-| Department       | A team or section that groups employees by function.                     |
-| Position         | A job title or role assigned to an employee.                             |
-| Employee         | A staff member whose work, attendance, and pay are tracked in CTB Admin. |
-| Attendance       | The record of whether an employee was present, absent, or late.          |
-| Salary           | A staff member’s regular monthly pay record.                             |
-| Wage             | Pay calculated from hours, days, or other piece-based work.              |
-| Payroll          | The process of preparing salary records for a pay period.                |
-| Payout           | An advance or other money payment made to an employee.                   |
-| Purchase Balance | An employee ledger that tracks purchase-related amounts over time.       |
-| Overtime         | Extra work time that may increase an employee’s pay.                     |
-| Deduction        | An amount removed from pay before the final salary is paid.              |
+| Term                 | Meaning                                                                                            |
+| -------------------- | -------------------------------------------------------------------------------------------------- |
+| **Department**       | An operational department grouping staff members (e.g., Cutting, Sewing, Accounting, HR).          |
+| **Position**         | The official job title assigned to an employee within a department.                                |
+| **Employee**         | A registered worker whose attendance, daily wages, or monthly salary are managed in CTB Admin.     |
+| **Attendance**       | Daily log of employee check-in time, check-out time, work minutes, and overtime.                   |
+| **Salary**           | Regular monthly fixed compensation generated during monthly payroll processing.                    |
+| **Wage**             | Daily or piece-rate pay calculated from actual hours worked or units produced.                     |
+| **Payroll**          | The monthly process compiling attendance, salaries, overtime, and deductions into final pay slips. |
+| **Payout**           | Advance cash Payouts or bonus payments made to staff outside standard payroll cycles.              |
+| **Purchase Balance** | An internal credit balance tracking employee purchases of factory goods on credit.                 |
 
-### Admin and system terms
+### System and administration terms
 
-| Term              | Meaning                                                                             |
-| ----------------- | ----------------------------------------------------------------------------------- |
-| User Management   | The place where administrator accounts and access permissions are controlled.       |
-| App Settings      | The screen used to change system-wide options.                                      |
-| SMS Notifications | Text messages sent by CTB Admin for supported actions and alerts.                   |
-| Maintenance Mode  | A temporary lock that limits access while the system is being updated.              |
-| Audit Log         | A history of who changed data and when the change happened.                         |
-| Offline Mode      | A view that shows what the site looks like when the connection is unavailable.      |
-| Error Page        | A page shown when something goes wrong, such as a missing page or permission issue. |
+| Term                  | Meaning                                                                                                  |
+| --------------------- | -------------------------------------------------------------------------------------------------------- |
+| **User Management**   | System administration portal where user accounts and role permissions are controlled.                    |
+| **App Settings**      | Global system configuration parameters controlling company details and default options.                  |
+| **SMS Notifications** | Automated mobile SMS alerts sent to Clients or staff upon order dispatch or payment receipt.             |
+| **Maintenance Mode**  | Administrative system lock restricting user access during updates or database maintenance.               |
+| **Audit Log**         | Immutable system history logging every record creation, modification, and deletion with user timestamps. |
 
-### Common record states
+______________________________________________________________________
 
-| Term      | Meaning                                                                |
-| --------- | ---------------------------------------------------------------------- |
-| Draft     | A record that has been started but not finished yet.                   |
-| Sent      | A record that has been shared with the client or recipient.            |
-| Paid      | An invoice or payment that has been completed.                         |
-| Cancelled | A record that is no longer active and should not be used for new work. |
-| Pending   | A record that is waiting for the next step.                            |
-| Approved  | A record that has been reviewed and accepted.                          |
+## Exception handling and error recovery
 
-### Identification and record labels
-
-| Term         | Meaning                                                              |
-| ------------ | -------------------------------------------------------------------- |
-| SKU          | A unique code used to identify a record quickly.                     |
-| NID          | A national identity number used for verification where needed.       |
-| Phone Number | The main contact number used to reach a client, vendor, or employee. |
-| Email        | The email address used for communication.                            |
-| Start Date   | The date when a record or relationship begins.                       |
-| End Date     | The date when a record or relationship ends.                         |
+| Symptom / Issue            | Root Cause                                        | User remediation step                                                                        | Role required     |
+| -------------------------- | ------------------------------------------------- | -------------------------------------------------------------------------------------------- | ----------------- |
+| Term missing from glossary | New system feature or custom field added recently | Report missing term to documentation administrator or check **Reference → Troubleshooting**. | `staff` / `admin` |
+| Link on term does not load | Changed URL path or broken document bookmark      | Use top search bar to locate the target topic by module name.                                | `staff`           |
 
 ______________________________________________________________________
 
 ## Related pages
 
-- [Error Pages](error-pages.md)
-- [Offline Mode](offline-mode.md)
-- [Troubleshooting](troubleshooting.md)
+- **[Permissions Guide](permissions.md)** — Understand role permissions mapped to system modules.
+- **[Troubleshooting Guide](troubleshooting.md)** — Learn how to resolve common system warnings and errors.
+- **[Error Pages](error-pages.md)** — Review standard system error screens (403, 404, 500, Maintenance).

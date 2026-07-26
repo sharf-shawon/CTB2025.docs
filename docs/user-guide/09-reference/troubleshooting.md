@@ -4,126 +4,87 @@ tags: [module:reference, task:troubleshoot, role:staff]
 
 # Troubleshooting
 
-Common problems in CTB Admin, what causes them, and what to do about each.
+<!-- metadata: owner: staff, last_updated: 2026-07-26, git_ref: main, staging_verified: true -->
+
+Diagnose and resolve common operational warnings, form submission errors, calculation discrepancies, and system issues in CTB Admin.
 
 ## Summary
 
-Use this page when something does not work as expected: an error screen, a button that is not there, a total that does not update, or a page that will not load. Each entry links to the module page that covers the feature in full.
+Use this troubleshooting guide when encountering an unexpected system response, missing screen element, failed record save, or calculation issue. Each section provides immediate diagnostic checks and direct links to full feature documentation.
 
 ______________________________________________________________________
 
 ## When to use this page
 
-- You see an error code or an unexpected screen.
-- A button or section you expect is missing.
-- A record will not save, or a calculated value looks wrong.
-- The site is slow, stale, or unavailable.
+- When an error screen (403, 404, 500, Maintenance) appears.
+- When an expected button (e.g., **Approve**, **Delete**, **Save**) is disabled or missing.
+- When a record fails to save or highlights validation warnings.
+- When report totals, invoice balances, or net salary figures do not update as expected.
+- When site performance feels slow or cached pages appear out of date.
 
 ______________________________________________________________________
 
 ## How to access this page
 
-From the sidebar, go to **Reference → Troubleshooting**. You can also reach it from the search box on any page.
+From the sidebar navigation, Go to **Reference → Troubleshooting**. Direct access URL: `/user-guide/09-reference/troubleshooting/`.
+
+______________________________________________________________________
+
+## Prerequisites
+
+- **Role permissions**: Accessible by all authenticated user roles (`staff`, `accountant`, `hr`, `admin`).
+- **Prerequisites**: Access to CTB Admin interface and error details/symptoms.
 
 ______________________________________________________________________
 
 ## Step-by-step instructions
 
-1. Find the closest match to your symptom in the sections below.
-1. Apply the suggested check.
-1. If the entry links to a module page, open it for the full description of the feature.
-1. If nothing here matches, note the exact error text and the record you were working on, then contact your administrator.
+1. Identify the symptom category below (Error screens, Missing UI elements, Record save failures, Calculation issues, or Performance).
+1. Match your specific issue against the diagnostic resolution matrix.
+1. Perform the recommended remediation step.
+1. If the problem persists, capture the exact error message, URL bar text, and user ID before contacting support.
+
+______________________________________________________________________
+
+## Verification and definition of done
+
+- **Issue resolution**: The user successfully completes the blocked operation or resolves the calculation/system warning.
+- **Audit trace**: Complex data changes or administrative overrides can be verified in **Settings and Admin → Audit Log**.
 
 ______________________________________________________________________
 
 ## Field reference
 
-Not applicable. This page describes symptoms rather than a screen.
+### Master operational troubleshooting matrix
+
+| Problem Category      | Symptom                               | Likely Root Cause                                                        | Step-by-step resolution                                                                 |
+| --------------------- | ------------------------------------- | ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------- |
+| **Error Screen**      | `403 Forbidden` screen appears        | Missing Django permission codename or session expired                    | Confirm session login, then request missing permission codename in **User Management**. |
+| **Error Screen**      | `404 Not Found` screen appears        | Broken link or deleted database record                                   | Verify URL record ID or search for record in module overview list.                      |
+| **Error Screen**      | `500 Server Error` screen appears     | Unhandled server exception or invalid data payload                       | Refresh browser once; check **Audit Log** before resubmitting.                          |
+| **Missing Button**    | **Approve** button missing on invoice | Invoice does not exceed Client balance limit, or user is not a superuser | Confirm invoice amount exceeds limit; sign in as superuser to approve.                  |
+| **Missing Button**    | Invoice locked in `Draft` state       | Exceeds Client balance limit and lacks superuser approval                | Have a superuser click **Approve** to unlock **Sent** status.                           |
+| **Missing Button**    | Salary figures hidden or masked       | **Hide Salary Details** setting enabled in App Settings                  | Admin must toggle setting off or user must sign in with superuser role.                 |
+| **Save Failure**      | "Required field missing" alert        | One or more mandatory fields (`*`) are empty                             | Complete all red-asterisk fields before clicking **Save**.                              |
+| **Save Failure**      | Invoice or Voucher fails to save      | Linked Client or Bank record is inactive or missing                      | Verify prerequisite Client/Bank account exists and is marked **Active**.                |
+| **Calculation Issue** | Invoice Payable total unchanged       | Tax, shipping, or discount field input not registered                    | Re-enter numerical values and tab out of input box to trigger calculation.              |
+| **Calculation Issue** | Dashboard metrics look out of date    | Dashboard metrics cache refreshes every 15 minutes                       | Click **Refresh** button on Dashboard header to force recalculation.                    |
 
 ______________________________________________________________________
 
-## Error screens
+## Exception handling and error recovery
 
-| **Error**       | What it means                               | What to do                                                              |
-| --------------- | ------------------------------------------- | ----------------------------------------------------------------------- |
-| **403**         | You do not have permission to view the page | Confirm you are signed in, then check your role or ask an administrator |
-| **404**         | The page or record could not be found       | Check the link, search again, or return to the module list              |
-| **500**         | The server encountered a problem            | Refresh the page, and report the issue if it continues                  |
-| **Maintenance** | The site is temporarily restricted          | Wait until maintenance is complete and try again                        |
-
-Check the exact error code before acting on it. A signed-out session produces the same `403` screen as a genuine permission problem, so confirm the user is logged in first.
-
-If a missing page relates to a record that was changed, the [Audit Log](../08-settings-and-admin/audit-log.md) shows who changed it and when.
-
-______________________________________________________________________
-
-## A button or section is missing
-
-| **Symptom**                                     | Likely cause                                                                              | Where to look                                                  |
-| ----------------------------------------------- | ----------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
-| **Dashboard Analytics** section is not shown    | The account lacks the **Can view admin dashboard** permission                             | [Permissions](permissions.md)                                  |
-| **Approve** button is not visible on an invoice | The button appears only to superusers, and only when the invoice exceeds the client limit | [Create Invoice](../03-trade/invoices/create-invoice.md)       |
-| Invoice status will not change from `Draft`     | The invoice exceeds the client's balance limit and needs superuser approval first         | [Create Invoice](../03-trade/invoices/create-invoice.md)       |
-| Salary figures are hidden                       | **Hide Salary Details** restricts salary visibility to superusers                         | [App Settings](../08-settings-and-admin/app-settings.md)       |
-| **Delete** is unavailable on a record           | The record is linked to another record, or the account lacks delete permission            | [Permissions](permissions.md)                                  |
-| A whole module is missing from the sidebar      | The module permission is not granted for the account                                      | [User Management](../08-settings-and-admin/user-management.md) |
-
-______________________________________________________________________
-
-## A record will not save
-
-- Fields marked with a red star are mandatory. The form will not save until each is filled.
-- A return record needs at least one returned item before it can be saved.
-- Check that a required linked record exists first: an invoice needs a client, a salary needs an employee, and a payment needs the invoice it applies to.
-- Save before leaving the page. Entered data is not kept when you move away without saving.
-
-______________________________________________________________________
-
-## A total or calculated value looks wrong
-
-- Calculated fields update when their inputs change. If a total has not moved, re-enter the quantity or rate that feeds it.
-- Net Salary recalculates from Salary, Salary Units, Overtime, Bonus, and Deductions. Changing any of them updates it.
-- Setting a salary to `0` applies the default rate from the employee's profile rather than paying zero.
-- Outstanding invoice figures reflect payments that have been posted. Re-check after recording a payment.
-- The Dashboard is cached for 15 minutes, so figures there can be up to 15 minutes behind. Use **Refresh** to force a recalculation.
-
-______________________________________________________________________
-
-## The site is stale, slow, or offline
-
-CTB Admin caches pages in your browser so previously visited pages keep working when the connection drops.
-
-- Refresh once after reconnecting rather than reloading repeatedly.
-- Open a page you have already visited to load the cached copy.
-- If an image or page looks out of date, clear the browser cache and try again.
-- The first visit to a page still needs a working connection.
-- After a deployment, visit the site once while online so the cache can update.
-
-See [Offline Mode](offline-mode.md) for the full description of what is cached and when.
-
-______________________________________________________________________
-
-## Search is not finding a record
-
-- Search by SKU where possible. It is the most precise match.
-- Check spelling and remove extra spaces.
-- Confirm your account has permission to view that record type. Records you cannot view do not appear in results.
-
-______________________________________________________________________
-
-## Tips and common issues
-
-- Note the exact error text before refreshing. It is the fastest way for an administrator to identify the cause.
-- After a permission change, sign out and back in before retesting.
-- Use shorter date ranges first when a report is slow to load.
-- Check the [Audit Log](../08-settings-and-admin/audit-log.md) when a record's values are not what you expect.
+| Issue / Symptom                         | Root Cause                                  | User remediation step                                                                       | Role required     |
+| --------------------------------------- | ------------------------------------------- | ------------------------------------------------------------------------------------------- | ----------------- |
+| Record values changed unexpectedly      | Another user modified or updated the record | Open **Settings and Admin → Audit Log** and filter by record SKU/ID to view change history. | `staff` / `admin` |
+| Form data lost during browser crash     | Unsaved form state in local memory          | Re-open form and re-enter data; save drafts frequently using **Save and continue editing**. | `staff`           |
+| Search bar fails to return known record | Record is inactive or user lacks permission | Toggle "Include Inactive" filter or confirm module permission in **User Management**.       | `staff` / `admin` |
 
 ______________________________________________________________________
 
 ## Related pages
 
-- **[Permissions](permissions.md)** — Which role can see and change each area.
-- **[Error Pages](error-pages.md)** — The error screens in detail.
-- **[Offline Mode](offline-mode.md)** — What works without a connection.
-- **[Glossary](glossary.md)** — Definitions of the terms used above.
-- **[Audit Log](../08-settings-and-admin/audit-log.md)** — History of changes to a record.
+- **[Permissions Guide](permissions.md)** — Detailed mapping of permissions, roles, and restrictions.
+- **[Error Pages](error-pages.md)** — Comprehensive coverage of HTTP error screens and server failures.
+- **[Offline Mode](offline-mode.md)** — PWA Service Worker caching and offline behavior guide.
+- **[Audit Log Guide](../08-settings-and-admin/audit-log.md)** — Detailed instructions for auditing data modifications.
