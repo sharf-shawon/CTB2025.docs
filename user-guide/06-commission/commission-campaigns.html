@@ -4308,6 +4308,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#verification-and-definition-of-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification and definition of done
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#field-reference" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -4316,13 +4327,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Field reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#campaign-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Campaign details
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#tips-and-common-issues" class="md-nav__link">
+  <a href="#exception-handling-and-error-recovery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tips and common issues
+        Exception handling and error recovery
       
     </span>
   </a>
@@ -5548,6 +5576,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#verification-and-definition-of-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification and definition of done
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#field-reference" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5556,13 +5595,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Field reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#campaign-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Campaign details
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#tips-and-common-issues" class="md-nav__link">
+  <a href="#exception-handling-and-error-recovery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tips and common issues
+        Exception handling and error recovery
       
     </span>
   </a>
@@ -5623,118 +5679,168 @@
 
 
 <h1 id="commission-campaigns">Commission Campaigns<a class="headerlink" href="#commission-campaigns" title="Permanent link">¶</a></h1>
+<!-- metadata: owner: sales_team, last_updated: 2026-07-26, git_ref: main, staging_verified: true -->
+
 <h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
-<p>Use this page to create and manage commission campaigns, including campaign dates, manager eligibility, employees, and product targets.</p>
+<p>Use this page to create and configure commission campaigns in CTB Admin. Campaigns define collection thresholds, manager override rates, target products, fixed unit commissions, and eligible sales employees.</p>
 <hr>
 <h2 id="when-to-use-this-page">When to use this page<a class="headerlink" href="#when-to-use-this-page" title="Permanent link">¶</a></h2>
 <ul>
-<li>When you need to start a new commission campaign.</li>
-<li>When you want to update campaign dates or eligibility rules.</li>
-<li>When you want to assign employees to a campaign.</li>
-<li>When you want to set product targets and fixed commission rates.</li>
+<li>Launching a new sales incentive campaign for employees or sales teams</li>
+<li>Setting product target quantities and fixed unit commission amounts</li>
+<li>Configuring manager override conditions and payment collection threshold rules</li>
+<li>Finalizing campaign periods to trigger ledger balance snapshot calculations</li>
 </ul>
 <hr>
 <h2 id="how-to-access-this-page">How to access this page<a class="headerlink" href="#how-to-access-this-page" title="Permanent link">¶</a></h2>
-<p>Open <strong>Commission and Campaigns → Commission Campaigns</strong> in the sidebar.</p>
+<p>From the sidebar navigation, select <strong>Commission → Commission Campaigns</strong> (<code>/admin/commission/commissioncampaign/</code>).</p>
 <hr>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">¶</a></h2>
 <ul>
-<li>You must have permission to manage commission campaigns.</li>
-<li>Employees and products must exist before assigning them to a campaign.</li>
+<li><strong>Permissions:</strong> <code>commission.add_commissioncampaign</code> / <code>commission.change_commissioncampaign</code> permission codenames (Accountant, Sales Manager, or Superuser role).</li>
+<li><strong>Active Records:</strong> Active <strong>Employee</strong> profiles and <strong>Product</strong> catalog items.</li>
 </ul>
 <hr>
 <h2 id="step-by-step-instructions">Step-by-step instructions<a class="headerlink" href="#step-by-step-instructions" title="Permanent link">¶</a></h2>
 <ol>
-<li>Open <strong>Commission and Campaigns → Commission Campaigns</strong> and click the <strong>purple (+) icon</strong>.</li>
-<li>Enter the <strong>Campaign Name</strong> and set the <strong>Start Date</strong> and <strong>End Date</strong>.</li>
-<li>Set the <strong>Collection Threshold %</strong> that governs automatic commission approval.</li>
-<li>Set the <strong>Manager Trigger Condition</strong> and <strong>Manager Commission Rate (%)</strong> if managers earn on this campaign.</li>
-<li>Add each <strong>Employee</strong> assigned to the campaign.</li>
-<li>Add each <strong>Product</strong>, with its <strong>Commission Rate (Fixed TK)</strong> and <strong>Sales Target Qty</strong>.</li>
-<li>Save the campaign. Set <strong>Is Finalized</strong> only once snapshots have been generated and balances updated.</li>
+<li>Open <strong>Commission → Commission Campaigns</strong> and click <strong>Add Commission Campaign (+)</strong>.</li>
+<li>Enter the <strong>Campaign Name</strong>, <strong>Start Date</strong>, and <strong>End Date</strong>.</li>
+<li>Set the <strong>Collection Threshold %</strong> governing automatic payout approval.</li>
+<li>Select the <strong>Manager Trigger Condition</strong> and enter the <strong>Manager Commission Rate (%)</strong>.</li>
+<li>Add assigned <strong>Employees</strong> to the campaign table.</li>
+<li>Add target <strong>Products</strong>, specifying <strong>Commission Rate (Fixed TK)</strong> and <strong>Sales Target Qty</strong>.</li>
+<li>Click <strong>Save</strong> to create the campaign. Toggle <strong>Is Finalized</strong> only after campaign completion.</li>
 </ol>
 <hr>
+<h2 id="verification-and-definition-of-done">Verification and definition of done<a class="headerlink" href="#verification-and-definition-of-done" title="Permanent link">¶</a></h2>
+<ul>
+<li>System generates a campaign tracking code (<code>CMP-YYYYMMDD-XXXX</code>).</li>
+<li>Campaign appears under <code>/admin/commission/commissioncampaign/</code> with <code>Active</code> or <code>Finalized</code> status pills.</li>
+<li>Sales transactions matching campaign parameters calculate eligible commissions automatically.</li>
+</ul>
+<hr>
 <h2 id="field-reference">Field reference<a class="headerlink" href="#field-reference" title="Permanent link">¶</a></h2>
+<h3 id="campaign-details">Campaign details<a class="headerlink" href="#campaign-details" title="Permanent link">¶</a></h3>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="commission-campaign-img.png" data-desc-position="bottom"><img alt="Commission Campaign" src="commission-campaign-img.png"></a></p>
 <table>
 <thead>
 <tr>
-<th><strong>Field</strong></th>
-<th><strong>What to do</strong></th>
-<th><strong>Description</strong></th>
+<th>Step</th>
+<th>Field</th>
+<th>Required</th>
+<th>What to Do</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Campaign Name</strong></td>
-<td>Enter a name</td>
-<td>Name of the commission campaign.</td>
+<td>1</td>
+<td>Campaign Name</td>
+<td>Yes</td>
+<td>Enter name</td>
+<td>Descriptive campaign title</td>
 </tr>
 <tr>
-<td><strong>Start Date</strong></td>
-<td>Choose a date</td>
-<td>First day of the campaign period.</td>
+<td>2</td>
+<td>Start Date</td>
+<td>Yes</td>
+<td>Select date</td>
+<td>First day of campaign billing period</td>
 </tr>
 <tr>
-<td><strong>End Date</strong></td>
-<td>Choose a date</td>
-<td>Last day of the campaign period.</td>
+<td>3</td>
+<td>End Date</td>
+<td>Yes</td>
+<td>Select date</td>
+<td>Final day of campaign billing period</td>
 </tr>
 <tr>
-<td><strong>Is Finalized</strong></td>
-<td>Toggle on/off</td>
-<td>Indicates if snapshots have been generated and balances updated.</td>
+<td>4</td>
+<td>Is Finalized</td>
+<td>Yes</td>
+<td>Toggle switch</td>
+<td>Indicates whether balance snapshots are generated</td>
 </tr>
 <tr>
-<td><strong>Collection Threshold %</strong></td>
-<td>Enter a percentage</td>
-<td>Minimum payment collection percentage required for automatic commission approval.</td>
+<td>5</td>
+<td>Collection Threshold %</td>
+<td>Yes</td>
+<td>Enter percentage</td>
+<td>Minimum collection percentage for payout approval</td>
 </tr>
 <tr>
-<td><strong>Manager Trigger Condition</strong></td>
-<td>Select a condition</td>
-<td>Condition that determines when a manager is eligible for commission.</td>
+<td>6</td>
+<td>Manager Trigger Condition</td>
+<td>No</td>
+<td>Select condition</td>
+<td>Target threshold required for manager commission payout</td>
 </tr>
 <tr>
-<td><strong>Manager Commission Rate (%)</strong></td>
-<td>Enter a percentage</td>
-<td>Commission percentage applied to the aggregate team sales amount.</td>
+<td>7</td>
+<td>Manager Commission Rate (%)</td>
+<td>No</td>
+<td>Enter percentage</td>
+<td>Override commission percentage on team sales</td>
 </tr>
 <tr>
-<td><strong>Employee</strong></td>
-<td>Select an employee</td>
-<td>Employee assigned to the campaign.</td>
+<td>8</td>
+<td>Employee</td>
+<td>Yes</td>
+<td>Select employee</td>
+<td>Staff assigned to earn campaign commission</td>
 </tr>
 <tr>
-<td><strong>Product</strong></td>
-<td>Select a product</td>
-<td>Product included in the campaign target list.</td>
+<td>9</td>
+<td>Product</td>
+<td>Yes</td>
+<td>Select product</td>
+<td>Included catalog product</td>
 </tr>
 <tr>
-<td><strong>Commission Rate (Fixed TK)</strong></td>
-<td>Enter an amount</td>
-<td>Fixed commission amount per product unit.</td>
+<td>10</td>
+<td>Commission Rate (Fixed TK)</td>
+<td>Yes</td>
+<td>Enter amount</td>
+<td>Fixed commission earnings per unit sold</td>
 </tr>
 <tr>
-<td><strong>Sales Target Qty</strong></td>
-<td>Enter a quantity</td>
-<td>Quantity target for the campaign product.</td>
+<td>11</td>
+<td>Sales Target Qty</td>
+<td>Yes</td>
+<td>Enter quantity</td>
+<td>Target sales unit quota for campaign</td>
 </tr>
 </tbody>
 </table>
 <hr>
-<h2 id="tips-and-common-issues">Tips and common issues<a class="headerlink" href="#tips-and-common-issues" title="Permanent link">¶</a></h2>
-<ul>
-<li>Finalize the campaign only after the date range and targets are correct.</li>
-<li>Verify employees and products are assigned before saving.</li>
-<li>Use the <strong>Remove</strong> button to delete a campaign employee or product target.</li>
-</ul>
+<h2 id="exception-handling-and-error-recovery">Exception handling and error recovery<a class="headerlink" href="#exception-handling-and-error-recovery" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Symptom / Error Message</th>
+<th>Root Cause</th>
+<th>Remediation Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cannot edit campaign targets</td>
+<td>Campaign <code>Is Finalized</code> toggle is set to ON</td>
+<td>Uncheck <code>Is Finalized</code> before modifying product targets or rates</td>
+</tr>
+<tr>
+<td>Commission not calculated on invoice</td>
+<td>Collection percentage below <code>Collection Threshold %</code></td>
+<td>Receive Client payment to meet collection threshold percentage</td>
+</tr>
+</tbody>
+</table>
 <hr>
 <h2 id="related-pages">Related pages<a class="headerlink" href="#related-pages" title="Permanent link">¶</a></h2>
 <ul>
-<li><strong><a href="employee-analytics.html">Employee Analytics</a></strong> — Review employee performance and campaign analytics.</li>
-<li><strong><a href="manager-analytics.html">Manager Analytics</a></strong> — Track manager commission triggers and outcomes.</li>
-<li><strong><a href="client-bonus-campaigns.html">Client Bonus Campaigns</a></strong> — Manage bonus campaigns for clients.</li>
+<li><a href="employee-analytics.html">Employee Analytics</a> — Inspect employee commission performance</li>
+<li><a href="manager-analytics.html">Manager Analytics</a> — Monitor manager trigger conditions</li>
+<li><a href="client-bonus-campaigns.html">Client Bonus Campaigns</a> — Manage client bonus incentives</li>
 </ul>
 
 
@@ -5758,7 +5864,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 00:44:11 UTC">July 26, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 03:05:21 UTC">July 26, 2026</span>
   </span>
 
     

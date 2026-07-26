@@ -3202,10 +3202,32 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#step-by-step-instructions" class="md-nav__link">
     <span class="md-ellipsis">
       
         Step-by-step instructions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification-and-definition-of-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification and definition of done
       
     </span>
   </a>
@@ -3274,21 +3296,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#saving-the-employee" class="md-nav__link">
+  <a href="#exception-handling-and-error-recovery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Saving the Employee
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tips-and-common-issues" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tips and common issues
+        Exception handling and error recovery
       
     </span>
   </a>
@@ -5578,10 +5589,32 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#step-by-step-instructions" class="md-nav__link">
     <span class="md-ellipsis">
       
         Step-by-step instructions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification-and-definition-of-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification and definition of done
       
     </span>
   </a>
@@ -5650,21 +5683,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#saving-the-employee" class="md-nav__link">
+  <a href="#exception-handling-and-error-recovery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Saving the Employee
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tips-and-common-issues" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tips and common issues
+        Exception handling and error recovery
       
     </span>
   </a>
@@ -5725,6 +5747,8 @@
 
 
 <h1 id="add-employee">Add Employee<a class="headerlink" href="#add-employee" title="Permanent link">¶</a></h1>
+<!-- metadata: owner: hr, last_updated: 2026-07-26, git_ref: main, staging_verified: true -->
+
 <h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
 <p>Use this page to register a new employee in CTB Admin. An employee record stores personal information, emergency contact details, job assignment, and salary settings that are used for attendance, payroll, wages, and payouts.</p>
 <hr>
@@ -5736,28 +5760,40 @@
 </ul>
 <hr>
 <h2 id="how-to-access-this-page">How to access this page<a class="headerlink" href="#how-to-access-this-page" title="Permanent link">¶</a></h2>
-<p>From the sidebar, go to <strong>Employee → Employees</strong>. On the Employees list page, click the <strong>purple (+) icon</strong> in the top-right corner.</p>
-<p>The system opens the <strong>Add Employee</strong> page.</p>
+<p>From the sidebar, go to <strong>Employee → Employees</strong> (<code>/admin/employee/employee/</code>). On the Employees list page, click the <strong>purple (+) icon</strong> in the top-right corner.</p>
+<hr>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>Permissions:</strong> <code>employee.add_employee</code> permission codename (HR Manager or Superuser role).</li>
+<li><strong>Active Records:</strong> Active <strong>Work Department</strong> and <strong>Work Position</strong> records must exist in the system prior to employee assignment.</li>
+</ul>
 <hr>
 <h2 id="step-by-step-instructions">Step-by-step instructions<a class="headerlink" href="#step-by-step-instructions" title="Permanent link">¶</a></h2>
 <ol>
 <li>Open <strong>Add Employee</strong> from the <strong>Employee</strong> section of the sidebar.</li>
-<li>Complete the <strong>General information</strong> section described below.</li>
-<li>Complete the <strong>Emergency contact</strong> section described below.</li>
-<li>Complete the <strong>Employment details</strong> section described below.</li>
-<li>Complete the <strong>Salary information</strong> section described below.</li>
-<li>Follow <strong>Saving the Employee</strong> below to finish.</li>
+<li>Fill in the <strong>General information</strong> section (name, phone, NID details).</li>
+<li>Fill in the <strong>Emergency contact</strong> section (contact name and phone).</li>
+<li>Select the <strong>Employment details</strong> (position, department, start date).</li>
+<li>Set the <strong>Salary information</strong> (salary type, rate, balance limits).</li>
+<li>Click <strong>Save</strong> to create the record, or <strong>Save and continue editing</strong> to stay on the page.</li>
 </ol>
+<hr>
+<h2 id="verification-and-definition-of-done">Verification and definition of done<a class="headerlink" href="#verification-and-definition-of-done" title="Permanent link">¶</a></h2>
+<ul>
+<li>System displays a confirmation alert: <code>Employee "Name" was added successfully.</code></li>
+<li>The new employee appears in the <strong>Employees</strong> list (<code>/admin/employee/employee/</code>) with an <code>Enabled</code> status pill.</li>
+<li>Linked ledger records and salary calculation profiles initialize with specified starting parameters.</li>
+</ul>
 <hr>
 <h2 id="field-reference">Field reference<a class="headerlink" href="#field-reference" title="Permanent link">¶</a></h2>
 <h3 id="general-information">General information<a class="headerlink" href="#general-information" title="Permanent link">¶</a></h3>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="add-employee-personal-info.png" data-desc-position="bottom"><img alt="Add Employee General Information" src="add-employee-personal-info.png"></a></p>
-<p>Fill in the following fields:</p>
 <table>
 <thead>
 <tr>
 <th>Step</th>
 <th>Field</th>
+<th>Required</th>
 <th>What to Do</th>
 <th>Description</th>
 </tr>
@@ -5766,81 +5802,89 @@
 <tr>
 <td>1</td>
 <td>SKU</td>
+<td>No</td>
 <td>Leave as generated</td>
-<td>The system-generated employee code</td>
+<td>System-generated employee identification code</td>
 </tr>
 <tr>
 <td>2</td>
 <td>Employee Photo</td>
-<td>Upload an image if available</td>
-<td>Employee profile photo used in lists and records</td>
+<td>No</td>
+<td>Upload image</td>
+<td>Profile photo used across employee listings and detail views</td>
 </tr>
 <tr>
 <td>3</td>
 <td>Employee Name</td>
-<td>Enter the employee name</td>
-<td>The name used in employee records, payroll, and reports</td>
+<td>Yes</td>
+<td>Enter full name</td>
+<td>Primary name used on payroll documents and reports</td>
 </tr>
 <tr>
 <td>4</td>
 <td>Is Enabled</td>
-<td>Turn ON or OFF</td>
-<td>Controls whether the employee is active</td>
+<td>Yes</td>
+<td>Toggle switch</td>
+<td>Controls whether the employee record is active</td>
 </tr>
 <tr>
 <td>5</td>
 <td>Send SMS</td>
-<td>Enable if needed</td>
-<td>Sends SMS notifications for employee-related activity</td>
+<td>No</td>
+<td>Toggle switch</td>
+<td>Enables automated SMS notifications for payouts and salary events</td>
 </tr>
 <tr>
 <td>6</td>
 <td>Hide Salary Details</td>
-<td>Enable if required</td>
-<td>Keeps salary information hidden in employee-facing views</td>
+<td>No</td>
+<td>Toggle switch</td>
+<td>Restricts salary information visibility in employee-facing views</td>
 </tr>
 <tr>
 <td>7</td>
 <td>Date of Birth</td>
-<td>Select the birth date</td>
-<td>Used for personal records</td>
+<td>No</td>
+<td>Select date</td>
+<td>Birth date for personal record-keeping</td>
 </tr>
 <tr>
 <td>8</td>
 <td>Phone Number</td>
-<td>Enter the main contact number</td>
-<td>Primary phone number for communication</td>
+<td>Yes</td>
+<td>Enter main phone</td>
+<td>Primary contact number for identity and notification lookup</td>
 </tr>
 <tr>
 <td>9</td>
 <td>Address</td>
-<td>Enter the current address</td>
-<td>Employee location or mailing address</td>
+<td>No</td>
+<td>Enter text</td>
+<td>Current residential address</td>
 </tr>
 <tr>
 <td>10</td>
 <td>NID Number</td>
-<td>Enter the NID or identification number</td>
-<td>Used for identity verification</td>
+<td>No</td>
+<td>Enter NID</td>
+<td>National identity card or passport number</td>
 </tr>
 <tr>
 <td>11</td>
 <td>NID Card Front Photo</td>
-<td>Upload the front image</td>
-<td>Front side of the employee’s NID card</td>
+<td>No</td>
+<td>Upload image</td>
+<td>Front side scan or image of NID card</td>
 </tr>
 <tr>
 <td>12</td>
 <td>NID Card Back Photo</td>
-<td>Upload the back image</td>
-<td>Back side of the employee’s NID card</td>
+<td>No</td>
+<td>Upload image</td>
+<td>Back side scan or image of NID card</td>
 </tr>
 </tbody>
 </table>
-<div class="admonition warning">
-<p class="admonition-title">Required Fields</p>
-<p>Fields marked with a <strong>red star (*)</strong> are mandatory.</p>
-</div>
 <h3 id="emergency-contact">Emergency contact<a class="headerlink" href="#emergency-contact" title="Permanent link">¶</a></h3>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="add-employee-emargency-info.png" data-desc-position="bottom"><img alt="Emergency Contact Section" src="add-employee-emargency-info.png"></a></p>
 <table>
@@ -5848,6 +5892,7 @@
 <tr>
 <th>Step</th>
 <th>Field</th>
+<th>Required</th>
 <th>What to Do</th>
 <th>Description</th>
 </tr>
@@ -5856,20 +5901,23 @@
 <tr>
 <td>1</td>
 <td>Emergency Contact Name</td>
-<td>Enter the contact name</td>
-<td>Person to call in case of emergency</td>
+<td>No</td>
+<td>Enter name</td>
+<td>Primary emergency contact person</td>
 </tr>
 <tr>
 <td>2</td>
 <td>Emergency Phone Number</td>
-<td>Enter the phone number</td>
-<td>Backup contact number</td>
+<td>No</td>
+<td>Enter phone</td>
+<td>Primary emergency contact phone number</td>
 </tr>
 <tr>
 <td>3</td>
 <td>Emergency Address</td>
-<td>Enter the address</td>
-<td>Emergency contact location</td>
+<td>No</td>
+<td>Enter address</td>
+<td>Residential address of emergency contact</td>
 </tr>
 </tbody>
 </table>
@@ -5880,6 +5928,7 @@
 <tr>
 <th>Step</th>
 <th>Field</th>
+<th>Required</th>
 <th>What to Do</th>
 <th>Description</th>
 </tr>
@@ -5888,39 +5937,40 @@
 <tr>
 <td>1</td>
 <td>Work Position</td>
-<td>Select a position</td>
-<td>Assigns the employee to a job role</td>
+<td>Yes</td>
+<td>Select position</td>
+<td>Job position assigned to the employee</td>
 </tr>
 <tr>
 <td>2</td>
 <td>Work Department</td>
-<td>Select a department</td>
-<td>Places the employee in the correct department</td>
+<td>Yes</td>
+<td>Select department</td>
+<td>Department assignment for reporting and hierarchy</td>
 </tr>
 <tr>
 <td>3</td>
 <td>Purchase Balance</td>
-<td>Enter the starting balance</td>
-<td>Used for employee purchase or ledger tracking</td>
+<td>No</td>
+<td>Enter balance</td>
+<td>Starting balance for internal purchase balance tracking</td>
 </tr>
 <tr>
 <td>4</td>
 <td>Start Date</td>
-<td>Select the start date</td>
-<td>The date the employee joined or became active</td>
+<td>Yes</td>
+<td>Select date</td>
+<td>Official employment start date</td>
 </tr>
 <tr>
 <td>5</td>
 <td>End Date</td>
-<td>Select if applicable</td>
-<td>Leave empty if the employee is still active</td>
+<td>No</td>
+<td>Select date</td>
+<td>Termination or contract end date (leave empty if active)</td>
 </tr>
 </tbody>
 </table>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The small action icons beside the position and department fields let you manage those linked records without leaving the page.</p>
-</div>
 <h3 id="salary-information">Salary information<a class="headerlink" href="#salary-information" title="Permanent link">¶</a></h3>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="add-employee-salary-details.png" data-desc-position="bottom"><img alt="Salary Information Section" src="add-employee-salary-details.png"></a></p>
 <table>
@@ -5928,6 +5978,7 @@
 <tr>
 <th>Step</th>
 <th>Field</th>
+<th>Required</th>
 <th>What to Do</th>
 <th>Description</th>
 </tr>
@@ -5936,63 +5987,76 @@
 <tr>
 <td>1</td>
 <td>Salary Type</td>
-<td>Select the salary type</td>
-<td>Controls how salary is calculated</td>
+<td>Yes</td>
+<td>Select type</td>
+<td>Calculation mode (<code>Monthly</code>, <code>Daily</code>, <code>Production-based</code>)</td>
 </tr>
 <tr>
 <td>2</td>
 <td>Salary Rate</td>
-<td>Enter the rate</td>
-<td>Base amount used for salary calculation</td>
+<td>Yes</td>
+<td>Enter rate</td>
+<td>Base rate used for monthly or daily salary calculations</td>
 </tr>
 <tr>
 <td>3</td>
 <td>Balance</td>
-<td>Enter the current balance</td>
-<td>Current salary-related balance</td>
+<td>No</td>
+<td>Enter balance</td>
+<td>Initial opening ledger balance</td>
 </tr>
 <tr>
 <td>4</td>
 <td>Upper Balance Limit</td>
-<td>Set the maximum limit</td>
-<td>Highest allowed balance</td>
+<td>No</td>
+<td>Enter amount</td>
+<td>Maximum credit limit allowed for advances</td>
 </tr>
 <tr>
 <td>5</td>
 <td>Lower Balance Limit</td>
-<td>Set the minimum limit</td>
-<td>Lowest allowed balance</td>
+<td>No</td>
+<td>Enter amount</td>
+<td>Minimum threshold trigger for balance alerts</td>
 </tr>
 </tbody>
 </table>
-<div class="admonition warning">
-<p class="admonition-title">Required Fields</p>
-<p>Fields marked with a <strong>red star (*)</strong> are mandatory.</p>
-</div>
 <hr>
-<h2 id="saving-the-employee">Saving the Employee<a class="headerlink" href="#saving-the-employee" title="Permanent link">¶</a></h2>
-<p>After completing all sections:</p>
-<ul>
-<li>Click <strong>Save</strong> to create the employee</li>
-<li>Click <strong>Save and add another</strong> to continue adding more employees</li>
-<li>Click <strong>Save and continue editing</strong> to save and stay on the page</li>
-</ul>
-<hr>
-<h2 id="tips-and-common-issues">Tips and common issues<a class="headerlink" href="#tips-and-common-issues" title="Permanent link">¶</a></h2>
-<ul>
-<li>Verify the <strong>Phone Number</strong> before enabling SMS notifications.</li>
-<li>Upload clear <strong>NID images</strong> so the record is easy to verify later.</li>
-<li>Leave <strong>End Date</strong> empty if the employee is still active.</li>
-<li>Review <strong>Salary Type</strong> and <strong>Salary Rate</strong> carefully before saving, because they affect payroll calculations.</li>
-</ul>
+<h2 id="exception-handling-and-error-recovery">Exception handling and error recovery<a class="headerlink" href="#exception-handling-and-error-recovery" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Symptom / Error Message</th>
+<th>Root Cause</th>
+<th>Remediation Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Employee with this Phone Number already exists</code></td>
+<td>Duplicate phone number entry in system database</td>
+<td>Verify employee identity; search existing list to avoid duplicate entries</td>
+</tr>
+<tr>
+<td><code>Department / Position is required</code></td>
+<td>Form submitted without selecting position or department</td>
+<td>Select valid options from dropdown lists before submitting</td>
+</tr>
+<tr>
+<td><code>Invalid Date format</code></td>
+<td>Date fields typed manually in incorrect format</td>
+<td>Use the built-in date picker widget or format as <code>YYYY-MM-DD</code></td>
+</tr>
+</tbody>
+</table>
 <hr>
 <h2 id="related-pages">Related pages<a class="headerlink" href="#related-pages" title="Permanent link">¶</a></h2>
 <ul>
-<li><strong>Edit Employee</strong> — Update an existing employee record</li>
-<li><strong>Employee Detail</strong> — Review the full employee profile</li>
-<li><strong>Record Attendance</strong> — Track employee attendance</li>
-<li><strong>Generate Salary</strong> — Create salary records for the employee</li>
-<li><strong>Create Payout</strong> — Record employee payout transactions</li>
+<li><a href="edit-employee.html">Edit Employee</a> — Update an existing employee profile</li>
+<li><a href="employee-detail.html">Employee Detail</a> — View full profile details and balances</li>
+<li><a href="../attendance/record-attendance.html">Record Attendance</a> — Log daily attendance entries</li>
+<li><a href="../salary/generate-salary.html">Generate Salary</a> — Process monthly or daily salary calculations</li>
+<li><a href="../payouts/create-payout.html">Create Payout</a> — Issue salary payouts and advances</li>
 </ul>
 
 
@@ -6016,7 +6080,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 00:44:11 UTC">July 26, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 03:05:21 UTC">July 26, 2026</span>
   </span>
 
     

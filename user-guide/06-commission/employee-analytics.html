@@ -4336,6 +4336,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#verification-and-definition-of-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification and definition of done
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#field-reference" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -4344,25 +4355,25 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#add-employee-analytics-manually" class="md-nav__link">
+    <nav class="md-nav" aria-label="Field reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-summary" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Add employee analytics manually
+        List summary
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Add employee analytics manually">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
-  <a href="#manual-entry-field-reference" class="md-nav__link">
+  <a href="#manual-entry-fields" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Manual entry field reference
+        Manual entry fields
       
     </span>
   </a>
@@ -4375,10 +4386,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tips-and-common-issues" class="md-nav__link">
+  <a href="#exception-handling-and-error-recovery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tips and common issues
+        Exception handling and error recovery
       
     </span>
   </a>
@@ -5576,6 +5587,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#verification-and-definition-of-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification and definition of done
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#field-reference" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5584,25 +5606,25 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#add-employee-analytics-manually" class="md-nav__link">
+    <nav class="md-nav" aria-label="Field reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-summary" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Add employee analytics manually
+        List summary
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Add employee analytics manually">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
-  <a href="#manual-entry-field-reference" class="md-nav__link">
+  <a href="#manual-entry-fields" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Manual entry field reference
+        Manual entry fields
       
     </span>
   </a>
@@ -5615,10 +5637,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tips-and-common-issues" class="md-nav__link">
+  <a href="#exception-handling-and-error-recovery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tips and common issues
+        Exception handling and error recovery
       
     </span>
   </a>
@@ -5679,89 +5701,228 @@
 
 
 <h1 id="employee-analytics">Employee Analytics<a class="headerlink" href="#employee-analytics" title="Permanent link">¶</a></h1>
+<!-- metadata: owner: sales_team, last_updated: 2026-07-26, git_ref: main, staging_verified: true -->
+
 <h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
-<p>Use this page to review employee commission analytics records. The system generates entries automatically for completed campaigns, and you can add records manually when needed.</p>
+<p>Use this page to review and process employee commission performance analytics in CTB Admin. The system calculates units sold, payment collection percentages, target achievement levels, and net earned commission amounts for active and completed campaigns.</p>
 <hr>
 <h2 id="when-to-use-this-page">When to use this page<a class="headerlink" href="#when-to-use-this-page" title="Permanent link">¶</a></h2>
 <ul>
-<li>After a commission campaign ends and you want to review employee results.</li>
-<li>When you need to confirm whether a commission entry is eligible.</li>
-<li>When you need to process expired campaigns that have not yet generated analytics.</li>
-<li>When you need to add or correct an employee commission record manually.</li>
+<li>Auditing employee commission calculations following campaign completion</li>
+<li>Verifying whether individual commission records satisfy eligibility rules</li>
+<li>Triggering automated snapshot calculations via <strong>Process Expired Campaigns</strong></li>
+<li>Manually entering or adjusting employee commission analytics vouchers</li>
 </ul>
 <hr>
 <h2 id="how-to-access-this-page">How to access this page<a class="headerlink" href="#how-to-access-this-page" title="Permanent link">¶</a></h2>
-<p>Open <strong>Commission and Campaigns → Employee Analytics</strong> in the sidebar.</p>
+<p>From the sidebar navigation, select <strong>Commission → Employee Analytics</strong> (<code>/admin/commission/employeecommissionanalytics/</code>).</p>
 <hr>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">¶</a></h2>
 <ul>
-<li>The campaign must exist and include employees and product targets.</li>
-<li>The campaign date range should be complete or the campaign should be expired.</li>
-<li>Sales and payment data must be available for the campaign.</li>
+<li><strong>Permissions:</strong> <code>commission.view_employeecommissionanalytics</code> / <code>commission.add_employeecommissionanalytics</code> permission codenames (Accountant, Sales Manager, or Superuser role).</li>
+<li><strong>Active Records:</strong> Configured <strong>Commission Campaign</strong> and <strong>Employee</strong> profiles.</li>
 </ul>
 <hr>
 <h2 id="step-by-step-instructions">Step-by-step instructions<a class="headerlink" href="#step-by-step-instructions" title="Permanent link">¶</a></h2>
 <ol>
-<li>Open the page from the sidebar.</li>
-<li>Use the search box or click <strong>Filters</strong> to locate the employee, campaign, or product.</li>
-<li>Review the list of analytics records shown for each employee and campaign.</li>
-<li>Check the <strong>Status</strong> and <strong>Is Eligible</strong> columns to understand each entry.</li>
-<li>If a campaign has ended but entries are missing, click <strong>Process Expired Campaigns</strong>.</li>
-<li>Click the top-right <strong>+</strong> button to add a manual employee commission analytics record.</li>
-<li>Complete the manual entry form and save after verifying the values.</li>
+<li>Open <strong>Commission → Employee Analytics</strong> from the sidebar.</li>
+<li>Review the list of employee analytics records, target achievements, and status pills.</li>
+<li>Use the search bar or click <strong>Filters</strong> to locate specific employees or campaigns.</li>
+<li>Click <strong>Process Expired Campaigns</strong> to generate snapshots for concluded campaigns.</li>
+<li>Click <strong>Add Employee Commission Analytics (+)</strong> to enter manual adjustments when required.</li>
 </ol>
+<hr>
+<h2 id="verification-and-definition-of-done">Verification and definition of done<a class="headerlink" href="#verification-and-definition-of-done" title="Permanent link">¶</a></h2>
+<ul>
+<li>Commission analytics entries display calculated achievement quantities and earnings.</li>
+<li>Eligible records (<code>Is Eligible = True</code>) update the employee payout ledger upon campaign finalization.</li>
+</ul>
 <hr>
 <h2 id="field-reference">Field reference<a class="headerlink" href="#field-reference" title="Permanent link">¶</a></h2>
+<h3 id="list-summary">List summary<a class="headerlink" href="#list-summary" title="Permanent link">¶</a></h3>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="employee-analytics-list-page.png" data-desc-position="bottom"><img alt="Employee Analytics List Page" src="employee-analytics-list-page.png"></a></p>
-<ul>
-<li><strong>Employee</strong> — The employee assigned to the commission record.</li>
-<li><strong>Campaign</strong> — The name or date range of the commission campaign.</li>
-<li><strong>Product</strong> — The campaign product tied to the employee analytics record.</li>
-<li><strong>Achievement Qty</strong> — Units sold by the employee during the campaign period.</li>
-<li><strong>Commission Amount</strong> — Commission earned for that record.</li>
-<li><strong>Is Eligible</strong> — Indicates whether the record meets commission eligibility rules.</li>
-<li><strong>Status</strong> — Processing state of the analytics record, such as <code>Calculated</code>, <code>Pending</code>, <code>Approved</code>, or <code>Paid</code>.</li>
-</ul>
-<hr>
-<h2 id="add-employee-analytics-manually">Add employee analytics manually<a class="headerlink" href="#add-employee-analytics-manually" title="Permanent link">¶</a></h2>
-<p>Use the manual entry form when automatic analytics are missing or a correction is required.</p>
-<ol>
-<li>Open <strong>Commission and Campaigns → Employee Analytics</strong>.</li>
-<li>Click the top-right <strong>+</strong> button to open the add form.</li>
-<li>Select the campaign, employee, and product from the required drop-down fields.</li>
-<li>Enter <strong>Target Qty</strong> from the campaign plan.</li>
-<li>Enter <strong>Achievement Qty</strong> for the employee during the campaign period.</li>
-<li>Enter <strong>Total Sales Qty</strong> and <strong>Total Sales Amount</strong> for the campaign product.</li>
-<li>Enter <strong>Total Payment Collected</strong> and <strong>Payment Collection %</strong>.</li>
-<li>Enter <strong>Commission Rate</strong> to calculate the commission amount.</li>
-<li>Confirm <strong>Commission Amount</strong> is correct and set <strong>Is Eligible</strong> if the record qualifies.</li>
-<li>Select the appropriate <strong>Status</strong> and save the record.</li>
-</ol>
-<h3 id="manual-entry-field-reference">Manual entry field reference<a class="headerlink" href="#manual-entry-field-reference" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Required</th>
+<th>What to Do</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Employee</td>
+<td>Yes</td>
+<td>Click link</td>
+<td>Target sales employee</td>
+</tr>
+<tr>
+<td>Campaign</td>
+<td>Yes</td>
+<td>View text</td>
+<td>Associated commission campaign name</td>
+</tr>
+<tr>
+<td>Product</td>
+<td>Yes</td>
+<td>View text</td>
+<td>Campaign product item</td>
+</tr>
+<tr>
+<td>Achievement Qty</td>
+<td>Yes</td>
+<td>View number</td>
+<td>Net units sold by employee during campaign</td>
+</tr>
+<tr>
+<td>Commission Amount</td>
+<td>Yes</td>
+<td>View amount</td>
+<td>Calculated commission earnings</td>
+</tr>
+<tr>
+<td>Is Eligible</td>
+<td>Yes</td>
+<td>View status</td>
+<td>Indicates whether eligibility rules are met</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>Yes</td>
+<td>View pill</td>
+<td>Processing state (<code>Calculated</code>, <code>Pending</code>, <code>Approved</code>, <code>Paid</code>)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="manual-entry-fields">Manual entry fields<a class="headerlink" href="#manual-entry-fields" title="Permanent link">¶</a></h3>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="add-employee-commission-analytics.png" data-desc-position="bottom"><img alt="Add Employee Analytics" src="add-employee-commission-analytics.png"></a></p>
-<ul>
-<li><strong>Target Qty</strong> — Minimum quantity target defined in the campaign.</li>
-<li><strong>Achievement Qty</strong> — Actual units sold (invoiced minus returned) during the campaign.</li>
-<li><strong>Total Sales Qty</strong> — Gross units sold during the campaign period.</li>
-<li><strong>Total Sales Amount</strong> — Gross sales amount attributed to the employee.</li>
-<li><strong>Total Payment Collected</strong> — Collected amount from cleared checks and partial payments.</li>
-<li><strong>Payment Collection %</strong> — Efficiency ratio: <code>Total Collected / Total Invoiced × 100</code>.</li>
-<li><strong>Commission Rate</strong> — Fixed commission amount per unit achieved.</li>
-<li><strong>Commission Amount</strong> — Calculated as <code>Achievement Qty × Commission Rate</code>.</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Field</th>
+<th>Required</th>
+<th>What to Do</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Campaign</td>
+<td>Yes</td>
+<td>Select campaign</td>
+<td>Parent commission campaign</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Employee</td>
+<td>Yes</td>
+<td>Select employee</td>
+<td>Target sales employee</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Product</td>
+<td>Yes</td>
+<td>Select product</td>
+<td>Campaign product item</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Target Qty</td>
+<td>Yes</td>
+<td>Enter number</td>
+<td>Minimum target quota</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Achievement Qty</td>
+<td>Yes</td>
+<td>Enter number</td>
+<td>Actual units sold</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Total Sales Qty</td>
+<td>Yes</td>
+<td>Enter number</td>
+<td>Gross units sold</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Total Sales Amount</td>
+<td>Yes</td>
+<td>Enter amount</td>
+<td>Gross sales value</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Total Payment Collected</td>
+<td>Yes</td>
+<td>Enter amount</td>
+<td>Cash/check payments collected</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Payment Collection %</td>
+<td>Yes</td>
+<td>Enter percentage</td>
+<td>Collection ratio percentage</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Commission Rate</td>
+<td>Yes</td>
+<td>Enter rate</td>
+<td>Fixed unit rate</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Commission Amount</td>
+<td>Yes</td>
+<td>Enter amount</td>
+<td><code>Achievement Qty * Commission Rate</code></td>
+</tr>
+<tr>
+<td>12</td>
+<td>Is Eligible</td>
+<td>Yes</td>
+<td>Toggle switch</td>
+<td>Qualification flag</td>
+</tr>
+</tbody>
+</table>
 <hr>
-<h2 id="tips-and-common-issues">Tips and common issues<a class="headerlink" href="#tips-and-common-issues" title="Permanent link">¶</a></h2>
-<ul>
-<li>Use <strong>Process Expired Campaigns</strong> if the system did not generate records automatically after the campaign end date.</li>
-<li>Manual entries are useful when the automatic commission calculation is incomplete or when a correction is required.</li>
-<li>Confirm the campaign name, employee, and product match the original campaign setup before saving a manual record.</li>
-<li>The manual add form includes fields such as <strong>Target Qty</strong>, <strong>Total Sales Amount</strong>, <strong>Payment Collection %</strong>, and <strong>Commission Rate</strong>.</li>
-</ul>
+<h2 id="exception-handling-and-error-recovery">Exception handling and error recovery<a class="headerlink" href="#exception-handling-and-error-recovery" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Symptom / Error Message</th>
+<th>Root Cause</th>
+<th>Remediation Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Analytics missing for ended campaign</td>
+<td>Automated snapshot job not triggered</td>
+<td>Click <strong>Process Expired Campaigns</strong> in header to force snapshot generation</td>
+</tr>
+<tr>
+<td><code>Is Eligible</code> shows false</td>
+<td>Payment collection ratio below <code>Collection Threshold %</code></td>
+<td>Collect outstanding Client invoice balances to achieve collection threshold</td>
+</tr>
+</tbody>
+</table>
 <hr>
 <h2 id="related-pages">Related pages<a class="headerlink" href="#related-pages" title="Permanent link">¶</a></h2>
 <ul>
-<li><strong><a href="commission-campaigns.html">Commission Campaigns</a></strong> — See how campaigns and eligibility rules affect employee analytics.</li>
-<li><strong><a href="manager-analytics.html">Manager Analytics</a></strong> — Review manager commission results for related campaigns.</li>
+<li><a href="commission-campaigns.html">Commission Campaigns</a> — Manage campaign rules and target products</li>
+<li><a href="manager-analytics.html">Manager Analytics</a> — Review manager override commission results</li>
+<li><a href="payment-history.html">Payment History</a> — Inspect commission payment records</li>
 </ul>
 
 
@@ -5785,7 +5946,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 02:55:49 UTC">July 26, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 03:05:21 UTC">July 26, 2026</span>
   </span>
 
     

@@ -3857,10 +3857,32 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#step-by-step-instructions" class="md-nav__link">
     <span class="md-ellipsis">
       
         Step-by-step instructions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification-and-definition-of-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification and definition of done
       
     </span>
   </a>
@@ -3876,13 +3898,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Field reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#table-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table summary
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#tips-and-common-issues" class="md-nav__link">
+  <a href="#exception-handling-and-error-recovery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tips and common issues
+        Exception handling and error recovery
       
     </span>
   </a>
@@ -5517,10 +5556,32 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#step-by-step-instructions" class="md-nav__link">
     <span class="md-ellipsis">
       
         Step-by-step instructions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification-and-definition-of-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification and definition of done
       
     </span>
   </a>
@@ -5536,13 +5597,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Field reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#table-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table summary
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#tips-and-common-issues" class="md-nav__link">
+  <a href="#exception-handling-and-error-recovery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tips and common issues
+        Exception handling and error recovery
       
     </span>
   </a>
@@ -5603,52 +5681,123 @@
 
 
 <h1 id="tasks-overview">Tasks Overview<a class="headerlink" href="#tasks-overview" title="Permanent link">¶</a></h1>
-<p>Use this page to review employee tasks, check assignment status, and follow up on work that is still open.</p>
+<!-- metadata: owner: hr, last_updated: 2026-07-26, git_ref: main, staging_verified: true -->
+
 <h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
-<p>The tasks overview gives managers a simple list of work items assigned to employees. Use it to see what is pending, in progress, or completed before you create or update a task.</p>
+<p>Use the <strong>Tasks Overview</strong> page to monitor, filter, and track employee work assignments in CTB Admin. The master list displays task titles, assigned personnel, status pills, and priority levels.</p>
 <hr>
 <h2 id="when-to-use-this-page">When to use this page<a class="headerlink" href="#when-to-use-this-page" title="Permanent link">¶</a></h2>
 <ul>
-<li>When you want to review assigned employee work.</li>
-<li>When you need to check whether a task is open or completed.</li>
-<li>When you want to open a task and review its details.</li>
+<li>Auditing open, in-progress, or completed tasks across teams</li>
+<li>Searching for specific tasks by title or assigned staff member</li>
+<li>Checking priority urgency levels before assigning new work</li>
+<li>Accessing task creation and editing forms</li>
 </ul>
 <hr>
 <h2 id="how-to-access-this-page">How to access this page<a class="headerlink" href="#how-to-access-this-page" title="Permanent link">¶</a></h2>
-<p>From the sidebar, go to <strong>Employee → Tasks</strong>.</p>
+<p>From the sidebar navigation, select <strong>Employee → Tasks</strong> (<code>/admin/employee/employeetask/</code>).</p>
+<hr>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>Permissions:</strong> <code>employee.view_employeetask</code> permission codename (HR, Manager, Accountant, or Superuser role).</li>
+<li><strong>Active Records:</strong> Active <strong>Employee</strong> profiles.</li>
+</ul>
 <hr>
 <h2 id="step-by-step-instructions">Step-by-step instructions<a class="headerlink" href="#step-by-step-instructions" title="Permanent link">¶</a></h2>
 <ol>
-<li>Go to <strong>Employee → Tasks</strong> from the sidebar.</li>
-<li>Review the list of tasks and their <strong>Status</strong> and <strong>Priority</strong>.</li>
-<li>Use the search box to find a task by title or assigned employee.</li>
-<li>Click a task title to open it for editing.</li>
-<li>Click the <strong>purple (+) icon</strong> to create a new task.</li>
+<li>Open <strong>Tasks</strong> from the <strong>Employee</strong> section of the sidebar.</li>
+<li>Review the listed task items and status indicators (<code>To Do</code>, <code>In Progress</code>, <code>Completed</code>, <code>Cancelled</code>).</li>
+<li>Use the search bar to locate tasks by title or assigned staff member.</li>
+<li>Click <strong>Filters</strong> to narrow results by status or priority level.</li>
+<li>Click <strong>Add Task (+)</strong> to create a new task, or select a row to edit.</li>
 </ol>
 <hr>
-<h2 id="field-reference">Field reference<a class="headerlink" href="#field-reference" title="Permanent link">¶</a></h2>
+<h2 id="verification-and-definition-of-done">Verification and definition of done<a class="headerlink" href="#verification-and-definition-of-done" title="Permanent link">¶</a></h2>
 <ul>
-<li><strong>Task title</strong> - The short name for the work item.</li>
-<li><strong>Employee</strong> - The staff member assigned to complete the task.</li>
-<li><strong>Due date</strong> - The expected completion date.</li>
-<li><strong>Priority</strong> - Indicates how urgently the task should be completed.</li>
-<li><strong>Status</strong> - Shows whether the task is open, active, or completed.</li>
-<li><strong>Note</strong> - Optional context or instructions for the employee.</li>
+<li>Master task directory renders with accurate status badges and priority tags.</li>
+<li>Search and filter queries accurately isolate targeted work assignments.</li>
 </ul>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="task-list-page.png" data-desc-position="bottom"><img alt="Tasks List Page" src="task-list-page.png"></a></p>
 <hr>
-<h2 id="tips-and-common-issues">Tips and common issues<a class="headerlink" href="#tips-and-common-issues" title="Permanent link">¶</a></h2>
-<ul>
-<li>Keep task titles short and action-oriented so employees can understand them quickly.</li>
-<li>Check the status before reassigning a task.</li>
-<li>Add a due date when the task should be tracked against a deadline.</li>
-</ul>
+<h2 id="field-reference">Field reference<a class="headerlink" href="#field-reference" title="Permanent link">¶</a></h2>
+<h3 id="table-summary">Table summary<a class="headerlink" href="#table-summary" title="Permanent link">¶</a></h3>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="task-list-page.png" data-desc-position="bottom"><img alt="Tasks List Page" src="task-list-page.png"></a></p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Required</th>
+<th>What to Do</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Task Name</td>
+<td>Yes</td>
+<td>Click link</td>
+<td>Short title describing the task</td>
+</tr>
+<tr>
+<td>Assigned To</td>
+<td>Yes</td>
+<td>View employee</td>
+<td>Staff member assigned to complete the work</td>
+</tr>
+<tr>
+<td>Due Date</td>
+<td>No</td>
+<td>View date</td>
+<td>Target completion date</td>
+</tr>
+<tr>
+<td>Priority</td>
+<td>Yes</td>
+<td>View tag</td>
+<td>Urgency indicator (<code>Low</code>, <code>Medium</code>, <code>High</code>, <code>Urgent</code>)</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>Yes</td>
+<td>View pill</td>
+<td>Workflow state (<code>To Do</code>, <code>In Progress</code>, <code>Completed</code>, <code>Cancelled</code>)</td>
+</tr>
+<tr>
+<td>Note</td>
+<td>No</td>
+<td>View text</td>
+<td>Internal comments or instructions</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="exception-handling-and-error-recovery">Exception handling and error recovery<a class="headerlink" href="#exception-handling-and-error-recovery" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Symptom / Error Message</th>
+<th>Root Cause</th>
+<th>Remediation Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Task not visible in list</td>
+<td>Filter status setting excluding target task state</td>
+<td>Click <strong>Filters</strong> and reset status selection</td>
+</tr>
+<tr>
+<td>Unassigned task in listing</td>
+<td>Task saved without selecting an assigned user</td>
+<td>Open record under <a href="manage-task.html">Manage Task</a> and set <strong>Assigned To</strong></td>
+</tr>
+</tbody>
+</table>
 <hr>
 <h2 id="related-pages">Related pages<a class="headerlink" href="#related-pages" title="Permanent link">¶</a></h2>
 <ul>
-<li><a href="manage-task.html">Create/Edit Task</a></li>
-<li><a href="../attendance/overview.html">Attendance Overview</a></li>
-<li><a href="../salary/overview.html">Salary Overview</a></li>
+<li><a href="create-task.html">Create Task</a> — Register a new task assignment</li>
+<li><a href="manage-task.html">Manage Task</a> — Reassign or update task progress</li>
+<li><a href="../employees/overview.html">Employees Overview</a> — View employee directory</li>
 </ul>
 
 
@@ -5672,7 +5821,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 00:44:11 UTC">July 26, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 03:05:21 UTC">July 26, 2026</span>
   </span>
 
     

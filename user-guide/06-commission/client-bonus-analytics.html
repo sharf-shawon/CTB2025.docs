@@ -4448,6 +4448,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#verification-and-definition-of-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification and definition of done
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#field-reference" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -4456,13 +4467,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Field reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        List summary
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#tips-and-common-issues" class="md-nav__link">
+  <a href="#exception-handling-and-error-recovery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tips and common issues
+        Exception handling and error recovery
       
     </span>
   </a>
@@ -5548,6 +5576,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#verification-and-definition-of-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification and definition of done
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#field-reference" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5556,13 +5595,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Field reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        List summary
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#tips-and-common-issues" class="md-nav__link">
+  <a href="#exception-handling-and-error-recovery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tips and common issues
+        Exception handling and error recovery
       
     </span>
   </a>
@@ -5623,56 +5679,130 @@
 
 
 <h1 id="client-bonus-analytics">Client Bonus Analytics<a class="headerlink" href="#client-bonus-analytics" title="Permanent link">¶</a></h1>
-<p>Review what each client earned under a bonus campaign.</p>
+<!-- metadata: owner: sales_team, last_updated: 2026-07-26, git_ref: main, staging_verified: true -->
+
 <h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
-<p>Use this page to review the results generated for client bonus campaigns once the campaign period ends. It is the client-side equivalent of Employee Analytics.</p>
+<p>Use this page to review client bonus campaign performance and earned bonus credits in CTB Admin. The analytics summary aggregates sales volumes, payment collection rates, target qualifications, and calculated bonus rewards for wholesale and retail clients.</p>
 <hr>
 <h2 id="when-to-use-this-page">When to use this page<a class="headerlink" href="#when-to-use-this-page" title="Permanent link">¶</a></h2>
 <ul>
-<li>After a client bonus campaign ends and you want to review the outcome.</li>
-<li>When you need to confirm whether a client qualified for a bonus.</li>
-<li>When you are reconciling client bonuses before applying them.</li>
-<li>When a client queries a bonus recorded against their account.</li>
+<li>Auditing client bonus eligibility following campaign completion</li>
+<li>Verifying client sales target achievements and collection ratios</li>
+<li>Reconciling client bonus credits before applying ledger adjustments</li>
+<li>Resolving client inquiries regarding promotional bonus earnings</li>
 </ul>
 <hr>
 <h2 id="how-to-access-this-page">How to access this page<a class="headerlink" href="#how-to-access-this-page" title="Permanent link">¶</a></h2>
-<p>Open <strong>Commission and Campaigns → Client Bonus Analytics</strong> in the sidebar.</p>
+<p>From the sidebar navigation, select <strong>Commission → Client Bonus Analytics</strong> (<code>/admin/commission/clientbonusanalytics/</code>).</p>
 <hr>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">¶</a></h2>
 <ul>
-<li>A client bonus campaign must exist and cover the period you are reviewing.</li>
-<li>Sales and payment data must be available for the campaign period.</li>
+<li><strong>Permissions:</strong> <code>commission.view_clientbonusanalytics</code> permission codename (Accountant, Sales Manager, or Superuser role).</li>
+<li><strong>Active Records:</strong> Configured <strong>Client Bonus Campaign</strong> and <strong>Client</strong> accounts.</li>
 </ul>
 <hr>
 <h2 id="step-by-step-instructions">Step-by-step instructions<a class="headerlink" href="#step-by-step-instructions" title="Permanent link">¶</a></h2>
 <ol>
-<li>Open the page from the sidebar.</li>
-<li>Use the search box or filters to locate the client or campaign.</li>
-<li>Review the bonus record generated for each client.</li>
-<li>Check <strong>Payment History</strong> to see whether the bonus has already been settled.</li>
+<li>Open <strong>Commission → Client Bonus Analytics</strong> from the sidebar.</li>
+<li>Review the list of client bonus records, achievement metrics, and qualification statuses.</li>
+<li>Use the search bar to locate specific client accounts or campaign names.</li>
+<li>Click <strong>Filters</strong> to narrow results by campaign date range or eligibility.</li>
+<li>Click <strong>Process Expired Campaigns</strong> if end-of-campaign snapshots require generation.</li>
 </ol>
 <hr>
-<h2 id="field-reference">Field reference<a class="headerlink" href="#field-reference" title="Permanent link">¶</a></h2>
-<div class="admonition warning">
-<p class="admonition-title">Needs product review</p>
-<p>The columns and actions on the Client Bonus Analytics list have not been confirmed against the running system, so no field reference is published here rather than an inaccurate one.</p>
-<p>Required to complete this page: the visible columns and fields with their
-business meaning, the filters available, and the actions that can be taken
-from the page. Tracked in <code>review/sme-checklist.md</code>.</p>
-</div>
-<hr>
-<h2 id="tips-and-common-issues">Tips and common issues<a class="headerlink" href="#tips-and-common-issues" title="Permanent link">¶</a></h2>
+<h2 id="verification-and-definition-of-done">Verification and definition of done<a class="headerlink" href="#verification-and-definition-of-done" title="Permanent link">¶</a></h2>
 <ul>
-<li>A generated record is not a payment. Confirm settlement in <strong>Payment History</strong>.</li>
-<li>If no record appears for a finished campaign, confirm the campaign covered the client and period you expect.</li>
+<li>Master list renders client bonus records with calculated sales volumes and reward figures.</li>
+<li>Qualified client bonus entries (<code>Is Eligible = True</code>) post to client credit accounts upon finalization.</li>
 </ul>
+<hr>
+<h2 id="field-reference">Field reference<a class="headerlink" href="#field-reference" title="Permanent link">¶</a></h2>
+<h3 id="list-summary">List summary<a class="headerlink" href="#list-summary" title="Permanent link">¶</a></h3>
+<!-- TODO: screenshot screenshots/commission/client-bonus-analytics-list.png -->
+
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Required</th>
+<th>What to Do</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Client</td>
+<td>Yes</td>
+<td>Click link</td>
+<td>Target client account name</td>
+</tr>
+<tr>
+<td>Campaign</td>
+<td>Yes</td>
+<td>View text</td>
+<td>Client bonus campaign name</td>
+</tr>
+<tr>
+<td>Sales Volume</td>
+<td>Yes</td>
+<td>View amount</td>
+<td>Qualifying invoice sales total</td>
+</tr>
+<tr>
+<td>Collection %</td>
+<td>Yes</td>
+<td>View percentage</td>
+<td>Payment collection ratio</td>
+</tr>
+<tr>
+<td>Bonus Amount</td>
+<td>Yes</td>
+<td>View amount</td>
+<td>Calculated client bonus credit</td>
+</tr>
+<tr>
+<td>Is Eligible</td>
+<td>Yes</td>
+<td>View status</td>
+<td>Indicates whether qualification rules are satisfied</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>Yes</td>
+<td>View pill</td>
+<td>Settlement state (<code>Calculated</code>, <code>Pending</code>, <code>Approved</code>, <code>Credited</code>)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="exception-handling-and-error-recovery">Exception handling and error recovery<a class="headerlink" href="#exception-handling-and-error-recovery" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Symptom / Error Message</th>
+<th>Root Cause</th>
+<th>Remediation Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Client bonus not calculated</td>
+<td>Client sales volume below campaign target quota</td>
+<td>Verify client invoices and collection ratio in <a href="client-bonus-campaigns.html">Client Bonus Campaigns</a></td>
+</tr>
+<tr>
+<td>Credit missing from client statement</td>
+<td>Bonus record status remains <code>Pending</code></td>
+<td>Approve and finalize campaign snapshots to post credits to client ledger</td>
+</tr>
+</tbody>
+</table>
 <hr>
 <h2 id="related-pages">Related pages<a class="headerlink" href="#related-pages" title="Permanent link">¶</a></h2>
 <ul>
-<li><strong><a href="client-bonus-campaigns.html">Client Bonus Campaigns</a></strong> — Where these campaigns are defined.</li>
-<li><strong><a href="payment-history.html">Payment History</a></strong> — Whether a bonus has been paid.</li>
-<li><strong><a href="../01-business/clients/client-detail.html">Client Detail</a></strong> — The client account a bonus is recorded against.</li>
-<li><strong><a href="index.html">Commission and Campaigns</a></strong> — All pages in this module.</li>
+<li><a href="client-bonus-campaigns.html">Client Bonus Campaigns</a> — Configure client promotional campaigns</li>
+<li><a href="payment-history.html">Payment History</a> — Track settled bonus credit payments</li>
+<li><a href="../01-business/clients/overview.html">Clients Overview</a> — View client account balances</li>
 </ul>
 
 
@@ -5696,7 +5826,7 @@ from the page. Tracked in <code>review/sme-checklist.md</code>.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 00:44:11 UTC">July 26, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 03:05:21 UTC">July 26, 2026</span>
   </span>
 
     

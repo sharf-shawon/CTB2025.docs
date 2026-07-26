@@ -3079,10 +3079,32 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#step-by-step-instructions" class="md-nav__link">
     <span class="md-ellipsis">
       
         Step-by-step instructions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification-and-definition-of-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification and definition of done
       
     </span>
   </a>
@@ -3118,43 +3140,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#audit-information" class="md-nav__link">
+  <a href="#exception-handling-and-error-recovery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Audit information
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#saving-the-position" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Saving the Position
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deleting-a-position" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Deleting a Position
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tips-and-common-issues" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tips and common issues
+        Exception handling and error recovery
       
     </span>
   </a>
@@ -5567,10 +5556,32 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#step-by-step-instructions" class="md-nav__link">
     <span class="md-ellipsis">
       
         Step-by-step instructions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification-and-definition-of-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification and definition of done
       
     </span>
   </a>
@@ -5606,43 +5617,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#audit-information" class="md-nav__link">
+  <a href="#exception-handling-and-error-recovery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Audit information
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#saving-the-position" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Saving the Position
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deleting-a-position" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Deleting a Position
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tips-and-common-issues" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tips and common issues
+        Exception handling and error recovery
       
     </span>
   </a>
@@ -5703,102 +5681,115 @@
 
 
 <h1 id="manage-position">Manage Position<a class="headerlink" href="#manage-position" title="Permanent link">¶</a></h1>
+<!-- metadata: owner: hr, last_updated: 2026-07-26, git_ref: main, staging_verified: true -->
+
 <h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
-<p>Use this page to add or edit a position within your organization. Positions define the job roles or titles held by employees, making it easier to manage responsibilities, reporting structures, and workforce organization.</p>
+<p>Use this page to add or update a job position in CTB Admin. Positions define specific job titles and roles held by employees (e.g., Cutter, Sewing Operator, Store Keeper).</p>
 <hr>
 <h2 id="when-to-use-this-page">When to use this page<a class="headerlink" href="#when-to-use-this-page" title="Permanent link">¶</a></h2>
 <ul>
-<li>Creating a new job position for your organization</li>
-<li>Editing the name, description, or status of an existing position</li>
-<li>Disabling or enabling a position as business needs change</li>
-<li>Reviewing audit information for compliance and change tracking</li>
+<li>Defining a new job title or position in the company</li>
+<li>Updating the title name, status, or description of an existing position</li>
+<li>Deactivating job positions no longer in active use</li>
 </ul>
 <hr>
 <h2 id="how-to-access-this-page">How to access this page<a class="headerlink" href="#how-to-access-this-page" title="Permanent link">¶</a></h2>
-<p>From the sidebar, go to <strong>Employee → Positions</strong>. On the Positions List page, click the <strong>purple (+) icon</strong> in the top-right corner to add a new position, or select an existing position to edit.</p>
-<p>The system opens the <strong>Manage Position</strong> page.</p>
+<p>From the sidebar navigation, select <strong>Employee → Positions</strong> (<code>/admin/employee/workposition/</code>). Click <strong>Add Position (+)</strong> to create a new record, or click an existing position row to edit.</p>
+<hr>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>Permissions:</strong> <code>employee.add_workposition</code> / <code>employee.change_workposition</code> permission codenames (HR Manager or System Administrator role).</li>
+<li><strong>Active Records:</strong> None.</li>
+</ul>
 <hr>
 <h2 id="step-by-step-instructions">Step-by-step instructions<a class="headerlink" href="#step-by-step-instructions" title="Permanent link">¶</a></h2>
 <ol>
-<li>Open <strong>Manage Position</strong> from the <strong>Employee</strong> section of the sidebar.</li>
-<li>Complete the <strong>Position information</strong> section described below.</li>
-<li>Follow <strong>Saving the Position</strong> below to finish.</li>
+<li>Open <strong>Positions</strong> from the <strong>Employee</strong> section of the sidebar.</li>
+<li>Click <strong>Add Position (+)</strong> or select an existing position row.</li>
+<li>Enter the <strong>Position Name</strong> and optional <strong>Description</strong>.</li>
+<li>Set the <strong>Is Enabled</strong> toggle switch state.</li>
+<li>Click <strong>Save</strong> to apply changes.</li>
 </ol>
+<hr>
+<h2 id="verification-and-definition-of-done">Verification and definition of done<a class="headerlink" href="#verification-and-definition-of-done" title="Permanent link">¶</a></h2>
+<ul>
+<li>System confirms: <code>Work Position "Name" was added/changed successfully.</code></li>
+<li>The position is listed in <code>/admin/employee/workposition/</code> and is available in employee profile forms.</li>
+</ul>
 <hr>
 <h2 id="field-reference">Field reference<a class="headerlink" href="#field-reference" title="Permanent link">¶</a></h2>
 <h3 id="position-information">Position information<a class="headerlink" href="#position-information" title="Permanent link">¶</a></h3>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="manage-position-page.png" data-desc-position="bottom"><img alt="Manage Position Page" src="manage-position-page.png"></a></p>
-<p>Fill in the following fields in the Position Information section:</p>
 <table>
 <thead>
 <tr>
+<th>Step</th>
 <th>Field</th>
+<th>Required</th>
 <th>What to Do</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td>1</td>
 <td>SKU</td>
-<td>Auto-generated</td>
-<td>System-generated unique identifier for the position (read-only)</td>
+<td>No</td>
+<td>View value</td>
+<td>System-generated unique identifier code</td>
 </tr>
 <tr>
-<td>Position Name *</td>
-<td>Enter name</td>
-<td>The official title or name of the position (required)</td>
+<td>2</td>
+<td>Position Name</td>
+<td>Yes</td>
+<td>Enter title</td>
+<td>Official job position title</td>
 </tr>
 <tr>
+<td>3</td>
 <td>Description</td>
+<td>No</td>
 <td>Enter text</td>
-<td>Optional details about the position's responsibilities or purpose</td>
+<td>Detailed role description and duties</td>
 </tr>
 <tr>
+<td>4</td>
 <td>Is Enabled</td>
-<td>Toggle on/off</td>
-<td>Set whether the position is active and available for assignment</td>
+<td>Yes</td>
+<td>Toggle switch</td>
+<td>Controls availability for employee assignment</td>
 </tr>
 </tbody>
 </table>
-<div class="admonition warning">
-<p class="admonition-title">Required Fields</p>
-<p>Fields marked with a <strong>red star (*)</strong> are mandatory.</p>
-</div>
 <hr>
-<h2 id="audit-information">Audit information<a class="headerlink" href="#audit-information" title="Permanent link">¶</a></h2>
-<p>The <strong>Audit Information</strong> section displays system-generated details about who created or last modified the position record. Click the section header to expand it. This section is read-only and helps with compliance and change tracking.</p>
-<hr>
-<h2 id="saving-the-position">Saving the Position<a class="headerlink" href="#saving-the-position" title="Permanent link">¶</a></h2>
-<p>After completing all fields:</p>
-<ul>
-<li>Click <strong>Save</strong> to create or update the position</li>
-<li>Click <strong>Save and continue editing</strong> to save and remain on the page</li>
-<li>Click <strong>Save and add another</strong> to save and immediately add a new position</li>
-</ul>
-<p>The position will now be available for employee assignment and reporting.</p>
-<hr>
-<h2 id="deleting-a-position">Deleting a Position<a class="headerlink" href="#deleting-a-position" title="Permanent link">¶</a></h2>
-<p>A <strong>Delete Position</strong> button is available at the bottom-left of the page.</p>
-<div class="admonition warning">
-<p class="admonition-title">Restricted Action</p>
-<p>A position can only be deleted if no employees are currently assigned to it. If the position is in use, remove the assignment from the relevant employee records first before attempting to delete.</p>
-</div>
-<hr>
-<h2 id="tips-and-common-issues">Tips and common issues<a class="headerlink" href="#tips-and-common-issues" title="Permanent link">¶</a></h2>
-<ul>
-<li><strong>Position Name is required</strong> — You must enter a unique name before saving</li>
-<li><strong>Is Enabled controls availability</strong> — Only enabled positions can be assigned to employees</li>
-<li><strong>Use Description for clarity</strong> — Add details to help others understand the role's responsibilities</li>
-<li><strong>History button</strong> — Use the <strong>History</strong> button in the top-right corner to review all past changes made to this position record</li>
-<li><strong>SKU is auto-generated</strong> — The system assigns a unique SKU on creation; you do not need to enter it manually</li>
-</ul>
+<h2 id="exception-handling-and-error-recovery">Exception handling and error recovery<a class="headerlink" href="#exception-handling-and-error-recovery" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Symptom / Error Message</th>
+<th>Root Cause</th>
+<th>Remediation Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Position with this Name already exists</code></td>
+<td>Duplicate position title entry</td>
+<td>Use a distinct job position name or update the existing position</td>
+</tr>
+<tr>
+<td>Cannot delete position</td>
+<td>Active employees are assigned to this position</td>
+<td>Reassign active employees to another position before deleting</td>
+</tr>
+</tbody>
+</table>
 <hr>
 <h2 id="related-pages">Related pages<a class="headerlink" href="#related-pages" title="Permanent link">¶</a></h2>
 <ul>
-<li><strong>Positions Overview</strong> — View and manage all positions in the system</li>
-<li><strong>Employees</strong> — Assign positions to employee profiles</li>
-<li><strong>Departments</strong> — Manage the departments positions belong to</li>
-<li><strong>Audit Log</strong> — Review all changes made to position records</li>
+<li><a href="overview.html">Positions Overview</a> — View master list of all positions</li>
+<li><a href="../departments/overview.html">Departments Overview</a> — Manage department definitions</li>
+<li><a href="../employees/add-employee.html">Add Employee</a> — Assign positions to new staff members</li>
 </ul>
 
 
@@ -5822,7 +5813,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 00:44:11 UTC">July 26, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 03:05:21 UTC">July 26, 2026</span>
   </span>
 
     

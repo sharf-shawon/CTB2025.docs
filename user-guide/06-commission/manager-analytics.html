@@ -4364,6 +4364,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#verification-and-definition-of-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification and definition of done
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#field-reference" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -4372,13 +4383,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Field reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        List summary
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#tips-and-common-issues" class="md-nav__link">
+  <a href="#exception-handling-and-error-recovery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tips and common issues
+        Exception handling and error recovery
       
     </span>
   </a>
@@ -5548,6 +5576,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#verification-and-definition-of-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification and definition of done
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#field-reference" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5556,13 +5595,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Field reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        List summary
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#tips-and-common-issues" class="md-nav__link">
+  <a href="#exception-handling-and-error-recovery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tips and common issues
+        Exception handling and error recovery
       
     </span>
   </a>
@@ -5623,59 +5679,136 @@
 
 
 <h1 id="manager-analytics">Manager Analytics<a class="headerlink" href="#manager-analytics" title="Permanent link">¶</a></h1>
-<p>Review the commission a manager earned on the aggregate sales of their team during a campaign.</p>
+<!-- metadata: owner: sales_team, last_updated: 2026-07-26, git_ref: main, staging_verified: true -->
+
 <h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
-<p>Use this page to review manager-level commission results for a campaign. Manager commission is driven by the <strong>Manager Trigger Condition</strong> and <strong>Manager Commission Rate (%)</strong> set on the campaign, and is calculated against the aggregate team sales amount rather than individual product targets.</p>
+<p>Use this page to review manager override commission analytics in CTB Admin. Manager commissions calculate earnings based on aggregate team sales totals, manager trigger conditions, and percentage override rates defined on commission campaigns.</p>
 <hr>
 <h2 id="when-to-use-this-page">When to use this page<a class="headerlink" href="#when-to-use-this-page" title="Permanent link">¶</a></h2>
 <ul>
-<li>After a commission campaign ends and you want to review manager results.</li>
-<li>When you need to confirm whether a manager met the campaign's trigger condition.</li>
-<li>When you are reconciling manager commission before payment.</li>
-<li>When a manager queries the commission recorded against their team.</li>
+<li>Auditing team sales manager override commissions post-campaign completion</li>
+<li>Verifying whether team aggregate sales satisfy campaign trigger conditions</li>
+<li>Reconciling manager commission earnings prior to payroll Payout</li>
+<li>Resolving manager inquiries regarding team sales override calculations</li>
 </ul>
 <hr>
 <h2 id="how-to-access-this-page">How to access this page<a class="headerlink" href="#how-to-access-this-page" title="Permanent link">¶</a></h2>
-<p>Open <strong>Commission and Campaigns → Manager Analytics</strong> in the sidebar.</p>
+<p>From the sidebar navigation, select <strong>Commission → Manager Analytics</strong> (<code>/admin/commission/managercommissionanalytics/</code>).</p>
 <hr>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">¶</a></h2>
 <ul>
-<li>The campaign must define a <strong>Manager Trigger Condition</strong> and a <strong>Manager Commission Rate (%)</strong>.</li>
-<li>The campaign date range should be complete or the campaign should be expired.</li>
-<li>Sales data must be available for the manager's team over the campaign period.</li>
+<li><strong>Permissions:</strong> <code>commission.view_managercommissionanalytics</code> permission codename (Accountant, Sales Director, or Superuser role).</li>
+<li><strong>Active Records:</strong> Configured <strong>Commission Campaign</strong> with defined manager trigger rules.</li>
 </ul>
 <hr>
 <h2 id="step-by-step-instructions">Step-by-step instructions<a class="headerlink" href="#step-by-step-instructions" title="Permanent link">¶</a></h2>
 <ol>
-<li>Open the page from the sidebar.</li>
-<li>Use the search box or filters to locate the manager or campaign.</li>
-<li>Review the analytics record generated for each manager and campaign.</li>
-<li>Compare the recorded result against the trigger condition set on the campaign.</li>
-<li>Open <strong>Commission Campaigns</strong> if the trigger condition or rate needs correcting.</li>
+<li>Open <strong>Commission → Manager Analytics</strong> from the sidebar.</li>
+<li>Review the list of manager analytics entries, team sales volumes, and override commission amounts.</li>
+<li>Use the search bar to locate specific managers or campaign names.</li>
+<li>Click <strong>Filters</strong> to narrow results by campaign period or eligibility.</li>
+<li>Click <strong>Process Expired Campaigns</strong> if end-of-campaign calculations require refresh.</li>
 </ol>
 <hr>
-<h2 id="field-reference">Field reference<a class="headerlink" href="#field-reference" title="Permanent link">¶</a></h2>
-<div class="admonition warning">
-<p class="admonition-title">Needs product review</p>
-<p>The columns and actions on the Manager Analytics list have not been confirmed against the running system, so no field reference is published here rather than an inaccurate one.</p>
-<p>Required to complete this page: the visible columns and fields with their
-business meaning, the filters available, and the actions that can be taken
-from the page. Tracked in <code>review/sme-checklist.md</code>.</p>
-</div>
-<hr>
-<h2 id="tips-and-common-issues">Tips and common issues<a class="headerlink" href="#tips-and-common-issues" title="Permanent link">¶</a></h2>
+<h2 id="verification-and-definition-of-done">Verification and definition of done<a class="headerlink" href="#verification-and-definition-of-done" title="Permanent link">¶</a></h2>
 <ul>
-<li>Manager commission depends on aggregate team sales, not on individual product targets. A manager can qualify while individual employees do not.</li>
-<li>If no record appears for a completed campaign, check that the campaign defines a manager trigger condition.</li>
-<li>Confirm the campaign is finalised before treating manager figures as final.</li>
+<li>Master list displays manager override entries with aggregate team sales totals and percentage override figures.</li>
+<li>Qualified manager commission entries (<code>Is Eligible = True</code>) post to manager payout balances upon campaign finalization.</li>
 </ul>
+<hr>
+<h2 id="field-reference">Field reference<a class="headerlink" href="#field-reference" title="Permanent link">¶</a></h2>
+<h3 id="list-summary">List summary<a class="headerlink" href="#list-summary" title="Permanent link">¶</a></h3>
+<!-- TODO: screenshot screenshots/commission/manager-analytics-list.png -->
+
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Required</th>
+<th>What to Do</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Manager</td>
+<td>Yes</td>
+<td>Click link</td>
+<td>Sales manager employee name</td>
+</tr>
+<tr>
+<td>Campaign</td>
+<td>Yes</td>
+<td>View text</td>
+<td>Commission campaign name</td>
+</tr>
+<tr>
+<td>Team Sales Total</td>
+<td>Yes</td>
+<td>View amount</td>
+<td>Aggregate sales value achieved by team members</td>
+</tr>
+<tr>
+<td>Trigger Condition</td>
+<td>Yes</td>
+<td>View text</td>
+<td>Required team sales threshold for qualification</td>
+</tr>
+<tr>
+<td>Override Rate %</td>
+<td>Yes</td>
+<td>View percentage</td>
+<td>Override commission percentage</td>
+</tr>
+<tr>
+<td>Commission Amount</td>
+<td>Yes</td>
+<td>View amount</td>
+<td><code>Team Sales Total * Override Rate %</code></td>
+</tr>
+<tr>
+<td>Is Eligible</td>
+<td>Yes</td>
+<td>View status</td>
+<td>Indicates whether team trigger condition is satisfied</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>Yes</td>
+<td>View pill</td>
+<td>Processing state (<code>Calculated</code>, <code>Pending</code>, <code>Approved</code>, <code>Paid</code>)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="exception-handling-and-error-recovery">Exception handling and error recovery<a class="headerlink" href="#exception-handling-and-error-recovery" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Symptom / Error Message</th>
+<th>Root Cause</th>
+<th>Remediation Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Manager analytics entry missing</td>
+<td>Campaign setup lacks <code>Manager Trigger Condition</code> or <code>Manager Commission Rate (%)</code></td>
+<td>Open campaign in <a href="commission-campaigns.html">Commission Campaigns</a> and set manager parameters</td>
+</tr>
+<tr>
+<td><code>Is Eligible</code> shows false</td>
+<td>Aggregate team sales total did not reach required trigger threshold</td>
+<td>Audit team sales invoices to verify total sales volume</td>
+</tr>
+</tbody>
+</table>
 <hr>
 <h2 id="related-pages">Related pages<a class="headerlink" href="#related-pages" title="Permanent link">¶</a></h2>
 <ul>
-<li><strong><a href="commission-campaigns.html">Commission Campaigns</a></strong> — Where the manager trigger condition and rate are set.</li>
-<li><strong><a href="employee-analytics.html">Employee Analytics</a></strong> — Per-employee results for the same campaign.</li>
-<li><strong><a href="payment-history.html">Payment History</a></strong> — Payments recorded against campaign results.</li>
-<li><strong><a href="index.html">Commission and Campaigns</a></strong> — All pages in this module.</li>
+<li><a href="commission-campaigns.html">Commission Campaigns</a> — Configure manager trigger rules and override rates</li>
+<li><a href="employee-analytics.html">Employee Analytics</a> — Review individual employee commission breakdowns</li>
+<li><a href="payment-history.html">Payment History</a> — Inspect commission payment Payouts</li>
 </ul>
 
 
@@ -5699,7 +5832,7 @@ from the page. Tracked in <code>review/sme-checklist.md</code>.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 00:44:11 UTC">July 26, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 03:05:21 UTC">July 26, 2026</span>
   </span>
 
     

@@ -4032,10 +4032,32 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#step-by-step-instructions" class="md-nav__link">
     <span class="md-ellipsis">
       
         Step-by-step instructions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification-and-definition-of-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification and definition of done
       
     </span>
   </a>
@@ -4065,38 +4087,16 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#system-fields" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        System fields
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#saving-the-balance" class="md-nav__link">
+  <a href="#exception-handling-and-error-recovery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Saving the balance
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tips-and-common-issues" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tips and common issues
+        Exception handling and error recovery
       
     </span>
   </a>
@@ -5556,10 +5556,32 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#step-by-step-instructions" class="md-nav__link">
     <span class="md-ellipsis">
       
         Step-by-step instructions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification-and-definition-of-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification and definition of done
       
     </span>
   </a>
@@ -5589,38 +5611,16 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#system-fields" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        System fields
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#saving-the-balance" class="md-nav__link">
+  <a href="#exception-handling-and-error-recovery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Saving the balance
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tips-and-common-issues" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tips and common issues
+        Exception handling and error recovery
       
     </span>
   </a>
@@ -5681,118 +5681,124 @@
 
 
 <h1 id="add-purchase-balance">Add Purchase Balance<a class="headerlink" href="#add-purchase-balance" title="Permanent link">¶</a></h1>
+<!-- metadata: owner: hr, last_updated: 2026-07-26, git_ref: main, staging_verified: true -->
+
 <h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
-<p>Use this page to record or adjust an employee's purchase balance — the amount owed to or by an employee for advances, loans, or purchases made on behalf of the business. Purchase balances track financial obligations between the company and its employees.</p>
+<p>Use this page to record or adjust an employee's purchase balance in CTB Admin. Purchase balances track financial obligations, advances, store purchases, or adjustments between the company and staff members.</p>
 <hr>
 <h2 id="when-to-use-this-page">When to use this page<a class="headerlink" href="#when-to-use-this-page" title="Permanent link">¶</a></h2>
 <ul>
-<li>Recording an employee advance or loan</li>
-<li>Adjusting an employee's running balance</li>
-<li>Documenting purchases made by the employee on company account</li>
-<li>Tracking money owed by employees to the company</li>
+<li>Logging employee advances or credit purchases made on company account</li>
+<li>Adjusting an employee's running purchase balance</li>
+<li>Documenting internal store purchases deducted from salary payouts</li>
 </ul>
 <hr>
 <h2 id="how-to-access-this-page">How to access this page<a class="headerlink" href="#how-to-access-this-page" title="Permanent link">¶</a></h2>
-<p>From the sidebar, go to <strong>Employee → Purchase Balances</strong>. On the Purchase Balances List page, click the <strong>purple (+) icon</strong> in the top-right corner.</p>
-<p>The system opens the <strong>Add Purchase Balance Page</strong>.</p>
+<p>From the sidebar navigation, select <strong>Employee → Purchase Balances</strong> (<code>/admin/employee/employeepurchasebalance/</code>). Click <strong>Add Purchase Balance (+)</strong> in the top-right corner.</p>
+<hr>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>Permissions:</strong> <code>employee.add_employeepurchasebalance</code> permission codename (HR Staff, Accountant, or Superuser role).</li>
+<li><strong>Active Records:</strong> Active <strong>Employee</strong> profile.</li>
+</ul>
 <hr>
 <h2 id="step-by-step-instructions">Step-by-step instructions<a class="headerlink" href="#step-by-step-instructions" title="Permanent link">¶</a></h2>
 <ol>
-<li>Open <strong>Add Purchase Balance</strong> from the <strong>Employee</strong> section of the sidebar.</li>
-<li>Complete the <strong>General information</strong> section described below.</li>
-<li>Complete the <strong>System fields</strong> section described below.</li>
-<li>Follow <strong>Saving the balance</strong> below to finish.</li>
+<li>Open <strong>Purchase Balances</strong> from the <strong>Employee</strong> section of the sidebar.</li>
+<li>Click <strong>Add Purchase Balance (+)</strong>.</li>
+<li>Select the target <strong>Employee</strong>.</li>
+<li>Enter the balance <strong>Amount</strong> (positive for amount owed by employee).</li>
+<li>Select the transaction <strong>Date</strong> (<code>YYYY-MM-DD</code>).</li>
+<li>Enter optional explanation in <strong>Notes</strong>.</li>
+<li>Click <strong>Save</strong> to confirm the record.</li>
 </ol>
+<hr>
+<h2 id="verification-and-definition-of-done">Verification and definition of done<a class="headerlink" href="#verification-and-definition-of-done" title="Permanent link">¶</a></h2>
+<ul>
+<li>System generates a unique purchase balance SKU (<code>PBAL-YYYYMMDD-XXXX</code>).</li>
+<li>Record appears under <code>/admin/employee/employeepurchasebalance/</code> and updates the employee's running purchase balance total.</li>
+</ul>
 <hr>
 <h2 id="field-reference">Field reference<a class="headerlink" href="#field-reference" title="Permanent link">¶</a></h2>
 <h3 id="general-information">General information<a class="headerlink" href="#general-information" title="Permanent link">¶</a></h3>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="add-purchase-balance.png" data-desc-position="bottom"><img alt="Add Purchase Balance" src="add-purchase-balance.png"></a>
-Fill in the following fields on the main form:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="add-purchase-balance.png" data-desc-position="bottom"><img alt="Add Purchase Balance" src="add-purchase-balance.png"></a></p>
 <table>
 <thead>
 <tr>
+<th>Step</th>
 <th>Field</th>
+<th>Required</th>
 <th>What to Do</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td>1</td>
+<td>SKU</td>
+<td>No</td>
+<td>Read-only</td>
+<td>System-generated tracking identifier</td>
+</tr>
+<tr>
+<td>2</td>
 <td>Employee</td>
+<td>Yes</td>
 <td>Select employee</td>
-<td>The employee account associated with this purchase balance</td>
+<td>Target staff member</td>
 </tr>
 <tr>
+<td>3</td>
 <td>Amount</td>
+<td>Yes</td>
 <td>Enter amount</td>
-<td>The balance amount (positive for amount owed by employee, negative for amount owed to employee)</td>
+<td>Balance amount (positive = owed by staff)</td>
 </tr>
 <tr>
+<td>4</td>
 <td>Date</td>
+<td>Yes</td>
 <td>Select date</td>
-<td>Date the balance is recorded or adjusted (defaults to today)</td>
+<td>Entry date (<code>YYYY-MM-DD</code>)</td>
 </tr>
 <tr>
+<td>5</td>
 <td>Notes</td>
+<td>No</td>
 <td>Enter text</td>
-<td>Optional internal notes or reason for the balance adjustment</td>
+<td>Internal explanation or reference notes</td>
 </tr>
 </tbody>
 </table>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p><strong>Employee</strong> and <strong>Amount</strong> fields are mandatory.</p>
-</div>
-<h3 id="system-fields">System fields<a class="headerlink" href="#system-fields" title="Permanent link">¶</a></h3>
-<p>The following fields are automatically managed by the system:</p>
+<hr>
+<h2 id="exception-handling-and-error-recovery">Exception handling and error recovery<a class="headerlink" href="#exception-handling-and-error-recovery" title="Permanent link">¶</a></h2>
 <table>
 <thead>
 <tr>
-<th>Field</th>
-<th>Description</th>
+<th>Symptom / Error Message</th>
+<th>Root Cause</th>
+<th>Remediation Action</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>SKU</td>
-<td>Auto-generated unique identifier for this balance</td>
+<td><code>Employee is required</code></td>
+<td>Form submitted without selecting an employee</td>
+<td>Select a valid employee from dropdown</td>
 </tr>
 <tr>
-<td>Created</td>
-<td>Date and time the record was created (read-only)</td>
-</tr>
-<tr>
-<td>Modified</td>
-<td>Date and time of the last update (read-only)</td>
+<td><code>Amount must be a valid number</code></td>
+<td>Non-numeric or invalid amount entered</td>
+<td>Enter a valid monetary number in <strong>Amount</strong></td>
 </tr>
 </tbody>
 </table>
 <hr>
-<h2 id="saving-the-balance">Saving the balance<a class="headerlink" href="#saving-the-balance" title="Permanent link">¶</a></h2>
-<p>After completing the form:</p>
-<ul>
-<li>Click <strong>Save</strong> to record the purchase balance</li>
-<li>Click <strong>Save and continue editing</strong> to save and remain on the page</li>
-<li>Click <strong>Save and add another</strong> to save and create a new balance immediately</li>
-</ul>
-<p>The purchase balance is now recorded and will be reflected in employee reports and payroll calculations.</p>
-<hr>
-<h2 id="tips-and-common-issues">Tips and common issues<a class="headerlink" href="#tips-and-common-issues" title="Permanent link">¶</a></h2>
-<ul>
-<li><strong>Employee is required</strong> — You must select an employee before saving</li>
-<li><strong>Amount determines direction</strong> — Positive amounts indicate money owed by the employee; negative amounts indicate money owed to the employee</li>
-<li><strong>Date affects reporting period</strong> — The Date field determines which reporting period this balance appears in</li>
-<li><strong>Notes are internal</strong> — Notes are visible only to admins and are not included in employee-facing reports</li>
-<li><strong>Adjustments are cumulative</strong> — Each new purchase balance record adjusts the employee's running total</li>
-<li><strong>Check existing balance</strong> — Review the employee's previous balances before adding a new entry to avoid duplicate entries</li>
-</ul>
-<hr>
 <h2 id="related-pages">Related pages<a class="headerlink" href="#related-pages" title="Permanent link">¶</a></h2>
 <ul>
-<li><strong>Purchase Balance Detail</strong> — View or edit purchase balance details after creation</li>
-<li><strong>Purchase Balance Reports</strong> — Analyze purchase balance data and employee financial summaries</li>
-<li><strong>Employee List</strong> — View and manage employee records linked to purchase balances</li>
-<li><strong>Payroll and Salary</strong> — Track how purchase balance adjustments affect employee compensation</li>
+<li><a href="overview.html">Purchase Balances Overview</a> — View master list of purchase balances</li>
+<li><a href="../employees/employee-detail.html">Employee Detail</a> — Inspect employee profile purchase ledger</li>
+<li><a href="../payouts/create-payout.html">Create Payout</a> — Settle or process payouts</li>
 </ul>
 
 
@@ -5816,7 +5822,7 @@ Fill in the following fields on the main form:</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 00:44:11 UTC">July 26, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 03:05:21 UTC">July 26, 2026</span>
   </span>
 
     

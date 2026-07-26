@@ -4420,6 +4420,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#verification-and-definition-of-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification and definition of done
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#field-reference" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -4428,13 +4439,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Field reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#campaign-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Campaign details
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#tips-and-common-issues" class="md-nav__link">
+  <a href="#exception-handling-and-error-recovery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tips and common issues
+        Exception handling and error recovery
       
     </span>
   </a>
@@ -5548,6 +5576,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#verification-and-definition-of-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification and definition of done
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#field-reference" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5556,13 +5595,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Field reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#campaign-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Campaign details
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#tips-and-common-issues" class="md-nav__link">
+  <a href="#exception-handling-and-error-recovery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tips and common issues
+        Exception handling and error recovery
       
     </span>
   </a>
@@ -5623,55 +5679,139 @@
 
 
 <h1 id="client-bonus-campaigns">Client Bonus Campaigns<a class="headerlink" href="#client-bonus-campaigns" title="Permanent link">¶</a></h1>
-<p>Define bonus campaigns that reward clients rather than employees.</p>
+<!-- metadata: owner: sales_team, last_updated: 2026-07-26, git_ref: main, staging_verified: true -->
+
 <h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
-<p>Use this page to create and manage bonus campaigns aimed at clients. A client bonus campaign works in the same way as a commission campaign, but the reward is attached to a client account rather than to an employee.</p>
+<p>Use this page to create and manage client bonus campaigns in CTB Admin. Client bonus campaigns reward wholesale or retail clients based on sales targets, order quantities, and payment collection thresholds.</p>
 <hr>
 <h2 id="when-to-use-this-page">When to use this page<a class="headerlink" href="#when-to-use-this-page" title="Permanent link">¶</a></h2>
 <ul>
-<li>When you want to launch a bonus scheme for one or more clients.</li>
-<li>When you need to change the dates or terms of an existing bonus campaign.</li>
-<li>When you want to review which clients a bonus campaign covers.</li>
+<li>Launching promotional bonus programs for key client accounts</li>
+<li>Setting client sales target thresholds and reward percentage tiers</li>
+<li>Managing active bonus campaign dates and client eligibility rules</li>
+<li>Reviewing client bonus calculation parameters</li>
 </ul>
 <hr>
 <h2 id="how-to-access-this-page">How to access this page<a class="headerlink" href="#how-to-access-this-page" title="Permanent link">¶</a></h2>
-<p>Open <strong>Commission and Campaigns → Client Bonus Campaigns</strong> in the sidebar.</p>
+<p>From the sidebar navigation, select <strong>Commission → Client Bonus Campaigns</strong> (<code>/admin/commission/clientbonuscampaign/</code>).</p>
 <hr>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">¶</a></h2>
 <ul>
-<li>You must have permission to manage campaigns.</li>
-<li>The client records the campaign applies to must already exist.</li>
+<li><strong>Permissions:</strong> <code>commission.add_clientbonuscampaign</code> / <code>commission.change_clientbonuscampaign</code> permission codenames (Accountant, Sales Manager, or Superuser role).</li>
+<li><strong>Active Records:</strong> Active <strong>Client</strong> profiles and <strong>Product</strong> catalog entries.</li>
 </ul>
 <hr>
 <h2 id="step-by-step-instructions">Step-by-step instructions<a class="headerlink" href="#step-by-step-instructions" title="Permanent link">¶</a></h2>
 <ol>
-<li>Open the page from the sidebar.</li>
-<li>Click the top-right <strong>+</strong> button to create a bonus campaign.</li>
-<li>Set the campaign period and the clients it applies to.</li>
-<li>Save the campaign, then review results in <strong>Client Bonus Analytics</strong> once the period ends.</li>
+<li>Open <strong>Commission → Client Bonus Campaigns</strong> from the sidebar.</li>
+<li>Click <strong>Add Client Bonus Campaign (+)</strong>.</li>
+<li>Enter the <strong>Campaign Name</strong>, <strong>Start Date</strong>, and <strong>End Date</strong>.</li>
+<li>Select the target <strong>Clients</strong> participating in the promotion.</li>
+<li>Set the <strong>Collection Threshold %</strong> and <strong>Bonus Rate (%)</strong>.</li>
+<li>Click <strong>Save</strong> to activate the client bonus campaign.</li>
 </ol>
 <hr>
-<h2 id="field-reference">Field reference<a class="headerlink" href="#field-reference" title="Permanent link">¶</a></h2>
-<div class="admonition warning">
-<p class="admonition-title">Needs product review</p>
-<p>The bonus campaign form fields and their business meaning have not been confirmed against the running system, so no field reference is published here rather than an inaccurate one.</p>
-<p>Required to complete this page: the visible columns and fields with their
-business meaning, the filters available, and the actions that can be taken
-from the page. Tracked in <code>review/sme-checklist.md</code>.</p>
-</div>
-<hr>
-<h2 id="tips-and-common-issues">Tips and common issues<a class="headerlink" href="#tips-and-common-issues" title="Permanent link">¶</a></h2>
+<h2 id="verification-and-definition-of-done">Verification and definition of done<a class="headerlink" href="#verification-and-definition-of-done" title="Permanent link">¶</a></h2>
 <ul>
-<li>Create the client record before assigning it to a campaign.</li>
-<li>Check the campaign date range before saving. Results are generated for the period you set.</li>
+<li>System creates the client bonus campaign record (<code>CBC-YYYYMMDD-XXXX</code>).</li>
+<li>Campaign lists under <code>/admin/commission/clientbonuscampaign/</code> and applies to eligible client sales orders.</li>
 </ul>
+<hr>
+<h2 id="field-reference">Field reference<a class="headerlink" href="#field-reference" title="Permanent link">¶</a></h2>
+<h3 id="campaign-details">Campaign details<a class="headerlink" href="#campaign-details" title="Permanent link">¶</a></h3>
+<!-- TODO: screenshot screenshots/commission/client-bonus-campaign.png -->
+
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Field</th>
+<th>Required</th>
+<th>What to Do</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Campaign Name</td>
+<td>Yes</td>
+<td>Enter name</td>
+<td>Descriptive client bonus campaign title</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Start Date</td>
+<td>Yes</td>
+<td>Select date</td>
+<td>First day of client bonus eligibility period</td>
+</tr>
+<tr>
+<td>3</td>
+<td>End Date</td>
+<td>Yes</td>
+<td>Select date</td>
+<td>Last day of client bonus eligibility period</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Client</td>
+<td>Yes</td>
+<td>Select client</td>
+<td>Target wholesale or retail client account</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Collection Threshold %</td>
+<td>Yes</td>
+<td>Enter percentage</td>
+<td>Minimum collection percentage for bonus eligibility</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Bonus Rate (%)</td>
+<td>Yes</td>
+<td>Enter percentage</td>
+<td>Bonus reward percentage applied to eligible sales volume</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Is Finalized</td>
+<td>Yes</td>
+<td>Toggle switch</td>
+<td>Indicates whether bonus snapshots have been locked</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="exception-handling-and-error-recovery">Exception handling and error recovery<a class="headerlink" href="#exception-handling-and-error-recovery" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Symptom / Error Message</th>
+<th>Root Cause</th>
+<th>Remediation Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Client bonus not calculated</td>
+<td>Order sales volume below threshold or collection incomplete</td>
+<td>Ensure client invoice payments satisfy collection threshold percentage</td>
+</tr>
+<tr>
+<td>Cannot edit campaign settings</td>
+<td>Campaign is marked <code>Is Finalized</code></td>
+<td>Uncheck <code>Is Finalized</code> state before making rule adjustments</td>
+</tr>
+</tbody>
+</table>
 <hr>
 <h2 id="related-pages">Related pages<a class="headerlink" href="#related-pages" title="Permanent link">¶</a></h2>
 <ul>
-<li><strong><a href="client-bonus-analytics.html">Client Bonus Analytics</a></strong> — Results generated for these campaigns.</li>
-<li><strong><a href="commission-campaigns.html">Commission Campaigns</a></strong> — The equivalent scheme for employees.</li>
-<li><strong><a href="../01-business/clients/overview.html">Clients</a></strong> — The client records a bonus campaign applies to.</li>
-<li><strong><a href="index.html">Commission and Campaigns</a></strong> — All pages in this module.</li>
+<li><a href="client-bonus-analytics.html">Client Bonus Analytics</a> — Review client bonus performance and balances</li>
+<li><a href="commission-campaigns.html">Commission Campaigns</a> — Manage employee commission campaigns</li>
+<li><a href="../01-business/clients/overview.html">Clients Overview</a> — Manage client directory profiles</li>
 </ul>
 
 
@@ -5695,7 +5835,7 @@ from the page. Tracked in <code>review/sme-checklist.md</code>.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 00:44:11 UTC">July 26, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 03:05:21 UTC">July 26, 2026</span>
   </span>
 
     

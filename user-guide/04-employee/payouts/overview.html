@@ -3736,10 +3736,32 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#step-by-step-instructions" class="md-nav__link">
     <span class="md-ellipsis">
       
         Step-by-step instructions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification-and-definition-of-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification and definition of done
       
     </span>
   </a>
@@ -3759,32 +3781,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#page-sections" class="md-nav__link">
+  <a href="#table-summary" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Page sections
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#payout-list" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Payout list
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#search-and-filters" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Search and filters
+        Table summary
       
     </span>
   </a>
@@ -3797,10 +3797,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#best-practices" class="md-nav__link">
+  <a href="#exception-handling-and-error-recovery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Best practices
+        Exception handling and error recovery
       
     </span>
   </a>
@@ -5556,10 +5556,32 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#step-by-step-instructions" class="md-nav__link">
     <span class="md-ellipsis">
       
         Step-by-step instructions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification-and-definition-of-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification and definition of done
       
     </span>
   </a>
@@ -5579,32 +5601,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#page-sections" class="md-nav__link">
+  <a href="#table-summary" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Page sections
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#payout-list" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Payout list
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#search-and-filters" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Search and filters
+        Table summary
       
     </span>
   </a>
@@ -5617,10 +5617,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#best-practices" class="md-nav__link">
+  <a href="#exception-handling-and-error-recovery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Best practices
+        Exception handling and error recovery
       
     </span>
   </a>
@@ -5681,65 +5681,123 @@
 
 
 <h1 id="payouts-overview">Payouts Overview<a class="headerlink" href="#payouts-overview" title="Permanent link">¶</a></h1>
+<!-- metadata: owner: hr, last_updated: 2026-07-26, git_ref: main, staging_verified: true -->
+
 <h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
-<p>The <strong>Payouts</strong> page lets you review all employee payout records and monitor payment status. Use this section to track advances, salary adjustments, and other employee payments, and verify whether payouts are pending or already completed.</p>
+<p>Use the <strong>Payouts Overview</strong> page to inspect and track all employee payout Payouts in CTB Admin. The listing provides a master audit view of advance payments, wage settlements, salary payouts, Payout dates, and status pills.</p>
 <hr>
 <h2 id="when-to-use-this-page">When to use this page<a class="headerlink" href="#when-to-use-this-page" title="Permanent link">¶</a></h2>
 <ul>
-<li>Review recent payout transactions for all employees</li>
-<li>Check the status of a specific payout before or after issuing payment</li>
-<li>Verify payment date and amount for a completed payout</li>
-<li>Track pending payouts that still require approval or payout</li>
+<li>Auditing employee payout Payouts across the organization</li>
+<li>Filtering payout vouchers by status (<code>Paid</code> vs <code>Unpaid</code>)</li>
+<li>Searching for specific employee payout transactions by SKU or name</li>
+<li>Accessing payout creation forms</li>
 </ul>
 <hr>
 <h2 id="how-to-access-this-page">How to access this page<a class="headerlink" href="#how-to-access-this-page" title="Permanent link">¶</a></h2>
-<ol>
-<li>From the sidebar, go to <strong>Employee → Payouts</strong>.</li>
-<li>The list page shows payout records grouped by <strong>Active</strong>, <strong>Pending</strong>, <strong>Completed</strong>, and other statuses.</li>
-<li>Select a record to open the payout detail page and review full transaction information.</li>
-</ol>
+<p>From the sidebar navigation, select <strong>Employee → Payouts</strong> (<code>/admin/employee/employeepayout/</code>).</p>
+<hr>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>Permissions:</strong> <code>employee.view_employeepayout</code> permission codename (HR, Accountant, Manager, or Superuser role).</li>
+<li><strong>Active Records:</strong> None.</li>
+</ul>
 <hr>
 <h2 id="step-by-step-instructions">Step-by-step instructions<a class="headerlink" href="#step-by-step-instructions" title="Permanent link">¶</a></h2>
 <ol>
-<li>Open <strong>Payouts Overview</strong> from the <strong>Employee</strong> section of the sidebar.</li>
-<li>Complete the <strong>Page sections</strong> section described below.</li>
-<li>Review the values you entered, then save the record.</li>
+<li>Open <strong>Payouts</strong> from the <strong>Employee</strong> section of the sidebar.</li>
+<li>Review listed payout vouchers and their payment status pills (<code>Paid</code> / <code>Unpaid</code>).</li>
+<li>Use the search bar to locate vouchers by employee name or SKU.</li>
+<li>Click <strong>Filters</strong> to narrow results by date range or payment status.</li>
+<li>Click <strong>Add Employee Payout (+)</strong> to record a new payout.</li>
 </ol>
 <hr>
-<h2 id="field-reference">Field reference<a class="headerlink" href="#field-reference" title="Permanent link">¶</a></h2>
-<h3 id="page-sections">Page sections<a class="headerlink" href="#page-sections" title="Permanent link">¶</a></h3>
-<h3 id="payout-list">Payout list<a class="headerlink" href="#payout-list" title="Permanent link">¶</a></h3>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="payout-list-page.png" data-desc-position="bottom"><img alt="Payouts List Page" src="payout-list-page.png"></a></p>
-<p>The main list shows each payout transaction on a single page.</p>
-<p>Key columns include:</p>
+<h2 id="verification-and-definition-of-done">Verification and definition of done<a class="headerlink" href="#verification-and-definition-of-done" title="Permanent link">¶</a></h2>
 <ul>
-<li><strong>SKU</strong> — Payout reference code with employee name and payout date (e.g., <code>PTO#0002 - Kamal Khan - 2026-04-26</code>)</li>
-<li><strong>Date</strong> — Date when the payout was recorded or processed</li>
-<li><strong>Employee</strong> — Employee name and position receiving the payout</li>
-<li><strong>Amount</strong> — Payout amount in local currency (e.g., 7,000Tk)</li>
-<li><strong>Status</strong> — Current payout status such as <code>Paid</code> or <code>Unpaid</code></li>
-<li><strong>Paid On</strong> — Actual date payment was issued to the employee</li>
-</ul>
-<h3 id="search-and-filters">Search and filters<a class="headerlink" href="#search-and-filters" title="Permanent link">¶</a></h3>
-<ul>
-<li>Use the search field to find specific payout records by SKU, employee name, or reference.</li>
-<li>Use status tabs to filter records by <strong>Pending</strong>, <strong>Approved</strong>, <strong>Paid</strong>, or other statuses.</li>
-<li>Use the <strong>Filters</strong> button to narrow results by date range, employee, or amount.</li>
+<li>Master payout list correctly displays Payout amounts and settlement status badges.</li>
+<li>Search and status filters accurately isolate target vouchers for financial auditing.</li>
 </ul>
 <hr>
-<h2 id="best-practices">Best practices<a class="headerlink" href="#best-practices" title="Permanent link">¶</a></h2>
-<ul>
-<li>Verify the <strong>Employee</strong> and <strong>Amount</strong> before marking a payout as paid to avoid accounting errors.</li>
-<li>Confirm the <strong>Status</strong> before editing a completed payout, as some payouts may be restricted from modification.</li>
-<li>Use the <strong>Paid On</strong> date to match payouts against bank records and employee payment history.</li>
-<li>Review the full <strong>SKU</strong> reference to trace the payout across multiple systems.</li>
-</ul>
+<h2 id="field-reference">Field reference<a class="headerlink" href="#field-reference" title="Permanent link">¶</a></h2>
+<h3 id="table-summary">Table summary<a class="headerlink" href="#table-summary" title="Permanent link">¶</a></h3>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="payout-list-page.png" data-desc-position="bottom"><img alt="Payouts List Page" src="payout-list-page.png"></a></p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Required</th>
+<th>What to Do</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SKU</td>
+<td>No</td>
+<td>View value</td>
+<td>Unique payout reference code (e.g., <code>PTO#0002</code>)</td>
+</tr>
+<tr>
+<td>Date</td>
+<td>Yes</td>
+<td>View date</td>
+<td>Payout record date</td>
+</tr>
+<tr>
+<td>Employee</td>
+<td>Yes</td>
+<td>Click link</td>
+<td>Employee name and position</td>
+</tr>
+<tr>
+<td>Amount</td>
+<td>Yes</td>
+<td>View amount</td>
+<td>Payout transaction amount</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>Yes</td>
+<td>View pill</td>
+<td>Settlement state (<code>Paid</code> or <code>Unpaid</code>)</td>
+</tr>
+<tr>
+<td>Paid On</td>
+<td>No</td>
+<td>View date</td>
+<td>Payout payment timestamp</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="exception-handling-and-error-recovery">Exception handling and error recovery<a class="headerlink" href="#exception-handling-and-error-recovery" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Symptom / Error Message</th>
+<th>Root Cause</th>
+<th>Remediation Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Payout record missing from list</td>
+<td>Date range or status filter excluding target entry</td>
+<td>Click <strong>Filters</strong> and reset filter parameters</td>
+</tr>
+<tr>
+<td>Payment status shows <code>Unpaid</code> for paid voucher</td>
+<td><code>Is Paid</code> toggle was not saved</td>
+<td>Open record in <a href="create-payout.html">Create Payout</a>, toggle <code>Is Paid</code> ON, set date, and save</td>
+</tr>
+</tbody>
+</table>
 <hr>
 <h2 id="related-pages">Related pages<a class="headerlink" href="#related-pages" title="Permanent link">¶</a></h2>
 <ul>
-<li><strong>Create Payout</strong> — Record a new employee payout or advance</li>
-<li><strong>Salary Overview</strong> — View employee salary records and compensation details</li>
-<li><strong>Salaries</strong> — Manage annual salary rates and employee compensation</li>
+<li><a href="create-payout.html">Create Payout</a> — Issue a new employee payout or advance</li>
+<li><a href="../salary/overview.html">Salaries Overview</a> — Review salary vouchers</li>
+<li><a href="../employees/employee-detail.html">Employee Detail</a> — View employee balance and payout history tab</li>
 </ul>
 
 
@@ -5763,7 +5821,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 00:44:11 UTC">July 26, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 03:05:21 UTC">July 26, 2026</span>
   </span>
 
     

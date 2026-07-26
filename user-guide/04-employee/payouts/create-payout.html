@@ -3764,10 +3764,32 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#step-by-step-instructions" class="md-nav__link">
     <span class="md-ellipsis">
       
         Step-by-step instructions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification-and-definition-of-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification and definition of done
       
     </span>
   </a>
@@ -3797,49 +3819,16 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#payment-information" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Payment information
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#payment-notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Payment notes
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#saving-the-payout" class="md-nav__link">
+  <a href="#exception-handling-and-error-recovery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Saving the Payout
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tips-and-common-issues" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tips and common issues
+        Exception handling and error recovery
       
     </span>
   </a>
@@ -5567,10 +5556,32 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#step-by-step-instructions" class="md-nav__link">
     <span class="md-ellipsis">
       
         Step-by-step instructions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification-and-definition-of-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification and definition of done
       
     </span>
   </a>
@@ -5600,49 +5611,16 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#payment-information" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Payment information
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#payment-notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Payment notes
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#saving-the-payout" class="md-nav__link">
+  <a href="#exception-handling-and-error-recovery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Saving the Payout
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tips-and-common-issues" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tips and common issues
+        Exception handling and error recovery
       
     </span>
   </a>
@@ -5703,39 +5681,55 @@
 
 
 <h1 id="create-payout">Create Payout<a class="headerlink" href="#create-payout" title="Permanent link">¶</a></h1>
+<!-- metadata: owner: hr, last_updated: 2026-07-26, git_ref: main, staging_verified: true -->
+
 <h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
-<p>Use this page to issue a payout or advance to an employee and keep the payment recorded for payroll and audit purposes. A payout documents payments to employees outside the regular salary cycle and tracks the employee's payment history.</p>
+<p>Use this page to issue salary Payouts, wage settlements, or advances to an employee in CTB Admin. Creating a payout updates the employee's net ledger balance and maintains audit trails for financial reconciliation.</p>
 <hr>
 <h2 id="when-to-use-this-page">When to use this page<a class="headerlink" href="#when-to-use-this-page" title="Permanent link">¶</a></h2>
 <ul>
-<li>Issuing an advance to an employee</li>
-<li>Recording a salary adjustment or bonus payment</li>
-<li>Processing a one-time employee payment</li>
-<li>Documenting approved non-standard payments</li>
+<li>Disbursing salary or wage payments to employees</li>
+<li>Issuing salary advances prior to regular monthly payroll runs</li>
+<li>Recording one-off bonus or adjustment payouts</li>
+<li>Documenting cash or bank transfer payment execution dates</li>
 </ul>
 <hr>
 <h2 id="how-to-access-this-page">How to access this page<a class="headerlink" href="#how-to-access-this-page" title="Permanent link">¶</a></h2>
-<p>From the sidebar, go to <strong>Employee → Payouts</strong>. On the Payouts List page, click the <strong>purple (+) icon</strong> in the top-right corner.</p>
-<p>The system opens the <strong>Create Payout Page</strong>.</p>
+<p>From the sidebar navigation, select <strong>Employee → Payouts</strong> (<code>/admin/employee/employeepayout/</code>). Click <strong>Add Employee Payout (+)</strong> in the top-right corner.</p>
+<hr>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>Permissions:</strong> <code>employee.add_employeepayout</code> permission codename (HR Staff, Accountant, or Superuser role).</li>
+<li><strong>Active Records:</strong> Active <strong>Employee</strong> profile.</li>
+</ul>
 <hr>
 <h2 id="step-by-step-instructions">Step-by-step instructions<a class="headerlink" href="#step-by-step-instructions" title="Permanent link">¶</a></h2>
 <ol>
-<li>Open <strong>Create Payout</strong> from the <strong>Employee</strong> section of the sidebar.</li>
-<li>Complete the <strong>Payout information</strong> section described below.</li>
-<li>Complete the <strong>Payment information</strong> section described below.</li>
-<li>Complete the <strong>Payment notes</strong> section described below.</li>
-<li>Follow <strong>Saving the Payout</strong> below to finish.</li>
+<li>Open <strong>Employee → Payouts</strong> and click <strong>(+) Add Employee Payout</strong>.</li>
+<li>Select the target <strong>Employee</strong>.</li>
+<li>Enter the payout <strong>Amount</strong> in local currency.</li>
+<li>Toggle <strong>Is Paid</strong> status if the payment is disbursed.</li>
+<li>Select the <strong>Payment Date</strong> (<code>YYYY-MM-DD</code>).</li>
+<li>Enter optional internal explanation in <strong>Note</strong>.</li>
+<li>Click <strong>Save</strong> to confirm the transaction.</li>
 </ol>
+<hr>
+<h2 id="verification-and-definition-of-done">Verification and definition of done<a class="headerlink" href="#verification-and-definition-of-done" title="Permanent link">¶</a></h2>
+<ul>
+<li>System generates a unique payout SKU code (<code>PYT-YYYYMMDD-XXXX</code>).</li>
+<li>Payout transaction appears under <code>/admin/employee/employeepayout/</code>.</li>
+<li>Employee's net ledger balance updates automatically to reflect the payout Payout.</li>
+</ul>
 <hr>
 <h2 id="field-reference">Field reference<a class="headerlink" href="#field-reference" title="Permanent link">¶</a></h2>
 <h3 id="payout-information">Payout information<a class="headerlink" href="#payout-information" title="Permanent link">¶</a></h3>
-<p>Fill in the following fields on the payout form:</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="create-payout-info.png" data-desc-position="bottom"><img alt="Create Payout" src="create-payout-info.png"></a></p>
 <table>
 <thead>
 <tr>
 <th>Step</th>
 <th>Field</th>
+<th>Required</th>
 <th>What to Do</th>
 <th>Description</th>
 </tr>
@@ -5744,103 +5738,76 @@
 <tr>
 <td>1</td>
 <td>Employee</td>
+<td>Yes</td>
 <td>Select employee</td>
-<td>The staff member receiving the payout</td>
+<td>Staff member receiving payout</td>
 </tr>
 <tr>
 <td>2</td>
 <td>Amount</td>
+<td>Yes</td>
 <td>Enter amount</td>
-<td>The payout amount in the system currency</td>
+<td>Disbursed payout amount</td>
 </tr>
 <tr>
 <td>3</td>
 <td>Payable</td>
-<td>Auto-calculated</td>
-<td>Total payout amount (may include adjustments)</td>
+<td>No</td>
+<td>Read-only</td>
+<td>Auto-calculated payable amount</td>
 </tr>
-</tbody>
-</table>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Fields marked with a <strong>red star (*)</strong> are mandatory.</p>
-</div>
-<h3 id="payment-information">Payment information<a class="headerlink" href="#payment-information" title="Permanent link">¶</a></h3>
-<p>Configure the payment details after entering the payout amount:</p>
-<table>
-<thead>
 <tr>
-<th>Step</th>
-<th>Field</th>
-<th>What to Do</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
+<td>4</td>
 <td>Is Paid</td>
-<td>Check if paid</td>
-<td>Mark the payout as already paid</td>
+<td>Yes</td>
+<td>Toggle switch</td>
+<td>Indicates whether payment was disbursed</td>
 </tr>
 <tr>
-<td>2</td>
+<td>5</td>
 <td>Payment Date</td>
+<td>Conditional</td>
 <td>Select date</td>
-<td>Date when the payout was or will be paid to employee</td>
+<td>Payment date (required when <code>Is Paid</code> is ON)</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Note</td>
+<td>No</td>
+<td>Enter text</td>
+<td>Explanation or reference notes</td>
 </tr>
 </tbody>
 </table>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Payment Date is important for payroll reconciliation and employee balance tracking.</p>
-</div>
-<h3 id="payment-notes">Payment notes<a class="headerlink" href="#payment-notes" title="Permanent link">¶</a></h3>
-<p>Add optional notes or internal comments:</p>
+<hr>
+<h2 id="exception-handling-and-error-recovery">Exception handling and error recovery<a class="headerlink" href="#exception-handling-and-error-recovery" title="Permanent link">¶</a></h2>
 <table>
 <thead>
 <tr>
-<th>Step</th>
-<th>Field</th>
-<th>What to Do</th>
-<th>Description</th>
+<th>Symptom / Error Message</th>
+<th>Root Cause</th>
+<th>Remediation Action</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1</td>
-<td>Note</td>
-<td>Enter text</td>
-<td>Internal explanation or special comments</td>
+<td><code>Payment Date is required when Is Paid is true</code></td>
+<td>Form submitted with <code>Is Paid</code> toggled on without a date</td>
+<td>Select transaction date in <strong>Payment Date</strong></td>
+</tr>
+<tr>
+<td><code>Amount must be greater than 0</code></td>
+<td>Zero or negative payout amount entered</td>
+<td>Enter a positive payment value</td>
 </tr>
 </tbody>
 </table>
-<hr>
-<h2 id="saving-the-payout">Saving the Payout<a class="headerlink" href="#saving-the-payout" title="Permanent link">¶</a></h2>
-<p>After completing all sections:</p>
-<ul>
-<li>Click <strong>Save</strong> to create the payout</li>
-<li>Click <strong>Save and continue editing</strong> to save and remain on the page</li>
-<li>Click <strong>Save and add another</strong> to save and create a new payout immediately</li>
-</ul>
-<p>The payout is now recorded and reflected in the employee's account balance.</p>
-<hr>
-<h2 id="tips-and-common-issues">Tips and common issues<a class="headerlink" href="#tips-and-common-issues" title="Permanent link">¶</a></h2>
-<ul>
-<li><strong>Employee is required</strong> — You must select an employee before saving</li>
-<li><strong>Amount is required</strong> — Enter the payout value in the system currency</li>
-<li><strong>Payment Date affects payroll</strong> — Ensure the date is correct for accurate payroll reconciliation</li>
-<li><strong>Is Paid determines balance</strong> — Check "Is Paid" to mark the payment as completed; leave unchecked for pending payouts</li>
-<li><strong>Add notes for clarity</strong> — Use the notes field to explain the reason for the payout (advance, adjustment, bonus, etc.)</li>
-<li><strong>Payable amount is auto-calculated</strong> — The system calculates the final payout amount based on the Amount field</li>
-</ul>
 <hr>
 <h2 id="related-pages">Related pages<a class="headerlink" href="#related-pages" title="Permanent link">¶</a></h2>
 <ul>
-<li><strong>Payouts Overview</strong> — View all employee payouts and their status</li>
-<li><strong>Salary</strong> — Manage regular salary records and payroll</li>
-<li><strong>Employees</strong> — Manage employee information and records</li>
-<li><strong>Salary Detail</strong> — View employee salary breakdown and history</li>
+<li><a href="overview.html">Payouts Overview</a> — View master payout transactions list</li>
+<li><a href="../employees/employee-detail.html">Employee Detail</a> — Inspect employee ledger and payout history tab</li>
+<li><a href="../salary/generate-salary.html">Generate Salary</a> — Run salary calculations</li>
 </ul>
 
 
@@ -5864,7 +5831,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 00:44:11 UTC">July 26, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 03:05:21 UTC">July 26, 2026</span>
   </span>
 
     

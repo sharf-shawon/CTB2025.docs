@@ -4392,6 +4392,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#verification-and-definition-of-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification and definition of done
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#field-reference" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -4400,13 +4411,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Field reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        List summary
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#tips-and-common-issues" class="md-nav__link">
+  <a href="#exception-handling-and-error-recovery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tips and common issues
+        Exception handling and error recovery
       
     </span>
   </a>
@@ -5548,6 +5576,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#verification-and-definition-of-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification and definition of done
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#field-reference" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5556,13 +5595,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Field reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        List summary
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#tips-and-common-issues" class="md-nav__link">
+  <a href="#exception-handling-and-error-recovery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tips and common issues
+        Exception handling and error recovery
       
     </span>
   </a>
@@ -5623,56 +5679,131 @@
 
 
 <h1 id="payment-history">Payment History<a class="headerlink" href="#payment-history" title="Permanent link">¶</a></h1>
-<p>Review the commission and bonus payments already recorded against campaigns.</p>
+<!-- metadata: owner: sales_team, last_updated: 2026-07-26, git_ref: main, staging_verified: true -->
+
 <h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
-<p>Use this page to see what has been paid out for commission and client bonus campaigns. It is the record of settled amounts, as distinct from the analytics pages, which show what was earned.</p>
+<p>Use this page to audit and track commission and bonus Payouts recorded across campaigns in CTB Admin. The payment history provides a master audit ledger distinguishing settled payments from calculated analytics balances.</p>
 <hr>
 <h2 id="when-to-use-this-page">When to use this page<a class="headerlink" href="#when-to-use-this-page" title="Permanent link">¶</a></h2>
 <ul>
-<li>When you need to confirm whether a commission or bonus has already been paid.</li>
-<li>When you are reconciling campaign results against actual payments.</li>
-<li>When an employee or client queries a payment.</li>
-<li>When you are preparing a payout summary for a finished campaign.</li>
+<li>Verifying whether earned employee or manager commissions have been disbursed</li>
+<li>Auditing client bonus credit Payouts against campaign analytics</li>
+<li>Reconciling campaign ledger calculations against bank transfer or payout records</li>
+<li>Investigating payment queries or discrepancies raised by staff or clients</li>
 </ul>
 <hr>
 <h2 id="how-to-access-this-page">How to access this page<a class="headerlink" href="#how-to-access-this-page" title="Permanent link">¶</a></h2>
-<p>Open <strong>Commission and Campaigns → Payment History</strong> in the sidebar.</p>
+<p>From the sidebar navigation, select <strong>Commission → Payment History</strong> (<code>/admin/commission/commissionpaymenthistory/</code>).</p>
 <hr>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">¶</a></h2>
 <ul>
-<li>Campaign analytics must exist for the period you are reviewing.</li>
-<li>Payments must already have been recorded against those results.</li>
+<li><strong>Permissions:</strong> <code>commission.view_commissionpaymenthistory</code> permission codename (Accountant, Finance Manager, or Superuser role).</li>
+<li><strong>Active Records:</strong> Finalized <strong>Commission Campaign</strong> or <strong>Client Bonus Campaign</strong> analytics entries.</li>
 </ul>
 <hr>
 <h2 id="step-by-step-instructions">Step-by-step instructions<a class="headerlink" href="#step-by-step-instructions" title="Permanent link">¶</a></h2>
 <ol>
-<li>Open the page from the sidebar.</li>
-<li>Use the search box or filters to narrow to a campaign, employee, or client.</li>
-<li>Review the payment records listed for the selected campaign.</li>
-<li>Cross-check any disputed amount against the matching analytics page.</li>
+<li>Open <strong>Commission → Payment History</strong> from the sidebar.</li>
+<li>Review listed payment records, Payout dates, and amounts.</li>
+<li>Use the search bar to locate specific employees, managers, or client names.</li>
+<li>Click <strong>Filters</strong> to narrow results by campaign, date range, or payment type.</li>
+<li>Click a payment row to inspect transaction details or linked payout references.</li>
 </ol>
 <hr>
-<h2 id="field-reference">Field reference<a class="headerlink" href="#field-reference" title="Permanent link">¶</a></h2>
-<div class="admonition warning">
-<p class="admonition-title">Needs product review</p>
-<p>The columns, filters, and actions on the Payment History list have not been confirmed against the running system, so no field reference is published here rather than an inaccurate one.</p>
-<p>Required to complete this page: the visible columns and fields with their
-business meaning, the filters available, and the actions that can be taken
-from the page. Tracked in <code>review/sme-checklist.md</code>.</p>
-</div>
-<hr>
-<h2 id="tips-and-common-issues">Tips and common issues<a class="headerlink" href="#tips-and-common-issues" title="Permanent link">¶</a></h2>
+<h2 id="verification-and-definition-of-done">Verification and definition of done<a class="headerlink" href="#verification-and-definition-of-done" title="Permanent link">¶</a></h2>
 <ul>
-<li>A record appearing in analytics does not mean it has been paid. Check here before confirming a payment to anyone.</li>
-<li>Reconcile against the analytics page for the same campaign when a figure does not match.</li>
+<li>Payment history list displays settled transactions with confirmed Payout dates.</li>
+<li>Verified Payouts update linked employee payout vouchers or client credit balances.</li>
 </ul>
+<hr>
+<h2 id="field-reference">Field reference<a class="headerlink" href="#field-reference" title="Permanent link">¶</a></h2>
+<h3 id="list-summary">List summary<a class="headerlink" href="#list-summary" title="Permanent link">¶</a></h3>
+<!-- TODO: screenshot screenshots/commission/payment-history-list.png -->
+
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Required</th>
+<th>What to Do</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reference SKU</td>
+<td>No</td>
+<td>View value</td>
+<td>Unique payment tracking reference code</td>
+</tr>
+<tr>
+<td>Campaign</td>
+<td>Yes</td>
+<td>View text</td>
+<td>Parent commission or client bonus campaign</td>
+</tr>
+<tr>
+<td>Recipient</td>
+<td>Yes</td>
+<td>Click link</td>
+<td>Name of employee, manager, or client recipient</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>Yes</td>
+<td>View status</td>
+<td>Payment type (<code>Employee Commission</code>, <code>Manager Override</code>, <code>Client Bonus</code>)</td>
+</tr>
+<tr>
+<td>Amount Paid</td>
+<td>Yes</td>
+<td>View amount</td>
+<td>Disbursed payment amount</td>
+</tr>
+<tr>
+<td>Payment Date</td>
+<td>Yes</td>
+<td>View date</td>
+<td>Transaction settlement date</td>
+</tr>
+<tr>
+<td>Method</td>
+<td>No</td>
+<td>View text</td>
+<td>Disbursal method (<code>Bank Transfer</code>, <code>Cash</code>, <code>Ledger Credit</code>)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="exception-handling-and-error-recovery">Exception handling and error recovery<a class="headerlink" href="#exception-handling-and-error-recovery" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Symptom / Error Message</th>
+<th>Root Cause</th>
+<th>Remediation Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Payment record missing despite approved analytics</td>
+<td>Payout transaction not completed in payouts module</td>
+<td>Process payout voucher under <a href="../04-employee/payouts/create-payout.html">Create Payout</a></td>
+</tr>
+<tr>
+<td>Disbursed amount mismatch</td>
+<td>Partial payment issued or deduction applied</td>
+<td>Compare payment history line item against <a href="employee-analytics.html">Employee Analytics</a></td>
+</tr>
+</tbody>
+</table>
 <hr>
 <h2 id="related-pages">Related pages<a class="headerlink" href="#related-pages" title="Permanent link">¶</a></h2>
 <ul>
-<li><strong><a href="employee-analytics.html">Employee Analytics</a></strong> — What each employee earned for a campaign.</li>
-<li><strong><a href="manager-analytics.html">Manager Analytics</a></strong> — What each manager earned for a campaign.</li>
-<li><strong><a href="client-bonus-analytics.html">Client Bonus Analytics</a></strong> — Results of client bonus campaigns.</li>
-<li><strong><a href="index.html">Commission and Campaigns</a></strong> — All pages in this module.</li>
+<li><a href="employee-analytics.html">Employee Analytics</a> — Review employee campaign earnings</li>
+<li><a href="manager-analytics.html">Manager Analytics</a> — Review manager override earnings</li>
+<li><a href="client-bonus-analytics.html">Client Bonus Analytics</a> — Review client bonus earnings</li>
+<li><a href="../04-employee/payouts/create-payout.html">Create Payout</a> — Issue employee payouts</li>
 </ul>
 
 
@@ -5696,7 +5827,7 @@ from the page. Tracked in <code>review/sme-checklist.md</code>.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 00:44:11 UTC">July 26, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 03:05:21 UTC">July 26, 2026</span>
   </span>
 
     

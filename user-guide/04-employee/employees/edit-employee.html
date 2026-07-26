@@ -3230,10 +3230,32 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#step-by-step-instructions" class="md-nav__link">
     <span class="md-ellipsis">
       
         Step-by-step instructions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification-and-definition-of-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification and definition of done
       
     </span>
   </a>
@@ -3302,32 +3324,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#whats-different-from-add-employee" class="md-nav__link">
+  <a href="#exception-handling-and-error-recovery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What’s different from add Employee
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#saving-changes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Saving changes
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tips-and-common-issues" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tips and common issues
+        Exception handling and error recovery
       
     </span>
   </a>
@@ -5589,10 +5589,32 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#step-by-step-instructions" class="md-nav__link">
     <span class="md-ellipsis">
       
         Step-by-step instructions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification-and-definition-of-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification and definition of done
       
     </span>
   </a>
@@ -5661,32 +5683,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#whats-different-from-add-employee" class="md-nav__link">
+  <a href="#exception-handling-and-error-recovery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What’s different from add Employee
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#saving-changes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Saving changes
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tips-and-common-issues" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tips and common issues
+        Exception handling and error recovery
       
     </span>
   </a>
@@ -5747,107 +5747,143 @@
 
 
 <h1 id="edit-employee">Edit Employee<a class="headerlink" href="#edit-employee" title="Permanent link">¶</a></h1>
+<!-- metadata: owner: hr, last_updated: 2026-07-26, git_ref: main, staging_verified: true -->
+
 <h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
-<p>Use this page to update an existing employee’s information. The edit page contains the same core employee fields as the add page, but the values are already filled in and any changes affect attendance, payroll, wages, and payouts.</p>
+<p>Use this page to update an existing employee's profile and settings. Any adjustments to contact details, job role, department, or salary rate immediately take effect for future attendance entries, wage calculations, and payroll cycles.</p>
 <hr>
 <h2 id="when-to-use-this-page">When to use this page<a class="headerlink" href="#when-to-use-this-page" title="Permanent link">¶</a></h2>
 <ul>
-<li>Updating employee contact or personal information</li>
-<li>Changing an employee’s status, position, or department</li>
-<li>Adjusting salary settings or balance limits</li>
-<li>Replacing identity documents or profile photos</li>
+<li>Updating employee contact or personal details</li>
+<li>Transferring an employee to a new department or job position</li>
+<li>Adjusting salary rates, balance limits, or notification settings</li>
+<li>Updating NID document scans or profile photos</li>
 </ul>
 <hr>
 <h2 id="how-to-access-this-page">How to access this page<a class="headerlink" href="#how-to-access-this-page" title="Permanent link">¶</a></h2>
 <ol>
-<li>Go to <strong>Employee → Employees</strong> from the sidebar.</li>
-<li>On the Employees list page, click the employee row or name.</li>
+<li>Go to <strong>Employee → Employees</strong> (<code>/admin/employee/employee/</code>) from the sidebar.</li>
+<li>Click the employee name or row in the list view.</li>
 </ol>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="edit-employee-list-page.png" data-desc-position="bottom"><img alt="Edit Employee List Page" src="edit-employee-list-page.png"></a></p>
-<p>The system opens the <strong>Edit Employee</strong> page.</p>
+<hr>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>Permissions:</strong> <code>employee.change_employee</code> permission codename (HR Manager or Superuser role).</li>
+<li><strong>Active Records:</strong> Target employee record must exist in the database.</li>
+</ul>
 <hr>
 <h2 id="step-by-step-instructions">Step-by-step instructions<a class="headerlink" href="#step-by-step-instructions" title="Permanent link">¶</a></h2>
 <ol>
-<li>Open <strong>Edit Employee</strong> from the <strong>Employee</strong> section of the sidebar.</li>
-<li>Complete the <strong>General information</strong> section described below.</li>
-<li>Complete the <strong>Emergency contact</strong> section described below.</li>
-<li>Complete the <strong>Employment details</strong> section described below.</li>
-<li>Complete the <strong>Salary information</strong> section described below.</li>
-<li>Follow <strong>Saving changes</strong> below to finish.</li>
+<li>Open the target employee record from <strong>Employee → Employees</strong>.</li>
+<li>Modify the required fields in <strong>General information</strong>, <strong>Emergency contact</strong>, <strong>Employment details</strong>, or <strong>Salary information</strong>.</li>
+<li>Click <strong>Save</strong> to apply changes and return to the list, or <strong>Save and continue editing</strong> to remain on the form.</li>
 </ol>
+<hr>
+<h2 id="verification-and-definition-of-done">Verification and definition of done<a class="headerlink" href="#verification-and-definition-of-done" title="Permanent link">¶</a></h2>
+<ul>
+<li>System displays notification: <code>Employee "Name" was changed successfully.</code></li>
+<li>Updated values appear immediately in the <strong>Employees</strong> list and employee profile view.</li>
+<li>Subsequent salary calculations and attendance records reflect the updated configuration.</li>
+</ul>
 <hr>
 <h2 id="field-reference">Field reference<a class="headerlink" href="#field-reference" title="Permanent link">¶</a></h2>
 <h3 id="general-information">General information<a class="headerlink" href="#general-information" title="Permanent link">¶</a></h3>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="edit-employee-personal-info.png" data-desc-position="bottom"><img alt="Edit Employee General Information" src="edit-employee-personal-info.png"></a></p>
-<p>Update the following fields as needed:</p>
 <table>
 <thead>
 <tr>
+<th>Step</th>
 <th>Field</th>
-<th>What you can change</th>
-<th>Notes</th>
+<th>Required</th>
+<th>What to Do</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td>1</td>
 <td>SKU</td>
-<td>Read only</td>
+<td>No</td>
+<td>Read-only</td>
 <td>System-generated employee code</td>
 </tr>
 <tr>
+<td>2</td>
 <td>Employee Photo</td>
-<td>Replace</td>
-<td>Upload a new photo if needed</td>
+<td>No</td>
+<td>Replace image</td>
+<td>Profile photo used across employee listings and detail views</td>
 </tr>
 <tr>
+<td>3</td>
 <td>Employee Name</td>
-<td>Edit</td>
-<td>Updates the name used across the system</td>
+<td>Yes</td>
+<td>Edit text</td>
+<td>Primary name used on payroll documents and reports</td>
 </tr>
 <tr>
+<td>4</td>
 <td>Is Enabled</td>
-<td>Toggle ON or OFF</td>
-<td>Disabling prevents use in new records</td>
+<td>Yes</td>
+<td>Toggle switch</td>
+<td>Controls whether the employee record is active</td>
 </tr>
 <tr>
+<td>5</td>
 <td>Send SMS</td>
-<td>Enable or disable</td>
-<td>Controls notification behavior</td>
+<td>No</td>
+<td>Toggle switch</td>
+<td>Enables automated SMS notifications for payouts and salary events</td>
 </tr>
 <tr>
+<td>6</td>
 <td>Hide Salary Details</td>
-<td>Enable or disable</td>
-<td>Hides salary information where applicable</td>
+<td>No</td>
+<td>Toggle switch</td>
+<td>Restricts salary information visibility in employee-facing views</td>
 </tr>
 <tr>
+<td>7</td>
 <td>Date of Birth</td>
-<td>Edit</td>
-<td>Update if the record needs correction</td>
+<td>No</td>
+<td>Select date</td>
+<td>Birth date for personal record-keeping</td>
 </tr>
 <tr>
+<td>8</td>
 <td>Phone Number</td>
-<td>Edit</td>
-<td>Must be correct if SMS is enabled</td>
+<td>Yes</td>
+<td>Edit text</td>
+<td>Primary contact number for identity and notification lookup</td>
 </tr>
 <tr>
+<td>9</td>
 <td>Address</td>
-<td>Edit</td>
-<td>Update the employee’s address</td>
+<td>No</td>
+<td>Edit text</td>
+<td>Current residential address</td>
 </tr>
 <tr>
+<td>10</td>
 <td>NID Number</td>
-<td>Edit</td>
-<td>Used for identity verification</td>
+<td>No</td>
+<td>Edit text</td>
+<td>National identity card or passport number</td>
 </tr>
 <tr>
+<td>11</td>
 <td>NID Card Front Photo</td>
-<td>Replace</td>
-<td>Upload an updated image if needed</td>
+<td>No</td>
+<td>Replace image</td>
+<td>Front side scan or image of NID card</td>
 </tr>
 <tr>
+<td>12</td>
 <td>NID Card Back Photo</td>
-<td>Replace</td>
-<td>Upload an updated image if needed</td>
+<td>No</td>
+<td>Replace image</td>
+<td>Back side scan or image of NID card</td>
 </tr>
 </tbody>
 </table>
@@ -5856,26 +5892,34 @@
 <table>
 <thead>
 <tr>
+<th>Step</th>
 <th>Field</th>
-<th>What you can change</th>
-<th>Notes</th>
+<th>Required</th>
+<th>What to Do</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td>1</td>
 <td>Emergency Contact Name</td>
-<td>Edit</td>
-<td>Main emergency contact person</td>
+<td>No</td>
+<td>Edit text</td>
+<td>Primary emergency contact person</td>
 </tr>
 <tr>
+<td>2</td>
 <td>Emergency Phone Number</td>
-<td>Edit</td>
-<td>Backup contact number</td>
+<td>No</td>
+<td>Edit text</td>
+<td>Primary emergency contact phone number</td>
 </tr>
 <tr>
+<td>3</td>
 <td>Emergency Address</td>
-<td>Edit</td>
-<td>Emergency contact address</td>
+<td>No</td>
+<td>Edit text</td>
+<td>Residential address of emergency contact</td>
 </tr>
 </tbody>
 </table>
@@ -5884,113 +5928,130 @@
 <table>
 <thead>
 <tr>
+<th>Step</th>
 <th>Field</th>
-<th>What you can change</th>
-<th>Notes</th>
+<th>Required</th>
+<th>What to Do</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td>1</td>
 <td>Work Position</td>
-<td>Change</td>
-<td>Updates the employee’s role</td>
+<td>Yes</td>
+<td>Select position</td>
+<td>Job position assigned to the employee</td>
 </tr>
 <tr>
+<td>2</td>
 <td>Work Department</td>
-<td>Change</td>
-<td>Updates the department assignment</td>
+<td>Yes</td>
+<td>Select department</td>
+<td>Department assignment for reporting and hierarchy</td>
 </tr>
 <tr>
+<td>3</td>
 <td>Purchase Balance</td>
-<td>Adjust if required</td>
-<td>Affects employee purchase or ledger records</td>
+<td>No</td>
+<td>Edit balance</td>
+<td>Starting balance for internal purchase balance tracking</td>
 </tr>
 <tr>
+<td>4</td>
 <td>Start Date</td>
-<td>Edit</td>
-<td>Should reflect the real joining date</td>
+<td>Yes</td>
+<td>Select date</td>
+<td>Official employment start date</td>
 </tr>
 <tr>
+<td>5</td>
 <td>End Date</td>
-<td>Set or update</td>
-<td>Leave empty if the employee is still active</td>
+<td>No</td>
+<td>Select date</td>
+<td>Contract termination date (leave empty if active)</td>
 </tr>
 </tbody>
 </table>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Changing position, department, or balance-related fields can affect payroll and reporting.</p>
-</div>
 <h3 id="salary-information">Salary information<a class="headerlink" href="#salary-information" title="Permanent link">¶</a></h3>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="edit-employee-salary-info.png" data-desc-position="bottom"><img alt="Salary Information Section" src="edit-employee-salary-info.png"></a></p>
 <table>
 <thead>
 <tr>
+<th>Step</th>
 <th>Field</th>
-<th>What you can change</th>
-<th>Notes</th>
+<th>Required</th>
+<th>What to Do</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td>1</td>
 <td>Salary Type</td>
-<td>Change</td>
-<td>Controls how salary is calculated</td>
+<td>Yes</td>
+<td>Select type</td>
+<td>Calculation mode (<code>Monthly</code>, <code>Daily</code>, <code>Production-based</code>)</td>
 </tr>
 <tr>
+<td>2</td>
 <td>Salary Rate</td>
-<td>Edit</td>
-<td>Base rate used in payroll</td>
+<td>Yes</td>
+<td>Edit rate</td>
+<td>Base rate used for salary calculations</td>
 </tr>
 <tr>
+<td>3</td>
 <td>Balance</td>
-<td>Adjust if required</td>
-<td>Impacts salary tracking</td>
+<td>No</td>
+<td>Edit amount</td>
+<td>Current employee ledger balance</td>
 </tr>
 <tr>
+<td>4</td>
 <td>Upper Balance Limit</td>
-<td>Modify</td>
-<td>Maximum allowed balance</td>
+<td>No</td>
+<td>Edit amount</td>
+<td>Maximum credit limit allowed for advances</td>
 </tr>
 <tr>
+<td>5</td>
 <td>Lower Balance Limit</td>
-<td>Modify</td>
-<td>Minimum allowed balance</td>
+<td>No</td>
+<td>Edit amount</td>
+<td>Minimum threshold trigger for balance alerts</td>
 </tr>
 </tbody>
 </table>
 <hr>
-<h2 id="whats-different-from-add-employee">What’s different from add Employee<a class="headerlink" href="#whats-different-from-add-employee" title="Permanent link">¶</a></h2>
-<ul>
-<li>The fields are <strong>pre-filled</strong> with existing employee data.</li>
-<li>You are <strong>modifying</strong> an existing employee rather than creating a new record.</li>
-<li>Some values may already reflect historical payroll or attendance settings.</li>
-<li>Changes can affect future payroll and reporting.</li>
-</ul>
-<hr>
-<h2 id="saving-changes">Saving changes<a class="headerlink" href="#saving-changes" title="Permanent link">¶</a></h2>
-<p>After updating the required fields:</p>
-<ul>
-<li>Click <strong>Save</strong> to apply the changes</li>
-<li>Click <strong>Save and add another</strong> if you want to continue creating records</li>
-<li>Click <strong>Save and continue editing</strong> to keep working on the same employee</li>
-</ul>
-<p>If your role allows it, you may also see a <strong>Delete Employee</strong> button.</p>
-<hr>
-<h2 id="tips-and-common-issues">Tips and common issues<a class="headerlink" href="#tips-and-common-issues" title="Permanent link">¶</a></h2>
-<ul>
-<li>Verify the <strong>Phone Number</strong> before enabling SMS notifications.</li>
-<li>Replace <strong>NID images</strong> only with clear and readable files.</li>
-<li>Avoid unnecessary changes to <strong>Balance</strong>, because it can affect financial reports.</li>
-<li>Use <strong>End Date</strong> only when the employee is no longer active.</li>
-</ul>
+<h2 id="exception-handling-and-error-recovery">Exception handling and error recovery<a class="headerlink" href="#exception-handling-and-error-recovery" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Symptom / Error Message</th>
+<th>Root Cause</th>
+<th>Remediation Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Cannot disable employee with active transactions</code></td>
+<td>Employee has pending ledger entries</td>
+<td>Complete or settle active transactions before disabling</td>
+</tr>
+<tr>
+<td><code>Duplicate Phone Number</code></td>
+<td>Phone number matches another employee record</td>
+<td>Ensure phone number is unique across all active employee profiles</td>
+</tr>
+</tbody>
+</table>
 <hr>
 <h2 id="related-pages">Related pages<a class="headerlink" href="#related-pages" title="Permanent link">¶</a></h2>
 <ul>
-<li><strong>Add Employee</strong> — Create a new employee record</li>
-<li><strong>Employee Detail</strong> — Review the full employee profile</li>
-<li><strong>Generate Salary</strong> — Create salary records for the employee</li>
-<li><strong>Record Attendance</strong> — Track attendance for the employee</li>
+<li><a href="add-employee.html">Add Employee</a> — Create a new employee record</li>
+<li><a href="employee-detail.html">Employee Detail</a> — View full employee profile</li>
+<li><a href="../salary/generate-salary.html">Generate Salary</a> — Process salary for updated rate settings</li>
 </ul>
 
 
@@ -6014,7 +6075,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 00:44:11 UTC">July 26, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 03:05:21 UTC">July 26, 2026</span>
   </span>
 
     

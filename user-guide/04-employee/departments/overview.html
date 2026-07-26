@@ -2932,21 +2932,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#searching-for-a-department" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Searching for a Department
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#filtering-the-list" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Filtering the list
+        Prerequisites
       
     </span>
   </a>
@@ -2965,6 +2954,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#verification-and-definition-of-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification and definition of done
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#field-reference" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2973,13 +2973,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Field reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#table-columns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table columns
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#tips-and-common-issues" class="md-nav__link">
+  <a href="#exception-handling-and-error-recovery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tips and common issues
+        Exception handling and error recovery
       
     </span>
   </a>
@@ -5539,21 +5556,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#searching-for-a-department" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Searching for a Department
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#filtering-the-list" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Filtering the list
+        Prerequisites
       
     </span>
   </a>
@@ -5572,6 +5578,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#verification-and-definition-of-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification and definition of done
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#field-reference" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5580,13 +5597,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Field reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#table-columns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table columns
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#tips-and-common-issues" class="md-nav__link">
+  <a href="#exception-handling-and-error-recovery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tips and common issues
+        Exception handling and error recovery
       
     </span>
   </a>
@@ -5647,137 +5681,122 @@
 
 
 <h1 id="departments-overview">Departments Overview<a class="headerlink" href="#departments-overview" title="Permanent link">¶</a></h1>
-<p>Use this page to view and manage all departments in CTB Admin. The Departments Overview lists every department record with its name, description, status, and timestamps. From here you can search for departments, add new ones, and open existing records to edit or delete them.</p>
+<!-- metadata: owner: hr, last_updated: 2026-07-26, git_ref: main, staging_verified: true -->
+
 <h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
-<p>The Departments Overview displays a list of all department records with the following columns:</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="department-overview-list-page.png" data-desc-position="bottom"><img alt=" Department Overview List Page" src="department-overview-list-page.png"></a></p>
+<p>Use this page to review and manage all organizational departments in CTB Admin. The listing provides a real-time overview of active and disabled department records, descriptions, and audit timestamps.</p>
+<hr>
+<h2 id="when-to-use-this-page">When to use this page<a class="headerlink" href="#when-to-use-this-page" title="Permanent link">¶</a></h2>
+<ul>
+<li>Auditing department structure across the organization</li>
+<li>Searching for specific departments by name or SKU</li>
+<li>Inspecting active status indicators before assigning employees</li>
+<li>Accessing department creation and editing forms</li>
+</ul>
+<hr>
+<h2 id="how-to-access-this-page">How to access this page<a class="headerlink" href="#how-to-access-this-page" title="Permanent link">¶</a></h2>
+<p>From the sidebar navigation, select <strong>Employee → Departments</strong> (<code>/admin/employee/workdepartment/</code>).</p>
+<hr>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>Permissions:</strong> <code>employee.view_workdepartment</code> permission codename (HR, Accountant, Manager, or Superuser role).</li>
+<li><strong>Active Records:</strong> None.</li>
+</ul>
+<hr>
+<h2 id="step-by-step-instructions">Step-by-step instructions<a class="headerlink" href="#step-by-step-instructions" title="Permanent link">¶</a></h2>
+<ol>
+<li>Open <strong>Departments</strong> from the <strong>Employee</strong> section of the sidebar.</li>
+<li>Review the list of department records and status indicators in the <strong>Is Enabled</strong> column.</li>
+<li>Type in the <strong>Type to search</strong> bar to filter results by department name.</li>
+<li>Click <strong>Add Department (+)</strong> to create a new department, or click an existing row to edit details.</li>
+</ol>
+<hr>
+<h2 id="verification-and-definition-of-done">Verification and definition of done<a class="headerlink" href="#verification-and-definition-of-done" title="Permanent link">¶</a></h2>
+<ul>
+<li>Master department directory renders with correct status checkmarks.</li>
+<li>Search filter accurately narrows visible rows in real time.</li>
+</ul>
+<hr>
+<h2 id="field-reference">Field reference<a class="headerlink" href="#field-reference" title="Permanent link">¶</a></h2>
+<h3 id="table-columns">Table columns<a class="headerlink" href="#table-columns" title="Permanent link">¶</a></h3>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="department-overview-list-page.png" data-desc-position="bottom"><img alt="Department Overview List Page" src="department-overview-list-page.png"></a></p>
 <table>
 <thead>
 <tr>
 <th>Column</th>
+<th>Required</th>
+<th>What to Do</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>SKU</td>
-<td>Auto-generated unique identifier for the department</td>
+<td>No</td>
+<td>View value</td>
+<td>Auto-generated unique identifier code</td>
 </tr>
 <tr>
 <td>Department Name</td>
-<td>The name of the department as entered in the system</td>
+<td>Yes</td>
+<td>Click link</td>
+<td>Name of the department</td>
 </tr>
 <tr>
 <td>Description</td>
-<td>Optional description or notes about the department</td>
+<td>No</td>
+<td>View text</td>
+<td>Operational summary or notes</td>
 </tr>
 <tr>
 <td>Is Enabled</td>
-<td>Green checkmark if active; empty if the department is disabled</td>
+<td>Yes</td>
+<td>View checkmark</td>
+<td>Green checkmark if active; empty if disabled</td>
 </tr>
 <tr>
 <td>Created At</td>
-<td>Date and time the department record was created</td>
+<td>No</td>
+<td>View timestamp</td>
+<td>Creation date and time</td>
 </tr>
 <tr>
 <td>Updated At</td>
-<td>Date and time the department record was last modified</td>
+<td>No</td>
+<td>View timestamp</td>
+<td>Last modification date and time</td>
 </tr>
 </tbody>
 </table>
 <hr>
-<h2 id="when-to-use-this-page">When to use this page<a class="headerlink" href="#when-to-use-this-page" title="Permanent link">¶</a></h2>
-<ul>
-<li>Viewing all departments registered in the system</li>
-<li>Searching for a specific department by name</li>
-<li>Adding a new department to the organization</li>
-<li>Checking whether a department is active or disabled</li>
-<li>Reviewing when a department was created or last updated</li>
-</ul>
-<hr>
-<h2 id="how-to-access-this-page">How to access this page<a class="headerlink" href="#how-to-access-this-page" title="Permanent link">¶</a></h2>
-<p>From the sidebar, go to <strong>Employee → Departments</strong>.</p>
-<p>The system opens the <strong>Departments Overview page</strong>.</p>
-<hr>
-<h2 id="searching-for-a-department">Searching for a Department<a class="headerlink" href="#searching-for-a-department" title="Permanent link">¶</a></h2>
-<p>Use the <strong>search bar</strong> at the top of the list to filter departments by name:</p>
-<ol>
-<li>Click the <strong>Type to search</strong> field</li>
-<li>Enter the department name or partial name</li>
-<li>The list filters in real time to show matching results</li>
-</ol>
-<hr>
-<h2 id="filtering-the-list">Filtering the list<a class="headerlink" href="#filtering-the-list" title="Permanent link">¶</a></h2>
-<p>Click the <strong>Filters</strong> button in the top-right corner to narrow results by specific criteria such as status or date range.</p>
-<hr>
-<h2 id="step-by-step-instructions">Step-by-step instructions<a class="headerlink" href="#step-by-step-instructions" title="Permanent link">¶</a></h2>
-<ol>
-<li>Go to <strong>Employee → Departments</strong> from the sidebar.</li>
-<li>Review the list of departments and the <strong>Is Enabled</strong> column to see which are active.</li>
-<li>Use the search bar to filter the list by department name.</li>
-<li>Click <strong>Filters</strong> to narrow the list by status or date range.</li>
-<li>Open a department to edit it, or add a new one from this page.</li>
-</ol>
-<hr>
-<h2 id="field-reference">Field reference<a class="headerlink" href="#field-reference" title="Permanent link">¶</a></h2>
-<p>The Departments Overview lists every department record with these columns.</p>
+<h2 id="exception-handling-and-error-recovery">Exception handling and error recovery<a class="headerlink" href="#exception-handling-and-error-recovery" title="Permanent link">¶</a></h2>
 <table>
 <thead>
 <tr>
-<th><strong>Column</strong></th>
-<th>What to do</th>
-<th>Description</th>
+<th>Symptom / Error Message</th>
+<th>Root Cause</th>
+<th>Remediation Action</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>SKU</strong></td>
-<td>Review the record ID</td>
-<td>Auto-generated unique identifier for the department</td>
+<td>Target department missing from dropdowns</td>
+<td>Department is disabled (<code>Is Enabled</code> is false)</td>
+<td>Enable the department on the <a href="manage-department.html">Manage Department</a> form</td>
 </tr>
 <tr>
-<td><strong>Department Name</strong></td>
-<td>Read the department name</td>
-<td>The name of the department as entered in the system</td>
-</tr>
-<tr>
-<td><strong>Description</strong></td>
-<td>Read the optional notes</td>
-<td>Optional description or notes about the department</td>
-</tr>
-<tr>
-<td><strong>Is Enabled</strong></td>
-<td>Check whether it is active</td>
-<td>Green checkmark if active; empty if the department is disabled</td>
-</tr>
-<tr>
-<td><strong>Created At</strong></td>
-<td>Check when it was created</td>
-<td>Date and time the department record was created</td>
-</tr>
-<tr>
-<td><strong>Updated At</strong></td>
-<td>Check when it last changed</td>
-<td>Date and time the department record was last modified</td>
+<td>Search returns no matching departments</td>
+<td>Search query typo or restrictive filter active</td>
+<td>Clear search input and reset active filter parameters</td>
 </tr>
 </tbody>
 </table>
 <hr>
-<h2 id="tips-and-common-issues">Tips and common issues<a class="headerlink" href="#tips-and-common-issues" title="Permanent link">¶</a></h2>
-<ul>
-<li><strong>Green checkmark under Is Enabled</strong> — Indicates the department is active and available for assignment to employees</li>
-<li><strong>Empty Is Enabled column</strong> — The department is disabled and will not appear as a selectable option in employee records</li>
-<li><strong>Description shows a dash (-)</strong> — No description was entered when the department was created; this field is optional</li>
-<li><strong>Success banner at the top</strong> — Appears briefly after a department is added or updated successfully</li>
-<li><strong>SKU is auto-generated</strong> — You do not need to enter a SKU manually; the system assigns it on creation</li>
-</ul>
-<hr>
 <h2 id="related-pages">Related pages<a class="headerlink" href="#related-pages" title="Permanent link">¶</a></h2>
 <ul>
-<li><strong>Add Department</strong> — Create a new department record</li>
-<li><strong>Department Detail</strong> — View or edit an existing department</li>
-<li><strong>Employees</strong> — Assign departments to employee profiles</li>
-<li><strong>Positions</strong> — Manage job positions within departments</li>
+<li><a href="manage-department.html">Manage Department</a> — Create or edit department details</li>
+<li><a href="../positions/overview.html">Positions Overview</a> — View work position listings</li>
+<li><a href="../employees/overview.html">Employees Overview</a> — Assign employees to departments</li>
 </ul>
 
 
@@ -5801,7 +5820,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 00:44:11 UTC">July 26, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 03:05:21 UTC">July 26, 2026</span>
   </span>
 
     

@@ -3645,10 +3645,32 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#step-by-step-instructions" class="md-nav__link">
     <span class="md-ellipsis">
       
         Step-by-step instructions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification-and-definition-of-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification and definition of done
       
     </span>
   </a>
@@ -3706,21 +3728,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#saving-the-wage-entry" class="md-nav__link">
+  <a href="#exception-handling-and-error-recovery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Saving the Wage entry
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tips-and-common-issues" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tips and common issues
+        Exception handling and error recovery
       
     </span>
   </a>
@@ -5567,10 +5578,32 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#step-by-step-instructions" class="md-nav__link">
     <span class="md-ellipsis">
       
         Step-by-step instructions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification-and-definition-of-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification and definition of done
       
     </span>
   </a>
@@ -5628,21 +5661,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#saving-the-wage-entry" class="md-nav__link">
+  <a href="#exception-handling-and-error-recovery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Saving the Wage entry
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tips-and-common-issues" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tips and common issues
+        Exception handling and error recovery
       
     </span>
   </a>
@@ -5703,41 +5725,55 @@
 
 
 <h1 id="add-wage-entry">Add Wage Entry<a class="headerlink" href="#add-wage-entry" title="Permanent link">¶</a></h1>
+<!-- metadata: owner: hr, last_updated: 2026-07-26, git_ref: main, staging_verified: true -->
+
 <h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
-<p>Use this page to record a wage entry for an employee in CTB Admin. A wage entry tracks the number of products produced by an employee, calculates their wage based on production quantity, and records any deductions, bonuses, and payment status. Wage entries are used to manage employee compensation tied to production output.</p>
+<p>Use this page to record production-based wage transactions in CTB Admin. Wage entries calculate worker earnings based on piecework output quantity, base unit rates, bonuses, and deductions.</p>
 <hr>
 <h2 id="when-to-use-this-page">When to use this page<a class="headerlink" href="#when-to-use-this-page" title="Permanent link">¶</a></h2>
 <ul>
-<li>Recording daily or periodic production-based wages for an employee</li>
-<li>Logging the number of products produced in a work session</li>
-<li>Applying deductions or bonuses to an employee's base wage</li>
-<li>Marking a wage as paid and recording the payment date</li>
-<li>Tracking outstanding wages before processing payroll</li>
+<li>Logging piece-rate production output for factory floor workers</li>
+<li>Calculating earnings for specific product manufacturing runs</li>
+<li>Applying bonuses or deductions to production work sessions</li>
+<li>Marking wage vouchers as settled or paid</li>
 </ul>
 <hr>
 <h2 id="how-to-access-this-page">How to access this page<a class="headerlink" href="#how-to-access-this-page" title="Permanent link">¶</a></h2>
-<p>From the sidebar, go to <strong>Employee → Wages</strong>. On the Wages List page, click the <strong>purple (+) icon</strong> in the top-right corner.</p>
-<p>The system opens the <strong>Add Wage Entry Page</strong>.</p>
+<p>From the sidebar navigation, select <strong>Employee → Wages</strong> (<code>/admin/employee/wageentry/</code>). Click <strong>Add Wage Entry (+)</strong> in the top-right corner.</p>
+<hr>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>Permissions:</strong> <code>employee.add_wageentry</code> permission codename (HR Staff, Production Supervisor, or Superuser role).</li>
+<li><strong>Active Records:</strong> Active <strong>Employee</strong> profile and <strong>Product</strong> item.</li>
+</ul>
 <hr>
 <h2 id="step-by-step-instructions">Step-by-step instructions<a class="headerlink" href="#step-by-step-instructions" title="Permanent link">¶</a></h2>
 <ol>
-<li>Open <strong>Employee → Wages</strong> and click the add icon.</li>
-<li>Fill in the <strong>Date</strong>, <strong>Employee</strong>, and <strong>Product</strong> fields.</li>
-<li>Enter <strong>Production Details</strong> including Quantity, Wage, Deductions, and Bonus.</li>
-<li>Review the auto-calculated <strong>Net Wage</strong>.</li>
-<li>Set <strong>Payment Information</strong> if the wage has already been paid.</li>
-<li>Click <strong>Save</strong> to create the wage entry.</li>
+<li>Open <strong>Wages</strong> from the <strong>Employee</strong> section of the sidebar.</li>
+<li>Click <strong>Add Wage Entry (+)</strong>.</li>
+<li>Select the entry <strong>Date</strong>, <strong>Employee</strong>, and <strong>Product</strong>.</li>
+<li>Enter production <strong>Quantity</strong>, base <strong>Wage</strong> rate (or leave <code>0</code> for default product rate), <strong>Deductions</strong>, and <strong>Bonus</strong>.</li>
+<li>Verify the auto-calculated <strong>Net Wage</strong>.</li>
+<li>Set <strong>Is Paid</strong> status and <strong>Payment Date</strong> if settling immediately.</li>
+<li>Click <strong>Save</strong> to create the record.</li>
 </ol>
+<hr>
+<h2 id="verification-and-definition-of-done">Verification and definition of done<a class="headerlink" href="#verification-and-definition-of-done" title="Permanent link">¶</a></h2>
+<ul>
+<li>System generates a wage SKU code (<code>WG-YYYYMMDD-XXXX</code>).</li>
+<li>Net wage computes according to formula: <code>(Wage * Quantity) + Bonus - Deductions</code>.</li>
+<li>The entry appears on the master list <code>/admin/employee/wageentry/</code> and updates the employee's pending compensation ledger.</li>
+</ul>
 <hr>
 <h2 id="field-reference">Field reference<a class="headerlink" href="#field-reference" title="Permanent link">¶</a></h2>
 <h3 id="general-information">General information<a class="headerlink" href="#general-information" title="Permanent link">¶</a></h3>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="add-wage-general-info.png" data-desc-position="bottom"><img alt="General Information Section" src="add-wage-general-info.png"></a></p>
-<p>Fill in the following fields:</p>
 <table>
 <thead>
 <tr>
 <th>Step</th>
 <th>Field</th>
+<th>Required</th>
 <th>What to Do</th>
 <th>Description</th>
 </tr>
@@ -5746,41 +5782,41 @@
 <tr>
 <td>1</td>
 <td>SKU</td>
-<td>Auto-generated</td>
-<td>Unique identifier for this wage entry (read-only)</td>
+<td>No</td>
+<td>View value</td>
+<td>Unique system-generated wage tracking code</td>
 </tr>
 <tr>
 <td>2</td>
 <td>Date</td>
+<td>Yes</td>
 <td>Select date</td>
-<td>The date this wage entry is recorded for</td>
+<td>Work session date (<code>YYYY-MM-DD</code>)</td>
 </tr>
 <tr>
 <td>3</td>
 <td>Employee</td>
-<td>Select from dropdown</td>
-<td>The employee whose wage is being recorded</td>
+<td>Yes</td>
+<td>Select employee</td>
+<td>Staff member completing production</td>
 </tr>
 <tr>
 <td>4</td>
 <td>Product</td>
-<td>Select from dropdown</td>
-<td>The product the employee produced in this work session</td>
+<td>Yes</td>
+<td>Select product</td>
+<td>Manufactured item</td>
 </tr>
 </tbody>
 </table>
-<div class="admonition warning">
-<p class="admonition-title">Required Fields</p>
-<p>Fields marked with a <strong>red star (*)</strong> are mandatory. Date, Employee, and Product must all be filled before saving.</p>
-</div>
 <h3 id="production-details">Production details<a class="headerlink" href="#production-details" title="Permanent link">¶</a></h3>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="add-wage-production-detail.png" data-desc-position="bottom"><img alt="Production Details Section" src="add-wage-production-detail.png"></a></p>
-<p>Enter the production output and wage calculation fields:</p>
 <table>
 <thead>
 <tr>
 <th>Step</th>
 <th>Field</th>
+<th>Required</th>
 <th>What to Do</th>
 <th>Description</th>
 </tr>
@@ -5789,51 +5825,48 @@
 <tr>
 <td>1</td>
 <td>Quantity</td>
+<td>Yes</td>
 <td>Enter number</td>
-<td>Number of products produced by the employee</td>
+<td>Number of units produced</td>
 </tr>
 <tr>
 <td>2</td>
 <td>Wage</td>
-<td>Enter amount</td>
-<td>Base wage rate; enter 0 to use the default product wage</td>
+<td>Yes</td>
+<td>Enter rate</td>
+<td>Base unit rate (enter <code>0</code> to use product default rate)</td>
 </tr>
 <tr>
 <td>3</td>
 <td>Deductions</td>
+<td>No</td>
 <td>Enter amount</td>
-<td>Any deductions to subtract from the base wage</td>
+<td>Deductions subtracted from gross wage</td>
 </tr>
 <tr>
 <td>4</td>
 <td>Bonus</td>
+<td>No</td>
 <td>Enter amount</td>
-<td>Any bonus amount to add to the base wage</td>
+<td>Incentive bonus added to wage</td>
 </tr>
 <tr>
 <td>5</td>
 <td>Net Wage</td>
-<td>Auto-calculated</td>
-<td>Final wage amount (Wage × Quantity + Bonus - Deductions)</td>
+<td>No</td>
+<td>Read-only</td>
+<td>Auto-computed net payout amount</td>
 </tr>
 </tbody>
 </table>
-<div class="admonition note">
-<p class="admonition-title">Net Wage Calculation</p>
-<p>Net Wage is calculated automatically based on Wage, Quantity, Bonus, and Deductions. You do not need to enter it manually.</p>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Set Wage to <strong>0</strong> to apply the default wage rate configured for the selected product.</p>
-</div>
 <h3 id="payment-information">Payment information<a class="headerlink" href="#payment-information" title="Permanent link">¶</a></h3>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="add-wage-payment-information.png" data-desc-position="bottom"><img alt="Payment Information Section" src="add-wage-payment-information.png"></a></p>
-<p>Record whether this wage has been paid:</p>
 <table>
 <thead>
 <tr>
 <th>Step</th>
 <th>Field</th>
+<th>Required</th>
 <th>What to Do</th>
 <th>Description</th>
 </tr>
@@ -5842,54 +5875,55 @@
 <tr>
 <td>1</td>
 <td>Is Paid</td>
-<td>Toggle ON/OFF</td>
-<td>Mark the wage entry as paid or unpaid</td>
+<td>Yes</td>
+<td>Toggle switch</td>
+<td>Indicates whether wage has been paid</td>
 </tr>
 <tr>
 <td>2</td>
 <td>Payment Date</td>
+<td>No</td>
 <td>Select date</td>
-<td>The date the payment was made (required if Is Paid is ON)</td>
+<td>Date payment was disbursed (required if <code>Is Paid</code> is ON)</td>
 </tr>
 <tr>
 <td>3</td>
 <td>Payment Notes</td>
+<td>No</td>
 <td>Enter text</td>
-<td>Optional notes about the payment method or reference</td>
+<td>Reference notes or payment method details</td>
 </tr>
 </tbody>
 </table>
-<div class="admonition note">
-<p class="admonition-title">Payment Date Visibility</p>
-<p>Payment Date and Payment Notes fields appear when <strong>Is Paid</strong> is toggled on. Leave Is Paid off if the wage is still outstanding.</p>
-</div>
 <hr>
-<h2 id="saving-the-wage-entry">Saving the Wage entry<a class="headerlink" href="#saving-the-wage-entry" title="Permanent link">¶</a></h2>
-<p>After completing all sections:</p>
-<ul>
-<li>Click <strong>Save</strong> to create the wage entry</li>
-<li>Click <strong>Save and continue editing</strong> to save and stay on the page</li>
-<li>Click <strong>Save and add another</strong> to save and immediately create another wage entry</li>
-</ul>
-<hr>
-<h2 id="tips-and-common-issues">Tips and common issues<a class="headerlink" href="#tips-and-common-issues" title="Permanent link">¶</a></h2>
-<ul>
-<li><strong>Employee is required</strong> — You must select an employee before saving</li>
-<li><strong>Product is required</strong> — Select the product associated with the production output</li>
-<li><strong>Default wage applies when Wage is 0</strong> — If no wage is entered, the system uses the product's default wage rate</li>
-<li><strong>Net Wage updates automatically</strong> — It recalculates whenever Quantity, Wage, Bonus, or Deductions are changed</li>
-<li><strong>Toggle Is Paid only when payment is confirmed</strong> — Setting Is Paid without a Payment Date may cause reporting inconsistencies</li>
-<li><strong>Deductions reduce Net Wage</strong> — Enter deductions carefully as they directly reduce the employee's final payment</li>
-<li><strong>Date affects payroll reporting</strong> — The entry date determines which pay period this wage record appears in</li>
-</ul>
+<h2 id="exception-handling-and-error-recovery">Exception handling and error recovery<a class="headerlink" href="#exception-handling-and-error-recovery" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Symptom / Error Message</th>
+<th>Root Cause</th>
+<th>Remediation Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Net Wage negative</code></td>
+<td>Deductions exceed total earned wage plus bonus</td>
+<td>Review deduction amount and adjust before saving</td>
+</tr>
+<tr>
+<td><code>Payment Date required when Is Paid is enabled</code></td>
+<td>Form submitted with <code>Is Paid</code> enabled without a payment date</td>
+<td>Select a valid date in <strong>Payment Date</strong></td>
+</tr>
+</tbody>
+</table>
 <hr>
 <h2 id="related-pages">Related pages<a class="headerlink" href="#related-pages" title="Permanent link">¶</a></h2>
 <ul>
-<li><strong>Wages Overview</strong> — View and manage all wage entries</li>
-<li><strong>Employees</strong> — Manage employee profiles</li>
-<li><strong>Products</strong> — View product wage rates used in calculations</li>
-<li><strong>Salaries</strong> — Manage fixed salary records for employees</li>
-<li><strong>Payouts</strong> — Process and track wage payments</li>
+<li><a href="overview.html">Wages Overview</a> — Review master list of wage vouchers</li>
+<li><a href="../payouts/create-payout.html">Create Payout</a> — Disburse payouts for accumulated wage balances</li>
+<li><a href="../salary/generate-salary.html">Generate Salary</a> — Include wage entries in periodic salary vouchers</li>
 </ul>
 
 
@@ -5913,7 +5947,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 00:44:11 UTC">July 26, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 03:05:21 UTC">July 26, 2026</span>
   </span>
 
     
