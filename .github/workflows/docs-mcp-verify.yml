@@ -26,7 +26,8 @@ jobs:
           uv sync || true
           uv pip install --system -r requirements.txt || true
           pip install mkdocs-material pymdownx-blocks mdformat \
-            mdformat-mkdocs mkdocs-glightbox
+            mdformat-mkdocs mkdocs-glightbox \
+            mkdocs-git-revision-date-localized-plugin
 
       - name: Run style linter
         run: |
