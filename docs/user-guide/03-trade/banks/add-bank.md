@@ -1,6 +1,14 @@
+---
+tags: [module:trade, task:create, role:accountant]
+---
+
 # Add Bank
 
+## Summary
+
 Use this page to register a new bank account in CTB Admin. When you open a new bank account or need to track an existing one, create a bank record to manage its name, balance limits, branch details, and account information. Bank records help you monitor balances, link checks and payments, and maintain accurate financial records.
+
+______________________________________________________________________
 
 ## When to use this page
 
@@ -10,15 +18,30 @@ Use this page to register a new bank account in CTB Admin. When you open a new b
 - Managing branch and account details for a bank
 - Enabling or disabling a bank account from active use
 
+______________________________________________________________________
+
 ## How to access this page
 
-From the sidebar, go to **Trade Management → Banks**. On the Banks List page, click the **purple (+) icon** in the top-right corner.
+From the sidebar, go to **Trade → Banks**. On the Banks List page, click the **purple (+) icon** in the top-right corner.
 
 The system opens the **Add Bank Page**.
 
 ______________________________________________________________________
 
-## Bank Information
+## Step-by-step instructions
+
+1. Open **Add Bank** from the **Trade** section of the sidebar.
+1. Complete the **Bank information** section described below.
+1. Complete the **Balance information** section described below.
+1. Complete the **Branch details** section described below.
+1. Complete the **Account details** section described below.
+1. Follow **Saving the Bank record** below to finish.
+
+______________________________________________________________________
+
+## Field reference
+
+### Bank information
 
 ![Bank Information Section](add-bank-bank-info.png)
 
@@ -31,11 +54,10 @@ Fill in the following fields:
 | 3    | Is Enabled | Toggle on/off  | Activate or deactivate this bank account in the system |
 
 !!! warning "Required Fields"
-Fields marked with a **red star (\*)** are mandatory. Bank Name is required before saving.
 
-______________________________________________________________________
+    Fields marked with a **red star (\*)** are mandatory. Bank Name is required before saving.
 
-## Balance Information
+### Balance information
 
 Configure the financial limits for this bank account:
 
@@ -46,11 +68,10 @@ Configure the financial limits for this bank account:
 | 3    | Lower Balance Limit | Enter amount | Minimum balance threshold; alerts when balance falls below this |
 
 !!! note "Balance Limits"
-Upper and Lower Balance Limits are used for financial monitoring. The system can notify you when the bank balance crosses either threshold.
 
-______________________________________________________________________
+    Upper and Lower Balance Limits are used for financial monitoring. The system can notify you when the bank balance crosses either threshold.
 
-## Branch Details
+### Branch details
 
 ![Branch Details Section](add-bank-branch-detail.png)
 
@@ -63,11 +84,10 @@ Click the **Branch Details** section to expand and fill in branch-specific infor
 | Branch Phone   | Enter number | Phone number of the bank branch     |
 
 !!! info
-Branch Details is a collapsible section. Click the header to expand it before entering data.
 
-______________________________________________________________________
+    Branch Details is a collapsible section. Click the header to expand it before entering data.
 
-## Account Details
+### Account details
 
 ![Account Details Section](add-bank-account-detail.jpg)
 
@@ -80,11 +100,12 @@ Click the **Account Details** section to expand and fill in account-specific inf
 | Account Type   | Enter text | Type of account (e.g., Current, Savings) |
 
 !!! info
-Account Details is a collapsible section. Click the header to expand it before entering data.
+
+    Account Details is a collapsible section. Click the header to expand it before entering data.
 
 ______________________________________________________________________
 
-## Saving the Bank Record
+## Saving the Bank record
 
 After completing all sections:
 
@@ -96,18 +117,18 @@ The bank is now registered in the system and available for linking to checks and
 
 ______________________________________________________________________
 
-!!! Tips and Common Issues
+## Tips and common issues
 
-- **Bank Name is required** — You must enter a bank name before the record can be saved <br>
-- **Is Enabled controls availability** — Disabled banks will not appear as selectable options when creating checks or payments <br>
-- **Current Balance sets the starting point** — Enter the actual current balance so the system can accurately track future transactions <br>
-- **Set realistic balance limits** — Upper and Lower limits help flag unusual account activity; set them based on your operational thresholds <br>
-- **Branch and Account Details are optional** — These sections are collapsible and not required, but recommended for complete record-keeping <br>
-- **Multiple accounts per bank** — You can create separate records for different accounts at the same bank; give each a distinct name <br>
+- **Bank Name is required** — You must enter a bank name before the record can be saved
+- **Is Enabled controls availability** — Disabled banks will not appear as selectable options when creating checks or payments
+- **Current Balance sets the starting point** — Enter the actual current balance so the system can accurately track future transactions
+- **Set realistic balance limits** — Upper and Lower limits help flag unusual account activity; set them based on your operational thresholds
+- **Branch and Account Details are optional** — These sections are collapsible and not required, but recommended for complete record-keeping
+- **Multiple accounts per bank** — You can create separate records for different accounts at the same bank; give each a distinct name
 
 ______________________________________________________________________
 
-## Related Pages
+## Related pages
 
 - **Banks Overview** — View all registered bank accounts and their balances
 - **Bank Detail** — View or edit bank information after creation

@@ -49,4 +49,4 @@ When assigned an issue:
 
 - GitHub Copilot coding agent can see images attached to issues — use them to validate updated UI labels.
 - If the screenshot changed (new layout, new fields), update the image path and the field reference table/list accordingly.
-- Use relative path syntax: `../screenshots/<module>/<file-name>.png`
+- Use relative path syntax: `<filename>.png`, saved next to the page

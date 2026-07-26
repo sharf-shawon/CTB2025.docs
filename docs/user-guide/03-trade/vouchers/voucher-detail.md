@@ -1,26 +1,12 @@
+---
+tags: [module:trade, task:view, role:accountant]
+---
+
 # Voucher Detail
 
 Use this page to view and manage a voucher after it has been created. The voucher detail page displays all components of a voucher—general information, voucher items, and notes—with a button to view change history. Editing capabilities are available directly on this page.
 
-## When to use Voucher Detail
-
-- Viewing a complete voucher record with all materials and calculations
-- Checking voucher payment information and paid amount
-- Modifying voucher details, items, or payment fields
-- Reviewing the voucher history and change log
-- Deleting a voucher that is no longer needed
-
-## How to access this page
-
-From the sidebar, go to **Trade Management → Vouchers**. On the Vouchers List page, click on any voucher number or SKU to open the **Voucher Detail page**.
-
-![Voucher Detail List Page](voucher-detail-list-page.png)
-
-The page displays the voucher with three main tabs: **General**, **Voucher Items**, and **Notes**.
-
-______________________________________________________________________
-
-## Page Overview
+## Summary
 
 The voucher detail page includes an action button at the top-right:
 
@@ -30,7 +16,40 @@ The voucher detail page includes an action button at the top-right:
 
 ______________________________________________________________________
 
-## General Tab
+## When to use this page
+
+- Viewing a complete voucher record with all materials and calculations
+- Checking voucher payment information and paid amount
+- Modifying voucher details, items, or payment fields
+- Reviewing the voucher history and change log
+- Deleting a voucher that is no longer needed
+
+______________________________________________________________________
+
+## How to access this page
+
+From the sidebar, go to **Trade → Vouchers**. On the Vouchers List page, click on any voucher number or SKU to open the **Voucher Detail page**.
+
+![Voucher Detail List Page](voucher-detail-list-page.png)
+
+The page displays the voucher with three main tabs: **General**, **Voucher Items**, and **Notes**.
+
+______________________________________________________________________
+
+## Step-by-step instructions
+
+1. Open **Voucher Detail** from the **Trade** section of the sidebar.
+1. Complete the **General tab** section described below.
+1. Complete the **Payment details section** section described below.
+1. Complete the **Voucher items tab** section described below.
+1. Complete the **Notes tab** section described below.
+1. Follow **Saving changes** below to finish.
+
+______________________________________________________________________
+
+## Field reference
+
+### General tab
 
 ![General Tab](voucher-detail-general-info.png)
 
@@ -42,15 +61,14 @@ The General tab displays voucher header information:
 | Voucher Number | Unique identifier for this voucher                |
 | Reference      | Optional reference number or external document ID |
 | Voucher Date   | Date the voucher was issued                       |
-| Vendor         | The supplier linked to this voucher               |
+| Vendor         | The vendor linked to this voucher                 |
 | Photo          | Attached voucher photo or scan copy               |
 
 !!! note "Required Fields"
-Fields marked with a **red star (\*)** are mandatory and must be filled before saving.
 
-______________________________________________________________________
+    Fields marked with a **red star (\*)** are mandatory and must be filled before saving.
 
-## Payment Details Section
+### Payment details section
 
 Below the general fields, the page displays financial information:
 
@@ -68,11 +86,10 @@ Below the general fields, the page displays financial information:
 | Paid By     | Employee or method used to make the payment                   | Yes       |
 
 !!! note
-**Subtotal** and **Payable** are calculated automatically based on other fields.
 
-______________________________________________________________________
+    **Subtotal** and **Payable** are calculated automatically based on other fields.
 
-## Voucher Items Tab
+### Voucher items tab
 
 ![Voucher Items Tab](voucher-detail-item-info.png)
 
@@ -92,11 +109,10 @@ The Voucher Items tab displays all materials or services on the voucher:
 - Click **Remove** on an empty or unwanted row to discard it
 
 !!! tip
-Each item's total is calculated automatically once Rate and Quantity are entered.
 
-______________________________________________________________________
+    Each item's total is calculated automatically once Rate and Quantity are entered.
 
-## Notes Tab
+### Notes tab
 
 The Notes tab contains internal comments for the voucher:
 
@@ -106,7 +122,7 @@ The Notes tab contains internal comments for the voucher:
 
 ______________________________________________________________________
 
-## Saving Changes
+## Saving changes
 
 After making edits on any tab:
 
@@ -115,7 +131,8 @@ After making edits on any tab:
 - Click **Save and add another** to save and immediately create a new voucher
 
 !!! warning "Save Changes"
-After making edits, always click **Save** at the bottom-right to apply your changes. Unsaved changes will be lost if you navigate away.
+
+    After making edits, always click **Save** at the bottom-right to apply your changes. Unsaved changes will be lost if you navigate away.
 
 ______________________________________________________________________
 
@@ -124,22 +141,23 @@ ______________________________________________________________________
 A **Delete Voucher** button is available at the bottom-left of the page.
 
 !!! warning "Permanent Action"
-Deleting a voucher is permanent. Ensure the voucher is no longer needed before confirming deletion.
+
+    Deleting a voucher is permanent. Ensure the voucher is no longer needed before confirming deletion.
 
 ______________________________________________________________________
 
-## Tips and Common Issues
+## Tips and common issues
 
-- **Vendor is required** — You must select a vendor before saving <br>
-- **Subtotal is auto-calculated** — It updates automatically as you add or modify voucher items <br>
-- **Discount reduces Payable** — Enter a discount to lower the final amount due <br>
+- **Vendor is required** — You must select a vendor before saving
+- **Subtotal is auto-calculated** — It updates automatically as you add or modify voucher items
+- **Discount reduces Payable** — Enter a discount to lower the final amount due
 - **Paid Amount tracks settlement** — Keep Paid Amount updated to reflect actual payments made<br>
 - **Photo upload supported** — Attach a physical voucher scan for document record-keep<br>
 - **History tracks all changes** — Use the History button to audit who changed what and when<br>
 
 ______________________________________________________________________
 
-## Related Pages
+## Related pages
 
 - [Vouchers Overview](overview.md) — View all vouchers and search by vendor or date
 - [Create Voucher](add-voucher.md) — Create a new voucher for a vendor

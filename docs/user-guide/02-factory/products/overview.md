@@ -1,24 +1,38 @@
+---
+tags: [module:factory, task:view, role:staff]
+---
+
 # Products Overview
 
-The **Products** section allows you to manage all manufactured products, define material compositions, set pricing, and track inventory levels.
+## Summary
+
+Use the **Products** section to manage all manufactured products, define material compositions, set pricing, and track inventory levels.
 
 ______________________________________________________________________
 
-## Product List Page
+## When to use this page
 
-The **Product List** page displays all products in a table format for quick access and management.
+- When you need to work with products overview in CTB Admin.
 
-![Product List Page](product-list-page.png)
+______________________________________________________________________
 
-### Key Features
+## How to access this page
 
-- View all products with essential details
-- Quickly search and locate specific products
-- Access product edit page directly
-- Filter by Active, Disabled, or Deleted status
-- Import and export product data
+From the sidebar, go to **Factory**, then open **Products Overview**.
 
-## Table Information
+______________________________________________________________________
+
+## Step-by-step instructions
+
+1. Open **Products Overview** from the **Factory** section of the sidebar.
+1. Complete the **Table information** section described below.
+1. Review the values you entered, then save the record.
+
+______________________________________________________________________
+
+## Field reference
+
+### Table information
 
 The table provides a real-time summary of your factory's product portfolio:
 
@@ -40,23 +54,37 @@ The table provides a real-time summary of your factory's product portfolio:
 - Use the search bar to find products by **name or SKU**
 - Click **Filters** (top-right) to filter by status, category, or other criteria
 
-______________________________________________________________________
-
-### Navigation to Edit Page
+### Navigation to edit page
 
 - Click on the **SKU, Photo, or Name**
 - This opens the **Product Edit Page**
 
 ______________________________________________________________________
 
-## Product Edit Page Tabs
+## Product list page
+
+The **Product List** page displays all products in a table format for quick access and management.
+
+![Product List Page](product-list-page.png)
+
+### Key features
+
+- View all products with essential details
+- Quickly search and locate specific products
+- Access product edit page directly
+- Filter by Active, Disabled, or Deleted status
+- Import and export product data
+
+______________________________________________________________________
+
+## Product edit page tabs
 
 The product edit page is divided into multiple tabs.
 Each tab focuses on a different type of information.
 
 ______________________________________________________________________
 
-## General Tab
+## General tab
 
 This tab contains the **basic product information**.
 
@@ -79,7 +107,7 @@ Used for managing product identity, categorization, and basic configuration.
 
 ______________________________________________________________________
 
-## Notes Tab
+## Notes tab
 
 This tab displays **additional product documentation**.
 
@@ -94,7 +122,7 @@ Used to store supplementary information about the product for reference by produ
 
 ______________________________________________________________________
 
-## Product Costings Tab
+## Product costings tab
 
 This tab defines the **material composition and cost calculation** for the product.
 
@@ -118,7 +146,7 @@ Used to track which materials compose the product, manage pricing, and monitor p
 
 ______________________________________________________________________
 
-## Product History Button
+## Product history button
 
 This tab displays a **complete audit trail** of the product record.
 
@@ -135,7 +163,7 @@ Used to track who modified the product, when changes occurred, and to restore pr
 
 ______________________________________________________________________
 
-## Best Practices
+## Best practices
 
 - Use the **General tab** to update basic product information
 - Keep **Product Costings** up to date to ensure accurate profit calculations
@@ -146,7 +174,7 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## Related Pages
+## Related pages
 
 - **Add Product** — Create new products
 - **Edit Product** — Update product details and costings

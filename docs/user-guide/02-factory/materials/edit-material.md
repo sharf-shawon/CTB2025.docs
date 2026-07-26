@@ -1,13 +1,17 @@
+---
+tags: [module:factory, task:edit, role:staff]
+---
+
 # Edit Material
 
-## Overview
+## Summary
 
-The **Edit Material** page allows you to update existing material information.
+Use the **Edit Material** page to update existing material information.
 This includes general details, inventory settings, and status control.
 
 ______________________________________________________________________
 
-## When to Use
+## When to use this page
 
 Use this page when:
 
@@ -18,21 +22,30 @@ Use this page when:
 
 ______________________________________________________________________
 
-## How to Edit a Material
+## How to access this page
 
-1. Go to **Factory → Materials**
-1. In the material list, click on the **SKU, Photo, or Name** of the material
-1. The **Edit Material** page will open
-
-![Edit Material](edit-material.png)
+From the sidebar, go to **Factory**, then open **Edit Material**.
 
 ______________________________________________________________________
 
-## General Information
+## Step-by-step instructions
+
+1. Open **Edit Material** from the **Factory** section of the sidebar.
+1. Complete the **General information** section described below.
+1. Complete the **Inventory information** section described below.
+1. Complete the **History table details** section described below.
+1. Complete the **Best practices** section described below.
+1. Review the values you entered, then save the record.
+
+______________________________________________________________________
+
+## Field reference
+
+### General information
 
 ![General Information](material-general-tab.png)
 
-### Editable Fields
+### Editable fields
 
 | Field       | Description                              |
 | ----------- | ---------------------------------------- |
@@ -43,9 +56,7 @@ ______________________________________________________________________
 | Photo       | Upload or replace material image         |
 | Description | Update additional details                |
 
-______________________________________________________________________
-
-## Inventory Information
+### Inventory information
 
 | Field         | Description                       |
 | ------------- | --------------------------------- |
@@ -53,9 +64,38 @@ ______________________________________________________________________
 | Cost          | Modify cost per unit              |
 | Reorder Level | Adjust minimum stock threshold    |
 
+### History table details
+
+The history table breaks down every modification with the following columns:
+
+| Column            | Description                                                                 |
+| :---------------- | :-------------------------------------------------------------------------- |
+| **Object**        | The specific material ID and name being tracked.                            |
+| **Date/time**     | The exact timestamp when the change occurred.                               |
+| **Comment**       | The type of action performed (e.g., **Created**, **Changed**).              |
+| **Changed by**    | The username of the person who performed the action (e.g., `tester`).       |
+| **Change reason** | A note or justification provided by the user at the time of the change.     |
+| **Changes**       | A detailed log of what specifically was modified (e.g., `Stock: 0 → 2000`). |
+
+### Best practices
+
+- **Review Before Reverting:** Always check the **Changes** column to understand exactly what will be modified before choosing to revert to an older version.
+- **Provide Change Reasons:** When prompted by the system during an edit, provide a clear "Change reason" to help colleagues understand why a modification was made (e.g., "Monthly stock count correction").
+- **Audit Regularly:** Use this page to investigate discrepancies between physical stock and system records.
+
 ______________________________________________________________________
 
-## Best Practices
+## How to edit a Material
+
+1. Go to **Factory → Materials**
+1. In the material list, click on the **SKU, Photo, or Name** of the material
+1. The **Edit Material** page will open
+
+![Edit Material](edit-material.png)
+
+______________________________________________________________________
+
+## Best practices
 
 - Avoid changing the **Unit** after the material is already in use
 - Update **Stock** through inventory transactions when possible
@@ -63,7 +103,7 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## Material History Page
+## Material history page
 
 ![History Button](edit-material-history-button.png)
 
@@ -81,54 +121,35 @@ This page displays a chronological list of all actions performed on a material o
 
 ______________________________________________________________________
 
-## History Table Details
+## Key functionalities
 
-The history table breaks down every modification with the following columns:
-
-| Column            | Description                                                                 |
-| :---------------- | :-------------------------------------------------------------------------- |
-| **Object**        | The specific material ID and name being tracked.                            |
-| **Date/time**     | The exact timestamp when the change occurred.                               |
-| **Comment**       | The type of action performed (e.g., **Created**, **Changed**).              |
-| **Changed by**    | The username of the person who performed the action (e.g., `tester`).       |
-| **Change reason** | A note or justification provided by the user at the time of the change.     |
-| **Changes**       | A detailed log of what specifically was modified (e.g., `Stock: 0 → 2000`). |
-
-______________________________________________________________________
-
-## Key Functionalities
-
-### 1. Tracking Stock Movements
+### 1. Tracking stock movements
 
 The **Changes** column explicitly shows value transitions. For example, you can see exactly when stock was initialized or adjusted, moving from an old value to a new one.
 
-### 2. Version Control (Revert)
+### 2. Version control (revert)
 
 By clicking on a specific entry, you can view the state of the material at that exact moment. This is essential for correcting accidental data entry or unauthorized changes.
 
-### 3. Audit Accountability
+### 3. Audit accountability
 
 The **Changed by** column ensures that every update is tied to a specific user account, providing transparency for inventory management.
 
 ______________________________________________________________________
 
-## Best Practices
-
-- **Review Before Reverting:** Always check the **Changes** column to understand exactly what will be modified before choosing to revert to an older version.
-- **Provide Change Reasons:** When prompted by the system during an edit, provide a clear "Change reason" to help colleagues understand why a modification was made (e.g., "Monthly stock count correction").
-- **Audit Regularly:** Use this page to investigate discrepancies between physical stock and system records.
-
-## Important Notes
+## Important notes
 
 !!! warning
-Changing **Unit** after transactions exist can cause inconsistency in inventory data.
+
+    Changing **Unit** after transactions exist can cause inconsistency in inventory data.
 
 !!! warning
-Editing **Stock manually** may not reflect actual inventory movement history.
+
+    Editing **Stock manually** may not reflect actual inventory movement history.
 
 ______________________________________________________________________
 
-## Related Pages
+## Related pages
 
 - **Add Material** — Create new materials
 - **Inventory In** — Increase stock properly

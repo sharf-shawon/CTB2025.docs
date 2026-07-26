@@ -1,12 +1,20 @@
+---
+tags: [module:trade, task:view, role:accountant]
+---
+
 # Trade Module
 
 Use the Trade module to manage invoices, payments, checks, vouchers, and bank records.
+
+______________________________________________________________________
 
 ## Summary
 
 The Trade section is the financial workflow center of CTB Admin. Use it to create invoices, record payments, manage checks, and track bank-related activity.
 
-## What you can do in this section
+______________________________________________________________________
+
+## What you can do in this module
 
 - Create and edit invoices.
 - Record payments and link them to checks when needed.
@@ -14,7 +22,9 @@ The Trade section is the financial workflow center of CTB Admin. Use it to creat
 - Record vouchers for finance entries that are not invoices.
 - Maintain bank account records.
 
-## Module structure
+______________________________________________________________________
+
+## Pages in this module
 
 | Module   | Purpose                                              |
 | -------- | ---------------------------------------------------- |
@@ -24,6 +34,8 @@ The Trade section is the financial workflow center of CTB Admin. Use it to creat
 | Vouchers | Record non-invoice financial transactions.           |
 | Banks    | Maintain bank account records for finance workflows. |
 
+______________________________________________________________________
+
 ## Typical workflow
 
 1. Create the invoice or voucher.
@@ -31,7 +43,9 @@ The Trade section is the financial workflow center of CTB Admin. Use it to creat
 1. Link checks when the transaction uses a bank check.
 1. Review the detail page and report pages for follow-up.
 
-## Related sections
+______________________________________________________________________
+
+## Related pages
 
 - Business - Provides the client and vendor records used in Trade.
 - Factory - Supplies products and materials that appear in invoices.

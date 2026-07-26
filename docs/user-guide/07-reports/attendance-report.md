@@ -1,3 +1,7 @@
+---
+tags: [module:reports, task:report, role:accountant]
+---
+
 # Attendance Report
 
 ## Summary
@@ -6,6 +10,8 @@ The Monthly Attendance Report shows a day-by-day attendance grid for all employe
 
 <!-- TODO: screenshot docs/user-guide/screenshots/reports/attendance-report.png -->
 
+______________________________________________________________________
+
 ## When to use this page
 
 - You need a month-level view of employee attendance for payroll or review
@@ -13,15 +19,21 @@ The Monthly Attendance Report shows a day-by-day attendance grid for all employe
 - You need a printable monthly attendance summary for management
 - You need to identify late arrivals, early departures or overtime at a glance
 
+______________________________________________________________________
+
 ## How to access this page
 
 Open **Employee → Attendances → Monthly Attendance Report** in the left sidebar.
+
+______________________________________________________________________
 
 ## Prerequisites
 
 - Permission to view Reports or Attendance pages (HR or manager role)
 - Employee records must exist in **Employees**
 - Attendance entries (time-in / time-out) must be recorded for the chosen month
+
+______________________________________________________________________
 
 ## Step-by-step instructions
 
@@ -35,6 +47,8 @@ Open **Employee → Attendances → Monthly Attendance Report** in the left side
 1. Use the legend below the table to interpret cell color codes (full shift, partial, leave, overtime, late/early)
 1. Click **Print Report** (top-left) to print or export the current view
 
+______________________________________________________________________
+
 ## Field reference
 
 - **Employee** — Employee name (first column). Click to open the employee record if supported
@@ -43,21 +57,23 @@ Open **Employee → Attendances → Monthly Attendance Report** in the left side
 
 - **Summary columns (right)** — Per-employee tallies, typically including:
 
-  - **Present (P)** — Count of days the employee was present
-  - **Absent (A)** — Count of absent days (unmarked or absent status)
-  - **Late (L)** — Count of late arrivals
-  - **OT** — Overtime hours or overtime day count (implementation varies)
-  - **Early/Early leave** — Count of early departures, if tracked
-  - **Total** — Aggregate attendance-related metric (may be labelled differently in your deployment)
+    - **Present (P)** — Count of days the employee was present
+    - **Absent (A)** — Count of absent days (unmarked or absent status)
+    - **Late (L)** — Count of late arrivals
+    - **OT** — Overtime hours or overtime day count (implementation varies)
+    - **Early/Early leave** — Count of early departures, if tracked
+    - **Total** — Aggregate attendance-related metric (may be labelled differently in your deployment)
 
 - **Legend** — A legend below the grid explains cell colours and symbols, for example:
 
-  - Full shift worked
-  - Partial shift or partial clock-in/clock-out
-  - Leave (paid/unpaid)
-  - Overtime entry
-  - Late arrival or early departure
-  - Total present/attendance summary
+    - Full shift worked
+    - Partial shift or partial clock-in/clock-out
+    - Leave (paid/unpaid)
+    - Overtime entry
+    - Late arrival or early departure
+    - Total present/attendance summary
+
+______________________________________________________________________
 
 ## Tips and common issues
 
@@ -65,6 +81,8 @@ Open **Employee → Attendances → Monthly Attendance Report** in the left side
 - Narrow the date range when the report is slow to load for large employee lists
 - Use the employee link (left column) to open an employee's attendance detail when investigating a specific row
 - Overtime and late counts depend on your organisation's shift rules — verify shift settings if totals look unexpected
+
+______________________________________________________________________
 
 ## Related pages
 

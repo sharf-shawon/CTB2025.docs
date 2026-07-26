@@ -1,10 +1,12 @@
+---
+tags: [module:employee, task:view, role:hr]
+---
+
 # Positions Overview
 
-The **Positions** page displays all job positions in a structured table. It allows you to quickly search, review, and manage employee positions used across your workforce.
+The **Positions** page displays all job positions in a structured table. Use it to search, review, and manage the positions used across your workforce.
 
-______________________________________________________________________
-
-## Page Layout
+## Summary
 
 ![Positions List](position-overview.png)
 
@@ -17,7 +19,30 @@ The page includes:
 
 ______________________________________________________________________
 
-## Position List
+## When to use this page
+
+- When you need to work with positions overview in CTB Admin.
+
+______________________________________________________________________
+
+## How to access this page
+
+From the sidebar, go to **Employee**, then open **Positions Overview**.
+
+______________________________________________________________________
+
+## Step-by-step instructions
+
+1. Open **Positions Overview** from the **Employee** section of the sidebar.
+1. Complete the **Position list** section described below.
+1. Complete the **Filters** section described below.
+1. Review the values you entered, then save the record.
+
+______________________________________________________________________
+
+## Field reference
+
+### Position list
 
 The table shows all positions with key details:
 
@@ -30,23 +55,7 @@ The table shows all positions with key details:
 | Created At    | Date and time the position was created                |
 | Updated At    | Last modification date                                |
 
-______________________________________________________________________
-
-## Search Bar
-
-Use the search bar to quickly find positions.
-
-### How to use
-
-- Type a keyword (e.g., position name or SKU)
-- The table updates instantly based on your input
-
-!!! tip
-Use SKU for faster and more accurate search results.
-
-______________________________________________________________________
-
-## Filters
+### Filters
 
 Use the **Filters** button to narrow down position results.
 
@@ -58,11 +67,27 @@ Use the **Filters** button to narrow down position results.
 - **Department** — Filter positions by assigned department (if applicable)
 
 !!! note
-Apply filters to quickly locate positions matching your workflow needs.
+
+    Apply filters to quickly locate positions matching your workflow needs.
 
 ______________________________________________________________________
 
-## Tips and Best Practices
+## Search bar
+
+Use the search bar to quickly find positions.
+
+### How to use
+
+- Type a keyword (e.g., position name or SKU)
+- The table updates instantly based on your input
+
+!!! tip
+
+    Use SKU for faster and more accurate search results.
+
+______________________________________________________________________
+
+## Tips and common issues
 
 - Use search instead of manually scanning the list
 - Keep position names consistent and clear for easier employee assignment
@@ -72,7 +97,7 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## Related Pages
+## Related pages
 
 - **Edit Position** — Update position details and enable/disable status
 - **Employees Overview** — View employees assigned to positions

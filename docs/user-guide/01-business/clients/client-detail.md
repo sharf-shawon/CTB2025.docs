@@ -1,10 +1,16 @@
+---
+tags: [module:business, task:view, role:staff]
+---
+
 # Client Detail
 
-The **Client Detail** page displays the complete profile of a client, including personal information, business details, financial data, and activity history. It allows you to review client information and perform actions such as editing or managing transactions.
+The **Client Detail** page displays the complete profile of a client, including personal information, business details, financial data, and activity history. Use it to review client information and to edit the record or manage its transactions.
 
 ## Summary
 
 Use this page to review a client's complete profile before you perform billing, payment, or account decisions. It combines identity, contact, and financial information in one place.
+
+______________________________________________________________________
 
 ## When to use this page
 
@@ -13,6 +19,8 @@ Use this page to review a client's complete profile before you perform billing, 
 - Reviewing client identification and business information
 - Accessing client-related actions such as editing or transactions
 
+______________________________________________________________________
+
 ## How to access this page
 
 1. Go to **Business → Clients** from the sidebar.
@@ -20,13 +28,17 @@ Use this page to review a client's complete profile before you perform billing, 
 
 The system will open the **Client Detail** page.
 
+______________________________________________________________________
+
 ## Step-by-step instructions
 
-1. Open **Business -> Clients** from the sidebar.
+1. Open **Business → Clients** from the sidebar.
 1. Select the target client from the list.
 1. Review personal and business details for accuracy.
 1. Check balance and discount limits before creating new transactions.
 1. Use available actions such as **Edit Client** or **Create Invoice** as needed.
+
+______________________________________________________________________
 
 ## Field reference
 
@@ -38,7 +50,7 @@ The system will open the **Client Detail** page.
 
 ______________________________________________________________________
 
-## Page Overview
+## Page overview
 
 The page is typically divided into multiple sections:
 
@@ -49,7 +61,7 @@ The page is typically divided into multiple sections:
 
 ______________________________________________________________________
 
-## Personal Information
+## Personal information
 
 ![Personal Information Section](client-edit-personal-info.png)
 
@@ -68,7 +80,7 @@ This section displays the client’s basic information.
 
 ______________________________________________________________________
 
-## Business Details
+## Business details
 
 ![Business Details Section](client-edit-business-details.png)
 
@@ -84,11 +96,12 @@ This section contains identity and contract-related information.
 | End Date             | End date of the client relationship (if any) |
 
 !!! note
-Uploaded images help verify client identity and should be clear and readable.
+
+    Uploaded images help verify client identity and should be clear and readable.
 
 ______________________________________________________________________
 
-## Balance and Discount Information
+## Balance and discount information
 
 ![Balance and Discount Section](client-balance-discount.png)
 
@@ -106,7 +119,7 @@ This section shows the client’s financial status and limits.
 
 ______________________________________________________________________
 
-## Available Actions
+## Available actions
 
 From the **Client Detail** page, you can perform the following actions:
 
@@ -119,19 +132,19 @@ From the **Client Detail** page, you can perform the following actions:
 
 ______________________________________________________________________
 
-!!! Tips and Note
+## Tips and common issues
+
 \* The **SKU** is system-generated and cannot be changed.<br>
 \* Financial fields such as **Discount Total** are calculated automatically.<br>
 \* If a client is **inactive**, they may not appear in invoice selection lists.
 
-______________________________________________________________________
-
 !!! warning
-Make sure the **Phone Number** is correct before enabling **Send SMS**, as this number will receive automated SMS notifications.
+
+    Make sure the **Phone Number** is correct before enabling **Send SMS**, as this number will receive automated SMS notifications.
 
 ______________________________________________________________________
 
-## Related Pages
+## Related pages
 
 - **Add Client** — Create a new client
 - **Edit Client** — Update client information

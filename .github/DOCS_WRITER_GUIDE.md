@@ -40,12 +40,12 @@ Module folders:
 - `02-factory`
 - `03-trade`
 - `04-employee`
-- `05-settings-and-admin`
-- `06-reference`
+- `08-settings-and-admin`
+- `09-reference`
 
 Screenshot root:
 
-- `docs/user-guide/screenshots/`
+- Screenshots live next to the page that references them
 
 Screenshot module folders:
 
@@ -118,7 +118,7 @@ When a screenshot path is provided, reference it with standard Markdown image sy
 Example:
 
 ```markdown
-![Add Client form](../screenshots/business/add-client.png)
+![Add Client form](add-client.png)
 ```
 
 Operational screenshot policy:
@@ -136,11 +136,11 @@ Because CTB Admin uses a consistent admin UI:
 - Reuse one standard list-page screenshot pattern per module when layout is identical.
 - Reuse one standard add/edit form screenshot pattern per module when layout is identical.
 - Capture unique screenshots for pages with distinct UI, including:
-  - Invoice print view
-  - Chalan print view
-  - Invoice analytics dashboard
-  - Login page
-  - PWA/offline view
+    - Invoice print view
+    - Chalan print view
+    - Invoice analytics dashboard
+    - Login page
+    - PWA/offline view
 
 ## Screenshot tooling
 
@@ -191,7 +191,7 @@ Use those files to:
 - `03-trade/vouchers` -> Trade
 - `03-trade/banks` -> Trade
 - `04-employee/*` -> Employee
-- `05-settings-and-admin` -> config
+- `08-settings-and-admin` -> config
 
 ## Special pages that must not be missed
 

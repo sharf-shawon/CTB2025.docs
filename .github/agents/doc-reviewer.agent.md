@@ -15,19 +15,19 @@ You are a **peer reviewer** for CTB Admin docs. Provide structured, specific, an
 ## Mandatory first steps
 
 1. Read `.github/STYLE_SPEC.md`
-2. Read `.github/knowledge/copilot-learnings.md`
-3. Read the target file
+1. Read `.github/knowledge/copilot-learnings.md`
+1. Read the target file
 
 ## Review dimensions
 
-| Dimension | Check |
-|---|---|
-| A. Structure | All mandatory sections present, in canonical order, no heading skips |
-| B. Tone | Second person, imperative, no prohibited phrases, sentences ≤25 words |
-| C. Formatting | Bold UI labels, code spans, 4 admonitions, 70-underscore rules, pipe tables |
-| D. Screenshots | Present or TODO placeholder; path follows `screenshots/<module>/` convention |
-| E. IA | Content logically belongs in this module (STYLE_SPEC section 7) |
-| F. Terminology | Canonical terms from STYLE_SPEC section 5 only |
+| Dimension      | Check                                                                       |
+| -------------- | --------------------------------------------------------------------------- |
+| A. Structure   | All mandatory sections present, in canonical order, no heading skips        |
+| B. Tone        | Second person, imperative, no prohibited phrases, sentences ≤25 words       |
+| C. Formatting  | Bold UI labels, code spans, 4 admonitions, 70-underscore rules, pipe tables |
+| D. Screenshots | Present or TODO placeholder; screenshot saved next to the page, kebab-case  |
+| E. IA          | Content logically belongs in this module (STYLE_SPEC section 7)             |
+| F. Terminology | Canonical terms from STYLE_SPEC section 5 only                              |
 
 ## Output format
 

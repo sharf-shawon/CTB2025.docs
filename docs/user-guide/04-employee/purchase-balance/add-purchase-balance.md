@@ -1,23 +1,44 @@
+---
+tags: [module:employee, task:create, role:hr]
+---
+
 # Add Purchase Balance
+
+## Summary
 
 Use this page to record or adjust an employee's purchase balance — the amount owed to or by an employee for advances, loans, or purchases made on behalf of the business. Purchase balances track financial obligations between the company and its employees.
 
-## When to use Add Purchase Balance page
+______________________________________________________________________
+
+## When to use this page
 
 - Recording an employee advance or loan
 - Adjusting an employee's running balance
 - Documenting purchases made by the employee on company account
 - Tracking money owed by employees to the company
 
-## How to access Add Purchase Balance page
+______________________________________________________________________
 
-From the sidebar, go to **Employee Management → Purchase Balances**. On the Purchase Balances List page, click the **purple (+) icon** in the top-right corner.
+## How to access this page
+
+From the sidebar, go to **Employee → Purchase Balances**. On the Purchase Balances List page, click the **purple (+) icon** in the top-right corner.
 
 The system opens the **Add Purchase Balance Page**.
 
 ______________________________________________________________________
 
-## General Information
+## Step-by-step instructions
+
+1. Open **Add Purchase Balance** from the **Employee** section of the sidebar.
+1. Complete the **General information** section described below.
+1. Complete the **System fields** section described below.
+1. Follow **Saving the balance** below to finish.
+
+______________________________________________________________________
+
+## Field reference
+
+### General information
 
 ![Add Purchase Balance](add-purchase-balance.png)
 Fill in the following fields on the main form:
@@ -29,12 +50,11 @@ Fill in the following fields on the main form:
 | Date     | Select date     | Date the balance is recorded or adjusted (defaults to today)                                    |
 | Notes    | Enter text      | Optional internal notes or reason for the balance adjustment                                    |
 
-!!!warning
-**Employee** and **Amount** fields are mandatory.
+!!! warning
 
-______________________________________________________________________
+    **Employee** and **Amount** fields are mandatory.
 
-## System Fields
+### System fields
 
 The following fields are automatically managed by the system:
 
@@ -46,7 +66,7 @@ The following fields are automatically managed by the system:
 
 ______________________________________________________________________
 
-## Saving the Balance
+## Saving the balance
 
 After completing the form:
 
@@ -58,7 +78,7 @@ The purchase balance is now recorded and will be reflected in employee reports a
 
 ______________________________________________________________________
 
-!!!Tips
+## Tips and common issues
 
 - **Employee is required** — You must select an employee before saving
 - **Amount determines direction** — Positive amounts indicate money owed by the employee; negative amounts indicate money owed to the employee
@@ -69,7 +89,7 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## Related Pages
+## Related pages
 
 - **Purchase Balance Detail** — View or edit purchase balance details after creation
 - **Purchase Balance Reports** — Analyze purchase balance data and employee financial summaries

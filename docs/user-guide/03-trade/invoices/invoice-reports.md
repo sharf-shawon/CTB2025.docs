@@ -1,3 +1,7 @@
+---
+tags: [module:trade, task:report, role:accountant]
+---
+
 # Invoice Reports
 
 Use this page to review invoice performance, outstanding collections, and trend data for decision-making.
@@ -6,6 +10,8 @@ Use this page to review invoice performance, outstanding collections, and trend 
 
 Use this page to monitor invoice status, revenue trends, and pending dues from one dashboard. It helps you identify collection risks and sales performance quickly.
 
+______________________________________________________________________
+
 ## When to use this page
 
 - When reviewing sales and receivable performance.
@@ -13,16 +19,29 @@ Use this page to monitor invoice status, revenue trends, and pending dues from o
 - When comparing invoice trends across a time period.
 - When preparing management summaries or finance follow-up.
 
+______________________________________________________________________
+
 ## How to access this page
 
-From the left sidebar, go to **Trade Management -> Invoices -> Invoice Reports**.
+From the sidebar, go to **Trade → Invoices → Invoice Reports**.
 
 ![Invoice Reports Dashboard](invoice-reports-dashboard.png)
+
+!!! warning "Needs product review"
+
+    This page and [Invoice Report](../../07-reports/invoice-report.md) under
+    **Reports** describe overlapping functionality by different names and give
+    different access paths. Confirm whether these are two screens or one, and
+    retire the duplicate if they are the same. Tracked in `review/sme-checklist.md`.
+
+______________________________________________________________________
 
 ## Prerequisites
 
 - Invoices already exist in the system.
 - You have access permission for invoice reporting views.
+
+______________________________________________________________________
 
 ## Step-by-step instructions
 
@@ -33,6 +52,8 @@ From the left sidebar, go to **Trade Management -> Invoices -> Invoice Reports**
 1. Open invoice-level details where follow-up is required.
 1. Export or share findings with operations or accounts teams.
 
+______________________________________________________________________
+
 ## Field reference
 
 - **Date range filter** - Limits report data to a selected period.
@@ -42,11 +63,15 @@ From the left sidebar, go to **Trade Management -> Invoices -> Invoice Reports**
 - **Collected amount** - Sum of payments received against invoices.
 - **Invoice list section** - Detailed rows for invoice-level follow-up.
 
+______________________________________________________________________
+
 ## Tips and common issues
 
 - Use shorter date ranges first when report data is large.
 - Validate status filters before interpreting totals.
 - Recheck outstanding values after recent payments are posted.
+
+______________________________________________________________________
 
 ## Related pages
 
@@ -54,3 +79,4 @@ From the left sidebar, go to **Trade Management -> Invoices -> Invoice Reports**
 - [Invoice Detail](invoice-detail.md)
 - [Print Invoice](print-invoice.md)
 - [Add Payment](../payments/add-payment.md)
+- [Invoice Report](../../07-reports/invoice-report.md) — Line-item invoice analytics under **Reports**

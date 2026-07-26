@@ -1,3 +1,7 @@
+---
+tags: [module:employee, task:create, role:hr]
+---
+
 # Create Task
 
 Use this page to create a new task in CTB Admin. A task records a work item that needs to be completed, assigns it to a user, sets its priority, and tracks its progress through status updates. Tasks help teams manage workloads, monitor progress, and maintain accountability across the organization.
@@ -5,6 +9,8 @@ Use this page to create a new task in CTB Admin. A task records a work item that
 ## Summary
 
 Use this page to create a task, assign it to the right person, and set its priority and status before work begins. Accurate task setup ensures nothing is missed and progress can be tracked effectively.
+
+______________________________________________________________________
 
 ## When to use this page
 
@@ -14,6 +20,8 @@ Use this page to create a task, assign it to the right person, and set its prior
 - Attaching a photo or file relevant to the task
 - Adding descriptions or instructions for the assigned user
 
+______________________________________________________________________
+
 ## How to access this page
 
 From the sidebar, click **Tasks**. On the Tasks List page, click the **purple (+) icon** in the top-right corner.
@@ -22,7 +30,20 @@ The system opens the **Create Task** page.
 
 ______________________________________________________________________
 
-## Task Information
+## Step-by-step instructions
+
+1. Open **Create Task** from the **Employee** section of the sidebar.
+1. Complete the **Task information** section described below.
+1. Complete the **Status options** section described below.
+1. Complete the **Priority options** section described below.
+1. Complete the **Notes tab** section described below.
+1. Follow **Saving the Task** below to finish.
+
+______________________________________________________________________
+
+## Field reference
+
+### Task information
 
 ![Task Information Section](create-task-general-page.png)
 
@@ -38,11 +59,10 @@ Fill in the following fields:
 | 6    | Priority    | Select priority      | The urgency level of the task                                |
 
 !!! warning "Required Fields"
-Fields marked with a **red star (\*)** are mandatory. Task Name, Status, and Priority must be filled before saving.
 
-______________________________________________________________________
+    Fields marked with a **red star (\*)** are mandatory. Task Name, Status, and Priority must be filled before saving.
 
-## Status Options
+### Status options
 
 The **Status** field tracks where the task is in its workflow:
 
@@ -53,9 +73,7 @@ The **Status** field tracks where the task is in its workflow:
 | Completed   | Task has been finished successfully                |
 | Cancelled   | Task has been called off and will not be completed |
 
-______________________________________________________________________
-
-## Priority Options
+### Priority options
 
 The **Priority** field indicates the urgency level of the task:
 
@@ -66,11 +84,9 @@ The **Priority** field indicates the urgency level of the task:
 | High     | Task needs to be addressed soon; important to operations       |
 | Urgent   | Task requires immediate attention; must be resolved right away |
 
-______________________________________________________________________
+### Notes tab
 
-## Notes Tab
-
-The **Notes** tab allows you to add internal comments or additional context about the task:
+Use the **Notes** tab to add internal comments or additional context about the task:
 
 | Field | What to Do | Description                                    |
 | ----- | ---------- | ---------------------------------------------- |
@@ -78,12 +94,13 @@ The **Notes** tab allows you to add internal comments or additional context abou
 
 ______________________________________________________________________
 
-## Audit Information
+## Audit information
 
 The **Audit Information** section is a collapsible section that displays system-generated details about who created or last modified the task record. This section is read-only and supports compliance and change tracking.
 
 !!! info
-Click the **Audit Information** header to expand and review the creation and modification history for this task.
+
+    Click the **Audit Information** header to expand and review the creation and modification history for this task.
 
 ______________________________________________________________________
 
@@ -97,19 +114,19 @@ After completing all sections:
 
 ______________________________________________________________________
 
-!!! Tips and Common Issues
+## Tips and common issues
 
-- **Task Name is required** — You must enter a task name before saving <br>
-- **Assign tasks before saving** — Selecting a user in Assigned To ensures the right person is notified and accountable <br>
-- **Default status is To Do** — New tasks start as To Do; update the status as work progresses <br>
-- **Default priority is Medium** — Adjust the priority to reflect the actual urgency of the task <br>
-- **Photo is optional** — Attach a photo only when a visual reference is needed to complete the task <br>
-- **Use Description for clarity** — Provide enough detail in the description so the assigned user understands exactly what is required <br>
-- **Cancelled tasks remain in the system** — Cancelled tasks are not deleted; they remain visible for record-keeping and reporting <br>
+- **Task Name is required** — You must enter a task name before saving
+- **Assign tasks before saving** — Selecting a user in Assigned To ensures the right person is notified and accountable
+- **Default status is To Do** — New tasks start as To Do; update the status as work progresses
+- **Default priority is Medium** — Adjust the priority to reflect the actual urgency of the task
+- **Photo is optional** — Attach a photo only when a visual reference is needed to complete the task
+- **Use Description for clarity** — Provide enough detail in the description so the assigned user understands exactly what is required
+- **Cancelled tasks remain in the system** — Cancelled tasks are not deleted; they remain visible for record-keeping and reporting
 
 ______________________________________________________________________
 
-## Related Pages
+## Related pages
 
 - **Tasks Overview** — View and manage all tasks in the system
 - **Task Detail** — View or edit a task after creation

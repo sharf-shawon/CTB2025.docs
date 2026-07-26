@@ -1,3 +1,7 @@
+---
+tags: [module:trade, task:create, role:accountant]
+---
+
 # Add Payment
 
 Use this page to record a payment received from a client or sent to a vendor. Payments track cash flow, invoice settlements, bank checks, and financial transactions within CTB Admin.
@@ -5,6 +9,8 @@ Use this page to record a payment received from a client or sent to a vendor. Pa
 ## Summary
 
 Use this page to capture incoming and outgoing payments with references, dates, optional check linkage, and approval status. Accurate payment entries keep balances and reconciliation reports reliable.
+
+______________________________________________________________________
 
 ## When to use this page
 
@@ -14,11 +20,26 @@ Use this page to capture incoming and outgoing payments with references, dates, 
 - Creating payment records for bank reconciliation
 - Documenting discounts or partial payments
 
+______________________________________________________________________
+
 ## How to access this page
 
 From the sidebar, go to **Trade → Payments**. On the Payments List page, click the **purple (+) icon** in the top-right corner.
 
 The system opens the **Add Payment Page**.
+
+______________________________________________________________________
+
+## Step-by-step instructions
+
+1. Go to **Trade → Payments** and click the **purple (+) icon**.
+1. Complete the **Payment information** section: set **Status**, **Type**, **Reference**, **Date**, and **Amount**.
+1. Select the **Collected By** employee so the payment counts toward commission.
+1. Link a **Check** in the **Check and Client selection** section if the payment uses one.
+1. Add any context in the **Notes** section.
+1. Save the payment using one of the options under **Saving the payment**.
+
+______________________________________________________________________
 
 ## Field reference
 
@@ -35,7 +56,7 @@ The system opens the **Add Payment Page**.
 
 ______________________________________________________________________
 
-## Payment Information
+## Payment information
 
 ![Payment Information Section](add-payment2.0.png)
 
@@ -54,11 +75,12 @@ Fill in the following fields:
 | 9    | Collected By | Select employee  | Choose the employee who collected the payment for commission calculations |
 
 !!! warning "Required Fields"
-Fields marked with a **red star (\*)** are mandatory.
+
+    Fields marked with a **red star (\*)** are mandatory.
 
 ______________________________________________________________________
 
-## Check and Client Selection
+## Check and Client selection
 
 | Step | Field        | What to Do           | Description                                                                                    |
 | ---- | ------------ | -------------------- | ---------------------------------------------------------------------------------------------- |
@@ -67,7 +89,8 @@ ______________________________________________________________________
 | 4    | Client       | Select client/vendor | The party involved in the payment (client or vendor)                                           |
 
 !!! note
-When you select a **Check**, the payment amount will be deducted from both the client/vendor balance AND the check balance. If you leave the **Check** field empty, the payment amount will reduce only the client/vendor balance.
+
+    When you select a **Check**, the payment amount will be deducted from both the client/vendor balance AND the check balance. If you leave the **Check** field empty, the payment amount will reduce only the client/vendor balance.
 
 ______________________________________________________________________
 
@@ -82,7 +105,8 @@ Add optional notes or internal comments related to the payment:
 | 1    | Notes | Enter text | Add internal notes, remarks, or special conditions for payment |
 
 !!! tip
-Use the Notes field to document additional details such as payment terms, special instructions, or reasons for discounts applied to the payment.
+
+    Use the Notes field to document additional details such as payment terms, special instructions, or reasons for discounts applied to the payment.
 
 ______________________________________________________________________
 
@@ -98,20 +122,20 @@ The payment is now recorded in the system.
 
 ______________________________________________________________________
 
-!!! Tips and Common Issues
+## Tips and common issues
 
-- **Check selection is optional** — Leave the Check field empty for non-check payments; only select a check if the payment is from a bank check <br>
-- **Check reduces two balances** — When a check is selected, the payment amount reduces both the client/vendor balance and the check balance <br>
-- **No check reduces client balance only** — When the Check field is empty, only the client/vendor balance is reduced <br>
-- **Type matters** — Use Receive for customer payments and Send for vendor payments to ensure correct reporting <br>
-- **Reference tracking** — Enter a meaningful reference (check number, transaction ID, or invoice number) for easy reconciliation <br>
-- **Dates for reconciliation** — Always set the Date field to match the actual payment date to ensure accurate bank reconciliation <br>
-- **Discount field** — Use only for actual discounts or adjustments, not for separate transactions <br>
-- **Collected By** — Select the employee who collected the payment so commission calculations can be generated correctly <br>
+- **Check selection is optional** — Leave the Check field empty for non-check payments; only select a check if the payment is from a bank check
+- **Check reduces two balances** — When a check is selected, the payment amount reduces both the client/vendor balance and the check balance
+- **No check reduces client balance only** — When the Check field is empty, only the client/vendor balance is reduced
+- **Type matters** — Use Receive for client payments and Send for vendor payments to ensure correct reporting
+- **Reference tracking** — Enter a meaningful reference (check number, transaction ID, or invoice number) for easy reconciliation
+- **Dates for reconciliation** — Always set the Date field to match the actual payment date to ensure accurate bank reconciliation
+- **Discount field** — Use only for actual discounts or adjustments, not for separate transactions
+- **Collected By** — Select the employee who collected the payment so commission calculations can be generated correctly
 
 ______________________________________________________________________
 
-## Related Pages
+## Related pages
 
 - **Payments Overview** — View all payments
 - **Payment Detail** — View payment details and history

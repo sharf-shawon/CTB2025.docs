@@ -1,28 +1,40 @@
+---
+tags: [module:employee, task:view, role:hr]
+---
+
 # Employees Overview
 
-## Overview
+## Summary
 
-The **Employees** section allows you to manage all employee records, track personal and employment details, monitor salary information, and review wage and payout history.
-
-______________________________________________________________________
-
-## Employee List Page
-
-The **Employee List** page displays all employees in a table format for quick access and management.
-
-![Employee List Page](employee-list.png)
-
-### Key Features
-
-- View all employees with essential personal and employment details
-- Filter employees by Active, Disabled, or Deleted status
-- Search and locate specific employees quickly
-- Import or export employee records in bulk
-- Access individual employee detail pages directly
+Use the **Employees** section to manage all employee records, track personal and employment details, monitor salary information, and review wage and payout history.
 
 ______________________________________________________________________
 
-## Table Information
+## When to use this page
+
+- When you need to work with employees overview in CTB Admin.
+
+______________________________________________________________________
+
+## How to access this page
+
+From the sidebar, go to **Employee**, then open **Employees Overview**.
+
+______________________________________________________________________
+
+## Step-by-step instructions
+
+1. Open **Employees Overview** from the **Employee** section of the sidebar.
+1. Complete the **Table information** section described below.
+1. Complete the **Status tabs** section described below.
+1. Complete the **General tab** section described below.
+1. Follow **Deleting an Employee** below to finish.
+
+______________________________________________________________________
+
+## Field reference
+
+### Table information
 
 The table provides a real-time summary of your workforce:
 
@@ -40,9 +52,7 @@ The table provides a real-time summary of your workforce:
 | Purchase Balance | Outstanding purchase balance linked to the employee                              |
 | Status           | Current state of the employee record (Active, Disabled, Deleted)                 |
 
-______________________________________________________________________
-
-## Status Tabs
+### Status tabs
 
 At the top of the list, three tabs let you filter employees by their current state:
 
@@ -52,40 +62,13 @@ At the top of the list, three tabs let you filter employees by their current sta
 | Disabled | Employees who have been deactivated but not deleted  |
 | Deleted  | Employees whose records have been soft-deleted       |
 
-______________________________________________________________________
-
-## Search
-
-Use the **search bar** to find employees by name or SKU. The list filters in real time as you type.
-
-______________________________________________________________________
-
-## Import and Export
-
-- Click **Import** to bulk-upload employee records from a file
-- Click **Export** to download the current employee list for reporting or backup
-
-______________________________________________________________________
-
-## Filtering the List
-
-Click the **Filters** button in the top-right corner to narrow results by specific criteria such as department, position, salary type, or date range.
-
-______________________________________________________________________
-
-## Employee Detail Page Tabs
-
-The Employee Detail page is divided into multiple tabs, each focusing on a different aspect of the employee record.
-
-______________________________________________________________________
-
-## General Tab
+### General tab
 
 This tab contains the complete employee profile.
 
 ![General Tab](edit-employee-personal-info.png)
 
-### Personal Information
+### Personal information
 
 | Field                | Description                                                       |
 | -------------------- | ----------------------------------------------------------------- |
@@ -102,7 +85,7 @@ This tab contains the complete employee profile.
 | NID Card Front Photo | Photo of the front side of the NID or Birth Certificate           |
 | NID Card Back Photo  | Photo of the back side of the NID or Birth Certificate            |
 
-### Emergency Contact
+### Emergency contact
 
 | Field                  | Description                        |
 | ---------------------- | ---------------------------------- |
@@ -110,7 +93,7 @@ This tab contains the complete employee profile.
 | Emergency Phone Number | Contact number for emergencies     |
 | Emergency Address      | Address of the emergency contact   |
 
-### Employment Details
+### Employment details
 
 | Field            | Description                                                   |
 | ---------------- | ------------------------------------------------------------- |
@@ -120,7 +103,7 @@ This tab contains the complete employee profile.
 | Start Date       | The date the employee started in their current role           |
 | End Date         | The date the employee's contract or role ends (if applicable) |
 
-### Salary Information
+### Salary information
 
 | Field               | Description                                                    |
 | ------------------- | -------------------------------------------------------------- |
@@ -132,7 +115,48 @@ This tab contains the complete employee profile.
 
 ______________________________________________________________________
 
-## Wages Tab
+## Employee list page
+
+The **Employee List** page displays all employees in a table format for quick access and management.
+
+![Employee List Page](employee-list.png)
+
+### Key features
+
+- View all employees with essential personal and employment details
+- Filter employees by Active, Disabled, or Deleted status
+- Search and locate specific employees quickly
+- Import or export employee records in bulk
+- Access individual employee detail pages directly
+
+______________________________________________________________________
+
+## Search
+
+Use the **search bar** to find employees by name or SKU. The list filters in real time as you type.
+
+______________________________________________________________________
+
+## Import and export
+
+- Click **Import** to bulk-upload employee records from a file
+- Click **Export** to download the current employee list for reporting or backup
+
+______________________________________________________________________
+
+## Filtering the list
+
+Click the **Filters** button in the top-right corner to narrow results by specific criteria such as department, position, salary type, or date range.
+
+______________________________________________________________________
+
+## Employee detail page tabs
+
+The Employee Detail page is divided into multiple tabs, each focusing on a different aspect of the employee record.
+
+______________________________________________________________________
+
+## Wages tab
 
 This tab displays all wage entries linked to this employee.
 
@@ -149,7 +173,7 @@ Used to review the employee's production output and associated wage calculations
 
 ______________________________________________________________________
 
-## Salaries Tab
+## Salaries tab
 
 This tab displays all fixed salary records for this employee.
 
@@ -165,7 +189,7 @@ Used to track periodic fixed salary payments made to the employee.
 
 ______________________________________________________________________
 
-## Payouts Tab
+## Payouts tab
 
 This tab displays all payout transactions associated with this employee.
 
@@ -177,11 +201,11 @@ This tab displays all payout transactions associated with this employee.
 
 ### Purpose
 
-Used to monitor all disbursements made to the employee across wages, salaries, and other payments.
+Used to monitor all payouts made to the employee across wages, salaries, and other payments.
 
 ______________________________________________________________________
 
-## History Button
+## History button
 
 Click the **History** button in the top-right corner of the Employee Detail page to view a full audit trail of all changes made to the record.
 
@@ -198,28 +222,29 @@ ______________________________________________________________________
 A **Delete Employee** button is available at the bottom-left of the Employee Detail page.
 
 !!! warning "Restricted Action"
-Deleting an employee moves the record to the **Deleted** tab. Employees with linked wages, salaries, or payouts cannot be permanently removed while those records exist. Contact your system administrator for permanent deletion.
+
+    Deleting an employee moves the record to the **Deleted** tab. Employees with linked wages, salaries, or payouts cannot be permanently removed while those records exist. Contact your system administrator for permanent deletion.
 
 ______________________________________________________________________
 
-## Tips and Common Issues
+## Tips and common issues
 
-- **Negative balance shown in red** — The employee has an outstanding salary balance; review wage and payout records to reconcile <br>
-- **Hide Salary Details** — Enable this toggle to restrict salary visibility to superusers only <br>
-- **Send SMS toggle** — Ensure the phone number is correct before enabling SMS notifications <br>
-- **Purchase Balance** — Tracks any purchases made by the employee that are to be deducted from their compensation <br>
-- **Use status tabs to filter** — Switch between Active, Disabled, and Deleted tabs to locate employees at different stages <br>
-- **Import/Export for bulk management** — Use Import to onboard multiple employees at once and Export for payroll reporting <br>
-- **NID photos recommended** — Upload clear front and back photos of the NID card for identity verification and compliance <br>
+- **Negative balance shown in red** — The employee has an outstanding salary balance; review wage and payout records to reconcile
+- **Hide Salary Details** — Enable this toggle to restrict salary visibility to superusers only
+- **Send SMS toggle** — Ensure the phone number is correct before enabling SMS notifications
+- **Purchase Balance** — Tracks any purchases made by the employee that are to be deducted from their compensation
+- **Use status tabs to filter** — Switch between Active, Disabled, and Deleted tabs to locate employees at different stages
+- **Import/Export for bulk management** — Use Import to onboard multiple employees at once and Export for payroll reporting
+- **NID photos recommended** — Upload clear front and back photos of the NID card for identity verification and compliance
 
 ______________________________________________________________________
 
-## Related Pages
+## Related pages
 
 - **Add Employee** — Register a new employee in the system
 - **Positions** — Manage job positions assigned to employees
 - **Departments** — Manage departments employees belong to
 - **Wages** — View and manage production-based wage records
 - **Salaries** — View and manage fixed salary records
-- **Payouts** — Track and process employee disbursements
+- **Payouts** — Track and process employee payouts
 - **Attendance** — Monitor employee attendance records

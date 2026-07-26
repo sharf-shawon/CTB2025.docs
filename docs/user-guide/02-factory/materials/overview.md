@@ -1,23 +1,38 @@
+---
+tags: [module:factory, task:view, role:staff]
+---
+
 # Material Overview
 
-## Overview
+## Summary
 
-The **Materials** section allows you to manage all raw materials, track stock movement, and monitor inventory activity.
+Use the **Materials** section to manage all raw materials, track stock movement, and monitor inventory activity.
 
 ______________________________________________________________________
 
-## Material List Page
+## When to use this page
 
-The **Material List** page displays all materials in a table format for quick access and management.
-![Material List Page](material-list-page.png)
+- When you need to work with material overview in CTB Admin.
 
-### Key Features
+______________________________________________________________________
 
-- View all materials with essential details
-- Quickly search and locate specific materials
-- Access material edit page directly
+## How to access this page
 
-## Table Information
+From the sidebar, go to **Factory**, then open **Material Overview**.
+
+______________________________________________________________________
+
+## Step-by-step instructions
+
+1. Open **Material Overview** from the **Factory** section of the sidebar.
+1. Complete the **Table information** section described below.
+1. Review the values you entered, then save the record.
+
+______________________________________________________________________
+
+## Field reference
+
+### Table information
 
 The table provides a real-time summary of your factory's resources:
 
@@ -35,23 +50,34 @@ The table provides a real-time summary of your factory's resources:
 
 - Use the search bar to find materials by **name or SKU**
 
-______________________________________________________________________
-
-### Navigation to Edit Page
+### Navigation to edit page
 
 - Click on the **SKU, Photo, or Name**
 - This opens the **Material Edit Page**
 
 ______________________________________________________________________
 
-## Material Edit Page Tabs
+## Material list page
+
+The **Material List** page displays all materials in a table format for quick access and management.
+![Material List Page](material-list-page.png)
+
+### Key features
+
+- View all materials with essential details
+- Quickly search and locate specific materials
+- Access material edit page directly
+
+______________________________________________________________________
+
+## Material edit page tabs
 
 The material edit page is divided into multiple tabs.
 Each tab focuses on a different type of information.
 
 ______________________________________________________________________
 
-## General Tab
+## General tab
 
 This tab contains the **basic material details**.
 
@@ -70,7 +96,7 @@ Used for managing identity and basic configuration of the material.
 
 ______________________________________________________________________
 
-## Vouchers Tab
+## Vouchers tab
 
 This tab shows all **transactions related to the material**.
 
@@ -87,7 +113,7 @@ Used to track where and how the material has been used in the system.
 
 ______________________________________________________________________
 
-## Inventory In Tab
+## Inventory in tab
 
 This tab displays all **stock additions**.
 ![Inventory In Tab](material-overview-inventory-in.png)
@@ -104,7 +130,7 @@ Used to monitor how stock is increasing over time.
 
 ______________________________________________________________________
 
-## Inventory Out Tab
+## Inventory out tab
 
 This tab displays all **stock deductions**.
 ![Inventory Out Tab](material-overview-inventory-out.png)
@@ -121,7 +147,7 @@ Used to track material usage and stock reduction.
 
 ______________________________________________________________________
 
-## Material History Button
+## Material history button
 
 This tab displays a **complete audit trail** of the material record.
 ![History Button](edit-material-history-button.png)
@@ -133,7 +159,9 @@ This tab displays a **complete audit trail** of the material record.
 - User identification and change reasons
 - Option to revert to previous versions
 
-## Best Practices
+______________________________________________________________________
+
+## Best practices
 
 - Use the **General tab** for updates, not inventory adjustments
 - Always review **Inventory In/Out** before changing stock manually
@@ -141,7 +169,7 @@ This tab displays a **complete audit trail** of the material record.
 
 ______________________________________________________________________
 
-## Related Pages
+## Related pages
 
 - **Add Material** — Create new material
 - **Edit Material** — Update material details

@@ -1,3 +1,7 @@
+---
+tags: [module:trade, task:view, role:accountant]
+---
+
 # Vouchers Overview
 
 ## Summary
@@ -17,15 +21,25 @@ ______________________________________________________________________
 
 ## How to access this page
 
-1. From the sidebar, go to **Trade Management → Vouchers**.
+1. From the sidebar, go to **Trade → Vouchers**.
 1. The list page shows vouchers grouped by **Active**, **Disabled**, and **Deleted**.
 1. Select a record to open the voucher detail page.
 
 ______________________________________________________________________
 
-## Page sections
+## Step-by-step instructions
 
-### Voucher List
+1. Open **Vouchers Overview** from the **Trade** section of the sidebar.
+1. Complete the **Page sections** section described below.
+1. Review the values you entered, then save the record.
+
+______________________________________________________________________
+
+## Field reference
+
+### Page sections
+
+### Voucher list
 
 ![Voucher List Page](voucher-overview-list-page.png)
 
@@ -60,7 +74,7 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## Related Pages
+## Related pages
 
 - **Add Voucher** — Record a new voucher entry
 - **Voucher Detail** — Review or update voucher information

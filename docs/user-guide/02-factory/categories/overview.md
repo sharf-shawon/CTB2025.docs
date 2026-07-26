@@ -1,10 +1,12 @@
+---
+tags: [module:factory, task:view, role:staff]
+---
+
 # Categories Overview
 
-The **Categories** page displays all product categories in a structured table. It allows you to quickly search, review, and manage categories used across products.
+The **Categories** page displays all product categories in a structured table. Use it to search, review, and manage the categories used across products.
 
-______________________________________________________________________
-
-## Page Layout
+## Summary
 
 ![Categories List](category-overview.png)
 
@@ -17,7 +19,29 @@ The page includes:
 
 ______________________________________________________________________
 
-## Category List
+## When to use this page
+
+- When you need to work with categories overview in CTB Admin.
+
+______________________________________________________________________
+
+## How to access this page
+
+From the sidebar, go to **Factory**, then open **Categories Overview**.
+
+______________________________________________________________________
+
+## Step-by-step instructions
+
+1. Open **Categories Overview** from the **Factory** section of the sidebar.
+1. Complete the **Category list** section described below.
+1. Review the values you entered, then save the record.
+
+______________________________________________________________________
+
+## Field reference
+
+### Category list
 
 The table shows all categories with key details:
 
@@ -31,7 +55,7 @@ The table shows all categories with key details:
 
 ______________________________________________________________________
 
-## Search Bar
+## Search bar
 
 Use the search bar to quickly find categories.
 
@@ -41,11 +65,12 @@ Use the search bar to quickly find categories.
 - The table updates instantly based on your input
 
 !!! tip
-Use SKU for faster and more accurate search results.
+
+    Use SKU for faster and more accurate search results.
 
 ______________________________________________________________________
 
-## Import / Export
+## Import / export
 
 These options allow bulk data management.
 
@@ -60,26 +85,26 @@ These options allow bulk data management.
 - Useful for reporting or backup
 
 !!! note
-Ensure the import file format matches system requirements.
+
+    Ensure the import file format matches system requirements.
 
 ______________________________________________________________________
 
-## Tips and Best Practices
+## Tips and common issues
 
 - Use search instead of manually scanning the list
 - Keep category names consistent for easier management
 - Use export regularly for backup and reporting
 
-______________________________________________________________________
-
 !!! tip
-\* Use search instead of manually scanning the list
-\* Keep category names consistent for easier management
-\* Use export regularly for backup and reporting
+
+    \* Use search instead of manually scanning the list
+    \* Keep category names consistent for easier management
+    \* Use export regularly for backup and reporting
 
 ______________________________________________________________________
 
-## Related Pages
+## Related pages
 
 - **Add Category** — Create a new category
 - **Edit Category** — Update category information

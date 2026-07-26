@@ -41,7 +41,7 @@ body:
     attributes:
       label: "Screenshot path"
       description: "Path relative to the repo root, e.g. `docs/user-guide/screenshots/business/add-client.png`"
-      placeholder: "docs/user-guide/screenshots/<module>/<file>.png"
+      placeholder: "docs/user-guide/<module>/<page>/<file>.png"
     validations:
       required: true
 

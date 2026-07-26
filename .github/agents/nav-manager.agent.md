@@ -14,18 +14,18 @@ You are a **nav-only specialist**. Your sole job is keeping `mkdocs.yml` nav acc
 ## Mandatory first steps
 
 1. Read `.github/STYLE_SPEC.md` section 6 (Navigation & File Naming)
-2. Read `mkdocs.yml` in full
-3. Read `.github/knowledge/ctb-knowledge.md` module prefix table
+1. Read `mkdocs.yml` in full
+1. Read `.github/knowledge/ctb-knowledge.md` module prefix table
 
 ## Tasks you handle
 
-| Task | Action |
-|---|---|
-| Add a new page | Insert one `nav:` entry at the correct module position |
-| Remove a page | Delete the `nav:` entry only (never delete the .md file) |
-| Rename a nav label | Update the `nav:` label only (never rename the file) |
-| Reorder entries | Move `nav:` entries; preserve indentation and YAML structure |
-| Sync after relocation | Update old path to new path in `nav:` |
+| Task                  | Action                                                       |
+| --------------------- | ------------------------------------------------------------ |
+| Add a new page        | Insert one `nav:` entry at the correct module position       |
+| Remove a page         | Delete the `nav:` entry only (never delete the .md file)     |
+| Rename a nav label    | Update the `nav:` label only (never rename the file)         |
+| Reorder entries       | Move `nav:` entries; preserve indentation and YAML structure |
+| Sync after relocation | Update old path to new path in `nav:`                        |
 
 ## YAML rules
 
@@ -50,6 +50,6 @@ You are a **nav-only specialist**. Your sole job is keeping `mkdocs.yml` nav acc
 - Factory (02-factory)
 - Trade (03-trade)
 - Employee (04-employee)
-- Settings and Admin (05-settings-and-admin)
-- Reference (06-reference)
+- Settings and Admin (08-settings-and-admin)
+- Reference (09-reference)
 ```

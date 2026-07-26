@@ -1,3 +1,7 @@
+---
+tags: [module:business, task:create, role:staff]
+---
+
 # Add Client
 
 Use this page to register a new client in CTB Admin. A client is any individual or organization that purchases goods or services. Client records store contact details, identification information, and financial data used across invoices, payments, and reports.
@@ -6,11 +10,15 @@ Use this page to register a new client in CTB Admin. A client is any individual 
 
 Use this page to create a complete client profile before you issue invoices or record payments. A well-configured client record keeps reporting, communication, and balance tracking accurate.
 
+______________________________________________________________________
+
 ## When to use this page
 
-- Onboarding a new buyer or business partner
+- Onboarding a new client or business partner
 - Creating a client profile before issuing invoices
 - Storing client contact details and identification documents
+
+______________________________________________________________________
 
 ## How to access this page
 
@@ -20,9 +28,11 @@ From the sidebar, go to **Business → Clients**. On the Client List page, click
 
 The system opens the **Add Client Page**.
 
+______________________________________________________________________
+
 ## Step-by-step instructions
 
-1. Open **Business -> Clients** and click the **Add** icon.
+1. Open **Business → Clients** and click the **Add** icon.
 1. Fill the **Personal Information** section.
 1. Fill the **Business Details** section and upload required documents.
 1. Fill **Balance & Discount Information** based on your business policy.
@@ -30,7 +40,9 @@ The system opens the **Add Client Page**.
 
 ______________________________________________________________________
 
-## Personal Information
+## Field reference
+
+### Personal information
 
 ![Personal Information Section](client-personal-info.png)
 
@@ -47,11 +59,10 @@ Fill in the following fields:
 | 7    | Email             | Enter if available   | Used for communication                              |
 
 !!! warning "Required Fields"
-Fields marked with a **red star (\*)** are mandatory.
 
-______________________________________________________________________
+    Fields marked with a **red star (\*)** are mandatory.
 
-## Business Details
+### Business details
 
 ![Business Details Section](client-business-details.png)
 
@@ -65,11 +76,10 @@ ______________________________________________________________________
 | 6    | End Date             | Select if applicable | Leave empty if ongoing              |
 
 !!! note
-Upload clear images for proper verification.
 
-______________________________________________________________________
+    Upload clear images for proper verification.
 
-## Balance & Discount Information
+### Balance & discount information
 
 ![Balance & Discount Information Section](client-balance-discount.png)
 
@@ -83,7 +93,8 @@ ______________________________________________________________________
 | 6    | Discount Max Amount | Enter amount | Maximum discount amount per invoice |
 
 !!! warning "Required Fields"
-Fields marked with a **red star (\*)** are mandatory.
+
+    Fields marked with a **red star (\*)** are mandatory.
 
 ______________________________________________________________________
 
@@ -99,16 +110,16 @@ After completing all sections:
 
 ______________________________________________________________________
 
-!!! Tips and Common Issues
+## Tips and common issues
 
-- Ensure the **Phone number is correct** before enabling SMS <br>
-- Upload clear **NID images** for verification <br>
-- Leave **End Date empty** if the client is ongoing <br>
-- Configure **Discount Max Rate** and **Discount Max Amount** to control pricing <br>
+- Ensure the **Phone number is correct** before enabling SMS
+- Upload clear **NID images** for verification
+- Leave **End Date empty** if the client is ongoing
+- Configure **Discount Max Rate** and **Discount Max Amount** to control pricing
 
 ______________________________________________________________________
 
-## Related Pages
+## Related pages
 
 - **Edit Client** — Update client information
 - **Client Detail** — View client profile and transactions

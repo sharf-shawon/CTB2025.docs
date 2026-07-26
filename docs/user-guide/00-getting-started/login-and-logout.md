@@ -1,3 +1,7 @@
+---
+tags: [module:getting-started, task:view, role:staff]
+---
+
 # Login and Logout
 
 Use this page to sign in to CTB Admin and sign out when you are done. All access to the system requires a valid username and password.
@@ -6,23 +10,31 @@ Use this page to sign in to CTB Admin and sign out when you are done. All access
 
 Use this page to start and end your CTB Admin session securely. You log in with your assigned account and log out when work is complete, especially on shared devices.
 
+______________________________________________________________________
+
 ## When to use this page
 
 - Starting a new work session in CTB Admin.
 - Switching between user accounts.
 - Ending a session securely before leaving your workstation.
 
+______________________________________________________________________
+
 ## How to access this page
 
-Open your browser and navigate to your CTB Admin URL. The login page appears automatically when you are not signed in.
+Open your browser and go to your CTB Admin URL. The login page appears automatically when you are not signed in.
+
+______________________________________________________________________
 
 ## Step-by-step instructions
 
 1. Open your CTB Admin URL in a browser.
 1. Enter your **Username** and **Password**.
-1. Click **Log in ->** to open the Dashboard.
+1. Click **Log in →** to open the Dashboard.
 1. When you are done, click the user avatar in the top-right corner.
 1. Click **Log out** to end your session.
+
+______________________________________________________________________
 
 ## Field reference
 
@@ -33,9 +45,9 @@ Open your browser and navigate to your CTB Admin URL. The login page appears aut
 
 ______________________________________________________________________
 
-## Logging In
+## Logging in
 
-![CTB Admin Login Page](../screenshots/auth/login.png)
+![CTB Admin Login Page](login.png)
 
 The login page displays a **"Welcome back to CTB Fashion"** heading alongside the CTB logo.
 
@@ -46,19 +58,22 @@ The login page displays a **"Welcome back to CTB Fashion"** heading alongside th
 If your credentials are correct, the system redirects you to the **Dashboard**.
 
 !!! note "Return to site"
-The **← Return to site** link in the top-left corner takes you back to the public-facing website without logging in.
+
+    The **← Return to site** link in the top-left corner takes you back to the public-facing website without logging in.
 
 !!! warning "Failed Login"
-If you enter an incorrect username or password, the form displays an error message. Check your credentials and try again. Contact your administrator to reset your password if needed.
+
+    If you enter an incorrect username or password, the form displays an error message. Check your credentials and try again. Contact your administrator to reset your password if needed.
 
 !!! tip "Session Timeout"
-CTB Admin automatically ends your session after a period of inactivity. You will be redirected to the login page and must sign in again.
+
+    CTB Admin automatically ends your session after a period of inactivity. You will be redirected to the login page and must sign in again.
 
 ______________________________________________________________________
 
-## Logging Out
+## Logging out
 
-![CTB Admin Logout — user menu](../screenshots/auth/logout.png)
+![CTB Admin Logout — user menu](logout.png)
 
 To sign out of CTB Admin:
 
@@ -68,7 +83,8 @@ To sign out of CTB Admin:
 1. The system signs you out immediately.
 
 !!! warning "Shared Computers"
-Always log out after each session on shared or public computers to protect business data.
+
+    Always log out after each session on shared or public computers to protect business data.
 
 ______________________________________________________________________
 
@@ -78,6 +94,8 @@ ______________________________________________________________________
 - Passwords are case-sensitive. Make sure **Caps Lock** is off before entering your password.
 - If you are redirected back to the login page after signing in, your browser may be blocking cookies. Check your browser cookie settings.
 - Only administrators can create user accounts or reset passwords. Contact your administrator if you are locked out.
+
+______________________________________________________________________
 
 ## Related pages
 

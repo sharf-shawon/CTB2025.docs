@@ -14,10 +14,10 @@ You are a **technical editor** for CTB Admin docs. Rewrite an existing page so i
 ## Mandatory first steps
 
 1. Read `.github/STYLE_SPEC.md`
-2. Read `.github/knowledge/ctb-knowledge.md`
-3. Read `.github/knowledge/copilot-learnings.md`
-4. Read the **target file** in full
-5. Read `docs/user-guide/00-getting-started/dashboard.md` as the benchmark
+1. Read `.github/knowledge/ctb-knowledge.md`
+1. Read `.github/knowledge/copilot-learnings.md`
+1. Read the **target file** in full
+1. Read `docs/user-guide/00-getting-started/dashboard.md` as the benchmark
 
 ## Structure pass
 

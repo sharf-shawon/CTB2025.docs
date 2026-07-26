@@ -1,23 +1,45 @@
+---
+tags: [module:employee, task:create, role:hr]
+---
+
 # Create Payout
+
+## Summary
 
 Use this page to issue a payout or advance to an employee and keep the payment recorded for payroll and audit purposes. A payout documents payments to employees outside the regular salary cycle and tracks the employee's payment history.
 
-## When to use Create Payout page
+______________________________________________________________________
+
+## When to use this page
 
 - Issuing an advance to an employee
 - Recording a salary adjustment or bonus payment
 - Processing a one-time employee payment
 - Documenting approved non-standard payments
 
-## How to access Create Payout page
+______________________________________________________________________
 
-From the sidebar, go to **Employee Management → Payouts**. On the Payouts List page, click the **purple (+) icon** in the top-right corner.
+## How to access this page
+
+From the sidebar, go to **Employee → Payouts**. On the Payouts List page, click the **purple (+) icon** in the top-right corner.
 
 The system opens the **Create Payout Page**.
 
 ______________________________________________________________________
 
-## Payout Information
+## Step-by-step instructions
+
+1. Open **Create Payout** from the **Employee** section of the sidebar.
+1. Complete the **Payout information** section described below.
+1. Complete the **Payment information** section described below.
+1. Complete the **Payment notes** section described below.
+1. Follow **Saving the Payout** below to finish.
+
+______________________________________________________________________
+
+## Field reference
+
+### Payout information
 
 Fill in the following fields on the payout form:
 
@@ -29,12 +51,11 @@ Fill in the following fields on the payout form:
 | 2    | Amount   | Enter amount    | The payout amount in the system currency      |
 | 3    | Payable  | Auto-calculated | Total payout amount (may include adjustments) |
 
-!!!warning
-Fields marked with a **red star (\*)** are mandatory.
+!!! warning
 
-______________________________________________________________________
+    Fields marked with a **red star (\*)** are mandatory.
 
-## Payment Information
+### Payment information
 
 Configure the payment details after entering the payout amount:
 
@@ -43,12 +64,11 @@ Configure the payment details after entering the payout amount:
 | 1    | Is Paid      | Check if paid | Mark the payout as already paid                      |
 | 2    | Payment Date | Select date   | Date when the payout was or will be paid to employee |
 
-!!!Note
-Payment Date is important for payroll reconciliation and employee balance tracking.
+!!! note
 
-______________________________________________________________________
+    Payment Date is important for payroll reconciliation and employee balance tracking.
 
-## Payment Notes
+### Payment notes
 
 Add optional notes or internal comments:
 

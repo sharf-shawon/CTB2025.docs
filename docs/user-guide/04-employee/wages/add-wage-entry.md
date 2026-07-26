@@ -1,8 +1,16 @@
+---
+tags: [module:employee, task:create, role:hr]
+---
+
 # Add Wage Entry
+
+## Summary
 
 Use this page to record a wage entry for an employee in CTB Admin. A wage entry tracks the number of products produced by an employee, calculates their wage based on production quantity, and records any deductions, bonuses, and payment status. Wage entries are used to manage employee compensation tied to production output.
 
-## When to use Add Wage Entry page
+______________________________________________________________________
+
+## When to use this page
 
 - Recording daily or periodic production-based wages for an employee
 - Logging the number of products produced in a work session
@@ -10,17 +18,19 @@ Use this page to record a wage entry for an employee in CTB Admin. A wage entry 
 - Marking a wage as paid and recording the payment date
 - Tracking outstanding wages before processing payroll
 
-## How to access Add Wage Entry page
+______________________________________________________________________
 
-From the sidebar, go to **Employee Management → Wages**. On the Wages List page, click the **purple (+) icon** in the top-right corner.
+## How to access this page
+
+From the sidebar, go to **Employee → Wages**. On the Wages List page, click the **purple (+) icon** in the top-right corner.
 
 The system opens the **Add Wage Entry Page**.
 
 ______________________________________________________________________
 
-## Step-by-step Instructions
+## Step-by-step instructions
 
-1. Open **Employee Management → Wages** and click the add icon.
+1. Open **Employee → Wages** and click the add icon.
 1. Fill in the **Date**, **Employee**, and **Product** fields.
 1. Enter **Production Details** including Quantity, Wage, Deductions, and Bonus.
 1. Review the auto-calculated **Net Wage**.
@@ -29,7 +39,9 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## General Information
+## Field reference
+
+### General information
 
 ![General Information Section](add-wage-general-info.png)
 
@@ -43,11 +55,10 @@ Fill in the following fields:
 | 4    | Product  | Select from dropdown | The product the employee produced in this work session |
 
 !!! warning "Required Fields"
-Fields marked with a **red star (\*)** are mandatory. Date, Employee, and Product must all be filled before saving.
 
-______________________________________________________________________
+    Fields marked with a **red star (\*)** are mandatory. Date, Employee, and Product must all be filled before saving.
 
-## Production Details
+### Production details
 
 ![Production Details Section](add-wage-production-detail.png)
 
@@ -62,16 +73,16 @@ Enter the production output and wage calculation fields:
 | 5    | Net Wage   | Auto-calculated | Final wage amount (Wage × Quantity + Bonus - Deductions) |
 
 !!! note "Net Wage Calculation"
-Net Wage is calculated automatically based on Wage, Quantity, Bonus, and Deductions. You do not need to enter it manually.
+
+    Net Wage is calculated automatically based on Wage, Quantity, Bonus, and Deductions. You do not need to enter it manually.
 
 !!! tip
-Set Wage to **0** to apply the default wage rate configured for the selected product.
 
-______________________________________________________________________
+    Set Wage to **0** to apply the default wage rate configured for the selected product.
 
-## Payment Information
+### Payment information
 
-![Payment Information Section](add-wage%20payment-inforamtion.png)
+![Payment Information Section](add-wage-payment-information.png)
 
 Record whether this wage has been paid:
 
@@ -82,11 +93,12 @@ Record whether this wage has been paid:
 | 3    | Payment Notes | Enter text    | Optional notes about the payment method or reference      |
 
 !!! note "Payment Date Visibility"
-Payment Date and Payment Notes fields appear when **Is Paid** is toggled on. Leave Is Paid off if the wage is still outstanding.
+
+    Payment Date and Payment Notes fields appear when **Is Paid** is toggled on. Leave Is Paid off if the wage is still outstanding.
 
 ______________________________________________________________________
 
-## Saving the Wage Entry
+## Saving the Wage entry
 
 After completing all sections:
 
@@ -96,19 +108,19 @@ After completing all sections:
 
 ______________________________________________________________________
 
-!!! Tips and Common Issues
+## Tips and common issues
 
-- **Employee is required** — You must select an employee before saving <br>
-- **Product is required** — Select the product associated with the production output <br>
-- **Default wage applies when Wage is 0** — If no wage is entered, the system uses the product's default wage rate <br>
-- **Net Wage updates automatically** — It recalculates whenever Quantity, Wage, Bonus, or Deductions are changed <br>
-- **Toggle Is Paid only when payment is confirmed** — Setting Is Paid without a Payment Date may cause reporting inconsistencies <br>
-- **Deductions reduce Net Wage** — Enter deductions carefully as they directly reduce the employee's final payment <br>
-- **Date affects payroll reporting** — The entry date determines which pay period this wage record appears in <br>
+- **Employee is required** — You must select an employee before saving
+- **Product is required** — Select the product associated with the production output
+- **Default wage applies when Wage is 0** — If no wage is entered, the system uses the product's default wage rate
+- **Net Wage updates automatically** — It recalculates whenever Quantity, Wage, Bonus, or Deductions are changed
+- **Toggle Is Paid only when payment is confirmed** — Setting Is Paid without a Payment Date may cause reporting inconsistencies
+- **Deductions reduce Net Wage** — Enter deductions carefully as they directly reduce the employee's final payment
+- **Date affects payroll reporting** — The entry date determines which pay period this wage record appears in
 
 ______________________________________________________________________
 
-## Related Pages
+## Related pages
 
 - **Wages Overview** — View and manage all wage entries
 - **Employees** — Manage employee profiles

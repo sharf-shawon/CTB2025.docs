@@ -15,9 +15,9 @@ Perform a complete audit of `docs/user-guide/` against `.github/STYLE_SPEC.md`.
 ## Mandatory first steps
 
 1. Read `.github/STYLE_SPEC.md` — your audit checklist
-2. Read `.github/knowledge/ctb-knowledge.md` — expected module structure
-3. Read `mkdocs.yml` — build expected file list from nav
-4. Walk `docs/user-guide/` — build actual file list
+1. Read `.github/knowledge/ctb-knowledge.md` — expected module structure
+1. Read `mkdocs.yml` — build expected file list from nav
+1. Walk `docs/user-guide/` — build actual file list
 
 ## Audit dimensions (score each: ✅ pass · ⚠️ minor · ❌ fail)
 

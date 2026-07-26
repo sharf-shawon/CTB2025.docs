@@ -1,3 +1,7 @@
+---
+tags: [module:trade, task:view, role:accountant]
+---
+
 # Print Invoice
 
 Use this page to generate a printable or PDF version of an invoice. The print view displays the invoice in a professional format suitable for sending to clients, filing records, or archiving. The print option is available only when an invoice status is saved as **Sent**.
@@ -6,6 +10,8 @@ Use this page to generate a printable or PDF version of an invoice. The print vi
 
 Use this page to produce a shareable invoice output for client communication, filing, and archival. It converts approved invoice details into a print-friendly layout or PDF.
 
+______________________________________________________________________
+
 ## When to use this page
 
 - Generating a PDF copy of an invoice to send to clients via email
@@ -13,9 +19,11 @@ Use this page to produce a shareable invoice output for client communication, fi
 - Exporting invoice details in a standardized format
 - Creating an archive copy after marking an invoice as Sent
 
+______________________________________________________________________
+
 ## How to access this page
 
-From the sidebar, go to **Trade Management → Invoices**. On the Invoices List page, select an invoice with a **Sent** status. Open the invoice detail page and click the **Print** button.
+From the sidebar, go to **Trade → Invoices**. On the Invoices List page, select an invoice with a **Sent** status. Open the invoice detail page and click the **Print** button.
 
 The system opens the **Print Invoice Page** in a print preview dialog or new window.
 
@@ -30,13 +38,14 @@ ______________________________________________________________________
 - All required fields (Client, Invoice Date, Status) must be filled in
 
 !!! warning "Print Option Restriction"
-The print option is **only available** when an invoice status is being saved as **Sent**. If the status is Draft, Cancelled, or any other state, the Print button will not be active.
+
+    The print option is **only available** when an invoice status is being saved as **Sent**. If the status is Draft, Cancelled, or any other state, the Print button will not be active.
 
 ______________________________________________________________________
 
 ## Step-by-step instructions
 
-1. Navigate to the **Invoices list** from **Trade Management → Invoices**
+1. Go to the **Invoices list** from **Trade → Invoices**
 1. Find and select the invoice you want to print (ensure its status is **Sent**)
 1. Click on the invoice to open the **Invoice Detail page**
 1. Click the **Print** button located at the top of the page
@@ -46,7 +55,8 @@ ______________________________________________________________________
 1. Choose your printer or PDF destination and complete the print process
 
 !!! note "Browser Print Dialog"
-The exact print options depend on your browser. Most modern browsers allow you to save as PDF directly from the print dialog.
+
+    The exact print options depend on your browser. Most modern browsers can save as PDF directly from the print dialog.
 
 ______________________________________________________________________
 
@@ -60,7 +70,7 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## Print Invoice View Details
+## Print Invoice view details
 
 The print preview includes the following information:
 
