@@ -160,8 +160,8 @@ ______________________________________________________________________
 | `02-factory/`            | Factory            | Categories, materials, inventory, products  |
 | `03-trade/`              | Trade              | Invoices, payments, checks, vouchers, banks |
 | `04-employee/`           | Employee           | Employees, attendance, salary, wages, tasks |
-| `05-settings-and-admin/` | Settings and Admin | Users, app settings, SMS, audit log         |
-| `06-reference/`          | Reference          | Glossary, errors, offline, release notes    |
+| `08-settings-and-admin/` | Settings and Admin | Users, app settings, SMS, audit log         |
+| `09-reference/`          | Reference          | Glossary, errors, offline, release notes    |
 
 ### 6.3 URL stability rule
 
@@ -175,11 +175,11 @@ ______________________________________________________________________
 | ----------------------------------------------- | -------------------------------------------------------------- |
 | How to add/edit/delete a record                 | Module sub-section (e.g., `01-business/clients/add-client.md`) |
 | Overview of all sub-pages in a module           | `<module>/README.md`                                           |
-| Shared field appearing in multiple modules      | Define in `06-reference/glossary.md`, link from module pages   |
-| Error messages and HTTP error codes             | `06-reference/error-pages.md`                                  |
-| Cross-module workflow (e.g., invoice → payment) | `06-reference/` or a cross-module guide in the relevant module |
+| Shared field appearing in multiple modules      | Define in `09-reference/glossary.md`, link from module pages   |
+| Error messages and HTTP error codes             | `09-reference/error-pages.md`                                  |
+| Cross-module workflow (e.g., invoice → payment) | `09-reference/` or a cross-module guide in the relevant module |
 | Permission requirements                         | Inline on each page in Prerequisites section                   |
-| Release notes and checklists                    | `06-reference/`                                                |
+| Release notes and checklists                    | `09-reference/`                                                |
 | Gallery and screenshot index                    | `gallery.md` or `categories/<module>.md`                       |
 
 **Relocation checklist (doc-relocator agent):**

@@ -15,9 +15,18 @@ Use this page to monitor invoice status, revenue trends, and pending dues from o
 
 ## How to access this page
 
-From the left sidebar, go to **Trade Management -> Invoices -> Invoice Reports**.
+From the sidebar, go to **Trade → Invoices → Invoice Reports**.
 
 ![Invoice Reports Dashboard](invoice-reports-dashboard.png)
+
+!!! warning "Needs product review"
+
+    This page and [Invoice Report](../../07-reports/invoice-report.md) under
+    **Reports** describe overlapping functionality by different names and give
+    different access paths. Confirm whether these are two screens or one, and
+    retire the duplicate if they are the same. Tracked in `review/sme-checklist.md`.
+
+______________________________________________________________________
 
 ## Prerequisites
 
@@ -54,3 +63,4 @@ From the left sidebar, go to **Trade Management -> Invoices -> Invoice Reports**
 - [Invoice Detail](invoice-detail.md)
 - [Print Invoice](print-invoice.md)
 - [Add Payment](../payments/add-payment.md)
+- [Invoice Report](../../07-reports/invoice-report.md) — Line-item invoice analytics under **Reports**

@@ -98,15 +98,15 @@
 
 ## Reference module
 
-### docs/user-guide/06-reference/error-pages.md
+### docs/user-guide/09-reference/error-pages.md
 
 - [ ] Capture and insert screenshots for common error states (403, 404, 500, maintenance).
 
-### docs/user-guide/06-reference/offline-mode.md
+### docs/user-guide/09-reference/offline-mode.md
 
 - [ ] Capture and insert the offline fallback screenshot.
 
-### docs/user-guide/06-reference/glossary.md
+### docs/user-guide/09-reference/glossary.md
 
 - [ ] Expand glossary with additional module-specific terms observed in user support and training.
 - [ ] Validate definitions with business/admin owners before finalizing terminology.

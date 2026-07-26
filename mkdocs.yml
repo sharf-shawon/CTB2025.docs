@@ -43,8 +43,32 @@ plugins:
       type: date
       enable_creation_date: true
       fallback_to_build_date: true
+  # Every URL that changed in the module renumbering. Existing bookmarks,
+  # the published wiki, and inbound links keep working.
   - redirects:
-      redirect_maps: {}
+      redirect_maps:
+        user-guide/05-settings-and-admin/README.md: user-guide/08-settings-and-admin/README.md
+        user-guide/05-settings-and-admin/app-settings.md: user-guide/08-settings-and-admin/app-settings.md
+        user-guide/05-settings-and-admin/audit-log.md: user-guide/08-settings-and-admin/audit-log.md
+        user-guide/05-settings-and-admin/maintenance-mode.md: user-guide/08-settings-and-admin/maintenance-mode.md
+        user-guide/05-settings-and-admin/sms-notifications.md: user-guide/08-settings-and-admin/sms-notifications.md
+        user-guide/05-settings-and-admin/user-management.md: user-guide/08-settings-and-admin/user-management.md
+        user-guide/06-reference/error-pages.md: user-guide/09-reference/error-pages.md
+        user-guide/06-reference/glossary.md: user-guide/09-reference/glossary.md
+        user-guide/06-reference/offline-mode.md: user-guide/09-reference/offline-mode.md
+        user-guide/06-reference/production-release-next-steps.md: user-guide/09-reference/README.md
+        user-guide/06-reference/production-release-summary.md: user-guide/09-reference/README.md
+        user-guide/06-reference/release-checklist.md: user-guide/09-reference/README.md
+        user-guide/09-return-management/README.md: user-guide/05-returns/README.md
+        user-guide/09-return-management/material-returns.md: user-guide/05-returns/material-returns.md
+        user-guide/09-return-management/product-returns.md: user-guide/05-returns/product-returns.md
+        user-guide/10-commission-and-campaigns/README.md: user-guide/06-commission/README.md
+        user-guide/10-commission-and-campaigns/client-bonus-analytics.md: user-guide/06-commission/client-bonus-analytics.md
+        user-guide/10-commission-and-campaigns/client-bonus-campaigns.md: user-guide/06-commission/client-bonus-campaigns.md
+        user-guide/10-commission-and-campaigns/commission-campaigns.md: user-guide/06-commission/commission-campaigns.md
+        user-guide/10-commission-and-campaigns/employee-analytics.md: user-guide/06-commission/employee-analytics.md
+        user-guide/10-commission-and-campaigns/manager-analytics.md: user-guide/06-commission/manager-analytics.md
+        user-guide/10-commission-and-campaigns/payment-history.md: user-guide/06-commission/payment-history.md
   - google-translate
   - image-gallery:
       image_folder: "./gallery/"
@@ -152,11 +176,11 @@ nav:
   - Home: index.md
   - Start Here: user-guide/README.md
   - Getting Started:
-      - Overview: user-guide/00-getting-started/overview.md
+      - user-guide/00-getting-started/overview.md
       - Login and Logout: user-guide/00-getting-started/login-and-logout.md
       - Dashboard: user-guide/00-getting-started/dashboard.md
   - Business:
-      - Module Overview: user-guide/01-business/README.md
+      - user-guide/01-business/README.md
       - Clients:
           - Overview: user-guide/01-business/clients/overview.md
           - Add Client: user-guide/01-business/clients/add-client.md
@@ -168,18 +192,26 @@ nav:
           - Add Vendor: user-guide/01-business/vendors/add-vendor.md
           - Edit Vendor: user-guide/01-business/vendors/edit-vendor.md
           - Vendor Detail: user-guide/01-business/vendors/vendor-detail.md
-
-  - Commission and Campaigns:
-      - Module Overview: user-guide/10-commission-and-campaigns/README.md
-      - Commission Campaigns: user-guide/10-commission-and-campaigns/commission-campaigns.md
-      - Employee Analytics: user-guide/10-commission-and-campaigns/employee-analytics.md
-      - Manager Analytics: user-guide/10-commission-and-campaigns/manager-analytics.md
-      - Payment History: user-guide/10-commission-and-campaigns/payment-history.md
-      - Client Bonus Campaigns: user-guide/10-commission-and-campaigns/client-bonus-campaigns.md
-      - Client Bonus Analytics: user-guide/10-commission-and-campaigns/client-bonus-analytics.md
-
+  - Factory:
+      - user-guide/02-factory/README.md
+      - Categories:
+          - Overview: user-guide/02-factory/categories/overview.md
+          - Add Category: user-guide/02-factory/categories/add-category.md
+          - Edit Category: user-guide/02-factory/categories/edit-category.md
+      - Materials:
+          - Overview: user-guide/02-factory/materials/overview.md
+          - Add Material: user-guide/02-factory/materials/add-material.md
+          - Edit Material: user-guide/02-factory/materials/edit-material.md
+      - Material Inventory:
+          - Overview: user-guide/02-factory/material-inventory/overview.md
+          - Add Inventory Entry: user-guide/02-factory/material-inventory/add-inventory-entry.md
+      - Products:
+          - Overview: user-guide/02-factory/products/overview.md
+          - Add Product: user-guide/02-factory/products/add-product.md
+          - Edit Product: user-guide/02-factory/products/edit-product.md
+          - Product Detail: user-guide/02-factory/products/product-detail.md
   - Trade:
-      - Module Overview: user-guide/03-trade/README.md
+      - user-guide/03-trade/README.md
       - Invoices:
           - Overview: user-guide/03-trade/invoices/overview.md
           - Create Invoice: user-guide/03-trade/invoices/create-invoice.md
@@ -207,41 +239,8 @@ nav:
           - Overview: user-guide/03-trade/banks/overview.md
           - Add Bank: user-guide/03-trade/banks/add-bank.md
           - Bank Detail: user-guide/03-trade/banks/bank-detail.md
-      - Reports:
-          - Module Overview: user-guide/07-reports/README.md
-          - Summary Report: user-guide/07-reports/summary-report.md
-          - Profit Report: user-guide/07-reports/profit-report.md
-          - Invoice Report: user-guide/07-reports/invoice-report.md
-          - Voucher Report: user-guide/07-reports/voucher-report.md
-          - Executive Summary: user-guide/07-reports/executive-summary.md
-          - Attendance Report: user-guide/07-reports/attendance-report.md
-          - Product Return Report: user-guide/07-reports/product-return-report.md
-
-  - Return Management:
-      - Module Overview: user-guide/09-return-management/README.md
-      - Material Returns: user-guide/09-return-management/material-returns.md
-      - Product Returns: user-guide/09-return-management/product-returns.md
-
-  - Factory:
-      - Module Overview: user-guide/02-factory/README.md
-      - Categories:
-          - Overview: user-guide/02-factory/categories/overview.md
-          - Add Category: user-guide/02-factory/categories/add-category.md
-          - Edit Category: user-guide/02-factory/categories/edit-category.md
-      - Materials:
-          - Overview: user-guide/02-factory/materials/overview.md
-          - Add Material: user-guide/02-factory/materials/add-material.md
-          - Edit Material: user-guide/02-factory/materials/edit-material.md
-      - Material Inventory:
-          - Overview: user-guide/02-factory/material-inventory/overview.md
-          - Add Inventory Entry: user-guide/02-factory/material-inventory/add-inventory-entry.md
-      - Products:
-          - Overview: user-guide/02-factory/products/overview.md
-          - Add Product: user-guide/02-factory/products/add-product.md
-          - Edit Product: user-guide/02-factory/products/edit-product.md
-          - Product Detail: user-guide/02-factory/products/product-detail.md
   - Employee:
-      - Module Overview: user-guide/04-employee/README.md
+      - user-guide/04-employee/README.md
       - Departments:
           - Overview: user-guide/04-employee/departments/overview.md
           - Add/Edit Department: user-guide/04-employee/departments/manage-department.md
@@ -273,21 +272,41 @@ nav:
       - Purchase Balance:
           - Overview: user-guide/04-employee/purchase-balance/overview.md
           - Add Purchase Balance: user-guide/04-employee/purchase-balance/add-purchase-balance.md
-
+  - Returns:
+      - user-guide/05-returns/README.md
+      - Product Returns: user-guide/05-returns/product-returns.md
+      - Material Returns: user-guide/05-returns/material-returns.md
+  - Commission and Campaigns:
+      - user-guide/06-commission/README.md
+      - Commission Campaigns: user-guide/06-commission/commission-campaigns.md
+      - Employee Analytics: user-guide/06-commission/employee-analytics.md
+      - Manager Analytics: user-guide/06-commission/manager-analytics.md
+      - Payment History: user-guide/06-commission/payment-history.md
+      - Client Bonus Campaigns: user-guide/06-commission/client-bonus-campaigns.md
+      - Client Bonus Analytics: user-guide/06-commission/client-bonus-analytics.md
+  - Reports:
+      - user-guide/07-reports/README.md
+      - Summary Report: user-guide/07-reports/summary-report.md
+      - Profit Report: user-guide/07-reports/profit-report.md
+      - Invoice Report: user-guide/07-reports/invoice-report.md
+      - Voucher Report: user-guide/07-reports/voucher-report.md
+      - Executive Summary: user-guide/07-reports/executive-summary.md
+      - Attendance Report: user-guide/07-reports/attendance-report.md
+      - Product Return Report: user-guide/07-reports/product-return-report.md
   - Settings and Admin:
-      - Module Overview: user-guide/05-settings-and-admin/README.md
-      - User Management: user-guide/05-settings-and-admin/user-management.md
-      - App Settings: user-guide/05-settings-and-admin/app-settings.md
-      - SMS Notifications: user-guide/05-settings-and-admin/sms-notifications.md
-      - Maintenance Mode: user-guide/05-settings-and-admin/maintenance-mode.md
-      - Audit Log: user-guide/05-settings-and-admin/audit-log.md
+      - user-guide/08-settings-and-admin/README.md
+      - User Management: user-guide/08-settings-and-admin/user-management.md
+      - App Settings: user-guide/08-settings-and-admin/app-settings.md
+      - SMS Notifications: user-guide/08-settings-and-admin/sms-notifications.md
+      - Maintenance Mode: user-guide/08-settings-and-admin/maintenance-mode.md
+      - Audit Log: user-guide/08-settings-and-admin/audit-log.md
   - Reference:
-      - Glossary: user-guide/06-reference/glossary.md
-      - Error Pages: user-guide/06-reference/error-pages.md
-      - Offline Mode: user-guide/06-reference/offline-mode.md
-      - Consolidated Release Checklist: user-guide/06-reference/release-checklist.md
-      - Production Release Summary: user-guide/06-reference/production-release-summary.md
-      - Production Release Next Steps: user-guide/06-reference/production-release-next-steps.md
+      - user-guide/09-reference/README.md
+      - Glossary: user-guide/09-reference/glossary.md
+      - Troubleshooting: user-guide/09-reference/troubleshooting.md
+      - Permissions: user-guide/09-reference/permissions.md
+      - Error Pages: user-guide/09-reference/error-pages.md
+      - Offline Mode: user-guide/09-reference/offline-mode.md
   - Gallery:
       - Gallery Home: gallery.md
       - Admin: categories/admin.md

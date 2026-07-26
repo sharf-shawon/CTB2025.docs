@@ -117,4 +117,4 @@ The glossary helps staff read the docs and interface terms with the same meaning
 
 - [Error Pages](error-pages.md)
 - [Offline Mode](offline-mode.md)
-- [Production Release Checklist](release-checklist.md)
+- [Troubleshooting](troubleshooting.md)

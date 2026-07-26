@@ -43,7 +43,7 @@ Open **Commission and Campaigns → Employee Analytics** in the sidebar.
 - **Is Eligible** — Indicates whether the record meets commission eligibility rules.
 - **Status** — Processing state of the analytics record, such as `Calculated`, `Pending`, `Approved`, or `Paid`.
 
-<!-- TODO: screenshot docs/user-guide/10-commission-and-campaigns/employee-analytics-list-page.png -->
+<!-- TODO: screenshot docs/user-guide/06-commission/employee-analytics-list-page.png -->
 
 ## Add employee analytics manually
 

@@ -40,8 +40,8 @@ Module folders:
 - `02-factory`
 - `03-trade`
 - `04-employee`
-- `05-settings-and-admin`
-- `06-reference`
+- `08-settings-and-admin`
+- `09-reference`
 
 Screenshot root:
 
@@ -191,7 +191,7 @@ Use those files to:
 - `03-trade/vouchers` -> Trade
 - `03-trade/banks` -> Trade
 - `04-employee/*` -> Employee
-- `05-settings-and-admin` -> config
+- `08-settings-and-admin` -> config
 
 ## Special pages that must not be missed
 

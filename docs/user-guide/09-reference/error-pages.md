@@ -32,4 +32,4 @@ Error pages help users recover from missing pages, permission issues, or server 
 ## Related pages
 
 - [Offline Mode](offline-mode.md)
-- [Audit Log](../05-settings-and-admin/audit-log.md)
+- [Audit Log](../08-settings-and-admin/audit-log.md)

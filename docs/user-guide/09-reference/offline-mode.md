@@ -34,4 +34,4 @@ If you open a page for the first time while offline, the service worker shows a 
 ## Related pages
 
 - [Error Pages](error-pages.md)
-- [Production Release Checklist](release-checklist.md)
+- [Troubleshooting](troubleshooting.md)

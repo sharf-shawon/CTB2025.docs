@@ -54,17 +54,17 @@ Manage employees, attendance, salary, wages, payouts, and tasks.
 
 Control users, audit logs, app settings, SMS notifications, and maintenance options.
 
-- [Settings and Admin Overview](user-guide/05-settings-and-admin/README.md)
-- [User Management](user-guide/05-settings-and-admin/user-management.md)
-- [Audit Log](user-guide/05-settings-and-admin/audit-log.md)
+- [Settings and Admin Overview](user-guide/08-settings-and-admin/README.md)
+- [User Management](user-guide/08-settings-and-admin/user-management.md)
+- [Audit Log](user-guide/08-settings-and-admin/audit-log.md)
 
 ### Reference
 
 Find shared definitions, common error references, and offline-mode behavior.
 
-- [Glossary](user-guide/06-reference/glossary.md)
-- [Error Pages](user-guide/06-reference/error-pages.md)
-- [Offline Mode](user-guide/06-reference/offline-mode.md)
+- [Glossary](user-guide/09-reference/glossary.md)
+- [Error Pages](user-guide/09-reference/error-pages.md)
+- [Offline Mode](user-guide/09-reference/offline-mode.md)
 
 ## Common tasks
 
