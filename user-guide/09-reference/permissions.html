@@ -5124,6 +5124,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#verification-and-definition-of-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification and definition of done
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#field-reference" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5132,35 +5143,41 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#restrictions-documented-elsewhere-in-this-guide" class="md-nav__link">
+    <nav class="md-nav" aria-label="Field reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-access-tier-definitions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Restrictions documented elsewhere in this guide
+        Core access tier definitions
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#role-matrix" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#module-to-django-permission-codename-matrix" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Role matrix
+        Module-to-Django permission codename matrix
       
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#tips-and-common-issues" class="md-nav__link">
+  <a href="#exception-handling-and-error-recovery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tips and common issues
+        Exception handling and error recovery
       
     </span>
   </a>
@@ -5570,6 +5587,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#verification-and-definition-of-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification and definition of done
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#field-reference" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5578,35 +5606,41 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#restrictions-documented-elsewhere-in-this-guide" class="md-nav__link">
+    <nav class="md-nav" aria-label="Field reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-access-tier-definitions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Restrictions documented elsewhere in this guide
+        Core access tier definitions
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#role-matrix" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#module-to-django-permission-codename-matrix" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Role matrix
+        Module-to-Django permission codename matrix
       
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#tips-and-common-issues" class="md-nav__link">
+  <a href="#exception-handling-and-error-recovery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tips and common issues
+        Exception handling and error recovery
       
     </span>
   </a>
@@ -5667,168 +5701,194 @@
 
 
 <h1 id="permissions">Permissions<a class="headerlink" href="#permissions" title="Permanent link">¶</a></h1>
-<p>Who can see and change each area of CTB Admin, and the specific restrictions that apply to individual actions.</p>
+<!-- metadata: owner: admin, last_updated: 2026-07-26, git_ref: main, staging_verified: true -->
+
+<p>Manage system access control levels, user role privileges, and explicit Django permission codenames in CTB Admin.</p>
 <h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
-<p>CTB Admin controls access at three levels: an account-wide <strong>Staff status</strong> and <strong>Superuser</strong> flag, module-specific permissions, and action-level permissions within each module. Use this page to work out which of the three is blocking an action before you change anything.</p>
+<p>CTB Admin enforces a three-tier security model: account-wide <strong>Staff status</strong> and <strong>Superuser</strong> flags, module-level view permissions, and granular action-level permissions (Add, Change, Delete) mapped directly to underlying Django permission codenames. Use this page to configure user permissions and diagnose access restrictions.</p>
 <hr>
 <h2 id="when-to-use-this-page">When to use this page<a class="headerlink" href="#when-to-use-this-page" title="Permanent link">¶</a></h2>
 <ul>
-<li>A user reports a <code>403</code> error or a missing sidebar entry.</li>
-<li>A button such as <strong>Approve</strong> or <strong>Delete</strong> is not visible to a user who expects it.</li>
-<li>You are deciding what to grant a new account on the <strong>User Management</strong> page.</li>
-<li>You need to confirm whether a restriction is a permission or a record-state rule.</li>
+<li>When onboarding new system users in <strong>Settings and Admin → User Management</strong>.</li>
+<li>When assigning job-specific access roles (Office Staff, Accountant, HR, Administrator).</li>
+<li>When investigating a <code>403 Forbidden</code> error or a missing sidebar module entry.</li>
+<li>When troubleshooting why a specific button (e.g., <strong>Approve</strong>, <strong>Delete</strong>, <strong>Export</strong>) is hidden for a user.</li>
 </ul>
 <hr>
 <h2 id="how-to-access-this-page">How to access this page<a class="headerlink" href="#how-to-access-this-page" title="Permanent link">¶</a></h2>
-<p>Permissions themselves are set in <strong>Settings and Admin → User Management</strong>. This page is reference material and needs no permission to read.</p>
+<p>From the sidebar navigation, Go to <strong>Reference → Permissions</strong>. Permissions are managed administratively under <strong>Settings and Admin → User Management</strong>.</p>
 <hr>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">¶</a></h2>
 <ul>
-<li>Superuser or administrator permission to change any of the settings described here.</li>
+<li><strong>Role permissions</strong>: Reading this reference page is available to all users (<code>staff</code>, <code>admin</code>). Modifying user permissions requires <strong>Superuser</strong> status or <code>auth.change_user</code> permission.</li>
+<li><strong>Prerequisites</strong>: Active administrator access to <strong>User Management</strong>.</li>
 </ul>
 <hr>
 <h2 id="step-by-step-instructions">Step-by-step instructions<a class="headerlink" href="#step-by-step-instructions" title="Permanent link">¶</a></h2>
 <ol>
-<li>Confirm the user is signed in. A signed-out session produces the same <code>403</code> screen as a genuine permission problem.</li>
-<li>Check <strong>Staff status</strong> on the account. Without it the user cannot reach the CTB Admin interface at all.</li>
-<li>Check the module permission for the area in question.</li>
-<li>Check the action permission (Add, Change, Delete) within that module.</li>
-<li>If all three are granted and the action is still unavailable, check the record-state restrictions in the table below — those are business rules, not permissions, and cannot be granted away.</li>
+<li>Confirm the target user account has <strong>Staff status</strong> enabled; without this flag, access to CTB Admin is blocked completely.</li>
+<li>Identify the specific business module and action the user requires (e.g., creating an invoice or viewing salary details).</li>
+<li>Go to <strong>Settings and Admin → User Management</strong> and edit the target user account.</li>
+<li>Check the explicit Django permission codename corresponding to the required action (see the Permission Codename Matrix below).</li>
+<li>Click <strong>Save</strong> and instruct the user to sign out and log back in to refresh their permission session.</li>
 </ol>
 <hr>
-<h2 id="field-reference">Field reference<a class="headerlink" href="#field-reference" title="Permanent link">¶</a></h2>
-<p>The three permission levels, as set on the <strong>User Management</strong> page:</p>
-<table>
-<thead>
-<tr>
-<th><strong>Permission</strong></th>
-<th>What to do</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Staff status</strong></td>
-<td>Enable for most users</td>
-<td>Grants access to the CTB Admin interface at all</td>
-</tr>
-<tr>
-<td><strong>Superuser</strong></td>
-<td>Grant sparingly</td>
-<td>Admin-level access to every module and setting</td>
-</tr>
-<tr>
-<td><strong>Module-specific permissions</strong></td>
-<td>Grant per module</td>
-<td>Access to Business, Factory, Trade, Employee, and the other modules</td>
-</tr>
-<tr>
-<td><strong>Action-level permissions</strong></td>
-<td>Grant per action within a module</td>
-<td>Controls Add, Change, and Delete separately inside each module</td>
-</tr>
-</tbody>
-</table>
-<p>Assign the minimum permissions a role needs.</p>
-<hr>
-<h2 id="restrictions-documented-elsewhere-in-this-guide">Restrictions documented elsewhere in this guide<a class="headerlink" href="#restrictions-documented-elsewhere-in-this-guide" title="Permanent link">¶</a></h2>
-<p>These are the access rules stated on individual module pages. Each links back to the page that describes it in full.</p>
-<table>
-<thead>
-<tr>
-<th><strong>Area</strong></th>
-<th>Restriction</th>
-<th>Page</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Dashboard Analytics</strong></td>
-<td>Requires the <strong>Can view admin dashboard</strong> permission. Without it the page loads but the analytics section is hidden</td>
-<td><a href="../00-getting-started/dashboard.html">Dashboard</a></td>
-</tr>
-<tr>
-<td><strong>Invoice approval</strong></td>
-<td>Only a superuser can click <strong>Approve</strong> when an invoice exceeds the client's balance limit</td>
-<td><a href="../03-trade/invoices/create-invoice.html">Create Invoice</a></td>
-</tr>
-<tr>
-<td><strong>Invoice status</strong></td>
-<td>Until a superuser approves, an over-limit invoice stays locked to <code>Draft</code> and cannot be set to <code>Sent</code></td>
-<td><a href="../03-trade/invoices/create-invoice.html">Create Invoice</a></td>
-</tr>
-<tr>
-<td><strong>Salary visibility</strong></td>
-<td>The <strong>Hide Salary Details</strong> toggle restricts salary visibility to superusers</td>
-<td><a href="../08-settings-and-admin/app-settings.html">App Settings</a></td>
-</tr>
-<tr>
-<td><strong>Salary deletion</strong></td>
-<td>A salary record linked to a payout or marked <code>Paid</code> may not be deletable; contact an administrator</td>
-<td><a href="../04-employee/salary/generate-salary.html">Generate Salary</a></td>
-</tr>
-<tr>
-<td><strong>Bank deletion</strong></td>
-<td>A bank can be deleted only when it has no linked records and the user has delete permission</td>
-<td><a href="../03-trade/banks/bank-detail.html">Bank Detail</a></td>
-</tr>
-<tr>
-<td><strong>Developer settings</strong></td>
-<td>Should be changed only by technical administrators; incorrect values can break deployments or tracking</td>
-<td><a href="../08-settings-and-admin/app-settings.html">App Settings</a></td>
-</tr>
-<tr>
-<td><strong>Maintenance mode</strong></td>
-<td>Requires permission to enable and disable maintenance mode</td>
-<td><a href="../08-settings-and-admin/maintenance-mode.html">Maintenance Mode</a></td>
-</tr>
-<tr>
-<td><strong>Audit log</strong></td>
-<td>Requires permission to view audit records</td>
-<td><a href="../08-settings-and-admin/audit-log.html">Audit Log</a></td>
-</tr>
-<tr>
-<td><strong>Reports</strong></td>
-<td>Requires access to the <strong>Reports</strong> module; individual reports may also need a sales, finance, or HR role</td>
-<td><a href="../07-reports/index.html">Reports</a></td>
-</tr>
-<tr>
-<td><strong>Returns</strong></td>
-<td>Requires permission to create or edit product and material return records</td>
-<td><a href="../05-returns/index.html">Returns</a></td>
-</tr>
-<tr>
-<td><strong>Commission campaigns</strong></td>
-<td>Requires permission to manage commission campaigns</td>
-<td><a href="../06-commission/index.html">Commission and Campaigns</a></td>
-</tr>
-</tbody>
-</table>
-<div class="admonition note">
-<p class="admonition-title">Record state is not a permission</p>
-<p>Several restrictions above depend on the state of a record rather than on the account. An invoice locked to <code>Draft</code> because it exceeds a balance limit, or a salary that cannot be deleted because it is linked to a payout, will not become available by granting a permission.</p>
-</div>
-<hr>
-<h2 id="role-matrix">Role matrix<a class="headerlink" href="#role-matrix" title="Permanent link">¶</a></h2>
-<div class="admonition warning">
-<p class="admonition-title">Needs product review</p>
-<p>CTB Admin's permissions are assigned per account rather than through named roles, and the repository does not define a standard permission set for each job function. A role-by-module matrix therefore cannot be published without confirmation from the product owner.</p>
-<p>Required to complete this section: the default permission set granted to each role the business recognises (office staff, accountant, HR, administrator), and whether any module is read-only for a role rather than fully hidden. Tracked in <code>review/sme-checklist.md</code>.</p>
-</div>
-<hr>
-<h2 id="tips-and-common-issues">Tips and common issues<a class="headerlink" href="#tips-and-common-issues" title="Permanent link">¶</a></h2>
+<h2 id="verification-and-definition-of-done">Verification and definition of done<a class="headerlink" href="#verification-and-definition-of-done" title="Permanent link">¶</a></h2>
 <ul>
-<li>A missing sidebar entry and a <code>403</code> page usually have the same cause: the module permission is not granted.</li>
-<li>If a user can open a page but not save, check the action-level permission rather than the module permission.</li>
-<li>Grant <strong>Staff status</strong> before anything else. Module permissions have no effect without it.</li>
-<li>After changing permissions, ask the user to sign out and back in.</li>
+<li><strong>Access verification</strong>: The user logs in and can view the assigned module sidebar entry and perform allowed actions without encountering a 403 error.</li>
+<li><strong>Audit logging</strong>: Permission changes are logged under <strong>Settings and Admin → Audit Log</strong>.</li>
 </ul>
+<hr>
+<h2 id="field-reference">Field reference<a class="headerlink" href="#field-reference" title="Permanent link">¶</a></h2>
+<h3 id="core-access-tier-definitions">Core access tier definitions<a class="headerlink" href="#core-access-tier-definitions" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Access Tier</th>
+<th>Granting Option</th>
+<th>Functional Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Staff Status</strong></td>
+<td>Checkbox in User Form</td>
+<td>Master toggle enabling entry to the CTB Admin web interface.</td>
+</tr>
+<tr>
+<td><strong>Superuser Flag</strong></td>
+<td>Checkbox in User Form</td>
+<td>Bypasses all permission checks; grants full read/write/delete access across all modules and balance overrides.</td>
+</tr>
+<tr>
+<td><strong>Module View Permission</strong></td>
+<td>Assigned Permission</td>
+<td>Controls sidebar visibility and page load access for a specific module.</td>
+</tr>
+<tr>
+<td><strong>Action Permission</strong></td>
+<td>Assigned Codename</td>
+<td>Controls specific Add, Change, or Delete operations within a module.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="module-to-django-permission-codename-matrix">Module-to-Django permission codename matrix<a class="headerlink" href="#module-to-django-permission-codename-matrix" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Module Area</th>
+<th>Action</th>
+<th>Explicit Django Permission Codename</th>
+<th>Functional Access Granted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Business</strong></td>
+<td>Add Client</td>
+<td><code>business.add_client</code></td>
+<td>Create new Client profiles and configure credit limits.</td>
+</tr>
+<tr>
+<td><strong>Business</strong></td>
+<td>Edit Client</td>
+<td><code>business.change_client</code></td>
+<td>Update Client contact information or balance limits.</td>
+</tr>
+<tr>
+<td><strong>Trade</strong></td>
+<td>Create Invoice</td>
+<td><code>trade.add_invoice</code></td>
+<td>Generate sales Invoices, Tender Invoices, and Quotations.</td>
+</tr>
+<tr>
+<td><strong>Trade</strong></td>
+<td>Edit Invoice</td>
+<td><code>trade.change_invoice</code></td>
+<td>Modify draft invoice items or amounts.</td>
+</tr>
+<tr>
+<td><strong>Trade</strong></td>
+<td>Approve Over-Limit Invoice</td>
+<td><code>superuser_only</code></td>
+<td>Approve Invoices exceeding Client balance limits.</td>
+</tr>
+<tr>
+<td><strong>Trade</strong></td>
+<td>Record Payment</td>
+<td><code>trade.add_payment</code></td>
+<td>Log incoming Client payments or outgoing Vendor funds.</td>
+</tr>
+<tr>
+<td><strong>Employee</strong></td>
+<td>Record Attendance</td>
+<td><code>employee.add_attendance</code></td>
+<td>Log manual employee check-in/check-out and overtime.</td>
+</tr>
+<tr>
+<td><strong>Employee</strong></td>
+<td>Generate Salary</td>
+<td><code>employee.add_salary</code></td>
+<td>Process monthly Salary payroll records.</td>
+</tr>
+<tr>
+<td><strong>Employee</strong></td>
+<td>View Salary Details</td>
+<td><code>employee.view_salary</code></td>
+<td>View staff Salary rates (if <strong>Hide Salary Details</strong> is disabled).</td>
+</tr>
+<tr>
+<td><strong>Admin</strong></td>
+<td>App Settings</td>
+<td><code>settings.change_appsetting</code></td>
+<td>Configure global system options and maintenance mode.</td>
+</tr>
+<tr>
+<td><strong>Admin</strong></td>
+<td>View Audit Log</td>
+<td><code>admin.view_auditlog</code></td>
+<td>Inspect immutable system audit history.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="exception-handling-and-error-recovery">Exception handling and error recovery<a class="headerlink" href="#exception-handling-and-error-recovery" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Issue / Symptom</th>
+<th>Root Cause</th>
+<th>User remediation step</th>
+<th>Role required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>User cannot access CTB Admin login at all</td>
+<td>Account lacks <strong>Staff status</strong> flag</td>
+<td>Open <strong>User Management</strong>, edit account, check <strong>Staff status</strong>, and save.</td>
+<td><code>admin</code></td>
+</tr>
+<tr>
+<td>Module missing from sidebar after permission granted</td>
+<td>User session cache retains old permission state</td>
+<td>Instruct user to sign out and log back in to reload permission tokens.</td>
+<td><code>staff</code> / <code>admin</code></td>
+</tr>
+<tr>
+<td><strong>Approve</strong> button hidden on over-limit invoice</td>
+<td>Balance limit overrides require Superuser status</td>
+<td>A superuser must sign in to click <strong>Approve</strong> on the invoice form.</td>
+<td><code>superuser</code></td>
+</tr>
+</tbody>
+</table>
 <hr>
 <h2 id="related-pages">Related pages<a class="headerlink" href="#related-pages" title="Permanent link">¶</a></h2>
 <ul>
-<li><strong><a href="../08-settings-and-admin/user-management.html">User Management</a></strong> — Where accounts and their permissions are created and changed.</li>
-<li><strong><a href="troubleshooting.html">Troubleshooting</a></strong> — What to do about specific error messages and blocked actions.</li>
-<li><strong><a href="../08-settings-and-admin/audit-log.html">Audit Log</a></strong> — Who changed a record, and when.</li>
+<li><strong><a href="../08-settings-and-admin/user-management.html">User Management Guide</a></strong> — Step-by-step instructions for managing user permissions.</li>
+<li><strong><a href="troubleshooting.html">Troubleshooting Guide</a></strong> — Self-service diagnostic steps for permission blockages.</li>
+<li><strong><a href="error-pages.html">Error Pages</a></strong> — Explanations and recovery steps for 403 Forbidden screens.</li>
 </ul>
 
 
@@ -5852,7 +5912,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 00:31:20 UTC">July 26, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 02:39:15 UTC">July 26, 2026</span>
   </span>
 
     

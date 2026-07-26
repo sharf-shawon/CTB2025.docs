@@ -5158,32 +5158,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-offline-mode-works" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How offline mode works
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-to-do-when-you-are-offline" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What to do when you are offline
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-users-should-expect" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What users should expect
+        Prerequisites
       
     </span>
   </a>
@@ -5202,6 +5180,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#verification-and-definition-of-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification and definition of done
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#field-reference" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5210,13 +5199,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Field reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#offline-functionality-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Offline functionality matrix
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#tips-and-common-issues" class="md-nav__link">
+  <a href="#exception-handling-and-error-recovery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tips and common issues
+        Exception handling and error recovery
       
     </span>
   </a>
@@ -5548,32 +5554,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-offline-mode-works" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How offline mode works
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-to-do-when-you-are-offline" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What to do when you are offline
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-users-should-expect" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What users should expect
+        Prerequisites
       
     </span>
   </a>
@@ -5592,6 +5576,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#verification-and-definition-of-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification and definition of done
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#field-reference" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5600,13 +5595,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Field reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#offline-functionality-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Offline functionality matrix
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#tips-and-common-issues" class="md-nav__link">
+  <a href="#exception-handling-and-error-recovery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tips and common issues
+        Exception handling and error recovery
       
     </span>
   </a>
@@ -5667,62 +5679,119 @@
 
 
 <h1 id="offline-mode">Offline Mode<a class="headerlink" href="#offline-mode" title="Permanent link">¶</a></h1>
+<!-- metadata: owner: staff, last_updated: 2026-07-26, git_ref: main, staging_verified: true -->
+
+<p>Learn how CTB Admin handles network disconnections and Service Worker caching.</p>
 <h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
-<p>CTB Admin documentation uses a service worker to cache pages and shared assets as you browse. When your connection drops, the site will try to serve the last cached version of the page first.</p>
+<p>CTB Admin documentation uses an automated Progressive Web App (PWA) Service Worker to cache visited documentation pages, stylesheets, scripts, and graphics locally in your browser. When network connectivity drops, users can continue reading previously cached documentation pages offline.</p>
 <hr>
 <h2 id="when-to-use-this-page">When to use this page<a class="headerlink" href="#when-to-use-this-page" title="Permanent link">¶</a></h2>
 <ul>
-<li>When you need to work with offline mode in CTB Admin.</li>
+<li>When working in low-connectivity factory or warehouse environments.</li>
+<li>When an offline fallback page appears while browsing documentation.</li>
+<li>When understanding what content remains available during network outages.</li>
+<li>When troubleshooting outdated or stale cached documentation assets after a deployment.</li>
 </ul>
 <hr>
 <h2 id="how-to-access-this-page">How to access this page<a class="headerlink" href="#how-to-access-this-page" title="Permanent link">¶</a></h2>
-<p>From the sidebar, go to <strong>Reference</strong>, then open <strong>Offline Mode</strong>.</p>
+<p>From the sidebar navigation, Go to <strong>Reference → Offline Mode</strong>. The direct URL path is <code>/user-guide/09-reference/offline-mode/</code>.</p>
 <hr>
-<h2 id="how-offline-mode-works">How offline mode works<a class="headerlink" href="#how-offline-mode-works" title="Permanent link">¶</a></h2>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">¶</a></h2>
 <ul>
-<li>Visited pages are saved locally in your browser cache.</li>
-<li>Shared assets such as styles and scripts are cached as they are requested.</li>
-<li>If a page is already cached, you can open it again even when the network is unavailable.</li>
-<li>If a page is not yet cached, the site falls back to a dedicated offline shell first, then to this page when available.</li>
-</ul>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="offline-mode-photo.png" data-desc-position="bottom"><img alt="Offline mode fallback page" src="offline-mode-photo.png"></a></p>
-<hr>
-<h2 id="what-to-do-when-you-are-offline">What to do when you are offline<a class="headerlink" href="#what-to-do-when-you-are-offline" title="Permanent link">¶</a></h2>
-<ol>
-<li>Refresh the page if you think the connection has recovered.</li>
-<li>Open a page you have already visited to load the cached copy.</li>
-<li>Reconnect to the network and revisit any page that did not load from cache.</li>
-</ol>
-<hr>
-<h2 id="what-users-should-expect">What users should expect<a class="headerlink" href="#what-users-should-expect" title="Permanent link">¶</a></h2>
-<ul>
-<li>Already visited pages may still open even when the connection is weak.</li>
-<li>The first visit to a page may still need a working connection.</li>
-<li>Some images and assets may take longer to appear after a reconnect.</li>
+<li><strong>Role permissions</strong>: Accessible by all authenticated user roles (<code>staff</code>, <code>accountant</code>, <code>hr</code>, <code>admin</code>).</li>
+<li><strong>Prerequisites</strong>: A modern web browser supporting Service Workers (Chrome, Firefox, Edge, Safari).</li>
 </ul>
 <hr>
 <h2 id="step-by-step-instructions">Step-by-step instructions<a class="headerlink" href="#step-by-step-instructions" title="Permanent link">¶</a></h2>
 <ol>
-<li>Refresh the page if you think the connection has recovered.</li>
-<li>Open a page you have already visited to load the cached copy.</li>
-<li>Reconnect to the network and revisit any page that did not load from cache.</li>
-<li>Clear the browser cache if a page or image still looks out of date.</li>
+<li>Browse CTB Admin documentation while connected to the internet to prime your browser cache.</li>
+<li>If your internet connection drops, continue navigating visited pages normally.</li>
+<li>If you attempt to open an unvisited page while offline, review the <strong>Offline Fallback Page</strong>.</li>
+<li>Once network connectivity is restored, click <strong>Refresh</strong> to sync the latest content updates.</li>
 </ol>
 <hr>
-<h2 id="field-reference">Field reference<a class="headerlink" href="#field-reference" title="Permanent link">¶</a></h2>
-<p>Not applicable. This page describes browser and cache behaviour rather than a form.</p>
-<hr>
-<h2 id="tips-and-common-issues">Tips and common issues<a class="headerlink" href="#tips-and-common-issues" title="Permanent link">¶</a></h2>
+<h2 id="verification-and-definition-of-done">Verification and definition of done<a class="headerlink" href="#verification-and-definition-of-done" title="Permanent link">¶</a></h2>
 <ul>
-<li>Refresh once after reconnecting instead of repeatedly reloading the page.</li>
-<li>If an image or page looks stale, clear the browser cache and try again.</li>
-<li>Tell users to revisit the site while online after a deployment so the cache can update.</li>
+<li><strong>Cache verification</strong>: Visited documentation pages load without internet access.</li>
+<li><strong>Service Worker active</strong>: Browser developer tools confirm <code>sw-register.js</code> is active and controlling document caching.</li>
 </ul>
+<hr>
+<h2 id="field-reference">Field reference<a class="headerlink" href="#field-reference" title="Permanent link">¶</a></h2>
+<h3 id="offline-functionality-matrix">Offline functionality matrix<a class="headerlink" href="#offline-functionality-matrix" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Capability / Feature</th>
+<th>Online State</th>
+<th>Offline State</th>
+<th>Behavior Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Visited Documentation Pages</strong></td>
+<td>Full Access</td>
+<td>Full Access</td>
+<td>Served directly from local browser Cache Storage.</td>
+</tr>
+<tr>
+<td><strong>Unvisited Documentation Pages</strong></td>
+<td>Full Access</td>
+<td>Offline Fallback</td>
+<td>Displays offline notice shell guiding user to reconnect.</td>
+</tr>
+<tr>
+<td><strong>Global Site Search</strong></td>
+<td>Full Access</td>
+<td>Partial Access</td>
+<td>Searches across locally cached page titles and text.</td>
+</tr>
+<tr>
+<td><strong>CTB Admin Application Forms</strong></td>
+<td>Live Read/Write</td>
+<td>Blocked</td>
+<td>Data entry forms require an active server connection to save records.</td>
+</tr>
+</tbody>
+</table>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="offline-mode-photo.png" data-desc-position="bottom"><img alt="Offline mode fallback page" src="offline-mode-photo.png"></a></p>
+<hr>
+<h2 id="exception-handling-and-error-recovery">Exception handling and error recovery<a class="headerlink" href="#exception-handling-and-error-recovery" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Issue / Symptom</th>
+<th>Root Cause</th>
+<th>User remediation step</th>
+<th>Role required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Page displays outdated content after site update</td>
+<td>Browser cache is retaining old Service Worker asset bundle</td>
+<td>1. Reconnect to internet.<br>2. Perform hard refresh (<strong>Ctrl+F5</strong> or <strong>Cmd+Shift+R</strong>).<br>3. Clear browser site cache if issue persists.</td>
+<td><code>staff</code></td>
+</tr>
+<tr>
+<td>Unvisited page fails to load offline</td>
+<td>Page HTML was not cached prior to network loss</td>
+<td>Reconnect to internet and click the link to cache the page for offline availability.</td>
+<td><code>staff</code></td>
+</tr>
+<tr>
+<td>Service Worker fails to register</td>
+<td>Browser privacy settings block local storage / Service Workers</td>
+<td>Enable local site storage and Service Workers in browser settings.</td>
+<td><code>staff</code> / <code>admin</code></td>
+</tr>
+</tbody>
+</table>
 <hr>
 <h2 id="related-pages">Related pages<a class="headerlink" href="#related-pages" title="Permanent link">¶</a></h2>
 <ul>
-<li><a href="error-pages.html">Error Pages</a></li>
-<li><a href="troubleshooting.html">Troubleshooting</a></li>
+<li><strong><a href="error-pages.html">Error Pages</a></strong> — Diagnostics for 403, 404, 500, and Maintenance errors.</li>
+<li><strong><a href="troubleshooting.html">Troubleshooting Guide</a></strong> — Step-by-step solutions for connectivity and browser caching issues.</li>
 </ul>
 
 
@@ -5746,7 +5815,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 00:44:11 UTC">July 26, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 02:39:15 UTC">July 26, 2026</span>
   </span>
 
     

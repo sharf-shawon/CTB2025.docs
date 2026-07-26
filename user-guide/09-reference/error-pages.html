@@ -5130,10 +5130,32 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#step-by-step-instructions" class="md-nav__link">
     <span class="md-ellipsis">
       
         Step-by-step instructions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification-and-definition-of-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification and definition of done
       
     </span>
   </a>
@@ -5153,10 +5175,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#common-error-pages" class="md-nav__link">
+  <a href="#common-error-screens-and-diagnostic-matrix" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Common error pages
+        Common error screens and diagnostic matrix
       
     </span>
   </a>
@@ -5169,10 +5191,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tips-and-common-issues" class="md-nav__link">
+  <a href="#exception-handling-and-error-recovery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tips and common issues
+        Exception handling and error recovery
       
     </span>
   </a>
@@ -5532,10 +5554,32 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#step-by-step-instructions" class="md-nav__link">
     <span class="md-ellipsis">
       
         Step-by-step instructions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification-and-definition-of-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification and definition of done
       
     </span>
   </a>
@@ -5555,10 +5599,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#common-error-pages" class="md-nav__link">
+  <a href="#common-error-screens-and-diagnostic-matrix" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Common error pages
+        Common error screens and diagnostic matrix
       
     </span>
   </a>
@@ -5571,10 +5615,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tips-and-common-issues" class="md-nav__link">
+  <a href="#exception-handling-and-error-recovery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tips and common issues
+        Exception handling and error recovery
       
     </span>
   </a>
@@ -5635,74 +5679,129 @@
 
 
 <h1 id="error-pages">Error Pages<a class="headerlink" href="#error-pages" title="Permanent link">¶</a></h1>
-<p>Use this page to understand the standard error screens users may see in CTB Admin and what to do next.</p>
+<!-- metadata: owner: staff, last_updated: 2026-07-26, git_ref: main, staging_verified: true -->
+
+<p>Identify standard system error screens in CTB Admin and follow step-by-step recovery procedures.</p>
 <h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
-<p>Error pages help users recover from missing pages, permission issues, or server problems. Use this page as a quick support reference when a user reports an unexpected screen.</p>
+<p>Error pages inform users when a requested screen cannot be accessed, does not exist, encounters a server error, or is restricted during maintenance. Use this page to diagnose HTTP status codes, understand root causes, and take corrective remediation action.</p>
 <hr>
 <h2 id="when-to-use-this-page">When to use this page<a class="headerlink" href="#when-to-use-this-page" title="Permanent link">¶</a></h2>
 <ul>
-<li>When a user reports a page is missing.</li>
-<li>When a user cannot access a record.</li>
-<li>When the site shows a server or maintenance message.</li>
+<li>When you see a <strong>403 Forbidden</strong> error screen after clicking a link or saving a form.</li>
+<li>When a <strong>404 Not Found</strong> page appears after following a bookmark or entering a URL.</li>
+<li>When a <strong>500 Server Error</strong> screen occurs during form submission or report generation.</li>
+<li>When the system displays a <strong>Maintenance Mode</strong> lock message.</li>
 </ul>
-<!-- TODO: Add screenshots for the most common error states if they are captured in the UI. -->
-
 <hr>
 <h2 id="how-to-access-this-page">How to access this page<a class="headerlink" href="#how-to-access-this-page" title="Permanent link">¶</a></h2>
-<p>From the sidebar, go to <strong>Reference</strong>, then open <strong>Error Pages</strong>.</p>
+<p>From the sidebar navigation, Go to <strong>Reference → Error Pages</strong>. The direct URL path is <code>/user-guide/09-reference/error-pages/</code>.</p>
+<hr>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>Role permissions</strong>: Accessible by all authenticated user roles (<code>staff</code>, <code>accountant</code>, <code>hr</code>, <code>admin</code>).</li>
+<li><strong>Prerequisites</strong>: Active user session in CTB Admin.</li>
+</ul>
 <hr>
 <h2 id="step-by-step-instructions">Step-by-step instructions<a class="headerlink" href="#step-by-step-instructions" title="Permanent link">¶</a></h2>
 <ol>
-<li>Open <strong>Error Pages</strong> from the <strong>Reference</strong> section of the sidebar.</li>
-<li>Complete the <strong>Common error pages</strong> section described below.</li>
-<li>Review the values you entered, then save the record.</li>
+<li>Identify the HTTP status code or screen title (e.g., 403, 404, 500, or Maintenance Mode).</li>
+<li>Match the error code against the <strong>Error response matrix</strong> in the Field reference section below.</li>
+<li>Follow the exact remediation steps assigned to your user role.</li>
+<li>If the error persists, note the exact URL, error code, and timestamp before contacting a system administrator.</li>
 </ol>
 <hr>
+<h2 id="verification-and-definition-of-done">Verification and definition of done<a class="headerlink" href="#verification-and-definition-of-done" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>Error resolution</strong>: The user successfully returns to a functional CTB Admin page after resolving permissions, fixing the URL, or waiting for maintenance completion.</li>
+<li><strong>Audit verification</strong>: Admin users can inspect the <strong>Audit Log</strong> (<code>08-settings-and-admin/audit-log.md</code>) to verify if a failed access attempt was logged.</li>
+</ul>
+<hr>
 <h2 id="field-reference">Field reference<a class="headerlink" href="#field-reference" title="Permanent link">¶</a></h2>
-<h3 id="common-error-pages">Common error pages<a class="headerlink" href="#common-error-pages" title="Permanent link">¶</a></h3>
+<h3 id="common-error-screens-and-diagnostic-matrix">Common error screens and diagnostic matrix<a class="headerlink" href="#common-error-screens-and-diagnostic-matrix" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
-<th>Error</th>
-<th>What it means</th>
-<th>What you should do</th>
+<th>Error Code</th>
+<th>Error Screen Title</th>
+<th>Primary Root Cause</th>
+<th>Expected System Behavior</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>403</td>
-<td>You do not have permission to view the page.</td>
-<td>Confirm your role or ask an administrator to grant access.</td>
+<td><strong>403</strong></td>
+<td>403 Forbidden</td>
+<td>User account lacks the required Django permission codename or role level for this view.</td>
+<td>Blocks screen access; user cannot view or submit form data.</td>
 </tr>
 <tr>
-<td>404</td>
-<td>The page or record could not be found.</td>
-<td>Check the link, search again, or return to the module list.</td>
+<td><strong>404</strong></td>
+<td>404 Page Not Found</td>
+<td>Requested URL path is incorrect, or underlying database record was deleted.</td>
+<td>Display missing page graphic; sidebar remains accessible.</td>
 </tr>
 <tr>
-<td>500</td>
-<td>The server encountered a problem.</td>
-<td>Refresh the page and report the issue if it continues.</td>
+<td><strong>500</strong></td>
+<td>500 Internal Server Error</td>
+<td>Unhandled server application exception, database timeout, or invalid form processing logic.</td>
+<td>Shows generic error message; transaction rolls back safely.</td>
 </tr>
 <tr>
-<td>Maintenance</td>
-<td>The site is temporarily restricted.</td>
-<td>Wait until maintenance is complete and try again later.</td>
+<td><strong>503</strong></td>
+<td>Maintenance Mode</td>
+<td>System administrator enabled Maintenance Mode in <strong>App Settings</strong> for updates.</td>
+<td>Replaces app interface with temporary maintenance banner for non-superusers.</td>
+</tr>
+</tbody>
+</table>
+<!-- TODO: screenshot error-403-screen.png -->
+
+<!-- TODO: screenshot error-500-screen.png -->
+
+<hr>
+<h2 id="exception-handling-and-error-recovery">Exception handling and error recovery<a class="headerlink" href="#exception-handling-and-error-recovery" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Error Code</th>
+<th>Symptom</th>
+<th>Step-by-step remediation procedure</th>
+<th>Actionable role required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>403</strong></td>
+<td>"You do not have permission to perform this action"</td>
+<td>1. Confirm your current user role.<br>2. Contact an administrator to request the specific Django permission codename (e.g. <code>trade.add_invoice</code>).<br>3. Log out and log back in to refresh permissions.</td>
+<td><code>staff</code> $\rightarrow$ <code>admin</code></td>
+</tr>
+<tr>
+<td><strong>404</strong></td>
+<td>"The page or record could not be found"</td>
+<td>1. Verify the record ID in the URL bar.<br>2. Open the module overview list (e.g., <strong>Trade → Invoices</strong>) and search for the record.<br>3. Check <strong>Audit Log</strong> to verify if another user deleted the record.</td>
+<td><code>staff</code> / <code>accountant</code> / <code>hr</code></td>
+</tr>
+<tr>
+<td><strong>500</strong></td>
+<td>"An unexpected server error occurred"</td>
+<td>1. Do NOT resubmit the form repeatedly.<br>2. Refresh the browser once to test if the connection recovers.<br>3. Open <strong>Audit Log</strong> or check module list to see if changes were partially saved.<br>4. Report the exact steps and timestamp to an administrator.</td>
+<td><code>staff</code> $\rightarrow$ <code>admin</code></td>
+</tr>
+<tr>
+<td><strong>503</strong></td>
+<td>"System is currently under maintenance"</td>
+<td>1. Wait for maintenance to finish (typically 10-15 minutes).<br>2. Superusers can sign in via <code>/admin/</code> to toggle <strong>Maintenance Mode</strong> off in <strong>App Settings</strong>.</td>
+<td><code>staff</code> $\rightarrow$ <code>admin</code></td>
 </tr>
 </tbody>
 </table>
 <hr>
-<h2 id="tips-and-common-issues">Tips and common issues<a class="headerlink" href="#tips-and-common-issues" title="Permanent link">¶</a></h2>
-<ul>
-<li>Check the exact error code before giving support advice.</li>
-<li>Confirm the user is logged in before treating a 403 as a system problem.</li>
-<li>Use the audit log if the missing page is tied to a record change.</li>
-</ul>
-<hr>
 <h2 id="related-pages">Related pages<a class="headerlink" href="#related-pages" title="Permanent link">¶</a></h2>
 <ul>
-<li><a href="offline-mode.html">Offline Mode</a></li>
-<li><a href="../08-settings-and-admin/audit-log.html">Audit Log</a></li>
+<li><strong><a href="permissions.html">Permissions Guide</a></strong> — Detailed mapping of roles and Django permission codenames.</li>
+<li><strong><a href="troubleshooting.html">Troubleshooting Guide</a></strong> — Self-service resolution steps for common operational issues.</li>
+<li><strong><a href="../08-settings-and-admin/audit-log.html">Audit Log Guide</a></strong> — Inspect audit logs to track user actions and system errors.</li>
 </ul>
 
 
@@ -5726,7 +5825,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 00:44:11 UTC">July 26, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 02:39:15 UTC">July 26, 2026</span>
   </span>
 
     
