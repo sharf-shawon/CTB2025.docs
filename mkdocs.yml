@@ -11,6 +11,40 @@ plugins:
       enabled: !ENV [SOCIAL_CARDS, true]
   - meta
   - search
+  # Controlled vocabulary. tags_allowed makes Material reject any tag outside
+  # the taxonomy; scripts/style_lint.py enforces the same list at author time.
+  - tags:
+      tags_hierarchy: true
+      tags_hierarchy_separator: ":"
+      tags_allowed:
+        - module:getting-started
+        - module:business
+        - module:factory
+        - module:trade
+        - module:employee
+        - module:returns
+        - module:commission
+        - module:reports
+        - module:settings
+        - module:reference
+        - task:create
+        - task:edit
+        - task:view
+        - task:report
+        - task:configure
+        - task:troubleshoot
+        - role:staff
+        - role:accountant
+        - role:hr
+        - role:admin
+  # Surfaces "Last updated" on every page. Needs a full clone
+  # (actions/checkout with fetch-depth: 0) for the dates to be correct.
+  - git-revision-date-localized:
+      type: date
+      enable_creation_date: true
+      fallback_to_build_date: true
+  - redirects:
+      redirect_maps: {}
   - google-translate
   - image-gallery:
       image_folder: "./gallery/"
@@ -40,7 +74,15 @@ theme:
   features:
     - navigation.instant
     - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
     - content.code.copy
+    - content.tooltips
 
 extra_css:
   - stylesheets/ctb-theme.css
@@ -252,3 +294,4 @@ nav:
       - Dashboard: categories/dashboard.md
       - Mobile: categories/mobile.md
       - Reports: categories/reports.md
+  - Browse by Tag: tags.md

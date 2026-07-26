@@ -97,7 +97,9 @@ def convert_file(path: Path) -> dict[str, int]:
                 open_fence, close_fence = fenced
                 out.append(TIPS_HEADING)
                 out.append("")
-                out.extend(_dedent(line) for line in lines[open_fence + 1 : close_fence])
+                out.extend(
+                    _dedent(line) for line in lines[open_fence + 1 : close_fence]
+                )
                 stats["tips_to_heading"] += 1
                 stats["unfenced"] += 1
                 i = close_fence + 1
@@ -144,7 +146,10 @@ def convert_file(path: Path) -> dict[str, int]:
 
 def main() -> int:
     if not DOCS_ROOT.is_dir():
-        print(f"error: run from the repository root ({DOCS_ROOT} not found)", file=sys.stderr)
+        print(
+            f"error: run from the repository root ({DOCS_ROOT} not found)",
+            file=sys.stderr,
+        )
         return 1
 
     totals = {"indented": 0, "tips_to_heading": 0, "unfenced": 0, "type_normalised": 0}
