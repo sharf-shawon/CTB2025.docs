@@ -4822,10 +4822,32 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#step-by-step-instructions" class="md-nav__link">
     <span class="md-ellipsis">
       
         Step-by-step instructions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification-definition-of-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification &amp; definition of done
       
     </span>
   </a>
@@ -4845,32 +4867,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#account-information" class="md-nav__link">
+  <a href="#django-permission-codename-reference" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Account information
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#password-requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Password requirements
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#permissions-section" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Permissions section
+        Django permission codename reference
       
     </span>
   </a>
@@ -4883,10 +4883,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#saving-the-user" class="md-nav__link">
+  <a href="#exception-handling-error-recovery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Saving the user
+        Exception handling &amp; error recovery
       
     </span>
   </a>
@@ -4894,10 +4894,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tips-and-common-issues" class="md-nav__link">
+  <a href="#related-workflows-next-steps" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tips and common issues
+        Related workflows &amp; next steps
       
     </span>
   </a>
@@ -5565,10 +5565,32 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#step-by-step-instructions" class="md-nav__link">
     <span class="md-ellipsis">
       
         Step-by-step instructions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification-definition-of-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification &amp; definition of done
       
     </span>
   </a>
@@ -5588,32 +5610,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#account-information" class="md-nav__link">
+  <a href="#django-permission-codename-reference" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Account information
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#password-requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Password requirements
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#permissions-section" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Permissions section
+        Django permission codename reference
       
     </span>
   </a>
@@ -5626,10 +5626,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#saving-the-user" class="md-nav__link">
+  <a href="#exception-handling-error-recovery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Saving the user
+        Exception handling &amp; error recovery
       
     </span>
   </a>
@@ -5637,10 +5637,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tips-and-common-issues" class="md-nav__link">
+  <a href="#related-workflows-next-steps" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tips and common issues
+        Related workflows &amp; next steps
       
     </span>
   </a>
@@ -5701,137 +5701,127 @@
 
 
 <h1 id="user-management">User Management<a class="headerlink" href="#user-management" title="Permanent link">¶</a></h1>
-<p>Use this page to create a new user account in CTB Admin. A user account provides login credentials and permission controls that determine what modules and actions each staff member can access.</p>
 <h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
-<p>Create a complete user profile with valid credentials and appropriate permissions before the user can access CTB Admin. Proper setup ensures each staff member can only perform approved tasks.</p>
+<p>The User Management page allows administrators to create, edit, deactivate, and assign role-based access permissions (<code>auth.user</code>) to staff accounts in CTB Admin. Access controls dictate which modules, views, and form actions each user is authorized to perform.</p>
 <hr>
 <h2 id="when-to-use-this-page">When to use this page<a class="headerlink" href="#when-to-use-this-page" title="Permanent link">¶</a></h2>
 <ul>
-<li>Onboarding a new employee who needs CTB Admin access</li>
-<li>Creating admin accounts with elevated permissions</li>
-<li>Setting up department-specific user accounts with limited access</li>
+<li>Onboarding new employees who require system access to CTB Admin.</li>
+<li>Provisioning department-specific staff accounts with restricted module access.</li>
+<li>Assigning elevate superuser or staff status flags.</li>
+<li>Deactivating user accounts when an employee offboards or changes roles.</li>
 </ul>
 <hr>
 <h2 id="how-to-access-this-page">How to access this page<a class="headerlink" href="#how-to-access-this-page" title="Permanent link">¶</a></h2>
-<p>From the sidebar, go to <strong>Settings and Admin → User Management</strong>. On the Users list page, click the <strong>purple (+) icon</strong> in the top-right corner.</p>
+<p>From the sidebar navigation, select <strong>Authentication → Users</strong> (<code>/admin/auth/user/</code>).</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="user-list-page.png" data-desc-position="bottom"><img alt="User List Page" src="user-list-page.png"></a></p>
-<p>The system opens the <strong>Add User Page</strong>.</p>
+<hr>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">¶</a></h2>
+<ul>
+<li>Active user session with <code>auth.add_user</code> / <code>auth.change_user</code> or superuser privileges.</li>
+<li>Standard employee profile details established in <strong>Employee → Employees</strong>.</li>
+</ul>
 <hr>
 <h2 id="step-by-step-instructions">Step-by-step instructions<a class="headerlink" href="#step-by-step-instructions" title="Permanent link">¶</a></h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="add-user.png" data-desc-position="bottom"><img alt="Add User Form" src="add-user.png"></a></p>
 <ol>
-<li>Open <strong>User Management</strong> from the <strong>Settings and Admin</strong> section of the sidebar.</li>
-<li>Complete the <strong>Account information</strong> section described below.</li>
-<li>Complete the <strong>Password requirements</strong> section described below.</li>
-<li>Complete the <strong>Permissions section</strong> section described below.</li>
-<li>Follow <strong>Saving the user</strong> below to finish.</li>
+<li>Open <strong>Authentication → Users</strong> from the sidebar and click <strong>Add User (+)</strong>.</li>
+<li>Enter a unique <strong>Username</strong> and secure <strong>Password</strong> meeting complex strength rules.</li>
+<li>Re-enter the password in <strong>Password Confirmation</strong> and click <strong>Save and continue editing</strong>.</li>
+<li>In the <strong>Permissions</strong> section, toggle <strong>Staff status</strong> (<code>is_staff = True</code>) to grant admin UI login access.</li>
+<li>Select target <strong>Groups</strong> or assign specific module permission codenames (e.g. <code>trade.add_invoice</code>, <code>employee.change_salary</code>).</li>
+<li>Click <strong>Save</strong> to finalize user account creation.</li>
 </ol>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="user-permission-page.png" data-desc-position="bottom"><img alt="Permissions Section" src="user-permission-page.png"></a></p>
+<hr>
+<h2 id="verification-definition-of-done">Verification &amp; definition of done<a class="headerlink" href="#verification-definition-of-done" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>Account provisioned</strong>: User account appears in the user list and can successfully authenticate.</li>
+<li><strong>Access restricted</strong>: User interface displays only authorized sidebar navigation links and action buttons based on assigned permission codenames.</li>
+</ul>
 <hr>
 <h2 id="field-reference">Field reference<a class="headerlink" href="#field-reference" title="Permanent link">¶</a></h2>
-<h3 id="account-information">Account information<a class="headerlink" href="#account-information" title="Permanent link">¶</a></h3>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="add-user.png" data-desc-position="bottom"><img alt="Add User Form" src="add-user.png"></a></p>
-<p>Fill in the following fields:</p>
+<ul>
+<li><strong>Username</strong> — Unique account identifier used for login authentication.</li>
+<li><strong>Is Active</strong> — Account status switch (<code>True</code> enables login; <code>False</code> disables access).</li>
+<li><strong>Staff Status (<code>is_staff</code>)</strong> — Grants access to the CTB Admin web application.</li>
+<li><strong>Superuser (<code>is_superuser</code>)</strong> — Bypasses all explicit permission checks and grants unrestricted global access.</li>
+<li><strong>Permissions</strong> — Multi-select list of Django permission codenames (<code>app.action_model</code>).</li>
+</ul>
+<h3 id="django-permission-codename-reference">Django permission codename reference<a class="headerlink" href="#django-permission-codename-reference" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
-<th>Field</th>
-<th>What to Do</th>
-<th>Description</th>
+<th>Module</th>
+<th>Codename Pattern</th>
+<th>Example Permission</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Username</td>
-<td>Enter a unique name</td>
-<td>Used for login; must be unique across the system</td>
+<td><strong>Trade</strong></td>
+<td><code>trade.&lt;action&gt;_&lt;model&gt;</code></td>
+<td><code>trade.add_invoice</code>, <code>trade.change_payment</code></td>
 </tr>
 <tr>
-<td>Is Active</td>
-<td>Toggle ON/OFF</td>
-<td>Controls whether the account is immediately usable</td>
+<td><strong>Business</strong></td>
+<td><code>business.&lt;action&gt;_&lt;model&gt;</code></td>
+<td><code>business.add_client</code>, <code>business.change_vendor</code></td>
 </tr>
 <tr>
-<td>Password-based authentication</td>
-<td>Enable or disable</td>
-<td>Determines if the user logs in with username and password</td>
+<td><strong>Employee</strong></td>
+<td><code>employee.&lt;action&gt;_&lt;model&gt;</code></td>
+<td><code>employee.add_attendance</code>, <code>employee.change_salary</code></td>
 </tr>
 <tr>
-<td>Password</td>
-<td>Enter a valid password</td>
-<td>See password requirements below</td>
-</tr>
-<tr>
-<td>Password confirmation</td>
-<td>Re-enter the password</td>
-<td>Must match the password field exactly</td>
+<td><strong>Factory</strong></td>
+<td><code>factory.&lt;action&gt;_&lt;model&gt;</code></td>
+<td><code>factory.add_product</code>, <code>factory.change_material</code></td>
 </tr>
 </tbody>
 </table>
-<div class="admonition warning">
-<p class="admonition-title">Required Fields</p>
-<p>Fields marked with a <strong>red star (*)</strong> are mandatory.</p>
-</div>
-<h3 id="password-requirements">Password requirements<a class="headerlink" href="#password-requirements" title="Permanent link">¶</a></h3>
-<p>When creating a password, the system enforces the following rules:</p>
-<ul>
-<li><strong>Minimum 8 characters</strong> — Password must be at least 8 characters long</li>
-<li><strong>Cannot match username</strong> — Password cannot be identical to the username</li>
-<li><strong>Cannot be all numeric</strong> — Password must contain at least one letter or special character</li>
-</ul>
-<div class="admonition tip">
-<p class="admonition-title">Password Best Practices</p>
-<p>Use a mix of uppercase, lowercase, numbers, and special characters for stronger security.</p>
-</div>
-<h3 id="permissions-section">Permissions section<a class="headerlink" href="#permissions-section" title="Permanent link">¶</a></h3>
-<p>After clicking <strong>Save and continue editing</strong>, the system displays the <strong>Permissions</strong> section where you can control access levels.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="user-permission-page.png" data-desc-position="bottom"><img alt="Permissions Section" src="user-permission-page.png"></a></p>
+<hr>
+<h2 id="exception-handling-error-recovery">Exception handling &amp; error recovery<a class="headerlink" href="#exception-handling-error-recovery" title="Permanent link">¶</a></h2>
 <table>
 <thead>
 <tr>
-<th>Option</th>
-<th>Description</th>
+<th>Error Code / Symptom</th>
+<th>Root Cause</th>
+<th>Step-by-step remediation procedure</th>
+<th>Actionable role required</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Staff status</td>
-<td>Grants access to the CTB Admin interface (must be enabled for most users)</td>
+<td>Account created but cannot log in</td>
+<td><code>Staff status</code> (<code>is_staff</code>) or <code>Is Active</code> disabled</td>
+<td>1. Open user profile under <strong>Authentication → Users</strong>.<br>2. Enable <strong>Staff status</strong> and <strong>Is Active</strong> switches.<br>3. Save profile.</td>
+<td><code>admin</code></td>
 </tr>
 <tr>
-<td>Superuser / is_superuser</td>
-<td>Admin-level access to all modules and settings (use carefully)</td>
+<td>Permission changes not visible</td>
+<td>Active user session caching old permission state</td>
+<td>1. Instruct user to click <strong>Log Out</strong> in top navbar.<br>2. Sign back in to generate a fresh permission session token.</td>
+<td><code>staff</code> $\rightarrow$ <code>admin</code></td>
 </tr>
 <tr>
-<td>Module-specific permissions</td>
-<td>Fine-grained controls for individual modules (Business, Factory, Trade, Employee, etc.)</td>
-</tr>
-<tr>
-<td>Action-level permissions</td>
-<td>Controls specific actions like Add, Change, Delete within each module</td>
+<td>Password validation failure</td>
+<td>Password under 8 characters, matches username, or purely numeric</td>
+<td>1. Enter password with at least 8 characters.<br>2. Include mixed alphanumeric and special characters.</td>
+<td><code>admin</code></td>
 </tr>
 </tbody>
 </table>
-<p>Assign the minimum required permissions for the user's role.</p>
 <hr>
-<h2 id="saving-the-user">Saving the user<a class="headerlink" href="#saving-the-user" title="Permanent link">¶</a></h2>
-<p>After completing account information:</p>
+<h2 id="related-workflows-next-steps">Related workflows &amp; next steps<a class="headerlink" href="#related-workflows-next-steps" title="Permanent link">¶</a></h2>
 <ul>
-<li>Click <strong>Save</strong> to create the user account</li>
-<li>Click <strong>Save and continue editing</strong> to save and assign permissions on the same page</li>
-</ul>
-<hr>
-<h2 id="tips-and-common-issues">Tips and common issues<a class="headerlink" href="#tips-and-common-issues" title="Permanent link">¶</a></h2>
-<ul>
-<li><strong>Password rejected?</strong> Ensure it is 8+ characters, differs from the username, and includes at least one non-numeric character.</li>
-<li><strong>Grant minimum required access first</strong> — expand permissions only if the user needs additional tasks.</li>
-<li><strong>User cannot log in after creation?</strong> Verify that <strong>Is Active</strong> and <strong>Staff status</strong> are both enabled.</li>
-<li><strong>Permissions not taking effect?</strong> Ask the user to sign out completely and sign back in.</li>
-<li><a href="app-settings.html">App Settings</a></li>
-<li><a href="maintenance-mode.html">Maintenance Mode</a></li>
+<li><strong><a href="app-settings.html">App Settings</a></strong> — Configure global system parameters and security controls.</li>
+<li><strong><a href="audit-log.html">Audit Log</a></strong> — Monitor user authentication logs and administrative edits.</li>
 </ul>
 <hr>
 <h2 id="related-pages">Related pages<a class="headerlink" href="#related-pages" title="Permanent link">¶</a></h2>
 <ul>
-<li><strong><a href="../index.html">Settings and Admin</a></strong> — All pages in this module.</li>
+<li><strong><a href="../index.html">Settings and Admin</a></strong> — All system configuration and security administration tools.</li>
 </ul>
 
 
@@ -5855,7 +5845,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 00:44:11 UTC">July 26, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 03:13:55 UTC">July 26, 2026</span>
   </span>
 
     
