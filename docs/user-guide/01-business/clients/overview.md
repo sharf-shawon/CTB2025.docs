@@ -1,15 +1,18 @@
+---
+tags: [module:business, task:view, role:staff]
+---
+
 # Clients Overview
 
-The **Clients** module manages all customer and business-partner records in CTB Admin. A client is any individual or organization to whom the company sends invoices or places orders. This page displays all registered clients and their financial balances, allowing you to quickly search, filter, and manage client information.
+## Summary
 
-## What you can do in this module
+The **Clients** module manages all client and business-partner records in CTB Admin. A client is any individual or organization to whom the company sends invoices or places orders. This page displays all registered clients and their financial balances, allowing you to quickly search, filter, and manage client information.
 
-- **Register new clients** — create client records with contact details, business information, and NID documentation.
-- **Manage active status** — enable or disable clients to control whether they appear in new invoice and order dropdowns.
-- **Configure financial limits** — set upper and lower balance limits and maximum discount rates per client.
-- **Control SMS notifications** — choose which clients receive automated invoice SMS messages.
-- **View client history** — access all past invoices, payments, and balance changes from the Client Detail page.
-- **Analyze client data** — use the Client Reports page for financial summaries and trends.
+______________________________________________________________________
+
+## When to use this page
+
+- When you need to work with clients overview in CTB Admin.
 
 ______________________________________________________________________
 
@@ -21,7 +24,19 @@ The system opens the **Clients List** page where all registered clients are disp
 
 ______________________________________________________________________
 
-## List Page Columns and Fields
+## Step-by-step instructions
+
+1. Open **Clients Overview** from the **Business** section of the sidebar.
+1. Complete the **List page columns and fields** section described below.
+1. Complete the **Search and filter** section described below.
+1. Complete the **List actions** section described below.
+1. Review the values you entered, then save the record.
+
+______________________________________________________________________
+
+## Field reference
+
+### List page columns and fields
 
 ![Client List Page](client-overview-list-page.png)
 
@@ -38,19 +53,15 @@ The Clients list displays the following information for each client:
 | **Balance**         | Current account balance (positive = client owes; negative = credit owed to client) |
 | **Status**          | Client status (Active, Inactive, or other status indicators)                       |
 
-______________________________________________________________________
-
-## Search and Filter
+### Search and filter
 
 Use the search and filter options to quickly locate specific clients:
 
 - **Search box** — Type to search by client name, business name, phone, or SKU
 - **Filters** — Click **Filters** to narrow results by status, balance range, or date range
-- **Calendar picker** — Click the date arrows to navigate to a specific date
+- **Calendar picker** — Click the date arrows to move to a specific date
 
-______________________________________________________________________
-
-## List Actions
+### List actions
 
 From the Clients List page:
 
@@ -60,7 +71,18 @@ From the Clients List page:
 
 ______________________________________________________________________
 
-!!!Tips and Common Issues
+## What you can do in this module
+
+- **Register new clients** — create client records with contact details, business information, and NID documentation.
+- **Manage active status** — enable or disable clients to control whether they appear in new invoice and order dropdowns.
+- **Configure financial limits** — set upper and lower balance limits and maximum discount rates per client.
+- **Control SMS notifications** — choose which clients receive automated invoice SMS messages.
+- **View client history** — access all past invoices, payments, and balance changes from the Client Detail page.
+- **Analyze client data** — use the Client Reports page for financial summaries and trends.
+
+______________________________________________________________________
+
+## Tips and common issues
 
 - **Balance convention** — Positive amounts (e.g., +50,000tk) mean the client owes the company; negative amounts mean you owe credit to the client
 - **Search by name first** — Use the search box to quickly find a client without scrolling the full list
@@ -72,7 +94,7 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## Related Pages
+## Related pages
 
 - **Add Client** — Create a new client record
 - **Client Detail** — View full information and transaction history for a specific client

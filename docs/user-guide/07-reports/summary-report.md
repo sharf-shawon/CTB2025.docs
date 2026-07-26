@@ -1,8 +1,14 @@
+---
+tags: [module:reports, task:report, role:accountant]
+---
+
 # Summary Report
 
 ## Summary
 
 Use this page to review a combined report of invoices, tender invoices, payments, vouchers, purchase balance, and checks.
+
+______________________________________________________________________
 
 ## When to use this page
 
@@ -11,14 +17,20 @@ Use this page to review a combined report of invoices, tender invoices, payments
 - When you need an overview of vouchers, purchase balance, and checks together.
 - When you want to review current sales and payment status.
 
+______________________________________________________________________
+
 ## How to access this page
 
 Open **Reports → Summary** in the sidebar.
+
+______________________________________________________________________
 
 ## Prerequisites
 
 - Permission to view reports.
 - Existing invoices, tender invoices, payments, vouchers, checks, or purchase balance records.
+
+______________________________________________________________________
 
 ## Step-by-step instructions
 
@@ -29,7 +41,11 @@ Open **Reports → Summary** in the sidebar.
 1. Review the totals for each report section.
 1. Use **Previous** and **Next** only when a section has multiple pages.
 
-## Common controls
+______________________________________________________________________
+
+## Field reference
+
+### Common controls
 
 - **From** — Start date for the report.
 - **To** — End date for the report.
@@ -40,13 +56,13 @@ Open **Reports → Summary** in the sidebar.
 
 ![Summary report page](summary-img.png)
 
-## Report sections
+### Report sections
 
 ### Invoices
 
 Use this section to review regular invoices for clients.
 
-- **Client** — Customer name for the invoice.
+- **Client** — Client name for the invoice.
 - **Invoice #** — Invoice identifier.
 - **Date** — Invoice date.
 - **Products** — Products sold in the invoice.
@@ -60,7 +76,7 @@ Use this section to review regular invoices for clients.
 
 Use this section to review tender invoices separately from regular invoices.
 
-- **Client** — Customer name for the tender invoice.
+- **Client** — Client name for the tender invoice.
 - **Invoice #** — Tender invoice identifier.
 - **Date** — Tender invoice date.
 - **Products** — Products sold in the tender invoice.
@@ -108,7 +124,7 @@ Use this section to review tender payments.
 
 Use this section to review voucher records and their payment details.
 
-- **Vendor** — Supplier name.
+- **Vendor** — Vendor name.
 - **Voucher SKU** — Voucher identifier.
 - **Date** — Voucher date.
 - **Reference** — Voucher reference number.
@@ -119,7 +135,7 @@ Use this section to review voucher records and their payment details.
 - **Pending Balance** — Remaining amount due.
 - **Balance** — Final voucher balance.
 
-### Purchase Balance
+### Purchase balance
 
 Use this section to review employee purchase balance records.
 
@@ -130,7 +146,7 @@ Use this section to review employee purchase balance records.
 - **Expenses** — Expense amount.
 - **Remaining** — Remaining balance.
 
-### Checks (Pending & Bounced)
+### Checks (pending & bounced)
 
 Use this section to review pending or bounced checks.
 
@@ -144,7 +160,7 @@ Use this section to review pending or bounced checks.
 - **Check Balance** — Balance on the check.
 - **Status** — Check status.
 
-### Tender Checks (Pending & Bounced)
+### Tender Checks (pending & bounced)
 
 Use this section to review tender checks.
 
@@ -157,6 +173,8 @@ Use this section to review tender checks.
 - **Bank** — Bank name.
 - **Check Balance** — Balance on the tender check.
 - **Status** — Tender check status.
+
+______________________________________________________________________
 
 ## Related pages
 

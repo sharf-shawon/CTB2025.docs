@@ -1,8 +1,12 @@
+---
+tags: [module:trade, task:view, role:accountant]
+---
+
 # Bank Detail
 
-**Summary**
+## Summary
 
-Use the Bank Detail page to review and manage a single bank account in CTB Admin. This page displays all key information about the bank, including balance, limits, branch details, and account status. You can confirm if the account is ready for checks, vouchers, or payment reconciliation.
+**Summary**
 
 ______________________________________________________________________
 
@@ -17,7 +21,7 @@ ______________________________________________________________________
 
 ## How to access this page
 
-From the sidebar, go to **Trade Management → Banks**. On the Banks List page, click any bank SKU or name to open the Bank Detail page.
+From the sidebar, go to **Trade → Banks**. On the Banks List page, click any bank SKU or name to open the Bank Detail page.
 
 ![Banks List Page](bank-detail-list-page.png)
 
@@ -25,7 +29,7 @@ ______________________________________________________________________
 
 ## Step-by-step instructions
 
-1. From the sidebar, select **Banks** under Trade Management.
+1. From the sidebar, select **Banks** under Trade.
 1. On the Banks List page, find the bank you want to review.
 1. Click the bank’s SKU or name (see the screenshot above).
 1. The Bank Detail page opens, showing all account information.
@@ -64,7 +68,8 @@ Before deleting a bank, the system checks whether the account is linked to any e
 | Bank has no linked records and user has permission | Permitted        |
 
 !!! warning "Permission Required"
-Even if the bank has no linked records, only users with the appropriate delete permission can remove a bank account. If your account lacks this permission, the system will display an error listing the object types you are not allowed to delete.
+
+    Even if the bank has no linked records, only users with the appropriate delete permission can remove a bank account. If your account lacks this permission, the system will display an error listing the object types you are not allowed to delete.
 
 **To delete a bank:**
 
@@ -76,7 +81,10 @@ Even if the bank has no linked records, only users with the appropriate delete p
 The bank record is permanently removed from the system.
 
 !!! tip "Cannot delete the bank?"
-If the system shows a permission error, contact your system administrator to request delete access or to have the linked records removed first. To take the bank out of active use without deleting it, toggle **Is Enabled** to off and save.
+
+    If the system shows a permission error, contact your system administrator to request delete access or to have the linked records removed first. To take the bank out of active use without deleting it, toggle **Is Enabled** to off and save.
+
+______________________________________________________________________
 
 ## Tips and common issues
 

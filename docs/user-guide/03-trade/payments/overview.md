@@ -1,6 +1,57 @@
+---
+tags: [module:trade, task:view, role:accountant]
+---
+
 # Payments Overview
 
+## Summary
+
 The **Payments** module in CTB Admin records all incoming and outgoing financial transactions. A payment represents money received from a client for an invoice, money sent to a vendor for purchases, or payments made using bank checks. Each payment record tracks the transaction date, amount, status, and links to the client, vendor, or check involved. Payment records update client and vendor balances automatically and enable accurate bank reconciliation.
+
+______________________________________________________________________
+
+## When to use this page
+
+- When you need to work with payments overview in CTB Admin.
+
+______________________________________________________________________
+
+## How to access this page
+
+From the sidebar, go to **Trade**, then open **Payments Overview**.
+
+______________________________________________________________________
+
+## Step-by-step instructions
+
+1. Open **Payments Overview** from the **Trade** section of the sidebar.
+1. Complete the **Module structure** section described below.
+1. Complete the **Related modules** section described below.
+1. Review the values you entered, then save the record.
+
+______________________________________________________________________
+
+## Field reference
+
+### Module structure
+
+| Page           | Purpose                                                                |
+| -------------- | ---------------------------------------------------------------------- |
+| Overview       | This page. Module summary and navigation guide.                        |
+| Payments List  | View all payments with filters, search, and bulk actions.              |
+| Add Payment    | Create a new payment record and link it to a client, vendor, or check. |
+| Edit Payment   | Update payment details (if status permits).                            |
+| Payment Detail | View a payment's full record, status, notes, and transaction history.  |
+
+### Related modules
+
+- **Business → Clients** — Client records maintain opening balances that payments update.
+- **Business → Vendors** — Vendor records maintain payable amounts that payments reduce.
+- **Trade → Invoices** — Payments are recorded against invoices to mark them as paid.
+- **Trade → Checks** — Bank checks can be linked to payments to track check usage and reduce check balances.
+- **Trade → Banks** — Bank records are used for reconciliation and tracking account balances.
+
+______________________________________________________________________
 
 ## What you can do in this module
 
@@ -17,18 +68,6 @@ The **Payments** module in CTB Admin records all incoming and outgoing financial
 
 ______________________________________________________________________
 
-## Module structure
-
-| Page           | Purpose                                                                |
-| -------------- | ---------------------------------------------------------------------- |
-| Overview       | This page. Module summary and navigation guide.                        |
-| Payments List  | View all payments with filters, search, and bulk actions.              |
-| Add Payment    | Create a new payment record and link it to a client, vendor, or check. |
-| Edit Payment   | Update payment details (if status permits).                            |
-| Payment Detail | View a payment's full record, status, notes, and transaction history.  |
-
-______________________________________________________________________
-
 ## Typical workflow
 
 1. **Add** a new payment when you receive money from a client or send money to a vendor.
@@ -39,10 +78,6 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## Related modules
+## Related pages
 
-- **Business → Clients** — Client records maintain opening balances that payments update.
-- **Business → Vendors** — Vendor records maintain payable amounts that payments reduce.
-- **Trade → Invoices** — Payments are recorded against invoices to mark them as paid.
-- **Trade → Checks** — Bank checks can be linked to payments to track check usage and reduce check balances.
-- **Trade → Banks** — Bank records are used for reconciliation and tracking account balances.
+- **[Trade](../../README.md)** — All pages in this module.

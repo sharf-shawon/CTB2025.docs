@@ -22,3 +22,17 @@ repos:
         additional_dependencies:
           - mdformat-gfm
           - mdformat-frontmatter
+          # Required. Without it mdformat strips the 4-space indent from
+          # MkDocs admonition bodies, which silently closes the admonition and
+          # renders an empty callout with loose body text beneath it.
+          - mdformat-mkdocs
+
+  - repo: local
+    hooks:
+      - id: style-lint
+        name: CTB docs style spec
+        description: Enforces .github/STYLE_SPEC.md (structure, headings, terminology, voice)
+        entry: python3 scripts/style_lint.py
+        language: system
+        pass_filenames: false
+        files: ^(docs/user-guide/.*\.md|scripts/style_lint.*)$

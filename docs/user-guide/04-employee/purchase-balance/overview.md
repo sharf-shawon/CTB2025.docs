@@ -1,77 +1,84 @@
+---
+tags: [module:employee, task:view, role:hr]
+---
+
 # Purchase Balances Overview
 
-The **Purchase Balances** module tracks financial transactions and balances between the company and its employees. A purchase balance records advances, loans, or purchases made by employees on company account. Use this page to view all employee purchase balances, add new entries, and manage outstanding obligations.
+<!-- metadata: owner: hr, last_updated: 2026-07-26, git_ref: main, staging_verified: true -->
 
-## What you can do in this module
+## Summary
 
-- **Record employee advances or loans** — create new purchase balance entries when money is given to or owed by an employee.
-- **Adjust existing balances** — update or correct employee balance records as payments are made or adjustments occur.
-- **Search and filter balances** — quickly find specific employees or date ranges using the search and filter tools.
-- **View balance details** — access complete information about each purchase balance entry including notes and creation information.
-- **Track payment status** — monitor which balances have been settled or remain outstanding.
+Use the **Purchase Balances Overview** page to track and audit financial transactions between the company and employees in CTB Admin. The listing provides a real-time record of staff advance balances, loan ledgers, and purchase adjustments.
+
+______________________________________________________________________
+
+## When to use this page
+
+- Auditing employee advances, credit purchases, and loan balances
+- Searching for specific staff purchase ledgers by employee name or SKU
+- Filtering purchase balances by transaction date range
+- Accessing new purchase balance creation forms
 
 ______________________________________________________________________
 
 ## How to access this page
 
-From the sidebar, go to **Employee Management → Purchase Balances**.
+From the sidebar navigation, select **Employee → Purchase Balances** (`/admin/employee/employeepurchasebalance/`).
+
+______________________________________________________________________
+
+## Prerequisites
+
+- **Permissions:** `employee.view_employeepurchasebalance` permission codename (HR, Accountant, Manager, or Superuser role).
+- **Active Records:** Active **Employee** profiles.
+
+______________________________________________________________________
+
+## Step-by-step instructions
+
+1. Open **Purchase Balances** from the **Employee** section of the sidebar.
+1. Review the list of recorded purchase balances and amounts.
+1. Use the search bar to locate records by employee name or SKU.
+1. Click **Filters** to narrow results by transaction date range or amount.
+1. Click **Add Purchase Balance (+)** to record a new transaction.
+
+______________________________________________________________________
+
+## Verification and definition of done
+
+- Master list correctly displays purchase balance vouchers with accurate amount direction indicators.
+- Filter criteria isolate transactions by specified date range and employee.
+
+______________________________________________________________________
+
+## Field reference
+
+### Table summary
 
 ![Purchase Balance List](purchase-balance-overview.png)
 
-The system opens the **Purchase Balances List** page where all recorded balances are displayed.
+| Column     | Required | What to Do  | Description                                                         |
+| ---------- | -------- | ----------- | ------------------------------------------------------------------- |
+| SKU        | No       | View value  | Unique purchase balance tracking code (e.g., `PCB#0001`)            |
+| Date       | Yes      | View date   | Transaction date                                                    |
+| Employee   | Yes      | Click link  | Employee name and ID                                                |
+| Amount     | Yes      | View amount | Balance amount (positive = owed by staff; negative = owed to staff) |
+| Notes      | No       | View text   | Internal explanation or memo                                        |
+| Created By | No       | View user   | Username of user who recorded entry                                 |
 
 ______________________________________________________________________
 
-## List Page Columns and Fields
+## Exception handling and error recovery
 
-The Purchase Balances list displays the following information for each entry:
-
-| Column         | Description                                                                   |
-| -------------- | ----------------------------------------------------------------------------- |
-| **SKU**        | System-generated unique identifier for this purchase balance (e.g., PCB#0001) |
-| **Date**       | Date the purchase balance was recorded or adjusted                            |
-| **Employee**   | Name and ID of the employee associated with this balance                      |
-| **Amount**     | The balance amount (positive = owed by employee; negative = owed to employee) |
-| **Notes**      | Internal notes or reason for the balance entry                                |
-| **Created By** | Username of the admin or manager who created this record                      |
+| Symptom / Error Message           | Root Cause                                    | Remediation Action                                                                       |
+| --------------------------------- | --------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| Expected purchase balance missing | Active date filter excluding transaction date | Click **Filters** and widen or reset date range                                          |
+| Balance direction reversed        | Incorrect positive/negative sign entered      | Edit record under [Add Purchase Balance](add-purchase-balance.md) to correct amount sign |
 
 ______________________________________________________________________
 
-## Search and Filter
+## Related pages
 
-Use the search and filter options to quickly locate specific purchase balances:
-
-- **Search box** — Type to search by employee name, SKU, or notes
-- **Filters** — Click **Filters** to narrow results by date range, employee, or amount
-- **Calendar picker** — Click the date arrows to navigate to a specific date
-
-______________________________________________________________________
-
-## List Actions
-
-From the Purchase Balances List page:
-
-- **Create new balance** — Click the **purple (+) icon** in the top-right corner to add a new purchase balance entry
-- **View details** — Click on any row to open the full details of that purchase balance
-- **Edit or delete** — Open a balance record to edit or delete it (if permitted by your role)
-
-______________________________________________________________________
-
-!!!Tips and Common Issues
-
-- **Amount convention** — Positive amounts (e.g., +10,000tk) mean the employee owes the company; negative amounts mean the company owes the employee
-- **Search by employee name** — Use the search box to quickly find an employee's balance without scrolling
-- **Notes field is useful** — Always add notes explaining why a balance was adjusted (e.g., "Advance for travel" or "Salary deduction")
-- **Date filters help with reporting** — Use date filters when you need balances for a specific payroll period or month
-- **Check before creating duplicates** — Search for an employee first to avoid accidentally creating duplicate balance entries
-- **Integration with payroll** — Purchase balance adjustments may be reflected in employee salary and payout calculations
-
-______________________________________________________________________
-
-## Related Pages
-
-- **Add Purchase Balance** — Create a new purchase balance entry for an employee
-- **Purchase Balance Detail** — View full details and edit a specific purchase balance record
-- **Employees** — Manage employee records linked to purchase balances
-- **Salary Overview** — Track how purchase balances affect salary calculations
-- **Payouts** — View payout records that may be related to purchase balance settlements
+- [Add Purchase Balance](add-purchase-balance.md) — Record a new purchase balance or advance
+- [Employees Overview](../employees/overview.md) — Inspect employee profile purchase ledger
+- [Create Payout](../payouts/create-payout.md) — Process payout settlements

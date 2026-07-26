@@ -39,7 +39,7 @@ jobs:
 
       - name: Checkout repository
         if: steps.audit_guard.outputs.already_audited == 'false'
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
 
@@ -72,8 +72,8 @@ jobs:
               '02-factory': 'Factory',
               '03-trade': 'Trade',
               '04-employee': 'Employee',
-              '05-settings-and-admin': 'Settings and Admin',
-              '06-reference': 'Reference',
+              '08-settings-and-admin': 'Settings and Admin',
+              '09-reference': 'Reference',
             };
 
             const touched = new Set();

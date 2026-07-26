@@ -333,28 +333,6 @@ nav.md-nav--secondary > .md-nav__title + .md-nav__list {
   margin-bottom: 0;
 }
 
-/*
-Fallback for malformed admonitions where body text is not indented in Markdown.
-Material renders the title inside .admonition and the body as the immediate next <p>.
-This reconnects the body visually to create one card.
-*/
-.md-typeset .admonition:has(> .admonition-title:last-child) {
-  margin-bottom: 0;
-  border-bottom: 0;
-  border-radius: var(--ctb-radius-md) var(--ctb-radius-md) 0 0;
-}
-
-.md-typeset .admonition:has(> .admonition-title:last-child) + p {
-  margin-top: 0;
-  margin-bottom: 1em;
-  padding: 0.9rem 1rem 1rem;
-  border: 1px solid var(--ctb-border-soft);
-  border-top: 0;
-  border-radius: 0 0 var(--ctb-radius-md) var(--ctb-radius-md);
-  background: var(--ctb-bg-card);
-  box-shadow: var(--ctb-shadow-sm);
-}
-
 /* Buttons and pagination */
 .md-typeset .md-button {
   border-radius: 999px;

@@ -1,86 +1,81 @@
+---
+tags: [module:employee, task:edit, role:hr]
+---
+
 # Manage Position
 
-Use this page to add or edit a position within your organization. Positions define the job roles or titles held by employees, making it easier to manage responsibilities, reporting structures, and workforce organization.
+<!-- metadata: owner: hr, last_updated: 2026-07-26, git_ref: main, staging_verified: true -->
+
+## Summary
+
+Use this page to add or update a job position in CTB Admin. Positions define specific job titles and roles held by employees (e.g., Cutter, Sewing Operator, Store Keeper).
 
 ______________________________________________________________________
 
-## When to use Manage Position
+## When to use this page
 
-- Creating a new job position for your organization
-- Editing the name, description, or status of an existing position
-- Disabling or enabling a position as business needs change
-- Reviewing audit information for compliance and change tracking
-
-______________________________________________________________________
-
-## How to access Manage Position page
-
-From the sidebar, go to **Employee Management → Positions**. On the Positions List page, click the **purple (+) icon** in the top-right corner to add a new position, or select an existing position to edit.
-
-The system opens the **Manage Position** page.
+- Defining a new job title or position in the company
+- Updating the title name, status, or description of an existing position
+- Deactivating job positions no longer in active use
 
 ______________________________________________________________________
 
-## Position Information
+## How to access this page
+
+From the sidebar navigation, select **Employee → Positions** (`/admin/employee/workposition/`). Click **Add Position (+)** to create a new record, or click an existing position row to edit.
+
+______________________________________________________________________
+
+## Prerequisites
+
+- **Permissions:** `employee.add_workposition` / `employee.change_workposition` permission codenames (HR Manager or System Administrator role).
+- **Active Records:** None.
+
+______________________________________________________________________
+
+## Step-by-step instructions
+
+1. Open **Positions** from the **Employee** section of the sidebar.
+1. Click **Add Position (+)** or select an existing position row.
+1. Enter the **Position Name** and optional **Description**.
+1. Set the **Is Enabled** toggle switch state.
+1. Click **Save** to apply changes.
+
+______________________________________________________________________
+
+## Verification and definition of done
+
+- System confirms: `Work Position "Name" was added/changed successfully.`
+- The position is listed in `/admin/employee/workposition/` and is available in employee profile forms.
+
+______________________________________________________________________
+
+## Field reference
+
+### Position information
 
 ![Manage Position Page](manage-position-page.png)
 
-Fill in the following fields in the Position Information section:
-
-| Field            | What to Do     | Description                                                       |
-| ---------------- | -------------- | ----------------------------------------------------------------- |
-| SKU              | Auto-generated | System-generated unique identifier for the position (read-only)   |
-| Position Name \* | Enter name     | The official title or name of the position (required)             |
-| Description      | Enter text     | Optional details about the position's responsibilities or purpose |
-| Is Enabled       | Toggle on/off  | Set whether the position is active and available for assignment   |
-
-!!! warning "Required Fields"
-Fields marked with a **red star (\*)** are mandatory.
+| Step | Field         | Required | What to Do    | Description                                   |
+| ---- | ------------- | -------- | ------------- | --------------------------------------------- |
+| 1    | SKU           | No       | View value    | System-generated unique identifier code       |
+| 2    | Position Name | Yes      | Enter title   | Official job position title                   |
+| 3    | Description   | No       | Enter text    | Detailed role description and duties          |
+| 4    | Is Enabled    | Yes      | Toggle switch | Controls availability for employee assignment |
 
 ______________________________________________________________________
 
-## Audit Information
+## Exception handling and error recovery
 
-The **Audit Information** section displays system-generated details about who created or last modified the position record. Click the section header to expand it. This section is read-only and helps with compliance and change tracking.
-
-______________________________________________________________________
-
-## Saving the Position
-
-After completing all fields:
-
-- Click **Save** to create or update the position
-- Click **Save and continue editing** to save and remain on the page
-- Click **Save and add another** to save and immediately add a new position
-
-The position will now be available for employee assignment and reporting.
+| Symptom / Error Message                  | Root Cause                                     | Remediation Action                                               |
+| ---------------------------------------- | ---------------------------------------------- | ---------------------------------------------------------------- |
+| `Position with this Name already exists` | Duplicate position title entry                 | Use a distinct job position name or update the existing position |
+| Cannot delete position                   | Active employees are assigned to this position | Reassign active employees to another position before deleting    |
 
 ______________________________________________________________________
 
-## Deleting a Position
+## Related pages
 
-A **Delete Position** button is available at the bottom-left of the page.
-
-!!! warning "Restricted Action"
-A position can only be deleted if no employees are currently assigned to it. If the position is in use, remove the assignment from the relevant employee records first before attempting to delete.
-
-______________________________________________________________________
-
-!!! Tips and Common Issues
-
-```
-- **Position Name is required** — You must enter a unique name before saving <br>
-- **Is Enabled controls availability** — Only enabled positions can be assigned to employees <br>
-- **Use Description for clarity** — Add details to help others understand the role's responsibilities <br>
-- **History button** — Use the **History** button in the top-right corner to review all past changes made to this position record <br>
-- **SKU is auto-generated** — The system assigns a unique SKU on creation; you do not need to enter it manually <br>
-```
-
-______________________________________________________________________
-
-## Related Pages
-
-- **Positions Overview** — View and manage all positions in the system
-- **Employees** — Assign positions to employee profiles
-- **Departments** — Manage the departments positions belong to
-- **Audit Log** — Review all changes made to position records
+- [Positions Overview](overview.md) — View master list of all positions
+- [Departments Overview](../departments/overview.md) — Manage department definitions
+- [Add Employee](../employees/add-employee.md) — Assign positions to new staff members

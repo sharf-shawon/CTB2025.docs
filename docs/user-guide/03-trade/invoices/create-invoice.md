@@ -1,150 +1,106 @@
+---
+tags: [module:trade, task:create, role:accountant]
+---
+
 # Create Invoice
 
-Use this page to create a standard invoice for a client. An invoice records the sale of products or services and tracks payment. Invoices are used to request payment, manage accounts receivable, and generate business reports.
+<!-- metadata: owner: trade_team, last_updated: 2026-07-26, git_ref: main, staging_verified: true -->
 
 ## Summary
 
-Use this page to create client invoices with items, charges, and totals in one workflow. A correctly prepared invoice improves payment tracking and reporting accuracy.
+Use this page to create client invoices with line items, applicable taxes, shipping charges, and total calculations in one unified workflow. A correctly prepared invoice records sales transactions, manages accounts receivable, and ensures accurate financial reporting.
+
+______________________________________________________________________
 
 ## When to use this page
 
-- Selling CTB's own products to clients
-- Recording sales of inventory from your company's stock
-- Creating an invoice for direct product sales
-- Issuing payment request for goods delivered to a customer
+- Selling CTB garment or bag products directly to registered client accounts
+- Issuing billing documentation for completed production orders or stock shipments
+- Creating commercial tender invoices or quotations for client approval
+- Recording direct sales transactions to track sales commissions and accounts receivable
+
+______________________________________________________________________
 
 ## How to access this page
 
-From the sidebar, go to **Trade Management → Invoices**. On the Invoices List page, click the **purple (+) icon** in the top-right corner.
+From the sidebar, go to **Trade → Invoices** (`/en/admin/Trade/invoice/`). On the Invoices List page, click the **purple (+) icon** in the top-right corner.
 
-The system opens the **Create Invoice Page**.
-
-## Step-by-step instructions
-
-1. Open **Trade Management -> Invoices** and click the add icon.
-1. Fill the invoice header details in **General Information**.
-1. Add one or more line items in **Add Items**.
-1. Review taxes, shipping, discount, and payable amount in **Payment Details**.
-1. Add optional notes and set invoice visibility/status.
-1. Click the appropriate save action to create the invoice.
+______________________________________________________________________
 
 ## Prerequisites
 
-- A client must exist and have a balance limit configured in the **Client Add** page.
-- If an invoice exceeds the client's balance limit, only a superuser can approve it.
+- **Active Client**: The target client account must exist in **Business → Clients** with valid contact information.
+- **Client Balance Limit**: The client account should have an assigned balance limit. If an invoice exceeds this limit, the system locks its status to `Draft` until approved.
+- **Required User Permissions**:
+    - `Trade | Invoice | Can add Invoice` (`trade.add_invoice`)
+    - `Trade | Invoice | Can view invoice reports and analytics` (`trade.view_invoice_reports`) for historical reporting
+    - **Superuser Privilege**: Required to click **Approve** on invoices exceeding a client's credit balance limit.
+
+______________________________________________________________________
+
+## Step-by-step instructions
+
+1. Open **Trade → Invoices** and click **(+) Add Invoice**.
+1. In the **General Information** tab, select the target **Client** from the dropdown menu.
+1. Confirm or set the **Invoice Date** and assign a **Salesperson** for commission attribution.
+1. Set the initial **Status** (`Draft`, `Sent`, `Quotation`, etc.).
+1. Switch to the **Items** tab and select a **Product** from the line-item dropdown.
+1. Enter the **Quantity** and unit **Selling Rate**. The system calculates the item total automatically.
+1. Click **Add another Item** if billing multiple products on the same invoice.
+1. Enter optional order charges in **Payment Details**: **Tax**, **VAT**, **Shipping**, or **Discount**.
+1. Add internal notes or payment terms under **Notes** if required.
+1. Click **Save** to complete invoice generation or **Save and continue editing** to verify calculations.
+
+______________________________________________________________________
+
+## Verification & definition of done
+
+- **Database Record Created**: The invoice displays a unique SKU/Invoice Number format (`INV-YYYYMMDD-XXXX`).
+- **Status Verification**: The invoice status pill reflects `Draft` or `Sent` on the list view.
+- **Client Ledger Update**: If saved as `Sent`, the payable amount is credited to the client's balance statement.
+- **Commission Attribution**: The invoice appears under the designated salesperson's sales summary report.
+
+______________________________________________________________________
 
 ## Field reference
 
-- **Invoice Number** - Unique identifier used to track the invoice.
-- **Invoice Date** - Billing date used in reports and period summaries.
-- **Client** - Customer account receiving the invoice.
-- **Status** - Current state (Draft, Sent, or Cancelled); only a superuser can unlock Sent status if the invoice exceeds the client's balance limit.
-- **Payable** - Final amount due after all charges and discounts.
-- **Approve** - Button visible only to superusers when the invoice amount exceeds the client's balance limit; superuser approval allows normal users to change the status to Sent.
+| Field Name         | Type    | Required | Backend Validation / Constraints                                      | Description                                                                |
+| :----------------- | :------ | :------- | :-------------------------------------------------------------------- | :------------------------------------------------------------------------- |
+| **Invoice Number** | Text    | Yes      | Max 20 characters, unique constraint                                  | Unique tracking number for the invoice. Auto-generated if left blank.      |
+| **Invoice Date**   | Date    | Yes      | Valid date (`YYYY-MM-DD`)                                             | Billing date used in financial accounting and reporting periods.           |
+| **Client**         | Select  | Yes      | Foreign Key (`Business.Client`), `PROTECT` on delete                  | The registered client account being billed.                                |
+| **Salesperson**    | Select  | No       | Foreign Key (`Employee.Employee`), `SET_NULL`                         | Staff member responsible for the sale. Used for commission calculation.    |
+| **Status**         | Select  | Yes      | Choices: `Draft`, `Sent`, `Cancelled`, `Pending Approval`             | Current lifecycle state. Exceeding client balance locks status to `Draft`. |
+| **Type**           | Select  | Yes      | Choices: `Invoice`, `Tender Invoice`, `Quotation`, `Tender Quotation` | Category of document issued to the client.                                 |
+| **Subtotal**       | Decimal | Auto     | Max 13 digits, 3 decimal places                                       | Sum of all line item totals (`Quantity × Rate`).                           |
+| **Tax**            | Decimal | No       | Default `0.00`, 2 decimal places                                      | Additional tax charge applied to the total order.                          |
+| **VAT**            | Decimal | No       | Default `0.00`, 3 decimal places                                      | Value-added tax amount.                                                    |
+| **Shipping**       | Decimal | No       | Default `0.00`, 3 decimal places                                      | Freight or delivery charges.                                               |
+| **Discount**       | Decimal | No       | Default `0.00`, 2 decimal places                                      | Total order discount deducted from payable amount.                         |
+| **Payable**        | Decimal | Auto     | `Subtotal + Tax + VAT + Shipping - Discount`                          | Final net amount due from the client.                                      |
 
 ______________________________________________________________________
 
-## General Information
+## Exception handling & error recovery
 
-![General Tab](create-invoice)
-
-Fill in the following fields on the General tab:
-
-| Step | Field          | What to Do              | Description                                                                            |
-| ---- | -------------- | ----------------------- | -------------------------------------------------------------------------------------- |
-| 1    | Invoice Number | Auto-generated or enter | Unique identifier for this invoice                                                     |
-| 2    | Invoice Date   | Select date             | Date the invoice is issued                                                             |
-| 3    | Client         | Select client           | The customer receiving the invoice                                                     |
-| 3    | Salesperson    | Select The Salesmsn     | The employee responsible for this sale. Commissions will be attributed to this person. |
-| 4    | Status         | Select status           | Current state (Draft, Sent, Cancelled, etc.)                                           |
-
-!!! warning "Balance Limit Check"
-If the invoice amount exceeds the client's balance limit set on the **Client Add** page, the invoice status is locked to **Draft**. Only a superuser can click **Approve** to unlock the status, allowing normal users to change it to **Sent**.
-
-!!! note "Approve Button (Superuser Only)"
-The **Approve** button appears only if the invoice amount exceeds the client's balance limit. Only superusers can click this button. After approval, the invoice status can be changed to **Sent** by any user.
+| Error Symptom / Message                            | Root Cause                                                                              | Step-by-Step Remediation                                                                                                                                                 |
+| :------------------------------------------------- | :-------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Status locked to Draft / Cannot change to Sent** | Invoice payable total exceeds the client's balance limit set in **Business → Clients**. | 1. Contact a superuser to review the invoice.<br>2. Superuser opens the invoice and clicks **Approve**.<br>3. Once approved, update status to `Sent` and click **Save**. |
+| **"Invoice Number already exists"**                | Duplicate invoice number entered manually.                                              | 1. Clear the **Invoice Number** field to let the system generate a unique sequence.<br>2. Alternatively, enter a non-conflicting manual number.                          |
+| **"Cannot delete client with existing invoices"**  | Django protection constraint (`models.PROTECT`) prevents client removal.                | 1. Reassign or delete associated invoices before deleting the client record.<br>2. Mark client as inactive instead of deleting.                                          |
+| **Subtotal / Payable mismatch**                    | Deleted line items still cached in form state prior to saving.                          | 1. Click **Save and continue editing** to recalculate totals.<br>2. Verify each line item quantity and rate.                                                             |
 
 ______________________________________________________________________
 
-## Payment Details
+## Related workflows & next steps
 
-After adding items, configure the financial details:
-
-| Step | Field    | What to Do      | Description                                                   |
-| ---- | -------- | --------------- | ------------------------------------------------------------- |
-| 1    | Subtotal | Auto-calculated | Sum of all item totals (Quantity × Selling Rate)              |
-| 2    | Tax      | Enter amount    | Tax to be charged on the order                                |
-| 3    | VAT      | Enter amount    | Value-added tax if applicable                                 |
-| 4    | Shipping | Enter amount    | Shipping or delivery cost                                     |
-| 5    | Discount | Enter amount    | Discount to apply to the invoice                              |
-| 6    | Payable  | Auto-calculated | Final amount due (Subtotal + Tax + VAT + Shipping - Discount) |
-
-!!! note
-Payable is calculated automatically based on other fields.
+- **[Add Payment](../payments/add-payment.md)** — Record client payments received against this invoice.
+- **[Add Client](../../01-business/clients/add-client.md)** — Manage client credit limits and balance statements.
+- **[Add Voucher](../vouchers/add-voucher.md)** — Process material procurement vouchers linked to production.
 
 ______________________________________________________________________
 
-## Add Items
-
-![Items Tab](create-invoice-item-tab.png)
-
-Add products or services to the invoice:
-
-| Step | Field        | What to Do           | Description                           |
-| ---- | ------------ | -------------------- | ------------------------------------- |
-| 1    | Product      | Select from dropdown | The product or service being sold     |
-| 2    | Selling Rate | Enter or select      | Price per unit                        |
-| 3    | Quantity     | Enter quantity       | Number of units (or quantity)         |
-| 4    | Total        | Auto-calculated      | Quantity × Selling Rate for this item |
-
-- Click **Add another Item** to add multiple products to one invoice
-- Click the **trash icon** to remove an item
-- Use the **edit icon** to modify an item's details
-
-!!! tip
-Each item's total is calculated automatically once you enter Selling Rate and Quantity.
-
-______________________________________________________________________
-
-## Notes and Status
-
-![Notes Tab](create-invoice-notes-tab.png)
-
-Add optional notes or internal comments:
-
-| Step | Field  | What to Do    | Description                           |
-| ---- | ------ | ------------- | ------------------------------------- |
-| 1    | Note   | Enter text    | Internal notes or special conditions  |
-| 2    | Status | Toggle switch | Show or hide the invoice from reports |
-
-______________________________________________________________________
-
-## Saving the Invoice
-
-After completing all sections:
-
-- Click **Save** to create the invoice as Draft/sent/cancelled. based on the status you selected
-- Click **Save and continue editing** to save and stay on the page
-- Click **Save and add another** to save and create another invoice immediately
-
-The invoice is now ready to be sent to the client or processed for payment.
-
-______________________________________________________________________
-
-!!! tip "Tips and Common Issues"
-
-- **Client is required** — You must select a client before saving
-- **Items add to Subtotal** — The invoice calculates Subtotal automatically when you add items
-- **Discount reduces Payable** — Enter a discount to reduce the final amount due
-- **Status controls visibility** — Use Status to mark invoices as Draft, Sent, or Cancelled
-- **Date affects reporting** — Invoice Date determines which reporting period the invoice appears in
-- **Invoice exceeds balance limit** — If the invoice amount exceeds the client's balance limit, the status remains locked to **Draft** until a superuser clicks **Approve**
-- **Superuser approval required** — Only superusers can approve invoices that exceed a client's balance limit; after approval, normal users can change the status to **Sent**
-- **No approval = no send** — Without superuser approval, invoices exceeding the balance limit cannot be sent to the client
-
-______________________________________________________________________
-
-## Related Pages
+## Related pages
 
 - **Invoice Detail** — View or edit invoice details after creation
 - **Edit Invoice** — Update invoice information and items

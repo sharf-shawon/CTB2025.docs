@@ -1,3 +1,7 @@
+---
+tags: [module:business, task:view, role:staff]
+---
+
 # Vendor Detail
 
 Use this page to view a vendor's profile details, related financial records, and internal notes in one place.
@@ -6,12 +10,16 @@ Use this page to view a vendor's profile details, related financial records, and
 
 Use this page to review vendor profile and financial activity before making operational decisions. It helps you verify details across vouchers, checks, payments, and notes from one screen.
 
+______________________________________________________________________
+
 ## When to use this page
 
 - Reviewing a vendor profile before transactions
 - Checking voucher, check, and payment history
 - Viewing notes and vendor account context
 - Verifying details before making updates from edit pages
+
+______________________________________________________________________
 
 ## How to access this page
 
@@ -21,13 +29,17 @@ Use this page to review vendor profile and financial activity before making oper
 
 The system opens the **Vendor Detail Page**.
 
+______________________________________________________________________
+
 ## Step-by-step instructions
 
-1. Open **Business -> Vendors** in the sidebar.
+1. Open **Business → Vendors** in the sidebar.
 1. Select the vendor you want to review.
 1. Check the **General** tab for profile and balance details.
 1. Review **Vouchers**, **Checks**, and **Payments** tabs for transaction history.
 1. Open **Notes** for internal remarks, then proceed to edit actions if required.
+
+______________________________________________________________________
 
 ## Field reference
 
@@ -39,17 +51,17 @@ The system opens the **Vendor Detail Page**.
 
 ______________________________________________________________________
 
-## Page Layout
+## Page layout
 
 At the top, you will see a tab bar with the following sections:
 
 **General, Vouchers, Checks, Payments, Notes**
 
-Each tab allows you to view or manage different types of vendor information.
+Each tab shows a different type of vendor information.
 
 ______________________________________________________________________
 
-## General Tab
+## General tab
 
 ![General Tab](vendor-detail-general-tab.png)
 
@@ -62,7 +74,7 @@ This is the default tab for vendor profile information.
 - Uploading or replacing documents
 - Modifying balance and limits
 
-### Editable Fields
+### Editable fields
 
 | Field               | What you can change | Notes                                 |
 | ------------------- | ------------------- | ------------------------------------- |
@@ -81,11 +93,12 @@ This is the default tab for vendor profile information.
 | Upper / Lower Limit | Modify              | Controls balance range                |
 
 !!! warning
-Changing balance or limits may affect financial reports and transactions.
+
+    Changing balance or limits may affect financial reports and transactions.
 
 ______________________________________________________________________
 
-## Vouchers Tab
+## Vouchers tab
 
 ![Vouchers Tab](vendor-voucher.png)
 
@@ -98,11 +111,12 @@ Displays all purchase vouchers related to the vendor.
 - Verifying past transactions
 
 !!! note
-This tab is for viewing data only. Editing is done from the purchase/invoice module.
+
+    This tab is for viewing data only. Editing is done from the purchase/invoice module.
 
 ______________________________________________________________________
 
-## Checks Tab
+## Checks tab
 
 ![Checks Tab](vendor-checks-tab.png)
 
@@ -116,7 +130,7 @@ Shows all check transactions associated with the vendor.
 
 ______________________________________________________________________
 
-## Payments Tab
+## Payments tab
 
 ![Payments Tab](vendor-payments-tab.png)
 
@@ -130,7 +144,7 @@ Displays all payment records linked to the vendor.
 
 ______________________________________________________________________
 
-## Notes Tab
+## Notes tab
 
 ![Notes Tab](vendor-notes.png)
 
@@ -144,14 +158,14 @@ Stores internal notes related to the vendor.
 
 ______________________________________________________________________
 
-## Saving Changes
+## Saving changes
 
 - Click **Save** to apply updates
 - Changes are immediately reflected across the system
 
 ______________________________________________________________________
 
-## Tips and Common Issues
+## Tips and common issues
 
 - Disabling a vendor prevents future transactions
 - Always verify **balance changes** before saving
@@ -160,7 +174,7 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## Related Pages
+## Related pages
 
 - **Add Vendor** — Create a new vendor
 - **Edit Vendor** — Update vendor information

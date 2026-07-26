@@ -1,6 +1,10 @@
+---
+tags: [module:trade, task:view, role:accountant]
+---
+
 # Banks Overview
 
-## Overview
+## Summary
 
 The **Banks Overview** page lets you review all bank accounts recorded in CTB Admin. Use this section to see each account’s current status, balance, and usage in payments or reconciliation. This helps you confirm which accounts are active before you create checks, vouchers, or payment records.
 
@@ -17,13 +21,23 @@ ______________________________________________________________________
 
 ## How to access this page
 
-1. From the sidebar, go to **Trade Management → Banks**.
+1. From the sidebar, go to **Trade → Banks**.
 
 ______________________________________________________________________
 
-## Page sections
+## Step-by-step instructions
 
-### Bank List
+1. Open **Banks Overview** from the **Trade** section of the sidebar.
+1. Complete the **Page sections** section described below.
+1. Review the values you entered, then save the record.
+
+______________________________________________________________________
+
+## Field reference
+
+### Page sections
+
+### Bank list
 
 ![Banks List Page](bank-overview-list-page.png)
 
@@ -55,7 +69,7 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## Related Pages
+## Related pages
 
 - [Add Bank](add-bank.md) — Create a new bank account
 - [Bank Detail](bank-detail.md) — Review or update bank account information

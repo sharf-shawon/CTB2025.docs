@@ -1,5 +1,7 @@
 # Gemini CLI Skills — CTB2025 Docs
+
 <!-- Auto-loaded by gemini CLI when run from repo root -->
+
 <!-- Source of truth: .github/STYLE_SPEC.md | Knowledge: .github/knowledge/ -->
 
 ## Common preamble (always include)
@@ -10,7 +12,7 @@ KNOWLEDGE="$(cat .github/knowledge/ctb-knowledge.md)"
 LEARNINGS="$(cat .github/knowledge/copilot-learnings.md)"
 ```
 
----
+______________________________________________________________________
 
 ## write-doc
 
@@ -26,7 +28,7 @@ gemini -p "$SPEC $KNOWLEDGE" \
    Follow STYLE_SPEC section 3 template exactly. Output raw markdown only, no fences."
 ```
 
----
+______________________________________________________________________
 
 ## standardize
 
@@ -40,7 +42,7 @@ gemini -p "$SPEC" \
    Output raw markdown only. $(cat $FILE)"
 ```
 
----
+______________________________________________________________________
 
 ## review-page
 
@@ -55,7 +57,7 @@ gemini -p "$SPEC $LEARNINGS" \
    $(cat $FILE)"
 ```
 
----
+______________________________________________________________________
 
 ## audit-module
 
@@ -72,7 +74,7 @@ files-to-prompt $MODULE --extension md | \
    4) Suggested agent dispatch table: | File | Agent | Priority |."
 ```
 
----
+______________________________________________________________________
 
 ## full-audit
 
@@ -86,7 +88,7 @@ files-to-prompt docs/user-guide --extension md | \
    Flag all relocation candidates and duplicate content."
 ```
 
----
+______________________________________________________________________
 
 ## analyze-relocation
 
@@ -100,7 +102,7 @@ gemini -p "$SPEC $(cat mkdocs.yml)" \
    Do NOT move any files. $(cat $FILE)"
 ```
 
----
+______________________________________________________________________
 
 ## sync-nav
 
@@ -111,7 +113,7 @@ gemini -p "$SPEC $(cat mkdocs.yml)" \
 uv run python main.py nav-sync
 ```
 
----
+______________________________________________________________________
 
 ## release-notes
 
@@ -126,7 +128,7 @@ gemini -p "$SPEC" \
    $(git -C ../CTB2025 log --oneline --since='$SINCE' 2>/dev/null || echo 'Git log unavailable')"
 ```
 
----
+______________________________________________________________________
 
 ## Makefile snippet
 

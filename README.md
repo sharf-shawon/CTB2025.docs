@@ -24,7 +24,10 @@ If you need access to the private application repository, contact the CTB team t
 - Business module: Manage clients and vendors.
 - Factory module: Manage products, materials, and inventory.
 - Trade module: Create invoices, track payments, manage checks, vouchers, and banks.
-- Employee module: Manage HR, attendance, salary, wages, and tasks.
+- Employee module: Manage HR, attendance, salary, wages, payouts, and tasks.
+- Returns module: Record returned finished goods and raw materials.
+- Commission and Campaigns module: Run incentive campaigns and review their analytics.
+- Reports module: Sales, profit, invoice, voucher, and attendance analytics.
 - Settings and Admin module: Manage users, runtime settings, SMS, and maintenance controls.
 
 ## Feature Showcase Screenshots
@@ -57,9 +60,10 @@ Explore more visuals in [docs/gallery](docs/gallery).
 
 ## What This Public Repo Contains
 
-- End-user guides in `docs/user-guide/`
-- Screenshot library in `docs/user-guide/screenshots/`
+- End-user guides in `docs/user-guide/`, one folder per module
+- Screenshots stored alongside the page that references them
 - MkDocs config and theme customizations
+- Style enforcement (`scripts/style_lint.py`) run by pre-commit and CI
 - CI, deployment, and Copilot agent automation for docs operations
 
 This repo does not contain CTB2025 application source code.
@@ -69,6 +73,8 @@ This repo does not contain CTB2025 application source code.
 - New users: [Getting Started](https://docs.ctbinfo.com/user-guide/00-getting-started/overview/)
 - Operations teams: [User Guide Index](https://docs.ctbinfo.com/user-guide/)
 - Documentation writers: [.github/DOCS_WRITER_GUIDE.md](.github/DOCS_WRITER_GUIDE.md)
+- Style rules: [.github/STYLE_SPEC.md](.github/STYLE_SPEC.md)
+- Open subject-matter questions: [review/sme-checklist.md](review/sme-checklist.md)
 - Contributors: [.github/CONTRIBUTING.md](.github/CONTRIBUTING.md)
 - Security reporting: [.github/SECURITY.md](.github/SECURITY.md)
 
@@ -77,7 +83,7 @@ This repo does not contain CTB2025 application source code.
 1. Read [.github/copilot-instructions.md](.github/copilot-instructions.md).
 1. Follow [.github/CONTRIBUTING.md](.github/CONTRIBUTING.md).
 1. Open an issue using templates in `.github/ISSUE_TEMPLATE/`.
-1. Include a valid screenshot path under `docs/user-guide/screenshots/...`.
+1. Save screenshots next to the page that references them, in lowercase kebab-case.
 1. For docs-agent flow, comment `@copilot ready-to-write` on the issue.
 
 ## Copilot Knowledge and Learnings System

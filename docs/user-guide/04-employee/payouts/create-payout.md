@@ -1,89 +1,87 @@
+---
+tags: [module:employee, task:create, role:hr]
+---
+
 # Create Payout
 
-Use this page to issue a payout or advance to an employee and keep the payment recorded for payroll and audit purposes. A payout documents payments to employees outside the regular salary cycle and tracks the employee's payment history.
+<!-- metadata: owner: hr, last_updated: 2026-07-26, git_ref: main, staging_verified: true -->
 
-## When to use Create Payout page
+## Summary
 
-- Issuing an advance to an employee
-- Recording a salary adjustment or bonus payment
-- Processing a one-time employee payment
-- Documenting approved non-standard payments
-
-## How to access Create Payout page
-
-From the sidebar, go to **Employee Management → Payouts**. On the Payouts List page, click the **purple (+) icon** in the top-right corner.
-
-The system opens the **Create Payout Page**.
+Use this page to issue salary Payouts, wage settlements, or advances to an employee in CTB Admin. Creating a payout updates the employee's net ledger balance and maintains audit trails for financial reconciliation.
 
 ______________________________________________________________________
 
-## Payout Information
+## When to use this page
 
-Fill in the following fields on the payout form:
+- Disbursing salary or wage payments to employees
+- Issuing salary advances prior to regular monthly payroll runs
+- Recording one-off bonus or adjustment payouts
+- Documenting cash or bank transfer payment execution dates
+
+______________________________________________________________________
+
+## How to access this page
+
+From the sidebar navigation, select **Employee → Payouts** (`/admin/employee/employeepayout/`). Click **Add Employee Payout (+)** in the top-right corner.
+
+______________________________________________________________________
+
+## Prerequisites
+
+- **Permissions:** `employee.add_employeepayout` permission codename (HR Staff, Accountant, or Superuser role).
+- **Active Records:** Active **Employee** profile.
+
+______________________________________________________________________
+
+## Step-by-step instructions
+
+1. Open **Employee → Payouts** and click **(+) Add Employee Payout**.
+1. Select the target **Employee**.
+1. Enter the payout **Amount** in local currency.
+1. Toggle **Is Paid** status if the payment is disbursed.
+1. Select the **Payment Date** (`YYYY-MM-DD`).
+1. Enter optional internal explanation in **Note**.
+1. Click **Save** to confirm the transaction.
+
+______________________________________________________________________
+
+## Verification and definition of done
+
+- System generates a unique payout SKU code (`PYT-YYYYMMDD-XXXX`).
+- Payout transaction appears under `/admin/employee/employeepayout/`.
+- Employee's net ledger balance updates automatically to reflect the payout Payout.
+
+______________________________________________________________________
+
+## Field reference
+
+### Payout information
 
 ![Create Payout](create-payout-info.png)
 
-| Step | Field    | What to Do      | Description                                   |
-| ---- | -------- | --------------- | --------------------------------------------- |
-| 1    | Employee | Select employee | The staff member receiving the payout         |
-| 2    | Amount   | Enter amount    | The payout amount in the system currency      |
-| 3    | Payable  | Auto-calculated | Total payout amount (may include adjustments) |
-
-!!!warning
-Fields marked with a **red star (\*)** are mandatory.
-
-______________________________________________________________________
-
-## Payment Information
-
-Configure the payment details after entering the payout amount:
-
-| Step | Field        | What to Do    | Description                                          |
-| ---- | ------------ | ------------- | ---------------------------------------------------- |
-| 1    | Is Paid      | Check if paid | Mark the payout as already paid                      |
-| 2    | Payment Date | Select date   | Date when the payout was or will be paid to employee |
-
-!!!Note
-Payment Date is important for payroll reconciliation and employee balance tracking.
+| Step | Field        | Required    | What to Do      | Description                                  |
+| ---- | ------------ | ----------- | --------------- | -------------------------------------------- |
+| 1    | Employee     | Yes         | Select employee | Staff member receiving payout                |
+| 2    | Amount       | Yes         | Enter amount    | Disbursed payout amount                      |
+| 3    | Payable      | No          | Read-only       | Auto-calculated payable amount               |
+| 4    | Is Paid      | Yes         | Toggle switch   | Indicates whether payment was disbursed      |
+| 5    | Payment Date | Conditional | Select date     | Payment date (required when `Is Paid` is ON) |
+| 6    | Note         | No          | Enter text      | Explanation or reference notes               |
 
 ______________________________________________________________________
 
-## Payment Notes
+## Exception handling and error recovery
 
-Add optional notes or internal comments:
-
-| Step | Field | What to Do | Description                              |
-| ---- | ----- | ---------- | ---------------------------------------- |
-| 1    | Note  | Enter text | Internal explanation or special comments |
-
-______________________________________________________________________
-
-## Saving the Payout
-
-After completing all sections:
-
-- Click **Save** to create the payout
-- Click **Save and continue editing** to save and remain on the page
-- Click **Save and add another** to save and create a new payout immediately
-
-The payout is now recorded and reflected in the employee's account balance.
-
-______________________________________________________________________
-
-## Tips and common issues
-
-- **Employee is required** — You must select an employee before saving
-- **Amount is required** — Enter the payout value in the system currency
-- **Payment Date affects payroll** — Ensure the date is correct for accurate payroll reconciliation
-- **Is Paid determines balance** — Check "Is Paid" to mark the payment as completed; leave unchecked for pending payouts
-- **Add notes for clarity** — Use the notes field to explain the reason for the payout (advance, adjustment, bonus, etc.)
-- **Payable amount is auto-calculated** — The system calculates the final payout amount based on the Amount field
+| Symptom / Error Message                         | Root Cause                                              | Remediation Action                          |
+| ----------------------------------------------- | ------------------------------------------------------- | ------------------------------------------- |
+| `Payment Date is required when Is Paid is true` | Form submitted with `Is Paid` toggled on without a date | Select transaction date in **Payment Date** |
+| `Amount must be greater than 0`                 | Zero or negative payout amount entered                  | Enter a positive payment value              |
 
 ______________________________________________________________________
 
 ## Related pages
 
-- **Payouts Overview** — View all employee payouts and their status
-- **Salary** — Manage regular salary records and payroll
-- **Employees** — Manage employee information and records
-- **Salary Detail** — View employee salary breakdown and history
+- [Payouts Overview](overview.md) — View master payout transactions list
+- [Employee Detail](../employees/employee-detail.md) — Inspect employee ledger and payout history tab
+- [Generate Salary](../salary/generate-salary.md) — Run salary calculations

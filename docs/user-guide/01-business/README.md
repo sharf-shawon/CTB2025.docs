@@ -1,12 +1,20 @@
+---
+tags: [module:business, task:view, role:staff]
+---
+
 # Business Module
 
 Use the Business module to manage clients and vendors, keep contact and balance information current, and review the records that support sales and purchasing work.
+
+______________________________________________________________________
 
 ## Summary
 
 The Business section stores the external parties your team works with most often. Clients and vendors are used throughout invoices, payments, checks, and reports, so this module is the starting point for many daily workflows.
 
-## What you can do in this section
+______________________________________________________________________
+
+## What you can do in this module
 
 - Add and update client records.
 - Add and update vendor records.
@@ -14,12 +22,16 @@ The Business section stores the external parties your team works with most often
 - Open transaction history tied to a client or vendor.
 - Control whether a record is active for new work.
 
-## Module structure
+______________________________________________________________________
 
-| Module  | Purpose                                                          |
-| ------- | ---------------------------------------------------------------- |
-| Clients | Manage customers, their balances, and their transaction history. |
-| Vendors | Manage suppliers, their balances, and their transaction history. |
+## Pages in this module
+
+| Module  | Purpose                                                        |
+| ------- | -------------------------------------------------------------- |
+| Clients | Manage clients, their balances, and their transaction history. |
+| Vendors | Manage vendors, their balances, and their transaction history. |
+
+______________________________________________________________________
 
 ## Typical workflow
 
@@ -28,7 +40,9 @@ The Business section stores the external parties your team works with most often
 1. Review the detail page when you need balance or history context.
 1. Open the report page when you need a summary view.
 
-## Related sections
+______________________________________________________________________
+
+## Related pages
 
 - Trade - Handles invoices, checks, vouchers, payments, and banks.
 - Factory - Uses business records for product and inventory workflows.

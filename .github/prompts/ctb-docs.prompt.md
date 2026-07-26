@@ -9,20 +9,20 @@ You are working on **CTB Admin** documentation (`CTB2025.docs`).
 ## Mandatory: read these files before acting
 
 1. `.github/STYLE_SPEC.md` — your complete editorial contract
-2. `.github/knowledge/ctb-knowledge.md` — domain knowledge
-3. `.github/knowledge/copilot-learnings.md` — past lessons
+1. `.github/knowledge/ctb-knowledge.md` — domain knowledge
+1. `.github/knowledge/copilot-learnings.md` — past lessons
 
 ## Select the right agent
 
-| Task | Agent to invoke |
-|---|---|
-| Write a new doc page | `@doc-writer` |
-| Rewrite old page to new spec | `@doc-standardizer` |
-| Review a page for compliance | `@doc-reviewer` |
-| Move a page to a better location | `@doc-relocator` |
-| Update mkdocs.yml nav | `@nav-manager` |
-| Run after a PR merges | `@knowledge-curator` |
-| Audit a module or all docs | `@doc-auditor` |
+| Task                             | Agent to invoke      |
+| -------------------------------- | -------------------- |
+| Write a new doc page             | `@doc-writer`        |
+| Rewrite old page to new spec     | `@doc-standardizer`  |
+| Review a page for compliance     | `@doc-reviewer`      |
+| Move a page to a better location | `@doc-relocator`     |
+| Update mkdocs.yml nav            | `@nav-manager`       |
+| Run after a PR merges            | `@knowledge-curator` |
+| Audit a module or all docs       | `@doc-auditor`       |
 
 ## Output rules
 
