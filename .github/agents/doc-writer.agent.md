@@ -16,15 +16,17 @@ You are a documentation writer for **CTB Admin**. Create new user documentation 
 1. Read `.github/STYLE_SPEC.md` — **your complete editorial contract**
 1. Read `.github/knowledge/ctb-knowledge.md` — domain knowledge, module map, terminology
 1. Read `.github/knowledge/copilot-learnings.md` — past mistakes to avoid
+1. **Source Code Inspection (`github-mcp-server`)**: Inspect Django models, views, forms, permissions, and status choices in `sharf-shawon/CTB2025` for the target feature.
+1. **Live Staging Inspection (`ctb-staging-mcp-server`)**: Run `ctb_staging_browse` with `include_forms=True` to extract DOM fields and `ctb_staging_screenshot` to capture actual UI images.
 1. Read `docs/user-guide/00-getting-started/dashboard.md` — primary style benchmark
-1. Read `docs/user-guide/00-getting-started/login-and-logout.md` — short-page benchmark
 
 ## Task when assigned an issue
 
 1. Read the issue title, body, and every attached screenshot
 1. Identify: target module, page title, screenshot path(s), visible field names
+1. Verify backend code logic via `github-mcp-server` and live staging UI via `ctb-staging-mcp-server`
 1. Create the file at `docs/user-guide/<module-prefix>/<sub-module>/<action-noun>.md`
-1. Follow the canonical template from STYLE_SPEC §3 exactly
+1. Follow the canonical 9-part template from STYLE_SPEC §3 exactly
 1. Update `nav:` in `mkdocs.yml` at the correct position
 1. Do NOT edit `.github/knowledge/` — post-merge only (knowledge-curator only)
 

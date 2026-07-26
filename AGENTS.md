@@ -31,6 +31,8 @@ This repository contains MkDocs Material documentation for **CTB Admin** — a D
 ## Universal rules (all agents, all vendors)
 
 1. STYLE_SPEC.md is the only style authority — check it before any writing decision
+1. **Dual-MCP Verification Pipeline**: Must inspect backend source code via `github-mcp-server` (`sharf-shawon/CTB2025`) and live DOM form fields & screenshots via `ctb-staging-mcp-server`
+1. **Zero-Hallucination Mandate**: AI agents MUST NEVER invent or hallucinate features, fields, permissions, or business logic
 1. Never rename or move files without completing the relocation checklist (STYLE_SPEC §7)
 1. Never edit `.github/knowledge/` mid-task — only knowledge-curator edits those, post-merge
 1. Never generate content without a screenshot path or a `<!-- TODO: screenshot ... -->` placeholder

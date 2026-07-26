@@ -48,16 +48,19 @@ ______________________________________________________________________
 
 Every page MUST contain all mandatory sections in this exact order.
 
-```
-# <Task-oriented title>           [MANDATORY] imperative verb + noun: "Add Client", "Generate Salary"
+```markdown
+# <Task-oriented title>
+<!-- metadata: owner: <team/role>, last_updated: <YYYY-MM-DD>, git_ref: <commit_sha>, staging_verified: true -->
+
 ## Summary                         [MANDATORY] 1–2 sentences: what the page does and why it matters
 ## When to use this page           [MANDATORY] 3–5 bullets: concrete usage scenarios
-## How to access this page         [MANDATORY] 1 paragraph: exact sidebar path using **bold UI labels**
-## Prerequisites                   [OPTIONAL]  bullets: required permissions, records, or config
-## Step-by-step instructions       [MANDATORY] numbered list: one action per step, state expected result
-## Field reference                 [MANDATORY] table or bullets: every visible field, business meaning
-## Tips and common issues          [OPTIONAL]  bullets: practical gotchas, edge cases
-## Related pages                   [MANDATORY] bullet list of cross-links with one-line context
+## How to access this page         [MANDATORY] 1 paragraph: exact sidebar path using **bold UI labels** and URL path
+## Prerequisites & Role Permissions [MANDATORY] bullets: required permissions (codenames/roles) & active records
+## Step-by-step instructions       [MANDATORY] numbered list: single action per step with expected system response
+## Verification & Definition of Done [MANDATORY] bullets/table: how to verify success (status pill, downstream voucher, ledger)
+## Field reference                 [MANDATORY] table: every visible field, required flag, and backend validation rule
+## Exception Handling & Error Recovery [MANDATORY] table: error symptoms, root causes, and step-by-step remediation
+## Related Workflows & Next Steps  [MANDATORY] bullet list: cross-links to upstream and downstream business processes
 ```
 
 **Heading rules:**
@@ -65,7 +68,7 @@ Every page MUST contain all mandatory sections in this exact order.
 - Sentence case: "Step-by-step instructions" ✅, "Step-By-Step Instructions" ❌
 - No punctuation at end of headings
 - No heading level skips (h2 → h4 is forbidden)
-- Extra module-specific sections go AFTER Field reference and BEFORE Tips
+- Extra module-specific sections go AFTER Field reference and BEFORE Exception Handling
 
 ______________________________________________________________________
 
@@ -230,7 +233,11 @@ ______________________________________________________________________
 
 A page is complete when ALL are true:
 
-- [ ] All mandatory sections present in canonical order
+- [ ] All mandatory sections present in canonical order (including Prerequisites, Verification, Field reference, Error Recovery, Related Workflows)
+- [ ] Backend source code logic, models, permissions, & validation rules verified via `github-mcp-server` (`sharf-shawon/CTB2025`)
+- [ ] Live DOM form fields & visual screenshot verified via `ctb-staging-mcp-server`
+- [ ] Zero hallucinated features, fields, or business logic present
+- [ ] Header comment includes metadata (`owner`, `last_updated`, `git_ref`, `staging_verified`)
 - [ ] At least one screenshot referenced (or `<!-- TODO: screenshot -->` placeholder)
 - [ ] No prohibited phrases (section 2)
 - [ ] All UI labels in **bold**, all code/values in `code span`

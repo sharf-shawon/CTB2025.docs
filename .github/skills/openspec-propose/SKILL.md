@@ -5,8 +5,8 @@ license: MIT
 compatibility: Requires openspec CLI.
 metadata:
   author: openspec
-  version: '1.0'
-  generatedBy: 1.3.1
+  version: "1.0"
+  generatedBy: "1.4.1"
 ---
 
 Propose a new change - create the change and generate all artifacts in one step.
@@ -41,7 +41,7 @@ ______________________________________________________________________
     openspec new change "<name>"
     ```
 
-    This creates a scaffolded change at `openspec/changes/<name>/` with `.openspec.yaml`.
+    This creates a scaffolded change in the planning home resolved by the CLI with `.openspec.yaml`.
 
 1. **Get the artifact build order**
 
@@ -53,6 +53,7 @@ ______________________________________________________________________
 
     - `applyRequires`: array of artifact IDs needed before implementation (e.g., `["tasks"]`)
     - `artifacts`: list of all artifacts with their status and dependencies
+    - `planningHome`, `changeRoot`, `artifactPaths`, and `actionContext`: path and scope context. Use these instead of assuming repo-local paths.
 
 1. **Create artifacts in sequence until apply-ready**
 
@@ -71,10 +72,10 @@ ______________________________________________________________________
         - `rules`: Artifact-specific rules (constraints for you - do NOT include in output)
         - `template`: The structure to use for your output file
         - `instruction`: Schema-specific guidance for this artifact type
-        - `outputPath`: Where to write the artifact
+        - `resolvedOutputPath`: Resolved path or pattern to write the artifact
         - `dependencies`: Completed artifacts to read for context
     - Read any completed dependency files for context
-    - Create the artifact file using `template` as the structure
+    - Create the artifact file using `template` as the structure and write it to `resolvedOutputPath`
     - Apply `context` and `rules` as constraints - but do NOT copy them into the file
     - Show brief progress: "Created <artifact-id>"
 

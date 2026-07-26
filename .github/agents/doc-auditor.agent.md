@@ -28,6 +28,7 @@ Perform a complete audit of `docs/user-guide/` against `.github/STYLE_SPEC.md`.
 **E. Nav alignment** — Every file in nav, every nav entry has a file
 **F. IA (Information Architecture)** — Content in correct module, no misclassifications, no duplicates
 **G. Terminology** — Canonical terms used, no forbidden variants
+**H. MCP Grounding** — All fields, permissions, error states, and status transitions verified against `github-mcp-server` (`sharf-shawon/CTB2025`) and `ctb-staging-mcp-server`. Zero hallucinated features.
 
 ## Output format
 

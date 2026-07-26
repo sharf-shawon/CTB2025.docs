@@ -5,8 +5,8 @@ license: MIT
 compatibility: Requires openspec CLI.
 metadata:
   author: openspec
-  version: '1.0'
-  generatedBy: 1.3.1
+  version: "1.0"
+  generatedBy: "1.4.1"
 ---
 
 Implement tasks from an OpenSpec change.
@@ -34,6 +34,7 @@ Implement tasks from an OpenSpec change.
     Parse the JSON to understand:
 
     - `schemaName`: The workflow being used (e.g., "spec-driven")
+    - `planningHome`, `changeRoot`, and `actionContext`: planning scope and edit constraints
     - Which artifact contains the tasks (typically "tasks" for spec-driven, check status for others)
 
 1. **Get apply instructions**
@@ -54,6 +55,8 @@ Implement tasks from an OpenSpec change.
     - If `state: "blocked"` (missing artifacts): show message, suggest using openspec-continue-change
     - If `state: "all_done"`: congratulate, suggest archive
     - Otherwise: proceed to implementation
+
+    **Workspace guard:** If status JSON reports `actionContext.mode: "workspace-planning"` and `allowedEditRoots` is empty, explain that full workspace apply is not supported in this slice. Treat linked repos and folders as read-only context, ask the user to select an affected area through an explicit implementation workflow, and STOP before editing files.
 
 1. **Read context files**
 
