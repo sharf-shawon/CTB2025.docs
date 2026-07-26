@@ -6,16 +6,16 @@ tags: [module:reports, task:view, role:accountant]
 
 ## Summary
 
-The Executive Summary page provides a consolidated, printable report of key business metrics across invoices, payments, checks, vouchers, materials purchased and product stock levels for a selectable date range. Use it to get a quick management-level view and to drill into specific transactions.
+The Executive Summary page provides a consolidated, printable report of key business metrics across invoices, payments, checks, vouchers, materials purchased, and product stock levels for a selectable date range. Use it to get a quick management-level view and drill into specific underlying transactions.
 
 ______________________________________________________________________
 
 ## When to use this page
 
-- You need a one-page overview of recent invoicing and payment activity
-- Preparing a printable summary for management review
-- Verifying cashflow items (sent/received payments and checks) for a date range
-- Reviewing material purchases and current product stock levels
+- You need a one-page overview of recent invoicing and payment activity.
+- Preparing a printable summary for executive management review.
+- Verifying cashflow items (sent/received payments and checks) for a specific date range.
+- Reviewing material purchases and current product stock levels.
 
 ______________________________________________________________________
 
@@ -27,8 +27,8 @@ ______________________________________________________________________
 
 ## Prerequisites
 
-- You must have permission to view Reports pages (reporting or finance role)
-- Relevant transactions (invoices, payments, checks, vouchers, purchases, stock) must exist for the selected date range
+- Active user session with `reports.view_executivesummary` permission.
+- Relevant transactions (invoices, payments, checks, vouchers, purchases, stock) must exist for the selected date range.
 
 ______________________________________________________________________
 
@@ -36,64 +36,59 @@ ______________________________________________________________________
 
 ![Executive Summary Page](executive-summary-page-img.png)
 
-1. Go to **Reports → Executive Summary**.
-1. Set the **Start Date** and **End Date** in the Date Range Filter to the period you want to review
-1. Click **Apply Filter** to refresh all sections on the page for the selected date range
-1. Review the top table: **Invoice & Tender Invoice Statistics** for per-date invoice counts and totals and the reported Grand Total
-1. Scan the four payment/check panels to verify Sent Payments, Received Payments, Sent Checks and Received Checks (only passed items are shown)
-1. Check the **Bounced & Upcoming Checks** area for any returned or scheduled checks
-1. Review the **Client Transactions Summary** for client-level debit/credit balances and discounts
-1. Inspect **Voucher Statistics**, **Materials Purchased**, and **Product Stock Levels** for purchasing and inventory insights
-1. Click **Print Report** (top-right) to export or print the current view
+1. Open **Reports → Executive Summary** from the left sidebar.
+1. Select the **Start Date** and **End Date** in the Date Range Filter.
+1. Click **Apply Filter** to recalculate metrics for the selected period.
+1. Inspect the **Invoice & Tender Invoice Statistics** section for per-date invoice totals.
+1. Review cleared cashflow items in **Sent Payments**, **Received Payments**, **Sent Checks**, and **Received Checks**.
+1. Inspect **Bounced & Upcoming Checks** to identify returned or scheduled check items.
+1. Check **Client Transactions Summary** to review client-level debit/credit balances.
+1. Review **Voucher Statistics**, **Materials Purchased**, and **Product Stock Levels**.
+1. Click **Print Report** (top-right) to generate a PDF or print a hard copy summary.
+
+______________________________________________________________________
+
+## Verification & definition of done
+
+- **Data accuracy**: Summary grand totals match the sum of individual cleared ledger entries for the period.
+- **Export confirmation**: Clicking **Print Report** renders a clean print layout without browser chrome or sidebar navigation.
 
 ______________________________________________________________________
 
 ## Field reference
 
-- **Start Date** — First date included in the report filter
-
-- **End Date** — Last date included in the report filter
-
-- **Apply Filter** — Button that refreshes the report data for the chosen date range
-
-- **Invoice & Tender Invoice Statistics** — Table listing per-date invoice/tender invoice rows with these columns:
-
-    - **Date** — Transaction date
-    - **Type** — `Invoice` or `Tender Invoice`
-    - **Count** — Number of invoices on that date
-    - **Subtotal** — Sum of invoice line subtotals before discounts
-    - **Discount** — Total discounts applied
-    - **Payable** — Net amount payable after discounts
-    - **Grand Total** — Sum of the **Payable** column for the date range (shown at table bottom)
-
-- **Sent Payments (Passed)** — List of sent/cleared payments with **Date**, **Vendor**, **Amount** and a **Total** row
-
-- **Received Payments (Passed)** — List of received/cleared payments with **Date**, **Client**, **Amount** and a **Total** row
-
-- **Sent Checks (Passed)** / **Received Checks (Passed)** — Tables showing cleared checks with **Date**, **Check #**, **Amount** and a **Total** row
-
-- **Bounced & Upcoming Checks** — Table showing check number, type, status, scheduled/cleared date, party and amount; displays a message when none are present
-
-- **Client Transactions Summary** — Per-client summary with **Client**, **Total Debit**, **Total Credit**, and **Discount** columns
-
-- **Voucher Statistics** — Date-wise count and total amount for vouchers within the filter range and a **Total** row
-
-- **Materials Purchased** — List of purchased materials showing **Material**, **Quantity**, **Unit**, and **Total Amount** (negative values indicate returns or corrections)
-
-- **Product Stock Levels** — Inventory snapshot with **SKU**, **Product Name**, **Current Stock**, **Restock Level**, and **Unit**
+- **Start Date** — First date included in the report filter range.
+- **End Date** — Last date included in the report filter range.
+- **Apply Filter** — Refreshes all summary metrics and tables for the selected date range.
+- **Invoice & Tender Invoice Statistics** — Table listing per-date invoice count, subtotal, discounts, and payable amounts.
+- **Sent Payments (Passed)** — List of sent/cleared vendor payments with date, vendor, and amount.
+- **Received Payments (Passed)** — List of received/cleared client payments with date, client, and amount.
+- **Sent Checks (Passed) / Received Checks (Passed)** — Tables showing cleared bank checks.
+- **Bounced & Upcoming Checks** — List of scheduled or returned bank checks.
+- **Client Transactions Summary** — Per-client summary showing debit balances, credit balances, and discounts.
+- **Voucher Statistics** — Date-wise count and aggregate value of approved purchase vouchers.
+- **Materials Purchased** — List of raw material purchases with quantity, unit, and total cost.
+- **Product Stock Levels** — Current finished goods inventory snapshot.
 
 ______________________________________________________________________
 
-## Tips and common issues
+## Exception handling & error recovery
 
-- If the page shows zero results, expand the date range or verify that transactions exist for the period
-- Large date ranges may slow down loading; filter narrower ranges for quicker responses
-- Negative totals in Materials Purchased typically indicate returns or stock corrections — verify related purchase records
-- If totals don't match your accounting system, check for unposted or draft transactions excluded from the report
-- Timezone or server date mismatches can shift which day a transaction appears on; confirm server timezone settings if dates look off
+| Error Code / Symptom     | Root Cause                                                         | Step-by-step remediation procedure                                                                                        | Actionable role required           |
+| ------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------- | ---------------------------------- |
+| Zero results in report   | Filter date range excludes active transactions or no records exist | 1. Expand **Start Date** and **End Date** filters.<br>2. Verify invoices and payments exist in **Trade** for that period. | `accountant`                       |
+| Discrepancy in totals    | Draft or unposted transactions excluded from report                | 1. Open **Trade → Invoices**.<br>2. Confirm draft invoices are posted or approved.                                        | `accountant` / `admin`             |
+| Negative material amount | Recorded material return exceeds gross purchase quantity           | 1. Open **Factory → Materials**.<br>2. Verify return vouchers and stock adjustment logs.                                  | `staff` $\rightarrow$ `accountant` |
+
+______________________________________________________________________
+
+## Related workflows & next steps
+
+- **[Product Return Report](product-return-report.md)** — Audit client product returns affecting net sales figures.
+- **[Monthly Attendance Report](attendance-report.md)** — Review labor costs and attendance grid tallies.
 
 ______________________________________________________________________
 
 ## Related pages
 
-- **[Reports](../README.md)** — All pages in this module.
+- **[Reports](../README.md)** — All available executive and operational reporting tools.

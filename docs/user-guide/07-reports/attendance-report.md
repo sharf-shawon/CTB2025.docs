@@ -1,21 +1,21 @@
 ---
-tags: [module:reports, task:report, role:accountant]
+tags: [module:reports, task:report, role:hr]
 ---
 
 # Attendance Report
 
 ## Summary
 
-The Monthly Attendance Report shows a day-by-day attendance grid for all employees for a selected month, plus per-employee summary columns for presence, lateness, overtime and other tallies. Use it to audit staff presence, export a printable report, and feed payroll calculations.
+The Monthly Attendance Report provides a day-by-day attendance matrix for all employees for a selected month, along with aggregate tallies for days present, lateness, overtime hours, and leaves. Use it to audit staff presence, export printable records, and feed monthly payroll calculations.
 
 ______________________________________________________________________
 
 ## When to use this page
 
-- You need a month-level view of employee attendance for payroll or review
-- You want to verify daily attendance patterns across the organisation
-- You need a printable monthly attendance summary for management
-- You need to identify late arrivals, early departures or overtime at a glance
+- Auditing monthly employee attendance prior to generating monthly salaries.
+- Verifying daily attendance patterns and lateness trends across departments.
+- Preparing a printable monthly attendance summary for HR management.
+- Reconciling overtime hours or unexcused absence deductions.
 
 ______________________________________________________________________
 
@@ -27,64 +27,61 @@ ______________________________________________________________________
 
 ## Prerequisites
 
-- Permission to view Reports or Attendance pages (HR or manager role)
-- Employee records must exist in **Employees**
-- Attendance entries (time-in / time-out) must be recorded for the chosen month
+- Active user session with `employee.view_attendance` or HR manager permissions.
+- Active employee profiles must exist in **Employee → Employees**.
+- Daily attendance entries must be recorded for the target month.
 
 ______________________________________________________________________
 
 ## Step-by-step instructions
 
-![attendance report page](./../.././gallery/Reports/desktop-monthly-attendance-report.png)
+![Attendance Report Page](./../.././gallery/Reports/desktop-monthly-attendance-report.png)
 
-1. Go to **Employee → Attendances → Monthly Attendance Report**.
-1. Select the month (or set the Start/End Date) for the report period if controls are provided
-1. Click **Apply Filter** (or similar) to refresh the grid for the selected month
-1. Use the grid to inspect per-employee day cells; each cell shows attendance status for that date
-1. Review the right-side summary columns for each employee (totals for present, late, overtime, etc.)
-1. Use the legend below the table to interpret cell color codes (full shift, partial, leave, overtime, late/early)
-1. Click **Print Report** (top-left) to print or export the current view
+1. Open **Employee → Attendances → Monthly Attendance Report**.
+1. Select the target **Month** and **Year** using the header date picker.
+1. Click **Apply Filter** to render the monthly attendance grid.
+1. Inspect the per-employee rows across date columns `1` through `31`.
+1. Review right-hand summary tallies for **Present (P)**, **Absent (A)**, **Late (L)**, and **Overtime (OT)**.
+1. Refer to the color-coded legend below the grid to distinguish full shifts, leaves, and late arrivals.
+1. Click **Print Report** (top-left) to export a clean PDF or print hard copy attendance sheets.
+
+______________________________________________________________________
+
+## Verification & definition of done
+
+- **Grid completion**: Every active employee has an attendance status icon or code for each calendar day of the month.
+- **Summary reconciliation**: The sum of Present + Absent + Leave days equals total working days in the month.
 
 ______________________________________________________________________
 
 ## Field reference
 
-- **Employee** — Employee name (first column). Click to open the employee record if supported
-
-- **Date columns (1–31)** — One column per calendar day in the selected month. Cell values indicate attendance status (present, absent, leave, half-day, etc.)
-
-- **Summary columns (right)** — Per-employee tallies, typically including:
-
-    - **Present (P)** — Count of days the employee was present
-    - **Absent (A)** — Count of absent days (unmarked or absent status)
-    - **Late (L)** — Count of late arrivals
-    - **OT** — Overtime hours or overtime day count (implementation varies)
-    - **Early/Early leave** — Count of early departures, if tracked
-    - **Total** — Aggregate attendance-related metric (may be labelled differently in your deployment)
-
-- **Legend** — A legend below the grid explains cell colours and symbols, for example:
-
-    - Full shift worked
-    - Partial shift or partial clock-in/clock-out
-    - Leave (paid/unpaid)
-    - Overtime entry
-    - Late arrival or early departure
-    - Total present/attendance summary
+- **Employee** — Full name and ID of the employee (first column).
+- **Date Columns (1–31)** — Calendar day cells indicating shift attendance status for that date.
+- **Present (P)** — Total count of days the employee worked a complete shift.
+- **Absent (A)** — Total count of days marked absent or unrecorded.
+- **Late (L)** — Total count of shift arrivals exceeding the grace period.
+- **OT (Hours)** — Aggregate overtime hours accumulated during the month.
+- **Leave (LV)** — Total count of approved paid or unpaid leave days.
 
 ______________________________________________________________________
 
-## Tips and common issues
+## Exception handling & error recovery
 
-- If many rows show empty cells, confirm that automatic time capture or manual attendance entries were recorded for that month
-- Narrow the date range when the report is slow to load for large employee lists
-- Use the employee link (left column) to open an employee's attendance detail when investigating a specific row
-- Overtime and late counts depend on your organisation's shift rules — verify shift settings if totals look unexpected
+| Error Code / Symptom      | Root Cause                                                 | Step-by-step remediation procedure                                                                                       | Actionable role required |
+| ------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ | ------------------------ |
+| Empty grid cells          | Attendance not recorded or automated biometric sync failed | 1. Open **Employee → Attendances → Record Attendance**.<br>2. Manually enter time-in/time-out records for missing dates. | `hr` / `staff`           |
+| Unexpected overtime tally | Shift start/end times misconfigured                        | 1. Open **Employee → Shift Settings**.<br>2. Confirm official working hours and overtime threshold rules.                | `hr` / `admin`           |
+
+______________________________________________________________________
+
+## Related workflows & next steps
+
+- **[Record Attendance](../04-employee/attendance/record-attendance.md)** — Enter or correct daily attendance records.
+- **[Generate Salary](../04-employee/salary/generate-salary.md)** — Process monthly payroll based on verified attendance tallies.
 
 ______________________________________________________________________
 
 ## Related pages
 
-- **[Attendance Overview]** — View and manage attendance records
-- **[Record Attendance]** — Add or edit daily attendance entries
-- **[Employees Overview]** — Manage employee records and profiles
-- **[Salary Detail]** — Payroll and salary records used for payroll reconciliation
+- **[Reports](../README.md)** — All available reporting tools across CTB Admin.
