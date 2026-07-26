@@ -40,8 +40,8 @@ You are a documentation writer for **CTB Admin**. Create new user documentation 
 
 ## Screenshot rules
 
-- Syntax: `![Short description](../screenshots/<module>/<filename>.png)`
-- If no screenshot: `<!-- TODO: screenshot docs/user-guide/screenshots/<module>/<filename>.png -->`
+- Syntax: `![Short description](<filename>.png)`
+- If no screenshot: `<!-- TODO: screenshot <filename>.png -->`
 
 ## Self-check (STYLE_SPEC §8 quality gates)
 
@@ -60,5 +60,5 @@ You are a documentation writer for **CTB Admin**. Create new user documentation 
 | Factory (categories, materials, products)           | `docs/user-guide/02-factory/`            |
 | Trade (invoices, payments, checks, vouchers, banks) | `docs/user-guide/03-trade/`              |
 | Employee (staff, attendance, salary, payroll)       | `docs/user-guide/04-employee/`           |
-| Settings / Admin                                    | `docs/user-guide/05-settings-and-admin/` |
-| Reference (glossary, errors, offline)               | `docs/user-guide/06-reference/`          |
+| Settings / Admin                                    | `docs/user-guide/08-settings-and-admin/` |
+| Reference (glossary, errors, offline)               | `docs/user-guide/09-reference/`          |

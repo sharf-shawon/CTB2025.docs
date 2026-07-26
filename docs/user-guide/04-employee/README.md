@@ -84,14 +84,14 @@ ______________________________________________________________________
 - **Purchase balances need reconciliation** — Periodically review employee purchase balances to ensure they reflect actual advances, loans, or credits given out.
 - **Employee records are history** — When terminating an employee, keep their record in the system for payroll audit and reference; do not delete.
 
-```
-
 ______________________________________________________________________
 
 ## Related pages
 
-- **Business** — Stores client and vendor records; employee purchase balances may be linked to vendor or client accounts.
-- **Factory** — Uses employee and task records for production tracking, costing, and work assignments.
-- **Trade** — Uses employee information for invoice creation, payment methods, and account reconciliation.
-- **Settings & Admin** — Configure system-wide settings that affect salary calculations, tax rules, and attendance defaults.
-```
+- **[Employees](employees/overview.md)** — Maintain the staff records everything else depends on.
+- **[Attendance](attendance/overview.md)** — Daily attendance that feeds salary calculation.
+- **[Salary](salary/overview.md)** — Generate and review payroll.
+- **[Business](../01-business/README.md)** — Client and vendor records; employee purchase balances can link to them.
+- **[Trade](../03-trade/README.md)** — Uses employee information for invoicing and reconciliation.
+- **[Settings and Admin](../08-settings-and-admin/README.md)** — Settings that affect salary calculation and attendance defaults.
+- **[Attendance Report](../07-reports/attendance-report.md)** — Attendance analytics under **Reports**.

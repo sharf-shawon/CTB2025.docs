@@ -19,8 +19,8 @@ Only the `knowledge-curator` agent (or a human maintainer) may edit this file.
 | `02-factory`            | Factory          | Production orders, materials, costing, inventory        |
 | `03-trade`              | Trade            | Invoices, payments, checks, vouchers, banks             |
 | `04-employee`           | Employee         | Staff, attendance, salary, wages, tasks                 |
-| `05-settings-and-admin` | Settings / Admin | Users, roles, site configuration, SMS, runtime settings |
-| `06-reference`          | Reference        | Glossary, shortcuts, FAQs, error pages, offline mode    |
+| `08-settings-and-admin` | Settings / Admin | Users, roles, site configuration, SMS, runtime settings |
+| `09-reference`          | Reference        | Glossary, shortcuts, FAQs, error pages, offline mode    |
 
 ## Terminology
 
@@ -82,8 +82,8 @@ Only the `knowledge-curator` agent (or a human maintainer) may edit this file.
 | Factory module   | `docs/user-guide/02-factory/`            | Categories, materials, inventory, and products                                |
 | Trade module     | `docs/user-guide/03-trade/`              | Invoices, payments, checks, vouchers, banks, analytics                        |
 | Employee module  | `docs/user-guide/04-employee/`           | Departments, positions, employees, attendance, salary, wages, payouts, tasks  |
-| Settings & Admin | `docs/user-guide/05-settings-and-admin/` | User management, runtime settings, SMS, maintenance mode                      |
-| Reference        | `docs/user-guide/06-reference/`          | Glossary, shortcuts, error pages, offline mode and other cross-cutting topics |
+| Settings & Admin | `docs/user-guide/08-settings-and-admin/` | User management, runtime settings, SMS, maintenance mode                      |
+| Reference        | `docs/user-guide/09-reference/`          | Glossary, shortcuts, error pages, offline mode and other cross-cutting topics |
 
 ## Style Benchmarks
 

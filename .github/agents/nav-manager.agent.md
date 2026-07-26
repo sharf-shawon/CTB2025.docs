@@ -50,6 +50,6 @@ You are a **nav-only specialist**. Your sole job is keeping `mkdocs.yml` nav acc
 - Factory (02-factory)
 - Trade (03-trade)
 - Employee (04-employee)
-- Settings and Admin (05-settings-and-admin)
-- Reference (06-reference)
+- Settings and Admin (08-settings-and-admin)
+- Reference (09-reference)
 ```

@@ -106,11 +106,15 @@ ______________________________________________________________________
 
 ## 5 · Style baseline
 
-`scripts/style_lint_baseline.json` records violations that predate the style gate.
-It may shrink but never grow. Drive it to zero, then delete the file and the
-`--baseline` handling in `scripts/style_lint.py`.
+The style gate is clean: `scripts/style_lint.py` reports zero violations across
+all 103 pages, so `style_lint_baseline.json` has been removed. Any new violation
+now fails pre-commit and CI outright.
 
 ```bash
-uv run python scripts/style_lint.py --stats --no-baseline   # what remains
-uv run python scripts/style_lint.py --update-baseline       # after fixing some
+uv run python scripts/style_lint.py              # must exit 0
+uv run python scripts/style_lint.py --stats --no-baseline
 ```
+
+If a large batch of pre-existing violations is ever introduced again (for example
+by importing content from elsewhere), regenerate a baseline with
+`--update-baseline` and drive it back to zero rather than weakening a rule.

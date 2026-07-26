@@ -45,7 +45,7 @@ Module folders:
 
 Screenshot root:
 
-- `docs/user-guide/screenshots/`
+- Screenshots live next to the page that references them
 
 Screenshot module folders:
 
@@ -118,7 +118,7 @@ When a screenshot path is provided, reference it with standard Markdown image sy
 Example:
 
 ```markdown
-![Add Client form](../screenshots/business/add-client.png)
+![Add Client form](add-client.png)
 ```
 
 Operational screenshot policy:

@@ -34,7 +34,7 @@ body:
     id: screenshot_path
     attributes:
       label: "Screenshot path"
-      placeholder: "docs/user-guide/screenshots/<module>/<file>.png"
+      placeholder: "docs/user-guide/<module>/<page>/<file>.png"
     validations:
       required: true
 
