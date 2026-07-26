@@ -10,45 +10,46 @@ Learn how CTB Admin handles network disconnections and Service Worker caching.
 
 ## Summary
 
-CTB Admin documentation uses an automated Progressive Web App (PWA) Service Worker to cache visited documentation pages, stylesheets, scripts, and graphics locally in your browser. When network connectivity drops, users can continue reading previously cached documentation pages offline.
+CTB Admin uses Progressive Web App (PWA) Service Worker caching to store visited documentation pages, stylesheets, scripts, and media files locally in your browser. During a network disconnection, users can continue browsing previously cached documentation pages offline.
 
 ______________________________________________________________________
 
 ## When to use this page
 
-- When working in low-connectivity factory or warehouse environments.
-- When an offline fallback page appears while browsing documentation.
-- When understanding what content remains available during network outages.
-- When troubleshooting outdated or stale cached documentation assets after a deployment.
+- Navigating system documentation in low-connectivity factory or warehouse settings.
+- Reconciling unvisited page offline fallback screens.
+- Resolving stale caching behavior after a recent documentation deployment.
+- Verifying the status of the local Service Worker or browser cache store.
 
 ______________________________________________________________________
 
 ## How to access this page
 
-From the sidebar navigation, Go to **Reference → Offline Mode**. The direct URL path is `/user-guide/09-reference/offline-mode/`.
+From the sidebar navigation, select **Reference → Offline Mode** (`/user-guide/09-reference/offline-mode/`).
 
 ______________________________________________________________________
 
 ## Prerequisites
 
-- **Role permissions**: Accessible by all authenticated user roles (`staff`, `accountant`, `hr`, `admin`).
-- **Prerequisites**: A modern web browser supporting Service Workers (Chrome, Firefox, Edge, Safari).
+- Modern browser with Service Worker and Cache Storage support (Chrome, Firefox, Safari, Edge).
+- Active internet connection during the initial browse session to prime the cache.
 
 ______________________________________________________________________
 
 ## Step-by-step instructions
 
-1. Browse CTB Admin documentation while connected to the internet to prime your browser cache.
-1. If your internet connection drops, continue navigating visited pages normally.
-1. If you attempt to open an unvisited page while offline, review the **Offline Fallback Page**.
-1. Once network connectivity is restored, click **Refresh** to sync the latest content updates.
+1. Open the documentation site while connected to the internet to initialize caching.
+1. If the network connection drops, continue reading already cached pages.
+1. If an unvisited page is requested while offline, review the **Offline Fallback Page** notice.
+1. Verify browser cache state by opening Chrome DevTools (**F12** $\rightarrow$ **Application** $\rightarrow$ **Cache Storage**).
+1. Reconnect to the internet and click **Refresh** to sync new updates.
 
 ______________________________________________________________________
 
-## Verification and definition of done
+## Verification & definition of done
 
-- **Cache verification**: Visited documentation pages load without internet access.
-- **Service Worker active**: Browser developer tools confirm `sw-register.js` is active and controlling document caching.
+- **Offline availability**: Disabling network connectivity in browser settings allows cached documentation pages to load.
+- **Service worker active**: The browser DevTools console confirms `sw.js` registration is active and controlling caching.
 
 ______________________________________________________________________
 
@@ -56,28 +57,34 @@ ______________________________________________________________________
 
 ### Offline functionality matrix
 
-| Capability / Feature              | Online State    | Offline State    | Behavior Description                                                  |
-| --------------------------------- | --------------- | ---------------- | --------------------------------------------------------------------- |
-| **Visited Documentation Pages**   | Full Access     | Full Access      | Served directly from local browser Cache Storage.                     |
-| **Unvisited Documentation Pages** | Full Access     | Offline Fallback | Displays offline notice shell guiding user to reconnect.              |
-| **Global Site Search**            | Full Access     | Partial Access   | Searches across locally cached page titles and text.                  |
-| **CTB Admin Application Forms**   | Live Read/Write | Blocked          | Data entry forms require an active server connection to save records. |
+| Capability / Feature   | Online State    | Offline State    | Behavior Description                                                  |
+| ---------------------- | --------------- | ---------------- | --------------------------------------------------------------------- |
+| **Visited Pages**      | Full Access     | Full Access      | Loaded directly from local browser Cache Storage.                     |
+| **Unvisited Pages**    | Full Access     | Offline Fallback | Displays offline notice shell prompting reconnection.                 |
+| **Global Site Search** | Full Access     | Partial Access   | Searches across locally cached page titles and text.                  |
+| **Admin Forms**        | Live Read/Write | Blocked          | Data entry forms require an active server connection to save records. |
 
 ![Offline mode fallback page](offline-mode-photo.png)
 
 ______________________________________________________________________
 
-## Exception handling and error recovery
+## Exception handling & error recovery
 
-| Issue / Symptom                                  | Root Cause                                                     | User remediation step                                                                                                                    | Role required     |
-| ------------------------------------------------ | -------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
-| Page displays outdated content after site update | Browser cache is retaining old Service Worker asset bundle     | 1. Reconnect to internet.<br>2. Perform hard refresh (**Ctrl+F5** or **Cmd+Shift+R**).<br>3. Clear browser site cache if issue persists. | `staff`           |
-| Unvisited page fails to load offline             | Page HTML was not cached prior to network loss                 | Reconnect to internet and click the link to cache the page for offline availability.                                                     | `staff`           |
-| Service Worker fails to register                 | Browser privacy settings block local storage / Service Workers | Enable local site storage and Service Workers in browser settings.                                                                       | `staff` / `admin` |
+| Error Code / Symptom | Root Cause                                                     | Step-by-step remediation procedure                                                                                                                    | Actionable role required |
+| -------------------- | -------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
+| Outdated content     | Browser Cache retains stale Service Worker asset bundle        | 1. Reconnect to the internet.<br>2. Perform a hard refresh (**Ctrl+F5** or **Cmd+Shift+R**).<br>3. Clear browser site cache if content remains stale. | `staff`                  |
+| Fallback screen      | Attempted to access unvisited page while offline               | 1. Reconnect to active network.<br>2. Click link to download page to browser cache store.                                                             | `staff`                  |
+| SW fails to register | Browser privacy settings block local storage / Service Workers | 1. Open browser settings.<br>2. Enable local site storage and Service Workers.                                                                        | `staff` / `admin`        |
+
+______________________________________________________________________
+
+## Related workflows & next steps
+
+- **[Error Pages](error-pages.md)** — Diagnose standard HTTP status error screens.
+- **[Troubleshooting Guide](troubleshooting.md)** — General browser and network resolution steps.
 
 ______________________________________________________________________
 
 ## Related pages
 
-- **[Error Pages](error-pages.md)** — Diagnostics for 403, 404, 500, and Maintenance errors.
-- **[Troubleshooting Guide](troubleshooting.md)** — Step-by-step solutions for connectivity and browser caching issues.
+- **[Reference](../README.md)** — Glossary, error matrices, and shortcut guides.

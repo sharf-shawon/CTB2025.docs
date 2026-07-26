@@ -4,111 +4,94 @@ tags: [module:settings, task:configure, role:admin]
 
 # User Management
 
-Use this page to create a new user account in CTB Admin. A user account provides login credentials and permission controls that determine what modules and actions each staff member can access.
-
 ## Summary
 
-Create a complete user profile with valid credentials and appropriate permissions before the user can access CTB Admin. Proper setup ensures each staff member can only perform approved tasks.
+The User Management page allows administrators to create, edit, deactivate, and assign role-based access permissions (`auth.user`) to staff accounts in CTB Admin. Access controls dictate which modules, views, and form actions each user is authorized to perform.
 
 ______________________________________________________________________
 
 ## When to use this page
 
-- Onboarding a new employee who needs CTB Admin access
-- Creating admin accounts with elevated permissions
-- Setting up department-specific user accounts with limited access
+- Onboarding new employees who require system access to CTB Admin.
+- Provisioning department-specific staff accounts with restricted module access.
+- Assigning elevate superuser or staff status flags.
+- Deactivating user accounts when an employee offboards or changes roles.
 
 ______________________________________________________________________
 
 ## How to access this page
 
-From the sidebar, go to **Settings and Admin → User Management**. On the Users list page, click the **purple (+) icon** in the top-right corner.
+From the sidebar navigation, select **Authentication → Users** (`/admin/auth/user/`).
 
 ![User List Page](user-list-page.png)
 
-The system opens the **Add User Page**.
+______________________________________________________________________
+
+## Prerequisites
+
+- Active user session with `auth.add_user` / `auth.change_user` or superuser privileges.
+- Standard employee profile details established in **Employee → Employees**.
 
 ______________________________________________________________________
 
 ## Step-by-step instructions
 
-1. Open **User Management** from the **Settings and Admin** section of the sidebar.
-1. Complete the **Account information** section described below.
-1. Complete the **Password requirements** section described below.
-1. Complete the **Permissions section** section described below.
-1. Follow **Saving the user** below to finish.
+![Add User Form](add-user.png)
+
+1. Open **Authentication → Users** from the sidebar and click **Add User (+)**.
+1. Enter a unique **Username** and secure **Password** meeting complex strength rules.
+1. Re-enter the password in **Password Confirmation** and click **Save and continue editing**.
+1. In the **Permissions** section, toggle **Staff status** (`is_staff = True`) to grant admin UI login access.
+1. Select target **Groups** or assign specific module permission codenames (e.g. `trade.add_invoice`, `employee.change_salary`).
+1. Click **Save** to finalize user account creation.
+
+![Permissions Section](user-permission-page.png)
+
+______________________________________________________________________
+
+## Verification & definition of done
+
+- **Account provisioned**: User account appears in the user list and can successfully authenticate.
+- **Access restricted**: User interface displays only authorized sidebar navigation links and action buttons based on assigned permission codenames.
 
 ______________________________________________________________________
 
 ## Field reference
 
-### Account information
+- **Username** — Unique account identifier used for login authentication.
+- **Is Active** — Account status switch (`True` enables login; `False` disables access).
+- **Staff Status (`is_staff`)** — Grants access to the CTB Admin web application.
+- **Superuser (`is_superuser`)** — Bypasses all explicit permission checks and grants unrestricted global access.
+- **Permissions** — Multi-select list of Django permission codenames (`app.action_model`).
 
-![Add User Form](add-user.png)
+### Django permission codename reference
 
-Fill in the following fields:
-
-| Field                         | What to Do             | Description                                               |
-| ----------------------------- | ---------------------- | --------------------------------------------------------- |
-| Username                      | Enter a unique name    | Used for login; must be unique across the system          |
-| Is Active                     | Toggle ON/OFF          | Controls whether the account is immediately usable        |
-| Password-based authentication | Enable or disable      | Determines if the user logs in with username and password |
-| Password                      | Enter a valid password | See password requirements below                           |
-| Password confirmation         | Re-enter the password  | Must match the password field exactly                     |
-
-!!! warning "Required Fields"
-
-    Fields marked with a **red star (\*)** are mandatory.
-
-### Password requirements
-
-When creating a password, the system enforces the following rules:
-
-- **Minimum 8 characters** — Password must be at least 8 characters long
-- **Cannot match username** — Password cannot be identical to the username
-- **Cannot be all numeric** — Password must contain at least one letter or special character
-
-!!! tip "Password Best Practices"
-
-    Use a mix of uppercase, lowercase, numbers, and special characters for stronger security.
-
-### Permissions section
-
-After clicking **Save and continue editing**, the system displays the **Permissions** section where you can control access levels.
-
-![Permissions Section](user-permission-page.png)
-
-| Option                      | Description                                                                             |
-| --------------------------- | --------------------------------------------------------------------------------------- |
-| Staff status                | Grants access to the CTB Admin interface (must be enabled for most users)               |
-| Superuser / is_superuser    | Admin-level access to all modules and settings (use carefully)                          |
-| Module-specific permissions | Fine-grained controls for individual modules (Business, Factory, Trade, Employee, etc.) |
-| Action-level permissions    | Controls specific actions like Add, Change, Delete within each module                   |
-
-Assign the minimum required permissions for the user's role.
+| Module       | Codename Pattern            | Example Permission                                  |
+| ------------ | --------------------------- | --------------------------------------------------- |
+| **Trade**    | `trade.<action>_<model>`    | `trade.add_invoice`, `trade.change_payment`         |
+| **Business** | `business.<action>_<model>` | `business.add_client`, `business.change_vendor`     |
+| **Employee** | `employee.<action>_<model>` | `employee.add_attendance`, `employee.change_salary` |
+| **Factory**  | `factory.<action>_<model>`  | `factory.add_product`, `factory.change_material`    |
 
 ______________________________________________________________________
 
-## Saving the user
+## Exception handling & error recovery
 
-After completing account information:
-
-- Click **Save** to create the user account
-- Click **Save and continue editing** to save and assign permissions on the same page
+| Error Code / Symptom              | Root Cause                                                       | Step-by-step remediation procedure                                                                                                   | Actionable role required      |
+| --------------------------------- | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------- |
+| Account created but cannot log in | `Staff status` (`is_staff`) or `Is Active` disabled              | 1. Open user profile under **Authentication → Users**.<br>2. Enable **Staff status** and **Is Active** switches.<br>3. Save profile. | `admin`                       |
+| Permission changes not visible    | Active user session caching old permission state                 | 1. Instruct user to click **Log Out** in top navbar.<br>2. Sign back in to generate a fresh permission session token.                | `staff` $\rightarrow$ `admin` |
+| Password validation failure       | Password under 8 characters, matches username, or purely numeric | 1. Enter password with at least 8 characters.<br>2. Include mixed alphanumeric and special characters.                               | `admin`                       |
 
 ______________________________________________________________________
 
-## Tips and common issues
+## Related workflows & next steps
 
-- **Password rejected?** Ensure it is 8+ characters, differs from the username, and includes at least one non-numeric character.
-- **Grant minimum required access first** — expand permissions only if the user needs additional tasks.
-- **User cannot log in after creation?** Verify that **Is Active** and **Staff status** are both enabled.
-- **Permissions not taking effect?** Ask the user to sign out completely and sign back in.
-- [App Settings](app-settings.md)
-- [Maintenance Mode](maintenance-mode.md)
+- **[App Settings](app-settings.md)** — Configure global system parameters and security controls.
+- **[Audit Log](audit-log.md)** — Monitor user authentication logs and administrative edits.
 
 ______________________________________________________________________
 
 ## Related pages
 
-- **[Settings and Admin](../README.md)** — All pages in this module.
+- **[Settings and Admin](../README.md)** — All system configuration and security administration tools.

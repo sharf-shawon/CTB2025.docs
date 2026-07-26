@@ -6,72 +6,78 @@ tags: [module:settings, task:configure, role:admin]
 
 ## Summary
 
-Use this page to review who changed data in CTB Admin, what was changed, and when the action happened. Audit logs help you verify activity, investigate unexpected changes, and support internal control checks.
-
-![Audit Log page](audit-log.png)
+The Audit Log records an immutable system trail of user actions across CTB Admin, capturing who created, modified, or deleted data, exact timestamps, and before/after field changes. Use it to verify operational activity, investigate data anomalies, and support security reviews.
 
 ______________________________________________________________________
 
 ## When to use this page
 
-- When you need to verify who created, edited, or deleted a record.
-- When you investigate incorrect values in business, factory, trade, or employee data.
-- When management asks for a history of admin activity.
-- When you need evidence for compliance, internal review, or dispute resolution.
+- Investigating who created, edited, or deleted an invoice, payment, voucher, or employee record.
+- Auditing security events and administrative setting changes.
+- Verifying compliance with internal control policies and financial audit requirements.
+- Resolving dispute discrepancies regarding transaction dates or record modifications.
 
 ______________________________________________________________________
 
 ## How to access this page
 
-From the left sidebar menu, go to **Audit Log**. It appears as the last item in the menu.
+From the sidebar navigation, select **Audit Log** (`/admin/admin/logentry/`).
+
+![Audit Log page](audit-log.png)
 
 ______________________________________________________________________
 
 ## Prerequisites
 
-- You have permission to view audit records.
-- Users have already performed actions in the system, so logs exist to review.
+- Active user session with `admin.view_logentry` or superuser permissions.
+- Audit logging enabled in CTB Admin backend settings.
 
 ______________________________________________________________________
 
 ## Step-by-step instructions
 
-1. Go to **Settings and Admin → Audit Log** from the sidebar.
-1. Use the filters to narrow the list by user, action, module, or date range.
-1. Locate the entry for the record you are investigating.
-1. Open the entry and review **Change Details** for the before and after values.
-1. Follow the **Object** reference back to the record itself if you need to correct it.
+1. Open **Settings and Admin → Audit Log** from the sidebar.
+1. Apply **User**, **Action** (Addition, Change, Deletion), or **Date** filters to narrow search results.
+1. Locate the specific log entry for the target object or user session.
+1. Click the log entry link to view complete **Change Details** including before/after values.
+1. Note the timestamp, user ID, and modified field names for your compliance record.
+
+______________________________________________________________________
+
+## Verification & definition of done
+
+- **Log entry generated**: Every database addition, change, or deletion automatically appends a corresponding log entry to the table.
+- **Traceability confirmed**: Log entries contain valid links to target model objects and user accounts.
 
 ______________________________________________________________________
 
 ## Field reference
 
-| Field name                   | What to do                                   | Description                                                    |
-| ---------------------------- | -------------------------------------------- | -------------------------------------------------------------- |
-| **User**                     | Review the account that performed the action | Shows the user or account responsible for the change           |
-| **Action**                   | Check the operation type                     | Indicates whether the record was added, changed, or deleted    |
-| **Object**                   | Identify the affected record                 | Shows the specific record or entity that was changed           |
-| **Module/App**               | Confirm the area of the system involved      | Indicates which part of CTB Admin the change happened in       |
-| **Timestamp**                | Check when the event was recorded            | Shows the date and time the action was saved                   |
-| **Change Details**           | Review what changed                          | Provides before/after values or a summary of the edited fields |
-| **IP/Source (if available)** | Use for security review if needed            | Shows the request origin information when it is available      |
-
-This page reads audit trail data for admin activity. Use it as the system source when checking history related to business records such as clients, invoices, payments, checks, and employee entries.
+- **User** — User account responsible for performing the action.
+- **Action** — Type of database operation: `Addition`, `Change`, or `Deletion`.
+- **Object** — Name and primary key identifier of the affected record.
+- **Module/App** — System module where the event occurred (e.g., `Trade`, `Business`, `Employee`).
+- **Timestamp** — Exact server date and time (`YYYY-MM-DD HH:MM:SS`) when the event was saved.
+- **Change Details** — JSON representation or bulleted summary of before and after field values.
 
 ______________________________________________________________________
 
-## Tips and common issues
+## Exception handling & error recovery
 
-- Check system date and time settings if log times look inconsistent.
-- Filter by a short date range first when there are many records.
-- Use both **User** and **Object** together to find the correct event faster.
-- If no entries appear, confirm that the action was actually saved and that your account has viewing permission.
-- Export or screenshot important entries during incident review so your team has a fixed reference.
+| Error Code / Symptom          | Root Cause                                                             | Step-by-step remediation procedure                                                                                                           | Actionable role required |
+| ----------------------------- | ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
+| `403 Forbidden` on log access | User account lacks `admin.view_logentry` permission                    | 1. Contact a system administrator to request `admin.view_logentry`.<br>2. Re-authenticate to apply updated permissions.                      | `admin`                  |
+| Missing audit entries         | Action performed via direct database bypass without Django ORM signals | 1. Ensure all administrative operations occur via CTB Admin UI or authenticated API.<br>2. Review server access logs for direct DB sessions. | `admin`                  |
+
+______________________________________________________________________
+
+## Related workflows & next steps
+
+- **[User Management](user-management.md)** — Review and manage user permissions.
+- **[App Settings](app-settings.md)** — Adjust system-wide settings and security parameters.
 
 ______________________________________________________________________
 
 ## Related pages
 
-- See [User Management](user-management.md) to control who can access and change data.
-- See [Maintenance Mode](maintenance-mode.md) before performing controlled system updates.
-- See [App Settings](app-settings.md) for global behavior that may affect user activity.
+- **[Settings and Admin](../README.md)** — All system configuration and security administration tools.

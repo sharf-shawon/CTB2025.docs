@@ -4,29 +4,25 @@ tags: [module:settings, task:configure, role:admin]
 
 # App Settings
 
-Configure system-wide settings that affect all users and modules across CTB Admin. Only superusers or administrators with permission can access this page.
-
 ## Summary
 
-App Settings contains all global configuration for CTB Admin, including company branding, operational defaults, balance thresholds, invoice templates, and integration settings. Changes made here impact all users and workflows immediately.
+App Settings contains global system configuration for CTB Admin, including company branding, invoice templates, balance thresholds, notification preferences, factory operational limits, and emergency maintenance mode settings. Changes made here apply across all users and modules immediately.
 
 ______________________________________________________________________
 
 ## When to use this page
 
-- Set up company branding and legal information
-- Configure invoice design and display options
-- Enable or disable SMS and email notifications
-- Adjust factory and operational parameters
-- Configure API keys and developer settings
-- Set balance warning thresholds
-- Manage tax rates and discount limits
+- Configuring company branding, legal contact details, and logo links for client-facing invoices.
+- Setting balance alert thresholds (orange/red warning levels) on dashboards.
+- Enabling or disabling SMS notifications and configuring SMS provider API tokens.
+- Adjusting standard factory workday durations (in minutes) for attendance and wage calculations.
+- Toggling system-wide Maintenance Mode during scheduled updates.
 
 ______________________________________________________________________
 
 ## How to access this page
 
-From the sidebar, click **All applications**, then open **CTB Settings** and select **Config**.
+From the sidebar navigation, click **All applications**, then select **CTB Settings → Config** (`/admin/CTB_Setting/config/`).
 
 ![Config Page Navigation](ctb-setting-path-direction.png)
 
@@ -36,171 +32,69 @@ ______________________________________________________________________
 
 ## Prerequisites
 
-- You have superuser or administrator permission
-- You understand the system-wide impact before making changes
-- You have received approval to modify core settings
+- Active user session with superuser rights or `CTB_Setting.change_config` permission.
+- Received executive authorization prior to modifying production thresholds or API keys.
 
 ______________________________________________________________________
 
 ## Step-by-step instructions
 
-1. Open **App Settings** from the **Settings and Admin** section of the sidebar.
-1. Complete the **Setting groups and configuration details** section described below.
-1. Review the values you entered, then save the record.
+1. Open **CTB Settings → Config** from the sidebar.
+1. Select the configuration section you want to modify (e.g. **Brand details**, **Invoice settings**, **SMS settings**).
+1. Update setting values as required.
+1. Review all modified values to prevent operational disruption.
+1. Click **Save** at the bottom of the page to apply global changes immediately.
+
+______________________________________________________________________
+
+## Verification & definition of done
+
+- **Settings applied**: Saved parameters immediately update invoice rendering, warning colors, or SMS notifications.
+- **Audit trail logged**: Configuration changes log an entry under **Settings and Admin → Audit Log**.
 
 ______________________________________________________________________
 
 ## Field reference
 
-### Setting groups and configuration details
+### App details & brand details
 
-### App details
+- **Company Trading Name** — Official business name printed on sales invoices.
+- **Main Contact Phone Number** — Business phone number displayed on client headers.
+- **Main Email Address** — System email address used on invoices and automated receipts.
+- **Official Company Address** — Legal street address for tax and invoice headers.
 
-Controls dashboard interface and user experience settings:
+### Invoice & factory settings
 
-| Setting                         | Description                                                   | Default |
-| ------------------------------- | ------------------------------------------------------------- | ------- |
-| **Show the random Quran quote** | Display or hide the random Quran quote on the admin dashboard | `true`  |
-
-!!! info "Info"
-
-    When enabled, a new Quran verse appears each time the dashboard loads, providing daily inspiration to users.
-
-### Balance settings
-
-Configure thresholds for balance warnings and alerts:
-
-| Setting                                          | Description                                                           | Default |
-| ------------------------------------------------ | --------------------------------------------------------------------- | ------- |
-| **Balance orange threshold percentage (80-78%)** | Set warning threshold percentage when balance falls into orange range | 80%     |
-| **Balance red threshold percentage (80+)**       | Set critical threshold percentage when balance falls into red range   | 80%     |
-
-!!! warning "Alert Thresholds"
-
-    These percentages control when balance indicators change color in reports and dashboards. Lower thresholds trigger earlier warnings.
-
-### Brand details
-
-Manage company branding and legal information displayed across CTB Admin:
-
-| Setting                                          | Description                                                    | Value Type |
-| ------------------------------------------------ | -------------------------------------------------------------- | ---------- |
-| **Company Trading Name**                         | Official legal name of your trading business                   | Text       |
-| **Company Tagline**                              | Short and striking memorable phrase used in advertising        | Text       |
-| **Main contact phone number**                    | Primary business phone number for client inquiries             | Phone      |
-| **Main email address**                           | Primary email address displayed on invoices and communications | Email      |
-| **Official company address**                     | Legal business address for formal documents and invoices       | Text       |
-| **Geographic location coordinates**              | GPS coordinates of your company office (latitude, longitude)   | Text       |
-| **The city where company is located**            | City name for address and shipping information                 | Text       |
-| **The postal or zip code for company's address** | Postal code for all business documents                         | Text       |
-| **The country where your company is based**      | Country name for legal and shipping purposes                   | Text       |
-
-!!! tip "Best Practice"
-
-    Keep all company information consistent across all settings to ensure uniform branding on invoices and client-facing documents.
-
-### Factory settings
-
-Configure factory and production operational parameters:
-
-| Setting                                                                 | Description                                       | Value Type |
-| ----------------------------------------------------------------------- | ------------------------------------------------- | ---------- |
-| **The number of minutes in a standard workday (8 hours = 480 minutes)** | Standard workday duration for attendance tracking | Number     |
-
-!!! note "Workday Duration"
-
-    This setting affects wage calculations and attendance records. A standard 8-hour workday equals 480 minutes.
-
-### Invoice settings
-
-Control invoice design, display, and calculation defaults:
-
-| Setting                                                       | Description                                                                                                     | Value Type |
-| ------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | ---------- |
-| **The commission amount warred for each item in an invoice**  | The commission amount earned for each item in an invoice. This is added to the client's commission balance item | Decimal    |
-| **The visual design for your invoices**                       | Choose the invoice design template (CTE Custom, CTE HTML)                                                       | Selection  |
-| **The web address (URL) of your company logo**                | URL where invoice logo is hosted (can be image or HTML embed)                                                   | URL        |
-| **A short message appears at the top of every invoice**       | Header message displayed at invoice top                                                                         | Text       |
-| **A short message appears at the bottom of every invoice**    | Footer message displayed at invoice bottom                                                                      | Text       |
-| **Choose whether to display the invoice amount in words**     | Show rupee amount as written text on invoices                                                                   | Yes / No   |
-| **The standard tax rate applied to sales**                    | Default sales tax percentage for line items                                                                     | Percentage |
-| **The standard Value Added Tax (VAT) applied to sales**       | VAT percentage for line items                                                                                   | Percentage |
-| **The highest discount that can be applied to a sale**        | Maximum discount percentage allowed per invoice                                                                 | Percentage |
-| **The maximum discount amount that can be applied to a sale** | Maximum discount amount in currency units                                                                       | Currency   |
-
-!!! info "Invoice Customization"
-
-    All invoice message and design settings affect PDF generation and printed invoices. Test after changes to ensure proper formatting.
-
-### Notifications
-
-Configure system notification delivery:
-
-| Setting                                                   | Description                                           | Value Type |
-| --------------------------------------------------------- | ----------------------------------------------------- | ---------- |
-| **Email address where system notifications will be sent** | Destination email for system alerts and notifications | Email      |
-
-!!! tip "Notification Routing"
-
-    Ensure this email address is monitored regularly to stay informed of system events and critical alerts.
+- **Standard Tax Rate (%)** — Default sales tax percentage applied to invoice items.
+- **Standard VAT (%)** — Default Value Added Tax percentage.
+- **Max Discount (%)** — Maximum allowable discount percentage on sales invoices.
+- **Standard Workday (Minutes)** — Factory shift duration (default: `480` minutes for 8 hours).
 
 ### SMS settings
 
-Enable and configure SMS messaging for notifications and communication:
-
-| Setting                                       | Description                                           | Value Type |
-| --------------------------------------------- | ----------------------------------------------------- | ---------- |
-| **Enable or disable SMS functionality**       | Master toggle to enable/disable all SMS features      | Yes / No   |
-| **Bearer token for Xeno/Clarity SMS API key** | API authentication token for SMS service provider     | Text       |
-| **Approved sender ID/Name for SMS messages**  | Sender name or ID that appears in SMS messages        | Text       |
-| **The API endpoint URL for Xeno/Clarity SMS** | Base URL for SMS API service (for custom integration) | URL        |
-
-!!! warning "SMS Configuration"
-
-    SMS features require valid API credentials with your SMS service provider. Ensure endpoint URL and API key are correct before enabling.
-
-!!! note "Sender ID"
-
-    The approved sender ID must be registered with your SMS provider and comply with local telecommunications regulations.
-
-### X developer settings
-
-Advanced developer and API configuration options:
-
-| Setting                                                                                 | Description                                     | Value Type |
-| --------------------------------------------------------------------------------------- | ----------------------------------------------- | ---------- |
-| **Enable in millisecond(s) of inactivity to enable screensaver**                        | Set inactivity time before screensaver triggers | Number     |
-| **For developers: webhook URL to trigger a new deployment of the static site**          | Webhook URL for CI/CD deployment automation     | URL        |
-| **For developers: The API key for authenticating static site deployment requests**      | API key for securing deployment webhook         | Text       |
-| **For developers: The minimum time in seconds to wait between static site deployments** | Rate-limiting for deployment requests           | Number     |
-| **Your Google Analytics ID to track website visitors and generate reports**             | GA4 ID for analytics tracking                   | Text       |
-| **A URL for an external service to monitor if your website is available**               | Service URL for uptime monitoring               | URL        |
-| **A URL for the documentation of your application**                                     | Documentation URL (e.g., docs site link)        | URL        |
-
-!!! warning "Developer Settings"
-
-    These settings should only be configured by technical administrators. Incorrect values may break deployments or tracking.
-
-!!! note "Security"
-
-    Keep API keys and webhook URLs confidential. Do not commit sensitive values to version control.
+- **Enable SMS** — Master toggle switch to enable or disable outgoing SMS alerts.
+- **SMS Bearer Token** — API authentication token for SMS gateway provider.
+- **Approved Sender ID** — Registered sender name displayed on client SMS messages.
 
 ______________________________________________________________________
 
-## Tips and common issues
+## Exception handling & error recovery
 
-- **Change one setting at a time** — Modify individual settings one at a time to identify which change caused any issues.
-- **Test after critical changes** — After changing invoice, balance, or factory settings, verify behavior in a test workflow.
-- **Record significant changes** — Keep a team log of major configuration changes for audit purposes.
-- **Reset to Default** — If a setting causes unexpected behavior, refer to the **Default** column and reset the value.
-- **Settings take effect immediately** — Changes are live once saved; users do not need to log out and back in.
-- **Backup sensitive values** — Before changing API keys or URLs, document the old values in a secure location.
+| Error Code / Symptom    | Root Cause                                                | Step-by-step remediation procedure                                                                                   | Actionable role required |
+| ----------------------- | --------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | ------------------------ |
+| `403 Forbidden` on save | User account lacks `CTB_Setting.change_config` permission | 1. Contact a superuser to assign `CTB_Setting.change_config`.<br>2. Log out and sign back in to refresh permissions. | `admin`                  |
+| SMS delivery fails      | Invalid SMS Bearer Token or endpoint URL                  | 1. Verify API token with SMS service provider.<br>2. Confirm **Approved Sender ID** matches provider registration.   | `admin`                  |
+| Maintenance mode lock   | Superuser enabled Maintenance Mode for non-superusers     | 1. Access `/admin/` using superuser credentials.<br>2. Toggle **Maintenance Mode** off under App Settings.           | `admin`                  |
+
+______________________________________________________________________
+
+## Related workflows & next steps
+
+- **[User Management](user-management.md)** — Manage user accounts and Django permission codenames.
+- **[Audit Log](audit-log.md)** — Review administrative configuration edit history.
 
 ______________________________________________________________________
 
 ## Related pages
 
-- **[User Management](user-management.md)** — Configure users, roles, and permissions
-- **[Audit Log](audit-log.md)** — Review system changes and user activity logs
-- **[Maintenance Mode](maintenance-mode.md)** — Take the system offline for updates
-- **[SMS Notifications](sms-notifications.md)** — SMS delivery and provider configuration
+- **[Settings and Admin](../README.md)** — All system configuration and security administration tools.

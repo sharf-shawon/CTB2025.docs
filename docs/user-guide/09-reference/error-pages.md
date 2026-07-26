@@ -16,36 +16,36 @@ ______________________________________________________________________
 
 ## When to use this page
 
-- When you see a **403 Forbidden** error screen after clicking a link or saving a form.
-- When a **404 Not Found** page appears after following a bookmark or entering a URL.
-- When a **500 Server Error** screen occurs during form submission or report generation.
-- When the system displays a **Maintenance Mode** lock message.
+- You see a **403 Forbidden** error screen after clicking a link or saving a form.
+- A **404 Not Found** page appears after following a bookmark or entering a URL.
+- A **500 Server Error** screen occurs during form submission or report generation.
+- The system displays a **Maintenance Mode** lock message.
 
 ______________________________________________________________________
 
 ## How to access this page
 
-From the sidebar navigation, Go to **Reference → Error Pages**. The direct URL path is `/user-guide/09-reference/error-pages/`.
+From the sidebar navigation, select **Reference → Error Pages** (`/user-guide/09-reference/error-pages/`).
 
 ______________________________________________________________________
 
 ## Prerequisites
 
-- **Role permissions**: Accessible by all authenticated user roles (`staff`, `accountant`, `hr`, `admin`).
-- **Prerequisites**: Active user session in CTB Admin.
+- Active user session in CTB Admin.
+- Accessible by all authenticated user roles (`staff`, `accountant`, `hr`, `admin`).
 
 ______________________________________________________________________
 
 ## Step-by-step instructions
 
 1. Identify the HTTP status code or screen title (e.g., 403, 404, 500, or Maintenance Mode).
-1. Match the error code against the **Error response matrix** in the Field reference section below.
-1. Follow the exact remediation steps assigned to your user role.
+1. Match the error code against the **Common error screens and diagnostic matrix** in the Field reference section below.
+1. Follow the exact remediation steps assigned to your user role in the **Exception handling & error recovery** section.
 1. If the error persists, note the exact URL, error code, and timestamp before contacting a system administrator.
 
 ______________________________________________________________________
 
-## Verification and definition of done
+## Verification & definition of done
 
 - **Error resolution**: The user successfully returns to a functional CTB Admin page after resolving permissions, fixing the URL, or waiting for maintenance completion.
 - **Audit verification**: Admin users can inspect the **Audit Log** (`08-settings-and-admin/audit-log.md`) to verify if a failed access attempt was logged.
@@ -65,19 +65,24 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## Exception handling and error recovery
+## Exception handling & error recovery
 
-| Error Code | Symptom                                             | Step-by-step remediation procedure                                                                                                                                                                                                                               | Actionable role required      |
-| ---------- | --------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------- |
-| **403**    | "You do not have permission to perform this action" | 1. Confirm your current user role.<br>2. Contact an administrator to request the specific Django permission codename (e.g. `trade.add_invoice`).<br>3. Log out and log back in to refresh permissions.                                                           | `staff` $\rightarrow$ `admin` |
-| **404**    | "The page or record could not be found"             | 1. Verify the record ID in the URL bar.<br>2. Open the module overview list (e.g., **Trade → Invoices**) and search for the record.<br>3. Check **Audit Log** to verify if another user deleted the record.                                                      | `staff` / `accountant` / `hr` |
-| **500**    | "An unexpected server error occurred"               | 1. Do NOT resubmit the form repeatedly.<br>2. Refresh the browser once to test if the connection recovers.<br>3. Open **Audit Log** or check module list to see if changes were partially saved.<br>4. Report the exact steps and timestamp to an administrator. | `staff` $\rightarrow$ `admin` |
-| **503**    | "System is currently under maintenance"             | 1. Wait for maintenance to finish (typically 10-15 minutes).<br>2. Superusers can sign in via `/admin/` to toggle **Maintenance Mode** off in **App Settings**.                                                                                                  | `staff` $\rightarrow$ `admin` |
+| Error Code / Symptom                   | Root Cause                                      | Step-by-step remediation procedure                                                                                                                                                                                                          | Actionable role required      |
+| -------------------------------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------- |
+| **403** / "You do not have permission" | User account lacks specific permission codename | 1. Confirm current user role.<br>2. Contact an administrator to request the specific Django permission codename (e.g. `trade.add_invoice`).<br>3. Log out and log back in to refresh permissions.                                           | `staff` $\rightarrow$ `admin` |
+| **404** / "Page or record not found"   | Invalid URL parameter or record deleted         | 1. Verify the record ID in the URL bar.<br>2. Open the module overview list and search for the record.<br>3. Check **Audit Log** to verify if another user deleted the record.                                                              | `staff` / `accountant` / `hr` |
+| **500** / "Unexpected server error"    | Server exception or database timeout            | 1. Do NOT resubmit the form repeatedly.<br>2. Refresh the browser once to test if the connection recovers.<br>3. Open **Audit Log** to see if changes were partially saved.<br>4. Report the exact steps and timestamp to an administrator. | `staff` $\rightarrow$ `admin` |
+| **503** / "System under maintenance"   | Administrator enabled Maintenance Mode          | 1. Wait for maintenance to finish (typically 10-15 minutes).<br>2. Superusers can sign in via `/admin/` to toggle **Maintenance Mode** off in **App Settings**.                                                                             | `staff` $\rightarrow$ `admin` |
+
+______________________________________________________________________
+
+## Related workflows & next steps
+
+- **[App Settings](../08-settings-and-admin/app-settings.md)** — Toggle Maintenance Mode and update global parameters.
+- **[Audit Log](../08-settings-and-admin/audit-log.md)** — Reconcile system errors and access attempts.
 
 ______________________________________________________________________
 
 ## Related pages
 
-- **[Permissions Guide](permissions.md)** — Detailed mapping of roles and Django permission codenames.
-- **[Troubleshooting Guide](troubleshooting.md)** — Self-service resolution steps for common operational issues.
-- **[Audit Log Guide](../08-settings-and-admin/audit-log.md)** — Inspect audit logs to track user actions and system errors.
+- **[Reference](../README.md)** — Glossary, error matrices, and shortcut guides.
