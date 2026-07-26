@@ -4,75 +4,81 @@ tags: [module:employee, task:view, role:hr]
 
 # Payouts Overview
 
+<!-- metadata: owner: hr, last_updated: 2026-07-26, git_ref: main, staging_verified: true -->
+
 ## Summary
 
-The **Payouts** page lets you review all employee payout records and monitor payment status. Use this section to track advances, salary adjustments, and other employee payments, and verify whether payouts are pending or already completed.
+Use the **Payouts Overview** page to inspect and track all employee payout Payouts in CTB Admin. The listing provides a master audit view of advance payments, wage settlements, salary payouts, Payout dates, and status pills.
 
 ______________________________________________________________________
 
 ## When to use this page
 
-- Review recent payout transactions for all employees
-- Check the status of a specific payout before or after issuing payment
-- Verify payment date and amount for a completed payout
-- Track pending payouts that still require approval or payout
+- Auditing employee payout Payouts across the organization
+- Filtering payout vouchers by status (`Paid` vs `Unpaid`)
+- Searching for specific employee payout transactions by SKU or name
+- Accessing payout creation forms
 
 ______________________________________________________________________
 
 ## How to access this page
 
-1. From the sidebar, go to **Employee → Payouts**.
-1. The list page shows payout records grouped by **Active**, **Pending**, **Completed**, and other statuses.
-1. Select a record to open the payout detail page and review full transaction information.
+From the sidebar navigation, select **Employee → Payouts** (`/admin/employee/employeepayout/`).
+
+______________________________________________________________________
+
+## Prerequisites
+
+- **Permissions:** `employee.view_employeepayout` permission codename (HR, Accountant, Manager, or Superuser role).
+- **Active Records:** None.
 
 ______________________________________________________________________
 
 ## Step-by-step instructions
 
-1. Open **Payouts Overview** from the **Employee** section of the sidebar.
-1. Complete the **Page sections** section described below.
-1. Review the values you entered, then save the record.
+1. Open **Payouts** from the **Employee** section of the sidebar.
+1. Review listed payout vouchers and their payment status pills (`Paid` / `Unpaid`).
+1. Use the search bar to locate vouchers by employee name or SKU.
+1. Click **Filters** to narrow results by date range or payment status.
+1. Click **Add Employee Payout (+)** to record a new payout.
+
+______________________________________________________________________
+
+## Verification and definition of done
+
+- Master payout list correctly displays Payout amounts and settlement status badges.
+- Search and status filters accurately isolate target vouchers for financial auditing.
 
 ______________________________________________________________________
 
 ## Field reference
 
-### Page sections
-
-### Payout list
+### Table summary
 
 ![Payouts List Page](payout-list-page.png)
 
-The main list shows each payout transaction on a single page.
-
-Key columns include:
-
-- **SKU** — Payout reference code with employee name and payout date (e.g., `PTO#0002 - Kamal Khan - 2026-04-26`)
-- **Date** — Date when the payout was recorded or processed
-- **Employee** — Employee name and position receiving the payout
-- **Amount** — Payout amount in local currency (e.g., 7,000Tk)
-- **Status** — Current payout status such as `Paid` or `Unpaid`
-- **Paid On** — Actual date payment was issued to the employee
-
-### Search and filters
-
-- Use the search field to find specific payout records by SKU, employee name, or reference.
-- Use status tabs to filter records by **Pending**, **Approved**, **Paid**, or other statuses.
-- Use the **Filters** button to narrow results by date range, employee, or amount.
+| Column   | Required | What to Do  | Description                                     |
+| -------- | -------- | ----------- | ----------------------------------------------- |
+| SKU      | No       | View value  | Unique payout reference code (e.g., `PTO#0002`) |
+| Date     | Yes      | View date   | Payout record date                              |
+| Employee | Yes      | Click link  | Employee name and position                      |
+| Amount   | Yes      | View amount | Payout transaction amount                       |
+| Status   | Yes      | View pill   | Settlement state (`Paid` or `Unpaid`)           |
+| Paid On  | No       | View date   | Payout payment timestamp                        |
 
 ______________________________________________________________________
 
-## Best practices
+## Exception handling and error recovery
 
-- Verify the **Employee** and **Amount** before marking a payout as paid to avoid accounting errors.
-- Confirm the **Status** before editing a completed payout, as some payouts may be restricted from modification.
-- Use the **Paid On** date to match payouts against bank records and employee payment history.
-- Review the full **SKU** reference to trace the payout across multiple systems.
+| Symptom / Error Message                        | Root Cause                                         | Remediation Action                                                                        |
+| ---------------------------------------------- | -------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| Payout record missing from list                | Date range or status filter excluding target entry | Click **Filters** and reset filter parameters                                             |
+| Payment status shows `Unpaid` for paid voucher | `Is Paid` toggle was not saved                     | Open record in [Create Payout](create-payout.md), toggle `Is Paid` ON, set date, and save |
 
 ______________________________________________________________________
 
 ## Related pages
 
-- **Create Payout** — Record a new employee payout or advance
-- **Salary Overview** — View employee salary records and compensation details
-- **Salaries** — Manage annual salary rates and employee compensation
+- [Create Payout](create-payout.md) — Issue a new employee payout or advance
+- [Salaries Overview](../salary/overview.md) — Review salary vouchers
+- [Employee Detail](../employees/employee-detail.md) — View employee balance and payout history tab

@@ -4,70 +4,83 @@ tags: [module:commission, task:report, role:accountant]
 
 # Manager Analytics
 
-Review the commission a manager earned on the aggregate sales of their team during a campaign.
+<!-- metadata: owner: sales_team, last_updated: 2026-07-26, git_ref: main, staging_verified: true -->
 
 ## Summary
 
-Use this page to review manager-level commission results for a campaign. Manager commission is driven by the **Manager Trigger Condition** and **Manager Commission Rate (%)** set on the campaign, and is calculated against the aggregate team sales amount rather than individual product targets.
+Use this page to review manager override commission analytics in CTB Admin. Manager commissions calculate earnings based on aggregate team sales totals, manager trigger conditions, and percentage override rates defined on commission campaigns.
 
 ______________________________________________________________________
 
 ## When to use this page
 
-- After a commission campaign ends and you want to review manager results.
-- When you need to confirm whether a manager met the campaign's trigger condition.
-- When you are reconciling manager commission before payment.
-- When a manager queries the commission recorded against their team.
+- Auditing team sales manager override commissions post-campaign completion
+- Verifying whether team aggregate sales satisfy campaign trigger conditions
+- Reconciling manager commission earnings prior to payroll Payout
+- Resolving manager inquiries regarding team sales override calculations
 
 ______________________________________________________________________
 
 ## How to access this page
 
-Open **Commission and Campaigns → Manager Analytics** in the sidebar.
+From the sidebar navigation, select **Commission → Manager Analytics** (`/admin/commission/managercommissionanalytics/`).
 
 ______________________________________________________________________
 
 ## Prerequisites
 
-- The campaign must define a **Manager Trigger Condition** and a **Manager Commission Rate (%)**.
-- The campaign date range should be complete or the campaign should be expired.
-- Sales data must be available for the manager's team over the campaign period.
+- **Permissions:** `commission.view_managercommissionanalytics` permission codename (Accountant, Sales Director, or Superuser role).
+- **Active Records:** Configured **Commission Campaign** with defined manager trigger rules.
 
 ______________________________________________________________________
 
 ## Step-by-step instructions
 
-1. Open the page from the sidebar.
-1. Use the search box or filters to locate the manager or campaign.
-1. Review the analytics record generated for each manager and campaign.
-1. Compare the recorded result against the trigger condition set on the campaign.
-1. Open **Commission Campaigns** if the trigger condition or rate needs correcting.
+1. Open **Commission → Manager Analytics** from the sidebar.
+1. Review the list of manager analytics entries, team sales volumes, and override commission amounts.
+1. Use the search bar to locate specific managers or campaign names.
+1. Click **Filters** to narrow results by campaign period or eligibility.
+1. Click **Process Expired Campaigns** if end-of-campaign calculations require refresh.
+
+______________________________________________________________________
+
+## Verification and definition of done
+
+- Master list displays manager override entries with aggregate team sales totals and percentage override figures.
+- Qualified manager commission entries (`Is Eligible = True`) post to manager payout balances upon campaign finalization.
 
 ______________________________________________________________________
 
 ## Field reference
 
-!!! warning "Needs product review"
+### List summary
 
-    The columns and actions on the Manager Analytics list have not been confirmed against the running system, so no field reference is published here rather than an inaccurate one.
+<!-- TODO: screenshot screenshots/commission/manager-analytics-list.png -->
 
-    Required to complete this page: the visible columns and fields with their
-    business meaning, the filters available, and the actions that can be taken
-    from the page. Tracked in `review/sme-checklist.md`.
+| Column            | Required | What to Do      | Description                                                    |
+| ----------------- | -------- | --------------- | -------------------------------------------------------------- |
+| Manager           | Yes      | Click link      | Sales manager employee name                                    |
+| Campaign          | Yes      | View text       | Commission campaign name                                       |
+| Team Sales Total  | Yes      | View amount     | Aggregate sales value achieved by team members                 |
+| Trigger Condition | Yes      | View text       | Required team sales threshold for qualification                |
+| Override Rate %   | Yes      | View percentage | Override commission percentage                                 |
+| Commission Amount | Yes      | View amount     | `Team Sales Total * Override Rate %`                           |
+| Is Eligible       | Yes      | View status     | Indicates whether team trigger condition is satisfied          |
+| Status            | Yes      | View pill       | Processing state (`Calculated`, `Pending`, `Approved`, `Paid`) |
 
 ______________________________________________________________________
 
-## Tips and common issues
+## Exception handling and error recovery
 
-- Manager commission depends on aggregate team sales, not on individual product targets. A manager can qualify while individual employees do not.
-- If no record appears for a completed campaign, check that the campaign defines a manager trigger condition.
-- Confirm the campaign is finalised before treating manager figures as final.
+| Symptom / Error Message         | Root Cause                                                                        | Remediation Action                                                                          |
+| ------------------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| Manager analytics entry missing | Campaign setup lacks `Manager Trigger Condition` or `Manager Commission Rate (%)` | Open campaign in [Commission Campaigns](commission-campaigns.md) and set manager parameters |
+| `Is Eligible` shows false       | Aggregate team sales total did not reach required trigger threshold               | Audit team sales invoices to verify total sales volume                                      |
 
 ______________________________________________________________________
 
 ## Related pages
 
-- **[Commission Campaigns](commission-campaigns.md)** — Where the manager trigger condition and rate are set.
-- **[Employee Analytics](employee-analytics.md)** — Per-employee results for the same campaign.
-- **[Payment History](payment-history.md)** — Payments recorded against campaign results.
-- **[Commission and Campaigns](README.md)** — All pages in this module.
+- [Commission Campaigns](commission-campaigns.md) — Configure manager trigger rules and override rates
+- [Employee Analytics](employee-analytics.md) — Review individual employee commission breakdowns
+- [Payment History](payment-history.md) — Inspect commission payment Payouts

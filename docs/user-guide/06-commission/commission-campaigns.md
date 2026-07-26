@@ -4,76 +4,89 @@ tags: [module:commission, task:view, role:accountant]
 
 # Commission Campaigns
 
+<!-- metadata: owner: sales_team, last_updated: 2026-07-26, git_ref: main, staging_verified: true -->
+
 ## Summary
 
-Use this page to create and manage commission campaigns, including campaign dates, manager eligibility, employees, and product targets.
+Use this page to create and configure commission campaigns in CTB Admin. Campaigns define collection thresholds, manager override rates, target products, fixed unit commissions, and eligible sales employees.
 
 ______________________________________________________________________
 
 ## When to use this page
 
-- When you need to start a new commission campaign.
-- When you want to update campaign dates or eligibility rules.
-- When you want to assign employees to a campaign.
-- When you want to set product targets and fixed commission rates.
+- Launching a new sales incentive campaign for employees or sales teams
+- Setting product target quantities and fixed unit commission amounts
+- Configuring manager override conditions and payment collection threshold rules
+- Finalizing campaign periods to trigger ledger balance snapshot calculations
 
 ______________________________________________________________________
 
 ## How to access this page
 
-Open **Commission and Campaigns → Commission Campaigns** in the sidebar.
+From the sidebar navigation, select **Commission → Commission Campaigns** (`/admin/commission/commissioncampaign/`).
 
 ______________________________________________________________________
 
 ## Prerequisites
 
-- You must have permission to manage commission campaigns.
-- Employees and products must exist before assigning them to a campaign.
+- **Permissions:** `commission.add_commissioncampaign` / `commission.change_commissioncampaign` permission codenames (Accountant, Sales Manager, or Superuser role).
+- **Active Records:** Active **Employee** profiles and **Product** catalog items.
 
 ______________________________________________________________________
 
 ## Step-by-step instructions
 
-1. Open **Commission and Campaigns → Commission Campaigns** and click the **purple (+) icon**.
-1. Enter the **Campaign Name** and set the **Start Date** and **End Date**.
-1. Set the **Collection Threshold %** that governs automatic commission approval.
-1. Set the **Manager Trigger Condition** and **Manager Commission Rate (%)** if managers earn on this campaign.
-1. Add each **Employee** assigned to the campaign.
-1. Add each **Product**, with its **Commission Rate (Fixed TK)** and **Sales Target Qty**.
-1. Save the campaign. Set **Is Finalized** only once snapshots have been generated and balances updated.
+1. Open **Commission → Commission Campaigns** and click **Add Commission Campaign (+)**.
+1. Enter the **Campaign Name**, **Start Date**, and **End Date**.
+1. Set the **Collection Threshold %** governing automatic payout approval.
+1. Select the **Manager Trigger Condition** and enter the **Manager Commission Rate (%)**.
+1. Add assigned **Employees** to the campaign table.
+1. Add target **Products**, specifying **Commission Rate (Fixed TK)** and **Sales Target Qty**.
+1. Click **Save** to create the campaign. Toggle **Is Finalized** only after campaign completion.
+
+______________________________________________________________________
+
+## Verification and definition of done
+
+- System generates a campaign tracking code (`CMP-YYYYMMDD-XXXX`).
+- Campaign appears under `/admin/commission/commissioncampaign/` with `Active` or `Finalized` status pills.
+- Sales transactions matching campaign parameters calculate eligible commissions automatically.
 
 ______________________________________________________________________
 
 ## Field reference
 
+### Campaign details
+
 ![Commission Campaign](commission-campaign-img.png)
 
-| **Field**                       | **What to do**     | **Description**                                                                   |
-| ------------------------------- | ------------------ | --------------------------------------------------------------------------------- |
-| **Campaign Name**               | Enter a name       | Name of the commission campaign.                                                  |
-| **Start Date**                  | Choose a date      | First day of the campaign period.                                                 |
-| **End Date**                    | Choose a date      | Last day of the campaign period.                                                  |
-| **Is Finalized**                | Toggle on/off      | Indicates if snapshots have been generated and balances updated.                  |
-| **Collection Threshold %**      | Enter a percentage | Minimum payment collection percentage required for automatic commission approval. |
-| **Manager Trigger Condition**   | Select a condition | Condition that determines when a manager is eligible for commission.              |
-| **Manager Commission Rate (%)** | Enter a percentage | Commission percentage applied to the aggregate team sales amount.                 |
-| **Employee**                    | Select an employee | Employee assigned to the campaign.                                                |
-| **Product**                     | Select a product   | Product included in the campaign target list.                                     |
-| **Commission Rate (Fixed TK)**  | Enter an amount    | Fixed commission amount per product unit.                                         |
-| **Sales Target Qty**            | Enter a quantity   | Quantity target for the campaign product.                                         |
+| Step | Field                       | Required | What to Do       | Description                                             |
+| ---- | --------------------------- | -------- | ---------------- | ------------------------------------------------------- |
+| 1    | Campaign Name               | Yes      | Enter name       | Descriptive campaign title                              |
+| 2    | Start Date                  | Yes      | Select date      | First day of campaign billing period                    |
+| 3    | End Date                    | Yes      | Select date      | Final day of campaign billing period                    |
+| 4    | Is Finalized                | Yes      | Toggle switch    | Indicates whether balance snapshots are generated       |
+| 5    | Collection Threshold %      | Yes      | Enter percentage | Minimum collection percentage for payout approval       |
+| 6    | Manager Trigger Condition   | No       | Select condition | Target threshold required for manager commission payout |
+| 7    | Manager Commission Rate (%) | No       | Enter percentage | Override commission percentage on team sales            |
+| 8    | Employee                    | Yes      | Select employee  | Staff assigned to earn campaign commission              |
+| 9    | Product                     | Yes      | Select product   | Included catalog product                                |
+| 10   | Commission Rate (Fixed TK)  | Yes      | Enter amount     | Fixed commission earnings per unit sold                 |
+| 11   | Sales Target Qty            | Yes      | Enter quantity   | Target sales unit quota for campaign                    |
 
 ______________________________________________________________________
 
-## Tips and common issues
+## Exception handling and error recovery
 
-- Finalize the campaign only after the date range and targets are correct.
-- Verify employees and products are assigned before saving.
-- Use the **Remove** button to delete a campaign employee or product target.
+| Symptom / Error Message              | Root Cause                                           | Remediation Action                                               |
+| ------------------------------------ | ---------------------------------------------------- | ---------------------------------------------------------------- |
+| Cannot edit campaign targets         | Campaign `Is Finalized` toggle is set to ON          | Uncheck `Is Finalized` before modifying product targets or rates |
+| Commission not calculated on invoice | Collection percentage below `Collection Threshold %` | Receive Client payment to meet collection threshold percentage   |
 
 ______________________________________________________________________
 
 ## Related pages
 
-- **[Employee Analytics](employee-analytics.md)** — Review employee performance and campaign analytics.
-- **[Manager Analytics](manager-analytics.md)** — Track manager commission triggers and outcomes.
-- **[Client Bonus Campaigns](client-bonus-campaigns.md)** — Manage bonus campaigns for clients.
+- [Employee Analytics](employee-analytics.md) — Inspect employee commission performance
+- [Manager Analytics](manager-analytics.md) — Monitor manager trigger conditions
+- [Client Bonus Campaigns](client-bonus-campaigns.md) — Manage client bonus incentives

@@ -4,7 +4,7 @@ tags: [module:employee, task:edit, role:hr]
 
 # Record Attendance
 
-<!-- metadata: owner: hr_team, last_updated: 2026-07-26, git_ref: main, staging_verified: true -->
+<!-- metadata: owner: hr, last_updated: 2026-07-26, git_ref: main, staging_verified: true -->
 
 ## Summary
 
@@ -23,16 +23,14 @@ ______________________________________________________________________
 
 ## How to access this page
 
-From the sidebar, go to **Employee → Attendance** (`/en/admin/Employee/attendance/`). On the Attendance List page, click the **purple (+) icon** in the top-right corner.
+From the sidebar, go to **Employee → Attendance** (`/admin/employee/attendance/`). On the Attendance List page, click the **purple (+) icon** in the top-right corner.
 
 ______________________________________________________________________
 
 ## Prerequisites
 
-- **Active Employee Record**: Target worker must exist in **Employee → Employees**.
-- **Required User Permissions**:
-    - `Employee | Attendance | Can add Attendance` (`employee.add_attendance`)
-    - `Employee | Attendance | Can change Attendance` (`employee.change_attendance`)
+- **Permissions:** `employee.add_attendance` / `employee.change_attendance` permission codenames (HR Staff or Superuser role).
+- **Active Records:** Active target employee record in **Employee → Employees**.
 
 ______________________________________________________________________
 
@@ -49,49 +47,43 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-## Verification & definition of done
+## Verification and definition of done
 
-- **Unique SKU Assigned**: System generates an attendance SKU (`ATT-YYYYMMDD-XXXX`).
-- **Attendance Logged**: Entry appears under **Employee → Attendance** for the specified date.
-- **Salary Unit Computation**: Recorded minutes aggregate into the employee's monthly **Salary Units** summary.
+- System generates a unique attendance SKU (`ATT-YYYYMMDD-XXXX`).
+- Logged attendance entry appears under **Employee → Attendance** for the specified date.
+- Recorded minutes aggregate into the employee's monthly salary calculation summary.
 
 ______________________________________________________________________
 
 ## Field reference
 
-| Field Name           | Type    | Required | Backend Validation / Constraints                | Description                               |
-| :------------------- | :------ | :------- | :---------------------------------------------- | :---------------------------------------- |
-| **SKU**              | Text    | Auto     | Prefix `ATT`, read-only                         | System-generated tracking SKU.            |
-| **Employee**         | Select  | Yes      | Foreign Key (`Employee.Employee`), `PROTECT`    | Staff member present for shift.           |
-| **Date**             | Date    | Yes      | Valid date (`YYYY-MM-DD`), default today        | Attendance shift date.                    |
-| **Check-in Time**    | Time    | Yes      | Valid time (`HH:MM:SS`)                         | Work shift start timestamp.               |
-| **Check-out Time**   | Time    | No       | Valid time (`HH:MM:SS`)                         | Work shift end timestamp.                 |
-| **Salary Type**      | Select  | Yes      | Choices: `Monthly`, `Daily`, `Hourly`           | Pay model assigned to shift.              |
-| **Salary Rate**      | Decimal | Yes      | Max 13 digits, 3 decimal places, default `0.00` | Rate applied to calculate daily earnings. |
-| **Work Minutes**     | Integer | Yes      | Positive integer                                | Total regular shift work minutes.         |
-| **Overtime Minutes** | Integer | No       | Default `0`                                     | Additional shift overtime minutes.        |
+![Add Attendance Form](add-attendance.png)
+
+| Step | Field            | Required | What to Do      | Description                                                    |
+| ---- | ---------------- | -------- | --------------- | -------------------------------------------------------------- |
+| 1    | SKU              | No       | Read-only       | System-generated tracking code                                 |
+| 2    | Employee         | Yes      | Select employee | Staff member present for shift                                 |
+| 3    | Date             | Yes      | Select date     | Shift date (`YYYY-MM-DD`)                                      |
+| 4    | Check-in Time    | Yes      | Enter time      | Shift start timestamp (`HH:MM:SS`)                             |
+| 5    | Check-out Time   | No       | Enter time      | Shift end timestamp (`HH:MM:SS`)                               |
+| 6    | Salary Type      | Yes      | Select type     | Pay structure assigned to shift (`Monthly`, `Daily`, `Hourly`) |
+| 7    | Salary Rate      | Yes      | Enter rate      | Base rate applied for shift earnings calculation               |
+| 8    | Work Minutes     | Yes      | Enter number    | Total regular shift work minutes                               |
+| 9    | Overtime Minutes | No       | Enter number    | Additional overtime shift minutes                              |
 
 ______________________________________________________________________
 
-## Exception handling & error recovery
+## Exception handling and error recovery
 
-| Error Symptom / Message                                    | Root Cause                                                           | Step-by-Step Remediation                                                                                           |
-| :--------------------------------------------------------- | :------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------- |
-| **"Attendance for this employee and date already exists"** | Unique constraint (`employee`, `date`) prevents multiple daily logs. | 1. Open the existing attendance record for the date.<br>2. Edit the existing record instead of adding a duplicate. |
-| **Check-out time earlier than Check-in time**              | Invalid time entry sequence.                                         | 1. Check shift logs.<br>2. Correct Check-out Time to be later than Check-in Time before saving.                    |
-
-______________________________________________________________________
-
-## Related workflows & next steps
-
-- **Generate Salary** — Process monthly salary using aggregated attendance logs.
-- **Attendance Report** — Inspect daily attendance summary across factory teams.
+| Symptom / Error Message                                | Root Cause                                                              | Remediation Action                                                      |
+| ------------------------------------------------------ | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `Attendance for this employee and date already exists` | Unique constraint (`employee`, `date`) prevents duplicate daily records | Open existing attendance record for the date and edit it                |
+| `Check-out time earlier than Check-in time`            | Out-of-order time entry                                                 | Verify shift log and adjust check-out timestamp to occur after check-in |
 
 ______________________________________________________________________
 
 ## Related pages
 
-- **Attendance Overview** — Review and search attendance records
-- **Generate Salary** — Create payroll using attendance and salary data
-- **Salaries Overview** — View salary records and payment status
-- **Employees** — Manage employee details used in attendance records
+- [Attendance Overview](overview.md) — Review and search daily attendance logs
+- [Generate Salary](../salary/generate-salary.md) — Run monthly salary calculation vouchers
+- [Employees Overview](../employees/overview.md) — Manage employee profiles

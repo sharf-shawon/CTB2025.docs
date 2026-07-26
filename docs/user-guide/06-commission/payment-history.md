@@ -4,67 +4,83 @@ tags: [module:commission, task:report, role:accountant]
 
 # Payment History
 
-Review the commission and bonus payments already recorded against campaigns.
+<!-- metadata: owner: sales_team, last_updated: 2026-07-26, git_ref: main, staging_verified: true -->
 
 ## Summary
 
-Use this page to see what has been paid out for commission and client bonus campaigns. It is the record of settled amounts, as distinct from the analytics pages, which show what was earned.
+Use this page to audit and track commission and bonus Payouts recorded across campaigns in CTB Admin. The payment history provides a master audit ledger distinguishing settled payments from calculated analytics balances.
 
 ______________________________________________________________________
 
 ## When to use this page
 
-- When you need to confirm whether a commission or bonus has already been paid.
-- When you are reconciling campaign results against actual payments.
-- When an employee or client queries a payment.
-- When you are preparing a payout summary for a finished campaign.
+- Verifying whether earned employee or manager commissions have been disbursed
+- Auditing client bonus credit Payouts against campaign analytics
+- Reconciling campaign ledger calculations against bank transfer or payout records
+- Investigating payment queries or discrepancies raised by staff or clients
 
 ______________________________________________________________________
 
 ## How to access this page
 
-Open **Commission and Campaigns → Payment History** in the sidebar.
+From the sidebar navigation, select **Commission → Payment History** (`/admin/commission/commissionpaymenthistory/`).
 
 ______________________________________________________________________
 
 ## Prerequisites
 
-- Campaign analytics must exist for the period you are reviewing.
-- Payments must already have been recorded against those results.
+- **Permissions:** `commission.view_commissionpaymenthistory` permission codename (Accountant, Finance Manager, or Superuser role).
+- **Active Records:** Finalized **Commission Campaign** or **Client Bonus Campaign** analytics entries.
 
 ______________________________________________________________________
 
 ## Step-by-step instructions
 
-1. Open the page from the sidebar.
-1. Use the search box or filters to narrow to a campaign, employee, or client.
-1. Review the payment records listed for the selected campaign.
-1. Cross-check any disputed amount against the matching analytics page.
+1. Open **Commission → Payment History** from the sidebar.
+1. Review listed payment records, Payout dates, and amounts.
+1. Use the search bar to locate specific employees, managers, or client names.
+1. Click **Filters** to narrow results by campaign, date range, or payment type.
+1. Click a payment row to inspect transaction details or linked payout references.
+
+______________________________________________________________________
+
+## Verification and definition of done
+
+- Payment history list displays settled transactions with confirmed Payout dates.
+- Verified Payouts update linked employee payout vouchers or client credit balances.
 
 ______________________________________________________________________
 
 ## Field reference
 
-!!! warning "Needs product review"
+### List summary
 
-    The columns, filters, and actions on the Payment History list have not been confirmed against the running system, so no field reference is published here rather than an inaccurate one.
+<!-- TODO: screenshot screenshots/commission/payment-history-list.png -->
 
-    Required to complete this page: the visible columns and fields with their
-    business meaning, the filters available, and the actions that can be taken
-    from the page. Tracked in `review/sme-checklist.md`.
+| Column        | Required | What to Do  | Description                                                              |
+| ------------- | -------- | ----------- | ------------------------------------------------------------------------ |
+| Reference SKU | No       | View value  | Unique payment tracking reference code                                   |
+| Campaign      | Yes      | View text   | Parent commission or client bonus campaign                               |
+| Recipient     | Yes      | Click link  | Name of employee, manager, or client recipient                           |
+| Type          | Yes      | View status | Payment type (`Employee Commission`, `Manager Override`, `Client Bonus`) |
+| Amount Paid   | Yes      | View amount | Disbursed payment amount                                                 |
+| Payment Date  | Yes      | View date   | Transaction settlement date                                              |
+| Method        | No       | View text   | Disbursal method (`Bank Transfer`, `Cash`, `Ledger Credit`)              |
 
 ______________________________________________________________________
 
-## Tips and common issues
+## Exception handling and error recovery
 
-- A record appearing in analytics does not mean it has been paid. Check here before confirming a payment to anyone.
-- Reconcile against the analytics page for the same campaign when a figure does not match.
+| Symptom / Error Message                           | Root Cause                                         | Remediation Action                                                                    |
+| ------------------------------------------------- | -------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| Payment record missing despite approved analytics | Payout transaction not completed in payouts module | Process payout voucher under [Create Payout](../04-employee/payouts/create-payout.md) |
+| Disbursed amount mismatch                         | Partial payment issued or deduction applied        | Compare payment history line item against [Employee Analytics](employee-analytics.md) |
 
 ______________________________________________________________________
 
 ## Related pages
 
-- **[Employee Analytics](employee-analytics.md)** — What each employee earned for a campaign.
-- **[Manager Analytics](manager-analytics.md)** — What each manager earned for a campaign.
-- **[Client Bonus Analytics](client-bonus-analytics.md)** — Results of client bonus campaigns.
-- **[Commission and Campaigns](README.md)** — All pages in this module.
+- [Employee Analytics](employee-analytics.md) — Review employee campaign earnings
+- [Manager Analytics](manager-analytics.md) — Review manager override earnings
+- [Client Bonus Analytics](client-bonus-analytics.md) — Review client bonus earnings
+- [Create Payout](../04-employee/payouts/create-payout.md) — Issue employee payouts

@@ -4,61 +4,81 @@ tags: [module:employee, task:view, role:hr]
 
 # Tasks Overview
 
-Use this page to review employee tasks, check assignment status, and follow up on work that is still open.
+<!-- metadata: owner: hr, last_updated: 2026-07-26, git_ref: main, staging_verified: true -->
 
 ## Summary
 
-The tasks overview gives managers a simple list of work items assigned to employees. Use it to see what is pending, in progress, or completed before you create or update a task.
+Use the **Tasks Overview** page to monitor, filter, and track employee work assignments in CTB Admin. The master list displays task titles, assigned personnel, status pills, and priority levels.
 
 ______________________________________________________________________
 
 ## When to use this page
 
-- When you want to review assigned employee work.
-- When you need to check whether a task is open or completed.
-- When you want to open a task and review its details.
+- Auditing open, in-progress, or completed tasks across teams
+- Searching for specific tasks by title or assigned staff member
+- Checking priority urgency levels before assigning new work
+- Accessing task creation and editing forms
 
 ______________________________________________________________________
 
 ## How to access this page
 
-From the sidebar, go to **Employee → Tasks**.
+From the sidebar navigation, select **Employee → Tasks** (`/admin/employee/employeetask/`).
+
+______________________________________________________________________
+
+## Prerequisites
+
+- **Permissions:** `employee.view_employeetask` permission codename (HR, Manager, Accountant, or Superuser role).
+- **Active Records:** Active **Employee** profiles.
 
 ______________________________________________________________________
 
 ## Step-by-step instructions
 
-1. Go to **Employee → Tasks** from the sidebar.
-1. Review the list of tasks and their **Status** and **Priority**.
-1. Use the search box to find a task by title or assigned employee.
-1. Click a task title to open it for editing.
-1. Click the **purple (+) icon** to create a new task.
+1. Open **Tasks** from the **Employee** section of the sidebar.
+1. Review the listed task items and status indicators (`To Do`, `In Progress`, `Completed`, `Cancelled`).
+1. Use the search bar to locate tasks by title or assigned staff member.
+1. Click **Filters** to narrow results by status or priority level.
+1. Click **Add Task (+)** to create a new task, or select a row to edit.
+
+______________________________________________________________________
+
+## Verification and definition of done
+
+- Master task directory renders with accurate status badges and priority tags.
+- Search and filter queries accurately isolate targeted work assignments.
 
 ______________________________________________________________________
 
 ## Field reference
 
-- **Task title** - The short name for the work item.
-- **Employee** - The staff member assigned to complete the task.
-- **Due date** - The expected completion date.
-- **Priority** - Indicates how urgently the task should be completed.
-- **Status** - Shows whether the task is open, active, or completed.
-- **Note** - Optional context or instructions for the employee.
+### Table summary
 
 ![Tasks List Page](task-list-page.png)
 
+| Column      | Required | What to Do    | Description                                                       |
+| ----------- | -------- | ------------- | ----------------------------------------------------------------- |
+| Task Name   | Yes      | Click link    | Short title describing the task                                   |
+| Assigned To | Yes      | View employee | Staff member assigned to complete the work                        |
+| Due Date    | No       | View date     | Target completion date                                            |
+| Priority    | Yes      | View tag      | Urgency indicator (`Low`, `Medium`, `High`, `Urgent`)             |
+| Status      | Yes      | View pill     | Workflow state (`To Do`, `In Progress`, `Completed`, `Cancelled`) |
+| Note        | No       | View text     | Internal comments or instructions                                 |
+
 ______________________________________________________________________
 
-## Tips and common issues
+## Exception handling and error recovery
 
-- Keep task titles short and action-oriented so employees can understand them quickly.
-- Check the status before reassigning a task.
-- Add a due date when the task should be tracked against a deadline.
+| Symptom / Error Message    | Root Cause                                        | Remediation Action                                                      |
+| -------------------------- | ------------------------------------------------- | ----------------------------------------------------------------------- |
+| Task not visible in list   | Filter status setting excluding target task state | Click **Filters** and reset status selection                            |
+| Unassigned task in listing | Task saved without selecting an assigned user     | Open record under [Manage Task](manage-task.md) and set **Assigned To** |
 
 ______________________________________________________________________
 
 ## Related pages
 
-- [Create/Edit Task](manage-task.md)
-- [Attendance Overview](../attendance/overview.md)
-- [Salary Overview](../salary/overview.md)
+- [Create Task](create-task.md) — Register a new task assignment
+- [Manage Task](manage-task.md) — Reassign or update task progress
+- [Employees Overview](../employees/overview.md) — View employee directory

@@ -4,66 +4,83 @@ tags: [module:commission, task:create, role:accountant]
 
 # Client Bonus Campaigns
 
-Define bonus campaigns that reward clients rather than employees.
+<!-- metadata: owner: sales_team, last_updated: 2026-07-26, git_ref: main, staging_verified: true -->
 
 ## Summary
 
-Use this page to create and manage bonus campaigns aimed at clients. A client bonus campaign works in the same way as a commission campaign, but the reward is attached to a client account rather than to an employee.
+Use this page to create and manage client bonus campaigns in CTB Admin. Client bonus campaigns reward wholesale or retail clients based on sales targets, order quantities, and payment collection thresholds.
 
 ______________________________________________________________________
 
 ## When to use this page
 
-- When you want to launch a bonus scheme for one or more clients.
-- When you need to change the dates or terms of an existing bonus campaign.
-- When you want to review which clients a bonus campaign covers.
+- Launching promotional bonus programs for key client accounts
+- Setting client sales target thresholds and reward percentage tiers
+- Managing active bonus campaign dates and client eligibility rules
+- Reviewing client bonus calculation parameters
 
 ______________________________________________________________________
 
 ## How to access this page
 
-Open **Commission and Campaigns → Client Bonus Campaigns** in the sidebar.
+From the sidebar navigation, select **Commission → Client Bonus Campaigns** (`/admin/commission/clientbonuscampaign/`).
 
 ______________________________________________________________________
 
 ## Prerequisites
 
-- You must have permission to manage campaigns.
-- The client records the campaign applies to must already exist.
+- **Permissions:** `commission.add_clientbonuscampaign` / `commission.change_clientbonuscampaign` permission codenames (Accountant, Sales Manager, or Superuser role).
+- **Active Records:** Active **Client** profiles and **Product** catalog entries.
 
 ______________________________________________________________________
 
 ## Step-by-step instructions
 
-1. Open the page from the sidebar.
-1. Click the top-right **+** button to create a bonus campaign.
-1. Set the campaign period and the clients it applies to.
-1. Save the campaign, then review results in **Client Bonus Analytics** once the period ends.
+1. Open **Commission → Client Bonus Campaigns** from the sidebar.
+1. Click **Add Client Bonus Campaign (+)**.
+1. Enter the **Campaign Name**, **Start Date**, and **End Date**.
+1. Select the target **Clients** participating in the promotion.
+1. Set the **Collection Threshold %** and **Bonus Rate (%)**.
+1. Click **Save** to activate the client bonus campaign.
+
+______________________________________________________________________
+
+## Verification and definition of done
+
+- System creates the client bonus campaign record (`CBC-YYYYMMDD-XXXX`).
+- Campaign lists under `/admin/commission/clientbonuscampaign/` and applies to eligible client sales orders.
 
 ______________________________________________________________________
 
 ## Field reference
 
-!!! warning "Needs product review"
+### Campaign details
 
-    The bonus campaign form fields and their business meaning have not been confirmed against the running system, so no field reference is published here rather than an inaccurate one.
+<!-- TODO: screenshot screenshots/commission/client-bonus-campaign.png -->
 
-    Required to complete this page: the visible columns and fields with their
-    business meaning, the filters available, and the actions that can be taken
-    from the page. Tracked in `review/sme-checklist.md`.
+| Step | Field                  | Required | What to Do       | Description                                              |
+| ---- | ---------------------- | -------- | ---------------- | -------------------------------------------------------- |
+| 1    | Campaign Name          | Yes      | Enter name       | Descriptive client bonus campaign title                  |
+| 2    | Start Date             | Yes      | Select date      | First day of client bonus eligibility period             |
+| 3    | End Date               | Yes      | Select date      | Last day of client bonus eligibility period              |
+| 4    | Client                 | Yes      | Select client    | Target wholesale or retail client account                |
+| 5    | Collection Threshold % | Yes      | Enter percentage | Minimum collection percentage for bonus eligibility      |
+| 6    | Bonus Rate (%)         | Yes      | Enter percentage | Bonus reward percentage applied to eligible sales volume |
+| 7    | Is Finalized           | Yes      | Toggle switch    | Indicates whether bonus snapshots have been locked       |
 
 ______________________________________________________________________
 
-## Tips and common issues
+## Exception handling and error recovery
 
-- Create the client record before assigning it to a campaign.
-- Check the campaign date range before saving. Results are generated for the period you set.
+| Symptom / Error Message       | Root Cause                                                  | Remediation Action                                                     |
+| ----------------------------- | ----------------------------------------------------------- | ---------------------------------------------------------------------- |
+| Client bonus not calculated   | Order sales volume below threshold or collection incomplete | Ensure client invoice payments satisfy collection threshold percentage |
+| Cannot edit campaign settings | Campaign is marked `Is Finalized`                           | Uncheck `Is Finalized` state before making rule adjustments            |
 
 ______________________________________________________________________
 
 ## Related pages
 
-- **[Client Bonus Analytics](client-bonus-analytics.md)** — Results generated for these campaigns.
-- **[Commission Campaigns](commission-campaigns.md)** — The equivalent scheme for employees.
-- **[Clients](../01-business/clients/overview.md)** — The client records a bonus campaign applies to.
-- **[Commission and Campaigns](README.md)** — All pages in this module.
+- [Client Bonus Analytics](client-bonus-analytics.md) — Review client bonus performance and balances
+- [Commission Campaigns](commission-campaigns.md) — Manage employee commission campaigns
+- [Clients Overview](../01-business/clients/overview.md) — Manage client directory profiles

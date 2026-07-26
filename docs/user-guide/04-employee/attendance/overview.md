@@ -4,101 +4,83 @@ tags: [module:employee, task:view, role:hr]
 
 # Attendance Overview
 
+<!-- metadata: owner: hr, last_updated: 2026-07-26, git_ref: main, staging_verified: true -->
+
 ## Summary
 
-The **Attendance** module is the main control point for managing staff presence, absence, and shift records in CTB Admin. Use this page to review attendance status, check reports, and open records for correction or payroll review.
+Use the **Attendance Overview** page to inspect, search, and manage daily employee presence logs in CTB Admin. The attendance table provides a master view of shift logs, check-in/out times, work minutes, and attendance status pills used in payroll processing.
 
 ______________________________________________________________________
 
 ## When to use this page
 
-- When you need to work with attendance overview in CTB Admin.
+- Auditing daily attendance logs across factory floor and office teams
+- Searching for specific employee shift records by name or date range
+- Identifying missing or unverified attendance entries before salary generation
+- Accessing manual attendance entry forms for shift corrections
 
 ______________________________________________________________________
 
 ## How to access this page
 
-From the sidebar, go to **Employee → Attendance**.
+From the sidebar navigation, select **Employee → Attendance** (`/admin/employee/attendance/`).
 
-The system opens the **Attendance List** page where all attendance records are displayed.
+______________________________________________________________________
+
+## Prerequisites
+
+- **Permissions:** `employee.view_attendance` permission codename (HR, Accountant, Manager, or Superuser role).
+- **Active Records:** Active **Employee** profiles.
 
 ______________________________________________________________________
 
 ## Step-by-step instructions
 
-1. Open **Attendance Overview** from the **Employee** section of the sidebar.
-1. Complete the **List page columns and fields** section described below.
-1. Complete the **Search and filter** section described below.
-1. Complete the **List actions** section described below.
-1. Review the values you entered, then save the record.
+1. Open **Attendance** from the **Employee** section of the sidebar.
+1. Review the attendance records list for employee presence and status.
+1. Use the search bar to locate records by employee name or SKU.
+1. Click **Filters** to narrow results by shift date range or employee status.
+1. Click **(+) Add Attendance** to log a new entry, or click a row to edit.
+
+______________________________________________________________________
+
+## Verification and definition of done
+
+- Master list correctly renders attendance entries with shift timestamps and status pills.
+- Filter criteria accurately constrain visible logs for payroll review.
 
 ______________________________________________________________________
 
 ## Field reference
 
-### List page columns and fields
+### Table summary
 
 ![Attendance List Page](attendance-list-page.png)
 
-The Attendance list displays the following information for each record:
-
-| Column         | Description                                                       |
-| -------------- | ----------------------------------------------------------------- |
-| **Employee**   | Name of the staff member linked to this attendance record         |
-| **Date**       | The day the attendance was recorded                               |
-| **Status**     | Attendance result such as Present, Absent, Late, or Leave         |
-| **Shift**      | Assigned work shift for the attendance entry                      |
-| **Time in**    | Clock-in time when the record uses time capture                   |
-| **Time out**   | Clock-out time when the record uses time capture                  |
-| **Note**       | Explanation for exceptions, corrections, or manual adjustments    |
-| **Created By** | Username of the user who recorded or updated the attendance entry |
-
-### Search and filter
-
-Use the search and filter options to quickly locate records:
-
-- **Search box** — Type to search by employee name or other attendance details
-- **Filters** — Click **Filters** to narrow results by date range, status, or shift
-- **Date picker** — Select a start and end date to view a specific period
-- **Reset filters** — Use this when the page returns no results or the selected range is too narrow
-
-### List actions
-
-From the Attendance List page:
-
-- **Add Attendance** — Click the **purple (+) icon** to create a new attendance record
-- **Open record** — Click any row to view or edit the attendance entry
-- **Reset filters** — Clear filters and search text to restore the full list
-
-!!! tip "Best practice"
-
-    Review the date range and filter settings before opening records to avoid editing the wrong attendance entry.
+| Column     | Required | What to Do  | Description                                             |
+| ---------- | -------- | ----------- | ------------------------------------------------------- |
+| Employee   | Yes      | Click link  | Name of staff member                                    |
+| Date       | Yes      | View date   | Shift attendance date                                   |
+| Status     | Yes      | View status | Attendance state (`Present`, `Absent`, `Late`, `Leave`) |
+| Shift      | No       | View value  | Assigned work shift                                     |
+| Time in    | Yes      | View time   | Clock-in shift timestamp                                |
+| Time out   | No       | View time   | Clock-out shift timestamp                               |
+| Note       | No       | View text   | Exception notes or correction reason                    |
+| Created By | No       | View user   | System username that logged the record                  |
 
 ______________________________________________________________________
 
-## What you can do in this module
+## Exception handling and error recovery
 
-- **Review attendance records** — see daily or monthly attendance for each employee.
-- **Track attendance status** — confirm whether staff are marked present, absent, late, or on leave.
-- **Use filters** — narrow the list by date range, employee, status, or shift.
-- **Open records** — inspect or correct attendance entries when needed.
-- **Start manual entry** — add attendance records for staff who were not captured automatically.
-
-______________________________________________________________________
-
-## Tips and common issues
-
-- **Search by employee name first** — This is the fastest way to locate a single attendance record.
-- **Confirm the date range** — A narrow date filter can hide results that exist outside the selected period.
-- **Use filters for large lists** — Filter by status or shift when many employees appear.
-- **No results found** — Click **Reset filters** or expand the date range before adding a new record.
-- **Attendance affects payroll** — Any correction or manual entry may change salary calculations, so verify before saving.
+| Symptom / Error Message      | Root Cause                                        | Remediation Action                                                                                 |
+| ---------------------------- | ------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| Attendance entry not visible | Filter date range excludes target attendance date | Click **Filters** and widen or reset the date range                                                |
+| Attendance status incorrect  | Incorrect clock-in time logged                    | Open the record and update clock-in/out timestamps under [Record Attendance](record-attendance.md) |
 
 ______________________________________________________________________
 
 ## Related pages
 
-- **[Record Attendance](record-attendance.md)** — Add or correct attendance entries manually.
-- **[Employees Overview](../employees/overview.md)** — Manage employee details used in attendance records.
-- **[Generate Salary](../salary/generate-salary.md)** — Create payroll based on attendance and salary settings.
-- **[Salary Overview](../salary/overview.md)** — View salary records and payment status.
+- [Record Attendance](record-attendance.md) — Log or edit daily attendance entries
+- [Employees Overview](../employees/overview.md) — Manage staff profile details
+- [Generate Salary](../salary/generate-salary.md) — Calculate salary using attendance logs

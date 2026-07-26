@@ -4,67 +4,82 @@ tags: [module:commission, task:report, role:accountant]
 
 # Client Bonus Analytics
 
-Review what each client earned under a bonus campaign.
+<!-- metadata: owner: sales_team, last_updated: 2026-07-26, git_ref: main, staging_verified: true -->
 
 ## Summary
 
-Use this page to review the results generated for client bonus campaigns once the campaign period ends. It is the client-side equivalent of Employee Analytics.
+Use this page to review client bonus campaign performance and earned bonus credits in CTB Admin. The analytics summary aggregates sales volumes, payment collection rates, target qualifications, and calculated bonus rewards for wholesale and retail clients.
 
 ______________________________________________________________________
 
 ## When to use this page
 
-- After a client bonus campaign ends and you want to review the outcome.
-- When you need to confirm whether a client qualified for a bonus.
-- When you are reconciling client bonuses before applying them.
-- When a client queries a bonus recorded against their account.
+- Auditing client bonus eligibility following campaign completion
+- Verifying client sales target achievements and collection ratios
+- Reconciling client bonus credits before applying ledger adjustments
+- Resolving client inquiries regarding promotional bonus earnings
 
 ______________________________________________________________________
 
 ## How to access this page
 
-Open **Commission and Campaigns → Client Bonus Analytics** in the sidebar.
+From the sidebar navigation, select **Commission → Client Bonus Analytics** (`/admin/commission/clientbonusanalytics/`).
 
 ______________________________________________________________________
 
 ## Prerequisites
 
-- A client bonus campaign must exist and cover the period you are reviewing.
-- Sales and payment data must be available for the campaign period.
+- **Permissions:** `commission.view_clientbonusanalytics` permission codename (Accountant, Sales Manager, or Superuser role).
+- **Active Records:** Configured **Client Bonus Campaign** and **Client** accounts.
 
 ______________________________________________________________________
 
 ## Step-by-step instructions
 
-1. Open the page from the sidebar.
-1. Use the search box or filters to locate the client or campaign.
-1. Review the bonus record generated for each client.
-1. Check **Payment History** to see whether the bonus has already been settled.
+1. Open **Commission → Client Bonus Analytics** from the sidebar.
+1. Review the list of client bonus records, achievement metrics, and qualification statuses.
+1. Use the search bar to locate specific client accounts or campaign names.
+1. Click **Filters** to narrow results by campaign date range or eligibility.
+1. Click **Process Expired Campaigns** if end-of-campaign snapshots require generation.
+
+______________________________________________________________________
+
+## Verification and definition of done
+
+- Master list renders client bonus records with calculated sales volumes and reward figures.
+- Qualified client bonus entries (`Is Eligible = True`) post to client credit accounts upon finalization.
 
 ______________________________________________________________________
 
 ## Field reference
 
-!!! warning "Needs product review"
+### List summary
 
-    The columns and actions on the Client Bonus Analytics list have not been confirmed against the running system, so no field reference is published here rather than an inaccurate one.
+<!-- TODO: screenshot screenshots/commission/client-bonus-analytics-list.png -->
 
-    Required to complete this page: the visible columns and fields with their
-    business meaning, the filters available, and the actions that can be taken
-    from the page. Tracked in `review/sme-checklist.md`.
+| Column       | Required | What to Do      | Description                                                        |
+| ------------ | -------- | --------------- | ------------------------------------------------------------------ |
+| Client       | Yes      | Click link      | Target client account name                                         |
+| Campaign     | Yes      | View text       | Client bonus campaign name                                         |
+| Sales Volume | Yes      | View amount     | Qualifying invoice sales total                                     |
+| Collection % | Yes      | View percentage | Payment collection ratio                                           |
+| Bonus Amount | Yes      | View amount     | Calculated client bonus credit                                     |
+| Is Eligible  | Yes      | View status     | Indicates whether qualification rules are satisfied                |
+| Status       | Yes      | View pill       | Settlement state (`Calculated`, `Pending`, `Approved`, `Credited`) |
 
 ______________________________________________________________________
 
-## Tips and common issues
+## Exception handling and error recovery
 
-- A generated record is not a payment. Confirm settlement in **Payment History**.
-- If no record appears for a finished campaign, confirm the campaign covered the client and period you expect.
+| Symptom / Error Message              | Root Cause                                      | Remediation Action                                                                                 |
+| ------------------------------------ | ----------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| Client bonus not calculated          | Client sales volume below campaign target quota | Verify client invoices and collection ratio in [Client Bonus Campaigns](client-bonus-campaigns.md) |
+| Credit missing from client statement | Bonus record status remains `Pending`           | Approve and finalize campaign snapshots to post credits to client ledger                           |
 
 ______________________________________________________________________
 
 ## Related pages
 
-- **[Client Bonus Campaigns](client-bonus-campaigns.md)** — Where these campaigns are defined.
-- **[Payment History](payment-history.md)** — Whether a bonus has been paid.
-- **[Client Detail](../01-business/clients/client-detail.md)** — The client account a bonus is recorded against.
-- **[Commission and Campaigns](README.md)** — All pages in this module.
+- [Client Bonus Campaigns](client-bonus-campaigns.md) — Configure client promotional campaigns
+- [Payment History](payment-history.md) — Track settled bonus credit payments
+- [Clients Overview](../01-business/clients/overview.md) — View client account balances

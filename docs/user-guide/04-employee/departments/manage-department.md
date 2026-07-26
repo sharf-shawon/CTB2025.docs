@@ -4,34 +4,49 @@ tags: [module:employee, task:edit, role:hr]
 
 # Manage Department
 
+<!-- metadata: owner: hr, last_updated: 2026-07-26, git_ref: main, staging_verified: true -->
+
 ## Summary
 
-Use this page to add or edit a department within your organization. Departments help organize employees by function or team, making it easier to manage roles, reporting, and permissions.
+Use this page to create or update an organizational department in CTB Admin. Departments categorize employees by functional domain, facilitating team-based role management, reporting, and access control.
 
 ______________________________________________________________________
 
 ## When to use this page
 
-- Creating a new department for your organization
-- Editing the name, description, or status of an existing department
-- Disabling or enabling a department as business needs change
-- Adding internal notes or audit information for compliance
+- Creating a new operational department (e.g., Accounts, Sewing, Quality Control)
+- Editing the display name, status, or description of an existing department
+- Deactivating a department that is no longer operational
 
 ______________________________________________________________________
 
 ## How to access this page
 
-From the sidebar, go to **Employee → Departments**. On the Departments List page, click the **purple (+) icon** in the top-right corner to add a new department, or select an existing department to edit.
+From the sidebar, select **Employee → Departments** (`/admin/employee/workdepartment/`). Click **Add Department (+)** to create a record, or click an existing department row to edit.
 
-The system opens the **Manage Department** page.
+______________________________________________________________________
+
+## Prerequisites
+
+- **Permissions:** `employee.add_workdepartment` / `employee.change_workdepartment` permission codenames (HR Manager or System Administrator role).
+- **Active Records:** None.
 
 ______________________________________________________________________
 
 ## Step-by-step instructions
 
-1. Open **Manage Department** from the **Employee** section of the sidebar.
-1. Complete the **Department information** section described below.
-1. Follow **Saving the Department** below to finish.
+1. Open **Departments** from the **Employee** sidebar section.
+1. Click **Add Department (+)** or select an existing department row.
+1. Enter the **Department Name** and optional **Description**.
+1. Set the **Is Enabled** toggle state.
+1. Click **Save** to confirm changes.
+
+______________________________________________________________________
+
+## Verification and definition of done
+
+- Confirmation message appears: `Work Department "Name" was added/changed successfully.`
+- The department is listed under `/admin/employee/workdepartment/` and becomes selectable in employee assignment forms.
 
 ______________________________________________________________________
 
@@ -39,51 +54,28 @@ ______________________________________________________________________
 
 ### Department information
 
-Fill in the following fields in the Department Information section:
-
 ![Manage Department Page](manage-department-page.png)
 
-| Field              | What to Do     | Description                                                      |
-| ------------------ | -------------- | ---------------------------------------------------------------- |
-| SKU                | Auto-generated | System-generated identifier for the department                   |
-| Department Name \* | Enter name     | The official name of the department (required)                   |
-| Description        | Enter text     | Optional details about the department's function or purpose      |
-| Is Enabled         | Toggle on/off  | Set whether the department is active and available for selection |
-
-!!! warning
-
-    Fields marked with a **red star (\*)** are mandatory.
+| Step | Field           | Required | What to Do    | Description                                         |
+| ---- | --------------- | -------- | ------------- | --------------------------------------------------- |
+| 1    | SKU             | No       | View value    | System-generated department code                    |
+| 2    | Department Name | Yes      | Enter name    | Unique name identifying the department              |
+| 3    | Description     | No       | Enter text    | Detailed explanation of department responsibilities |
+| 4    | Is Enabled      | Yes      | Toggle switch | Controls availability for employee assignment       |
 
 ______________________________________________________________________
 
-## Audit information
+## Exception handling and error recovery
 
-The **Audit Information** section displays system-generated details about who created or last modified the department record. This section is read-only and helps with compliance and tracking changes.
-
-______________________________________________________________________
-
-## Saving the Department
-
-After completing all fields:
-
-- Click **Save** to create or update the department
-- Click **Save and continue editing** to save and remain on the page
-- Click **Save and add another** to save and immediately add a new department
-
-The department will now be available for employee assignment and reporting.
-
-______________________________________________________________________
-
-## Tips and common issues
-
-- **Department Name is required** — You must enter a unique name before saving
-- **Is Enabled** — Only enabled departments can be assigned to employees
-- **Use Description for clarity** — Add details to help others understand the department's role
+| Symptom / Error Message                    | Root Cause                            | Remediation Action                                       |
+| ------------------------------------------ | ------------------------------------- | -------------------------------------------------------- |
+| `Department with this Name already exists` | Duplicate department name submitted   | Use a unique department name or edit the existing record |
+| Cannot assign department to employee       | Department `Is Enabled` toggle is OFF | Open the department record and turn `Is Enabled` ON      |
 
 ______________________________________________________________________
 
 ## Related pages
 
-- **Employees** — Assign employees to departments
-- **Positions** — Manage job roles within departments
-- **Audit Log** — Review changes to department records
+- [Departments Overview](overview.md) — View department list and statistics
+- [Manage Position](../positions/manage-position.md) — Define work positions within departments
+- [Add Employee](../employees/add-employee.md) — Assign employees to departments

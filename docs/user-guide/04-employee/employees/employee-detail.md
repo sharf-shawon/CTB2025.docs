@@ -4,49 +4,51 @@ tags: [module:employee, task:view, role:hr]
 
 # Employee Detail
 
-Use this page to review a single employee’s complete profile. It helps you confirm personal information, work assignment, salary settings, and related payroll records before you process attendance, wages, salary, or payouts.
+<!-- metadata: owner: hr, last_updated: 2026-07-26, git_ref: main, staging_verified: true -->
 
 ## Summary
 
-At the top of the page, you will usually see a tab bar with these sections:
-
-- General
-- Wages
-- Salaries
-- Payouts
-
-The **General** tab shows the employee’s core profile. The other tabs show related payroll and payment records.
+Use this page to review an employee's comprehensive 360-degree profile. The detail view consolidates general personal information, employment assignment, salary configuration, wage history, generated salary vouchers, and payout records.
 
 ______________________________________________________________________
 
 ## When to use this page
 
-- Reviewing an employee’s full profile before payroll
-- Checking position, department, and balance information
-- Confirming identity and contact details
-- Looking up related salary, wage, or payout records
+- Reviewing complete employee profile details prior to monthly payroll processing
+- Auditing employee balance limits, contact info, and identity document uploads
+- Inspecting linked wages, salary generation vouchers, and payout payment histories
 
 ______________________________________________________________________
 
 ## How to access this page
 
-1. Go to **Employee → Employees** from the sidebar.
-1. On the Employees list page, click the employee name or sku.
-
-The Employees list page shows active, disabled, and deleted records. From there, you can open the employee profile you want to review.
+1. Go to **Employee → Employees** (`/admin/employee/employee/`) from the sidebar.
+1. Click the employee SKU or name on the list page.
 
 ![Employees List](edit-employee-list-page.png)
 
-The system opens the **Employee Detail** page.
+______________________________________________________________________
+
+## Prerequisites
+
+- **Permissions:** `employee.view_employee` permission codename (HR staff, Accountant, or Superuser role).
+- **Active Records:** Selected employee record must exist in the system.
 
 ______________________________________________________________________
 
 ## Step-by-step instructions
 
-1. Open **Employee Detail** from the **Employee** section of the sidebar.
-1. Complete the **General tab** section described below.
-1. Complete the **Available actions** section described below.
-1. Review the values you entered, then save the record.
+1. Open the **Employees** list from the sidebar.
+1. Click the target employee row to open **Employee Detail**.
+1. Use the top tab navigation bar (**General**, **Wages**, **Salaries**, **Payouts**) to inspect specific operational records.
+1. Click **Edit Employee** in the upper right header to make any profile modifications.
+
+______________________________________________________________________
+
+## Verification and definition of done
+
+- All tab panels load completely with verified historical records and current balances.
+- Summary balance figures accurately reflect approved salary vouchers and payouts.
 
 ______________________________________________________________________
 
@@ -56,104 +58,54 @@ ______________________________________________________________________
 
 ![Employee Detail General Tab](employee-edit.png)
 
-This tab displays the employee’s main profile and job information.
+| Field               | Required | What to Do  | Description                                               |
+| ------------------- | -------- | ----------- | --------------------------------------------------------- |
+| SKU                 | No       | View value  | System-generated unique employee identifier code          |
+| Employee Photo      | No       | View image  | Profile avatar image                                      |
+| Employee Name       | Yes      | View value  | Display name used in reports and documents                |
+| Is Enabled          | Yes      | View status | Indicates whether employee is currently active            |
+| Send SMS            | No       | View status | SMS notification setting                                  |
+| Hide Salary Details | No       | View status | Privacy setting for salary rate visibility                |
+| Date of Birth       | No       | View value  | Employee date of birth                                    |
+| Phone Number        | Yes      | View value  | Primary contact phone number                              |
+| Address             | No       | View value  | Residential address                                       |
+| NID Number          | No       | View value  | National ID card or document number                       |
+| Work Position       | Yes      | View value  | Assigned job role                                         |
+| Work Department     | Yes      | View value  | Assigned organizational department                        |
+| Purchase Balance    | No       | View value  | Current employee purchase ledger balance                  |
+| Start Date          | Yes      | View value  | Official employment start date                            |
+| Salary Type         | Yes      | View value  | Salary structure (`Monthly`, `Daily`, `Production-based`) |
+| Salary Rate         | Yes      | View value  | Base salary rate                                          |
+| Balance             | No       | View value  | Net ledger balance                                        |
+| Upper Balance Limit | No       | View value  | Maximum credit limit                                      |
+| Lower Balance Limit | No       | View value  | Minimum credit alert limit                                |
 
-| Field                  | What it tells you                                  |
-| ---------------------- | -------------------------------------------------- |
-| SKU                    | The system-generated employee code                 |
-| Employee Photo         | Profile image used in the system                   |
-| Employee Name          | The employee’s display name                        |
-| Is Enabled             | Whether the employee is active                     |
-| Send SMS               | Whether SMS notifications are enabled              |
-| Hide Salary Details    | Whether salary information should be hidden        |
-| Date of Birth          | Employee birth date                                |
-| Phone Number           | Main contact number                                |
-| Address                | Current address                                    |
-| NID Number             | Identification number used for verification        |
-| NID Card Front Photo   | Front image of the NID card                        |
-| NID Card Back Photo    | Back image of the NID card                         |
-| Emergency Contact Name | Main emergency contact person                      |
-| Emergency Phone Number | Emergency contact number                           |
-| Emergency Address      | Emergency contact address                          |
-| Work Position          | Assigned role or job title                         |
-| Work Department        | Assigned department                                |
-| Purchase Balance       | Employee purchase or ledger balance                |
-| Start Date             | Employee joining or activation date                |
-| End Date               | Date the employee was ended or deactivated, if any |
-| Salary Type            | How the employee’s salary is calculated            |
-| Salary Rate            | Base rate used in payroll                          |
-| Balance                | Current salary-related balance                     |
-| Upper Balance Limit    | Highest allowed balance                            |
-| Lower Balance Limit    | Lowest allowed balance                             |
-
-### Available actions
-
-From the Employee Detail page, you may see the following actions:
-
-| Action          | Description                                        |
-| --------------- | -------------------------------------------------- |
-| Edit Employee   | Open the employee form and change profile data     |
-| History         | Review recent changes and activity, if available   |
-| Delete Employee | Remove the employee record, if your role allows it |
-
-______________________________________________________________________
-
-## Wages tab
+### Related tabs
 
 ![Wages Tab](employee-detail-wage-tab.png)
 
-Use this tab to review wage-related entries for the employee.
-
-Typical checks include:
-
-- Wage entries created for the employee
-- Amounts tied to worked days or hours
-- Paid and unpaid wage history
-
-______________________________________________________________________
-
-## Salaries tab
+- **Wages:** Lists historical wage entries, worked days/hours, and approved wage vouchers.
+- **Salaries:** Displays generated monthly/daily salary calculation vouchers and Payout status.
+- **Payouts:** Tracks advance payments, salary Payouts, and settlement transactions.
 
 ![Salaries Tab](employee-detail-salary-tab.png)
 
-Use this tab to review salary records generated for the employee.
-
-Typical checks include:
-
-- Salary periods already generated
-- Salary amounts and payment status
-- Salary records linked to payroll processing
-
-______________________________________________________________________
-
-## Payouts tab
-
 ![Payouts Tab](employee-detail-payout-tab.png)
 
-Use this tab to review payout history for the employee.
-
-Typical checks include:
-
-- Payout dates and amounts
-- Settled and pending payouts
-- Any payout history linked to the employee balance
-
 ______________________________________________________________________
 
-## Tips and common issues
+## Exception handling and error recovery
 
-- Use the **General** tab first when you need to verify identity or employment details.
-- Check **Wages**, **Salaries**, and **Payouts** before processing new payroll records.
-- If **Hide Salary Details** is enabled, salary information may not appear in every view.
-- Inactive employees may still appear in history, but they should not be used in new records.
+| Symptom / Error Message       | Root Cause                                                      | Remediation Action                                                         |
+| ----------------------------- | --------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| Salary fields hidden or blank | `Hide Salary Details` is active or user lacks salary permission | Disable option on profile or request salary viewing permissions            |
+| Tab entries missing           | No historical wage or salary records exist for this employee    | Create initial attendance or wage entries before expecting records in tabs |
 
 ______________________________________________________________________
 
 ## Related pages
 
-- **Add Employee** — Create a new employee record
-- **Edit Employee** — Update employee information
-- **Record Attendance** — Track attendance for the employee
-- **Generate Salary** — Create salary records
-- **Add Wage Entry** — Record a wage transaction
-- **Create Payout** — Record an employee payout
+- [Add Employee](add-employee.md) — Register a new employee record
+- [Edit Employee](edit-employee.md) — Update profile details or rates
+- [Record Attendance](../attendance/record-attendance.md) — Log daily attendance entries
+- [Generate Salary](../salary/generate-salary.md) — Run salary calculations

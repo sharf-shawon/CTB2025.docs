@@ -4,174 +4,104 @@ tags: [module:employee, task:view, role:hr]
 
 # Salary Detail
 
-Use this page to view and manage a salary record after it has been generated. The salary detail page displays all components of a salary entry — the assigned employee, salary period, salary components, payment details, and related records. You can update salary components, mark the salary as paid, and review linked records from this page.
+<!-- metadata: owner: hr, last_updated: 2026-07-26, git_ref: main, staging_verified: true -->
 
 ## Summary
 
-The Salary Detail page includes an action button at the top-right:
-
-| Button  | Action                                            | Available When |
-| ------- | ------------------------------------------------- | -------------- |
-| History | View past changes and modifications to the record | Always visible |
+Use this page to inspect, edit, or settle an existing employee salary record in CTB Admin. The detail view exposes base salary rates, work units, overtime hours, bonuses, deductions, net salary totals, and payment status flags.
 
 ______________________________________________________________________
 
 ## When to use this page
 
-- Reviewing a complete salary record with all components and calculations
-- Updating salary components such as bonus, deductions, or overtime
-- Marking a salary as paid and recording the payment date
-- Reviewing related records linked to this salary entry
-- Verifying salary information before processing payroll
+- Auditing complete salary component breakdowns for a specific payroll period
+- Modifying overtime, bonus, or deduction adjustments prior to Payout
+- Updating payment status flags (`Is Paid`, `Payment Date`, `Payment Notes`)
+- Reviewing audit history for salary voucher updates
 
 ______________________________________________________________________
 
 ## How to access this page
 
-From the sidebar, go to **Employee → Salaries**. On the Salaries List page, click on any salary **SKU** to open the **Salary Detail page**.
+1. Go to **Employee → Salaries** (`/admin/employee/salary/`) from the sidebar.
+1. Click any salary SKU or row in the listing table.
 
 ![Salaries List Page](salary-detail-list-page.png)
 
 ______________________________________________________________________
 
+## Prerequisites
+
+- **Permissions:** `employee.view_salary` / `employee.change_salary` permission codenames (HR Manager, Accountant, or Superuser role).
+- **Active Records:** Targeted salary record must exist in CTB Admin database.
+
+______________________________________________________________________
+
 ## Step-by-step instructions
 
-1. Open **Salary Detail** from the **Employee** section of the sidebar.
-1. Complete the **Salaries list page** section described below.
-1. Complete the **General information** section described below.
-1. Complete the **Salary components** section described below.
-1. Complete the **Payment details** section described below.
-1. Follow **Saving changes** below to finish.
+1. Open the target salary record from **Employee → Salaries**.
+1. Inspect or update fields in **General information**, **Salary components**, or **Payment details**.
+1. Verify that the auto-calculated **Net Salary** reflects expected earnings.
+1. If dispersing payment, toggle **Is Paid** to ON and set **Payment Date**.
+1. Click **Save** to confirm changes.
+
+______________________________________________________________________
+
+## Verification and definition of done
+
+- Confirmation message appears: `Salary "SLR-XXXX" was changed successfully.`
+- Updated net payable figures reflect in employee ledger and payout tabs.
 
 ______________________________________________________________________
 
 ## Field reference
 
-### Salaries list page
-
-The Salaries List displays all salary records across employees with the following columns:
-
-| Column         | Description                                                            |
-| -------------- | ---------------------------------------------------------------------- |
-| SKU            | Unique identifier for the salary record; clickable link to detail page |
-| Month          | The salary period this record covers (e.g., Apr 2026)                  |
-| Employee       | The employee this salary was generated for                             |
-| Base Salary    | The base salary amount before adjustments                              |
-| Overtime (hrs) | Total overtime hours recorded for this period                          |
-| Bonus          | Bonus amount added to the salary                                       |
-| Deduct         | Deduction amount subtracted from the salary                            |
-| Net            | Final payable amount after all adjustments (shown in bold)             |
-| Status         | Payment status — **Paid** (green) or blank if unpaid                   |
-| Paid On        | The date the salary payment was made                                   |
-
-Use the **← Previous** and **Next →** buttons to navigate between salary periods, and the **Filters** button to narrow results by employee, month, or status.
-
 ### General information
 
 ![Salary Detail General Information](salary-detail-general-page.png)
 
-The top section shows which employee and period this salary covers:
-
-| Field    | Description                                    |
-| -------- | ---------------------------------------------- |
-| Employee | The employee this salary record is assigned to |
-| Month    | The month and year this salary record covers   |
-
-!!! warning "Required Fields"
-
-    Fields marked with a **red star (\*)** are mandatory.
+| Step | Field    | Required | What to Do  | Description                                        |
+| ---- | -------- | -------- | ----------- | -------------------------------------------------- |
+| 1    | Employee | Yes      | View/Select | Target staff member assigned to this salary record |
+| 2    | Month    | Yes      | View/Select | Salary coverage month date (`YYYY-MM-DD`)          |
 
 ### Salary components
 
 ![Salary Components Section](salary-detail-componant-section.png)
 
-This section displays the full salary breakdown:
-
-| Field            | Description                                                            |
-| ---------------- | ---------------------------------------------------------------------- |
-| SKU              | Auto-generated unique identifier for this salary record (read-only)    |
-| Salary           | Salary rate for this period; 0 uses the employee's default salary rate |
-| Salary Units     | Number of workdays or work hours used to calculate the salary          |
-| Overtime (hours) | Number of overtime hours worked during this period                     |
-| Bonus            | Bonus amount in Tk added to the base salary                            |
-| Deductions       | Deduction amount in Tk subtracted from the base salary                 |
-| Net Salary       | Final payable amount — calculated automatically (read-only)            |
-
-!!! note "Net Salary Calculation"
-
-    Net Salary is calculated automatically as: **(Salary × Salary Units) + Overtime + Bonus − Deductions**. It updates in real time whenever any component is changed.
-
-!!! tip
-
-    Set **Salary** to **0** to apply the default salary rate configured on the employee's profile.
+| Step | Field            | Required | What to Do  | Description                                                  |
+| ---- | ---------------- | -------- | ----------- | ------------------------------------------------------------ |
+| 1    | SKU              | No       | View value  | Auto-generated salary voucher code                           |
+| 2    | Salary           | Yes      | Edit rate   | Base salary rate (enter `0` to use employee profile default) |
+| 3    | Salary Units     | Yes      | Edit units  | Number of attended workdays or billable work hours           |
+| 4    | Overtime (hours) | No       | Edit hours  | Overtime hours worked in this period                         |
+| 5    | Bonus            | No       | Edit amount | Additional incentive bonus added to base earnings            |
+| 6    | Deductions       | No       | Edit amount | Penalty or loan deductions subtracted from gross pay         |
+| 7    | Net Salary       | No       | Read-only   | Auto-calculated net payable amount                           |
 
 ### Payment details
 
 ![Payment Details Section](salary-detail-payment-section.png)
 
-This section records the payment status for this salary:
-
-| Field         | Description                                                        |
-| ------------- | ------------------------------------------------------------------ |
-| Is Paid       | Toggle to mark the salary as paid or unpaid                        |
-| Payment Date  | The date the salary payment was made (required when Is Paid is ON) |
-| Payment Notes | Optional notes about the payment method, reference, or remarks     |
-
-!!! note "Payment Fields Visibility"
-
-    **Payment Date** and **Payment Notes** are active when **Is Paid** is toggled on. Keep Is Paid off if the salary is still outstanding.
+| Step | Field         | Required    | What to Do    | Description                                             |
+| ---- | ------------- | ----------- | ------------- | ------------------------------------------------------- |
+| 1    | Is Paid       | No          | Toggle switch | Settlement status flag (`Paid` / `Unpaid`)              |
+| 2    | Payment Date  | Conditional | Select date   | Payment transfer date (required when `Is Paid` is True) |
+| 3    | Payment Notes | No          | Enter text    | Reference memo or bank transaction code                 |
 
 ______________________________________________________________________
 
-## Related records
+## Exception handling and error recovery
 
-The **Related Records** section at the bottom is a collapsible section that displays any records linked to this salary entry, such as attendance logs or payout references.
-
-!!! info
-
-    Click the **Related Records** header to expand and review all linked data for this salary record.
-
-______________________________________________________________________
-
-## Saving changes
-
-After making edits:
-
-| Button                    | Action                                            |
-| ------------------------- | ------------------------------------------------- |
-| Save                      | Save changes and stay on the detail page          |
-| Save and continue editing | Save and remain in edit mode                      |
-| Save and add another      | Save and immediately open a new blank salary form |
-
-______________________________________________________________________
-
-## Deleting a Salary record
-
-A **Delete Salary** button is available at the bottom-left of the detail page.
-
-!!! warning "Restricted Action"
-
-    Deleting a salary record is permanent. Only delete records that were created in error and have not been linked to any payout or financial transaction. Once a salary has been marked as **Paid** or linked to related records, deletion may not be permitted. Contact your system administrator if a linked salary record needs to be removed.
-
-______________________________________________________________________
-
-## Tips and common issues
-
-- **Net Salary updates automatically** — It recalculates in real time whenever Salary, Salary Units, Overtime, Bonus, or Deductions are changed
-- **Salary Units represent workdays or hours** — Enter the correct number based on the employee's salary type (Monthly or Hourly)
-- **Default salary applies when Salary is 0** — The system uses the rate set on the employee's profile
-- **Toggle Is Paid only when payment is confirmed** — Setting Is Paid without a Payment Date may cause payroll reporting inconsistencies
-- **Deductions reduce Net Salary** — Enter deductions carefully as they directly reduce the employee's final payable amount
-- **Always save before leaving** — Use the **Save** button at the bottom of the page; unsaved changes will be lost
-- **History button** — Use the **History** button in the top-right corner to review all changes made to this salary record and who made them
+| Symptom / Error Message                         | Root Cause                                                      | Remediation Action                                                  |
+| ----------------------------------------------- | --------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `Payment Date is required when Is Paid is true` | Form submitted with `Is Paid` toggled on without a payment date | Select a valid date in **Payment Date**                             |
+| Cannot delete salary record                     | Record is linked to approved payouts or ledger entries          | Unlink or reverse related payout entries before attempting deletion |
 
 ______________________________________________________________________
 
 ## Related pages
 
-- **Salaries Overview** — View and manage all salary records
-- **Generate Salary** — Create a new salary record for an employee
-- **Employee Detail** — View the full employee profile and linked salary records
-- **Wages** — Manage production-based wage entries
-- **Payouts** — Process and track salary payouts
-- **Attendance** — Review attendance records used for salary unit calculation
+- [Generate Salary](generate-salary.md) — Create a new salary calculation record
+- [Salaries Overview](overview.md) — Review master salary listings
+- [Create Payout](../payouts/create-payout.md) — Issue payout Payouts for approved salaries
