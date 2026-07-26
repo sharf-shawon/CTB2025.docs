@@ -4704,6 +4704,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#verification-definition-of-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification &amp; definition of done
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#field-reference" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -4715,10 +4726,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tips-and-common-issues" class="md-nav__link">
+  <a href="#exception-handling-error-recovery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tips and common issues
+        Exception handling &amp; error recovery
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-workflows-next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related workflows &amp; next steps
       
     </span>
   </a>
@@ -5548,6 +5570,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#verification-definition-of-done" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification &amp; definition of done
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#field-reference" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5559,10 +5592,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tips-and-common-issues" class="md-nav__link">
+  <a href="#exception-handling-error-recovery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tips and common issues
+        Exception handling &amp; error recovery
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-workflows-next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related workflows &amp; next steps
       
     </span>
   </a>
@@ -5608,7 +5652,7 @@
       
       
       
-        <a href="../../tags.html#tag:role:accountant" class="md-tag">role:accountant</a>
+        <a href="../../tags.html#tag:role:hr" class="md-tag">role:hr</a>
       
     
       
@@ -5624,14 +5668,14 @@
 
 <h1 id="attendance-report">Attendance Report<a class="headerlink" href="#attendance-report" title="Permanent link">¶</a></h1>
 <h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
-<p>The Monthly Attendance Report shows a day-by-day attendance grid for all employees for a selected month, plus per-employee summary columns for presence, lateness, overtime and other tallies. Use it to audit staff presence, export a printable report, and feed payroll calculations.</p>
+<p>The Monthly Attendance Report provides a day-by-day attendance matrix for all employees for a selected month, along with aggregate tallies for days present, lateness, overtime hours, and leaves. Use it to audit staff presence, export printable records, and feed monthly payroll calculations.</p>
 <hr>
 <h2 id="when-to-use-this-page">When to use this page<a class="headerlink" href="#when-to-use-this-page" title="Permanent link">¶</a></h2>
 <ul>
-<li>You need a month-level view of employee attendance for payroll or review</li>
-<li>You want to verify daily attendance patterns across the organisation</li>
-<li>You need a printable monthly attendance summary for management</li>
-<li>You need to identify late arrivals, early departures or overtime at a glance</li>
+<li>Auditing monthly employee attendance prior to generating monthly salaries.</li>
+<li>Verifying daily attendance patterns and lateness trends across departments.</li>
+<li>Preparing a printable monthly attendance summary for HR management.</li>
+<li>Reconciling overtime hours or unexcused absence deductions.</li>
 </ul>
 <hr>
 <h2 id="how-to-access-this-page">How to access this page<a class="headerlink" href="#how-to-access-this-page" title="Permanent link">¶</a></h2>
@@ -5639,69 +5683,75 @@
 <hr>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">¶</a></h2>
 <ul>
-<li>Permission to view Reports or Attendance pages (HR or manager role)</li>
-<li>Employee records must exist in <strong>Employees</strong></li>
-<li>Attendance entries (time-in / time-out) must be recorded for the chosen month</li>
+<li>Active user session with <code>employee.view_attendance</code> or HR manager permissions.</li>
+<li>Active employee profiles must exist in <strong>Employee → Employees</strong>.</li>
+<li>Daily attendance entries must be recorded for the target month.</li>
 </ul>
 <hr>
 <h2 id="step-by-step-instructions">Step-by-step instructions<a class="headerlink" href="#step-by-step-instructions" title="Permanent link">¶</a></h2>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../gallery/Reports/desktop-monthly-attendance-report.png" data-desc-position="bottom"><img alt="attendance report page" src="../../gallery/Reports/desktop-monthly-attendance-report.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../gallery/Reports/desktop-monthly-attendance-report.png" data-desc-position="bottom"><img alt="Attendance Report Page" src="../../gallery/Reports/desktop-monthly-attendance-report.png"></a></p>
 <ol>
-<li>Go to <strong>Employee → Attendances → Monthly Attendance Report</strong>.</li>
-<li>Select the month (or set the Start/End Date) for the report period if controls are provided</li>
-<li>Click <strong>Apply Filter</strong> (or similar) to refresh the grid for the selected month</li>
-<li>Use the grid to inspect per-employee day cells; each cell shows attendance status for that date</li>
-<li>Review the right-side summary columns for each employee (totals for present, late, overtime, etc.)</li>
-<li>Use the legend below the table to interpret cell color codes (full shift, partial, leave, overtime, late/early)</li>
-<li>Click <strong>Print Report</strong> (top-left) to print or export the current view</li>
+<li>Open <strong>Employee → Attendances → Monthly Attendance Report</strong>.</li>
+<li>Select the target <strong>Month</strong> and <strong>Year</strong> using the header date picker.</li>
+<li>Click <strong>Apply Filter</strong> to render the monthly attendance grid.</li>
+<li>Inspect the per-employee rows across date columns <code>1</code> through <code>31</code>.</li>
+<li>Review right-hand summary tallies for <strong>Present (P)</strong>, <strong>Absent (A)</strong>, <strong>Late (L)</strong>, and <strong>Overtime (OT)</strong>.</li>
+<li>Refer to the color-coded legend below the grid to distinguish full shifts, leaves, and late arrivals.</li>
+<li>Click <strong>Print Report</strong> (top-left) to export a clean PDF or print hard copy attendance sheets.</li>
 </ol>
+<hr>
+<h2 id="verification-definition-of-done">Verification &amp; definition of done<a class="headerlink" href="#verification-definition-of-done" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>Grid completion</strong>: Every active employee has an attendance status icon or code for each calendar day of the month.</li>
+<li><strong>Summary reconciliation</strong>: The sum of Present + Absent + Leave days equals total working days in the month.</li>
+</ul>
 <hr>
 <h2 id="field-reference">Field reference<a class="headerlink" href="#field-reference" title="Permanent link">¶</a></h2>
 <ul>
-<li>
-<p><strong>Employee</strong> — Employee name (first column). Click to open the employee record if supported</p>
-</li>
-<li>
-<p><strong>Date columns (1–31)</strong> — One column per calendar day in the selected month. Cell values indicate attendance status (present, absent, leave, half-day, etc.)</p>
-</li>
-<li>
-<p><strong>Summary columns (right)</strong> — Per-employee tallies, typically including:</p>
-<ul>
-<li><strong>Present (P)</strong> — Count of days the employee was present</li>
-<li><strong>Absent (A)</strong> — Count of absent days (unmarked or absent status)</li>
-<li><strong>Late (L)</strong> — Count of late arrivals</li>
-<li><strong>OT</strong> — Overtime hours or overtime day count (implementation varies)</li>
-<li><strong>Early/Early leave</strong> — Count of early departures, if tracked</li>
-<li><strong>Total</strong> — Aggregate attendance-related metric (may be labelled differently in your deployment)</li>
-</ul>
-</li>
-<li>
-<p><strong>Legend</strong> — A legend below the grid explains cell colours and symbols, for example:</p>
-<ul>
-<li>Full shift worked</li>
-<li>Partial shift or partial clock-in/clock-out</li>
-<li>Leave (paid/unpaid)</li>
-<li>Overtime entry</li>
-<li>Late arrival or early departure</li>
-<li>Total present/attendance summary</li>
-</ul>
-</li>
+<li><strong>Employee</strong> — Full name and ID of the employee (first column).</li>
+<li><strong>Date Columns (1–31)</strong> — Calendar day cells indicating shift attendance status for that date.</li>
+<li><strong>Present (P)</strong> — Total count of days the employee worked a complete shift.</li>
+<li><strong>Absent (A)</strong> — Total count of days marked absent or unrecorded.</li>
+<li><strong>Late (L)</strong> — Total count of shift arrivals exceeding the grace period.</li>
+<li><strong>OT (Hours)</strong> — Aggregate overtime hours accumulated during the month.</li>
+<li><strong>Leave (LV)</strong> — Total count of approved paid or unpaid leave days.</li>
 </ul>
 <hr>
-<h2 id="tips-and-common-issues">Tips and common issues<a class="headerlink" href="#tips-and-common-issues" title="Permanent link">¶</a></h2>
+<h2 id="exception-handling-error-recovery">Exception handling &amp; error recovery<a class="headerlink" href="#exception-handling-error-recovery" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Error Code / Symptom</th>
+<th>Root Cause</th>
+<th>Step-by-step remediation procedure</th>
+<th>Actionable role required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Empty grid cells</td>
+<td>Attendance not recorded or automated biometric sync failed</td>
+<td>1. Open <strong>Employee → Attendances → Record Attendance</strong>.<br>2. Manually enter time-in/time-out records for missing dates.</td>
+<td><code>hr</code> / <code>staff</code></td>
+</tr>
+<tr>
+<td>Unexpected overtime tally</td>
+<td>Shift start/end times misconfigured</td>
+<td>1. Open <strong>Employee → Shift Settings</strong>.<br>2. Confirm official working hours and overtime threshold rules.</td>
+<td><code>hr</code> / <code>admin</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="related-workflows-next-steps">Related workflows &amp; next steps<a class="headerlink" href="#related-workflows-next-steps" title="Permanent link">¶</a></h2>
 <ul>
-<li>If many rows show empty cells, confirm that automatic time capture or manual attendance entries were recorded for that month</li>
-<li>Narrow the date range when the report is slow to load for large employee lists</li>
-<li>Use the employee link (left column) to open an employee's attendance detail when investigating a specific row</li>
-<li>Overtime and late counts depend on your organisation's shift rules — verify shift settings if totals look unexpected</li>
+<li><strong><a href="../04-employee/attendance/record-attendance.html">Record Attendance</a></strong> — Enter or correct daily attendance records.</li>
+<li><strong><a href="../04-employee/salary/generate-salary.html">Generate Salary</a></strong> — Process monthly payroll based on verified attendance tallies.</li>
 </ul>
 <hr>
 <h2 id="related-pages">Related pages<a class="headerlink" href="#related-pages" title="Permanent link">¶</a></h2>
 <ul>
-<li><strong>[Attendance Overview]</strong> — View and manage attendance records</li>
-<li><strong>[Record Attendance]</strong> — Add or edit daily attendance entries</li>
-<li><strong>[Employees Overview]</strong> — Manage employee records and profiles</li>
-<li><strong>[Salary Detail]</strong> — Payroll and salary records used for payroll reconciliation</li>
+<li><strong><a href="../index.html">Reports</a></strong> — All available reporting tools across CTB Admin.</li>
 </ul>
 
 
@@ -5725,7 +5775,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 02:55:49 UTC">July 26, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 02:58:38 UTC">July 26, 2026</span>
   </span>
 
     
