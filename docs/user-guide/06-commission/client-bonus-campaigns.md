@@ -56,7 +56,7 @@ ______________________________________________________________________
 
 ### Campaign details
 
-<!-- TODO: screenshot screenshots/commission/client-bonus-campaign.png -->
+![Client Bonus Campaigns](Add-Client-Bonus-Campaign.png)
 
 | Step | Field                  | Required | What to Do       | Description                                              |
 | ---- | ---------------------- | -------- | ---------------- | -------------------------------------------------------- |
