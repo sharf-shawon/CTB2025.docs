@@ -10,6 +10,7 @@ The **Client Detail** page displays the complete profile of a client, including 
 
 Use this page to review a client's complete profile before you perform billing, payment, or account decisions. It combines identity, contact, and financial information in one place.
 
+<!-- TODO: screenshot client-detail.png -->
 ______________________________________________________________________
 
 ## When to use this page
@@ -105,17 +106,20 @@ ______________________________________________________________________
 
 ![Balance and Discount Section](client-balance-discount.png)
 
-This section shows the client’s financial status and limits.
+This section shows the client’s financial status, pending amounts, limits, and discount settings.
 
-| Field               | Description                              |
-| ------------------- | ---------------------------------------- |
-| Balance             | Current financial balance of the client  |
-| Commission Balance  | Commission-related balance               |
-| Upper Balance Limit | Maximum allowed balance                  |
-| Lower Balance Limit | Minimum allowed balance                  |
-| Discount Total      | Total discount applied (auto-calculated) |
-| Discount Max Rate   | Maximum allowed discount percentage      |
-| Discount Max Amount | Maximum allowed discount amount          |
+| Field                  | Description                                                                 |
+| ---------------------- | --------------------------------------------------------------------------- |
+| Balance                | Current financial balance of the client                                     |
+| Pending balance        | Amount currently pending (unsettled/payable)                                |
+| Limit Calculation Mode | OFF: Apply limit based on Pending balance. ON: Apply limit based on Balance |
+| Commission Balance     | Commission-related balance                                                  |
+| Upper Balance Limit    | Maximum allowed balance                                                     |
+| Lower Balance Limit    | Minimum allowed balance                                                     |
+| Check Limit            | Maximum allowed pending check exposure (0 = unlimited)                      |
+| Discount Total         | Total discount applied (auto-calculated)                                    |
+| Discount Max Rate      | Maximum allowed discount percentage                                         |
+| Discount Max Amount    | Maximum allowed discount amount                                             |
 
 ______________________________________________________________________
 
@@ -149,3 +153,57 @@ ______________________________________________________________________
 - **Add Client** — Create a new client
 - **Edit Client** — Update client information
 - **Client Reports** — Analyze client activity and financial data
+
+______________________________________________________________________
+
+## Invoices
+
+![Client's Invoices](client-detail-invoice-section.png)
+
+The **Invoices** panel lists invoices related to the client. Use the table to open, filter, or perform actions on invoices such as sending or marking as paid.
+
+Typical columns: **Invoice Number**, **Invoice Date**, **Subtotal**, **Payable**, **Status**
+
+Select rows to perform bulk actions using the **Select action** menu.
+
+______________________________________________________________________
+
+## Checks
+
+![Client's Checks](client-detail-check-section.png)
+
+
+The **Checks** panel shows checks issued by or to the client. Columns include **Check Number**, **Bank**, **Status**, **Amount**, **Date**, **Check Pass Date**, and **Check Bounce Date**.
+
+Use check actions to mark status changes or to record bounce information.
+
+______________________________________________________________________
+
+## Payments
+
+![Client's Payment History](client-detail-payment-section.png)
+
+The **Payments** panel displays recorded payments for the client. Columns include **Date**, **Reference**, **Status**, and **Amount**.
+
+Payments can be filtered and selected for actions (for example, reconcile or refund).
+
+______________________________________________________________________
+
+## Product returns
+
+The **Product Returns** area lists product returns associated with this client. If none exist, the page shows a message and a button to **Add Product Return**.
+
+______________________________________________________________________
+
+## Page actions and footer controls
+
+At the bottom of the page you will typically find the primary action buttons. Examples from the UI:
+
+- **Delete Client** — Permanently delete the client record (destructive)
+- **Save** — Save changes and close the form
+- **Save and continue editing** — Save changes and remain on the edit page
+- **Save and add another** — Save current record and open a blank add form
+
+Use the **History**, **View Client Report**, and quick action buttons from the top-right of the page for additional operations.
+
+______________________________________________________________________

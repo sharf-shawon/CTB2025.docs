@@ -58,6 +58,8 @@ ______________________________________________________________________
 
 ## Field reference
 
+![ADD Client Page](add-client-page.png)
+
 | Field Name            | Type    | Required | Backend Validation / Constraints                | Description                                                      |
 | :-------------------- | :------ | :------- | :---------------------------------------------- | :--------------------------------------------------------------- |
 | **SKU**               | Text    | Auto     | Prefix `CLN`, read-only                         | System-generated tracking SKU.                                   |
