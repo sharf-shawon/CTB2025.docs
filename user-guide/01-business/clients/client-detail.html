@@ -923,6 +923,61 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#invoices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Invoices
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#payments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Payments
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#product-returns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Product returns
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#page-actions-and-footer-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Page actions and footer controls
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -5670,6 +5725,61 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#invoices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Invoices
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#payments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Payments
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#product-returns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Product returns
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#page-actions-and-footer-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Page actions and footer controls
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -5716,6 +5826,7 @@
 <p>The <strong>Client Detail</strong> page displays the complete profile of a client, including personal information, business details, financial data, and activity history. Use it to review client information and to edit the record or manage its transactions.</p>
 <h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
 <p>Use this page to review a client's complete profile before you perform billing, payment, or account decisions. It combines identity, contact, and financial information in one place.</p>
+<!-- TODO: screenshot client-detail.png -->
 <hr>
 <h2 id="when-to-use-this-page">When to use this page<a class="headerlink" href="#when-to-use-this-page" title="Permanent link">¶</a></h2>
 <ul>
@@ -5849,7 +5960,7 @@
 <hr>
 <h2 id="balance-and-discount-information">Balance and discount information<a class="headerlink" href="#balance-and-discount-information" title="Permanent link">¶</a></h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="client-balance-discount.png" data-desc-position="bottom"><img alt="Balance and Discount Section" src="client-balance-discount.png"></a></p>
-<p>This section shows the client’s financial status and limits.</p>
+<p>This section shows the client’s financial status, pending amounts, limits, and discount settings.</p>
 <table>
 <thead>
 <tr>
@@ -5863,6 +5974,14 @@
 <td>Current financial balance of the client</td>
 </tr>
 <tr>
+<td>Pending balance</td>
+<td>Amount currently pending (unsettled/payable)</td>
+</tr>
+<tr>
+<td>Limit Calculation Mode</td>
+<td>OFF: Apply limit based on Pending balance. ON: Apply limit based on Balance</td>
+</tr>
+<tr>
 <td>Commission Balance</td>
 <td>Commission-related balance</td>
 </tr>
@@ -5873,6 +5992,10 @@
 <tr>
 <td>Lower Balance Limit</td>
 <td>Minimum allowed balance</td>
+</tr>
+<tr>
+<td>Check Limit</td>
+<td>Maximum allowed pending check exposure (0 = unlimited)</td>
 </tr>
 <tr>
 <td>Discount Total</td>
@@ -5933,6 +6056,36 @@
 <li><strong>Edit Client</strong> — Update client information</li>
 <li><strong>Client Reports</strong> — Analyze client activity and financial data</li>
 </ul>
+<hr>
+<h2 id="invoices">Invoices<a class="headerlink" href="#invoices" title="Permanent link">¶</a></h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="client-detail-invoice-section.png" data-desc-position="bottom"><img alt="Client's Invoices" src="client-detail-invoice-section.png"></a></p>
+<p>The <strong>Invoices</strong> panel lists invoices related to the client. Use the table to open, filter, or perform actions on invoices such as sending or marking as paid.</p>
+<p>Typical columns: <strong>Invoice Number</strong>, <strong>Invoice Date</strong>, <strong>Subtotal</strong>, <strong>Payable</strong>, <strong>Status</strong></p>
+<p>Select rows to perform bulk actions using the <strong>Select action</strong> menu.</p>
+<hr>
+<h2 id="checks">Checks<a class="headerlink" href="#checks" title="Permanent link">¶</a></h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="client-detail-check-section.png" data-desc-position="bottom"><img alt="Client's Checks" src="client-detail-check-section.png"></a></p>
+<p>The <strong>Checks</strong> panel shows checks issued by or to the client. Columns include <strong>Check Number</strong>, <strong>Bank</strong>, <strong>Status</strong>, <strong>Amount</strong>, <strong>Date</strong>, <strong>Check Pass Date</strong>, and <strong>Check Bounce Date</strong>.</p>
+<p>Use check actions to mark status changes or to record bounce information.</p>
+<hr>
+<h2 id="payments">Payments<a class="headerlink" href="#payments" title="Permanent link">¶</a></h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="client-detail-payment-section.png" data-desc-position="bottom"><img alt="Client's Payment History" src="client-detail-payment-section.png"></a></p>
+<p>The <strong>Payments</strong> panel displays recorded payments for the client. Columns include <strong>Date</strong>, <strong>Reference</strong>, <strong>Status</strong>, and <strong>Amount</strong>.</p>
+<p>Payments can be filtered and selected for actions (for example, reconcile or refund).</p>
+<hr>
+<h2 id="product-returns">Product returns<a class="headerlink" href="#product-returns" title="Permanent link">¶</a></h2>
+<p>The <strong>Product Returns</strong> area lists product returns associated with this client. If none exist, the page shows a message and a button to <strong>Add Product Return</strong>.</p>
+<hr>
+<h2 id="page-actions-and-footer-controls">Page actions and footer controls<a class="headerlink" href="#page-actions-and-footer-controls" title="Permanent link">¶</a></h2>
+<p>At the bottom of the page you will typically find the primary action buttons. Examples from the UI:</p>
+<ul>
+<li><strong>Delete Client</strong> — Permanently delete the client record (destructive)</li>
+<li><strong>Save</strong> — Save changes and close the form</li>
+<li><strong>Save and continue editing</strong> — Save changes and remain on the edit page</li>
+<li><strong>Save and add another</strong> — Save current record and open a blank add form</li>
+</ul>
+<p>Use the <strong>History</strong>, <strong>View Client Report</strong>, and quick action buttons from the top-right of the page for additional operations.</p>
+<hr>
 
 
 
@@ -5955,7 +6108,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 00:44:11 UTC">July 26, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 14, 2026 14:41:27 UTC">August 14, 2026</span>
   </span>
 
     
