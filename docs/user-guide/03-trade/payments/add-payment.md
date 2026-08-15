@@ -66,6 +66,8 @@ ______________________________________________________________________
 
 ## Field reference
 
+![Add Payment](add-payment2.0.png)
+
 | Field Name       | Type    | Required    | Backend Validation / Constraints                           | Description                                                        |
 | :--------------- | :------ | :---------- | :--------------------------------------------------------- | :----------------------------------------------------------------- |
 | **SKU**          | Text    | Auto        | Prefix `PMN`, read-only                                    | Unique system-generated tracking code.                             |
