@@ -64,6 +64,9 @@ ______________________________________________________________________
 
 ## Field reference
 
+![Create Invoice](create-invoice-general-tab-v2.png)
+
+
 | Field Name         | Type    | Required | Backend Validation / Constraints                                      | Description                                                                |
 | :----------------- | :------ | :------- | :-------------------------------------------------------------------- | :------------------------------------------------------------------------- |
 | **Invoice Number** | Text    | Yes      | Max 20 characters, unique constraint                                  | Unique tracking number for the invoice. Auto-generated if left blank.      |
