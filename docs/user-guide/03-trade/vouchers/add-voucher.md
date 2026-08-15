@@ -44,11 +44,11 @@ ______________________________________________________________________
 1. Select the supplying **Vendor** from the dropdown menu.
 1. Specify the **Voucher Date** and optional **Reference** code.
 1. Upload a photo or scan of the receipt under **Photo** if required for audit.
-1. Switch to the **Voucher Items** section and select a **Material**.
-1. Input unit **Rate** and **Quantity** received.
+1. Switch to the **Voucher Items** tab to add one or more material line items. See "Adding items to the voucher" below for detailed steps.
 1. Set order charges: **Tax**, **VAT**, **Shipping**, and **Discount**.
 1. Enter **Paid Amount** and select the **Paid By** employee if a payment was issued.
 1. Click **Save** to record the purchase voucher.
+
 
 ______________________________________________________________________
 
@@ -61,6 +61,8 @@ ______________________________________________________________________
 ______________________________________________________________________
 
 ## Field reference
+
+![Add Voucher](add-voucher-full-page.png)
 
 | Field Name         | Type    | Required | Backend Validation / Constraints              | Description                                        |
 | :----------------- | :------ | :------- | :-------------------------------------------- | :------------------------------------------------- |
@@ -80,6 +82,28 @@ ______________________________________________________________________
 | **Paid By**        | Select  | No       | Foreign Key (`Employee.Employee`), `SET_NULL` | Staff member who executed payment.                 |
 
 ______________________________________________________________________
+
+<!-- Voucher items field reference table: placed below the main Field reference table -->
+
+### Voucher item fields
+
+![Voucher Item Fields](add-voucher-item-info.png)
+
+| Field Name | Type | Required | Backend Validation / Behavior | Description |
+| :--------- | :--- | :------: | :---------------------------- | :---------- |
+| **Material** | Select | Yes | Foreign Key (`Factory.Material`) — selectable from catalog; plus (+) icon to add new material inline (requires `Factory | Materials | Can add Material`) | Material or inventory item received. Use the dropdown to select an existing material. The pencil icon edits the selected material; the eye icon views details. |
+| **Rate** | Decimal | Yes | Must be >= 0; 3 decimal places typical | Unit cost for the material; used to compute the line total. Editable per line. |
+| **Quantity** | Decimal | Yes | Accepts decimals for weight/measure-based materials | Quantity received. Combined with Rate to compute the line Total. |
+| **Total** | Decimal | Auto | Calculated as `Rate × Quantity`; updates in real time | Line total amount. Read-only in the line; included in Subtotal. |
+| **Delete?** | Action link | No | Remove link deletes the line from the voucher before save | Click **Remove** to delete the current line. Deleting an already-saved line requires saving the voucher to persist inventory changes. |
+| **Row actions** | Icons | No | Inline icons: pencil (edit material), + (create new material), eye (view material), trash (remove material from catalog — requires catalog perms) | Quick access actions for managing materials directly from the voucher line. |
+
+Notes
+
+- Use the **Add another Voucher Item** button to append blank rows for additional materials; totals recompute automatically.
+- Subtotal and Payable totals recalculate whenever any line Total changes. Confirm Subtotal before saving.
+- Saving the voucher updates material inventory balances; use **Save and continue editing** to test image uploads or data without leaving the page.
+- Inline material creation or deletion requires the appropriate `Factory | Materials` permissions; catalog deletions do not retroactively remove materials from saved vouchers.
 
 ## Exception handling & error recovery
 
