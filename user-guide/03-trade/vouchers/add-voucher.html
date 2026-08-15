@@ -2613,6 +2613,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Field reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#voucher-item-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Voucher item fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -5591,6 +5608,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Field reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#voucher-item-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Voucher item fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -5703,8 +5737,7 @@
 <li>Select the supplying <strong>Vendor</strong> from the dropdown menu.</li>
 <li>Specify the <strong>Voucher Date</strong> and optional <strong>Reference</strong> code.</li>
 <li>Upload a photo or scan of the receipt under <strong>Photo</strong> if required for audit.</li>
-<li>Switch to the <strong>Voucher Items</strong> section and select a <strong>Material</strong>.</li>
-<li>Input unit <strong>Rate</strong> and <strong>Quantity</strong> received.</li>
+<li>Switch to the <strong>Voucher Items</strong> tab to add one or more material line items. See "Adding items to the voucher" below for detailed steps.</li>
 <li>Set order charges: <strong>Tax</strong>, <strong>VAT</strong>, <strong>Shipping</strong>, and <strong>Discount</strong>.</li>
 <li>Enter <strong>Paid Amount</strong> and select the <strong>Paid By</strong> employee if a payment was issued.</li>
 <li>Click <strong>Save</strong> to record the purchase voucher.</li>
@@ -5718,6 +5751,7 @@
 </ul>
 <hr>
 <h2 id="field-reference">Field reference<a class="headerlink" href="#field-reference" title="Permanent link">¶</a></h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="add-voucher-full-page.png" data-desc-position="bottom"><img alt="Add Voucher" src="add-voucher-full-page.png"></a></p>
 <table>
 <thead>
 <tr>
@@ -5830,6 +5864,72 @@
 </tbody>
 </table>
 <hr>
+<!-- Voucher items field reference table: placed below the main Field reference table -->
+
+<h3 id="voucher-item-fields">Voucher item fields<a class="headerlink" href="#voucher-item-fields" title="Permanent link">¶</a></h3>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="add-voucher-item-info.png" data-desc-position="bottom"><img alt="Voucher Item Fields" src="add-voucher-item-info.png"></a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Field Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: center;">Required</th>
+<th style="text-align: left;">Backend Validation / Behavior</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Material</strong></td>
+<td style="text-align: left;">Select</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: left;">Foreign Key (<code>Factory.Material</code>) — selectable from catalog; plus (+) icon to add new material inline (requires <code>Factory | Materials | Can add Material</code>)</td>
+<td style="text-align: left;">Material or inventory item received. Use the dropdown to select an existing material. The pencil icon edits the selected material; the eye icon views details.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Rate</strong></td>
+<td style="text-align: left;">Decimal</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: left;">Must be &gt;= 0; 3 decimal places typical</td>
+<td style="text-align: left;">Unit cost for the material; used to compute the line total. Editable per line.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Quantity</strong></td>
+<td style="text-align: left;">Decimal</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: left;">Accepts decimals for weight/measure-based materials</td>
+<td style="text-align: left;">Quantity received. Combined with Rate to compute the line Total.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Total</strong></td>
+<td style="text-align: left;">Decimal</td>
+<td style="text-align: center;">Auto</td>
+<td style="text-align: left;">Calculated as <code>Rate × Quantity</code>; updates in real time</td>
+<td style="text-align: left;">Line total amount. Read-only in the line; included in Subtotal.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Delete?</strong></td>
+<td style="text-align: left;">Action link</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: left;">Remove link deletes the line from the voucher before save</td>
+<td style="text-align: left;">Click <strong>Remove</strong> to delete the current line. Deleting an already-saved line requires saving the voucher to persist inventory changes.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Row actions</strong></td>
+<td style="text-align: left;">Icons</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: left;">Inline icons: pencil (edit material), + (create new material), eye (view material), trash (remove material from catalog — requires catalog perms)</td>
+<td style="text-align: left;">Quick access actions for managing materials directly from the voucher line.</td>
+</tr>
+</tbody>
+</table>
+<p>Notes</p>
+<ul>
+<li>Use the <strong>Add another Voucher Item</strong> button to append blank rows for additional materials; totals recompute automatically.</li>
+<li>Subtotal and Payable totals recalculate whenever any line Total changes. Confirm Subtotal before saving.</li>
+<li>Saving the voucher updates material inventory balances; use <strong>Save and continue editing</strong> to test image uploads or data without leaving the page.</li>
+<li>Inline material creation or deletion requires the appropriate <code>Factory | Materials</code> permissions; catalog deletions do not retroactively remove materials from saved vouchers.</li>
+</ul>
 <h2 id="exception-handling-error-recovery">Exception handling &amp; error recovery<a class="headerlink" href="#exception-handling-error-recovery" title="Permanent link">¶</a></h2>
 <table>
 <thead>
@@ -5894,7 +5994,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 02:45:53 UTC">July 26, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 15, 2026 17:19:11 UTC">August 15, 2026</span>
   </span>
 
     
