@@ -1974,63 +1974,13 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Field reference">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#general-information" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        General information
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#payment-details" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Payment details
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add-items" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Add items
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#terms-and-conditions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Terms and conditions
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
-  <a href="#saving-the-tender-invoice" class="md-nav__link">
+  <a href="#exception-handling-error-recovery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Saving the Tender Invoice
+        Exception handling &amp; error recovery
       
     </span>
   </a>
@@ -2038,10 +1988,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tips-and-common-issues" class="md-nav__link">
+  <a href="#related-workflows-next-steps" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tips and common issues
+        Related workflows &amp; next steps
       
     </span>
   </a>
@@ -5597,63 +5547,13 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Field reference">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#general-information" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        General information
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#payment-details" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Payment details
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add-items" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Add items
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#terms-and-conditions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Terms and conditions
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
-  <a href="#saving-the-tender-invoice" class="md-nav__link">
+  <a href="#exception-handling-error-recovery" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Saving the Tender Invoice
+        Exception handling &amp; error recovery
       
     </span>
   </a>
@@ -5661,10 +5561,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tips-and-common-issues" class="md-nav__link">
+  <a href="#related-workflows-next-steps" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tips and common issues
+        Related workflows &amp; next steps
       
     </span>
   </a>
@@ -5750,205 +5650,165 @@
 </ol>
 <hr>
 <h2 id="field-reference">Field reference<a class="headerlink" href="#field-reference" title="Permanent link">¶</a></h2>
-<h3 id="general-information">General information<a class="headerlink" href="#general-information" title="Permanent link">¶</a></h3>
-<p>Fill in the following fields on the General tab:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="create-tender-invoice.png" data-desc-position="bottom"><img alt="Create Tender Invoice" src="create-tender-invoice.png"></a></p>
 <table>
 <thead>
 <tr>
-<th>Step</th>
-<th>Field</th>
-<th>What to Do</th>
-<th>Description</th>
+<th style="text-align: left;">Field Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Required</th>
+<th style="text-align: left;">Backend Validation / Constraints</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1</td>
-<td>Tender Number</td>
-<td>Auto-generated or enter</td>
-<td>Unique identifier for this tender</td>
+<td style="text-align: left;"><strong>Tender Number</strong></td>
+<td style="text-align: left;">Text</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Max 20 chars, unique</td>
+<td style="text-align: left;">Unique identifier for the tender. Auto-generated if left blank.</td>
 </tr>
 <tr>
-<td>2</td>
-<td>Tender Date</td>
-<td>Select date</td>
-<td>Date the tender is issued</td>
+<td style="text-align: left;"><strong>Tender Date</strong></td>
+<td style="text-align: left;">Date</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Valid date (<code>YYYY-MM-DD</code>)</td>
+<td style="text-align: left;">Date the tender is issued.</td>
 </tr>
 <tr>
-<td>3</td>
-<td>Client</td>
-<td>Select client</td>
-<td>The client receiving the tender proposal</td>
+<td style="text-align: left;"><strong>Valid Until</strong></td>
+<td style="text-align: left;">Date</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Valid date &gt;= Tender Date</td>
+<td style="text-align: left;">Expiration date for the tender offer.</td>
 </tr>
 <tr>
-<td>4</td>
-<td>Status</td>
-<td>Select status</td>
-<td>Current state (Draft, sent, cancelled)</td>
+<td style="text-align: left;"><strong>Client</strong></td>
+<td style="text-align: left;">Select</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">FK → <code>Business.Client</code>, <code>PROTECT</code> on delete</td>
+<td style="text-align: left;">The client receiving the tender proposal.</td>
 </tr>
 <tr>
-<td>5</td>
-<td>Valid Until</td>
-<td>Select date</td>
-<td>Expiration date for the tender offer</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition warning">
-<p class="admonition-title">Required Fields</p>
-<p>Fields marked with a <strong>red star (*)</strong> are mandatory.</p>
-</div>
-<h3 id="payment-details">Payment details<a class="headerlink" href="#payment-details" title="Permanent link">¶</a></h3>
-<p>Configure the financial details of the tender proposal:</p>
-<table>
-<thead>
-<tr>
-<th>Step</th>
-<th>Field</th>
-<th>What to Do</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Subtotal</td>
-<td>Auto-calculated</td>
-<td>Sum of all item totals (Quantity × Rate)</td>
+<td style="text-align: left;"><strong>Salesperson</strong></td>
+<td style="text-align: left;">Select</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">FK → <code>Employee.Employee</code>, <code>SET_NULL</code> on delete</td>
+<td style="text-align: left;">Staff responsible for the proposal (used for commission reporting).</td>
 </tr>
 <tr>
-<td>2</td>
-<td>Tax</td>
-<td>Enter amount</td>
-<td>Tax if applicable</td>
+<td style="text-align: left;"><strong>Status</strong></td>
+<td style="text-align: left;">Select</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Choices: <code>Draft</code>, <code>Sent</code>, <code>Cancelled</code></td>
+<td style="text-align: left;">Lifecycle state of the tender.</td>
 </tr>
 <tr>
-<td>3</td>
-<td>VAT</td>
-<td>Enter amount</td>
-<td>Value-added tax if applicable</td>
+<td style="text-align: left;"><strong>Is Approved</strong></td>
+<td style="text-align: left;">Toggle</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Boolean</td>
+<td style="text-align: left;">When enabled, indicates an authorized tender (may affect conversion to invoice).</td>
 </tr>
 <tr>
-<td>4</td>
-<td>Shipping</td>
-<td>Enter amount</td>
-<td>Shipping or delivery charges if applicable</td>
+<td style="text-align: left;"><strong>Subtotal</strong></td>
+<td style="text-align: left;">Decimal</td>
+<td style="text-align: left;">Auto</td>
+<td style="text-align: left;">Max 13 digits, 3 decimal places</td>
+<td style="text-align: left;">Sum of all line item totals (<code>Qty × Rate</code>).</td>
 </tr>
 <tr>
-<td>5</td>
-<td>Discount</td>
-<td>Enter amount</td>
-<td>Discount offered on the tender proposal</td>
+<td style="text-align: left;"><strong>Tax</strong></td>
+<td style="text-align: left;">Decimal</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Default <code>0.00</code>, 2 decimal places</td>
+<td style="text-align: left;">Tax amount applied to the order.</td>
 </tr>
 <tr>
-<td>6</td>
-<td>Total</td>
-<td>Auto-calculated</td>
-<td>Final proposed amount (Subtotal + Tax + VAT + Shipping - Discount)</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The total is calculated automatically based on items and payment adjustments.</p>
-</div>
-<h3 id="add-items">Add items<a class="headerlink" href="#add-items" title="Permanent link">¶</a></h3>
-<p>Add products or services to the tender proposal:</p>
-<table>
-<thead>
-<tr>
-<th>Step</th>
-<th>Field</th>
-<th>What to Do</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Product</td>
-<td>Select from dropdown</td>
-<td>The product or service being quoted</td>
+<td style="text-align: left;"><strong>VAT</strong></td>
+<td style="text-align: left;">Decimal</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Default <code>0.00</code>, 3 decimal places</td>
+<td style="text-align: left;">Value-added tax amount.</td>
 </tr>
 <tr>
-<td>2</td>
-<td>Rate</td>
-<td>Enter or select</td>
-<td>Proposed unit price</td>
+<td style="text-align: left;"><strong>Shipping</strong></td>
+<td style="text-align: left;">Decimal</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Default <code>0.00</code>, 3 decimal places</td>
+<td style="text-align: left;">Freight or delivery charges.</td>
 </tr>
 <tr>
-<td>3</td>
-<td>Qty</td>
-<td>Enter quantity</td>
-<td>Number of units being quoted</td>
+<td style="text-align: left;"><strong>Discount</strong></td>
+<td style="text-align: left;">Decimal</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Default <code>0.00</code>, 2 decimal places</td>
+<td style="text-align: left;">Order-level discount deducted from Payable.</td>
 </tr>
 <tr>
-<td>4</td>
-<td>Total</td>
-<td>Auto-calculated</td>
-<td>Qty × Rate for this line item</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>Click <strong>Add another Item</strong> to add multiple products to the tender</li>
-<li>Click the <strong>trash icon</strong> to remove an item</li>
-<li>Use the <strong>edit icon</strong> to modify an item's details</li>
-</ul>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Keep rates competitive but profitable. Each item's total calculates automatically.</p>
-</div>
-<h3 id="terms-and-conditions">Terms and conditions<a class="headerlink" href="#terms-and-conditions" title="Permanent link">¶</a></h3>
-<p>Add optional notes or special terms:</p>
-<table>
-<thead>
-<tr>
-<th>Step</th>
-<th>Field</th>
-<th>What to Do</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Terms</td>
-<td>Enter text</td>
-<td>Payment terms, delivery conditions, or special notes</td>
+<td style="text-align: left;"><strong>Payable / Total</strong></td>
+<td style="text-align: left;">Decimal</td>
+<td style="text-align: left;">Auto</td>
+<td style="text-align: left;">Calculated: Subtotal + Tax + VAT + Shipping - Discount</td>
+<td style="text-align: left;">Final proposed amount to be presented to the client.</td>
 </tr>
 <tr>
-<td>2</td>
-<td>Note</td>
-<td>Enter text</td>
-<td>Internal comments about the tender</td>
+<td style="text-align: left;"><strong>System Fields</strong></td>
+<td style="text-align: left;">Section</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Administrative metadata</td>
+<td style="text-align: left;">Internal system metadata (created/modified timestamps, internal IDs).</td>
 </tr>
 </tbody>
 </table>
 <hr>
-<h2 id="saving-the-tender-invoice">Saving the Tender Invoice<a class="headerlink" href="#saving-the-tender-invoice" title="Permanent link">¶</a></h2>
-<p>After completing all sections:</p>
-<ul>
-<li>Click <strong>Save</strong> to create the tender as Draft/sent/cancelled based on the status you selected</li>
-<li>Click <strong>Save and continue editing</strong> to save and stay on the page</li>
-<li>Click <strong>Save and add another</strong> to save and create another tender immediately</li>
-</ul>
-<p>The tender invoice is now ready to be sent to the client or processed for payment.</p>
+<h2 id="exception-handling-error-recovery">Exception handling &amp; error recovery<a class="headerlink" href="#exception-handling-error-recovery" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Error Symptom / Message</th>
+<th style="text-align: left;">Root Cause</th>
+<th style="text-align: left;">Step-by-Step Remediation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Cannot save — Client is blank</strong></td>
+<td style="text-align: left;">Required Client field not selected</td>
+<td style="text-align: left;">1. Select a valid Client from the dropdown.<br>2. If the Client is missing, add it under <strong>Business → Clients</strong>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Total does not match expected value</strong></td>
+<td style="text-align: left;">Manual edits or unsaved line-items; rounding differences</td>
+<td style="text-align: left;">1. Click <strong>Save and continue editing</strong> to force recalculation.<br>2. Verify each line item's Qty and Rate.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Tender Number already exists</strong></td>
+<td style="text-align: left;">Duplicate manual Tender Number entered</td>
+<td style="text-align: left;">1. Clear the Tender Number to use an auto-generated sequence or enter a unique identifier.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Status cannot be moved to Sent</strong></td>
+<td style="text-align: left;">Business rules (e.g., missing approval or exceeding client constraints)</td>
+<td style="text-align: left;">1. Check for required approvals and toggle <strong>Is Approved</strong> if authorized.<br>2. Contact a superuser if constrained.</td>
+</tr>
+</tbody>
+</table>
 <hr>
-<h2 id="tips-and-common-issues">Tips and common issues<a class="headerlink" href="#tips-and-common-issues" title="Permanent link">¶</a></h2>
+<h2 id="related-workflows-next-steps">Related workflows &amp; next steps<a class="headerlink" href="#related-workflows-next-steps" title="Permanent link">¶</a></h2>
 <ul>
-<li><strong>Client is required</strong> — You must select a client before saving</li>
-<li><strong>Valid Until date matters</strong> — Set an expiration date so the tender doesn't stay open indefinitely</li>
-<li><strong>Status tracks the tender lifecycle</strong> — Use Status to mark tenders as Draft, Sent, Cancelled</li>
-<li><strong>Keep detailed Terms</strong> — Include payment terms, delivery date, and any conditions in the Terms field</li>
+<li><strong>Convert to Invoice</strong> — After client acceptance, convert the Tender Invoice to a standard Invoice for billing.</li>
+<li><strong>Add Payment</strong> — Record client payments against converted invoices.</li>
+<li><strong>Edit Tender Invoice</strong> — Update terms, items or pricing prior to sending.</li>
 </ul>
 <hr>
 <h2 id="related-pages">Related pages<a class="headerlink" href="#related-pages" title="Permanent link">¶</a></h2>
 <ul>
-<li><strong>Tender Detail</strong> — View tender details and client responses</li>
-<li><strong>Edit Tender Invoice</strong> — Update terms and items before sending</li>
-<li><strong>Convert to Invoice</strong> — Convert an accepted tender into a standard invoice</li>
-<li><strong>Invoice Reports</strong> — Track accepted tenders and revenue forecasts</li>
+<li><strong>Tender Detail</strong> — View or comment on an individual tender</li>
+<li><strong>Edit Tender Invoice</strong> — Modify existing tender records</li>
+<li><strong>Convert to Invoice</strong> — Convert accepted tenders into sales invoices</li>
+<li><strong>Invoice Reports</strong> — Analyze accepted tenders and forecast revenue</li>
 </ul>
 
 
@@ -5972,7 +5832,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 00:44:11 UTC">July 26, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 15, 2026 11:31:11 UTC">August 15, 2026</span>
   </span>
 
     
