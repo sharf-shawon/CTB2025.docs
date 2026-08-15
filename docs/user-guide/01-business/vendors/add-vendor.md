@@ -4,7 +4,7 @@ tags: [module:business, task:create, role:staff]
 
 # Add Vendor
 
-<!-- metadata: owner: business_team, last_updated: 2026-07-26, git_ref: main, staging_verified: true -->
+<!-- metadata: owner: business_team, last_updated: 2026-08-15, git_ref: main, staging_verified: true -->
 
 ## Summary
 
@@ -57,6 +57,8 @@ ______________________________________________________________________
 ______________________________________________________________________
 
 ## Field reference
+
+![Add Vendor](add-vendor-full-page.png)
 
 | Field Name            | Type    | Required | Backend Validation / Constraints                | Description                                   |
 | :-------------------- | :------ | :------- | :---------------------------------------------- | :-------------------------------------------- |
