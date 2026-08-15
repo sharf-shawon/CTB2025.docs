@@ -39,93 +39,49 @@ ______________________________________________________________________
 
 ## Field reference
 
-### General information
+![Create Tender Invoice](create-tender-invoice.png)
 
-Fill in the following fields on the General tab:
+| Field Name         | Type    | Required | Backend Validation / Constraints                                      | Description                                                                                       |
+| :----------------- | :------ | :------- | :-------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------ |
+| **Tender Number**  | Text    | Yes      | Max 20 chars, unique                                                  | Unique identifier for the tender. Auto-generated if left blank.                                   |
+| **Tender Date**    | Date    | Yes      | Valid date (`YYYY-MM-DD`)                                             | Date the tender is issued.                                                                         |
+| **Valid Until**    | Date    | No       | Valid date >= Tender Date                                             | Expiration date for the tender offer.                                                             |
+| **Client**         | Select  | Yes      | FK → `Business.Client`, `PROTECT` on delete                           | The client receiving the tender proposal.                                                         |
+| **Salesperson**    | Select  | No       | FK → `Employee.Employee`, `SET_NULL` on delete                        | Staff responsible for the proposal (used for commission reporting).                                |
+| **Status**         | Select  | Yes      | Choices: `Draft`, `Sent`, `Cancelled`                                 | Lifecycle state of the tender.                                                                     |
+| **Is Approved**    | Toggle  | No       | Boolean                                                               | When enabled, indicates an authorized tender (may affect conversion to invoice).                   |
+| **Subtotal**       | Decimal | Auto     | Max 13 digits, 3 decimal places                                       | Sum of all line item totals (`Qty × Rate`).                                                        |
+| **Tax**            | Decimal | No       | Default `0.00`, 2 decimal places                                      | Tax amount applied to the order.                                                                   |
+| **VAT**            | Decimal | No       | Default `0.00`, 3 decimal places                                      | Value-added tax amount.                                                                            |
+| **Shipping**       | Decimal | No       | Default `0.00`, 3 decimal places                                      | Freight or delivery charges.                                                                       |
+| **Discount**       | Decimal | No       | Default `0.00`, 2 decimal places                                      | Order-level discount deducted from Payable.                                                        |
+| **Payable / Total**| Decimal | Auto     | Calculated: Subtotal + Tax + VAT + Shipping - Discount                | Final proposed amount to be presented to the client.                                              |
+| **System Fields**  | Section | No       | Administrative metadata                                                | Internal system metadata (created/modified timestamps, internal IDs).                              |
 
-| Step | Field         | What to Do              | Description                              |
-| ---- | ------------- | ----------------------- | ---------------------------------------- |
-| 1    | Tender Number | Auto-generated or enter | Unique identifier for this tender        |
-| 2    | Tender Date   | Select date             | Date the tender is issued                |
-| 3    | Client        | Select client           | The client receiving the tender proposal |
-| 4    | Status        | Select status           | Current state (Draft, sent, cancelled)   |
-| 5    | Valid Until   | Select date             | Expiration date for the tender offer     |
+_____________________________________________________________________
 
-!!! warning "Required Fields"
+## Exception handling & error recovery
 
-    Fields marked with a **red star (\*)** are mandatory.
+| Error Symptom / Message                            | Root Cause                                                                              | Step-by-Step Remediation                                                                                              |
+| :------------------------------------------------- | :-------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------- |
+| **Cannot save — Client is blank**                   | Required Client field not selected                                                     | 1. Select a valid Client from the dropdown.<br>2. If the Client is missing, add it under **Business → Clients**.      |
+| **Total does not match expected value**             | Manual edits or unsaved line-items; rounding differences                                | 1. Click **Save and continue editing** to force recalculation.<br>2. Verify each line item's Qty and Rate.          |
+| **Tender Number already exists**                    | Duplicate manual Tender Number entered                                                 | 1. Clear the Tender Number to use an auto-generated sequence or enter a unique identifier.                          |
+| **Status cannot be moved to Sent**                  | Business rules (e.g., missing approval or exceeding client constraints)                | 1. Check for required approvals and toggle **Is Approved** if authorized.<br>2. Contact a superuser if constrained. |
 
-### Payment details
+_____________________________________________________________________
 
-Configure the financial details of the tender proposal:
+## Related workflows & next steps
 
-| Step | Field    | What to Do      | Description                                                        |
-| ---- | -------- | --------------- | ------------------------------------------------------------------ |
-| 1    | Subtotal | Auto-calculated | Sum of all item totals (Quantity × Rate)                           |
-| 2    | Tax      | Enter amount    | Tax if applicable                                                  |
-| 3    | VAT      | Enter amount    | Value-added tax if applicable                                      |
-| 4    | Shipping | Enter amount    | Shipping or delivery charges if applicable                         |
-| 5    | Discount | Enter amount    | Discount offered on the tender proposal                            |
-| 6    | Total    | Auto-calculated | Final proposed amount (Subtotal + Tax + VAT + Shipping - Discount) |
+- **Convert to Invoice** — After client acceptance, convert the Tender Invoice to a standard Invoice for billing.
+- **Add Payment** — Record client payments against converted invoices.
+- **Edit Tender Invoice** — Update terms, items or pricing prior to sending.
 
-!!! note
-
-    The total is calculated automatically based on items and payment adjustments.
-
-### Add items
-
-Add products or services to the tender proposal:
-
-| Step | Field   | What to Do           | Description                         |
-| ---- | ------- | -------------------- | ----------------------------------- |
-| 1    | Product | Select from dropdown | The product or service being quoted |
-| 2    | Rate    | Enter or select      | Proposed unit price                 |
-| 3    | Qty     | Enter quantity       | Number of units being quoted        |
-| 4    | Total   | Auto-calculated      | Qty × Rate for this line item       |
-
-- Click **Add another Item** to add multiple products to the tender
-- Click the **trash icon** to remove an item
-- Use the **edit icon** to modify an item's details
-
-!!! tip
-
-    Keep rates competitive but profitable. Each item's total calculates automatically.
-
-### Terms and conditions
-
-Add optional notes or special terms:
-
-| Step | Field | What to Do | Description                                          |
-| ---- | ----- | ---------- | ---------------------------------------------------- |
-| 1    | Terms | Enter text | Payment terms, delivery conditions, or special notes |
-| 2    | Note  | Enter text | Internal comments about the tender                   |
-
-______________________________________________________________________
-
-## Saving the Tender Invoice
-
-After completing all sections:
-
-- Click **Save** to create the tender as Draft/sent/cancelled based on the status you selected
-- Click **Save and continue editing** to save and stay on the page
-- Click **Save and add another** to save and create another tender immediately
-
-The tender invoice is now ready to be sent to the client or processed for payment.
-
-______________________________________________________________________
-
-## Tips and common issues
-
-- **Client is required** — You must select a client before saving
-- **Valid Until date matters** — Set an expiration date so the tender doesn't stay open indefinitely
-- **Status tracks the tender lifecycle** — Use Status to mark tenders as Draft, Sent, Cancelled
-- **Keep detailed Terms** — Include payment terms, delivery date, and any conditions in the Terms field
-
-______________________________________________________________________
+_____________________________________________________________________
 
 ## Related pages
 
-- **Tender Detail** — View tender details and client responses
-- **Edit Tender Invoice** — Update terms and items before sending
-- **Convert to Invoice** — Convert an accepted tender into a standard invoice
-- **Invoice Reports** — Track accepted tenders and revenue forecasts
+- **Tender Detail** — View or comment on an individual tender
+- **Edit Tender Invoice** — Modify existing tender records
+- **Convert to Invoice** — Convert accepted tenders into sales invoices
+- **Invoice Reports** — Analyze accepted tenders and forecast revenue
