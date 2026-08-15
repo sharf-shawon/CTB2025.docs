@@ -55,7 +55,7 @@ ______________________________________________________________________
 
 ### List summary
 
-<!-- TODO: screenshot screenshots/commission/manager-analytics-list.png -->
+![Manager Analytics](manager-commission-analytics.png)
 
 | Column            | Required | What to Do      | Description                                                    |
 | ----------------- | -------- | --------------- | -------------------------------------------------------------- |
