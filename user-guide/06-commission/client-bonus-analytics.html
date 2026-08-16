@@ -4511,6 +4511,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#manual-entry-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manual entry fields
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -5639,6 +5650,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#manual-entry-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manual entry fields
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -5709,17 +5731,17 @@
 
 
 <h1 id="client-bonus-analytics">Client Bonus Analytics<a class="headerlink" href="#client-bonus-analytics" title="Permanent link">¶</a></h1>
-<!-- metadata: owner: sales_team, last_updated: 2026-07-26, git_ref: main, staging_verified: true -->
+<!-- metadata: owner: sales_team, last_updated: 2026-08-16, git_ref: main, staging_verified: true -->
 
 <h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
-<p>Use this page to review client bonus campaign performance and earned bonus credits in CTB Admin. The analytics summary aggregates sales volumes, payment collection rates, target qualifications, and calculated bonus rewards for wholesale and retail clients.</p>
+<p>Use this page to review and process client bonus analytics in CTB Admin. The system calculates net units, achievement quantities, payment collection metrics, and bonus amounts for client-level campaigns so Finance and Sales can validate and post client bonus credits.</p>
 <hr>
 <h2 id="when-to-use-this-page">When to use this page<a class="headerlink" href="#when-to-use-this-page" title="Permanent link">¶</a></h2>
 <ul>
-<li>Auditing client bonus eligibility following campaign completion</li>
-<li>Verifying client sales target achievements and collection ratios</li>
-<li>Reconciling client bonus credits before applying ledger adjustments</li>
-<li>Resolving client inquiries regarding promotional bonus earnings</li>
+<li>Auditing client bonus calculations after a campaign ends</li>
+<li>Verifying qualification and payment collection criteria before posting credits</li>
+<li>Triggering automated snapshot calculations via <strong>Process Expired Campaigns</strong></li>
+<li>Manually entering or adjusting client bonus analytics rows when exceptions occur</li>
 </ul>
 <hr>
 <h2 id="how-to-access-this-page">How to access this page<a class="headerlink" href="#how-to-access-this-page" title="Permanent link">¶</a></h2>
@@ -5727,33 +5749,47 @@
 <hr>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">¶</a></h2>
 <ul>
-<li><strong>Permissions:</strong> <code>commission.view_clientbonusanalytics</code> permission codename (Accountant, Sales Manager, or Superuser role).</li>
-<li><strong>Active Records:</strong> Configured <strong>Client Bonus Campaign</strong> and <strong>Client</strong> accounts.</li>
+<li><strong>Permissions:</strong> <code>commission.view_clientbonusanalytics</code> / <code>commission.add_clientbonusanalytics</code> (Accountant, Sales Manager, or Superuser).</li>
+<li><strong>Active Records:</strong> Defined Client Bonus Campaigns, Clients, and Products.</li>
+<li>All relevant invoices and return records for the campaign period must be posted so achievement calculations are accurate.</li>
 </ul>
 <hr>
 <h2 id="step-by-step-instructions">Step-by-step instructions<a class="headerlink" href="#step-by-step-instructions" title="Permanent link">¶</a></h2>
 <ol>
 <li>Open <strong>Commission → Client Bonus Analytics</strong> from the sidebar.</li>
-<li>Review the list of client bonus records, achievement metrics, and qualification statuses.</li>
-<li>Use the search bar to locate specific client accounts or campaign names.</li>
-<li>Click <strong>Filters</strong> to narrow results by campaign date range or eligibility.</li>
-<li>Click <strong>Process Expired Campaigns</strong> if end-of-campaign snapshots require generation.</li>
+<li>Review the list of client bonus rows, achievement metrics, and status pills.</li>
+<li>Use the search box or <strong>Filters</strong> to locate specific clients, campaigns, or products.</li>
+<li>Click <strong>Process Expired Campaigns</strong> to run snapshot and calculation jobs for finished campaigns.</li>
+<li>Click <strong>Add Client Bonus Analytics (+)</strong> to create a manual entry for exceptions or adjustments.</li>
 </ol>
 <hr>
 <h2 id="verification-and-definition-of-done">Verification and definition of done<a class="headerlink" href="#verification-and-definition-of-done" title="Permanent link">¶</a></h2>
 <ul>
-<li>Master list renders client bonus records with calculated sales volumes and reward figures.</li>
-<li>Qualified client bonus entries (<code>Is Eligible = True</code>) post to client credit accounts upon finalization.</li>
+<li>Client bonus rows display the calculated Achievement Qty and Bonus Amount.</li>
+<li>Rows flagged <code>Is Eligible = True</code> and <code>Status = Approved</code> are suitable for posting as client credits.</li>
 </ul>
 <hr>
 <h2 id="field-reference">Field reference<a class="headerlink" href="#field-reference" title="Permanent link">¶</a></h2>
 <h3 id="list-summary">List summary<a class="headerlink" href="#list-summary" title="Permanent link">¶</a></h3>
-<!-- TODO: screenshot screenshots/commission/client-bonus-analytics-list.png -->
-
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="Client-Bonus-Analytics-List-Page.png" data-desc-position="bottom"><img alt="Client Bonus Analytics List Page" src="Client-Bonus-Analytics-List-Page.png"></a></p>
+<p>This page is a read-only analytics list that summarizes client performance for configured campaigns. Each row represents a client × product × campaign analytic and shows these columns:</p>
+<ul>
+<li>Client — client code and name. Clicking the client navigates to the Client Bonus Analytics edit page for that analytic row.</li>
+<li>Campaign — campaign name associated with the analytic.</li>
+<li>Product — product reference and label.</li>
+<li>Achievement Qty — net units purchased (Invoices - Returns) during the campaign period.</li>
+<li>Bonus Amount — calculated bonus value for the row.</li>
+<li>Is Eligible — qualification indicator (green tick when rules are satisfied).</li>
+<li>Status — processing state (<code>Calculated</code>, <code>Pending</code>, <code>Approved</code>, <code>Credited</code>).</li>
+</ul>
+<p>The table footer includes totals for the visible Achievement Qty and Bonus Amount.</p>
+<h3 id="manual-entry-fields">Manual entry fields<a class="headerlink" href="#manual-entry-fields" title="Permanent link">¶</a></h3>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="Add-Client-Bonus-Analytics.png" data-desc-position="bottom"><img alt="Add Client Bonus Analytics" src="Add-Client-Bonus-Analytics.png"></a></p>
 <table>
 <thead>
 <tr>
-<th>Column</th>
+<th>Step</th>
+<th>Field</th>
 <th>Required</th>
 <th>What to Do</th>
 <th>Description</th>
@@ -5761,49 +5797,92 @@
 </thead>
 <tbody>
 <tr>
-<td>Client</td>
-<td>Yes</td>
-<td>Click link</td>
-<td>Target client account name</td>
-</tr>
-<tr>
+<td>1</td>
 <td>Campaign</td>
 <td>Yes</td>
-<td>View text</td>
-<td>Client bonus campaign name</td>
+<td>Select campaign</td>
+<td>Parent client bonus campaign</td>
 </tr>
 <tr>
-<td>Sales Volume</td>
+<td>2</td>
+<td>Client</td>
 <td>Yes</td>
+<td>Select client</td>
+<td>Target client account</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Product</td>
+<td>Yes</td>
+<td>Select product</td>
+<td>Campaign product item</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Target Qty</td>
+<td>No</td>
+<td>View number</td>
+<td>Target defined in campaign (informational)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Achievement Qty</td>
+<td>Yes</td>
+<td>Enter/adjust</td>
+<td>Net units achieved (Invoices - Returns)</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Achievement Amount</td>
+<td>No</td>
 <td>View amount</td>
-<td>Qualifying invoice sales total</td>
+<td>Monetary value of achieved units</td>
 </tr>
 <tr>
-<td>Collection %</td>
+<td>7</td>
+<td>Bonus Rate</td>
 <td>Yes</td>
-<td>View percentage</td>
-<td>Payment collection ratio</td>
+<td>Enter rate</td>
+<td>Bonus per unit (or derived from campaign tiers)</td>
 </tr>
 <tr>
+<td>8</td>
 <td>Bonus Amount</td>
 <td>Yes</td>
 <td>View amount</td>
-<td>Calculated client bonus credit</td>
+<td>Calculated: Achievement Qty × Bonus Rate</td>
 </tr>
 <tr>
+<td>9</td>
+<td>Total Billed to Client</td>
+<td>No</td>
+<td>View amount</td>
+<td>Total invoiced value during campaign period</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Total Paid by Client</td>
+<td>No</td>
+<td>View amount</td>
+<td>Payments received against those invoices</td>
+</tr>
+<tr>
+<td>11</td>
 <td>Is Eligible</td>
 <td>Yes</td>
-<td>View status</td>
-<td>Indicates whether qualification rules are satisfied</td>
+<td>Toggle switch</td>
+<td>Mark whether row satisfies campaign eligibility</td>
 </tr>
 <tr>
+<td>12</td>
 <td>Status</td>
 <td>Yes</td>
-<td>View pill</td>
-<td>Settlement state (<code>Calculated</code>, <code>Pending</code>, <code>Approved</code>, <code>Credited</code>)</td>
+<td>Select</td>
+<td>Processing state (Calculated / Pending / Approved)</td>
 </tr>
 </tbody>
 </table>
+<p>Form actions: Save, Save and continue editing, Save and add another.</p>
 <hr>
 <h2 id="exception-handling-and-error-recovery">Exception handling and error recovery<a class="headerlink" href="#exception-handling-and-error-recovery" title="Permanent link">¶</a></h2>
 <table>
@@ -5816,24 +5895,30 @@
 </thead>
 <tbody>
 <tr>
-<td>Client bonus not calculated</td>
-<td>Client sales volume below campaign target quota</td>
-<td>Verify client invoices and collection ratio in <a href="client-bonus-campaigns.html">Client Bonus Campaigns</a></td>
+<td>Analytics missing for ended campaign</td>
+<td>Snapshot job not executed</td>
+<td>Click <strong>Process Expired Campaigns</strong> to force snapshot generation</td>
 </tr>
 <tr>
-<td>Credit missing from client statement</td>
-<td>Bonus record status remains <code>Pending</code></td>
-<td>Approve and finalize campaign snapshots to post credits to client ledger</td>
+<td>Bonus Amount is 0</td>
+<td>Achievement Qty is 0 or Bonus Rate missing</td>
+<td>Verify invoices/returns and configure campaign bonus rates; re-run snapshot if required</td>
+</tr>
+<tr>
+<td><code>Is Eligible</code> shows false</td>
+<td>Payment collection threshold not met</td>
+<td>Check Total Paid by Client and campaign-specific eligibility rules</td>
 </tr>
 </tbody>
 </table>
 <hr>
 <h2 id="related-pages">Related pages<a class="headerlink" href="#related-pages" title="Permanent link">¶</a></h2>
 <ul>
-<li><a href="client-bonus-campaigns.html">Client Bonus Campaigns</a> — Configure client promotional campaigns</li>
-<li><a href="payment-history.html">Payment History</a> — Track settled bonus credit payments</li>
-<li><a href="../01-business/clients/overview.html">Clients Overview</a> — View client account balances</li>
+<li><a href="client-bonus-campaigns.html">Client Bonus Campaigns</a> — Configure client campaigns and bonus tiers</li>
+<li><a href="payment-history.html">Payment History</a> — Track payments that affect eligibility</li>
+<li><a href="../01-business/clients/overview.html">Clients Overview</a> — Client ledger and account balances</li>
 </ul>
+<!-- TODO: Add final screenshots to docs/screenshots/commission/ and update image links above -->
 
 
 
@@ -5856,7 +5941,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 03:05:21 UTC">July 26, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 16, 2026 11:03:51 UTC">August 16, 2026</span>
   </span>
 
     
