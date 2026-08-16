@@ -183,4 +183,4 @@ ______________________________________________________________________
 - [Edit Invoice](edit-invoice.md) — Modify invoice information
 - [Print Invoice](print-invoice.md) — Generate a printable invoice document
 - [Print Chalan](print-chalan.md) — Generate a delivery chalan
-- [Invoice Reports](invoice-reports.md) — View analytics and outstanding payments
+- [Invoice Report](../../07-reports/invoice-report.md) — View analytics and outstanding payments

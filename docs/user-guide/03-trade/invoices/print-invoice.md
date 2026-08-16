@@ -99,4 +99,4 @@ ______________________________________________________________________
 - [Invoice Detail](invoice-detail.md) — View and edit invoice information
 - [Edit Invoice](edit-invoice.md) — Modify invoice details
 - [Print Chalan](print-chalan.md) — Print a delivery chalan
-- [Invoice Reports](invoice-reports.md) — Generate analytics and reports on invoices
+- [Invoice Report](../../07-reports/invoice-report.md) — Generate analytics and reports on invoices

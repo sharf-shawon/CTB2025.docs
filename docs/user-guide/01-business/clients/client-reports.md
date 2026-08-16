@@ -152,4 +152,4 @@ ______________________________________________________________________
 - [Client Detail](client-detail.md) — View and edit client personal and business information
 - [Client List](overview.md) — Browse all clients and perform bulk actions
 - [Create Invoice](../../03-trade/invoices/create-invoice.md) — Issue new invoices to this client
-- [Invoice Reports](../../03-trade/invoices/invoice-reports.md) — System-wide invoice analytics
+- [Invoice Report](../../07-reports/invoice-report.md) — System-wide invoice analytics

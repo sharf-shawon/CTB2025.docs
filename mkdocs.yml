@@ -221,7 +221,6 @@ nav:
           - Invoice Detail: user-guide/03-trade/invoices/invoice-detail.md
           - Print Invoice: user-guide/03-trade/invoices/print-invoice.md
           - Print Chalan: user-guide/03-trade/invoices/print-chalan.md
-          - Invoice Reports: user-guide/03-trade/invoices/invoice-reports.md
       - Payments:
           - Overview: user-guide/03-trade/payments/overview.md
           - Add Payment: user-guide/03-trade/payments/add-payment.md

@@ -100,4 +100,4 @@ ______________________________________________________________________
 - [Create Invoice](create-invoice.md) — Add new invoices for clients
 - [Invoice Detail](invoice-detail.md) — View and edit invoice information
 - [Print Invoice](print-invoice.md) — Print the full invoice with pricing
-- [Invoice Reports](invoice-reports.md) — Generate analytics and reports on invoices
+- [Invoice Report](../../07-reports/invoice-report.md) — Generate analytics and reports on invoices

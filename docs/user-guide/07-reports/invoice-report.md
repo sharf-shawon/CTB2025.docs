@@ -94,7 +94,7 @@ ______________________________________________________________________
 
 ## Related pages
 
-- **[Invoice Reports](../03-trade/invoices/invoice-reports.md)** — The invoice reporting dashboard under **Trade**.
+- **[Invoice Report](invoice-report.md)** — The invoice reporting dashboard under **Trade**.
 - **[Create Invoice](../03-trade/invoices/create-invoice.md)** — Create the invoices this report summarises.
 - **[Invoice Detail](../03-trade/invoices/invoice-detail.md)** — Open a single invoice from the report.
 - **[Reports](README.md)** — All other report pages.
