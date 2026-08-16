@@ -24,10 +24,11 @@ ______________________________________________________________________
 
 The module includes separate pages for product and material returns.
 
-| Page                 | Purpose                                                       |
-| -------------------- | ------------------------------------------------------------- |
-| **Product Returns**  | Record returned finished goods linked to invoices and clients |
-| **Material Returns** | Record returned raw materials linked to vendors and vouchers  |
+| Page                 | Purpose                                                         |
+| -------------------- | --------------------------------------------------------------- |
+| **Product Returns**  | Record returned finished goods linked to invoices and clients   |
+| **Material Returns** | Record returned raw materials linked to vendors and vouchers    |
+| **Product Repair**   | Track products returned for repair and follow-up resolution     |
 
 ______________________________________________________________________
 

@@ -8,6 +8,10 @@ The following documentation items require Subject Matter Expert (SME) verificati
 
 - [ ] `docs/user-guide/03-trade/invoices/invoice-reports.md` — needs product review
 
+## 05-returns
+
+- [ ] `docs/user-guide/05-returns/product-repair.md` — screenshot `docs/user-guide/05-returns/product-repair.png`
+
 ## 06-commission
 
 - [ ] `docs/user-guide/06-commission/client-bonus-analytics.md` — needs product review
