@@ -28,15 +28,15 @@ _____________________________________________________________________
 1. Open the **Dashboard**.
 1. Scroll down to the bottom of the Dashboard and click the marked link shown in the screenshot below — this is the first action that leads toward Developer Settings.
 
-![Maintenance nav — step 1](maintanance-mode-1st-link.png)
+![Maintenance nav — step 1](maintenance-mode-1st-link.png)
 
 1. After clicking that link, follow the highlighted entry to open the Developer/Changelog area (second screenshot). From there, open the **Maintenance** page.
 
-![Maintenance nav — step 2](maintanance-mode-2nd-link.png)
+![Maintenance nav — step 2](maintenance-mode-2nd-link.png)
 
 1. The Maintenance page shows the **Current status** and the **Maintenance Mode** button (third screenshot). Use that button to enable or disable the loading state.
 
-![Maintenance page — enable button](maintanance-mode-enable-button.png)
+![Maintenance page — enable button](maintenance-mode-enable-button.png)
 
 _____________________________________________________________________
 
