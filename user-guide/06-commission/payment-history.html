@@ -4425,6 +4425,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#add-edit-payment-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Add / Edit payment (form)
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -5609,6 +5620,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#add-edit-payment-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Add / Edit payment (form)
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -5682,14 +5704,14 @@
 <!-- metadata: owner: sales_team, last_updated: 2026-07-26, git_ref: main, staging_verified: true -->
 
 <h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
-<p>Use this page to audit and track commission and bonus Payouts recorded across campaigns in CTB Admin. The payment history provides a master audit ledger distinguishing settled payments from calculated analytics balances.</p>
+<p>Use this page to audit and track commission and bonus Payouts recorded across campaigns in CTB Admin. Payment History is the authoritative payout ledger: it shows calculated balances, administered approvals, and settled disbursements for employees, managers, and clients.</p>
 <hr>
 <h2 id="when-to-use-this-page">When to use this page<a class="headerlink" href="#when-to-use-this-page" title="Permanent link">¶</a></h2>
 <ul>
-<li>Verifying whether earned employee or manager commissions have been disbursed</li>
-<li>Auditing client bonus credit Payouts against campaign analytics</li>
-<li>Reconciling campaign ledger calculations against bank transfer or payout records</li>
-<li>Investigating payment queries or discrepancies raised by staff or clients</li>
+<li>Auditing settled commission and bonus disbursements after campaign finalization</li>
+<li>Reconciling approved analytics balances against actual bank or ledger transfers</li>
+<li>Confirming the payment history entries used for payroll and finance reporting</li>
+<li>Investigating payment discrepancies reported by employees, managers, or clients</li>
 </ul>
 <hr>
 <h2 id="how-to-access-this-page">How to access this page<a class="headerlink" href="#how-to-access-this-page" title="Permanent link">¶</a></h2>
@@ -5698,32 +5720,90 @@
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">¶</a></h2>
 <ul>
 <li><strong>Permissions:</strong> <code>commission.view_commissionpaymenthistory</code> permission codename (Accountant, Finance Manager, or Superuser role).</li>
-<li><strong>Active Records:</strong> Finalized <strong>Commission Campaign</strong> or <strong>Client Bonus Campaign</strong> analytics entries.</li>
+<li><strong>Active Records:</strong> Finalized <strong>Commission Campaign</strong> or <strong>Client Bonus Campaign</strong> analytics entries and processed payout vouchers when payments were issued.</li>
 </ul>
 <hr>
 <h2 id="step-by-step-instructions">Step-by-step instructions<a class="headerlink" href="#step-by-step-instructions" title="Permanent link">¶</a></h2>
 <ol>
 <li>Open <strong>Commission → Payment History</strong> from the sidebar.</li>
-<li>Review listed payment records, Payout dates, and amounts.</li>
-<li>Use the search bar to locate specific employees, managers, or client names.</li>
-<li>Click <strong>Filters</strong> to narrow results by campaign, date range, or payment type.</li>
-<li>Click a payment row to inspect transaction details or linked payout references.</li>
+<li>Scan the list for payment rows showing recipients, campaign context, and settlement status.</li>
+<li>Use the search box to locate specific recipients or campaign names.</li>
+<li>Use <strong>Filters</strong> to narrow by campaign, date range, payment method, or status.</li>
+<li>Click a payment row to open details: verify linked campaign analytics, approval notes, and any payout reference codes.</li>
 </ol>
 <hr>
 <h2 id="verification-and-definition-of-done">Verification and definition of done<a class="headerlink" href="#verification-and-definition-of-done" title="Permanent link">¶</a></h2>
 <ul>
-<li>Payment history list displays settled transactions with confirmed Payout dates.</li>
-<li>Verified Payouts update linked employee payout vouchers or client credit balances.</li>
+<li>Payment History displays payment rows with a confirmed Payment Date for all settled transactions.</li>
+<li>Approved and settled payments show matching entries in payroll or bank reconciliation records.</li>
+<li>Clicking a payment row surfaces the linked campaign, recipient profile, and any payout voucher or bank reference.</li>
 </ul>
 <hr>
 <h2 id="field-reference">Field reference<a class="headerlink" href="#field-reference" title="Permanent link">¶</a></h2>
 <h3 id="list-summary">List summary<a class="headerlink" href="#list-summary" title="Permanent link">¶</a></h3>
-<!-- TODO: screenshot screenshots/commission/payment-history-list.png -->
-
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="Commission-Payment-History-List-Page.png" data-desc-position="bottom"><img alt="Payment History list view" src="Commission-Payment-History-List-Page.png"></a></p>
 <table>
 <thead>
 <tr>
 <th>Column</th>
+<th>What to Do</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Employee / Recipient</td>
+<td>Click link</td>
+<td>Employee, manager, or client receiving the payment</td>
+</tr>
+<tr>
+<td>Campaign</td>
+<td>View text</td>
+<td>Commission or client bonus campaign name</td>
+</tr>
+<tr>
+<td>Total Commission Amount</td>
+<td>View amount</td>
+<td>Total commission earned across products in this campaign (analytics source)</td>
+</tr>
+<tr>
+<td>Approved Commission Amt.</td>
+<td>View amount</td>
+<td>Portion of the earned commission approved by admin</td>
+</tr>
+<tr>
+<td>Paid Commission Amount</td>
+<td>View amount</td>
+<td>Amount already paid out to the recipient</td>
+</tr>
+<tr>
+<td>Due Commission Amount</td>
+<td>View amount</td>
+<td>Remaining balance: <code>Approved Amount - Paid Amount</code></td>
+</tr>
+<tr>
+<td>Payment Date</td>
+<td>View date</td>
+<td>Settlement date when the payout was recorded (empty if not settled)</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>View pill</td>
+<td>Payment state (<code>Pending</code>, <code>Processed</code>, <code>Settled</code>, <code>Cancelled</code>)</td>
+</tr>
+<tr>
+<td>Reference / Method</td>
+<td>View text</td>
+<td>Optional payment reference or disbursal method (bank transfer ref, ledger credit, cash)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="add-edit-payment-form">Add / Edit payment (form)<a class="headerlink" href="#add-edit-payment-form" title="Permanent link">¶</a></h3>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="Add-Commission-Payment-History.png" data-desc-position="bottom"><img alt="Add Commission Payment History form" src="Add-Commission-Payment-History.png"></a></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
 <th>Required</th>
 <th>What to Do</th>
 <th>Description</th>
@@ -5731,46 +5811,58 @@
 </thead>
 <tbody>
 <tr>
-<td>Reference SKU</td>
-<td>No</td>
-<td>View value</td>
-<td>Unique payment tracking reference code</td>
+<td>Employee</td>
+<td>Yes</td>
+<td>Select</td>
+<td>Employee or manager receiving the payment (links to employee record)</td>
 </tr>
 <tr>
 <td>Campaign</td>
 <td>Yes</td>
-<td>View text</td>
-<td>Parent commission or client bonus campaign</td>
+<td>Select</td>
+<td>Related commission or client bonus campaign</td>
 </tr>
 <tr>
-<td>Recipient</td>
-<td>Yes</td>
-<td>Click link</td>
-<td>Name of employee, manager, or client recipient</td>
+<td>Total Commission Amount</td>
+<td>No</td>
+<td>View amount (read-only)</td>
+<td>Analytics total for the campaign; populated from campaign calculations</td>
 </tr>
 <tr>
-<td>Type</td>
+<td>Approved Commission Amt</td>
 <td>Yes</td>
-<td>View status</td>
-<td>Payment type (<code>Employee Commission</code>, <code>Manager Override</code>, <code>Client Bonus</code>)</td>
+<td>Enter amount</td>
+<td>Portion of the earned commission approved by admin</td>
 </tr>
 <tr>
-<td>Amount Paid</td>
+<td>Paid Commission Amount</td>
+<td>No</td>
+<td>Enter / View amount</td>
+<td>Amount already disbursed prior to the current payment record</td>
+</tr>
+<tr>
+<td>Due Commission Amount</td>
 <td>Yes</td>
-<td>View amount</td>
-<td>Disbursed payment amount</td>
+<td>View amount (calculated)</td>
+<td>Remaining balance: <code>Approved Amount - Paid Amount</code></td>
 </tr>
 <tr>
 <td>Payment Date</td>
-<td>Yes</td>
-<td>View date</td>
-<td>Transaction settlement date</td>
+<td>No</td>
+<td>Pick date</td>
+<td>Settlement date when the payout was recorded (empty if not settled)</td>
 </tr>
 <tr>
-<td>Method</td>
+<td>Status</td>
+<td>Yes</td>
+<td>Select</td>
+<td>Payment state (<code>Pending</code>, <code>Processed</code>, <code>Settled</code>, <code>Cancelled</code>)</td>
+</tr>
+<tr>
+<td>Reference / Method</td>
 <td>No</td>
-<td>View text</td>
-<td>Disbursal method (<code>Bank Transfer</code>, <code>Cash</code>, <code>Ledger Credit</code>)</td>
+<td>Enter text</td>
+<td>Optional payment reference or disbursal method (bank transfer ref, ledger credit, cash)</td>
 </tr>
 </tbody>
 </table>
@@ -5786,21 +5878,26 @@
 </thead>
 <tbody>
 <tr>
-<td>Payment record missing despite approved analytics</td>
-<td>Payout transaction not completed in payouts module</td>
-<td>Process payout voucher under <a href="../04-employee/payouts/create-payout.html">Create Payout</a></td>
+<td>Expected payment row not present</td>
+<td>Payout voucher not created or not posted to Payment History</td>
+<td>Confirm payout processed in payouts module and re-run posting; see <a href="../04-employee/payouts/create-payout.html">Create Payout</a></td>
 </tr>
 <tr>
-<td>Disbursed amount mismatch</td>
-<td>Partial payment issued or deduction applied</td>
-<td>Compare payment history line item against <a href="employee-analytics.html">Employee Analytics</a></td>
+<td>Paid amount shows zero while analytics show positive</td>
+<td>Approved amount not set or payout not completed</td>
+<td>Verify campaign analytics; ensure <code>Approved Commission Amount</code> is populated before issuing payout</td>
+</tr>
+<tr>
+<td>Payment Date is blank for a settled-looking row</td>
+<td>Settlement not recorded against payout voucher</td>
+<td>Open payout voucher, enter settlement/bank reference, and save; refresh Payment History list</td>
 </tr>
 </tbody>
 </table>
 <hr>
 <h2 id="related-pages">Related pages<a class="headerlink" href="#related-pages" title="Permanent link">¶</a></h2>
 <ul>
-<li><a href="employee-analytics.html">Employee Analytics</a> — Review employee campaign earnings</li>
+<li><a href="employee-analytics.html">Employee Analytics</a> — Review individual employee campaign earnings</li>
 <li><a href="manager-analytics.html">Manager Analytics</a> — Review manager override earnings</li>
 <li><a href="client-bonus-analytics.html">Client Bonus Analytics</a> — Review client bonus earnings</li>
 <li><a href="../04-employee/payouts/create-payout.html">Create Payout</a> — Issue employee payouts</li>
@@ -5827,7 +5924,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 26, 2026 03:05:21 UTC">July 26, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 17, 2026 07:42:14 UTC">August 17, 2026</span>
   </span>
 
     
