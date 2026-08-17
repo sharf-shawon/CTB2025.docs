@@ -14,57 +14,47 @@ CTB Admin uses Progressive Web App (PWA) Service Worker caching to store visited
 
 ______________________________________________________________________
 
-## When to use this page
+![Offline mode fallback page](offline-mode-page.png)
 
-- Navigating system documentation in low-connectivity factory or warehouse settings.
-- Reconciling unvisited page offline fallback screens.
-- Resolving stale caching behavior after a recent documentation deployment.
-- Verifying the status of the local Service Worker or browser cache store.
+## Offline fallback page actions
 
-______________________________________________________________________
+When an unvisited page is requested while the browser is offline, CTB Admin shows the offline fallback dialog. The dialog provides three quick actions to help diagnose and recover from the condition. Each action navigates to a diagnostic view — the screenshots below show the exact pages the user is taken to when selecting the corresponding action.
 
-## How to access this page
+### Monitor Services
 
-From the sidebar navigation, select **Reference → Offline Mode** (`/user-guide/09-reference/offline-mode/`).
+- Purpose: View platform-wide operational status and per-service timelines to identify outages or degradations.
+- Action: Click **Monitor Services** in the offline dialog to open the public service status page.
 
-______________________________________________________________________
+![Service Monitor — All Systems Operational](Service-Monitor.png)
+*Service Monitor — real-time status and individual service timelines (click opens Service-Monitor.png).*
 
-## Prerequisites
+---
 
-- Modern browser with Service Worker and Cache Storage support (Chrome, Firefox, Safari, Edge).
-- Active internet connection during the initial browse session to prime the cache.
+### Check Network
 
-______________________________________________________________________
+- Purpose: Run a network speed and packet-loss measurement to verify local connectivity, latency, and packet reliability.
+- Action: Click **Check Network** in the offline dialog to open the network speed test page.
 
-## Step-by-step instructions
+![Network Speed Test — Measure network performance](Internet-Speed-Test-Measure-Network-Performance.png)
+*Network Speed Test — download/upload throughput, latency, jitter, and packet loss graphs (click opens Internet-Speed-Test-Measure-Network-Performance.png).*
 
-1. Open the documentation site while connected to the internet to initialize caching.
-1. If the network connection drops, continue reading already cached pages.
-1. If an unvisited page is requested while offline, review the **Offline Fallback Page** notice.
-1. Verify browser cache state by opening Chrome DevTools (**F12** $\rightarrow$ **Application** $\rightarrow$ **Cache Storage**).
-1. Reconnect to the internet and click **Refresh** to sync new updates.
+---
 
-______________________________________________________________________
+## Contact Support {#contact-support}
 
-## Verification & definition of done
+If the diagnostic actions do not resolve the problem, contact the CTB support team with the information below. When emailing support include: the page URL, timestamps, browser and OS, and a short description of what you were doing when the error occurred.
 
-- **Offline availability**: Disabling network connectivity in browser settings allows cached documentation pages to load.
-- **Service worker active**: The browser DevTools console confirms `sw.js` registration is active and controlling caching.
+- Support Link: [help.dhakaiya.dev](http://help.dhakaiya.dev)(replace with your organisation's configured support address)
+- Required information in the message:
+  - Page URL and breadcrumb path
+  - Local time and timezone when the error occurred
+  - Any relevant screenshots or exported network test results
 
-______________________________________________________________________
+After sending the email, include the ticket reference number (if provided) when following up with your manager or IT team.
 
-## Field reference
+---
 
-### Offline functionality matrix
 
-| Capability / Feature   | Online State    | Offline State    | Behavior Description                                                  |
-| ---------------------- | --------------- | ---------------- | --------------------------------------------------------------------- |
-| **Visited Pages**      | Full Access     | Full Access      | Loaded directly from local browser Cache Storage.                     |
-| **Unvisited Pages**    | Full Access     | Offline Fallback | Displays offline notice shell prompting reconnection.                 |
-| **Global Site Search** | Full Access     | Partial Access   | Searches across locally cached page titles and text.                  |
-| **Admin Forms**        | Live Read/Write | Blocked          | Data entry forms require an active server connection to save records. |
-
-![Offline mode fallback page](offline-mode-photo.png)
 
 ______________________________________________________________________
 
